@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Members Pay Report</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Members Pay Report</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Report">Run A Report</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to produce a list of members and their pay details,
+depending on the scheme code and dates entered.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Proceed</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/pyr_netpay1.gif" alt="Members Pay Report" /></p>
+
+  <p>Members Pay Report</p>
+</div>
+
+<h2 id="a-namerun-a-reportarun-a-report"><a name="Run A Report"></a>Run A Report</h2>
+
+<p>Click ‘Proceed’.</p>
+
+<p><a name="pm_scheme"></a><strong>SCHEME</strong> - Enter the scheme code required. To get a
+list of valid scheme codes click on ‘Lookup’. When a valid scheme code has been
+entered the scheme description will be displayed. A scheme code must be entered.</p>
+
+<p><a name="pm_company"></a><strong>COMPANY</strong> - Enter the company code. To get a list
+of valid company codes click on ‘Lookup’. When a valid company code has been entered
+the company description will be displayed.</p>
+
+<p><a name="pm_category"></a><strong>CATEGORY</strong> - Enter the category code. To get a list
+of valid category codes click on ‘Lookup’. When a valid category code has been entered
+the category description will be displayed.</p>
+
+<p><a name="pm_status"></a><strong>STATUS</strong> - Enter the status code. To get a list of
+valid status codes click on ‘Lookup’. When a valid status code has been entered
+the status description will be displayed. The status code must be of a Pensioner
+type.</p>
+
+<p><a name="psft_code"></a><strong>SPECIAL CODE</strong> - Enter the special code. To get a list
+of valid special codes click on ‘Lookup’. When a valid special code has been entered
+the special code description will be displayed.</p>
+
+<p>When the selection criteria has been entered, the following screen will be displayed.
+Click ‘Cancel’ to return the user back to the main menu.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/pyr_netpay2.gif" alt="Report Dates Screen" /></p>
+
+  <p>Report Dates Screen</p>
+</div>
+
+<p><a name="report_date_fr"></a><strong>DATE FROM</strong> - Enter the date you wish to list
+member’s pay details from. The date must be entered in the format dd/mm/yyyy or
+ddmmyyyy, and must be within the current tax year.</p>
+
+<p><a name="report_date_to"></a><strong>DATE TO</strong> - Enter the date you wish to list member’s
+pay details to. The date must be entered in the format dd/mm/yyyy or ddmmyyyy, and
+must be within the current tax year.</p>
+
+<p>Click ‘OK’ to proceed. You can click ‘Cancel’ to return the user back to the main
+menu.</p>
+
+<p>The following menu options will now be displayed:</p>
+
+<ul>
+  <li>Summary - This will print a report of total amounts for the stated period.</li>
+  <li>Detailed - This will print a report, listing all amounts within the stated period.</li>
+  <li>Exit - This will return the user back to the main menu.</li>
+</ul>
+
+<p>If Summary or Detailed has been selected then the report starts processing.</p>
+
+<p>When the selection is complete a message is displayed at the bottom of the screen:</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>When the report has been processed and no records are found to match the selection
+criteria an error message is displayed:</p>
+
+<div class="well">
+
+  <p>There are no records to match the selection criteria</p>
+
+</div>
+
+<p>Click ‘OK’ to return to the report menu.</p>
+
+<p>If records are found to match the selection criteria the report continues and is
+displayed to the screen.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+    From Payroll Master</a>.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Reports menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

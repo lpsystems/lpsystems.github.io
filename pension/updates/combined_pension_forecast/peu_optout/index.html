@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Opt Out Load</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Opt Out Load</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to load the opt out flag onto Pension Master for the members in the data file. The data file must contain data in the format NI_Number,Opt_Out_Flag. Only members that already exist on Pension Master will have their record updated. For any members found in the data file, who don’t exist on Pension Master and who have chosen to take part in the Combined Pension Forecast process, must be added onto Pension Master as a new member prior to loading on this data.</p>
+
+<p>The following options and appear when this program is selected:</p>
+
+<ul>
+  <li>Load</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_optout.gif" alt="Opt Out Load Screen" /></p>
+
+  <p>Opt Out Load Screen</p>
+</div>
+
+<h2 id="a-namerun-a-loadarun-a-load"><a name="Run A Load"></a>Run A Load</h2>
+
+<p>Press <kbd>L</kbd>, or select the ‘Load’ menu option.</p>
+
+<p><a name="sch_code"></a><strong>SCHEME CODE</strong> - Enter the scheme code for the scheme the members in the data file belong to. You can click on ‘Lookup’ to get a list of all valid scheme codes.</p>
+
+<p><a name="filename"></a><strong>FILENAME</strong> - Enter the filename for the data file you wish to load the data from. You can click on ‘Lookup’ to search for the file.</p>
+
+<p><a name="delimiter"></a><strong>DELIMITER</strong> - Enter the delimiter used in the data file. You can click on ‘Lookup’ to get a list of valid delimiters.</p>
+
+<p>A message is displayed at the bottom of the screen:</p>
+
+<div class="well">
+
+  <p>Checking data </p>
+
+</div>
+
+<p>The program is checking that the data is all present and correct. For example, that
+the NI Number is present and that the opt out flag takes the value of Y or N. If any of the data isn’t correct then an exceptions report will be produced and the Opt Out Load is abandoned. </p>
+
+<p>If all the data is correct, then a report is produced listing out all the information from the data file.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+from Pension Master</a>. </p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Press <kbd>E</kbd>, or select the ‘Exit’ menu option.
+This leaves the program and returns to the Combined Pension Forecast menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

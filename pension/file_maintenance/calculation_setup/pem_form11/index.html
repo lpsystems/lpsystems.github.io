@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+        
+
+      
+<h2 id="a-name01apayelementsfieldcode"><a name="01"></a>#pay_elements_field(code)</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>This is only available to Payroll Master users.</p>
+</div>
+
+<p><strong>OVERVIEW</strong> </p>
+
+<p>Use this to refer to the value of a field on the Member’s Pay Elements screen for
+the specified code. This will be taken from the pay elements file (py_melem). </p>
+
+<p><strong>SYNTAX</strong> </p>
+
+<pre><code>#pay_elements_field(code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong> </p>
+
+<ul>
+  <li>code - refers to the Elements Code that you wish to retrieve a Pay Elements Field
+for. This must be in UPPERCASE and must exist as a valid Pay Element Code. If a member
+does not have a Pay Elements record with a matching code, this function call will
+return a value of 0. </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>pay_elements_field must be a valid field on the Pay Elements file (py_melem). </li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pym_amount(PA766)
+#pym_ytd(PD12) 
+</code></pre>
+
+<h2 id="a-name02apaymemhisthistflddate"><a name="02"></a>paymem_hist(hist_fld,date)</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>This is only available to Payroll Master users.</p>
+</div>
+
+<p><strong>OVERVIEW</strong> </p>
+
+<p>Use this function to extract member’s pay history details depending on the history
+field and date entered. </p>
+
+<p><strong>SYNTAX</strong> </p>
+
+<pre><code>paymem_hist(hist_fld,date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong> </p>
+
+<ul>
+  <li>hist_fld - is a reference to a pay history field. </li>
+  <li>date - refers to the Date Processed on the pay history table. </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The pay history field must exist on the Member’s History table (py_hist). </li>
+  <li>The date entered must either be in the format yyyymmdd or be a reference to a previous line. </li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>paymem_hist(pyh_gross,20020101)
+paymem_hist(pyh_net,@1) 
+</code></pre>
+
+<h2 id="a-name03apayrollhistoryfielddate"><a name="03"></a>#payroll_history_field(date)</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>This is only available to Payroll Master users.</p>
+</div>
+
+<p><strong>OVERVIEW</strong> </p>
+
+<p>Use this to refer to the value of a field on the Member’s History screen for the specified
+code. This will be taken from the history file (py_hist). </p>
+
+<p><strong>SYNTAX</strong> </p>
+
+<pre><code>#payroll_history_field(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong> </p>
+
+<ul>
+  <li>date - refers to the Date Processed on the history table. If a member does not have
+a history record, this function call will return a value of 0. </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date entered must either be in the format yyyymmdd, a reference to a previous
+line or a valid date from the Basic Member Details screen. </li>
+  <li>payroll_history_field must be a valid field on the history file (py_hist). </li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pyh_gross(20020101)
+#pyh_net(@1) 
+</code></pre>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

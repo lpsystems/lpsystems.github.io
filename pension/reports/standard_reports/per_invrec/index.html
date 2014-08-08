@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Investment Reconciliation Report</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Investment Reconciliation Report</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program produces a report out to Microsoft Excel of investment details, as selected by the user, for a
+given group of members, for either all investment funds or just one selected fund, and for investments between a date range entered. You have the option of choosing how you want the data to be ordered by and also if you wish to print the report in Summary or Detail formats. The following options and screen appear
+when this program is selected. </p>
+
+<p>REPORT : <em>Proceed</em> Exit </p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_invrec1.gif" alt="Selection Criteria Screen" /></p>
+
+  <p>Selection Criteria Screen</p>
+</div>
+
+<h2 id="a-namerun-a-reportarun-a-report"><a name="Run A Report"></a>Run A Report</h2>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_comany"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_group"></a>
+<a name="psft_code"></a>
+<a name="pm_member"></a><strong>SELECTION CRITERIA</strong> - Select the group of members you require to produce this report for using the Scheme, Company,
+Category, Status, Special Code and Member Number fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>). When the selection
+criteria have been entered click ‘OK’ to proceed.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the investment reconciliation report. </p>
+
+<p>The following screen is displayed: </p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_invrec2.gif" alt="Fund and Date Selection Screen" /></p>
+
+  <p>Fund and Date Selection Screen</p>
+</div>
+<p><a name="p_inv_fund"></a><strong>FUND</strong> - Enter the investment fund for the investments you are reporting on. If you are unsure of what code to use, click ‘search’ to display a list of valid investment funds. If you want to report on all investment funds then enter ‘ALL’.
+<a name="p_start_date"></a><strong>START DATE</strong> - Enter the start date for the range of investments you are reporting on. </p>
+
+<p><a name="p_end_date"></a><strong>END DATE</strong> - Enter the end date for the investments you are reporting on. </p>
+
+<p><a name="p_order_by"></a><strong>ORDER BY</strong>- Enter the order in which you wish the investments to be ordered by.
+<a name="p_rep_type"></a><strong>REPORT TYPE</strong>- Enter whether you wish the investments to be reported in a summary or detailed format.</p>
+
+<p>When the details in this screen have been entered, click on ‘OK’ to proceed. You can click on ‘Cancel’ to return to the main menu and abort the investment reconciliation report. The report will now be created and reported out to Excel. </p>
+
+<p>During the creation of the report, unit prices for the investment fund are retrieved for the start and end dates to allow for fund values to be calculated. If unit prices are not found for the start date then you will be asked to enter the unit prices if they are known. If they are not known then the unit price effective at the date will be used instead.</p>
+
+<p>The unit price for the end date will always be the unit price found on the system effective at the end date.</p>
+
+<p>If you are to enter unit prices then the following window will be displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_invrec3.gif" alt="Enter Unit Price Screen" /></p>
+
+  <p>Enter Unit Price Screen</p>
+</div>
+
+<p>Select the contribution types you wish to report on.</p>
+
+<p>Once the report has been produced, a message will appear to the screen stating that the report has completed successfully.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Standard Reports menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

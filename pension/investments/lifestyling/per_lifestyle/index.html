@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Lifestyle Event Report</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Lifestyle Event Report</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program produces a report out to Microsoft Excel for members, as selected by the user, who have a lifestyle event that’ll occur within the date range entered by the user. The following options and screen appear when this program is selected.</p>
+
+<p>REPORT : <em>Proceed</em> Exit </p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_lifestyle1.gif" alt="Selection Criteria Screen" /></p>
+
+  <p>Selection Criteria Screen</p>
+</div>
+
+<h2 id="a-namerun-a-reportarun-a-report"><a name="Run A Report"></a>Run A Report</h2>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_comany"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_group"></a>
+<a name="psft_code"></a>
+<a name="pm_member"></a><strong>SELECTION CRITERIA</strong> - Select the group of members you require to produce this report for using the Scheme, Company, Category, Status, Special Code and Member Number fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>). When the selection criteria have been entered click ‘OK’ to proceed.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the lifestyle event report. </p>
+
+<p>The following screen is displayed: </p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_lifestyle2.gif" alt="Start and End Dates" /></p>
+
+  <p>Start and End Dates</p>
+</div>
+
+<p><a name="p_start_date"></a><strong>START DATE</strong> - Enter the start date for the date range you wish to use.</p>
+
+<p><a name="p_end_date"></a><strong>END DATE</strong> - Enter the end date for the date range you wish to use.</p>
+
+<p>When the start and end dates have been entered, click on ‘OK’ to proceed. You can click on ‘Cancel’ to return to the main menu and abort the lifestyle event report. The report will now be created and reported out to Excel. </p>
+
+<p>If any exceptions are found for a member within the selection criteria, then an exceptions report will be produced first, which will also be reported out to Excel. Examples of exceptions are listed below:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Exceptions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">No lifestyle matrix entry available for matrix code XXXX and start age nn.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Member has a blank DOB. Cannot calculate age for age related lifestyle event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Member has a blank TRD. Cannot calculate term for term related lifestyle event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">No lifestyle matrix entry available for matrix code XXXX and term to TRD nn.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The lifestyle event report that gets produced, will list out any members, from within the selection criteria, who have a lifestyle event within the date range entered. The investment setup, for the lifestyle event, will be reported out along with the date that the event will occur on. All the lifestyle matrices used within the investment setup will also be reported out showing the investment split.</p>
+
+<p>Once the report has been produced, a message will appear to the screen stating that the report has been produced successfully.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Lifestyling menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

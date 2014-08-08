@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Pay Elements Batch Input</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Pay Elements Batch Input</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add a Batch">Add a Batch</a></li>
+  <li><a href="#Query/Search For A Batch">Query/Search For A Batch</a></li>
+  <li><a href="#Viewing Records">Viewing Records</a></li>
+  <li><a href="#Update a Batch">Update a Batch</a></li>
+  <li><a href="#Delete a Batch">Delete a Batch</a></li>
+  <li><a href="#Printing Batch Details">Printing Batch Details</a></li>
+  <li><a href="#Posting Batch Details">Posting Batch Details</a></li>
+  <li><a href="#Browse Batch Details">Browse Batch Details</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows entry and maintenance of batches of pay element data for a group
+of members.</p>
+
+<p>The data is held at the batch level until you are satisfied that it is correct,
+at which time you can opt to post the data to individual member records.</p>
+
+<p>You can use this program to:</p>
+
+<ul>
+  <li>Enter batches of pay element details</li>
+  <li>Post data to the pay element screen in Payroll Members for each member.</li>
+</ul>
+
+<p>The following screen is displayed when you enter this program:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_ebat1.gif" alt="Pay Elements Batch Details Screen" /></p>
+
+  <p>Pay Elements Batch Details Screen</p>
+</div>
+
+<h2 id="a-nameadd-a-batchaadd-a-batch"><a name="Add a Batch"></a>Add a Batch</h2>
+
+<p>Click ‘Add’. The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_ebat2.gif" alt="Add a Batch" /></p>
+
+  <p>Add a Batch</p>
+</div>
+
+<pre><code>&lt;a name="pm_scheme"&gt;&lt;/a&gt;**SCHEME** - The scheme code must exist on the scheme file. When a valid scheme code is entered the scheme description will be displayed to the screen. You can click 'Search' to get a lookup of valid scheme codes at this point.
+</code></pre>
+
+<p><a name="pm_company"></a><strong>COMPANY</strong>
+- The combination of scheme and company code must exist on the company file. If
+a valid company code is entered the company description will be displayed to the
+screen. You can click ‘Search’ to get a lookup list of valid company codes within
+the chosen scheme.</p>
+
+<p><a name="pm_category"></a><strong>CATEGORY</strong>
+- The combination of scheme and category code must exist on the category file. If
+a valid category code is entered the category description will be displayed to the
+screen. You can click ‘Search’ to get a lookup list of valid category codes for
+the chosen scheme and company.</p>
+
+<p><a name="pm_status"></a><strong>STATUS</strong>
+- The combination of scheme and status code must exist on the status file. If a
+valid status code is entered the status description will be displayed to the screen.
+You can click ‘Search’ to get a lookup list of valid status codes for the chosen
+scheme.</p>
+
+<p><a name="psft_code"></a><strong>SPECIAL CODE</strong>
+- Enter a special code. If a valid special code is entered the special code description
+will be displayed to the screen. You can click ‘Search’ to get a lookup list of
+valid special codes.</p>
+
+<p><a name="pm_member"></a><strong>MEMBER</strong>
+- Enter a member number. If a valid member number is entered the member’s name will
+be displayed to the screen. You can click ‘Search’ to get a lookup list of valid
+members for the chosen scheme.</p>
+
+<p>Click ‘OK’ to continue, or click ‘Cancel’ to return to the main menu.</p>
+
+<p>A pop-up window will be displayed to the screen which allows the user to select
+how the selected members should be sorted. This is defaulted to the Member Number.</p>
+
+<p>The original screen will now be displayed.</p>
+
+<p>The selected members and pay element codes held on the system will now be displayed
+on the screen. The batch number is intially set to zero and will default to the
+next batch number in sequence once the details have been accepted.</p>
+
+<p><a name="pel_member"></a><strong>MEMBER</strong>
+- The member entered must be in the same scheme/company/category etc as that entered
+in the selection screen. Click ‘Search’ for a valid list of members. Once a valid
+member number has been entered, the member’s name will be displayed on the screen.</p>
+
+<p><a name="pel_code"></a><strong>CODE</strong>
+- The Pay Element code must exist on the system. Click ‘Search’ for a list of valid
+pay element codes. Once a valid code has been entered, the pay element description
+will be displayed to the screen.</p>
+
+<p><a name="pel_amount"></a><strong>AMOUNT</strong>
+- The amount is defaulted to the amount held against the pay element code. If the
+amount field is changed and is left blank then it will be set to 0.00.</p>
+
+<p>Click ‘OK’ to save the new batch details, or click ‘Cancel’ to return to the main
+menu without saving any details.</p>
+
+<h2 id="a-namequerysearch-for-a-batchaa-namequeryaquerysearch-for-a-batch"><a name="Query/Search For A Batch"></a><a name="query"></a>Query/Search For A Batch</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>Enter details of your selection and click ‘OK’ to retrieve the records. Click ‘Cancel’
+to abandon your search.</p>
+
+<h2 id="a-nameviewing-recordsaviewing-records"><a name="Viewing Records"></a>Viewing Records</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to
+view the previous record.</p>
+
+<h2 id="a-nameupdate-a-batchaupdate-a-batch"><a name="Update a Batch"></a>Update a Batch</h2>
+
+<p>Click ‘Update’.</p>
+
+<p>Before updating, a record for update must be selected through the Query option.</p>
+
+<p>Only the details in the lower section of the screen can be updated.</p>
+
+<h2 id="a-namedelete-a-batchadelete-a-batch"><a name="Delete a Batch"></a>Delete a Batch</h2>
+
+<p>Click ‘Delete’.</p>
+
+<p>The record for deletion must be selected and displayed to the screen before
+you will be allowed to delete it.</p>
+
+<p>You will be asked if you are sure you wish to delete the record. If you answer
+yes the record is deleted.</p>
+
+<p>The program then returns to the main menu.</p>
+
+<h2 id="a-nameprinting-batch-detailsaa-namereportaprinting-batch-details"><a name="Printing Batch Details"></a><a name="report"></a>Printing Batch Details</h2>
+
+<p>Click ‘Report’.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+    From Payroll Master</a>.</p>
+
+<h2 id="a-nameposting-batch-detailsaposting-batch-details"><a name="Posting Batch Details"></a>Posting Batch Details</h2>
+
+<p>Click ‘Post’. This option allows you to post a batch of pay element details to
+each members record.</p>
+
+<p>A batch record must have been selected through the Query option, an error message
+is displayed if a record for posting has not been selected.</p>
+
+<p>You will be asked if you are sure you wish to post the batch to member records.</p>
+
+<p>If you have selected the ‘Yes’ option, the batch will be posted and you will
+be returned to the main menu.</p>
+
+<p>The update will amend the relevant pay element file for each member in the batch.</p>
+
+<p>When the posting has finished, you will be returned to the main menu.</p>
+
+<h2 id="a-namebrowse-batch-detailsabrowse-batch-details"><a name="Browse Batch Details"></a>Browse Batch Details</h2>
+
+<p>Click ‘Browse’ to view details in any screen where the data does not fit on
+the screen.</p>
+
+<p>Once in browse mode, use the arrow keys or the scrollbar on the right of the
+data to navigate through the data.</p>
+
+<p>Click ‘OK’ or ‘Cancel’ to leave browse mode.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Updates menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

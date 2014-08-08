@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Delete A Scheme</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Delete A Scheme</h1>
+        </div>
+        
+
+      
+<div class="alert alert-danger" role="alert">
+
+  <p>Note: Only the System Administrator may access this program. If anyone other than the System Administrator tries to access this program an error message will be displayed and the program will be exited.</p>
+
+</div>
+
+<p>This program deletes all details relating to a specified scheme from the Pension
+Master database and optionally saves the deleted details to disk. The following
+options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Proceed </li>
+  <li>Exit </li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_dels.jpg" alt="Delete A Scheme Screen" /></p>
+
+  <p>Delete A Scheme Screen</p>
+</div>
+
+<h2 id="proceed">Proceed</h2>
+
+<p>Press <kbd>P</kbd>, or select the ‘Proceed’ menu option.</p>
+
+<p><a name="psc_code"></a>Enter the scheme code.
+The scheme code must be entered and must exist on the scheme file. When a valid code
+has been entered the scheme name will be displayed.</p>
+
+<p><a name="psc_code2"></a>Re-enter the scheme
+code. The scheme code must be entered and must be the same code as previously entered.
+This is to guard against any typographical errors. The scheme name will be displayed
+when a valid scheme code has been entered.</p>
+
+<p><a name="ok"></a>Enter ‘OK to Proceed’. The
+valid entries for this field are ‘Y’ for Yes and ‘N’ for No.</p>
+
+<p>Save Data - This will mean that the scheme data will be output to flat text files stored in /penmast/bulk_delete on the server. 
+Include Headers - Headers will be included in the output.</p>
+
+<p>Delete Data - All data relating to the selected scheme will be deleted from Pension Master.</p>
+
+<p>When all the member details have been deleted
+a message will be displayed and the program will return to the main menu. </p>
+
+<h2 id="exit">Exit</h2>
+
+<p>Press <kbd>E</kbd>, or select the ‘Exit’ menu option. This leaves the program and returns to the
+updates menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Update Pensionable Salaries</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Update Pensionable Salaries</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a> </li>
+  <li><a href="#Update">Update</a> </li>
+  <li><a href="#Exit">Exit Program</a> </li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program calculates pensionable salary for each selected member of a scheme based
+on gross salary and a deductible supplied by the user. The following options and screen
+appear when this program is selected:</p>
+
+<ul>
+  <li>Update </li>
+  <li>Exit </li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pensal.gif" alt="Update Pensionable Salaries Screen" /></p>
+
+  <p>Update Pensionable Salaries Screen</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>This program will overwrite whatever pensionable salary figures are in each of
+the selected members records for the given salary date with the new calculated value.</p>
+</div>
+
+<h2 id="a-nameupdateaupdate"><a name="Update"></a>Update</h2>
+
+<p>Click ‘Update’.</p>
+
+<p><a name="pm_scheme"></a><a name="pm_company"></a><a name="pm_category"></a><a name="pm_status"></a><strong>SELECTION
+CRITERIA</strong> - Select the group of members you require to update pensionable salaries
+for using the Scheme, Company, Category and Status fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+When the selection criteria have been entered click on ‘OK’ to proceed. </p>
+
+<p>You can click on ‘Cancel’ to return to the main menu and abort the quotation run. </p>
+
+<p><a name="sal_date"></a><strong>SALARY DATE</strong> - Enter the Salary Date in the format dd/mm/yyyy
+or ddmmyy. If you do not enter a valid date or leave this field blank, an error message
+will be displayed and you will be requested to re-enter the date. This is the date
+of the salary entry on each of the selected members records you wish to change. </p>
+
+<p><a name="deductible"></a><strong>DEDUCTIBLE</strong> - Enter the deductible you wish to apply
+to each selected members gross salary. If you leave this field blank it will default
+to 0. </p>
+
+<p><a name="sal1"></a><strong>ORIGINAL SALARY</strong> - Enter any one of the salaries that have
+been set up for this scheme. To display a list of available salaries click on the
+‘Search’ button. The salary that you select here will be used to calculate the pensionable
+salary by having the deductible value subtracted from it. </p>
+
+<p><a name="sal2"></a><strong>NEW SALARY</strong> - Enter any one of the salaries that have been
+set up for this scheme. To display a list of available salaries click on the ‘Search’
+button. The salary that you select here should be the one that has been set up as
+pensionable salary. This salary will be replaced by the figure calculated by subtracting
+the deductible value from the Original Salary. </p>
+
+<p>Click on ‘OK’ and the following menu is displayed: </p>
+
+<div class="well">
+
+  <p>ARE YOU SURE : <em>No</em> Yes </p>
+
+</div>
+
+<p>Click ‘No’ to return to the main menu without processing the pensionable salary update
+for this category. </p>
+
+<p>Click ‘Yes’ to process the pensionable salary update for the category. A message will
+be displayed: </p>
+
+<div class="well">
+
+  <p>Updating Pensionable Salaries … Please Wait </p>
+
+</div>
+
+<p>When the pensionable salaries have been calculated for all members in the category
+the program will return to the main menu. </p>
+
+<p>Click on ‘Cancel’ to return to the main menu without processing the pensionable salary
+updates. </p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’ menu option. This leaves the program and returns to the Updates menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

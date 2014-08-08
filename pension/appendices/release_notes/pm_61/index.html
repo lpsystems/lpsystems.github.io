@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Release Notes 6.1</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Release Notes 6.1</h1>
+        </div>
+        
+
+      <h2>Important Notes In Relation To The Euro
+</h2>
+<ol>
+<li>
+    You will need to amend Scheme User Defined Screen, User Defined Field and User Defiled
+    Array field formats from N2 to MO (see <a href="pem_sch1.html#Scheme User Defined Details">here</a> for
+    further details on how to do this) if you wish these amounts to be converted by any
+    of the new Pension Master Euro functionality. All user defined field types of type
+    Nx (where x = 1,...,6) will not be converted to Euro's as they are assumed to be non-numeric
+    values. 
+</li>
+<li>
+    All quotation results will be assumed to be monetary amounts for the purposes of any
+    Euro conversions and will thus be converted to Euro's as and when the scheme base
+    currency is changed to ther Euro. If the results of any quotations are not monetary
+    amounts you will need to re-run the quotations in order to obtain valid non-monetary
+    amounts. 
+</li>
+<li>
+    Any monetary amounts referred to in either Scheme Notes or Member Notes will not be
+    converted to Euro's as there is no way for Pension Master to distinguish between monetary
+    amounts and other numeric items in the notes. All users of Pension Master should be
+    made aware of this. 
+</li>
+</ol>
+<h2>Other Important Issues To Note For This Release
+</h2>
+<ul>
+<li>
+    <b>GUI Unix Version only</b>. Due to the introduction of formal username and password
+    facilities directly in Pension Master, it will be necessary to change the command
+    line used by the Pension Master icon on each PC that requires access to Pension Master.
+    The following is the command line required and assumes that your Pension Mater server
+    hostname is <i>saturn, </i>the user is called <i>john </i>and that the Pension Master
+    client software is installed in <i>c:\penmast </i>on the PC. Substitute your own values
+    here as required. It should be entered into the <i>Target</i> field on the <i>Shortcut</i> tab
+    of your Pension Master icon: 
+</li>
+</ul>
+<ul>
+<table cols="1" width="95%" border="1">
+    <tbody>
+	<tr>
+	    <td>
+		c:\penmast\bin\startwtk.exe ilogin -w -computer {saturn} -user {john} -term {xterm}
+		<br />
+		-cmd "COMSPEC=@ENV{COMSPEC};export COMSPEC;FGLSERVER=@IP:0;
+		<br />
+		export FGLSERVER;FGLGUI=1;export FGLGUI;fglrun gn_logon;exit"</td>
+	</tr>
+    </tbody>
+</table>
+</ul>
+<ul>
+<li>
+    Various new menu options are added to Pension Master by this release. These are noted
+    in more detail in the points that follow. You should make sure these new menu options
+    are switched on for all users that require access to them by assigning the correct
+    privelages using <a href="gn_user.html#User Access Details">User File Maintenance</a>.
+    We would suggest that the easiest way to do this is to use the new Default option
+    in User File Maintenance which is documented in more detail <a href="gn_user.html#Re-Set Default Menu Options">here</a>.
+    You should then use the <a href="gn_user.html#user_sysadm">System Administrator</a>, <a href="gn_user.html#user_superv">Supervisor</a> and <a href="gn_user.html#User Access Details">Assign
+    Users To Schemes</a> options to control which users have the privelages necessary
+    to use certain programs. Further details of how these options affect the options available
+    to the user are to be found <a href="security.html">here</a>. 
+</li>
+</ul>
+<h2>Formula File Maintenance
+</h2>
+<p>
+Added various new functions to the formula file as follows: 
+</p>
+ 
+<p>
+    <b>popup(msg_text,field_type)</b>
+</p> 
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the popup function to display a run-time pop-up window asking the user to input
+    a value that is needed in the formula. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    popup(msg_text,field_type) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<p>
+    msg_text - date to which the days are to be subtracted 
+</p>
+<p>
+    field_type - this is a two character field that denotes the
+    type of field 
+    <br />
+    you are asking for. Valid values are DT (date), TX (free format text), 
+    <br />
+    MO (monetary amount) or Nn (Number with n decimal places (n = 0-6)). 
+</p>
+<p>
+    <b>NOTES</b> 
+    <br />
+</p>
+<ol>
+    <li>
+	msg_text cannot be longer than 50 characters. 
+    </li>
+    <li>
+	field_type must be one of DT, TX, MO, Nn (n = 0-6) and must be uppercase. 
+    </li>
+</ol>
+<b> 
+<p>
+    EXAMPLES
+</p></b> 
+<p>
+    popup(Enter the amount of pre 1991 AVC's,MO) 
+    <br />
+    popup(Enter date started paying extra contributions,DT) 
+    <br />
+</p>
+<p>
+    <b>ncu_to_eur(@line_num)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the ncu_to_eur function to convert the value of a previous formula line from the
+    National Currency Unit to Euro's. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    ncu_to_eur(@line_num) 
+</p>
+<p>
+    <b>NOTES</b> 
+</p>
+<p>
+    line_number must be &gt;= 1 and cannot be greater than the current formula line number
+    e.g. if you put "@55" in line 30 of the formula you will see an error message and
+    be invited to re-enter the line number after the @ symbol. 
+</p>
+<p>
+    <b>EXAMPLES</b> 
+</p>
+<p>
+    ncu_to_eur(@2) 
+    <br />
+</p>
+<p>
+    <b>eur_to_ncu(@line_num)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the eur_to_ncu function to convert the value of a previous formula line from Euro's
+    to the National Currency Unit. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    eur_to_ncu(@line_num) 
+</p>
+<p>
+    <b>NOTES</b> 
+</p>
+<p>
+    line_number must be &gt;= 1 and cannot be greater than the current formula line number
+    e.g. if you put "@55" in line 30 of the formula you will see an error message and
+    be invited to re-enter the line number after the @ symbol. 
+</p>
+<p>
+    <b>EXAMPLES</b> 
+</p>
+<p>
+    eur_to_ncu(@2)
+</p>
+<h2>Formula File Maintenance
+</h2>
+<p>
+Extended the avg() and avgmax() functions in the formula file to allow a fifth averaging
+basis of dynamisation. The relevant help text is as follows: 
+</p>
+<p>
+<b> 
+    avg(field,n,fld1,fld2)</b>
+</p> 
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the avg function to calculate the average of a history field over a particular
+    number of years. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    avg(field,n,fld1,fld2) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<p>
+    field -  is a field on the salary history or contribution history files (pe_defsal or pe_defhst_b respectively).
+</p>
+<p>
+    n - is the number of years to average the history field over. 
+</p>
+<p>
+    fld1 - is the effective start conditions of the averaging.
+</p>
+<p>
+    fld2 - is the basis of the averaging. 
+</p>
+<p>
+    <b>NOTES</b> 
+</p>
+<ol>
+    <li>If n = 0, the function will return a value of 0.</li>
+    <li>n can take any value less than 40. i.e you can average the history field over no more than 40 years.</li>
+    <li>fld1 can take the alphabetic values 'e' and 'l'.
+<ul>
+<li>
+'e' - will commence the averaging period from Calculation Date.
+</li>
+<li>
+'l' - will commence the averaging period from Calculation Date but will ignore the latest entry.
+</li>
+</ul>
+</li>
+    <li>fld2 can take the values 1, 2, 3, 4 and 5.</li>
+<ol>
+<li>
+will average extracted amounts using the highest amount if there is more than one in the same calendar year.
+</li>
+<li>
+will average extracted amounts using the first amount if there is more than one in the same calendar year. 
+</li>
+<li>
+will average extracted amounts recorded at the renewal dd/mm as recorded on Scheme File Maintenance. A warning will be generated if there are missing years in the salary history. 
+</li>
+<li>
+will average extracted amounts using the period the amount was effective for.
+</li>
+<li>
+will average extracted amounts recorded at the renewal dd/mm as recorded on Scheme File Maintenance and dynamise using the appropriate RPI values. N.B. The correct calculation of an average salary using this basis is dependant on the relevant RPI values being present in MLI/RPI File Maintenance. A warning will be generated if there are missing years in the salary history.
+</li>
+
+</ol>
+</ol>
+<p>
+    <b>EXAMPLES</b> 
+</p>
+<p>
+    avg(pds_pensal,3,e,1) 
+    <br />
+    avg(pds_grsal,1,l,4) 
+    <br />
+    avg(pdb_ee_ord_c,4,e,2) 
+    <br />
+</p>
+<p>
+    <b>avgmax(fld,n1,n2,fld1,fld2)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the avgmax function to calculate the best band of consecutive years history over
+    a given period. 
+    <br />
+    e.g. to calculate the best three year average gross salary over the last ten years. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    avgmax(field,n1,n2,fld1,fld2) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<p>
+    field - is a field on the salary history or contribution history files (pe_defsal or pe_defhst_b respectively). 
+</p>
+<p>
+    n1 - is the number of years to find the best consecutive n2 years average over. 
+</p>
+<p>
+    n2 - is the number of consecutive years to average the history field over. 
+</p>
+<p>
+    fld1 - is the effective start conditions of the averaging. 
+</p>
+<p>
+    fld2 - is the basis of the averaging. 
+</p>
+<p>
+    <b>NOTES</b> 
+</p>
+<ol>
+    <li>If n1 = 0 or n2 = 0, the function will return a value of 0.</li>
+    <li>n1 can take any value less than 40. i.e you can average the history field over no more than 40 years.</li>
+    <li>If n2 &gt; number of years history for a particular member then the function performs the average over the number of years history data available. e.g. if you try to use 
+    avgmax(pds_grsal,10,3,e,1) and there is only 2 years gross salary details for a 
+    particular member, the function will look at consecutive two year averages of gross 
+    salary to arrive at the result.</li>
+    <li>fld1 can take the alphabetic values 'e' and 'l'.
+    <ul>
+	<li>
+    'e' - will commence the averaging period from Calculation Date.
+	</li>
+	<li>
+    'l' - will commence the averaging period from Calculation Date but will ignore the latest entry. 
+	</li>
+    </ul>
+    </li>
+<li>
+    fld2 can take the values 1, 2, 3, 4 and 5.
+<ol>
+<li>
+will average extracted amounts using the highest amount if there is more than one in the same calendar year. 
+</li>
+<li>
+will average extracted amounts using the first amount if there is more than one in the same calendar year.
+</li>
+<li>
+will average extracted amounts recorded at the renewal dd/mm as recorded on Scheme File Maintenance. A warning will be generated if there are missing years in the salary history.
+</li>
+<li>
+will average extracted amounts using the period the amount was effective for.
+</li>
+<li>
+will average extracted amounts recorded at the renewal dd/mm as recorded on Scheme File Maintenance and dynamise using the appropriate RPI values. N.B. The correct calculation of an average salary using this basis is dependant on the relevant RPI values being present in MLI/RPI File Maintenance. A warning will be generated if there are missing years in the salary history.
+</li>
+</ol>
+</li>
+</ol>
+<p>
+    <b>EXAMPLES</b> 
+</p>
+<p>
+    avgmax(pds_pensal,10,3,e,1) 
+    <br />
+    avgmax(pds_grsal,3,1,l,4) 
+    <br />
+    avgmax(pdb_ee_ord_c,4,1,e,2)
+</p>
+<h2>Scheme User Defined Screen
+</h2>
+<p>
+Several new field formats have been added to this screen. 
+</p>
+<p>
+'MO' - Monetary Amount 
+<br />
+'Nn' - Number with n decimal places (n = 0-6). 
+</p>
+<p>
+'MO' has been added in the advent of Euro conversions which will allow monetary values
+held on Pension 
+<br />
+Master to be converted appropriately. 
+<br />
+'Nn' has been added to extend the flexibility of the system and allow users to record
+amounts with up to 
+<br />
+six decimal places. 
+<br />
+</p>
+<div class="info">
+	    <p>System Administrators: You will need to ensure that administrators are aware that
+	    they will need to amend Scheme User Defined Screen field formats from N2 to MO if
+	    they wish these amounts to be converted by the 'Toggle Euro' function.</p>
+</div>
+<p>
+The relevant amended section of the User Manual reads as follows: 
+</p>
+<p>
+<b>FIELD DESCRIPTIONS/FORMATS</b> - Enter the field descriptions and field formats
+for the schemes Scheme User Defined Details. You can leave blank lines to space your
+record out and you must enter a description if you enter a format. 
+</p>
+<p>
+The list of valid formats can be selected by clicking on the 'Search' button. These
+are listed below: 
+</p>
+<ul>
+<li>
+    DT - Date - dd/mm/yyyy 
+</li>
+<li>
+    IN - Indicator - Single character (uppercase only) 
+</li>
+<li>
+    TX - Text - Up to ten characters of free text 
+</li>
+<li>
+    MO - Monetary Amount - Number with two decimal places 
+</li>
+<li>
+    Nn - Number with n decimal places. n can equal 0, 1, 2, 3, 4, 5 or 6 e.g. N3 - Number
+    with 3 decimal places. 
+</li>
+<li>
+    <br />
+    (N.B. Due to field formating, a field with a format of Nn cannot contain more than
+    9 numbers e.g. a field with a format of N4 can only have up to 5 numbers before the
+    decimal point and 4 after, similarly and field with a format of N1 can only have up
+    to 8 numbers before the decimal point and 1 after). 
+</li>
+</ul>
+<b> 
+<p>
+FIELD VALUES
+</p></b> - Enter the field values for the schemes Scheme User Defined Details. You
+will only be able to enter a value if the field description and format are present.
+This will be checked by the system to ensure it is a valid entry for the entered field
+format. If a value is updated for a field with an associated format of MO or Nn, the
+existing value will be redisplayed left justified. 
+<p>
+Existing field formats of NI (Numeric Integer) and ND (Numeric Decimal) will be automatically
+converted to N0 and N2 respectively. 
+</p>
+<h2>User Defined Screens
+</h2>
+<p>
+Several new field formats have been added to this screen. 
+</p>
+<p>
+'MO' - Monetary Amount 
+<br />
+'Nn' - Number with n decimal places (n = 0-6). 
+</p>
+<p>
+'MO' has been added in the advent of Euro conversions which will allow monetary values
+held on Pension 
+<br />
+Master to be converted appropriately. 
+<br />
+'Nn' has been added to extend the flexibility of the system and allow users to record
+amounts with up to 
+<br />
+six decimal places. 
+<br />
+</p>
+<div class="info">
+	    <p>System Administrators: You will need to ensure that administrators are aware that
+	    they will need to amend User Defined Screens field formats from N2 to MO if they wish
+	    these amounts to be converted by the 'Toggle Euro' function.</p>
+</div>
+<p>
+The relevant amended section of the User Manual reads as follows: 
+</p>
+<p>
+<b>FIELD DESCRIPTIONS/FORMATS</b> - Enter the field descriptions and field formats
+for your User Defined Screen. You can leave blank lines to space your record out and
+you must enter a description if you enter a format. 
+</p>
+<p>
+The list of valid formats can be selected by clicking on the 'Search' button. These
+are listed below: 
+</p>
+<ul>
+<li>
+    DT - Date - dd/mm/yyyy 
+</li>
+<li>
+    IN - Indicator - Single character (uppercase only) 
+</li>
+<li>
+    HD - Header - Description only. Will not allow user to enter member data against this
+    field 
+</li>
+<li>
+    TX - Text - Up to ten characters of free text 
+</li>
+<li>
+    MO - Monetary Amount - Number with two decimal places 
+</li>
+<li>
+    Nn - Number with n decimal places. n can equal 0, 1, 2, 3, 4, 5 or 6 e.g. N3 - Number
+    with 3 decimal places. 
+</li>
+<li>
+    <br />
+    (N.B. Due to field formating, a field with a format of Nn cannot contain more than
+    9 numbers e.g. a field with a format of N4 can only have up to 5 numbers before the
+    decimal point and 4 after, similarly and field with a format of N1 can only have up
+    to 8 numbers before the decimal point and 1 after). 
+</li>
+</ul>
+<p>
+Existing field formats of NI (Numeric Integer) and ND (Numeric Decimal) will be automatically
+converted to N0 and N2 respectively. 
+</p>
+<h2>User Defined Arrays
+</h2>
+<p>
+Several new column formats have been added to this screen. 
+</p>
+<p>
+'MO' - Monetary Amount 
+<br />
+'Nn' - Number with n decimal places (n = 0-6). 
+</p>
+<p>
+'MO' has been added in the advent of Euro conversions which will allow monetary values
+held on Pension 
+<br />
+Master to be converted appropriately. 
+<br />
+'Nn' has been added to extend the flexibility of the system and allow users to record
+amounts with up to 
+<br />
+six decimal places. 
+<br />
+</p>
+<div class="info">
+	    <p>System Administrators: You will need to ensure that administrators are aware that
+	    they will need to amend User Defined Arrays field formats from N2 to MO if they wish
+	    these amounts to be converted by the 'Toggle Euro' function.</p>
+</div>
+<p>
+The relevant amended section of the User Manual reads as follows: 
+</p>
+<p>
+<b>COLUMN DESCRIPTIONS/FORMATS</b> - Enter the column descriptions and field formats
+for your User Defined Array. You can leave blank columns to space your record out
+and you must enter a description if you enter a format. 
+</p>
+<p>
+The list of valid formats can be selected by clicking on the 'Search' button. These
+are listed below: 
+</p>
+<ul>
+<li>
+    DT - Date - dd/mm/yyyy 
+</li>
+<li>
+    IN - Indicator - Single character (uppercase only) 
+</li>
+<li>
+    TX - Text - Up to ten characters of free text 
+</li>
+<li>
+    MO - Monetary Amount - Number with two decimal places 
+</li>
+<li>
+    Nn - Number with n decimal places. n can equal 0, 1, 2, 3, 4, 5 or 6 e.g. N3 - Number
+    with 3 decimal places. 
+</li>
+<li>
+    <br />
+    (N.B. Due to field formating, a field with a format of Nn cannot contain more than
+    9 numbers e.g. a field with a format of N4 can only have up to 5 numbers before the
+    decimal point and 4 after, similarly and field with a format of N1 can only have up
+    to 8 numbers before the decimal point and 1 after). 
+</li>
+</ul>
+<p>
+Existing column formats of NI (Numeric Integer) and ND (Numeric Decimal) will be automatically
+converted to N0 and N2 respectively. 
+</p>
+<h2>Transfer In
+</h2>
+<p>
+The members Transfer In screen has been changed from a one screen format to three
+screens. 
+</p>
+<p>
+Upon entry to the screen any existing transfers for the current member are displayed
+in a window. A specific transfer can then be selected and the transfer details displayed
+on the screen. The menu has been changed slightly so that the second and third screens
+of details can be seen by pressing the "2" or "3" keys or by moving the highlight
+bar with the arrow keys and pressing <kbd>Return</kbd>. In a similar way the first screen
+of details can be seen by pressing the "1" key or by using the arrow keys. 
+</p>
+<p>
+The Add option is only available from the first screen. This allows the user to enter
+the first screens data then automatically switch to the second and then third screens.
+Upon clicking on 'Ok' on the second screen the data from <b>both</b> the screens is
+saved to the file. Also if you click on 'Cancel' on the second screen data that was
+previously entered on the first screen will <b>not</b> be saved. 
+</p>
+<p>
+Browsing of a members Transfer In details can be performed on either screen, the same
+also applies to any Updating required. 
+</p>
+<h2>Uniplex
+</h2>
+<p>
+Dropped support for the old Uniplex office application as it is no longer used by
+any of our clients and there is no prospect of any further clients using it. 
+</p>
+<h2>Batch Data Input
+</h2>
+<p>
+Extended Query criteria to allow users to search on Batch Number, Scheme Code, Company
+Code, Category Code, Status Code and Batch Date. 
+</p>
+<h2>Transfer Out
+</h2>
+<p>
+The format of the members Transfer Out screen has been changed. 
+</p>
+<p>
+Upon entry to the screen any existing transfers for the current member are displayed
+in a window. A specific transfer can then be selected and the transfer details displayed
+on the screen. 
+</p>
+<h2>Pending Transfers Out Report
+</h2>
+<p>
+A new report used in conjunction with the new Transfer Out screen to be found on the
+Standard Reports sub-menu. This report lists any members who have had a transfer out
+date agreed but the transfer out has not been paid. 
+</p>
+<div class="info">
+	    <p>System Administrators: You will need to make this extra menu option available to
+	    users as appropriate by granting access using the User File Maintenance module of
+	    Pension Master. By default all new menus and menu option added to Pension Master
+	    will not be switched on for any users.</p>
+</div>
+<h2>Member File Maintenance
+</h2>
+<p>
+The layout of the Additional Benefits screen has been amended. 
+</p>
+<p>
+The field 'Additional Benefit Number' has been dropped and the 'Benefit Code' has
+been moved to be the lead data item for this screen. 'Spouses Before Retirement' and
+'Spouses After Retirement' fields have been extended to be a two decimal place entry
+to allow non integer values. 
+</p>
+<h2>Code Maintenance
+</h2>
+<p>
+The Additional Benefit Code option on the System Data menu has been replaced by the <a href="pem_codem.html">Codes
+Maintenance</a> option. This new option allows five different types of Code to be
+entered through the same screen as follows: 
+</p>
+<ul>
+<li>
+    A - Additional Benefit Codes 
+</li>
+<li>
+    D - Deferred Pensioner Codes 
+</li>
+<li>
+    I - Transfer In Codes 
+</li>
+<li>
+    O - Transfer Out Codes 
+</li>
+<li>
+    P - Pensioner Codes 
+</li>
+</ul>
+<p>
+These codes are then used when setting up the relevant record on the member file. <b>The
+Deferred Pensioner and Pensioner Codes will be used by new screens in the next release
+of Pension Master.</b> 
+</p>
+<h2>Transfer In/Out Data
+</h2>
+<p>
+The file old pe_transfer database table (which used to hold details of both transfer
+in's and transfer out's) has been replaced by new separate tables, pe_tvin and pe_tvout.
+The installation procedure creates the new files and copies the existing data. Because
+the new Transfer In/Out screens rely on individual codes (as set up in <a href="pem_codem.html">Codes
+Maintenance</a>) to access the additional data, the program will automatically create
+several new codes as follows:
+</p>
+<p>
+Transfer In's TPxxxxxx with a description
+of "Transfer Pension" 
+<br />
+Transfer Out's TCxxxxxx with a description
+of "Transfer to a New Company" 
+</p>
+<p>
+The number section of the code will depend entirely on the number of Transfers for
+that member. e.g. if the member already has 2 Transfer In's, then the codes will be
+named TP000001 and TP000002 respectively. 
+<br />
+</p>
+<div class="info">
+	    <p>System Administrators: The number of funds that a member can invest in has been
+	    changed to 10. When entering the Investment Fund data, each of the 10 positions
+	    can select any of the 20 available funds related to the scheme. An error message
+	    is written to the members notes if a member has invested in more than 10 funds.</p>
+</div>
+	    <p>
+		<b>The 3 Fixed PUPs fields on the old Pe_transfer file have been moved as follows:</b> 
+	    </p>
+		    <table cellspacing="0">
+			<tbody>
+			    <tr>
+				<th>
+				    Old Screen Field</th>
+				<th>
+				    Old File Field</th>
+				<th width="3%">
+				</th>
+				<th>
+				    New Screen Field</th>
+				<th>
+				    New File Field</th>
+			    </tr>
+			    <tr>
+				<td>
+				    Fixed PUP 1</td>
+				<td>
+				    Pe_transfer.ptv_fx1</td>
+				<td>
+				    to</td>
+				<td>
+				    Additional Pension Granted</td>
+				<td>
+				    Pe_tvin.ptvi_trpen</td>
+			    </tr>
+			    <tr>
+				<td>
+				    Fixed PUP 2</td>
+				<td>
+				    Pe_transfer.ptv_fx2</td>
+				<td>
+				    to</td>
+				<td>
+				    Old Fixed PUP 2</td>
+				<td>
+				    Pe_tvin.ptvi_fx2</td>
+			    </tr>
+			    <tr>
+				<td>
+				    Fixed PUP 3</td>
+				<td>
+				    Pe_transfer.ptv_fx3</td>
+				<td>
+				    to</td>
+				<td>
+				    Old Fixed PUP 3</td>
+				<td>
+				    Pe_tvin.ptvi_fx3</td>
+			    </tr>
+			</tbody>
+		    </table>
+<h2>Database Maintenance
+</h2>
+<p>
+Added a new module, Database Maintenance to Pension Master. This is available under
+the GUI version of Pension Master only and allows you to set up and maintain extra
+databases in addition to the default 'pension' database. 
+</p>
+<p>
+This can be useful when, for example, setting up and testing formulae, where you do
+not wish the formulae to be available on a live system until they have been properly
+de-bugged. See the <a href="gn_dbase.html">Database Maintenance</a> section of the
+User Manual for further details. 
+</p>
+<p>
+If your Pension Master has multiple databases, you can tell which one you are connected
+to by looking at the titlebar of the Pension Master window - it will have a <i>(dbasename.dbs)</i> at
+the end of it, where <i>dbasename</i> is the name of the database you are using. 
+<br />
+</p>
+<div class="info">
+	    System Administrators: You will need to make this extra menu option available to
+	    users as appropriate by granting access using the User File Maintenance module of
+	    Pension Master. By default all new menus and menu options added to Pension Master
+	    will not be switched on for any users.
+</div>
+<h2>Logon Screen
+</h2>
+<p>
+This is available for the GUI version of Pension Master only and is to be used as
+the first screen that users see when clicking on the Pension Master icon from their
+desktops. This allows the user to log into Pension Master by use of the standard username
+and password sequence. It also allows users to change their password as and when required. 
+</p>
+<p>
+All passwords are stored in a one-way encryption format making it extremely difficult
+to crack passwords and additional controls over the choice of passwords have been
+introduced in the <a href="pem_sysp.html#Password Option Details">System Parameter
+Maintenance</a> module of Pension Master. 
+</p>
+<p>
+It is not now possible to run individual Pension Master modules in the GUI environment
+without first logging into Pension Master using this login screen, thus further strengthening
+the security that is built into Pension Master. 
+</p>
+<h2>System Parameter Maintenance
+</h2>
+<p>
+Two extra screens have been added to the System Parameter Maintenance module. These
+are as follows: 
+</p>
+<ul>
+<li>
+    <a href="pem_sysp.html#Audit Trail Settings">Audit Trail Details</a> - additional
+    parameters to control how changes to date are logged to the audit trail. 
+</li>
+<li>
+    <a href="pem_sysp.html#Password Option Details">Password Option Details</a> - settings
+    to control how a user may choose their password using the 'Logon Program' detailed
+    above. 
+</li>
+</ul>
+<p>
+Further details are available by following the links above. 
+</p>
+<h2>Audit Trail Listing
+</h2>
+<p>
+The old Audit Trail Listing program has been replaced by a new revised <a href="per_audtr.html">Audit
+Trail Listing</a> program. This now logs much more detail relating to any addition,
+update or deletion of data on your Pension Master system. It also allows you to print
+off the audit trail in a variety of formats and search for specific changes made to
+the database e.g. all changes made by the user 'john' on 9/10/98. 
+</p>
+<p>
+The values of each data item in question are logged to the audit trail both in before
+and after change mode, giving you a complete picture of the data changes made to your
+system over time. 
+</p>
+<p>
+The way Pension Master logs database changes is now set via a second screen in <a href="pem_sysp.html#Audit Trail Settings">System
+Parameter Maintenance</a> as detailed above. 
+</p>
+<h2>Euro Compliance
+</h2>
+<p>
+Pension Master has been amended to take full account of the introduction of the Euro
+as a currency on 1/1/1999. Full details can be found in <a href="app_h.html">Appendix
+H - Euro Support In Pension Master </a>in the User Manual. 
+</p>
+<h2>Member File Maintenance
+</h2>
+<ul>
+<li>
+    Added a new 'Refund of Contributions' screen. Further details can be found in the <a href="pem_mem3.html#Refund Of Contributions Details">Refund
+    Of Contributions</a> section of the User Manual. 
+</li>
+<li>
+    Added a new 'Death Details' screen. Further details can be found in the <a href="pem_mem3.html#Death Details">Death
+    Details</a> section of the User Manual. 
+</li>
+<li>
+    Added new 'Quick Letter' facility to the GUI version of Pension Master only. Further
+    details can be found in the <a href="pem_mem5.html#Producing Ad-Hoc Letters">Producing
+    Ad-Hoc Letters </a>section of the User Manual. 
+</li>
+<li>
+    Added new 'Quick Search' facility to the GUI version of Pension Master only. Further
+    details can be found in the <a href="pem_mem1.html#Quick Search">Quick Search</a> section
+    of the User Manual. 
+</li>
+</ul>
+<h2>Formula File Maintenance
+</h2>
+<p>
+    Added a lookup facility to the entry of factor tables for either actuarial or term
+    related factors, available by clicking on the 'Search' button. 
+</p>
+<p>
+    Split up the formula help facility into separate categories of formula functions as
+    having all possible formula options in one long list was getting unwieldy. 
+</p>
+<p>
+    Extended the syntax of the defhst() formula funtion to allow you to retrieve contribution
+    details for any investment fund rather than being limited to fund 00 as before. All
+    your existing formulae references to defhst() will automatically be converted over
+    to the new format by the database update program. The manual page for the revised
+    function is as follows: 
+</p>
+<p>
+<b>defhst(fld,nn,yyyymmdd)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the defhst function to lookup a specific field on the contribution history file
+    (pe_defhst_b) for a specified investment fund for a specified date. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    defhst(fld,nn,yyyymmdd) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	fld - is a valid field on the contribution history file (pe_defhst_b). 
+    </li>
+    <li>
+	nn - is the investment fund number required. This must be in the range 0 to 20. 
+    </li>
+    <li>
+	yyyymmdd - is the date for which you wish to look up the contribution field. yyyy
+	is the year value, mm is the month value and dd is the day value. 
+    </li>
+</ul>
+<p>
+<b> 
+    NOTES
+</b>
+</p> 
+<ol>
+    <li>
+	The date specified must be a valid date. 
+    </li>
+</ol>
+<p>
+<b> 
+    EXAMPLES
+</b>
+</p> 
+<p>
+    defhst(pdb_ee_ord_c,00,19951201) 
+    <br />
+    defhst(pdb_ee_avc_c,03,20000101)
+</p>
+
+<p>
+    Added new date manipulation functions as follows: 
+</p>
+<p>
+<b>date_first(date)</b>
+</p> 
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_first function to calculate the first day of the month in which the date
+    implied by the function argument falls. e.g. if date is 10/3/98, the function will
+    return 1/3/98. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_first(date) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	date - date for calculation 
+    </li>
+</ul>
+<p>
+<b> 
+    NOTES
+</b>
+</p> 
+<ol>
+    <li>
+	The date must be a field reference to a date field on the member file (pe_mem), a
+	constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+	and DD is the day or a reference to the result of another line of formula code within
+	the current formula e.g. @1. 
+    </li>
+</ol>
+<p>
+<b> 
+    EXAMPLES
+</b>
+</p> 
+<p>
+    date_first(pm_dtlft) 
+    <br />
+    date_first(19950122) 
+    <br />
+    date_first(@1) 
+    <br />
+</p>
+<p>
+    <b>date_last(date)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_last function to calculate the last day of the month in which the date
+    implied by the function argument falls. e.g. if date is 10/3/98, the function will
+    return 31/3/98. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_last(date) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	date - date for calculation 
+    </li>
+</ul>
+<p>
+<b> 
+    NOTES
+</b>
+</p> 
+<ol>
+    <li>
+	The date must be a field reference to a date field on the member file (pe_mem), a
+	constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+	and DD is the day or a reference to the result of another line of formula code within
+	the current formula e.g. @1. 
+    </li>
+</ol>
+<p>
+<b> 
+    EXAMPLES
+</b>
+</p> 
+<p>
+    date_last(pm_dtlft) 
+    <br />
+    date_last(19950122) 
+    <br />
+    date_last(@1) 
+    <br />
+</p>
+<p>
+    <b>date_fixed(date,day)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_fixed function to calculate the date in the same month as the date implied
+    by the first function argument, but with the day equal to day (i.e. the second function
+    argument) e.g. date_fixed(19980101,10) would return a date of 10/01/1998. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_fixed(date,nn) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	date - date for calculation 
+    </li>
+    <li>
+	nn - day of month to calculate day to 
+    </li>
+</ul>
+<p>
+<b> 
+    NOTES
+</b>
+</p> 
+<ol>
+    <li>
+	The date must be a field reference to a date field on the member file (pe_mem), a
+	constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+	and DD is the day or a reference to the result of another line of formula code within
+	the current formula e.g. @1. 2. 
+    </li>
+    <li>
+	nn must be between 1 and 31. 3. month endings are dealt with as follows: if date is
+	10/2/98, date_fixed(date,31) will return 28/2/98. Leap years are dealt with accordingly. 
+    </li>
+</ol>
+<p>
+<b> 
+    EXAMPLES
+</b>
+</p> 
+<p>
+    date_fixed(pm_dtlft,3) 
+    <br />
+    date_fixed(19950122,24) 
+    <br />
+    date_fixed(@1,12) 
+    <br />
+</p>
+<p>
+    <b>date_next(date,month,day)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_next function to calculate the next dd/mm from the date implied by the
+    first function argument e.g. date_next(pm_dterm_dt,4,5) calculates the next occurrence
+    of 5 April following pm_dterm_dt. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_next(date,month,day) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	date - date for calculation 
+    </li>
+    <li>
+	month - a valid month in the range 1 to 12 
+    </li>
+    <li>
+	day - a valid day in the range 1 to 31 
+    </li>
+</ul>
+<p>
+<b> 
+    NOTES
+</b>
+</p>
+<ol>
+    <li>
+	The date must be a field reference to a date field on the member file (pe_mem), a
+	constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+	and DD is the day or a reference to the result of another line of formula code within
+	the current formula e.g. @1. 
+    </li>
+</ol>
+<p>
+<b> 
+    EXAMPLES
+</b>
+</p> 
+<p>
+    date_next(pm_dtlft,4,5) 
+    <br />
+    date_next(19950122,6,1) 
+    <br />
+    date_next(@1,12,31) 
+    <br />
+</p>
+<p>
+    <b>date_prev(date,month,day)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_prev function to calculate the previous dd/mm from the date implied by
+    the first function argument e.g. date_prev(pm_dterm_dt,4,5) calculates the previous
+    occurrence of 5 April prior to pm_dterm_dt. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_prev(date,month,day) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	date - date for calculation 
+    </li>
+    <li>
+	month - a valid month in the range 1 to 12 
+    </li>
+    <li>
+	day - a valid day in the range 1 to 31 
+    </li>
+</ul>
+<p>
+<b> 
+    NOTES
+</b>
+</p>
+<ol>
+    <li>
+	The date must be a field reference to a date field on the member file (pe_mem), a
+	constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+	and DD is the day or a reference to the result of another line of formula code within
+	the current formula e.g. @1. 
+    </li>
+</ol>
+<p>
+<b> 
+    EXAMPLES
+</b>
+</p>
+<p>
+    date_prev(pm_dtlft,4,5) 
+    <br />
+    date_prev(19950122,6,1) 
+    <br />
+    date_prev(@1,12,31) 
+    <br />
+</p>
+<p>
+    <b>date_day(date)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_day function to calculate the day figure from a date e.g. date_day(19981012)
+    will return a value of 12. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_day(date) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	date - date for calculation 
+    </li>
+</ul>
+<p>
+<b>
+    NOTES
+</b>
+</p> 
+<ol>
+    <li>
+	The date must be a field reference to a date field on the member file (pe_mem), a
+	constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+	and DD is the day or a reference to the result of another line of formula code within
+	the current formula e.g. @1. 
+    </li>
+</ol>
+<p>
+<b> 
+    EXAMPLES
+</b>
+</p>
+<p>
+    date_day(pm_dtlft) 
+    <br />
+    date_day(19981012) 
+    <br />
+    date_day(@1) 
+    <br />
+</p>
+<p>
+    <b>date_month(date)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_month function to calculate the month figure from a date e.g. date_month(19981012)
+    will return a value of 10. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_month(date) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	date - date for calculation 
+    </li>
+</ul>
+<p>
+<b> 
+    NOTES
+</b>
+</p> 
+<ol>
+    <li>
+	The date must be a field reference to a date field on the member file (pe_mem), a
+	constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+	and DD is the day or a reference to the result of another line of formula code within
+	the current formula e.g. @1. 
+    </li>
+</ol>
+<b> 
+<p>
+    EXAMPLES
+</p></b> 
+<p>
+    date_month(pm_dtlft) 
+    <br />
+    date_month(19981012) 
+    <br />
+    date_month(@1) 
+    <br />
+</p>
+<p>
+    <b>date_year(date)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_year function to calculate the year figure from a date e.g. date_year(19981012)
+    will return a value of 1998. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_year(date) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+    <br />
+</p>
+<ul>
+    <li>
+	date - date for calculation 
+    </li>
+</ul>
+<b> 
+<p>
+    NOTES
+</p></b> 
+<br />
+<ol>
+    <li>
+	The date must be a field reference to a date field on the member file (pe_mem), a
+	constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+	and DD is the day or a reference to the result of another line of formula code within
+	the current formula e.g. @1. 
+    </li>
+</ol>
+<b> 
+<p>
+    EXAMPLES
+</p></b> 
+<p>
+    date_year(pm_dtlft) 
+    <br />
+    date_year(19981012) 
+    <br />
+    date_year(@1) 
+    <br />
+</p>
+<p>
+    <b>date_ymd(year,month,day)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use the date_ymd function to calculate a date, given the values for the date's day,
+    month and year e.g. date_ymd(1998,10,12) will evaluate to the date 12/10/1998. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    date_ymd(year,month,day) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+    <br />
+</p>
+<ul>
+    <li>
+	year - year for calculation 
+    </li>
+    <li>
+	month - month for calculation 
+    </li>
+    <li>
+	day - day for calculation 
+    </li>
+</ul>
+<b> 
+<p>
+    NOTES
+</p></b> 
+<br />
+<ol>
+    <li>
+	year, month and day must be either a constant value entered in the appropriate format
+	(YYYY for the year, MM for the month or DD for the day) or a reference to the result
+	of another line of formula code within the current formula e.g. @1. 
+    </li>
+    <li>
+	if the result of the function call does not return a valid date e.g. if the function
+	arguments are results of previous lines of your formula which do not evaluate to correct
+	years, months or day values, a value of 0 will be returned and a message will be written
+	to the Quotation Warnings file informing you of this. You should then examine your
+	formula as it is quite likely that the result of the formula will be incorrect. 
+    </li>
+</ol>
+<b> 
+<p>
+    EXAMPLES
+</p></b> 
+<p>
+    date_ymd(1998,@1,10) 
+    <br />
+    date_ymd(@1,@2,@3)
+</p>
+</ul>
+<p>
+    Added new GMP functions as follows: 
+    </p>
+    <p>
+	<b>pre_88_gmp_death(p,a)</b> 
+    </p>
+    <p>
+	<b>OVERVIEW</b> 
+    </p>
+    <p>
+	Use the pre_88_gmp_death function to calculate the Guaranteed Minimum Pension (GMP)
+	accrued prior to 6 April 1988, revalued to date of death. 
+    </p>
+    <p>
+	<b>SYNTAX</b> 
+    </p>
+    <p>
+	pre_88_gmp_death(p,a) 
+    </p>
+    <p>
+	<b>EXPLANATION</b> 
+	<br />
+    </p>
+    <ul>
+	<li>
+	    a - is a single character field that takes the value 'Y' or 'N'. It denotes whether
+	    to include any transfered-in GMP in the GMP calculations 
+	</li>
+	<li>
+	    p - is a single character field that denotes the type of GMP revaluation as follows: 
+	    <ul>
+		<li>
+		    L - Limited rate revaluation 
+		</li>
+		<li>
+		    F - Fixed rate revaluation 
+		</li>
+		<li>
+		    S - Section 148 orders. These are assumed to be the same as for Fixed Rate revaluation. 
+		</li>
+	    </ul>
+	</li>
+    </ul>
+    <p>
+	<b>NOTES</b> 
+	<br />
+    </p>
+    <ol>
+	<li>
+	    Date of death is taken from the Date Of Death field on the Death Details screen in
+	    the member record. If this is blank, date of death is assumed to be the Date Left
+	    field on the Basic Member Details screen. If this is blank, then a warning will be
+	    written to the Quotation Warnings Report and this function will return a value of
+	    0. 
+	</li>
+	<li>
+	    If date of death is later than State Pension Date then the GMP is revalued up to State
+	    Pension Date using Fixed, Limited or Section 148 orders, and between State Pension
+	    Date and Normal Retirement Date at 1/7% per week, providing the period between State
+	    Pension Date and Normal Pension Date is at least seven weeks. 
+	</li>
+    </ol>
+    <p>
+	<b>EXAMPLES</b> 
+    </p>
+    <p>
+	pre_88_gmp_death(L,Y) 
+	<br />
+	pre_88_gmp_death(F,N) 
+	<br />
+	pre_88_gmp_death(S,Y) 
+	<br />
+    </p>
+    <p>
+	<b>post_88_gmp_death(p,a)</b> 
+    </p>
+    <p>
+	<b>OVERVIEW</b> 
+    </p>
+    <p>
+	Use the post_88_gmp_death function to calculate the Guaranteed Minimum Pension (GMP)
+	accrued after 6 April 1988, revalued to date of death. 
+    </p>
+    <p>
+	<b>SYNTAX</b> 
+    </p>
+    <p>
+	post_88_gmp_death(p,a) 
+    </p>
+    <p>
+	<b>EXPLANATION</b> 
+	<br />
+    </p>
+    <ul>
+	<li>
+	    a - is a single character field that takes the value 'Y' or 'N'. It denotes whether
+	    to include any transfered-in GMP in the GMP calculations 
+	</li>
+	<li>
+	    p - is a single character field that denotes the type of GMP revaluation as follows: 
+	    <ul>
+		<li>
+		    L - Limited rate revaluation 
+		</li>
+		<li>
+		    F - Fixed rate revaluation 
+		</li>
+		<li>
+		    S - Section 148 orders. These are assumed to be the same as for Fixed Rate revaluation. 
+		</li>
+	    </ul>
+	</li>
+    </ul>
+    <p>
+	<b>NOTES</b> 
+	<br />
+    </p>
+    <ol>
+	<li>
+	    Date of death is taken from the Date Of Death field on the Death Details screen in
+	    the member record. If this is blank, date of death is assumed to be the Date Left
+	    field on the Basic Member Details screen. If this is blank, then a warning will be
+	    written to the Quotation Warnings Report and this function will return a value of
+	    0. 
+	</li>
+	<li>
+	    If date of death is later than State Pension Date then the GMP is revalued up to State
+	    Pension Date using Fixed, Limited or Section 148 orders, and between State Pension
+	    Date and Normal Retirement Date at 1/7% per week, providing the period between State
+	    Pension Date and Normal Pension Date is at least seven weeks. 
+	</li>
+    </ol>
+    <p>
+	<b>EXAMPLES</b> 
+    </p>
+    <p>
+	post_88_gmp_death(L,Y) 
+	<br />
+	post_88_gmp_death(F,N) 
+	<br />
+	post_88_gmp_death(S,Y)
+    </p>
+<h2>Contributions Report &amp; Unit Allocation Report
+</h2>
+<p>
+These reports have been reordered to list selected members in surname order within
+investment fund for each scheme. If users wish to generate listings for a specific
+company or category, then they will be able to utilise the selection criteria to generate
+the report for the specified criteria. 
+</p>
+<h2>Scheme Level Code Allocation
+</h2>
+<p>
+The <a href="pem_codem.html#Introduction">Codes Maintenance</a> option has been extended
+to allow codes to be allocated to specific Schemes, rather than having system-wide
+global codes. 
+</p>
+<p>
+An additional screen has been introduced to the <a href="pem_sch1.html#Codes Maintenance">Scheme
+File</a> to facilitate this. This screen is used to change the codes that have been
+allocated to the Scheme. These codes are used to identify separate <a href="pem_mem3.html#padb_code">Additional
+Benefits</a>, <a href="pem_mem3.html#ptvi_code">Transfer In</a>, <a href="pem_mem3.html#ptvo_code">Transfer
+Out</a>, <a href="pem_mem3.html#ptvo_code">Def</a><a href="pem_mem3.html#Deferred Pensioner Details">erred
+Pensioner</a> and <a href="pem_mem3.html#Pensioner Details">Pensioner</a> details
+for members of the Scheme. 
+</p>
+<p>
+When a members additional benefits, transfer in, transfer out, deferred pensioner
+or pensioner details are updated a lookup list for the code to use for the particular
+record will only show the codes relating to the members Scheme. 
+</p>
+<p>
+When you add a scheme, a standard set group of codes will be automatically created.
+Any additional codes that may be required for each scheme must first be entered using
+the <a href="pem_codem.html#Introduction">Codes Maintenance</a> option on the System
+Data menu, and then allocated to the scheme using this new screen in Scheme File Maintenance. 
+</p>
+<h2>Member File Maintenance
+</h2>
+<p>
+The Delete option in the Member File has been modified so that instead of deleting
+the whole member record regardless of what screen in the member file you are in, the
+delete option is more context sensitive. What is deleted by using the Delete option
+is dependent on the screen you are in as follows: 
+</p>
+<ul>
+<li>
+    Basic Member Details screen - the Delete option deletes all data for the current member,
+    including all related member data e.g. salaries and contributions. The whole of the
+    member record will be deleted from your Pension Master system. 
+</li>
+<li>
+    Additional Benefits screen - the Delete option deletes the currently selected additional
+    benefits record in for the current member. 
+</li>
+<li>
+    Transfer In screen - the Delete option deletes the currently selected transfer in
+    record for the current member. 
+</li>
+<li>
+    Transfer Out screen - the Delete option deletes the currently selected transfer out
+    record for the current member. 
+</li>
+<li>
+    Refund Of Contributions screen - the Delete option deletes the refund of contributions
+    details for the current member. 
+</li>
+<li>
+    Deferred Pensioner screen - the Delete option deletes the deferred pensioner details
+    for the current member. 
+</li>
+<li>
+    Pensioner screen - the Delete option deletes the pensioner details for the current
+    member. 
+</li>
+<li>
+    Death details screen - the Delete option deletes the death details for the current
+    member. 
+</li>
+<li>
+    User Defined Screens - the Delete option deletes the currently selected user defined
+    screen values for the current member. 
+</li>
+<li>
+    User Defined Arrays - the Delete option deletes the currently selected user defined
+    array values for the current member. 
+</li>
+</ul>
+<p>
+The Delete option is only available in the above screens and will not be displayed
+on the menu if you are in any other screen as it is not relevant. 
+</p>
+<p>
+Further details can be found in the section <a href="pem_mem5.html#Deleting Member Records">Deleting
+Member Records</a> elsewhere in this User Manual. 
+</p>
+<h2>Workgroup Maintenance
+</h2>
+<p>
+Introduced a new Workgroup Maintenance module to Pension Master. This can be found
+on the 'System Administration' menu. This allows users to set up workgroups which
+can then be used to sub-divide the users on your Pension Master system, for example,
+into different administration teams or areas. 
+</p>
+<p>
+Further details can be found in the section <a href="gn_wrkgrp.html">Workgroup Maintenance</a> elsewhere
+in this User Manual. 
+</p>
+<div class="info">
+	    <p>System Administrators: You will need to make this extra menu option available to
+	    users as appropriate by granting access using the User File Maintenance module of
+	    Pension Master. By default all new menus and menu options added to Pension Master
+	    will not be switched on for any users.</p>
+</div>
+<h2>Scheme File Maintenance
+</h2>
+<p>
+Introduced a new User Access Details screen. This screen shows who has access to this
+scheme and the members contained therein. 
+</p>
+<div class="info">
+	    <p>The database upgrade program will automatically assign access to all schemes to
+	    all users. If you wish to restrict access to particular schemes on your system,
+	    you will need to use the User Access Details screen in Scheme File Maintenance to
+	    manually alter the access options for your users.</p>
+</div>
+<p>
+Further details can be found in the section <a href="pem_sch1.html#User Access Details">User
+Access Details</a> elsewhere in this User Manual. 
+</p>
+<h2>User File Maintenance
+</h2>
+<p>
+Introduced a new User Access Details screen. This screen shows which schemes this
+user has access to. Also introduced a Workgroup field on the Basic User Details screen
+in User File Maintenance to hold the workgroup (if any) that the user belongs to.
+See <a href="gn_user.html#user_wrkgrp">here</a> for further details. 
+</p>
+<p>
+Further details can be found under <a href="pem_sch1.html#User Access Details">User
+Access Details</a> in the User File Maintenance section of this User Manual. 
+</p>
+<h2>Member File Maintenance
+</h2>
+<ul>
+<li>
+    Replaced the 'Fund' sub-menu in the Contribution History, Expected Contribution History
+    and Unit History screens of Member File Maintenance with two new menu options "&lt;
+    Fund" and "Fund &gt;". These are set out in more detail <a href="pem_mem5.html#Navigating Between Different Investment Funds">here</a>. 
+</li>
+<li>
+    Amended the <a href="pem_mem1.html#Investment Value Summary">Investment Value Summary</a> screen
+    in Member File Maintenance so that it is easier to read. Previously this screen had
+    been very cramped and was not easy to decipher. The screen has been revised so that
+    only details pertaining to two investment funds are displayed to the screen at any
+    one time. The total value across all investment funds is displayed at the foor of
+    the screen. The new "&lt; Fund" and "Fund &gt;" menu options outlined in the previous
+    item are available to navigate between the different investment funds. 
+</li>
+</ul>
+<h2>Formula File Maintenance
+</h2>
+<ol>
+<li>
+    Removed the old function tot_fxpup() from Pension Master as the fields it refererred
+    to (ptv_fx1, ptv_fx2 and ptv_fx3) are no longer part of Pension Master. All references
+    to tot_fxpup() in your formulae have will be converted to references to the new tot_transfer_in()
+    function by the database upgrade progrsm install.4ge. 
+</li>
+<li>
+    Added an extra argument to the GMP functions to allow the user to specify whether
+    transferred-in GMP should be included in the calculation of the GMP. This extra argument
+    takes the values 'Y' or 'N'. See <a href="pem_form.html">Formula File Maintenance</a> in
+    the User Manual for further details. Any references to GMP functions in your existing
+    formulae will automatically be converted over to the new format by the Pension Master
+    database upgrade program that is run by your System Administrator as part of the process
+    of upgrading to this version of Pension Master. These will default to not including
+    any transferred-in GMP in GMP calculations so as to ensure backward compatability
+    with the old GMP functions. <b>Should you wish to include transferred-in GMP in your
+    current GMP calculations, you will need to manually change your formulae as appropriate.</b> 
+</li>
+</ol>
+<h2>Formula File Maintenance
+</h2>
+<ul>
+<p>
+    Removed the old function transfer(field,type,nn) from Pension Master as this function
+    referred to the old pe_transfer file (see section above). 
+</p>
+<p>
+    The following 5 functions have been added to select and manipulate data from the new
+    Transfer In and Transfer Out files: 
+</p>
+<p>
+    <b>tot_transfer_in(field)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use this to total a specified numeric field on a Transfer In screen. This data will
+    be taken from the transfer in file (pe_tvin). 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    tot_transfer_in(field) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+    <br />
+</p>
+<ul>
+    <li>
+	field - is a valid numeric field on the transfer in details file (pe_tvin). 
+    </li>
+</ul>
+<b> 
+<p>
+    NOTES
+</p></b> 
+<br />
+<ul>
+    <li>
+	field must be a valid numeric field on the Transfer In file (pe_tvin). If the field
+	is a character/date field then an error message is displayed. 
+    </li>
+    <li>
+	If the Transfer In Field is not found, either because it does not exist, it is blank
+	or results from incorrect specification of code, this function call will return a
+	value of 0. 
+    </li>
+</ul>
+<b> 
+<p>
+    EXAMPLE
+</p></b> 
+<p>
+    tot_transfer_in(ptvi_trpen) 
+    <br />
+    tot_transfer_in(ptvi_val) 
+    <br />
+</p>
+<p>
+    <b>tot_transfer_out(field)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use this to total a specified numeric field on a Transfer Out screen. This data will
+    be taken from the transfer out file (pe_tvout). 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    tot_transfer_out(field) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+    <br />
+</p>
+<ul>
+    <li>
+	field - is a valid numeric field on the transfer out details file (pe_tvout). 
+    </li>
+</ul>
+<b> 
+<p>
+    NOTES
+</p></b> 
+<br />
+<ul>
+    <li>
+	field must be a valid numeric field on the Transfer Out file (pe_tvout). 
+    </li>
+    <li>
+	If the Transfer Out Field is not found, either because it does not exist, it is blank
+	or results from incorrect specification of code, this function call will return a
+	value of 0. 
+    </li>
+</ul>
+<b> 
+<p>
+    EXAMPLE
+</p></b> 
+<p>
+    tot_transfer_out(ptvo_val) 
+    <br />
+</p>
+<p>
+    <b>transfer_in(field,code)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use this to refer to the value of a field on a Transfer In screen of the specified
+    code. This will be taken from the transfer in file (pe_tvin). 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    transfer_in(field,code) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+    <br />
+</p>
+<ul>
+    <li>
+	field - is a valid field on the transfer in details file (pe_tvin). 
+    </li>
+    <li>
+	code - refers to the Transfer Code (see Code Allocation &amp; Codes Maintenance) that
+	you wish to retrieve a Transfer In field for. This must be in UPPERCASE and must exist
+	as a valid Transfer In code. If a member does not have a Transfer In record with a
+	matching code, this function call will return a value of 0. 
+    </li>
+</ul>
+<b> 
+<p>
+    NOTES
+</p></b> 
+<br />
+<ul>
+    <li>
+	field must be a valid field on the Transfer In file (pe_tvin). 
+    </li>
+    <li>
+	code must be in UPPERCASE. 
+    </li>
+    <li>
+	code must exist in the Codes Maintenance file (pe_codem) and also be allocated to
+	the members scheme (pe_scode). 
+    </li>
+    <li>
+	If the Transfer In Field is not found, either because it does not exist, it is blank
+	or results from incorrect specification of code, this function call will return a
+	value of 0. 
+    </li>
+</ul>
+<b> 
+<p>
+    EXAMPLE
+</p></b> 
+<p>
+    transfer_in(ptvi_val,TC000001) 
+    <br />
+    transfer_in(ptvi_revmax_pen,TP000001) 
+    <br />
+</p>
+<p>
+    <b>transfer_out(field,code)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use this to refer to the value of a field on a Transfer Out screen of the specified
+    code. This will be taken from the transfer out file (pe_tvout). 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    transfer_out(field,code) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+    <br />
+</p>
+<ul>
+    <li>
+	field - is a valid field on the transfer out details file (pe_tvout). 
+    </li>
+    <li>
+	code - refers to the Transfer Code (see Code Allocation &amp; Codes Maintenance) that
+	you wish to retrieve a Transfer Out field for. This must be in UPPERCASE and must
+	exist as a valid Transfer Out code. If a member does not have a Transfer Out record
+	with a matching code, this function call will return a value of 0. 
+    </li>
+</ul>
+<b> 
+<p>
+    NOTES
+</p></b> 
+<br />
+<ul>
+    <li>
+	field must be a valid field on the Transfer Out file (pe_tvout). 
+    </li>
+    <li>
+	code must be in UPPERCASE. 
+    </li>
+    <li>
+	code must exist in the Codes Maintenance file (pe_codem) and also be allocated to
+	the members scheme (pe_scode). 
+    </li>
+    <li>
+	If the Transfer Out Field is not found, either because it does not exist, it is blank
+	or results from incorrect specification of code, this function call will return a
+	value of 0. 
+    </li>
+</ul>
+<p>
+<b> 
+    EXAMPLE
+</b>
+</p>
+<p>
+    transfer_out(ptvo_val,TC000001) 
+    <br />
+</p>
+<p>
+    <b>tvin(code)</b> 
+</p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use this function to retrieve specific Transfer In details from a members record.
+    Depending on the Transfer In code entered the function will return either Pension,
+    Service or Contribution data. 
+    </p>
+ <p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    tvin(code) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	code - is a reference to the Transfer In Code of the Transfer In record that you wish
+	to select the transfer from. 
+    </li>
+</ul>
+<p>
+<b> 
+    NOTES
+</b> 
+    </p>
+<ul>
+    <li>
+	field must be a valid field on the Transfer In file (pe_tvin). 
+    </li>
+    <li>
+	code must be in UPPERCASE. 
+    </li>
+    <li>
+	code must exist in the Codes Maintenance file (pe_codem) and also be allocated to
+	the members scheme (pe_scode). 
+    </li>
+    <li>
+	This function will return the Transfer In depending on the code entered. If the second
+	character of the code is a "P" then the value of the Pension for that code will be
+	returned. If the second character of the code is an "S" then the value of the ( Added
+	Years + Added Months / 12 + Added Days / 365 ) * Accrual Rate will be returned. 
+    </li>
+    <li>
+	a code type of TX (Other Code) is not available for use with this function. On entering
+	Transfer In details, this code type allows the user to enter values in any of the
+	Transfer fields i.e. values could be entered into the Transfer Pension field and also
+	the Service history fields. 
+    </li>
+</ul>
+<b> 
+<p>
+    EXAMPLE
+</p></b> 
+<p>
+    tvin(TP000001) 
+    <br />
+    tvin(TS000023)
+</p>
+</ul>
+<h2>Factor File Maintenance
+</h2>
+<p>
+The facility to hold Term Related factors by sex i.e. Male, Female or Unisex, in the
+same way that Actuarial factors are recorded has been added. All existing Term Related
+factor tables will be automatically updated as Unisex. 
+</p>
+<h2>Code Maintenance
+</h2>
+<p>
+Incorporated Special Codes into <a href="pem_codem.html">Code Maintenance</a> with
+a code type of 'S'. Dropped the old separate 'Special Codes Maintenance' program. 
+</p>
+<h2>Member Report &amp; Mail Merge Integration Report
+</h2>
+<p>
+Added references to Expected Contributions screen fields and totals. 
+</p>
+<h2>Quarterly Fees Print
+</h2>
+<p>
+Added Quarterly Fees Print program to the 'System Administration' menu so as to aid
+users in producing the required information for L&amp;P Systems Limited quarterly
+fee invoices. 
+</p>
+<div class="info">
+	    <p>System Administrators: You will need to make this extra menu option available to
+	    users as appropriate by granting access using the User File Maintenance module of
+	    Pension Master. By default all new menus and menu options added to pension Master
+	    will not be switched on for any users.</p>
+</div>
+<h2>Formula File Maintenance
+</h2>
+<p>
+Added functions to allow users access to information recorded on the Expected Contributions
+screen. These functions are similar to their respective Contributions functions. The
+relevant help text is as follows: 
+</p>
+<ul>
+<p>
+<b>#exp_cont_field</b></p>
+<p>
+    <b>OVERVIEW</b> 
+</p>
+<p>
+    Use this to refer to the most recent value of a field on the Expected Contribution
+    History file in your formula. 
+</p>
+<p>
+    <b>NOTES</b> 
+</p>
+<ol>
+    <li>
+	exp_cont_field must be a valid field on the Expected Contribution History File (pe_defexp_b). 
+    </li>
+</ol>
+<b> 
+<p>
+    EXAMPLE
+</p></b> 
+<p>
+    #peb_ee_ord_c refers to the most recent Expected Employee Ordinary Contributions of
+    a member. 
+</p>
+<p>
+defexp(fld,nn,date)
+</p>
+<p>
+<b> 
+    OVERVIEW
+</b>
+</p>
+<p>
+    Use the defexp function to lookup a specific field on the expected contribution history
+    file (pe_defexp_b) for a specified investment fund for a specified date. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    defexp(fld,nn,date) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	fld - is a valid field on the expected contribution history file (pe_defexp_b). 
+    </li>
+    <li>
+	nn - is the investment fund number required. This must be in the range 0 to 20. 
+    </li>
+    <li>
+	date - must be a field reference to a date field on the member file (pe_mem), a constant
+	date entered in the format YYYYMMDD where YYYY is the year, MM is the month and DD
+	is the day or a reference to the result of another line of formula code within the
+	current formula e.g. @1. the day value. 
+    </li>
+</ul>
+<b> 
+<p>
+    EXAMPLES
+</p></b> 
+<p>
+    defexp(peb_ee_ord_c,00,19951201) 
+    <br />
+    defexp(peb_ee_avc_c,03,@1) 
+    <br />
+    defexp(peb_er_cont,02,pm_dtlft) 
+    <br />
+</p>
+<p>defexp_t(field,nn)</p>
+<p>
+<b> 
+    OVERVIEW
+   </b>
+</p>
+<p>
+    Use the defexp_t function to extract the total expected contributions to date for
+    a specific contribution source, for a specific investment fund that member contributes
+    to. 
+</p>
+<p>
+    <b>SYNTAX</b> 
+</p>
+<p>
+    defexp_t(field,nn) 
+</p>
+<p>
+    <b>EXPLANATION</b> 
+</p>
+<ul>
+    <li>
+	field - is the field on the expected contribution history file (pe_defexp_h) that
+	you require a value for. 
+    </li>
+    <li>
+	nn - is the investment fund number for the total expected contribution you are valuing. 
+    </li>
+</ul>
+<b> 
+<p>
+    NOTES
+</p></b> 
+<ol>
+    <li>
+	nn must be between 0 and 20. 
+    </li>
+</ol>
+<b> 
+<p>
+    EXAMPLES
+</p></b> 
+<p>
+    defexp_t(peh_tee_ordc,00) 
+    <br />
+    defexp_t(peh_ter_cont,02)
+</p>
+</ul>
+<h2>Company File Maintenance
+</h2>
+<p>
+Added a 'Delete' option to Company File Maintenance. This is documented further <a href="pem_co.html#Deleting Companies">here</a>.
+This allows the user, with sufficient authority, to delete any companies that do not
+contain member records. If you try to delete a company that is used by a member record,
+a warning will be displayed and you will be returned to the main menu. 
+</p>
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

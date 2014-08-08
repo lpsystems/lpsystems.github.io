@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Year End</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Year End</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Year End">Run A Year End</a></li>
+  <li><a href="#print">Printing Year End Forms</a></li>
+  <li><a href="#backup">Backup of Payroll Data</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to run a year end for a specified scheme. From this
+program the user can print the P11, P14 and P35 forms.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>Only users set up as System Administrator can access this program.</p>
+
+  <p>If another user is running either the Backup Data program, the Restore Data program,
+or the Payroll Run program, then you are unable to process the Year End until the
+other program has completed.</p>
+
+</div>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Run</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend1.jpg" alt="Tax Year End Screen" /></p>
+
+  <p>Tax Year End Screen</p>
+</div>
+
+<h2 id="a-namerun-a-year-endarun-a-year-end"><a name="Run A Year End"></a>Run A Year End</h2>
+
+<p>Click ‘Run’.</p>
+
+<p><a name="pm_scheme"></a><strong>SCHEME CODE</strong>
+- Enter the scheme code required. To get a list of valid scheme codes click ‘Lookup’.
+When a valid scheme code has been entered the scheme description will be displayed.
+This field must be entered.</p>
+
+<p><a name="check1"></a><strong>ALL EMPLOYEE PAYMENTS/DEDUCTIONS HAVE BEEN PROCESSED</strong>
+- If the payroll run has been processed for the members then tick the box. This
+field must have been ticked before you can continue onto the next screen.</p>
+
+<p><a name="check2"></a><strong>ALL OF YOUR PAYROLL RECORDS HAVE BEEN UPDATED</strong>
+- If the payroll run data has been committed for the members then tick the box.
+This field must have been ticked before you can continue onto the next screen.</p>
+
+<p><a name="check3"></a><strong>ALL OF YOUR PAYROLL REPORT(S) HAVE BEEN PRINTED</strong>
+- If the payroll run payslips and payment summary report have been processed for
+the members then tick the box. This field must have been ticked before you can continue
+onto the next screen.</p>
+
+<p><a name="check4"></a><strong>YOU HAVE MADE AT LEAST ONE BACKUP COPY OF YOUR DATA</strong>
+- If at least one backup has been taken of the payroll data before you started this
+program then tick the box. This field must have been ticked before you can continue
+onto the next screen.</p>
+
+<p>Click ‘OK’ to continue with the year end process, or click ‘Cancel’ to return
+to the tax year end menu.</p>
+
+<p>The following pop-up window appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend3.jpg" alt="Proceed with Year End Window" /></p>
+
+  <p>Proceed with Year End Window</p>
+</div>
+
+<p>Click ‘Yes’ to continue the year end process or click ‘No’ to return to the tax
+year end menu.</p>
+
+<h2 id="a-nameprintaprinting-year-end-forms"><a name="print"></a>Printing Year End Forms</h2>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend4.jpg" alt="Tax Year End Screen" /></p>
+
+  <p>Tax Year End Screen</p>
+</div>
+
+<p>Enter the fields as follows:</p>
+
+<p><a name="complete1"></a><strong>P11 DEDUCTION WORKING SHEET (PAYE)</strong> - Click ‘Print’
+to display the Pll (PAYE) form to the screen. Further details of the printing options
+can be found <a href="/pension/general/gn_printm/#destdlg">here</a>
+. When you return to the screen there will be a tick displayed in the box next to
+the ‘Print’ button.</p>
+
+<p><a name="complete2"></a><strong>P11 DEDUCTION WORKING SHEET (NIC)</strong> - Click ‘Print’
+to display the Pll (NIC) form to the screen. Further details of the printing options
+can be found <a href="/pension/general/gn_printm/#destdlg">here</a>
+. When you return to the screen there will be a tick displayed in the box next to
+the ‘Print’ button.</p>
+
+<p><a name="complete3"></a><strong>LASER P14 (SHEET 1) - INLAND REVENUE COPY</strong> - Click
+‘Print’ to display the P14 (SHEET 1) form to the screen. Further details of the
+printing options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>
+. Please ensure that there are pre-printed P14 Inland Revenue Copy forms in the
+printer before you send the report to print. When you return to the screen there
+will be a tick displayed in the box next to the ‘Print’ button.</p>
+
+<p><a name="complete4"></a><strong>LASER P14 (SHEET 2) - DSS COPY</strong> - Click ‘Print’ to
+display the P14 (SHEET 2) form to the screen. Further details of the printing options
+can be found <a href="/pension/general/gn_printm/#destdlg">here</a>
+. Please ensure that there are pre-printed P14 DSS Copy forms in the printer before
+you send the report to print. When you return to the screen there will be a tick
+displayed in the box next to the ‘Print’ button.</p>
+
+<p><a name="complete5"></a><strong>LASER P14 (SHEET 3) - EMPLOYEE COPY</strong> - Click ‘Print’
+to display the P14 (SHEET 2) form to the screen. Further details of the printing
+options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>
+. Please ensure that there are pre-printed P14 Employee Copy forms in the printer
+before you send the report to print. When you return to the screen there will be
+a tick displayed in the box next to the ‘Print’ button.</p>
+
+<p><a name="complete6"></a><strong>P35 (CS) (SUBSTITUE)</strong> - Click ‘Print’ to display the
+P35 (CS) form to the screen. Further details of the printing options can be found
+<a href="/pension/general/gn_printm/#destdlg">here</a>. When you return to the screen there will be a tick displayed in the box next to the ‘Print’ button.</p>
+
+<p><a name="complete7"></a><strong>Export Data to CSV Files</strong> - Click ‘Export’ to export payroll data 
+out to CSV files, which can then be used for online submissions. Once this has been 
+done a tick will be displayed in the box next to the ‘Export’ button, and a message 
+will appear to the screen as follows:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend6.jpg" alt="Export Data to CSV Files Window" /></p>
+
+  <p>Export Data to CSV Files Window</p>
+</div>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend7.jpg" alt="P35 Totals and Declarations" /></p>
+
+  <p>P35 Totals and Declarations</p>
+</div>
+
+<p>A window will appear called ‘P45 Totals for Tax Year Ending 5th April 2009’. Check that the totals on this screen are correct, and click ‘OK’.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend8.jpg" alt="P45 Totals for Tax Year Ending 5th April 2009" /></p>
+
+  <p>P45 Totals for Tax Year Ending 5th April 2009</p>
+</div>
+
+<p>Another window will appear called ‘P35 Declarations for Tax Year Ending 5th April 2009 (part one)’. Answer the questions via the radio buttons and click ‘OK’.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend9.jpg" alt="P35 Declarations for Tax Year Ending 5th April 2009 (part one)" /></p>
+
+  <p>P35 Declarations for Tax Year Ending 5th April 2009 (part one)</p>
+</div>
+
+<p>Another window will appear called ‘P35 Declarations for Tax Year Ending 5th April 2009 (part two)’. Again, answer the questions via the radio buttons and check boxes (if needed) and click ‘OK’.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend10.jpg" alt="P35 Declarations for Tax Year Ending 5th April 2009 (part two)" /></p>
+
+  <p>P35 Declarations for Tax Year Ending 5th April 2009 (part two)</p>
+</div>
+
+<p>Finally, another window will appear called ‘P35 Declarations for Tax Year Ending 5th April 2009 (part three)’. Answer the questions via the radio button, and choose the capacity in which you sign the declarations. The default is ‘Employer’. Click ‘OK’.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend11.jpg" alt="P35 Declarations for Tax Year Ending 5th April 2009 (part three)" /></p>
+
+  <p>P35 Declarations for Tax Year Ending 5th April 2009 (part three)</p>
+</div>
+
+<p>Once the user has printed out neccessary reports, and has exported the payroll data, if they are doing online submissions, then they can continue with the year end process.</p>
+
+<p>Click ‘OK’ to continue, or click ‘Cancel’ to return to the tax year end menu.</p>
+
+<p>The following pop-up window appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_yend5.jpg" alt="Year End Window" /></p>
+
+  <p>Year End Window</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>Only select ‘Yes’ if you are happy with all year end report figures. By choosing
+‘Yes’, all payroll data of the tax year will be cleared out. If in doubt select
+‘No’, which will return you to the tax year end menu.</p>
+
+</div>
+
+<h2 id="a-namebackupabackup-of-payroll-data"><a name="backup"></a>Backup of Payroll Data</h2>
+
+<p>The Year End program provides the user with the option of backing up the payroll
+data whilst still in the Year End program. The following window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay8.gif" alt="Backup Window" /></p>
+
+  <p>Backup Window</p>
+</div>
+
+<p>Click ‘Yes’ to continue to backup the year end data, or click ‘No’ to return to
+the tax year end menu.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Payroll Data menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

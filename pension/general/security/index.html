@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Security</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Security</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>The security features available in Pension Master are based on the following:</p>
+
+<ul>
+  <li><a href="#User Account And Valid Password">User Account and Valid Password</a> </li>
+  <li><a href="#Security Level">Security Level</a> </li>
+  <li><a href="#System Administrator">System Administrator status</a> </li>
+  <li><a href="#Supervisor">Supervisor status</a> </li>
+  <li><a href="#Update Member Records">Update Member Records status</a> </li>
+  <li><a href="#Restrict Access To Individual Schemes">Restrict Access to Individual Schemes.</a> </li>
+</ul>
+
+<h2 id="a-nameuser-account-and-valid-passwordauser-account-and-valid-password"><a name="User Account And Valid Password"></a>User Account And Valid Password</h2>
+
+<p>The first line of security is that someone wanting to use Pension Master must have
+a valid account set up on the system. This consists of a username or ID together with
+a password and various other items of user details. These details are then used to
+determine which options within Pension Master are made available to this user. This
+enables the System Administrator to customise the look and feel of the software according
+to the seniority or ability of each user of the system.</p>
+
+<h2 id="a-namesecurity-levelasecurity-level"><a name="Security Level"></a>Security Level</h2>
+
+<p>Each user is assigned a security level from 1 to 99. The security levels to be made
+available on your Pension Master system must be pre-set using the <a href="/pension/system_data/pem_sec/#Introduction">Security
+Levels</a> module. This defines both a security level number and a description pertaining
+to this security level e.g. can access scheme 0000 but not scheme 0009.</p>
+
+<p>Each member and scheme record on Pension Master is then assigned a corresponding security
+level from this list of valid security levels and this is matched up against the security
+level on the current user’s record to determine whether that user has access to any
+records in that scheme or access to that individual member record. In this way, the
+System Administrator can easily control access to sensitive records e.g. member records
+for Director’s of an in-house scheme. </p>
+
+<p>As an extension to this principle, a valid security level can be assigned to each
+screen in the Member Record on a scheme by scheme basis so that you can limit access
+to certain screens within member records e.g. Director’s salary records. This is done
+by using the <a href="/pension/file_maintenance/pem_mem/#Introduction">Member Screen Selection</a> screen
+in <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a>. </p>
+
+<h2 id="a-namesystem-administratorasystem-administrator"><a name="System Administrator"></a>System Administrator</h2>
+
+<p>A user needs to have a ‘Y’ against ‘System Administrator’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> in
+order to access the following Pension Master modules:</p>
+
+<ul>
+  <li><a href="/pension/system_administration/pem_sysp/#Introduction">System Parameters</a> </li>
+  <li><a href="/pension/system_administration/gn_user/#Introduction">Users</a> </li>
+  <li><a href="/pension/system_administration/gn_meno/#Introduction">Menu Options</a> </li>
+  <li><a href="/pension/system_administration/gn_menmn/#Introduction">Menus</a> </li>
+</ul>
+
+<p>Only a System Administrator can update/view System factor tables in <a href="/pension/file_maintenance/calculation_setup/pem_fac/#Introduction">Factors</a>.</p>
+
+<p>Only a System Administrator can update ‘Allow Manual Update of Units?’ <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a>. </p>
+
+<h2 id="a-namesupervisorasupervisor"><a name="Supervisor"></a>Supervisor</h2>
+
+<p>If a user has a ‘N’ against ‘Supervisor’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> they
+will be denied access to the following Pension Master modules.</p>
+
+<ul>
+  <li><a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> </li>
+  <li><a href="/pension/file_maintenance/pem_co/#Introduction">Companies</a> </li>
+  <li><a href="/pension/file_maintenance/pem_cat/#Introduction">Categories</a> </li>
+  <li><a href="/pension/file_maintenance/pem_stat/#Introduction">Status Codes</a> </li>
+  <li><a href="/pension/file_maintenance/pem_brok/#Introduction">Brokers</a> </li>
+  <li><a href="/pension/file_maintenance/calculation_setup/pem_fac/#Introduction">Factors</a> </li>
+  <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#Introduction">Formulae</a> </li>
+  <li><a href="/pension/workflow/gn_actn/#Introduction">Action Codes</a> </li>
+  <li><a href="/pension/workflow/gn_wkflw/#Introduction">Workflow Management</a> </li>
+  <li><a href="/pension/workflow/gn_wkflr/#Introduction">Workflow Management Report</a> </li>
+  <li><a href="/pension/system_data/pem_codem/">Codes</a> </li>
+  <li><a href="/pension/system_data/pem_mess/#Introduction">User Defined Messages</a> </li>
+  <li><a href="/pension/system_data/pem_sec/#Introduction">Security Levels</a> </li>
+  <li><a href="/pension/system_data/pem_stf/#Introduction">Annual Statutory Amounts</a> </li>
+  <li><a href="/pension/system_data/pem_gmpf/#Introduction">Section 148 Orders</a> </li>
+  <li><a href="/pension/system_data/pem_cep/#Introduction">CEP Factors</a> </li>
+  <li><a href="/pension/system_data/pem_mli/#Introduction">MLI/RPI Factors</a> </li>
+  <li><a href="/pension/system_administration/gn_flock/#Introduction">Locks</a> </li>
+  <li><a href="/pension/system_administration/per_audtr/#Introduction">Audit Trail Listing</a> </li>
+</ul>
+
+<p>If the user has a ‘V’ against ‘Supervisor’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> they
+will be allowed access to the above modules, but will be limited to view only and
+not view and update. This disables any menu items in the above modules which would
+allow the user to add/update/delete any item of data. The exceptions to this are <a href="/pension/workflow/gn_wkflr/#Introduction">Workflow
+Management Report</a> and <a href="/pension/system_administration/per_audtr/#Introduction">Audit Trail
+Listing</a> which are reports only and do not allow any user input other than running
+the report.</p>
+
+<p>If the user has a ‘Y’ against ‘Supervisor’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> they
+will be allowed to: </p>
+
+<ul>
+  <li>Fully access the above modules. </li>
+  <li>Delete/update any other user’s diary using <a href="/pension/general/gn_diary/#Introduction">Diary File Maintenance</a>. </li>
+  <li>Undo posted units in the <a href="/pension/investments/unit_posting/peu_post/#Introduction">Post Units</a> module. </li>
+  <li>Delete a member record. </li>
+  <li>Un-finalise quotes in <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a>. </li>
+  <li>Override quotation results in <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a>. </li>
+</ul>
+
+<h2 id="a-nameupdate-member-recordsaupdate-member-records"><a name="Update Member Records"></a>Update Member Records</h2>
+
+<p>If a user has a ‘N’ against ‘Update Member Records’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> they
+will not be allowed to add/update/delete member records in the <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a> module
+of Pension Master.</p>
+
+<p>Otherwise the user will be granted full access to the member records, subject to any
+other security procedures described herein. </p>
+
+<h2 id="a-namerestrict-access-to-individual-schemesarestrict-access-to-individual"><a name="Restrict Access To Individual Schemes"></a>Restrict Access To Individual</h2>
+
+<p>Schemes</p>
+
+<p>It is possible to restrict access to particular schemes via use of the <a href="/pension/file_maintenance/pem_sch/#User Access Details">User
+Access Details</a> screen in Schemes. There are three types of access level:</p>
+
+<ul>
+  <li>All users have access to the scheme. </li>
+  <li>All members of a particular workgroup have access to the scheme. See <a href="/pension/system_administration/gn_wrkgrp/">Workgroups </a>elsewhere
+in this User Manual for further details of how workgroups are used in Pension Master. </li>
+  <li>User level access. Here you define particular users via their user ID (as set up in <a href="/pension/system_administration/gn_user/#user_id">Users</a>)
+so as to restrict access to a scheme on an individual user level.</li>
+</ul>
+
+<p>If any user who does not have access to a scheme tried to select a record from that
+scheme, the only record header will be displayed e.g. in the member file, only the
+members name, scheme, company, category and status details will be displayed to the
+screen. Only schemes to which the user has access will be displayed in all lookup
+lists, available by clicking on the ‘Search’ button.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

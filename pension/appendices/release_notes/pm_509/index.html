@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Release Notes 5.0.9</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Release Notes 5.0.9</h1>
+        </div>
+        
+
+      <h2>Release Notes
+</h2>
+<hr />
+<h3>Search Lists
+</h3>
+<p>
+All scheme, company, category and status pop-up picklists are now sorted in alphabetical
+order on the appropriate description field e.g. schemes are sorted by scheme name,
+companies are sorted first by scheme code and then by company name. 
+</p>
+<hr width="100%" />
+<h3>Formula File Maintenance
+</h3>
+<p>
+Added various new functions to allow for adding and subtracting years, months and
+days from a date within yourt formulae: 
+</p>
+<p>
+<b>addyear(date,num)/b> 
+</p>
+<p>
+<b>OVERVIEW</b> 
+</p>
+<p>
+Use the addyear function to add a fixed number of years onto a given date. 
+</p>
+<p>
+<b>SYNTAX</b> 
+</p>
+<p>
+addyear(date,num) 
+</p>
+<p>
+<b>EXPLANATION</b> 
+</p>
+<p>
+date&nbsp;&nbsp;&nbsp;&nbsp; date to which the years are to be added 
+</p>
+<p>
+num&nbsp;&nbsp;&nbsp;&nbsp; number of years to be added to date 
+</p>
+<p>
+<b>NOTES</b> 
+</p>
+<ol>
+<li>
+    date must be a field reference to the member file (pe_mem), a constant date entered
+    in the format YYYYMMDD, where YYYY is the year, MM is the onth and DD is the day or
+    a reference to the result of a previous formula line (as long as it evaluates to a
+    valid date) in the format @line_num e.g. @2. 
+</li>
+<li>
+    num must be a whole number of years between 0 and 500. 
+</li>
+</ol>
+<b> 
+<p>
+EXAMPLES
+</p></b> 
+<p>
+addyear(pm_dob,18) 
+<br />
+addyear(19950122,1) 
+<br />
+addyear(@1,20) 
+<br />
+&nbsp; 
+</p>
+<p>
+<b>subyear(date,num)</b> 
+</p>
+<p>
+<b>OVERVIEW</b> 
+</p>
+<p>
+Use the subyear function to subtract a fixed number of years from a given date. 
+</p>
+<p>
+<b>SYNTAX</b> 
+</p>
+<p>
+subyear(date,num) 
+</p>
+<p>
+<b>EXPLANATION</b> 
+</p>
+<p>
+date&nbsp;&nbsp;&nbsp;&nbsp; date to which the years are to be subtracted 
+</p>
+<p>
+num&nbsp;&nbsp;&nbsp;&nbsp; number of years to be subtracted from date 
+</p>
+<p>
+<b>NOTES</b> 
+</p>
+<ol>
+<li>
+    date must be a field reference to the member file (pe_mem), a constant date entered
+    in the format YYYYMMDD, where YYYY is the year, MM is the onth and DD is the day or
+    a reference to the result of a previous formula line (as long as it evaluates to a
+    valid date) in the format @line_num e.g. @2. 
+</li>
+<li>
+    num must be a whole number of years between 0 and 500. 
+</li>
+</ol>
+<b> 
+<p>
+EXAMPLES
+</p></b> 
+<p>
+subyear(pm_dob,18) 
+<br />
+subyear(19950122,1) 
+<br />
+subyear(@1,20) 
+<br />
+&nbsp; 
+</p>
+<p>
+<b>addmonth(date,num)</b> 
+</p>
+<p>
+<b>OVERVIEW</b> 
+</p>
+<p>
+Use the addmonth function to add a fixed number of months onto a given date. 
+</p>
+<p>
+<b>SYNTAX</b> 
+</p>
+<p>
+addmonth(date,num) 
+</p>
+<p>
+<b>EXPLANATION</b> 
+</p>
+<p>
+date&nbsp;&nbsp;&nbsp;&nbsp; date to which the months are to be added 
+</p>
+<p>
+num&nbsp;&nbsp;&nbsp;&nbsp; number of months to be added to date 
+</p>
+<p>
+<b>NOTES</b> 
+</p>
+<ol>
+<li>
+    date must be a field reference to the member file (pe_mem), a constant date entered
+    in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is the day
+    or a reference to the result of a previous formula line (as long as it evaluates to
+    a valid date) in the format @line_num e.g. @2. 
+</li>
+<li>
+    num must be a whole number of months between 0 and 500. 
+</li>
+</ol>
+<b> 
+<p>
+EXAMPLES
+</p></b> 
+<p>
+addmonth(pm_dob,18) 
+<br />
+addmonth(19950122,1) 
+<br />
+addmonth(@1,20) 
+<br />
+&nbsp; 
+</p>
+<p>
+<b>submonth(date,num)</b> 
+</p>
+<p>
+<b>OVERVIEW</b> 
+</p>
+<p>
+Use the submonth function to subtract a fixed number of months from a given date. 
+</p>
+<p>
+<b>SYNTAX</b> 
+</p>
+<p>
+submonth(date,num) 
+</p>
+<p>
+<b>EXPLANATION</b> 
+</p>
+<p>
+date&nbsp;&nbsp;&nbsp;&nbsp; date to which the months are to be subtracted 
+</p>
+<p>
+num&nbsp;&nbsp;&nbsp;&nbsp; number of months to be subtracted from date 
+</p>
+<p>
+<b>NOTES</b> 
+</p>
+<ol>
+<li>
+    date must be a field reference to the member file (pe_mem), a constant date entered
+    in the format YYYYMMDD, where YYYY is the year, MM is the onth and DD is the day or
+    a reference to the result of a previous formula line (as long as it evaluates to a
+    valid date) in the format @line_num e.g. @2. 
+</li>
+<li>
+    num must be a whole number of months between 0 and 500. 
+</li>
+</ol>
+<b> 
+<p>
+EXAMPLES
+</p></b> 
+<p>
+submonth(pm_dob,18) 
+<br />
+submonth(19950122,1) 
+<br />
+submonth(@1,20) 
+<br />
+&nbsp; 
+</p>
+<p>
+<b>addday(date,num)</b> 
+</p>
+<p>
+<b>OVERVIEW</b> 
+</p>
+<p>
+Use the addday function to add a fixed number of days onto a given date. 
+</p>
+<p>
+<b>SYNTAX</b> 
+</p>
+<p>
+addday(date,num) 
+</p>
+<p>
+<b>EXPLANATION</b> 
+</p>
+<p>
+date&nbsp;&nbsp;&nbsp;&nbsp; date to which the days are to be added 
+</p>
+<p>
+num&nbsp;&nbsp;&nbsp;&nbsp; number of days to be added to date 
+</p>
+<p>
+<b>NOTES</b> 
+</p>
+<ol>
+<li>
+    date must be a field reference to the member file (pe_mem), a constant date entered
+    in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is the day
+    or a reference to the result of a previous formula line (as long as it evaluates to
+    a valid date) in the format @line_num e.g. @2. 
+</li>
+<li>
+    num must be a whole number of days between 0 and 500. 
+</li>
+</ol>
+<b> 
+<p>
+EXAMPLES
+</p></b> 
+<p>
+addday(pm_dob,18) 
+<br />
+addday(19950122,1) 
+<br />
+addday(@1,20) 
+<br />
+&nbsp; 
+</p>
+<p>
+<b>subday(date,num)</b> 
+</p>
+<p>
+<b>OVERVIEW</b> 
+</p>
+<p>
+Use the subday function to subtract a fixed number of days from a given date. 
+</p>
+<p>
+<b>SYNTAX</b> 
+</p>
+<p>
+subday(date,num) 
+</p>
+<p>
+<b>EXPLANATION</b> 
+</p>
+<p>
+date&nbsp;&nbsp;&nbsp;&nbsp; date to which the days are to be subtracted 
+</p>
+<p>
+num&nbsp;&nbsp;&nbsp;&nbsp; number of days to be subtracted from date 
+</p>
+<p>
+<b>NOTES</b> 
+</p>
+<ol>
+<li>
+    date must be a field reference to the member file (pe_mem), a constant date entered
+    in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is the day
+    or a reference to the result of a previous formula line (as long as it evaluates to
+    a valid date) in the format @line_num e.g. @2. 
+</li>
+<li>
+    num must be a whole number of days between 0 and 500. 
+</li>
+</ol>
+<b> 
+<p>
+EXAMPLES
+</p></b> 
+<p>
+subday(pm_dob,18) 
+<br />
+subday(19950122,1) 
+<br />
+subday(@1,20) 
+</p>
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

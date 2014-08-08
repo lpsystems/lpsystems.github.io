@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>CPF Import</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>CPF Import</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows Combined Pension Forecast (CPF) data to be imported from a data file that has been sent from the Department of Widows and Pensions (DWP). The data file will contain information such as the members NI Number, Surname, Forename, Date of Birth, sex, and all Combined Pension Forecast data such as current basic state pension, projected basic state pension etc.</p>
+
+<p>The following options and appear when this program is selected:</p>
+
+<ul>
+  <li>Proceed</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_cpfimp.gif" alt="CPF Import Screen" /></p>
+
+  <p>CPF Import Screen</p>
+</div>
+
+<h2 id="a-namerun-an-importarun-an-import"><a name="Run An Import"></a>Run An Import</h2>
+
+<p>Press <kbd>P</kbd>, or select the ‘Proceed’ menu option.</p>
+
+<p>Enter the name of the bulk reply file. You can click on ‘Lookup’ to open up the following window for you to select the file you need.
+<img src="pem_load4.gif" width="426" height="285" /> </p>
+
+<p>A message is displayed at the bottom of the screen:</p>
+
+<p>Importing data </p>
+
+<p>The program is checking that the data is all present and correct. For example, that
+the NI Number and sequence number found in the reply file matches those in the request file from the CPF Export program. If any of the data isn’t correct then an exceptions report
+will be produced and the CPF Import run is abandoned. </p>
+
+<p>If all the data is correct, then a report is produced listing out all the information from the data file.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+from Pension Master</a>. </p>
+
+<p>Each line of data returns a forecast status of 00 to 08. 00 is the only forecast status that indicates that the members data has been successfully processed this time. Therefore, only members with forecast of 00 will be imported from the data file into the Combined Pension Forecast screen in Members.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Press <kbd>E</kbd>, or select the ‘Exit’ menu option.
+This leaves the program and returns to the Combined Pension Forecast menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

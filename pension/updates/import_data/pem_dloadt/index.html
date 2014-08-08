@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Import Translation</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Import Translation</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to store the Pension Master alternative to the data used
+in the external data source file. By entering in the required details through the
+selection criteria, the program will allow the user to translate the external data
+into Pension Master data.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add </li>
+  <li>Query </li>
+  <li>Exit </li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dloadt1.gif" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2 id="a-nameaddaadd-a-translation"><a name="add"></a>Add a Translation</h2>
+
+<p>Click ‘Add’. </p>
+
+<p>Enter the selection criteria required. </p>
+
+<p><a name="tran_code"></a><strong>Translation Code</strong> - Enter a translation code. This code
+will be used in conjunction with Rule 7 of the <a href="/pension/updates/import_data/pem_dload/#rule">General
+Data Load</a> program. </p>
+
+<p><a name="tran_desc"></a><strong>Translation Description</strong> - Enter a description. </p>
+
+<p><a name="tran_sch"></a><strong>Scheme Code</strong> - Enter a scheme code. Click ‘Lookup’ for
+a list of valid scheme codes. </p>
+
+<p><a name="tran_orig"></a><strong>Import Data</strong> - Enter the data which is present in the
+external data file. The data will then be translated into the Pension Master data
+which has been entered in the next field. </p>
+
+<p><a name="tran_pen"></a><strong>Pension Master Data</strong> - Enter the Pension Master data
+which will be used to translate the Import Data. </p>
+
+<p>Once this screen has been fully entered then click ‘OK’ to save the details. </p>
+
+<h2 id="a-namequeryaquerying-a-translation"><a name="query"></a>Querying a Translation</h2>
+
+<p>Click ‘Query’. </p>
+
+<p>The screen below will appear. </p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dloadt2.gif" alt="" /></p>
+
+</div>
+
+<p><a name="popup"></a>Enter the Scheme Code and/or Translation Code details. If any
+translation details match the entered criteria, then a pop-up window will appear listing
+them. </p>
+
+<p>Select a translation and click ‘OK’ to display the details to the screen. </p>
+
+<h2 id="a-nameupdateaupdating-a-translation"><a name="update"></a>Updating a Translation</h2>
+
+<p>Click ‘Update’. </p>
+
+<p>A translation code must have been selected before this option is used. </p>
+
+<p>Enter the amended details and click ‘OK’ to save them. </p>
+
+<h2 id="a-namedeleteadeleting-a-translation"><a name="delete"></a>Deleting a Translation</h2>
+
+<p>Click ‘Delete’. </p>
+
+<p>A translation code must have been selected before this option is used. </p>
+
+<p>If the translation code is used in the <a href="/pension/updates/import_data/pem_dload/#rule">General Data
+Load</a> program (Rule 7), then it cannot be deleted. The user will be warned of this. </p>
+
+<h2 id="a-namebrowseabrowsing-a-translation"><a name="browse"></a>Browsing a Translation</h2>
+
+<p>Click ‘Browse’ to view details in the screen where the data does not fit on the screen. </p>
+
+<p>Once in browse mode, use the arrow keys or the scrollbar on the right of the data
+to navigate around the data. </p>
+
+<p>Click ‘OK’ or ‘Cancel’ to leave the browse mode. </p>
+
+<h2 id="a-namereportareporting-a-translation"><a name="report"></a>Reporting a Translation</h2>
+
+<p>Click ‘Report’. </p>
+
+<p>The following window now appears: </p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dloadt3.gif" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>The options are as follows:</p>
+
+<ul>
+  <li><strong>Print current record</strong> - Produces a report of the translation details currently being viewed.</li>
+  <li><strong>Print all selected record(s)</strong> - Produces a report for all the translation codes selected.</li>
+  <li><strong>Select record(s) to print</strong> - Allows the user to select the records for which a report will be produced for.</li>
+</ul>
+
+<p>Select the appropriate option and click ‘OK’. Click ‘Cancel’ to exit the printing
+or ‘Help’ to display this help text. </p>
+
+<h2 id="a-nameexitaexit-program"><a name="exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Main menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

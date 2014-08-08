@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Release Notes 5.0.4</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Release Notes 5.0.4</h1>
+        </div>
+        
+
+      <h2>Details Of The Changes
+</h2>
+<ol>
+<li>
+    Added new Part Time Service record. This will allow users to record the part time
+    hours worked for members. 
+    <p>
+	The record relies on a complete history being recorded i.e. if the member joined as
+	full time, then the record should show the period as full time e.g. 40 hours worked
+	out of 40. 
+    </p>
+    <p>
+	When the members hours change then the period should be closed off at the appropriate
+	date and a new line opened at the new period start date with the new part time and
+	full time hours. 
+    </p>
+    <p>
+	Equivalent service periods are automatically calculated as the user moves from each
+	line and total equivalent service is calculated when the input is accepted. 
+    </p>
+    <p>
+	The next system release will allow the user to incorporate this record in formulae
+	and reports. This record is being released now to enable users to record part time
+	hours details in a proper format prior to the full facility being available. 
+    </p>
+</li>
+<li>
+    Changed the way Pension Master calculates expenses when taking expenses off incoming
+    contributions. This is no longer done at the Investment Manager level as it was before.
+    Instead, a single set of expenses applies across all investment funds within a scheme.
+    We have also replaced the Fund % Expense with a Salary % Expense. This allows you
+    to take a percentage of salary (you define the salary type you wish to use - Gross,
+    Scheme, Pensionable, Miscellaneous 1 or Miscellaneous 2) as an expense. See the User
+    Manual for further details. 
+</li>
+<li>
+    Added extra display fields <i>Release Date</i> and <i>Licensed To</i> to the splash
+    screen which appears upon starting Pension Master. This should allow L&amp;P Systems
+    Limited support staff to more effectively track the versions of Pension Master installed
+    at client sites. 
+</li>
+<li>
+    Changed the main menu in the <i>Unit Posting</i> program as follows: 
+    <ul>
+	<li>
+	    Changed the text of the <i>Proceed</i> menu option to <i>Post_units</i>. 
+	</li>
+	<li>
+	    Removed the old uNpost menu option. The Undo menu option now combines the capabilities
+	    of the old Undo and uNpost menu options thus removing the confusion some users were
+	    having over the difference of these two menu options. The new combined menu option
+	    can be used for: 
+	    <ul>
+		<li>
+		    Unposting units for a user specified group of members and a given contribution date. 
+		</li>
+		<li>
+		    Re-setting the unit posted flag on a particular contribution date to "N" for a user
+		    specified group of members. 
+		</li>
+	    </ul>
+	</li>
+    </ul>
+</li>
+<li>
+    Changed the <i>Update Conts/Units</i> flag on the <i>Scheme File Maintenance</i> program
+    to read <i>Allow Manual Update Of Units?.</i> This flag is now has the following implications: 
+    <ul>
+	<li>
+	    It determines whether a user can update the unit history of a member of the scheme
+	    by directly editing units on that members <i>Unit History</i> screen in <i>Member
+	    File Maintenance</i>. <b>We would generally recommend that you do not directly edit
+	    a members unit history screen other that for manually loading cumulative units to
+	    date</b> (for example where you are taking over the administration of a scheme and
+	    are setting up a starting point for future unit allocation for the scheme). To adjust
+	    a members unit history we would recommend that you use the Undo menu option in the
+	    Unit Posting program to reverse the unit allocation for that member and then make
+	    any adjustments to the contribution and unit price entries for that date before re-posting
+	    that contribution to units. This ensures a proper reconciliation of the whole process
+	    within Pension Master and avoids any errors that may have otherwise occurred using
+	    manual editing of units. 
+	</li>
+	<li>
+	    It determines how the unit posting flag on new contributions loaded onto Pension Master
+	    is set. If the flag on the scheme file is set to "Y", then all new contributions loaded
+	    onto Pension Master (whether through <i>Batch File Maintenance</i> or <i>Member File
+	    Maintenance</i>) will automatically have a unit posting flag of "Y" allocated to them.
+	    Conversely, if the flag on the scheme file is set to "N" then all new contributions
+	    will be loaded with a unit posting flag of "N". The exception to this rule is for
+	    defined benefits or final salary type schemes (where the <i>Defined Contribution Scheme</i> flag
+	    in <i>Scheme File Maintenance</i> is set to "N"). In this case, all new contributions
+	    loaded onto Pension Master will automatically have a unit posting flag of "Y". 
+	</li>
+	<li>
+	    <b>We would generally recommend that the <i>Allow Manual Update Of Units?</i> flag
+	    is set to "N" for all schemes unless you specifically wish to directly edit a members
+	    Unit History.</b> In this case, set the flag on the Scheme File to "Y" whilst you
+	    make the edit to the Unit History and then immediately re-set it to "N". 
+	</li>
+	<li>
+	    If you add a contribution onto Pension Master whilst the <i>Allow Manual Update Of
+	    Units?</i> flag on the scheme file is set to "Y" and wish that contribution entry
+	    to be flagged as unposted (i.e. you wish to use this contribution to allocate units)
+	    you should use the Undo menu option in the Unit Posting program to re-set the unit
+	    posting flag for this contribution entry for each member concerned for that contribution
+	    date. 
+	</li>
+	<li>
+	    If you try to add contributions onto Pension Master whilst the <i>Allow Manual Update
+	    Of Units?</i> flag on the scheme file is set to "Y" and the current scheme is either
+	    defined contributions or hybrid, either through the <i>Contribution History</i> screen
+	    in <i>Member File Maintenance</i> or via <i>the Batch Data Input</i> program, a warning
+	    message pops up as follows: <i>Update Units Flag = "Y". Any New Conts Will Default
+	    The Unit Post Flag To "Y". </i>You are then asked if you wish to proceed and enter
+	    contributions or return to the main menu. This is intended to indicate to the user
+	    that they will not be able to post these contributions to units without first using
+	    the <i>Undo</i> menu option in the <i>Unit Posting</i> program and that they might
+	    consider setting the <i>Allow Manual Update Of Units?</i> Flag on the scheme file
+	    to "N" before entering the contribution details. 
+	</li>
+    </ul>
+</li>
+<li>
+    The unit posting flag on each contribution entry is now displayed on each members <i>Contribution
+    History</i> screen in <i>Member File Maintenance</i>. This is shown in the last column
+    on the <i>Contribution History</i> screen. 
+</li>
+<li>
+    Users can now only edit contribution entries on the members <i>Contribution History</i> screen
+    in <i>Member File Maintenance</i> where: 
+</li>
+</ol>
+<ul>
+<li>
+    The contribution entry is not a Switch or a Transfer i.e. "S" or "T" does not appear
+    in the <i>S/T</i> column on the screen. 
+</li>
+<li>
+    The contribution entry has a unit posting flag of "N" i.e. contributions that have
+    already been used to buy units cannot be directly edited without unposting the relevant
+    units first (using the <i>Undo</i> menu option in the <i>Unit Posting</i> program). 
+</li>
+</ul>
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

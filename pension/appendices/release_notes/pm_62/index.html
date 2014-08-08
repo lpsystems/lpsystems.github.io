@@ -1,0 +1,2940 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Release Notes 6.2</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Release Notes 6.2</h1>
+        </div>
+        
+
+      <table cellspacing="0">
+<tbody>
+    <tr>
+	<td>
+	    <b>Annual Interest Posting</b></td>
+	<td>
+	    This Update program has been renamed to Contribution Interest Run.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Brokers</b></td>
+	<td>
+	    Two new fields called 'Fax No' and 'E-mail Address' have been added to the Brokers. 
+	    These have been added to provide the user(s) with more information about the Broker
+	    they are interested in, as well as an electronic method of communication.
+	    <p>
+		As well as 'Fax No' and 'E-mail Address', the screen has also had second contact details
+		added to it. These details include 'Contact 2 Title', 'Forename' and 'Surname'. 
+		These fields have been added in order for the Brokers screen to look similar to the
+		'Broker Details' screen in Schemes, as well trying to generate a more standardised
+		look to all address screens within Pension Master.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Companies</b></td>
+	<td>
+	    Two new fields called 'Fax No' and 'E-mail Address' have been added to the 'Basic
+	    Company Details' screen in Companies. These have been added to provide the user(s)
+	    with more information about the Company they are interested in, as well as an electronic
+	    method of communication.
+	    <p>
+		As well as 'Fax No' and 'E-mail Address', the screen has also had second contact details
+		added to it. These details include 'Contact 2 Title', 'Forename' and 'Surname'. 
+		These fields have been added to generate a more standardised look to all address screens
+		within Pension Master.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Database Tables</b></td>
+	<td>
+	    Renamed various columns in the database tables behind Pension Master so as they are
+	    more consistent with one another. The changes are as follows:
+	    <table cellspacing="0">
+		<tbody>
+		    <tr>
+			<th>
+			    Table</th>
+			<th>
+			    Old Column Name</th>
+			<th>
+			    New Column Name</th>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_dep</td>
+			<td>
+			    pd_mem_num</td>
+			<td>
+			    pd_member</td>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_nih</td>
+			<td>
+			    pi_mem_num</td>
+			<td>
+			    pi_member</td>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_not</td>
+			<td>
+			    pn_mem_num</td>
+			<td>
+			    pn_member</td>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_cat</td>
+			<td>
+			    pct_cat</td>
+			<td>
+			    pct_category</td>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_co</td>
+			<td>
+			    pc_schcode</td>
+			<td>
+			    pc_scheme</td>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_co</td>
+			<td>
+			    pc_code</td>
+			<td>
+			    pc_company</td>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_sch</td>
+			<td>
+			    psc_code</td>
+			<td>
+			    psc_scheme</td>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_sta</td>
+			<td>
+			    ps_code</td>
+			<td>
+			    ps_status</td>
+		    </tr>
+		    <tr>
+			<td>
+			    pe_mifund</td>
+			<td>
+			    pmif_ifund</td>
+			<td>
+			    pmif_inv_fund</td>
+		    </tr>
+		</tbody>
+	    </table>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Deferred Pensioner Details</b></td>
+	<td>
+	    The existing Deferred Pensioner screen has been replaced by 3 new screens as follows:
+	    <p>
+		<b>Screen 1 - Basic Deferred Pensioner Details Screen</b> 
+	    </p>
+	    <p>
+		This contains typical deferred pensioner data that relates to the members Deferred
+		Pension benefits. Information such as, the Date the first Payment is Due, values relating
+		to Inland Revenue Maximum Pension/Cash and Scheme Cash, Cessation Details and the
+		Payment Frequency. Also an additional 5 fields are available that can be defined by
+		the user. Data must be entered on this screen before the 2 other screens can be accessed.
+	    </p>
+	    <p>
+		<b>Note: The Payment Frequency will be set to 12 (Monthly) by default for any existing
+		Deferred Pensioners.</b> 
+	    </p>
+	    <p>
+		<b>Screen 2 - Deferred Pension History Screen</b> 
+	    </p>
+	    <p>
+		This is used to record any changes in the members Deferred Pension benefit. Deferred
+		Pension Codes are used to indicate whether the values are Added/Ignored or Subtracted
+		from the calculation of the members total Deferred Pension. Other information can
+		also be entered such as, the Date the change is due to Commence, the Date of Last
+		Increase and values for the members Initial/Current Pension and benefit for Spouses
+		before and after the normal pension date.
+	    </p>
+	    <p>
+		<b>Screen 3 - Deferred Pension Increase History Screen</b> 
+	    </p>
+	    <p>
+		This historically records any changes made to a members Deferred Pension benefit on
+		the Deferred Pension History Screen. The last 10 alterations made to a Deferred Pension
+		Code are displayed on the screen with options on the menu to allow any other codes
+		to be shown. Information such as the value of the members Pension and any Spouses
+		Benefit before and after the normal pension date are recorded.
+	    </p>
+	    <div class="info">
+				<p>Ensure that all administrators are aware that a note has been written to <a href="pem_sch1.html#Scheme Notes">Scheme
+				Notes</a> detailing any formula lines that reference redundant Deferred Pensioner
+				data fields. Also any Deferred Pensioner fields used by Member Reports that are now
+				not used have a note written to Scheme Notes.</p>
+	    </div>
+	    <p>
+		<b>Fields transferred from the old Deferred Pensioner Details table (pe_dpen) to the
+		new Deferred Pensioner Details table (pe_dpens).</b> 
+		<br />
+		<br />
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="25%">
+				Old Field Name</th>
+			    <th width="25%">
+				Old Description</th>
+			    <th width="25%">
+				New Field Name</th>
+			    <th width="25%">
+				New Description</th>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_member</td>
+			    <td width="25%">
+				Member Number</td>
+			    <td width="25%">
+				pdps_member</td>
+			    <td width="25%">
+				Member Number</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_1st_pay_dt</td>
+			    <td width="25%">
+				Date First Paid</td>
+			    <td width="25%">
+				pdps_1st_pay_dt</td>
+			    <td width="25%">
+				Date First Payment Due</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_grpen_nrd</td>
+			    <td width="25%">
+				Gross Pension At NRD</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_gmp_reval</td>
+			    <td width="25%">
+				GMP Revaluation Rate</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_lrp_exit</td>
+			    <td width="25%">
+				LRP At Exit</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_lrp_to_dss</td>
+			    <td width="25%">
+				LRP Paid To DSS? ( Y/N )</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_tvin_inc</td>
+			    <td width="25%">
+				Transfer In Included? ( Y/N )</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_dis_lsum</td>
+			    <td width="25%">
+				Death In Service Lump Sum</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_dis_pen</td>
+			    <td width="25%">
+				Death In Service Pension</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_dis_pre88</td>
+			    <td width="25%">
+				Death In Service Pre 88 GMP</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_dis_pst88</td>
+			    <td width="25%">
+				Death In Service Post 88 GMP</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_mpen_nrd</td>
+			    <td width="25%">
+				IR Maximum Lump Sum At NRD</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdp_mcsh_nrd</td>
+			    <td width="25%">
+				IR Maximum Cash At NRD</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	    <p>
+		<b>Fields transferred from the old Deferred Pensioner History table (pe_dpenhst) to
+		the new Deferred Pension Increase History table (pe_dpenh).</b> 
+	    </p>
+	    <p>
+		For each Pension Value field in the old Deferred Pensioner History table one record
+		is created in the new Deferred Pension Increase History table. The new record has
+		a Pension Code of DPEN1 with the old pdh_pen1 value copied into pdph_pen_amt, DPEN2
+		with the old pdh_pen2 value copied into pdph_pen_amt etc. A Reason for Increase code
+		of RNEWPEN has been used as a default code when the new records are created. 
+		<br />
+		<br />
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="25%">
+				Old Field Name</th>
+			    <th width="25%">
+				Old Description</th>
+			    <th width="25%">
+				New Field Name</th>
+			    <th width="25%">
+				New Description</th>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdh_member</td>
+			    <td width="25%">
+				Member Number</td>
+			    <td width="25%">
+				pdph_member</td>
+			    <td width="25%">
+				Member Number</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdh_date</td>
+			    <td width="25%">
+				History Date</td>
+			    <td width="25%">
+				pdph_eff_dt</td>
+			    <td width="25%">
+				Effective Date</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdh_pen1</td>
+			    <td width="25%">
+				Pension Value 1</td>
+			    <td width="25%">
+				pdph_pen_amt to a new record with DAPEN1 as the Pension Code</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdh_pen2</td>
+			    <td width="25%">
+				Pension Value 2</td>
+			    <td width="25%">
+				pdph_pen_amt to a new record with DAPEN2 as the Pension Code</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdh_pen3</td>
+			    <td width="25%">
+				Pension Value 3</td>
+			    <td width="25%">
+				pdph_pen_amt to a new record with DAPEN3 as the Pension Code</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pdh_pen4</td>
+			    <td width="25%">
+				Pension Value 4</td>
+			    <td width="25%">
+				pdph_pen_amt to a new record with DAPEN4 as the Pension Code</td>
+			    <td width="25%">
+				</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Diary Entry</b></td>
+	<td>
+	    Added a new 'Move' option to the Diary Entry main menu. This allows you to re-allocate
+	    a specific diary entry to another user on your Pension Master system. Further details
+	    can be found <a href="gn_diary.html#Move A Diary Item">here</a>.
+	    <p>
+		This can be useful, say when an administrator is away on holiday and you wish the
+		other administrators to keep up with their diary entries.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Factors</b></td>
+	<td>
+	    A new list of factors has been created called "Inflation Proofing Factors (Post 88
+	    GMP)".</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Favourites Button</b></td>
+	<td>
+	    A new button called 'Favourites' is displayed on the right-hand side of the main menu
+	    screen. On clicking this button the user is able to access and setup a list of menu
+	    options which they commonly use.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Favourites</b></td>
+	<td>
+	    A new option has been added to the Basic User Details screen in <a href="gn_user.html">Users</a>which
+	    will determine if the user is automatically presented with their favourites menu when
+	    they log into Pension Master.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Added a new function as follows:
+	    <p>
+		<b>rm(date1,date2,r)</b> 
+	    </p>
+	    <p>
+		<b>OVERVIEW</b> 
+	    </p>
+	    <p>
+		Use the rm function to calculate the number of years and completed months between
+		two dates. This is the same as the cm() function except that if the number of remaining
+		days is greater than or equal to a specified value (given by the r argument to the
+		function call), then the number of completed months is rounded up. 
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		rm(date1,date2,r) 
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+	    </p>
+	    <ul>
+		<li>
+		    date1 - start date for date period 
+		</li>
+		<li>
+		    date2 - end date for date period 
+		</li>
+		<li>
+		    r - is the number of days to round up 
+		</li>
+	    </ul>
+	    <b>NOTES</b> 
+	    <ol>
+		<li>
+		    The two dates must be field references to the member file (pe_mem), constant dates
+		    entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+		    the day or references to the result of another line of formula code within the current
+		    formula e.g. @1. 
+		</li>
+		<li>
+		    If date1 &gt; date2 the value returned will be 0. 
+		</li>
+		<li>
+		    r must be a valid number between 1 and 31. 
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		rm(pm_dtlft,pm_npd,20)
+		<br />
+		rm(19950122,pm_npd,1)
+		<br />
+		rm(19900112,20040523,17)
+		<br />
+		rm(@1,20040523,15)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    The avg and avgmax formulae have been changed to allow the fieldname to reference <a href="pem_sch1.html#User Defined Arrays">User
+	    Defined Arrays</a>. This should contain both the fieldname, from the User Defined
+	    Arrays file, with a previously defined array type as the suffix in capitals. e.g.
+	    pma_col1SAL with pma_col1 being one of the five user defined fields in pe_mua and
+	    SAL indicating the type of the array. Further details of these functions can be found
+	    at avg(field,n,fld1,fld2) and avgmax(field,n1,n2,fld1,fld2).</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    When selecting salary, contributions, expected contributions or units in formulae
+	    using #fieldname type syntax, select the salary/contribution/expected contribution/unit
+	    entry immediately prior to Calculation Date. At present we select the last entry on
+	    record, regardless of date.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Added a new function as follows:
+	    <p>
+		<b>unit_price(nn,b/o,date)</b> 
+	    </p>
+	    <p>
+		<b>OVERVIEW</b> 
+	    </p>
+	    <p>
+		Use the unit_price function to calculate unit price at a specified date(nn,b/o,date)
+		n1 = Fund Number, b/o - b = bid, o = offer, date is accepted in the usual format (field
+		reference, line reference, fixed date).
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		unit_price(nn,b/o,date)
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+	    </p>
+	    <ul>
+		<li>
+		    nn - Fund Number. 
+		</li>
+		<li>
+		    b/o - bid/offer. 
+		</li>
+		<li>
+		    date - date to calculate unit price at. 
+		</li>
+	    </ul>
+	    <b>NOTES</b> 
+	    <ul>
+		<li>
+		    nn - is the investment fund number required. This must be in the range 0 to 20. 
+		</li>
+		<li>
+		    b/o - whether or not the unit price you require is the bid or offer price. 
+		</li>
+		<li>
+		    date - must be a field reference to a date field on the member file (pe_mem), a constant
+		    date entered in the format YYYYMMDD where YYYY is the year, MM is the month and DD
+		    is the day or a reference to the result of another line of formula code within the
+		    current formula e.g. @1. the day value. 
+		</li>
+	    </ul>
+	    <b>EXAMPLES</b> 
+	    <p>
+		unit_price(01,b,19951201)
+		<br />
+		unit_price(01,o,@1)
+		<br />
+		unit_price(01,b,pm_dtlft)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Added a new fnction as follows:
+	    <h3>format(field,Nn)</h3>
+	    <b>OVERVIEW</b> 
+	    <p>
+		Use the format function to format numerical values to the amount of decimal places
+		you require.
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		format(field,Nn)
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+	    </p>
+	    <ul>
+		<li>
+		    field - field to be formatted e.g. @1, pm_ord_int, 12.23456.
+		</li>
+		<li>
+		    Nn - where n is the number of decimal places to be used. 
+		</li>
+	    </ul>
+	    <b>NOTES</b> 
+	    <ol>
+		<li>
+		    n must be between 0 and 6. 
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		format(@2,N4)
+		<br />
+		format(pm_ord_int,N6)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Extended the pen_act_proj() function so that the user can now reference the result
+	    of a previous line of their formula in the argument to pen_act_proj() e.g. pen_act_proj(@2).</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Added a new function as follows:
+	    <p>
+		<b>if(condition,@then,@else)</b> 
+	    </p>
+	    <p>
+		<b>OVERVIEW</b> 
+	    </p>
+	    <p>
+		Use the if function to test whether a condition is either true or false. The function
+		will either return a constant, field name or goto a specific line depending upon the
+		condition. If the condition is true then the first constant, field name or goto will
+		be processed. If the condition is false then the second constant, field name or goto
+		will be processed.
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		if(condition,@then,@else)
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+		<br />
+		<br />
+		<table cols="2" width="100%">
+		    <tbody>
+			<tr>
+			    <td width="10%">
+				condition</td>
+			    <td>
+				a test condition using either a line number or field name seperated by a valid operator
+				(either &lt;,&gt;,!,=). Compared with either a line number, constant (date, integer,
+				character string or decimal) or field name.</td>
+			</tr>
+			<tr>
+			    <td>
+				@then</td>
+			    <td>
+				either a constant (date, integer, character string or decimal), field name or a line
+				number to goto that will be executed if the condition is true.</td>
+			</tr>
+			<tr>
+			    <td>
+				@else</td>
+			    <td>
+				either a constant (date, integer, character string or decimal), field name or a line
+				number to goto that will be executed if the condition is false.</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	    <p>
+		<b>NOTES</b> 
+	    </p>
+	    <ol>
+		<li>
+		    Date constants must be enclosed in double quotation marks (") and be in the format
+		    YYYYMMDD. 
+		</li>
+		<li>
+		    Character string constants must be enclosed in single quotation marks ('). 
+		</li>
+		<li>
+		    Any valid operator can be used either &lt;,&gt;,! or =. 
+		</li>
+		<li>
+		    Any line numbers used in the condition must be previous to the if function. 
+		</li>
+		<li>
+		    Any line numbers used as arguments (either @then or @else) must be after the if function. 
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		if(pm_sex='M',@2,@2)
+		<br />
+		if(pm_scheme&lt;@3,12,34)
+		<br />
+		if(@5!0,@5,4321)
+		<br />
+		if(@7&gt;pm_dob,pm_rt1,32)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Formulae can now produce 3 new types of result as well as the standard decimal format.
+	    The possible types of result are as follows:
+		<table cols="2" width="50%" border="0">
+		    <tbody>
+			<tr>
+			    <td>
+				Decimal</td>
+			    <td>
+				a numeric value e.g. 1234.56</td>
+			</tr>
+			<tr>
+			    <td>
+				Date</td>
+			    <td>
+				a valid date e.g. 01/12/1999</td>
+			</tr>
+			<tr>
+			    <td>
+				Integer</td>
+			    <td>
+				a numeric value with no decimal places e.g. 1234</td>
+			</tr>
+			<tr>
+			    <td>
+				Character</td>
+			    <td>
+				a string up to 100 alphabetic or numeric characters e.g. Mr G. Marx</td>
+			</tr>
+		    </tbody>
+		</table>
+	    The type of result will depend upon the first section of the formula line.
+	    <p>
+		For example, if 'Pensioner' is the first section of the line then the line is set
+		as a character line. Also if #pm_surname is the first part of the line, or any function
+		returns a character value then the line is a character line. This means that numeric
+		operators cannot be used on the line or the result of this line. e.g.
+	    </p>
+		<table cols="2" width="50%" border="0">
+		    <tbody>
+			<tr>
+			    <td width="10%">
+				1</td>
+			    <td>
+				#pm_surname</td>
+			</tr>
+			<tr>
+			    <td>
+				2</td>
+			    <td>
+				@1 * 5</td>
+			</tr>
+			<tr>
+			    <td>
+				3</td>
+			    <td>
+				result @2</td>
+			</tr>
+		    </tbody>
+		</table>
+	    When this formula is run it would produce a warning on the Warnings Report saying
+	    that an attempt was made to perform a calculation on a character field.
+		<p>
+		    Calculations can still be performed on Dates e.g.
+		</p>
+		<table cols="2" width="50%" border="0">
+		    <tbody>
+			<tr>
+			    <td width="10%">
+				1</td>
+			    <td>
+				#pm_dob + 5</td>
+			</tr>
+			<tr>
+			    <td>
+				2</td>
+			    <td>
+				result @1</td>
+			</tr>
+		    </tbody>
+		</table>
+	    This will return a date that is 5 calendar days after the members date of birth.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Added a new function pen_act_qservice(date) to calculate total qualifying service
+	    under the Irish Pensions Act. Further details can be found <a href="pem_form9.html#09">here</a>.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Renamed the tot_transfer_in/tot_transfer_out formulae function to tot_tvin/tot_tvout
+	    respectively.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    The uda formula has been changed so that the date can be a date that has been generated
+	    by a previous formula line. Also, if a date is entered the value that is currently
+	    effective will be returned. 
+	    <p>
+		An extra argument has been added to the uda formula called 'basis' which will return
+		a value at a specific date (AT) or a value that is effective at a specific date (EF).
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    <b>ir_norm_revmax(pp,date)</b>
+	    <b>OVERVIEW</b> 
+	    <p>
+		Use this function to calculate a revenue maximum fraction under Irish Revenue Rules
+		for a normal retiree.
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		ir_norm_revmax(pp,date)
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+	    </p>
+	    <ul>
+		<li>
+		    pp - denotes the type of Revenue Maximum. The valid Parameters are as follows: 
+		    <ul>
+			<li>
+			    NR - Calculate fraction for Normal Retirement Pension 
+			</li>
+			<li>
+			    NL - Calculate fraction for Normal Retirement Lump Sum 
+			</li>
+		    </ul>
+		</li>
+		<li>
+		    date - denotes the date to project the revenue maximum fraction to. This can be either: 
+		    <ul>
+			<li>
+			    @line_num i.e. a reference to a previous line of your formula that evaluates to a
+			    date 
+			</li>
+			<li>
+			    pm_npd field on pe_mem. 
+			</li>
+			<li>
+			    a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000. 
+			</li>
+		    </ul>
+		</li>
+	    </ul>
+	    <b>NOTES</b> 
+	    <ol>
+		<li>
+		    pp must be in uppercase. 
+		</li>
+		<li>
+		    ir_norm_revmax uses Date Entered Company (pm_dec) (to be found on the first screen
+		    of the Member File). If this date is blank for a member then a value of zero will
+		    be returned and a message written to the warnings report. 
+		</li>
+		<li>
+		    If the date returned by the second argument to the function is blank then a value
+		    of zero will be returned and a message written to the warnings report. 
+		</li>
+		<li>
+		    The function uses the value evaultaed by the second argument to denote the date of
+		    normal retirement, which could be used to quote maximum benefits at age 60 for a scheme
+		    that allows retirement at any age between 60 and 65, for example. 
+		</li>
+		<li>
+		    Full account of any part time service (as defined on the <a href="pem_mem2.html#Part Time Service Details">Part
+		    Time Service</a> record in Members) is taken account of. If a member has been in continuous
+		    part time service, they are treated as if they were in full time service in the calculation
+		    of the revenue maximum fraction as per Revenue Rules. 
+		</li>
+		<li>
+		    ir_norm_revmax generates the Revenue Maximum fraction and NOT the value of a Revenue
+		    Maximum pension or lump sum. To get the Revenue Maximum pension or lump sum you will
+		    need to multiply the result of the call to ir_norm_revmax by a suitable salary. 
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		ir_norm_revmax(NR,@1)
+		<br />
+		ir_norm_revmax(NL,20000201)
+		<br />
+		ir_norm_revmax(NL,pm_npd)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    <b>ir_early_revmax(pp,date)</b>
+	    <b>OVERVIEW</b> 
+	    <p>
+		Use this function to calculate a revenue maximum fraction under Irish Revenue Rules
+		for early retirees.
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		ir_early_revmax(pp,date)
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+	    </p>
+	    <ul>
+		<li>
+		    pp - denotes the type of Revenue Maximum. The valid Parameters are as follows: 
+		    <ul>
+			<li>
+			    ER - Calculate fraction for Early Retirement Pension 
+			</li>
+			<li>
+			    EL - Calculate fraction for Early Retirement Lump Sum 
+			</li>
+		    </ul>
+		</li>
+	    </ul>
+	    <ul>
+		<li>
+		    date - denotes the date to project the revenue maximum fraction to. This can be either: 
+		    <ul>
+			<li>
+			    @line_num i.e. a reference to a previous line of your formula that evaluates to a
+			    date 
+			</li>
+			<li>
+			    pm_dterm_dt or pm_qtdt_c field on pe_mem. 
+			</li>
+			<li>
+			    a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000. 
+			</li>
+		    </ul>
+		</li>
+	    </ul>
+	    <b>NOTES</b> 
+	    <ol>
+		<li>
+		    pp must be in uppercase. 
+		</li>
+		<li>
+		    ir_early_revmax uses Date Entered Company (pm_dec) (to be found on the first screen
+		    of the Member File). If this date is blank for a member then a value of zero will
+		    be returned and a message written to the warnings report. 
+		</li>
+		<li>
+		    If the date returned by the second argument to the function is blank then a value
+		    of zero will be returned and a message written to the warnings report. 
+		</li>
+		<li>
+		    The function uses the value evaluated by the second argument to denote the member
+		    leaving service. 
+		</li>
+		<li>
+		    Full account of any part time service (as defined on the <a href="pem_mem2.html#Part Time Service Details">Part
+		    Time Service</a> record in Members) is taken account of. If a member has been in continuous
+		    part time service, they are treated as if they were in full time service in the calculation
+		    of the revenue maximum fraction as per Revenue Rules. 
+		</li>
+		<li>
+		    ir_early_revmax generates the Revenue Maximum fraction and NOT the value of a Revenue
+		    Maximum pension or lump sum. To get the Revenue Maximum pension or lump sum you will
+		    need to multiply the result of the call to ir_early_revmax by a suitable salary. 
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		ir_early_revmax(ER,@1)
+		<br />
+		ir_early_revmax(EL,20000201)
+		<br />
+		ir_early_revmax(ER,pm_qtdt_c)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    <b>ir_defer_revmax(pp,date1,date2)</b>
+	    <b>OVERVIEW</b> 
+	    <p>
+		Use this function to calculate a revenue maximum fraction under Irish Revenue Rules
+		for early leavers.
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		ir_defer_revmax(pp,date1,date2)
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+	    </p>
+	    <ul>
+		<li>
+		    pp - denotes the type of Revenue Maximum. The valid Parameters are as follows: 
+		    <ul>
+			<li>
+			    DR - Calculate fraction for Deferred Pension 
+			</li>
+			<li>
+			    DL - Calculate fraction for Deferred Lump Sum 
+			</li>
+		    </ul>
+		</li>
+	    </ul>
+	    <ul>
+		<li>
+		    date1 - denotes the date to project the revenue maximum fraction from. This can be
+		    either: 
+		    <ul>
+			<li>
+			    @line_num i.e. a reference to a previous line of your formula that evaluates to a
+			    date 
+			</li>
+			<li>
+			    pm_dec field on pe_mem. 
+			</li>
+			<li>
+			    a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000. 
+			</li>
+		    </ul>
+		</li>
+	    </ul>
+	    <ul>
+		<li>
+		    date2 - denotes the date to project the revenue maximum fraction to. This can be either: 
+		    <ul>
+			<ul>
+			    <li>
+				@line_num i.e. a reference to a previous line of your formula that evaluates to a
+				date 
+			    </li>
+			    <li>
+				pm_dterm_dt or pm_qtdt_c field on pe_mem. 
+			    </li>
+			    <li>
+				a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000. 
+			    </li>
+			</ul>
+		    </ul>
+		</li>
+	    </ul>
+	    <b>NOTES</b> 
+	    <ol>
+		<li>
+		    pp must be in uppercase. 
+		</li>
+		<li>
+		    If the date returned by the second argument to the function is blank then a value
+		    of zero will be returned and a message written to the warnings report. 
+		</li>
+		<li>
+		    If the date returned by the third argument to the function is blank then a value of
+		    zero will be returned and a message written to the warnings report. 
+		</li>
+		<li>
+		    The function uses the value evaluated by the second argument to denote the member
+		    starting service. 
+		</li>
+		<li>
+		    The function uses the value evaluated by the third argument to denote the member leaving
+		    service. 
+		</li>
+		<li>
+		    Full account of any part time service (as defined on the <a href="pem_mem2.html#Part Time Service Details">Part
+		    Time Service</a> record in Members) is taken account of. If a member has been in continuous
+		    part time service, they are treated as if they were in full time service in the calculation
+		    of the revenue maximum fraction as per Revenue Rules. 
+		</li>
+		<li>
+		    ir_defer_revmax generates the Revenue Maximum fraction and NOT the value of a Revenue
+		    Maximum pension or lump sum. To get the Revenue Maximum pension or lump sum you will
+		    need to multiply the result of the call to ir_defer_revmax by a suitable salary. 
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		ir_defer_revmax(DR,@1)
+		<br />
+		ir_defer_revmax(DL,20000201)
+		<br />
+		ir_defer_revmax(DR,pm_qtdt_c)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    <b>pen_act(date)</b>
+	    <b>OVERVIEW</b> 
+	    <p>
+		Use the pen_act function to calculate the fraction required under the Irish Pensions
+		Act for leavers from a Final Salary pension scheme with deferred benefits. This fraction
+		is used to calculate the members pension on leaving the scheme. 
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		pen_act(date)
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+	    </p>
+	    <ul>
+		<li>
+		    date - date pensionable service commences. This can be either: 
+		    <ul>
+			<li>
+			    @line_num i.e. a reference to a previous line of your formula that evaluates to a
+			    date 
+			</li>
+			<li>
+			    pm_dec, pm_djla, pm_djp, pm_dps or pm_dco field on pe_mem. 
+			</li>
+			<li>
+			    a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000. 
+			</li>
+		    </ul>
+		</li>
+	    </ul>
+	    <b>NOTES</b> 
+	    <ol>
+		<li>
+		    Full account of any qualifying service in respect of any transfer in that the member
+		    may have is taken account of. 
+		</li>
+		<li>
+		    Any non-reckonable service for the member is taken account of. Non reckonable service
+		    is taken as one or more lines on the part time history screen where the part time
+		    hours field is 0 but the corresponding full time hours field is &gt; 0. 
+		</li>
+		<li>
+		    Date of leaving the scheme is calculated as follows: 
+		    <ul>
+			<li>
+			    If Date Left (on first screen of Member File) is available use this. 
+			</li>
+			<li>
+			    otherwise, use Quotation Termination Date. 
+			</li>
+		    </ul>
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		pen_act(20000201)
+		<br />
+		pen_act(@2)
+		<br />
+		pen_act(pm_dco)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    <b>pen_act_proj(reval_rate,date)</b>
+	    <b>OVERVIEW</b> 
+	    <p>
+		Use the pen_act_proj function to calculate the projected fraction required under the
+		Irish Pensions Act for leavers from a Final Salary pension scheme with deferred benefits.
+		This fraction is used to calculate the members pension on leaving the scheme, but
+		revalued to normal pension age.
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		pen_act_proj(reval_rate,date)
+	    </p>
+	    <p>
+		<b>EXPLANATION</b> 
+	    </p>
+	    <ul>
+		<li>
+		    reval_rate - is the rate of revaluation to be assumed for projection purposes. Legislation
+		    dictates this is 4%p.a. or the increase in the CPI if less. Enter any rate you require
+		    here, including rates with a decimal point e.g. 2.5%. reval_rate can also be the result
+		    of another line in your formula in the form @line_num e.g. @2. 
+		</li>
+		<li>
+		    date - date pensionable service commences. This can be either: 
+		    <ul>
+			<li>
+			    @line_num i.e. a reference to a previous line of your formula that evaluates to a
+			    date 
+			</li>
+			<li>
+			    pm_dec, pm_djla, pm_djp, pm_dps or pm_dco field on pe_mem. 
+			</li>
+			<li>
+			    a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000. 
+			</li>
+		    </ul>
+		</li>
+	    </ul>
+	    <b>NOTES</b> 
+	    <ol>
+		<li>
+		    Full account of any qualifying service in respect of any transfer in that the member
+		    may have is taken account of. 
+		</li>
+		<li>
+		    Any non-reckonable service for the member is taken account of. Non reckonable service
+		    is taken as one or more lines on the part time history screen where the part time
+		    hours field is 0 but the corresponding full time hours field is &gt; 0. 
+		</li>
+		<li>
+		    The amount of the revaluation is applied between the date of leaving the scheme (as
+		    calculated in 1. above) (subject to a minimum of 1/1/96) and the 1<sup>st</sup> January
+		    immediately prior to normal pension date, and is calculated to years and completed
+		    months. 
+		</li>
+		<li>
+		    The revaluation rate used for the projection will be that supplied by the reval_rate
+		    argument to the function. 
+		</li>
+		<li>
+		    Date of leaving the scheme is calculated as follows: 
+		    <ul>
+			<li>
+			    If Date Left (on first screen of Member File) is available use this. 
+			</li>
+			<li>
+			    otherwise, use Quotation Termination Date. 
+			</li>
+		    </ul>
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		pen_act_proj(3,20000201)
+		<br />
+		pen_act_proj(3.25,@1)
+		<br />
+		pen_act_proj(@2,pm_dco)
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    <b>pen_act_qservice()</b>
+	    <b>OVERVIEW</b> 
+	    <p>
+		Use the pen_act_qservice function to calculate the qualifying service a member has
+		under the Irish Pensions Act for leavers from a Final Salary pension scheme with deferred
+		benefits.
+	    </p>
+	    <p>
+		<b>SYNTAX</b> 
+	    </p>
+	    <p>
+		pen_act_qservice()
+	    </p>
+	    <p>
+		<b>NOTES</b> 
+	    </p>
+	    <ol>
+		<li>
+		    Full account of any qualifying service in respect of any transfer in that the member
+		    may have is taken account of. 
+		</li>
+		<li>
+		    Any non-reckonable service for the member is taken account of. Non reckonable service
+		    is taken as one or more lines on the part time history screen where the part time
+		    hours field is 0 but the corresponding full time hours field is &gt; 0. 
+		</li>
+		<li>
+		    Date of leaving the scheme is calculated as follows: 
+		    <ul>
+			<li>
+			    If Date Left (on first screen of Member File) is available use this. 
+			</li>
+			<li>
+			    otherwise, use Quotation Termination Date. 
+			</li>
+		    </ul>
+		</li>
+	    </ol>
+	    <b>EXAMPLES</b> 
+	    <p>
+		pen_act_qservice()
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    <b>canada()</b> 
+	    <p>
+		This function, written for Canada Life, now only uses the new pe_salary1 table and
+		will only allow a first argument of 0 to 5 as before.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Formulae</b></td>
+	<td>
+	    Extended the popup() function so that the user now has the option to use the same
+	    popup result for all members being processed.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>FSAVC</b></td>
+	<td>
+	    A new option has been added to the members menu called the free standing additional
+	    voluntary contributions (FSAVC) screen. This screen will allow you to hold details
+	    of any FSAVC's taken out by a member. The screen will hold the name address and telephone
+	    number of the FSAVC provider, as well as the dates of commencement and notification.
+	    <p>
+		The screen will allow you to add delete and update FSAVC details. Details of multiple
+		FSAVC's can be stored. The provider name and lead fields must be completed,
+		the rest however, are optional.
+	    </p>
+	    <p>
+		It is also possible to scroll through multiple FSAVC's for a member by using the &lt;FSAVC
+		and FSAVC&gt; buttons on the right hand side of the screen.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>General</b></td>
+	<td>
+	    A new feature has been added when setting up a new report/scheme/category/company.
+	    You will now be able to copy a previously entered record.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Historical Status Report</b></td>
+	<td>
+	    This report, which can be found on the Membership Analysis sub-menu, produces a report
+	    of members status codes at a specified date in the past for a selected group of members. 
+	    It replaces the old Member Status Analysis Report as it provides the user with a greater
+	    selection criteria for the members they wish to select, and it allows the user to
+	    enter in an effective date which determines from what point in time the report is
+	    to be produced from. You have the option of doing the report in either Summary
+	    or Detailed format.
+	    <p>
+		The Summary Report will provide you with the number of members held under each new
+		status code using the selection criteria and the effective date entered by the user.
+	    </p>
+	    <p>
+		The Detailed Report will provide you with details of each individual member held under
+		each new status code, these including the member's name and number, the effective
+		date, old and new status codes, and the date when the status code was updated. 
+		This is also done by using the selection criteria and the effective date entered by
+		the user.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Install</b></td>
+	<td>
+	    A new report has been created which lists information on database fields that are
+	    no longer used but still hold data. Please note that once the install program has
+	    been run, the report cannot be re-generated.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Load Renewal Data</b></td>
+	<td>
+	    This module can be found on the Updates sub-menu. It allows the user to load
+	    up renewal data from a file into the Batch Data Input module of Pension Master. 
+	    By entering in the required details through the selection criteria, the program will
+	    firstly check that the details are correctly entered. Secondly, the fields which
+	    make up the data lines within the data file will be checked for the correct format.
+	    <p>
+		If all the data lines held within the data file are correct then they are loaded into
+		the database. However, if the data is found to be incorrect then a report is
+		produced informing the user where the errors are in the file.
+	    </p>
+	    <p>
+		The program has one main objective which is to load up renewal data provided by the
+		user via a data file. It is therefore expected, by the program, that the data
+		file being used is in the required format. In order for the user to ensure this,
+		they should use a software package, like Microsoft Excel, to reformat the data file
+		prior to using this program.
+	    </p>
+	    <div class="info">
+				<p>You will need to make this extra menu option available to users as appropriate
+				by granting access using the <a href="gn_user.html">Users</a>module of Pension Master.
+				By default all new menus and menu options added to Pension Master will not be switched
+				on for any users.</p>
+	    </div>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Load Renewal Data</b></td>
+	<td>
+	    In the GUI version of Pension Master, upon entering the data filename field, a pop-up
+	    window is displayed allowing the user to choose the data file to load from their local
+	    PC e.g. they can load the data file directly from a floppy disk in the floppy disk
+	    drive on their PC.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Load Renewal Data</b></td>
+	<td>
+	    There has been a <a href="pem_load.html#pop-up window">pop-up window</a>added to the
+	    Load Renewal Data program. The window gets displayed to the screen if a data
+	    line has been fed through the program which contains an indicator that belongs to
+	    two or more members, i.e. two members have the same NI Number.
+	    <p>
+		The members who are allocated to this indicator are listed in the window and the user
+		is then able to select which member the data line belongs to. If the user does
+		not select a member from the list by clicking on 'Cancel', then an error message is
+		sent to the exceptions report as it is un-known which member the data line is intended
+		for.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Load Renewal Data</b></td>
+	<td>
+	    There have been two new options added to the renewal type in the Load Renewal Data
+	    program. As well as the original three options of Contributions, NI Contributions
+	    and Salaries, there is now also Marital Status and Company Code. These two new
+	    options will allow for the update of the respective member detail of marital status
+	    or company code. The data file for these options will take the format of containing
+	    two fields: Identifier and either Marital Status or Company Code, depending on the
+	    renewal type being used.
+	    <p>
+		The data file will go through the same checking procedure as the original three i.e.
+		checking that the correct format is used, checking that the data line contains the
+		correct number of columns etc., any errors found will be sent to the exceptions report. 
+		Once the loading is complete there is a note sent to the audit trail for each data
+		line loaded, stating that it was the Load Renewal Data program that made the updates. 
+		The alterations can be viewed through the Members.
+	    </p>
+	    <div class="info">
+				<p>If the data has been loaded with data type of Company Code, then the company history
+				record will also be respectively updated. The Effective Date and the Date Updated
+				held within the company history record will be set as today's date.</p>
+				<p>N.B. The company history record will only be updated if the new company code is
+				    not the same as the original company code i.e. If a data line is loaded with company
+				    code of '0000' to update a company code of '0000' then no record of this update will
+				    be sent to the company history record, or to the audit trail.</p>
+	    </div>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Logon</b></td>
+	<td>
+	    Do not display the user's diary if they do not have any diary entries waiting for
+	    them.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Mail-Merge Integration Report</b></td>
+	<td>
+	    Altered the menu in the Mail-Merge Integration Report to match the menu in the Member
+	    Report. The functionality of the program remains the same, except that a new Delete
+	    option has been added to the menu allowing you to delete Mail-Merge Reports no longer
+	    required.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    <br />
+	    The way in which salaries are stored in Pension Master has now been changed. It is
+	    now possible to store a maximum of twenty salaries over 4 screens.
+	    <p>
+		The salary titles are now user definable through scheme file maintenance.
+	    </p>
+	    <p>
+		The first screen of Salary History will automatically be converted to store the same
+		salaries as in previous versions of Pension Master, i.e. Gross Salary, Scheme Salary
+		etc.
+	    </p>
+	    <p>
+		Any salaries that are currently set up will not be affected by this changed, they
+		will remain on the first screen of Salary History under the same heading as before.
+	    </p>
+	    <p>
+		The new tables used are as follows:
+	    </p>
+	    <p>
+		<b>pe_salary1</b> 
+	    </p>
+	    <p>
+		<b>DESCRIPTION : Salary History Screen 1.</b> 
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="25%">
+				Field Name</th>
+			    <th width="42%">
+				Description</th>
+			    <th width="32%">
+				Type</th>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps1_member</td>
+			    <td width="42%">
+				Member Number</td>
+			    <td width="32%">
+				INTEGER</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps1_date</td>
+			    <td width="42%">
+				Date</td>
+			    <td width="32%">
+				DATE</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps1_sal1</td>
+			    <td width="42%">
+				Salary 1</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps1_sal2</td>
+			    <td width="42%">
+				Salary 2</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps1_sal3</td>
+			    <td width="42%">
+				Salary 3</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps1_sal4</td>
+			    <td width="42%">
+				Salary 4</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td>
+				ps1_sal5</td>
+			    <td>
+				Salary 5</td>
+			    <td>
+				DECIMAL(10,2)</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	    <p>
+		<b>pe_salary2</b> 
+	    </p>
+	    <p>
+		<b>DESCRIPTION : Salary History Screen 2.</b> 
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="25%">
+				Field Name</th>
+			    <th width="42%">
+				Description</th>
+			    <th width="32%">
+				Type</th>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps2_member</td>
+			    <td width="42%">
+				Member Number</td>
+			    <td width="32%">
+				INTEGER</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps2_date</td>
+			    <td width="42%">
+				Date</td>
+			    <td width="32%">
+				DATE</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps2_sal1</td>
+			    <td width="42%">
+				Salary 1</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps2_sal2</td>
+			    <td width="42%">
+				Salary 2</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps2_sal3</td>
+			    <td width="42%">
+				Salary 3</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps2_sal4</td>
+			    <td width="42%">
+				Salary 4</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td>
+				ps2_sal5</td>
+			    <td>
+				Salary 5</td>
+			    <td>
+				DECIMAL(10,2)</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	    <p>
+		<b>pe_salary3</b> 
+	    </p>
+	    <p>
+		<b>DESCRIPTION : Salary History Screen 3.</b> 
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="25%">
+				Field Name</th>
+			    <th width="42%">
+				Description</th>
+			    <th width="32%">
+				Type</th>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps3_member</td>
+			    <td width="42%">
+				Member Number</td>
+			    <td width="32%">
+				INTEGER</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps3_date</td>
+			    <td width="42%">
+				Date</td>
+			    <td width="32%">
+				DATE</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps3_sal1</td>
+			    <td width="42%">
+				Salary 1</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps3_sal2</td>
+			    <td width="42%">
+				Salary 2</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps3_sal3</td>
+			    <td width="42%">
+				Salary 3</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps3_sal4</td>
+			    <td width="42%">
+				Salary 4</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td>
+				ps3_sal5</td>
+			    <td>
+				Salary 5</td>
+			    <td>
+				DECIMAL(10,2)</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	    <p>
+		<b>pe_salary4</b> 
+	    </p>
+	    <p>
+		<b>DESCRIPTION : Salary History Screen 4.</b> 
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="25%">
+				Field Name</th>
+			    <th width="42%">
+				Description</th>
+			    <th width="32%">
+				Type</th>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps4_member</td>
+			    <td width="42%">
+				Member Number</td>
+			    <td width="32%">
+				INTEGER</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps4_date</td>
+			    <td width="42%">
+				Date</td>
+			    <td width="32%">
+				DATE</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps4_sal1</td>
+			    <td width="42%">
+				Salary 1</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps4_sal2</td>
+			    <td width="42%">
+				Salary 2</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps4_sal3</td>
+			    <td width="42%">
+				Salary 3</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				ps4_sal4</td>
+			    <td width="42%">
+				Salary 4</td>
+			    <td width="32%">
+				DECIMAL(10,2)</td>
+			</tr>
+			<tr>
+			    <td>
+				ps4_sal5</td>
+			    <td>
+				Salary 5</td>
+			    <td>
+				DECIMAL(10,2)</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    There have been new fields inserted onto the existing Dependant Details screen, found
+	    in Members. This has been done to provide the user with more information on
+	    the member's dependants. The new fields inserted are as follows:
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="15%">
+				New Field</th>
+			    <th>
+				Description of Field</th>
+			</tr>
+			<tr>
+			    <td>
+				Address</td>
+			    <td>
+				Dependant's address</td>
+			</tr>
+			<tr>
+			    <td>
+				Postcode</td>
+			    <td>
+				Dependant's postcode</td>
+			</tr>
+			<tr>
+			    <td>
+				Tel No (Eve)</td>
+			    <td>
+				Dependant's telephone number (evening)</td>
+			</tr>
+			<tr>
+			    <td>
+				Tel No (Day)</td>
+			    <td>
+				Dependant's telephone number (day)</td>
+			</tr>
+			<tr>
+			    <td>
+				E-Mail Address</td>
+			    <td>
+				Dependant's e-mail address, to provide the user with an electronic method of communication.</td>
+			</tr>
+			<tr>
+			    <td>
+				Effective Date</td>
+			    <td>
+				The Effective Date represents the date the dependants are made current.</td>
+			</tr>
+			<tr>
+			    <td>
+				Current</td>
+			    <td>
+				Either a 'Y' or 'N' depending on whether or not the member wants the dependant(s)
+				to claim for their proportion of benefit should the member decease.</td>
+			</tr>
+			<tr>
+			    <td>
+				Date Ceased</td>
+			    <td>
+				Left blank if the dependant is current, but filled in if the dependant is not current. 
+				The date at which the dependant is made not current.</td>
+			</tr>
+			<tr>
+			    <td>
+				Note</td>
+			    <td>
+				Note about dependant's details. See below.</td>
+			</tr>
+		    </tbody>
+		</table>
+	    The field 'Note' may be used in the case of a member saying "50% of my benefit to
+	    each of my mother and father, but 100% to my brother should my parents pre-decease
+	    me." A note could be written in the brother's screen stating "Only apply if mother
+	    and father pre-decease member."</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    A new field called 'Telephone Number Evening' has been added to the Member Address
+	    screen within Members, the existing telephone number field is now daytime telephone
+	    number. This has been added to provide the user with more information on the
+	    member they are interested in, as well as allowing the screen to provide the same
+	    amount of information as the other address screens held within Pension Master.
+	    <p>
+		Added a new field to the Member's Address screen called 'Suspect'. By entering
+		Y-Yes in this field, the address will be marked as being suspect.
+	    </p>
+	    <p>
+		If you select any of the Member's contact details ie. address lines, telephone numbers
+		or e-mail address, in the Mail-Merge Integration report which are flagged as suspect,
+		then the user will be informed of this during the mail-merge process. They will then
+		be given the option of using the suspect address details, or not.
+	    </p>
+	    <p>
+		There has also been a new button added to all screens held within Members, which is
+		called 'Send E-Mail'. If the member being looked at holds a valid e-mail address,
+		then by clicking on this button the user's mail program will be loaded up to the screen,
+		allowing the user to send an e-mail to the member. If the member does not hold
+		a valid e-mail address then an error message gets displayed to the screen as follows:
+	    </p>
+	    <p>
+		<i>'The member must have a valid e-mail address before using this option.'</i>
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    There has been a new screen added to the 'Member Address Details' held within Members. 
+	    This new screen has been added to allow the user to insert up to two addresses for
+	    the member.
+	    <p>
+		To help the user identify the curent address an extra field has ben added. To make
+		an address current, click the current field and then click 'Ok' to accept. A tick
+		will then be displayed in the current field. 
+	    </p>
+	    <p>
+		Checks are made by Pension Master to ensure that only one address is current. If an
+		address is ticked as current, whilst the other address is already ticked as current,
+		then the address being updated will become the current address and the other address
+		will then become the non current address.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    Replaced old pm_fullname field with pm_initials. This is a view only field that is
+	    auto-generated from the members forename field (pm_forename) that the user inputs
+	    in the Basic Member Details screen.
+	    <div class="info">
+			    <p>The data that was in the pm_fullname field will no longer be available on your
+			    system (although it has been saved in the background in case you should need to refer
+			    to it in the future).</p> 
+			    <p>If you have information in this field that you require, you should let LPS Technical
+				Support know immediately and we will arrange to update your records accordingly.</p>
+	    </div>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    The Quotations Screen has been changed so that whatever type of result is returned
+	    it will be displayed in it's correct format on the screen. 
+	    <p>
+		The formula line number has been added to the Warnings Report to allow problems to
+		be traced quicker. The warning that is described is only the first occurence. Therefore
+		if the problem is corrected the same problem could occur further down in the function.
+	    </p>
+	    <p>
+		The Calculation Trace Report has been changed to show the different types of result
+		that have been calculated on each formula line.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    A new screen has been added to the Members menu to allow a System Administrator to
+	    change the Intranet Security Details for a member. The member can then change the
+	    password using the logon page of the application. If the member enters an incorrect
+	    password three times they will be locked out of the system.
+	    <p>
+		<b>The details on this screen cannot be printed using the Report option.</b>
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    Only allow access to the 'Service Details' screen if the user has set up some names
+	    for the seven different service periods in <a href="pem_sch1.html#Service Period Names">Scheme
+	    File</a>. If these names are left blank, the 'Service Details' screen will not
+	    appear on the list of available screens in Member File.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    A Browse option has been added as follows:
+	    <p>
+		Click on the 'Browse' button or the Browse icon on the toolbar to view details in
+		any screen where the data does not fit on the screen e.g. salary history may have
+		more entries than can fit on the screen, so you could use the 'Browse' option to view
+		those salary details not immediately visible.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Members</b></td>
+	<td>
+	    The Switches/Transfer screen will now allow System Administrators to delete Switches/Transfers
+	    that have been used to buy units.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Member Report &amp; Mail-Merge Integration Report</b></td>
+	<td>
+	    <b>This applies for the GUI version of Pension Master only.</b> 
+	    <p>
+		Altered the way data is exported to Microsoft Word and Microsoft Excel in the Mail-Merge
+		Integration Report and the Member Report respectively. Data is now exported using
+		DDE (Dynamic Data Exchange) links to Word and Excel which streamlines the export of
+		the data from the users perspective. Full details can be found in the respective areas
+		of the User Manual.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Member Report &amp; Mail-Merge Integration Report</b></td>
+	<td>
+	    Member Report Only limit report width to 180 characters for reports that are produced
+	    in Report format. If the report is to be produced in Export format, each line of the
+	    report can be of an unlimited length.
+	    <p>
+		If the Export report is then re-run as a normal Report format report, an error message
+		will be displayed informing you that the report is greater than 180 characters wide
+		and asking you to remove any unwanted columns so that the report is less than 180
+		characters wide.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Member Report &amp; Mail-Merge Integration Report</b></td>
+	<td>
+	    Amended code to save Member Report and Mail-Merge Integration Report under from 6
+	    characters to 8 characters to bring it in line with other areas of Pension Master.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Mail-Merge Integration Report</b></td>
+	<td>
+	    Added a facility to run a Microsoft Word macro in the form letters that are produced
+	    by the mail-merge process.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Member Report</b></td>
+	<td>
+	    The Member Report has been changed to incorporate a sequence flag. This is used in
+	    a similar way to the existing Total, Head and Count options available when grouping
+	    information by a specific field.
+	    <p>
+		The field can be set to either 'A' for an ascending sort or 'D' for a descending sort.
+		The default sequence when adding a new group will always be 'A' for ascending. More
+		details can be found in the <a href="per_mem.html#seq_gr_1">Sequence</a> section of
+		the <a href="per_mem.html#Introduction">Member Report</a>.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Member Report</b></td>
+	<td>
+	    The following options have been added to the Salary/Contribution/Unit and NI History
+	    Select options on the Advanced Selection Criteria screen:
+	    <p>
+		TD - total to date i.e. total the salary up to and including the date entered.
+		<br />
+		ED - effective at date i.e. the salary on or before the date entered.
+	    </p>
+	    <p>
+		Also, two new options have been added as follows:
+	    </p>
+	    <p>
+		HISTORIC STATUS CODE - Enter the Historic Status Code required. Individual or a range
+		of Status Codes can be entered as described in Appendix B.
+	    </p>
+	    <p>
+		HISTORIC STATUS DATE - The Status Date at which the Status Code was effective.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Member Report</b></td>
+	<td>
+	    A new argument, which denotes the width of the result, has been added when referencing
+	    the pe_mquote table. This argument has also been added to the end of any fields that
+	    reference a formula calculation using #calc.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Member Report</b></td>
+	<td>
+	    Investment Manager Details has been amended to take an extra argument. This argument
+	    is the investment fund number. In order to report on the manager of the second funds
+	    name you would enter: pfi_inv_name(2).</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Pension Increase Run</b></td>
+	<td>
+	    The Pension Increase Run has been changed to integrate with the new <a href="pem_mem3.html#Pensioner Details">Pensioner</a> and <a href="pem_mem3.html#Deferred Pensioner Details">Deferred
+	    Pensioner</a> screens in <a href="pem_mem.html#Introduction">Members</a>.
+	    <p>
+		New pension values can now be calculated based upon either a percentage rate or the
+		result of a formula. Care must be taken to ensure that the formula generates only
+		the increase for the period. An extra option has been included to allow increases
+		to be calculated on a pro rata basis.
+	    </p>
+	    <p>
+		The program is split into 4 main sections described as follows:
+	    </p>
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <td>
+				Provisional</td>
+			    <td>
+				This allows an increase run to be performed but <b>does not update</b> the Pension/Deferred
+				Pension History.</td>
+			</tr>
+			<tr>
+			    <td>
+				Actual</td>
+			    <td>
+				This allows an increase run to be performed and <b>does update</b> the Pension/Deferred
+				Pension History.</td>
+			</tr>
+			<tr>
+			    <td>
+				Undo</td>
+			    <td>
+				This allows an increase run to be removed from the Pension/Deferred Pension Increase
+				History screen and reverts the values on the History screen back to before the Actual
+				Increase run was performed.</td>
+			</tr>
+			<tr>
+			    <td>
+				Delete</td>
+			    <td>
+				This allows a previously saved Increase Parameter to be removed.</td>
+			</tr>
+		    </tbody>
+		</table>
+	    <p>The members that are increased can be selected using standard <a href="app_b.html#Introduction">selection
+	    criteria</a> (i.e. Scheme, Company, Category, Status, Special Code and Member). From
+	    the members selected a list of the Pension Codes currently used is displayed allowing
+	    either all the codes to be updated with a global Formula/Fixed Rate or to be increased
+	    individually.</p>
+	    <p>
+		The information used to select the members and the specific increase information used
+		against each Pension Code can be saved as an individual set of parameters (known as
+		a Pension Increase parameter Set). These parameters are specific to each scheme and
+		each pension type, for either Deferred Pension or Pension increases. This allows them
+		to be saved, using a descriptive name, for future use.
+	    </p>
+	    <p>
+		A report is generated if exceptions are found during the Provisional or Actual Increase
+		Run. This shows the members details, the options that have been selected and the reason
+		why the update was not processed. An increase report is created showing the members
+		pension values, that have been correctly calculated, before and after the Pension
+		Increase Run. 
+	    </p>
+	    <p>
+		See the <a href="peu_peninc.html#Introduction">Pension Increase Run</a> page for further
+		details.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Pensioner Details</b></td>
+	<td>
+	    The existing Pensioner screen has been replaced by 4 new screens as follows:
+	    <p>
+		<b>Screen 1 - Basic Pensioner Details Screen</b> 
+	    </p>
+	    <p>
+		This contains typical pensioner data that relates to the members Pension benefits.
+		Information such as, Retirement Date and the Date the Pension Commenced, Commutation
+		and Lump Sum details, Cessation Details and Payment and Pension Provider details.
+		Also an additional 5 fields are available that can be defined by the user. Data must
+		be entered on this screen before the 4 other screens can be accessed.
+	    </p>
+	    <p>
+		<b>Note: The Payment Frequency will be set to 12 (Monthly) by default for any existing
+		Pensioners.</b> 
+	    </p>
+	    <p>
+		<b>Screen 2 - Pension History Screen</b> 
+	    </p>
+	    <p>
+		This is used to record any changes in the members Pension benefit. Pension Codes are
+		used to indicate whether the values are Added/Ignored or Subtracted from the calculation
+		of the members total Pension. Other information can also be entered such as, the Date
+		the change is due to Commence, the Date of Last Increase and values for the members
+		Initial/Current Pension and benefit for Spouses.
+	    </p>
+	    <p>
+		<b>Screen 3 - Pension Increase History Screen</b> 
+	    </p>
+	    <p>
+		This historically records any changes made to a members Pension benefit on the Pension
+		History Screen. The last 10 alterations made to a Pension Code are displayed on the
+		screen with options on the menu to allow any other codes to be shown. Information
+		such as the value of the members Pension and any Spouses Benefit before and after
+		the normal pension date are recorded.
+	    </p>
+	    <p>
+		<b>Screen 4 - Pensioner Bank Details Screen</b> 
+	    </p>
+	    <p>
+		This allows the members Bank/Building Society information to be held, allowing data
+		to be exported to a Pensioner Payroll system. The data includes the Bank/Building
+		Society Name and Address details, the members Account information and the Roll Number
+		required by a Building Society.
+	    </p>
+	    <div class="info">
+				<p>Ensure that all administrators are aware that a note has been written to <a href="pem_sch1.html#Scheme Notes">Scheme
+				Notes</a> detailing any formula lines that reference redundant Pensioner data fields.
+				Also any Pensioner fields used by Member Reports that are now not used have a note
+				written to Scheme Notes.</p>
+	    </div>
+	    <p>
+		<b>Fields transferred from the old Pensioner Details table (pe_pen) to the new Pensioner
+		Details table (pe_pens).</b> 
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="25%">
+				Old Field Name</th>
+			    <th width="25%">
+				Old Description</th>
+			    <th width="25%">
+				New Field Name</th>
+			    <th width="25%">
+				New Description</th>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_member</td>
+			    <td width="25%">
+				Member Number</td>
+			    <td width="25%">
+				pps_member</td>
+			    <td width="25%">
+				Member Number</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_precom_pen</td>
+			    <td width="25%">
+				Pre-Commuted Pension</td>
+			    <td width="25%">
+				pps_precom_pen</td>
+			    <td width="25%">
+				Pre-Commutation Pension</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_csh_dt</td>
+			    <td width="25%">
+				Date Tax Free Cash Paid</td>
+			    <td width="25%">
+				pps_dt_lump_sum</td>
+			    <td width="25%">
+				Date Lump Sum</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_strt_pnsv</td>
+			    <td width="25%">
+				Date Started Pension</td>
+			    <td width="25%">
+				pps_dt_pen_com</td>
+			    <td width="25%">
+				Date Pension Commenced</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_pre88_gmp</td>
+			    <td width="25%">
+				Pre 88 GMP</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_pst88_gmp</td>
+			    <td width="25%">
+				Post 88 GMP</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_sp_pc_pen</td>
+			    <td width="25%">
+				Spouses Proportion</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_ch_pen_cs</td>
+			    <td width="25%">
+				Date Childs Pension Ceases</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_ins</td>
+			    <td width="25%">
+				Insurers Name</td>
+			    <td width="25%">
+				pps_provider</td>
+			    <td width="25%">
+				Pension Provider</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_ins_add1</td>
+			    <td width="25%">
+				Insurers Address Line 1</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_ins_add2</td>
+			    <td width="25%">
+				Insurers Address Line 2</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_ins_add3</td>
+			    <td width="25%">
+				Insurers Address Line 3</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_ins_add4</td>
+			    <td width="25%">
+				Insurers Address Line 4</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_csh</td>
+			    <td width="25%">
+				Amount Of Tax Free Cash Paid</td>
+			    <td width="25%">
+				pps_lump_sum_amt</td>
+			    <td width="25%">
+				Lump Sum Amount</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pp_pen_dt</td>
+			    <td width="25%">
+				Pension Increase Date</td>
+			    <td width="25%">
+				Not Used</td>
+			    <td width="25%">
+				</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	    <p>
+		<b>Fields transferred from the old Pensioner History table (pe_penhst) to the new
+		Pension Increase History table (pe_penh).</b> 
+	    </p>
+	    <p>
+		For each Pension Value field in the old Pensioner History table one record is created
+		in the new Pension Increase History table. The new record has a Pension Code of PPEN1
+		with the old pph_pen1 value copied into pph_pen_amt, PPEN2 with the old value pph_pen2
+		copied into pph_pen_amt etc. A Reason for Increase code of RNEWPEN has been used as
+		a default code when the new records are created.</p>
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th width="25%">
+				Old Field Name</th>
+			    <th width="25%">
+				Old Description</th>
+			    <th width="25%">
+				New Field Name</th>
+			    <th width="25%">
+				New Description</th>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pph_member</td>
+			    <td width="25%">
+				Member Number</td>
+			    <td width="25%">
+				pph_member</td>
+			    <td width="25%">
+				Member Number</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pph_date</td>
+			    <td width="25%">
+				History Date</td>
+			    <td width="25%">
+				pph_eff_dt</td>
+			    <td width="25%">
+				Effective Date</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pph_pen1</td>
+			    <td width="25%">
+				Pension Value 1</td>
+			    <td width="25%">
+				pph_pen_amt to a new record with PAPEN1 as the Pension Code</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pph_pen2</td>
+			    <td width="25%">
+				Pension Value 2</td>
+			    <td width="25%">
+				pph_pen_amt to a new record with PAPEN2 as the Pension Code</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pph_pen3</td>
+			    <td width="25%">
+				Pension Value 3</td>
+			    <td width="25%">
+				pph_pen_amt to a new record with PAPEN3 as the Pension Code</td>
+			    <td width="25%">
+				</td>
+			</tr>
+			<tr>
+			    <td width="25%">
+				pph_pen4</td>
+			    <td width="25%">
+				Pension Value 4</td>
+			    <td width="25%">
+				pph_pen_amt to a new record with PAPEN4 as the Pension Code</td>
+			    <td width="25%">
+				</td>
+			</tr>
+		    </tbody>
+		</table>
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Printing</b></td>
+	<td>
+	    Expanded the way printing works in the GUI version of Pension Master. Further details
+	    can be found <a href="gn_printm.html">here</a>.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Printing Reports</b></td>
+	<td>
+	    Added an option to the print dialog box in the GUI version so that users can now send
+	    a report as a file attachment to an e-mail message. Further details can be found <a href="gn_printm.html#email">here</a>.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Printing In Pension Master</b></td>
+	<td>
+	    <b>This applies to the GUI version of Pension Master only.</b> 
+	    <p>
+		Amended the printing menu in Pension Master so as to allow the selection of the printer
+		to send the report to, the setting of a default printer and printing to a specified
+		file. Further details can be found <a href="gn_printm.html">here</a>.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Quotations</b></td>
+	<td>
+	    If a user runs quotations and any warnings are found, a '*** Warnings Found ***' will
+	    be displayed to the bottom of the screen in red to warn you of this.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    A new report option has been created called 'Screen' which allows users to produce
+	    a report on the scheme details for just the screen which they are currently in. 
+	    The 'Details' report option has been renamed to 'sCheme'. To avoid confusion
+	    between the 'Screen' and the 'sCheme' options, the 'C' in sCheme represents the command
+	    key. The Report menu consists of: 
+	    <p>
+	    Screen sCheme List<br />
+		Exit
+	    </p>
+	    <p>
+		so that it is presented similarly to the 'Members' Report menu.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    A new field called 'E-mail Address' has been inserted to all address screens held
+	    within Schemes. This has been added to allow an electronic method of communication
+	    for the users. As well as 'E-mail Address', some of the screens have also had
+	    fields such as 'Postcode' or 'Tel No' added to them in order to generate a more standardised
+	    look to all address screens. The screens amended are as follows:
+		<table cellspacing="0">
+		    <tbody>
+			<tr>
+			    <th>
+				Screen Name</th>
+			    <th>
+				Fields added</th>
+			</tr>
+			<tr>
+			    <td>
+				Broker Details</td>
+			    <td>
+				'Fax No' and 'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Investment Manager Details</td>
+			    <td>
+				'Postcode', 'Tel No', 'Fax No' and 'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Scheme Address</td>
+			    <td>
+				'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Trustee's Address</td>
+			    <td>
+				'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Administrator's Address</td>
+			    <td>
+				'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Actuary's Address</td>
+			    <td>
+				'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Auditor's Address</td>
+			    <td>
+				'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Legal Advisor's Address</td>
+			    <td>
+				'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Miscellaneous Address 1</td>
+			    <td>
+				'E-mail Address'</td>
+			</tr>
+			<tr>
+			    <td>
+				Miscellaneous Address 2</td>
+			    <td>
+				'E-mail Address'</td>
+			</tr>
+		    </tbody>
+		</table>
+	    The 'Broker Details' screen has also had second contact details added to it, in order
+	    to provide the user(s) with more information. These details include 'Contact
+	    2 Title', 'Forename' and 'Surname'.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    Renamed the old 'Defined Contributions Scheme' flag on the Basic Scheme Details screen
+	    to 'Scheme Type'. This now takes the values: 
+	    <ul>
+		<li>
+		    DB - Defined Benefits 
+		</li>
+		<li>
+		    DC - Defined Contributions 
+		</li>
+		<li>
+		    HY - Hybrid 
+		</li>
+	    </ul>
+	    All of your scheme records will be converted across to the new format by the database
+	    upgrade program.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    Two new menu options have been added to the 'Unit Prices' screen, held within Schemes.
+	    These are '&lt; Fund' and 'Fund &gt;' and have been added to provide the user with
+	    the ability to scroll between the different funds, held for the chosen scheme. 
+	    <p>
+		<b>'&lt; Fund'</b> - This displays details for the previuos fund available for the
+		currently selected scheme. If there are no further funds to display, an error
+		message is displayed on the screen and the user remains in the current fund screen.
+	    </p>
+	    <p>
+		<b>'Fund &gt;'</b> - This displays details for the next fund available for the currently
+		selected scheme. If there are no further funds to display, an error message
+		is displayed on the screen and the user remains in the current fund screen.
+	    </p>
+	    <p>
+		These menu options have been added in replacement of the old Fund sub-menu, and have
+		therefore removed the unnecessary need of going into another menu bar to search through
+		the funds.
+	    </p>
+	    <p>
+		This new menu layout aims to be more efficient for the user and will save time.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    There has been a new field added to the <a href="pem_sch1.html#Member Screen Selection">Member
+	    Screen Selection</a> screen in Schemes called View Only. Each screen, including
+	    any User Defined Screens and Arrays, can be made either 'View Only' or fully accessible
+	    to the user when being viewed in Members. The View Only flag is defaulted to
+	    'N', but can be changed to 'Y' by clicking in the View Only tick box for the appropriate
+	    screen(s), providing that you have System Administrator privileges.
+	    <div class="info">
+			    <p>If your System Administrator has set the View Only flag to 'Y' for the above screens,
+			    via the <a href="pem_sch1.html#Member Screen Selection">Member Screen Selection</a> screen
+			    in Schemes, then 'VIEW ONLY' will be displayed on the bottom line of the respective
+			    screen(s), and you will not be allowed to use the Add, Update and/or Delete menu option(s).</p>
+	    </div>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    The View Only field on the Member Selection Screen in Schemes has been altered so
+	    that it now uses a numeric rating in replacement of the Y/N flag. This rating
+	    should be between 1 and 99, and should be the same as one of the security ratings,
+	    as set up through Security Levels.
+	    <p>
+		The objective of this rating is to prevent unauthorised users updating/deleting important
+		data i.e. a junior administrator with a low security rating, will not be allowed to
+		update/delete the data of a screen which is set to a higher rating. Once the
+		ratings have been set for the <a href="pem_mem.html#Introduction">Members</a> screens,
+		then if a junior tries to get into a corresponding screen set to a high view access
+		then 'VIEW ONLY' will be printed on the bottom line of the screen. The Add/Update/Delete
+		buttons in the screen will therefore deny access to the user, and an appropriate error
+		message will be displayed to the screen.
+	    </p>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    A new screen has been created called 'Def Pensioner/Pensioner Fields' to allow users
+	    to define and hold five extra user defined fields that may relate to members Deferred
+	    Pensioner/Pensioner details. The screen is used in a similar way to other User Defined
+	    screens in Pension Master and further information can be found <a href="pem_sch1.htm#Deferred Pensioner/Pensioner Fields">here</a>.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    A new option has been added to the scheme file, this is User Defined Salary Titles.
+	    Use this screen to set up the salary titles that you wish to use on the salary history
+	    screen in the member file.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Schemes</b></td>
+	<td>
+	    When adding a new scheme all users are given access to the scheme and not just the
+	    current user.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Unit Posting Program</b></td>
+	<td>
+	    Removed the old 'Reconcile' menu option as this is rarely used and was causing some
+	    confusion to clients.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Users</b></td>
+	<td>
+	    The Dot Matrix Printer has been removed from Users as it is no longer explicitly used. 
+	    It has also been removed as one of the printer options on the 'Select Printer' look-up
+	    list, which can be brought up in all printer menu options throughout Pension Master.</td>
+    </tr>
+    <tr>
+	<td>
+	    <b>Workflow</b></td>
+	<td>
+	    Added a field to the first screen of System Parameters to enable the user to disable
+	    the workflow feature of Pension Master if required. If this field is set to 'N', the
+	    user will not be prompted for Workflow entries and the Workflow sub-menu of Pension
+	    Master will not appear.</td>
+    </tr>
+</tbody>
+</table>
+<p>
+<b>Post Release Changes</b> 
+<table cellspacing="0" cols="2" cellpadding="0" width="100%" border="1">
+    <tbody>
+	<tr>
+	    <td width="10%">
+		<b>Annual Statutory Amounts</b></td>
+	    <td>
+		The Year field in this module has been changed to Effective Date. This is due to the
+		change in Irish tax years which becomes effective at the start of 2002. The program
+		checks the country field held in System Parameters to validate this field (e.g. 01/01
+		for Irish companies, 06/04 for UK companies). 
+		<p>
+		    The stat() formula function has been changed to use this Effective Date instead of
+		    the Year and will return values that are held on or after this date.
+		</p>
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+		<b>Member Labels</b></td>
+	    <td>
+		Member labels have been changed to use the mail-merge functionality in Microsoft Word.
+		This allows a greater range of label sizes to be used. 
+		<p>
+		    A screen has been added to Schemes called Template Path which holds the path of a
+		    Microsoft Word template which would be used automatically to generate labels. If no
+		    template has been specified then you are guided through the steps required using the
+		    Mail Merge Helper in Microsoft Word.
+		</p>
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+		<b>Miscellaneous</b></td>
+	    <td>
+		'User Defined Arrays' have been renamed to 'User Defined History'.</td>
+	</tr>
+	<tr>
+	    <td>
+		<b>Formulae</b></td>
+	    <td>
+		A second date argument has been added to the Pensioner/Deferred Pensioner Increase
+		History tables (pe_penh/pe_dpenh).</td>
+	</tr>
+	<tr>
+	    <td>
+		<b>Member Report &amp; Mail-Merge Integration Report</b></td>
+	    <td>
+		A second date argument has been added to the Pensioner/Deferred Pensioner Increase
+		History tables (pe_penh/pe_dpenh).</td>
+	</tr>
+	<tr>
+	    <td>
+		<b>Formulae</b></td>
+	    <td>
+		<b>unalloc(fld,nn)</b>
+		<b>OVERVIEW</b> 
+		<p>
+		    Use the unalloc function to calculate unallocated contributions for a specific investment
+		    fund in Contribution History. 
+		</p>
+		<p>
+		    <b>SYNTAX</b> 
+		</p>
+		<p>
+		    unalloc(fld,nn) 
+		</p>
+		<p>
+		    <b>EXPLANATION</b> 
+		</p>
+		<ul>
+		    <li>
+			fld - is the name of a field on the Contribution History file (pe_defhst_b). 
+		    </li>
+		    <li>
+			nn - is the investment fund number required. If investment fund 00 is used, this function
+			will total all units for the field specified across ALL investment funds the member
+			invests in. 
+		    </li>
+		</ul>
+		<b>NOTES</b> 
+		<ol>
+		    <li>
+			nn must be between 00 and 20. 
+		    </li>
+		</ol>
+		<b>EXAMPLES</b> 
+		<p>
+		    unalloc(pdb_ee_ord_c,01)
+		</p>
+	    </td>
+	</tr>
+    </tbody>
+</table>
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

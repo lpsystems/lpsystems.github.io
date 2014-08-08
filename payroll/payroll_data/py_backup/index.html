@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Backup Data</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Backup Data</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Backup">Run A Backup</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to backup up payroll data for a specified scheme.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>Only users set up as System Administrator can access this program.</p>
+
+  <p>If another user is running either the Restore Data program, the Payroll Run program,
+or the Year End program, then you are unable to process the Year End until the other
+program has completed.</p>
+
+</div>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Backup</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_backup.gif" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2 id="a-namerun-a-backuparun-a-backup"><a name="Run A Backup"></a>Run A Backup</h2>
+
+<p>Click ‘Backup’.</p>
+
+<p><a name="pm_scheme"></a><strong>SCHEME CODE</strong> - Enter the scheme code required. To
+get a list of valid scheme codes click ‘Lookup’. When a valid scheme code has been
+entered the scheme description will be displayed. This field must be entered.</p>
+
+<p><a name="run_date"></a><strong>RUN DATE</strong>
+- Enter the run date of the backup in the format dd/mm/yyyy or ddmmyyyy. Click ‘Lookup’
+to display a calendar to the screen. This field must be entered. If it is left blank
+then it will default to today’s date.</p>
+
+<p><a name="backup_desc"></a><strong>BACKUP DESCRIPTION</strong> - Enter a description for the
+backup. This field is not mandatory, however, Payroll Master recommends that a description
+is entered. This is so that the user will have some idea of what data is contained
+in the backup file, if they go on to use the <a href="/payroll/payroll_data/py_restore/#Introduction">
+    Restore Data</a>
+program at a later date.</p>
+
+<p>Click ‘OK’ to proceed with the backup procedure. You can click on ‘Cancel’ to return
+to the backup menu.</p>
+
+<p>The following message is now displayed to the screen:</p>
+
+<p><em>All Payroll data will now be backed up. This may take some time. Do you wish to continue?</em></p>
+
+<p>If ‘Yes’ is selected, then the backup procedure is carried out. If ‘No’ is selected,
+then the program returns to the backup menu.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Payroll Data menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

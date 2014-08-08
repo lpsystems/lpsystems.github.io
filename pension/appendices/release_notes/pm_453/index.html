@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Release Notes 4.5.3</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Release Notes 4.5.3</h1>
+        </div>
+        
+
+      <h2>New Features
+</h2>
+<ol>
+<li>
+    Fixed bug in <i>ir_revmax()</i> in <i>Formula File Maintenance</i> in the case of
+    the use of the EL/DL option. The bug arose where a member's actual service was less
+    than 20 years. This is detailed in note 10 of Joan Whelan's note of 18/12/96. 
+</li>
+<li>
+    Fixed bug in <i>Batch File Maintenance</i> when adding a member to a contribution
+    batch where the scheme concerned is defined as a hybrid scheme in <i>Scheme File Maintenance</i>.
+    The system now correctly checks that the member has an investment choice set up on
+    his/her record in the <i>Member Investment Choice</i> screen of <i>Member File Maintenance</i>.
+    If not, the program prompts the user to do so before allowing them to add any contribution
+    details for this member to the batch. This is covered by note 9 in Joan Whelan's note
+    of 18/12/96. 
+</li>
+<li>
+    The <i>avgmin()</i> function has been removed from <i>Formula File Maintenance</i> as
+    this was superfluous to requirements and has never been used by anyone despite being
+    available in <i>Pension Master</i> for a number of years now. 
+</li>
+<li>
+    Fixed a small bug in the expense calculation routine for cases where contributions
+    were added/updated through the <i>Member File Maintenance</i> program. This was causing
+    expenses to be added on top of existing expenses rather than be re-calculated from
+    scratch every time a contribution was updated. This is detailed in note 3 of Joan
+    Whelan's note of 18/12/96. 
+</li>
+<li>
+    Following on from point 4) above, expenses for a particular contribution entry are
+    now calculated as the cursor leaves the row on the screen for that particular contribution
+    entry and not as it used to be where expenses were only calculated when the user saved
+    the contribution details by pressing <i>Esc</i> at the end of editing contribution
+    details. 
+</li>
+<li>
+    Furthermore, expenses are only re-calculated for an existing contribution entry if
+    the user actally changes some of the contribution details for that entry e.g. alters
+    the amount of the employee ordinary contributions. 
+</li>
+<li>
+    Altered the way errors are handled by the <i>Pension Master</i> software so that when
+    an error is encountered a window opens up on the screen with a red background and
+    displays the error message. The user is then required to press any key to continue.
+    This contrasts with the old sytle error messages which were displayed in red reverse
+    on the line at the bottom of the screen and were often unnoticed by users. 
+</li>
+<li>
+    Added an extra field entitled <i>Document Name</i> to the first screen in the <i>Mail-Merge
+    Integration Report</i>. This can be used to store the name (and directory if required)
+    of the document you wish to mail-merge your data into e.g. G:\JOHN\TEST.DOC. 
+</li>
+<li>
+    Removed the <i>Letter/Cert</i> option from the <i>Scheme File Maintenance</i> main
+    menu as this is only relevant to those users who have <i>Uniplex</i> as their default
+    word processor and was never really used much anyway. 
+</li>
+<li>
+    Amended the <i>Mail-Merge Integration Report</i> for users of Microsoft Word so that
+    immediately after the report is processed, it calls a shell script called <i>merge.com</i> which
+    can be used, for example, to move the merge data document <i>merge.doc</i> to another
+    directory which may be of use to those instances where Pension Master is setup to
+    co-exist with a Novell Netware network. Simply edit the file <i>merge.com</i> which
+    is in the <i>/u/LandP/progs</i> directory to perform the necessary actions. 
+</li>
+<li>
+    Fixed a bug in <i>avgmax()</i> where if there were three or more salaries in the same
+    calendar year, the highest of the three was not necessarily used in the calculations. 
+</li>
+<li>
+    Added a new sub-menu <i>OUTPUT</i> to the <i>Member Report</i> program which allows
+    the user to choose whether they wish to produce the report in normal report format
+    or in comma-separated value (.CSV) format. The .CSV format is suitable for importing
+    data directly into numerous DOS/Windows applications e.g. Microsoft Excel. See the
+    separate note produced by <i>L&amp;P Systems Limited</i> which gives further details
+    of how to do this. 
+</li>
+<li>
+    Amended the <i>Member Report</i> in the case where the user chooses the <i>eXport</i> menu
+    option so that immediately after the report is processed, it calls a shell script
+    called <i>pension.com</i> which can be used, for example, to move the data document <i>pension.csv</i> to
+    another directory which may be of use to those instances where Pension Master is setup
+    to co-exist with a Novell Netware network. Simply edit the file <i>pension.com</i> which
+    is in the <i>/u/LandP/progs</i> directory to perform the necessary actions. 
+</li>
+<li>
+    In the <i>Unit Posting</i> program, only ask the user to print the report off if some
+    units were actually posted. 
+</li>
+</ol>
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

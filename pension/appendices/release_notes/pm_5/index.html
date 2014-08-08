@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Release Notes 5.02b6</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Release Notes 5.02b6</h1>
+        </div>
+        
+
+      <h2>Introduction
+</h2>
+<p>
+This is a major new release of <i>Pension Master</i> packed with new features that
+both extend the capabilities of the software and make it easier to use. The main changes
+can be summarised as follows: 
+</p>
+<ul>
+<li>
+    Introduced a <i>Quotation Type</i> feature so as you can group together logical sets
+    of benefit calculation formulae. 
+</li>
+<li>
+    Re-designed <i>Formula File Maintenance</i> so as to allow an unlimited number of
+    lines of formula code per formula. The <i>F1</i> and <i>F2</i> keys are now available
+    for inserting/deleting lines of formulae, with appropriate re-numbering of subsequent
+    formula lines. 
+</li>
+<li>
+    Replaced the old <i>Age/Sex Factor Table</i> and <i>Term Related Factor Table</i> modules
+    with a new improved <i>Factor Table Maintenance</i> program. 
+</li>
+<li>
+    Integrated <i>Workflow Management</i> facilities are now built into <i>Pension Master</i>. 
+</li>
+<li>
+    Added a new <i>Renewal Data Request</i> report allowing you to print off blank end
+    of year renewal returns for sending out to clients. 
+</li>
+<li>
+    Formulae can now be directly accessed from the <i>Member Report</i>, <i>Full Members
+    Listing</i> and <i>Mail-Merge Integration Report</i> rather than having to run a <i>Batch
+    Quotation Run</i> prior to running your report. 
+</li>
+<li>
+    You can now access more database tables using the <i>Member Report</i>, <i>Full Members
+    Listing</i> and <i>Mail-Merge Integration Report</i>. This will allow you, for example,
+    to print out units from more than one investment fund on the same report. 
+</li>
+<li>
+    Introduced new <i>Letter/Cert</i> option in <i>Company File Maintenance</i> for sending
+    out mail-merges to companies within a scheme. 
+</li>
+<li>
+    Added new <i>Salary Listing Report</i> to allow you to print off salary details for
+    a selected group of members for a specified date. 
+</li>
+<li>
+    Added new <i>Investment Value Summary Run</i> to allow you to update a batch of members <i>Investment
+    Value Summary</i> screens in <i>Member File Maintenance</i> and to print off a report
+    showing up to date investment values for a selected group of members, based on either
+    a unit bid or offer price. 
+</li>
+<li>
+    You can now automatically generate a list of relevant members when adding a batch
+    in the <i>Batch Data Entry</i> module. This will save you time as you will not have
+    to input the member number on each line of data you input. 
+</li>
+</ul>
+<h3>Details Of The Changes
+</h3>
+<ol>
+<li>
+    Added <i>F8</i> lookup facility to <i>Unit Posting</i> program on <i>Scheme</i>, <i>Company</i>, <i>Category</i> and <i>Status</i> fields. 
+</li>
+<li>
+    Removed old <i>pe_num</i>, <i>pe_bnum</i> and <i>pe_nxtsch</i> database tables and
+    modified all programs accordingly. These tables used to hold the values for the next
+    member number, batch number and scheme number respectively. The programs now default
+    these fields to 0 when adding a member, batch or scheme respectively and when <i>Esc</i> is
+    pressed to save the details, the relevant member, batch or scheme number is displayed
+    to the screen and used to save the record accordingly. 
+</li>
+<li>
+    <br />
+    This removes the old problem of, say, when adding a new member, the next member number
+    is displayed to the screen, but if you subsequently press <i>Del</i> to abort the
+    input of the new member, the next time you go to add a member, the last member number
+    has been skipped over. i.e. we are now ensuring a strict sequence of consecutive member
+    numbers. 
+</li>
+<li>
+    Changed <i>List</i> report in <i>Scheme File Maintenance</i> so that each new scheme
+    is not started on a new page i.e. schemes are now listed consecutively, one after
+    the other. 
+</li>
+<li><p>Added facility to call formulae instead of fieldnames when processing a <i>Member
+    Report</i>, <i>Full Members Listing Report</i> or a <i>Mail-Merge Integration Report</i>.
+    This is done by entering the following syntax:</p>
+    <p>#calc(formula_code)</p>
+    <p>
+	where <i>formula_code</i> is a 3 character formula code for the current scheme. The
+	formula code will be syntax checked on entry and if it does not exist for the scheme
+	implied by the current selection criteria, an error message will be displayed and
+	you will have to re-enter a valid formula code. 
+	<br />
+	The formula corresponding to the formula code you entered will be dynamically calculated
+	and output to the report as the report is running, thus removing the necessity to
+	remember to run some quotes before using either of these three reports. 
+    </p>
+    <div class="info">
+		    <p>This will not affect the quotation values that are displayed on the <i>Quotation
+		    Screens</i> in <i>Member File Maintenance</i>.</p>
+    </div>
+</li>
+<li>
+    <i>Member Report</i>, <i>Full Members Listing Report</i> and <i>Mail-Merge Integration
+    Report</i> now show the current member number being processed to the top of the screen
+    so as to give you some idea of the progress of the report. 
+</li>
+<li>
+    Added an <i>F8</i> lookup for <i>Formula Code</i> to <i>Member Report</i>, <i>Full
+    Members Listing Report</i> and <i>Mail-Merge Integration Report</i>. In the report
+    fields screen, the default <i>F8</i> lookup is for fieldname, but if you have any
+    field beginning with the <i>#</i> symbol, the lookup changes to that of a valid formula
+    code for the scheme implied by the current selection criteria and once the formula
+    code is selected from the lookup, the line is written back to the screen field in
+    the <i>#calc(formula_code)</i> format. 
+</li>
+<li>
+    Added an <i>F8</i> lookup for <i>Scheme Code</i>, <i>Company Code</i>, <i>Category
+    Code</i> and <i>Status Code</i> to <i>Member Report</i>, <i>Full Members Listing Report</i> and <i>Mail-Merge
+    Integration Report</i>. 
+</li>
+<li>
+    Extended <i>F9</i> context-sensitive help displays in the <i>Member Report</i>, <i>Full
+    Members Listing Report</i> and <i>Mail-Merge Integration Report</i>. 
+</li>
+<li>
+    Added an <i>F8</i> lookup for the six <i>Group By</i> fields in the <i>Member Report</i>, <i>Full
+    Members Listing Report</i> and <i>Mail-Merge Integration Report</i>. This lookup is
+    restricted to the <i>Member File (pe_mem)</i> as the user is only permitted to sort
+    records by fields on this table in these reports. 
+</li>
+<li>
+    Added facility to pass arguments when using certain fields in the <i>Member Report</i>, <i>Full
+    Members Listing Report</i> and <i>Mail-Merge Integration Report</i>. This allows you,
+    for example to select unit totals from a particular investment fund, which was previously
+    not possible using <i>Pension Master</i>. Details of the arguments required are shown
+    in the following table: 
+    <table cellspacing="0">
+	<tbody>
+	    <tr>
+		<th>
+		    Table</th>
+		<th>
+		    Description</th>
+		<th>
+		    Argument 1</th>
+		<th>
+		    Argument 2</th>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_defhst_b</td>
+		<td>
+		    Contribution History Body</td>
+		<td>
+		    pdb_inv_fund</td>
+		<td>
+		    -</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_defhst_h</td>
+		<td>
+		    Contribution History Totals</td>
+		<td>
+		    pdh_inv_fund</td>
+		<td>
+		    -</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_dep</td>
+		<td>
+		    Dependants Details</td>
+		<td>
+		    pd_num</td>
+		<td>
+		    -</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_mifund</td>
+		<td>
+		    Member Investment Choice</td>
+		<td>
+		    pmif_ifund</td>
+		<td>
+		    -</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_mquote</td>
+		<td>
+		    Member Quotation Results</td>
+		<td>
+		    pmq_type</td>
+		<td>
+		    pmq_index</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_not</td>
+		<td>
+		    Member Notes</td>
+		<td>
+		    pn_num</td>
+		<td>
+		    -</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_transfer</td>
+		<td>
+		    Transfer In/Out Details</td>
+		<td>
+		    ptv_type</td>
+		<td>
+		    ptv_num</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_tunits</td>
+		<td>
+		    Total Units</td>
+		<td>
+		    pu_t_inv_fund</td>
+		<td>
+		    -</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pe_units</td>
+		<td>
+		    Units History</td>
+		<td>
+		    pu_inv_fund</td>
+		<td>
+		    -</td>
+	    </tr>
+	</tbody>
+    </table>
+    <p>
+	As an example, say you wanted to print a benefit statement with the first five nominated
+	beneficiaries for each member (by reference to the <i>pe_dep</i> database table),
+	you would enter: 
+    </p>
+    <p>pd_dep(1)</p>
+    <p>
+	to select the first dependants name, and just add four extra fields to the report
+	to select each of the other dependants in turn. 
+	<br />
+	The syntax of the arguments is checked by the report as you add the fieldname and
+	you will be warned of any errors or inconsistencies if and when they occur. 
+    </p>
+</li>
+<li>
+    Replaced the old <i>Age Related Factors</i> and <i>Term Related Factors</i> programs
+    by a new improved <i>Factor File Maintenance</i> program. This copes with both of
+    the old factor table types and allows more efficient use of the indices for each factor.
+    Previously, if you have a table of factors, say from age 20 to 60, and decided that
+    you really needed factors down to age 18, the extra ages would have to be added to
+    the end of the table, after the factor for age 60. This lead to some strange screen
+    displays as the factors could not be displayed in age order. 
+</li>
+<li>
+    This is now fixed and we have introduced two new fields, <i>Range From</i> and <i>Range
+    To</i> to the factor table header. These are to be used to adjust the range of ages
+    (or terms) for your factors as you are no longer permitted to actually edit the ages
+    (or terms) directly. 
+    <br />
+    Simply changing either of these fields for an existing factor table will cause the
+    factors to be adjusted so as they only related to all ages (or terms) between the
+    new values for <i>Range From</i> and <i>Range To</i>. If this results in new factors
+    being added, they are defaulted to zero and you will be required to fill in their
+    values for each new index. 
+    <br />
+    If any of the factors are zero when you try to save your factor table, you will be
+    warned of this and asked if you want to continue and save the table or input some
+    non-zero factors. 
+    <br />
+    Also the old limit on 54 individual factors per factor table has been removed. You
+    can now have an unlimited number of factors per factor table as required. 
+    <div class="info">
+		    <p>The <i>System Administrator</i> will need to use the <i>Menu Maintenance</i> program
+		    to manually add this option to the <i>Pension Master File Maintenance</i> menu and
+		    then use <i>User File Maintenance</i> to grant permissions to all suitable users so
+		    that they can use this new module.</p>
+    </div>
+</li>
+<li>
+    <i>Formula File Maintenance</i> has been re-written so as to remove the limit of 100
+    lines per formula. You can now have an unlimited number of lines per formula. We also
+    added support for the <i>F1</i> and <i>F2</i> keys to insert and delete lines in the
+    formulae respectively. When these keys are used, all subsequent lines of the formula
+    referring to other lines (in the <i>@line_number</i> notation) are renumbered accordingly. 
+</li>
+<li>
+    <i>Formula File Maintenance</i> now has one screen which scrolls round to allow you
+    to edit the formula lines. This is in place of the five separate screens in the old <i>Formula
+    File Maintenance</i>. 
+</li>
+<li>
+    As part of the conversion of the quotes over to the new format, a new database table <i>pe_mquote</i> has
+    been introduced to hold details of the current and previous quotation values. This
+    has necessitated the removing of these fields from the member file. The fieldnames
+    are automatically converted by the Pension Master installation program for all your <i>Member
+    Reports</i>, <i>Full Member Reports</i> and <i>Mail-Merge Integration Reports</i> as
+    follows: 
+    <table cellspacing="0">
+	<tbody>
+	    <tr>
+		<th>
+		    Old Field</th>
+		<th>
+		    New Field</th>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eterm_dt</td>
+		<td>
+		    pm_dterm_dt</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_efin_dth</td>
+		<td>
+		    pm_dfin_dth</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_efin_pen</td>
+		<td>
+		    pm_dfin_pen</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eord_rnl</td>
+		<td>
+		    pm_dord_rnl</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eavc_rnl</td>
+		<td>
+		    pm_davc_rnl</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_nqtdt1</td>
+		<td>
+		    pm_qtdt_c</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_nqtdt2</td>
+		<td>
+		    pm_qtdt_p</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_nrp_p</td>
+		<td>
+		    pmq_previous(NORM,1)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_nrp_c</td>
+		<td>
+		    pmq_current(NORM,1)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_rtlps_p</td>
+		<td>
+		    pmq_previous(NORM,2)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_rtlps_c</td>
+		<td>
+		    pmq_current(NORM,2)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_rnrp_p</td>
+		<td>
+		    pmq_previous(NORM,3)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_rnrp_c</td>
+		<td>
+		    pmq_current(NORM,3)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_prtsp_p</td>
+		<td>
+		    pmq_previous(NORM,4)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_prtsp_c</td>
+		<td>
+		    pmq_current(NORM,4)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_prtch_p</td>
+		<td>
+		    pmq_previous(NORM,5)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_prtch_c</td>
+		<td>
+		    pmq_current(NORM,5)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_lpdth_p</td>
+		<td>
+		    pmq_previous(NORM,6)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_lpdth_c</td>
+		<td>
+		    pmq_current(NORM,6)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dissp_p</td>
+		<td>
+		    pmq_previous(NORM,7)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dissp_c</td>
+		<td>
+		    pmq_current(NORM,7)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_disch_p</td>
+		<td>
+		    pmq_previous(NORM,8)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_disch_c</td>
+		<td>
+		    pmq_current(NORM,8)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_illphi_p</td>
+		<td>
+		    pmq_previous(NORM,9)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_illphi_c</td>
+		<td>
+		    pmq_current(NORM,9)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_nadja_p</td>
+		<td>
+		    pmq_previous(NORM,10)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_nadja_c</td>
+		<td>
+		    pmq_current(NORM,10)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_nadjb_p</td>
+		<td>
+		    pmq_previous(NORM,11)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_nadjb_c</td>
+		<td>
+		    pmq_current(NORM,11)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eqtdt1</td>
+		<td>
+		    pm_qtdt_c</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eqtdt2</td>
+		<td>
+		    pm_qtdt_p</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_er_ret_p</td>
+		<td>
+		    pmq_previous(EARLY,1)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_er_ret_c</td>
+		<td>
+		    pmq_current(EARLY,1)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_csh_p</td>
+		<td>
+		    pmq_previous(EARLY,2)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_csh_c</td>
+		<td>
+		    pmq_current(EARLY,2)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_red_erp_p</td>
+		<td>
+		    pmq_previous(EARLY,3)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_red_erp_c</td>
+		<td>
+		    pmq_current(EARLY,3)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_er_spen_p</td>
+		<td>
+		    pmq_previous(EARLY,4)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_er_spen_c</td>
+		<td>
+		    pmq_current(EARLY,4)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_er_chpen_p</td>
+		<td>
+		    pmq_previous(EARLY,5)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_er_chpen_c</td>
+		<td>
+		    pmq_current(EARLY,5)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_pstr_tla_p</td>
+		<td>
+		    pmq_previous(EARLY,6)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_pstr_tla_c</td>
+		<td>
+		    pmq_current(EARLY,6)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_epesc_rt_p</td>
+		<td>
+		    pmq_previous(EARLY,7)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_epesc_rt_c</td>
+		<td>
+		    pmq_current(EARLY,7)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eadja_p</td>
+		<td>
+		    pmq_previous(EARLY,8)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eadja_c</td>
+		<td>
+		    pmq_current(EARLY,8)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eadjb_p</td>
+		<td>
+		    pmq_previous(EARLY,9)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eadjb_c</td>
+		<td>
+		    pmq_current(EARLY,9)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_egmp_p</td>
+		<td>
+		    pmq_previous(EARLY,10)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_egmp_c</td>
+		<td>
+		    pmq_current(EARLY,10)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_epst_gmp_p</td>
+		<td>
+		    pmq_previous(EARLY,11)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_epst_gmp_c</td>
+		<td>
+		    pmq_current(EARLY,11)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eproj_gmp_p</td>
+		<td>
+		    pmq_previous(EARLY,12)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_eproj_gmp_c</td>
+		<td>
+		    pmq_current(EARLY,12)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_ee_cts_p</td>
+		<td>
+		    pmq_previous(EARLY,13)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_ee_cts_c</td>
+		<td>
+		    pmq_current(EARLY,13)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dqtdt1</td>
+		<td>
+		    pm_qtdt_c</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dqtdt2</td>
+		<td>
+		    pm_qtdt_p</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_prea_pup_p</td>
+		<td>
+		    pmq_previous(DEFER,1)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_prea_pup_c</td>
+		<td>
+		    pmq_current(DEFER,1)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_psta_pup_p</td>
+		<td>
+		    pmq_previous(DEFER,2)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_psta_pup_c</td>
+		<td>
+		    pmq_current(DEFER,2)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_totpup_p</td>
+		<td>
+		    pmq_previous(DEFER,3)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_totpup_c</td>
+		<td>
+		    pmq_current(DEFER,3)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_prj_pup_p</td>
+		<td>
+		    pmq_previous(DEFER,4)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_prj_pup_c</td>
+		<td>
+		    pmq_current(DEFER,4)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_pu_sp_p</td>
+		<td>
+		    pmq_previous(DEFER,5)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_pu_sp_c</td>
+		<td>
+		    pmq_current(DEFER,5)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_pu_ch_p</td>
+		<td>
+		    pmq_previous(DEFER,6)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_pu_ch_c</td>
+		<td>
+		    pmq_current(DEFER,6)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_pu_dth_p</td>
+		<td>
+		    pmq_previous(DEFER,7)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_pu_dth_c</td>
+		<td>
+		    pmq_current(DEFER,7)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dpesc_rt_p</td>
+		<td>
+		    pmq_previous(DEFER,8)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dpesc_rt_c</td>
+		<td>
+		    pmq_current(DEFER,8)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dadja_p</td>
+		<td>
+		    pmq_previous(DEFER,9)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dadja_c</td>
+		<td>
+		    pmq_current(DEFER,9)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dadjb_p</td>
+		<td>
+		    pmq_previous(DEFER,10)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dadjb_c</td>
+		<td>
+		    pmq_current(DEFER,10)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dgmp_p</td>
+		<td>
+		    pmq_previous(DEFER,11)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dgmp_c</td>
+		<td>
+		    pmq_current(DEFER,11)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dpst_gmp_p</td>
+		<td>
+		    pmq_previous(DEFER,12)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dpst_gmp_c</td>
+		<td>
+		    pmq_current(DEFER,12)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dproj_gmp_p</td>
+		<td>
+		    pmq_previous(DEFER,13)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_dproj_gmp_c</td>
+		<td>
+		    pmq_current(DEFER,13)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_transa_p</td>
+		<td>
+		    pmq_previous(DEFER,14)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_transa_c</td>
+		<td>
+		    pmq_current(DEFER,14)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_transb_p</td>
+		<td>
+		    pmq_previous(DEFER,15)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_transb_c</td>
+		<td>
+		    pmq_current(DEFER,15)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_grsrf_p</td>
+		<td>
+		    pmq_previous(DEFER,16)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_grsrf_c</td>
+		<td>
+		    pmq_current(DEFER,16)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_crt_amt_p</td>
+		<td>
+		    pmq_previous(DEFER,17)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_crt_amt_c</td>
+		<td>
+		    pmq_current(DEFER,17)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_tax_p</td>
+		<td>
+		    pmq_previous(DEFER,18)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_tax_c</td>
+		<td>
+		    pmq_current(DEFER,18)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_ntrf_p</td>
+		<td>
+		    pmq_previous(DEFER,19)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pm_ntrf_c</td>
+		<td>
+		    pmq_current(DEFER,19)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_qtdt1</td>
+		<td>
+		    pm_qtdt_c</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_qtdt2</td>
+		<td>
+		    pm_qtdt_p</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc1_p</td>
+		<td>
+		    pmq_previous(MISC,1)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc1_c</td>
+		<td>
+		    pmq_current(MISC,1)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc2_p</td>
+		<td>
+		    pmq_previous(MISC,2)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc2_c</td>
+		<td>
+		    pmq_current(MISC,2)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc3_p</td>
+		<td>
+		    pmq_previous(MISC,3)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc3_c</td>
+		<td>
+		    pmq_current(MISC,3)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc4_p</td>
+		<td>
+		    pmq_previous(MISC,4)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc4_c</td>
+		<td>
+		    pmq_current(MISC,4)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc5_p</td>
+		<td>
+		    pmq_previous(MISC,5)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc5_c</td>
+		<td>
+		    pmq_current(MISC,5)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc6_p</td>
+		<td>
+		    pmq_previous(MISC,6)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc6_c</td>
+		<td>
+		    pmq_current(MISC,6)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc7_p</td>
+		<td>
+		    pmq_previous(MISC,7)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc7_c</td>
+		<td>
+		    pmq_current(MISC,7)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc8_p</td>
+		<td>
+		    pmq_previous(MISC,8)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc8_c</td>
+		<td>
+		    pmq_current(MISC,8)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc9_p</td>
+		<td>
+		    pmq_previous(MISC,9)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc9_c</td>
+		<td>
+		    pmq_current(MISC,9)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc10_p</td>
+		<td>
+		    pmq_previous(MISC,10)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc10_c</td>
+		<td>
+		    pmq_current(MISC,10)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc11_p</td>
+		<td>
+		    pmq_previous(MISC,11)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc11_c</td>
+		<td>
+		    pmq_current(MISC,11)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc12_p</td>
+		<td>
+		    pmq_previous(MISC,12)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc12_c</td>
+		<td>
+		    pmq_current(MISC,12)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc13_p</td>
+		<td>
+		    pmq_previous(MISC,13)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc13_c</td>
+		<td>
+		    pmq_current(MISC,13)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc14_p</td>
+		<td>
+		    pmq_previous(MISC,14)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc14_c</td>
+		<td>
+		    pmq_current(MISC,14)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc15_p</td>
+		<td>
+		    pmq_previous(MISC,15)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc15_c</td>
+		<td>
+		    pmq_current(MISC,15)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc16_p</td>
+		<td>
+		    pmq_previous(MISC,16)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc16_c</td>
+		<td>
+		    pmq_current(MISC,16)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc17_p</td>
+		<td>
+		    pmq_previous(MISC,17)</td>
+	    </tr>
+	    <tr>
+		<td>
+		    pmi_misc17_c</td>
+		<td>
+		    pmq_current(MISC,17)</td>
+	    </tr>
+	</tbody>
+    </table>
+</li>
+<li>
+    <p>Added support for calls to the new <i>pe_mquote</i> table to <i>Formula File Maintenance</i>.
+    These are to be made in the format #field_name(type,index) e.g.</p>
+<p>#pmq_current(NORM,1)</p>
+    <p>
+	If the quote is not found, the function call returns a value of zero and prints an
+	appropriate error message to the quotation error log. 
+    </p>
+</li>
+<li>
+    Added new report - <i>Renewal Data Report</i> to <i>Pension Master</i>. This can be
+    used to produce blank schedules for sending to employers when requesting renewal data.
+    The data is sorted by company and then by surname and forename, with each company
+    starting on a fresh page. Details pre printed on the report are: 
+    <ul>
+	<li>
+	    Scheme code and name 
+	</li>
+	<li>
+	    Company code and name 
+	</li>
+	<li>
+	    Member number 
+	</li>
+	<li>
+	    Member name 
+	</li>
+	<li>
+	    Date of birth 
+	</li>
+	<li>
+	    Sex 
+	</li>
+	<li>
+	    Marital status 
+	</li>
+    </ul>
+    <p>
+	The report automatically prints boxes around each line of member details so as to
+	aid the employer in filling in the schedule by hand. 
+	<br />
+	The administrator can then define titles for up to 5 items of data that they are requesting
+	from the employer which are in turn printed on the report. The renewal date used for
+	the report is automatically determined by reference to the renewal day and month on <i>Scheme
+	File Maintenance</i> and the current year. 
+    </p>
+    <div class="info">
+		    <p>The <i>System Administrator</i> will need to use the <i>Menu Maintenance</i> program
+		    to manually add this option to the <i>Pension Master Report</i> menu and then use <i>User
+		    File Maintenance</i> to grant permissions to all suitable users so that they can use
+		    this new report.</p>
+    </div>
+</li>
+<li>
+    Tidied up the report for <i>Diary File Maintenance</i> so that it is much clearer
+    and now prints out in landscape rather than the old cluttered portrait printing. 
+</li>
+<li>
+    In the <i>Member Report</i>, <i>Full Members Listing</i> and <i>Mail-Merge Integration
+    Report</i>, when you use the <i>Choose</i> menu option, the report selection screen
+    now pops up after you enter the selection criteria for your report rather than before
+    this. The report selection criteria defaults to selecting only those reports for the
+    scheme implied by your selection criteria, but can be overridden to display all report
+    if required by blanking off the scheme field. 
+</li>
+<li>
+    The <i>Select</i> menu option in the report selection screen has also been removed
+    as this was duplicating exactly the <i>Query</i> option on the same screen. 
+</li>
+<li>
+    Amended <i>Diary File Maintenance</i> so that when you press <i>Return</i> in the <i>Memo</i> field,
+    the record stays on the screen rather than automatically saving the details. 
+</li>
+<li>
+    <div class="info">
+		    <p>Users should also be aware that the <i>Memo</i> field automatically wordwraps each
+		    line of details entered onto the next line when it comes to the end of the existing
+		    line - there is no need to press <i>Return</i> at the end of each line to get onto
+		    the next line.</p>
+    </div>
+</li>
+<li>
+    All <i>F8</i> lookups have been extended to display a maximum of 500 records rather
+    than the 200 they used to display. 
+</li>
+<li>
+    A small number of screen display problems when using the <i>F8</i> key and subsequentally
+    pressing the <i>Del</i> key in the <i>Scheme Code</i>, <i>Company Code</i>, <i>Category
+    Code</i> and <i>Status Code</i> fields in <i>Member File Maintenance</i> have been
+    fixed. 
+</li>
+<li>
+    The <i>F8</i> lookups have also been ameneded to show all companies and categories
+    for the current scheme when in the <i>Company Code</i> or <i>Category Code</i> fields
+    respecively. 
+</li>
+<li>
+    Added <i>Date Of Birth</i> to the available selection criteria in the <i>Member Report</i>, <i>Full
+    Members Listing</i> and <i>Mail-Merge Integration Report</i>. This can be used, for
+    example, to get a report of everyone over or under a certain age. 
+</li>
+<li>
+    Fixed bug in <i>Member File Maintenance</i> when doing a <i>Transfer</i> in the <i>Switches/Transfer</i> screen.
+    All proceeds were having units rounded to two decimal places rather than the correct
+    four decimal places. 
+</li>
+<li>
+    Added extra field <i>pm_postcode</i> to <i>Member File Maintenance</i>. This has been
+    added to the <i>Address Screen</i> and the field is available for use in the <i>Member
+    Report</i>, <i>Full Member Listing</i> and <i>Mail-Merge Integration Report</i>. 
+</li>
+<li>
+    Changed the length of each formula line in <i>Formula File Maintenance</i> to 50 from
+    the old 32 characters. This is more in keeping with the new design of the <i>Formula
+    File Maintenance</i> program. 
+</li>
+<li>
+    Updated the <i>Calculate Pensionable Salaries</i> program so that you can choose any
+    combination of <i>Scheme</i>, <i>Company</i> and <i>Category</i> for the calculations
+    with appropriate <i>F8</i> lookups. 
+</li>
+<li>
+    Added a <i>Letter/Cert</i> option to the <i>Company File Maintenance</i> main menu.
+    This allows you to produce mail-merge data suitable for import into any word-processor
+    for letters to groups of companies or specific companies on <i>Pension Master</i>.
+    The fields that are output are as follows: 
+    <ul>
+	<li>
+	    Company Name 
+	</li>
+	<li>
+	    Contact Title 
+	</li>
+	<li>
+	    Contact Firstname 
+	</li>
+	<li>
+	    Contact Surname 
+	</li>
+	<li>
+	    Address Line 1 
+	</li>
+	<li>
+	    Address Line 2 
+	</li>
+	<li>
+	    Address Line 3 
+	</li>
+	<li>
+	    Address Line 4 
+	</li>
+    </ul>
+</li>
+<li>
+    For non contracted-out schemes, the <i>Date Contracted Out</i> field on the first
+    screen in <i>Member File Maintenance</i> now displays as <i>Qualifying Service Date</i> and
+    is to be used for Irish schemes where the Revenue allows service from date joining
+    life assurance only part of a scheme, which may well be before <i>Date Joined Scheme</i>.
+    The <i>pen_act()</i> and <i>pen_act_proj()</i> functions in <i>Formula File Maintenance</i> have
+    been changed accordingly. 
+</li>
+<li>
+    <b>This field will need to be populated for all relevant Irish schemes in order that
+    the Pensions Act functions will work correctly.</b> 
+</li>
+<li>
+    Updated <i>Delete A Scheme</i> program to take account of the new database tables
+    introduced in this release of <i>Pension Master</i>. 
+</li>
+<li>
+    Amended <i>Category File Maintenance</i> program to take account of the new <i>Quotation
+    Type</i> feature implemented in this release of <i>Pension Master</i>. This has necessitated
+    replacing all screens in <i>Category File Maintenance</i> apart from the first screen
+    with a new <i>Formula Definitions</i> screen. 
+    <p>
+	We have also introduced a new menu item - <i>Type</i>. This is only available on screen
+	2 of <i>Category File Maintenance</i> and has the following sub-options: 
+    </p>
+    <ul>
+	<li>
+	    <b>Add</b> - adds a new quotation type. 
+	</li>
+	<li>
+	    <b>Update</b> - updates an existing quotation type. 
+	</li>
+	<li>
+	    <b>Delete</b> - deletes an existing quotation type. 
+	</li>
+	<li>
+	    <b>Next</b> - displays the next quotation type for the current category. 
+	</li>
+	<li>
+	    <b>Previous</b> - displays the previous quotation type for the current category. 
+	</li>
+	<li>
+	    <b>Exit</b> - returns you to the <i>Category File Maintenance</i> main menu. 
+	</li>
+    </ul>
+    <p>
+	It is intended that you can set up as many <i>Quotation Types</i> as you wish, grouping
+	similar calculation types together e.g. you could set up a <i>Quotation Type</i> of <i>REFUND</i> which
+	contained all the calculations relating to a refund of contributions. 
+	<br />
+	The <i>Category File</i> allows for an unlimited number of <i>Quotation Types</i>,
+	with an unlimited number of formulae attached to each <i>Quotation Type</i>. This
+	replaces the old maximum of 60 different quotations spread across 4 different <i>Quotation
+	Types</i>. 
+	<br />
+	The old <i>Quotation Types</i> have been converted to the new format as follows, with
+	the formula codes you set up under each of them preserved as they were before: 
+    </p>
+    <ul>
+	<li>
+	    NORM - Normal Retirement Benefits 
+	</li>
+	<li>
+	    EARLY - Early Retirement Benefits 
+	</li>
+	<li>
+	    DEFER - Deferred &amp; Refund Benefits 
+	</li>
+	<li>
+	    MISC - Miscellaneous Quotes 
+	</li>
+    </ul>
+    <p>
+	If you are entering formula codes for a <i>Quotation Type</i>, you can press <i>F8</i> in
+	the <i>Formula Code</i> field to get a pop-up picklist of the available formulae for
+	the current scheme. Upon selecting a valid <i>Formula Code</i>, the <i>Formula Description</i> defaults
+	to whatever you gave for a description of the formula in <i>Formula File Maintenance</i> (if
+	you have not already added a suitable <i>Formula Decription</i> in the appropriate
+	field on <i>Category File Maintenance</i>). 
+    </p>
+</li>
+<li>
+    Added <i>Action Codes Maintenance</i> program to <i>Pension Master</i>. This is to
+    be used by the <i>Administration Controller</i> to maintain a set of <i>Action Codes</i>, <i>Action
+    Descriptions</i> and <i>Action Timescales</i> for the system. These can then be used
+    within the <i>Workflow Maintenance</i> program to set up various <i>Workflow Types</i> e.g.
+    you could define a <i>Workflow Type</i> for a refund of contributions, and then define
+    each sub-action that is associated with this, like sending out a letter with a cheque
+    to the member informing them of the refund amount. 
+</li>
+<li>
+    Against each action you can define a timescale (in number of days) by which the action
+    is intended to be completed. This will be used to post items to a members diary for
+    each action in the <i>Workflow Type</i> concerned. e.g. in the above example, if you
+    set the letter to the member action up as having a timescale of 4 days, then an appropriate
+    note will be posted to the current users diary for 4 days from the day the action
+    was initiated. 
+    <div class="info">
+		    <p>The <i>System Administrator</i> will need to use the <i>Menu Maintenance</i> program
+		    to manually add this option to a new <i>Workflow Management</i> menu and then use <i>User
+		    File Maintenance</i> to grant permissions to all suitable users so that they can use
+		    this new module.</p>
+    </div>
+</li>
+<li>
+    Added <i>Workflow Management</i> program to <i>Pension Master</i>. This is to be used
+    by the <i>Administration Controller</i> to maintain sets of <i>Workflow Types</i> beneath
+    which there can be any number of <i>Action Codes</i> describing the sequence of events
+    that the <i>Administrator</i> must go through to complete that particular task and
+    the associated timescales for each as set up by the <i>Adminbistration Controller</i> in
+    the <i>Action Codes Maintenance</i> program. 
+</li>
+<li>
+    <div class="info">
+		    <p>The <i>System Administrator</i> will need to use the <i>Menu Maintenance</i> program
+		    to manually add this option to a new <i>Workflow Management</i> menu and then use <i>User
+		    File Maintenance</i> to grant permissions to all suitable users so that they can use
+		    this new module.</p>
+    </div>
+</li>
+<li>
+    Added <i>Workflow Management Report</i> program to <i>Pension Master</i>. This is
+    to be used by the <i>Administration Controller</i> to print off a Management Report
+    showing details of current and outstanding diary items for users of <i>Pension Master</i> which
+    have been generated by use of the <i>Workflow Management</i> modules in <i>Pension
+    Master</i>. The program allows you to select either a particular user or all users
+    on <i>Pension Master</i> for the report output. 
+</li>
+<li>
+    <div class="info">
+		    <p>The <i>System Administrator</i> will need to use the <i>Menu Maintenance</i> program
+		    to manually add this option to a new <i>Workflow Management</i> menu and then use <i>User
+		    File Maintenance</i> to grant permissions to all suitable users so that they can use
+		    this new module.</p>
+    </div>
+</li>
+<li>
+    Amended <i>Member File Maintenance</i> to allow for the new <i>Workflow Management</i> features
+    in this release of <i>Pension Master</i>. Each time you change a members <i>Status
+    Code</i>, a pop-up window appears as in the last release of <i>Pension Master</i> asking
+    you for an <i>Effective Date Of Change</i>, which in turn is used to create an entry
+    on that members <i>Status History</i> record. 
+</li>
+<li>
+    A new pop-up window is then displayed asking for the <i>Workflow Code</i> to associate
+    with this change in <i>Status Code</i>. An <i>F8</i> lookup is available if you are
+    unsure of the valid <i>Workflow Codes</i> set up on <i>Pension Master</i>. This is
+    in turn used to generate diary reminders for you for each of the <i>Actions</i> associated
+    with the selected <i>Workflow Code</i>. These may be viewed by looking at the <i>Action
+    Diary</i> screen in <i>Member File Maintenance</i> for the currently selected member. 
+    <br />
+    If you do not wish to associate a <i>Workflow Code</i> with the change in <i>Status
+    Code</i>, simply leave the <i>Workflow Code</i> field blank. 
+</li>
+<li>
+    Amended <i>Member File Maintenance</i> to take account of the new <i>Quotation Type</i> feature
+    in this release of <i>Pension Master</i>. The old <i>Quotes Screen 1</i>, <i>Quotes
+    Screen 2</i>, <i>Quotes Screen 3</i> and <i>Quotes Screen 4</i> have been replaced
+    by a single <i>Quotation Screens</i> screen. When you enter this screen you are presented
+    with a pop-up menu asking which <i>Quotation Type</i> you wish to view/update. 
+</li>
+<li>
+    The <i>Formula Descriptions</i> you have set up in <i>Category File Maintenance</i> are
+    then displayed to the screen along with both the current and previous quotation values
+    for the selected member. 
+    <br />
+    We have also introduced a new menu item - <i>Type</i>. This is only available on the <i>Quotation
+    Screens</i> screen of <i>Member File Maintenance</i> and when selected, displays a
+    pop-up menu asking you which <i>Quotation Type</i> you wish to view/update. 
+    <br />
+    If you select the <i>Update</i> menu option, a pop-up window is displayed inviting
+    you to enter any additional information that you may require in your quotes e.g. <i>Final
+    Pay For Pension</i>. This is an enhancement of the same feature that used to be only
+    available on the <i>Quotes Screen 2</i> and <i>Quotes Screen 3</i> screens in <i>Member
+    File Maintenance</i>. 
+    <br />
+    <b>If there are more than 10 different quotes in the current <i>Quotation Type</i>,
+    the screen allows you to scroll the display to view the other quotes in a similar
+    way to the <i>Salary History</i> screen in <i>Member File Maintenance</i>.</b> 
+</li>
+<li>
+    Amended <i>Batch Quotation Run</i> to take account of the new <i>Quotation Type</i> feature
+    in this release of <i>Pension Master</i>. This has meant moving the <i>Update Type</i> field
+    down the screen so as it is after the <i>Scheme</i> field. The <i>Update Type</i> field
+    now displays a pop-up menu asking which <i>Quotation Type</i> you wish to run a batch
+    of quotations for. This pop-up menu will include all possible <i>Quotation Types</i> for
+    the currently selected group of members. Any members selected, who do not have this <i>Quotation
+    Type</i> since they are in another <i>Category</i> will have a value of zero returned
+    from the calculations. 
+</li>
+<li>
+    <p>Added a new function <i>write(field,@line_num)</i> to <i>Formula File Maintenance</i> as
+    follows:</p>
+
+<p><b>write(field,@line_num)</b></p><p><b>OVERVIEW</b></p>
+
+<p>Use this to write back the result of a formula to either the deferred
+    pensioners file (pe_dpen) or the pensioners file (pe_pen). This could be useful
+    when doing some final calculations for a member and you wish to formally record
+    the results of the calculations in either the deferred pensioner or pensioner
+    screens in Member File Maintenance.</p>
+
+<p><b>SYNTAX</b></p><p>write(field,@line_num)</p><p><b>EXPLANATION</b></p>
+
+<p>field - a valid numeric field on either the deferred pensioner table (pe_dpen) or the pensioner table (pe_pen). This denotes the field that you wish to write the result of this formula to.</p>
+<p>@line_num - the line number of the line you wish to output the result from e.g. if you wish to write the result of line 5 to the field pp_precom_pen in the pensioner table, enter: write(pp_precom_pen,@5)</p>
+<p><b>NOTES</b></p>
+<ol>
+<li>If there already exists a value in the field specified for the member, it will be automatically overwritten with the result of the formula.</li>
+<li>You can only reference line numbers before the current formula line i.e. if your write() function is on line 6 of your formula, you cannot reference lines &gt;= line 6 in your write() function call.</li>
+For example: write(pp_precom_pen,@10) or write(pdp_grpen_nrd,@2)</li>
+</ol>
+</li>
+<li>
+    Removed the link between <i>Category Code</i> and <i>Company Code</i> so that <i>Categories</i> are
+    now only sepefic to particular <i>Schemes</i> and not particular <i>Companies</i> within
+    particular <i>Schemes</i>. This has greatly reduced the number of <i>Categories</i> necessary
+    on <i>Pension Master</i> which in turn will simplify the adding of things like new <i>Formula
+    Codes</i> to <i>Categories</i>. 
+</li>
+<li>
+    <p>Calls to the <i>goto</i> function in <i>Formula File Maintenance</i> must now be in
+    the format:</p>
+<p>goto @line_number</p>
+    <p>
+	i.e. an '@' symbol is required before the line number. 
+	<br />
+	<b>The installation program for version 5.01 of <i>Pension Master</i> will automatically
+	convert all relevant lines of your formulae over to this new format.</b> 
+    </p>
+</li>
+<li>
+    Fixed bug in <i>Unit Possting</i> report where new entrants opening unit balances
+    were not being correctly printed on the report. 
+</li>
+<li>
+    Added <i>F8</i> lookup facility to the <i>Query</i> option in the new <i>Factor Table
+    Maintenance</i> program. 
+</li>
+<li>
+    When printing columns in the <i>Member Report</i> and <i>Full Members Listing</i> that
+    involve different investment funds, the name of the investment fund is now printed
+    in the column heading. 
+</li>
+<li>
+    When printing columns in the <i>Member Report</i> and <i>Full Members Listing</i> that
+    involve quotation fields, the headings are now printed as "CURRENT QUOTE 1", "CURRENT
+    QUOTE 2" etc etc, with a detailed key of what this means printed at the end of the
+    report. 
+</li>
+<li>
+    Fixed request number 1, Joan Whelan's note of 19/3/97. 
+</li>
+<li>
+    Fixed request number 3, Joan Whelan's note of 19/3/97. The only time the system now
+    jumps straight into browse mode if immediately after running a quotation in the <i>Quotation
+    Screen</i> of <i>Member File Maintenance</i>. 
+</li>
+<li>
+    Fixed request number 4, Joan Whelan's note of 19/3/97. 
+</li>
+<li>
+    Fixed request number 5, Joan Whelan's note of 19/3/97. This feature has also been
+    amended in the <i>Quotation Screens</i> of the <i>Member File Maintenance</i> module. 
+</li>
+<li>
+    Fixed request number 6, Joan Whelan's note of 19/3/97. 
+</li>
+<li>
+    Added <i>Salary Listing Report</i> as per request number 8, Joan Whelan's note of
+    19/3/97. This allows you to print off salary details for a selected group of members,
+    for a specified salary date. This can then be used, for example, as part of the post
+    year end renewal process. 
+</li>
+<li>
+    Also applied this request to <i>Member File Maintenance</i> and <i>Scheme File Maintenance</i> modules
+    as similar behaviour was being exhibited there. 
+</li>
+<li>
+    Fixed request number 9, Joan Whelan's note of 19/3/97. Also applied this request to <i>Member
+    File Maintenance</i> and <i>Scheme File Maintenance</i> modules as similar behaviour
+    was being exhibited there. 
+</li>
+<li>
+    Fixed request number 10, Joan Whelan's note of 19/3/97. 
+</li>
+<li>
+    In <i>Batch Data Input</i>, do not allow the user to amend contributions, salary details
+    or NI History details if the <i>Batch Posted</i> flag is set to <i>Y</i>. Instead,
+    encourage the user to amend the batch date to a new date and them update the rest
+    of the batch details as required. 
+</li>
+<li>
+    In <i>Batch Data Input</i>, contributions are now allocated to investment funds 1-20
+    after the user has pressed <i>Esc</i> to save the current screen of batch contribution
+    details, rather than dynamically allocating them to funds 1-20 as and when each line
+    of member details are input. This avoids the problem of re-using an old batch where
+    some members have changed their <i>Investment Choice</i> allocation details since
+    the old batch was last used. All old batches should now function correctly, with the
+    contributions being allocated as per the current <i>Member Investment Choice</i> instructions
+    for each member. 
+</li>
+<li>
+    Extra validation has been added to the <i>Sex</i> and <i>Title</i> fields on the <i>Basic
+    Member Details</i> screen of <i>Member File Maintenance</i> so that, for example,
+    a user cannot enter a member as male with a title of Mrs or a female with a title
+    of Miss with a marital status of MA. 
+</li>
+<li>
+    Added a pop-up window in the <i>Basic Member Details</i> screen of <i>Member File
+    Maintenance</i> to accept input of <i>Title</i>, <i>Forename</i> and <i>Surname</i> so
+    as to make it clearer to the user what is required in each field. Previously the user
+    had to rely on being familiar with <i>Pension Master</i> to know what was expected
+    where in these fields. 
+</li>
+<li>
+    Changed the validation of the <i>Date Of Birth</i> field on the <i>Basic Member Details</i> screen
+    of <i>Member File Maintenance</i> so that it no longer insists that the member is
+    aged between 16 and 75. Instead, the user is warned if the member falls outside this
+    age range and is asked if they really mean the date of birth to be what they input
+    or do they want to input a different date of birth. This is to allow for the case
+    of a young child or an elderly dependent entering the scheme. 
+</li>
+<li>
+    Fixed small bug in <i>Member Investment Choice</i> sscreen of <i>Member File Maintenance</i> that
+    allowed you to enter values that totalled to greater than 100% for each conbtribution
+    source. The module now checks each contribution source total to ensure that it is
+    either 0% or 100%. 
+</li>
+<li>
+    Added an optional facility to <i>Batch Data Input</i> to allow <i>Pension Master</i> to
+    automatically generate a list of member numbers and display these to the screen when
+    adding a new batch. This is designed to save time with having to input the member
+    numbers manually for each batch entry. 
+</li>
+<li>
+    This is done via a pop-up window when adding a batch and immediately before the user
+    is allowed to enter any details in the second screen of the module. The pop-up window
+    allows you to order the member numbers displayed as follows: 
+    <ul>
+	<li>
+	    A - Member Number 
+	</li>
+	<li>
+	    B - Surname, Forename 
+	</li>
+	<li>
+	    C - Employer Reference 
+	</li>
+	<li>
+	    D - Date Of Birth 
+	</li>
+	<li>
+	    ' ' - Do Not Produce List Of Member Numbers 
+	</li>
+    </ul>
+    <div class="info">
+		    <p>If you select options A, B, C or D, the member numbers generated only relate to
+		    active members on <i>Pension Master</i> and will not include any members with a <i>Status
+		    Code</i> that has an associated <i>Status Type</i> not equal to 'A' i.e. non-active
+		    members.</p> 
+		    <p>It is the responsibility of the user to ensure that all members that should be
+			included in the batch are present.</p>
+    </div>
+</li>
+<li>
+    Updated <i>Pension Master</i> with the Section 148 Revaluation Orders and CEP/CA Factors
+    for the tax year 1997/98 (UK Only) as part of the installation process for this version
+    of <i>Pension Master</i>. 
+</li>
+<li>
+    Introduced a new menu <i>Annual Renewals</i> to the <i>Pension Master Main Menu</i>.
+    This contains the following options: 
+    <ul>
+	<li>
+	    1 - Renewal Data Request 
+	</li>
+	<li>
+	    2 - Batch Data Input 
+	</li>
+	<li>
+	    3 - Salary Listing Report 
+	</li>
+	<li>
+	    4 - Contributions Report 
+	</li>
+	<li>
+	    5 - Investment Value Summary Run 
+	</li>
+	<li>
+	    6 - Batch Quotation Run 
+	</li>
+    </ul>
+    <div class="info">
+		    <p>The <i>System Administrator</i> will need to use the <i>Menu Maintenance</i> program
+		    to manually add this option to the <i>Pension Master File Maintenance</i> menu and
+		    then use <i>User File Maintenance</i> to grant permissions to all suitable users so
+		    that they can use this new module.</p>
+    </div>
+</li>
+<li>
+    Introduced a new menu <i>System Data</i> to the <i>Pension Master Main Menu</i>. This
+    contains the following options: 
+    <ul>
+	<li>
+	    1 - Special Codes Maintenance 
+	</li>
+	<li>
+	    2 - Section 148 Order Maintenance 
+	</li>
+	<li>
+	    3 - CEP Factor Maintenance 
+	</li>
+	<li>
+	    4 - MLI Factor Maintenance 
+	</li>
+    </ul>
+    <div class="info">
+		    <p>The <i>System Administrator</i> will need to use the <i>Menu Maintenance</i> program
+		    to manually add this option to the <i>Pension Master File Maintenance</i> menu and
+		    then use <i>User File Maintenance</i> to grant permissions to all suitable users so
+		    that they can use this new module.</p>
+    </div>
+</li>
+<li>
+    Added a new module <i>Investment Value Summary Run</i> to <i>Pension Master</i>. This
+    allows you to calculate for each selected member, the current value of their unit
+    holdings, based on either a bid or an offer price and write the results back to the <i>Investment
+    Value Summary</i> screen in <i>Member File Maintenance</i> for each selected member.
+    The module also prints off a report detailing the calculations made for each member.
+    This can be an easy and useful summary of the current value of the funds assets. The
+    results of the <i>Investment Value Summary</i> screen are now stored in a new database
+    table pe_fval. 
+</li>
+<li>
+    <p>The format of the new table is as follows:</p>
+<table cellspacing="0">
+<tbody>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+<tr>
+<td>pfv_member</td>
+<td>Member Number</td>
+<td>INTEGER</td>
+</tr>
+<tr>
+
+<td>pfv_inv_fund</td>
+<td>Investment Fund (1-20)</td>
+<td>SMALLINT</td>
+</tr>
+
+<tr>
+
+<td>pfv_eeord</td>
+<td>Employee Ordinary Value</td>
+<td>DECIMAL(10,2)</td>
+</tr>
+<tr>
+
+<td>pfv_eeavc</td>
+<td>Employee AVC Value</td>
+<td>DECIMAL(10,2)</td>
+</tr>
+<tr>
+
+<td>pfv_erord</td>
+<td>Employer Ordinary Value</td>
+<td>DECIMAL(10,2)</td>
+</tr>
+<tr>
+
+<td>pfv_eeprts</td>
+<td>Employee Protected Rights Value</td>
+<td>DECIMAL(10,2)</td>
+</tr>
+<tr>
+
+<td>pfv_erprts</td>
+<td>Employer Protected Rights Value</td>
+<td>DECIMAL(10,2)</td>
+</tr>
+<tr>
+
+<td>pfv_total</td>
+<td>Total Value</td>
+<td>DECIMAL(10,2)</td>
+</tr>
+<tr>
+
+<td>pfv_alloc_rate</td>
+<td>Allocation Percentage Rate</td>
+<td>DECIMAL(10,2)</td>
+</tr>
+<tr>
+
+<td>pfv_uprice</td>
+<td>Unit Price To Value At</td>
+<td>DECIMAL(10,6)</td>
+</tr>
+<tr>
+
+<td>pfv_bid_offer</td>
+<td>Bid/Offer Price Indicator</td>
+<td>CHAR(10)</td>
+</tr>
+</tbody>
+</table>
+
+    <p>
+	These fields are all available in the <i>Member Report</i>, <i>Full Members Listing</i> and <i>Mail-Merge
+	Integration Report</i> in the normal way. These reports expect the relevant field
+	to be called with an argument to denote the investment fund required e.g. pfv_eeord(1)
+	gets the current value of <i>Employee Ordinary Units</i> for <i>Investment Fund</i> 1. 
+    </p>
+</li>
+<li>
+    Added a new module <i>Special Codes Maintenance</i> to <i>Pension Master</i>. This
+    allows the <i>System Administrator</i> to set up and maintain a set of <i>Special
+    Codes</i> which can subsequently be used in the new <i>Special Codes</i> screen of <i>Member
+    File Maintenance</i>. These special codes can be used to assign a particular feature
+    e.g. AVC's pre 1987 to a group of members. These can then be used within the <i>Member
+    Report</i>, <i>Full Members Listing</i> or <i>Mail-Merge Integration Report</i> to
+    report on only those members with the selected <i>Special Code</i>. This has been
+    added mainly to maintain backward compatibility with certain other pension administration
+    software vendors legacy systems. 
+</li>
+<li>
+    Added a new <i>Special Codes</i> screen to <i>Member File Maintenance</i> which holds
+    details of all the <i>Special Codes</i> relating to the current member. These can
+    be used as described in the previous paragraph. You can also add and delete <i>Special
+    Codes</i> for the current meember through this screen. Appropraie <i>F8</i> lookup
+    facilities are available to list the <i>Special Codes</i> that have been set up on
+    your system by your <i>System Administrator</i>. 
+</li>
+<li>
+    Added <i>Special Codes</i> field to the list of available selection criteria in the <i>Member
+    Report</i>, <i>Full Members Listing</i> and <i>Mail-Merge Integration</i> report.
+    An <i>F8</i> lookup facility is provided on this field so as you can get a list of
+    the <i>Special Codes</i> that have been set up on your system by your <i>System Administrator</i>.
+    Leave this field blank to select members, regardless of the <i>Special Codes</i> that
+    may be allocated to them, or input a valid <i>Special Code</i> to report on only those
+    members with the specified <i>Special Code</i>. 
+</li>
+<li>
+    Fixed bug in <i>Update/Correct History Program</i> that did not allow the user to
+    correctly select member records for updating. 
+</li>
+<li>
+    Amended <i>Contribution History</i> screen in <i>Member File Maintenance</i> so that
+    all contribution entries can be up to 9999999.99 and expenses figures up to 999999.99.
+    This fixes a previous problem where large contributions and expenses were displaying
+    to the screen as a line of ********'s. 
+</li>
+<li>
+    Amended <i>Renewal Data Request Report</i> report so that the renewal date always
+    defaults to the next renewal date after today's date e.g. for Jan/Feb renewals which
+    are produced in the previous Nov/Dec, the renewal date will now be correctly shown.
+    This fixes the last part of point 7 of Joan Whelan's note of 19/3/97. 
+</li>
+<li>
+    Amended <i>Renewal Data Request Report</i> so that it now prints two lines per member
+    record, allowing the user to ask for up to 10 data items on the one report. The report
+    also prints off <i>Employers Reference Code</i> (pm_pay_num) so as to aid the client
+    when filling out the report. 
+</li>
+<li>
+    Fixed bug when inserting lines in <i>Formula File Maintenancxe</i> when the lines
+    you are inserting are off the bottom of the screen - reference bug found by NJ on
+    16/5/97. 
+</li>
+<li>
+    Fixed bug with inserting/deleting lines in <i>Formula File Maintenance</i> when @line
+    references were only being incremented for lines subsequent to the current line. This
+    refers to the bug reported in JW's fax of 15/5/97. 
+</li>
+<li>
+    Fixed bug in <i>Formula File Maintenance</i> line syntax checker which was only allowing
+    a maximum line length of 34 characters rather than the new 50 characters. Reference
+    JW's fax of 20/5/97. 
+</li>
+</ol>
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

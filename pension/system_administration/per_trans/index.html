@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Transaction Log Listing</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Transaction Log Listing</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a> </li>
+  <li><a href="#query">Selecting Transaction Log Details</a> </li>
+  <li><a href="#report">Printing Transaction Log Details</a> </li>
+  <li><a href="#browse">Browsing Transaction Log Details</a> </li>
+  <li><a href="#Exit">Exit Program</a> </li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
+access this program. 
+If you do not have Supervisor status, you will not be permitted access to this
+program.</p>
+</div>
+
+<p>This program allows the user to keep track of Transaction Logs made by members of
+Pension Master via Pension Master Online. </p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Query </li>
+  <li>Report </li>
+  <li>Browse </li>
+  <li>Exit </li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/per_trans.gif" alt="Transaction Log Listing Screen" /></p>
+
+  <p>Transaction Log Listing Screen</p>
+</div>
+
+<h2 id="a-namequeryaselecting-transaction-log-details"><a name="query"></a>Selecting Transaction Log Details</h2>
+
+<p>Click ‘Query’.</p>
+
+<p><a name="pilh_id"></a><a name="pilh_member"></a><a name="pilh_date"></a><a name="pilh_time"></a>You
+may select records by using any combination (or even partial combination) of the following
+fields in order to select the required transaction log record(s): Log ID, Member,
+Date or Time. </p>
+
+<p>Once you have entered your selection criteria, click on ‘OK’ to proceed and retrieve
+the records from the database or click on ‘Cancel’ to abort the selection and return
+to the main menu. </p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen. </p>
+
+<div class="well">
+
+  <p>Record 00001 of 0000x </p>
+
+</div>
+
+<h2 id="a-namereportaprinting-transaction-log-details"><a name="report"></a>Printing Transaction Log Details</h2>
+
+<p>Click ‘Report’.</p>
+
+<p>You must have selected some records to print first by using the Query menu option. </p>
+
+<p>The following menu is now displayed: </p>
+
+<div class="well">
+
+  <p>REPORT TYPE: <em>Summary</em> Detailed Record Exit </p>
+
+</div>
+
+<p>The menu options are as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><strong>Summary</strong></td>
+          <td>Produce a report for all selected items in summary format.</td>
+        </tr>
+        <tr>
+          <td><strong>Detailed</strong></td>
+          <td>Produce a report for all selected items in detailed format.</td>
+        </tr>
+        <tr>
+          <td><strong>Record</strong></td>
+          <td>Produce a report for the current displayed item only.</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>Return to the main menu.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>Once the type of report has been chosen and produced, options are then displayed for
+printing. </p>
+
+<p>The options for printing are decribed in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>. </p>
+
+<h2 id="a-namebrowseabrowsing-transaction-log-details"><a name="browse"></a>Browsing Transaction Log Details</h2>
+
+<p>Click ‘Browse’.</p>
+
+<p>You must have selected some records to browse first by using the Query menu option. </p>
+
+<p>Once in browse mode, use the arrow keys or the scrollbar on the right of the data
+to navigate around the data. </p>
+
+<p>Click ‘OK’ or ‘Cancel’ to leave browse mode. </p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the System Administration menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

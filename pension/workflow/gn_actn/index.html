@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Action Codes</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Action Codes</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a> </li>
+  <li><a href="#Add An Action Code">Add An Action Code</a> </li>
+  <li><a href="#Query/Search For An Action Code">Query/Search For An Action Code</a> </li>
+  <li><a href="#Viewing Action Codes">Viewing Action Codes</a> </li>
+  <li><a href="#Updating Action Code">Updating Action Code</a> </li>
+  <li><a href="#Printing Action Code Details">Printing Action Code Details</a> </li>
+  <li><a href="#Exit">Exit Program</a> </li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as a supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
+access this program. 
+The type of access granted can be view only or full access. For the view
+only option, you will not be permitted access to any menu option that allows you to
+Add/Update/Delete data.
+If you do not have supervisor status, you will not be permitted access to this
+program.</p>
+</div>
+
+<p>This Program allows maintenance of the workflow action codes. </p>
+
+<p>These are codes that can be used to define procedures in the <a href="/pension/workflow/gn_wkflw/">Workflow
+Management</a> module of Pension Master (see elsewhere in this manual for further
+details). </p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add </li>
+  <li>Query </li>
+  <li>Update </li>
+  <li>Delete </li>
+  <li>Report </li>
+  <li>Exit </li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_actn.gif" alt="Action Codes Screen" /></p>
+
+  <p>Action Codes Screen</p>
+</div>
+
+<h2 id="a-nameadd-an-action-codeaadd-an-action-code"><a name="Add An Action Code"></a>Add An Action Code</h2>
+
+<p>Click ‘Add’. </p>
+
+<p><a name="gwa_code"></a><strong>ACTION CODE</strong> - Enter a code to be used for this action
+code. This can be up to 10 characters long and must not already exist on the action
+codes file. If it does, an error message will be displayed and you will be invited
+to re-enter the action code. </p>
+
+<p><a name="gwa_desc"></a><strong>DESCRIPTION</strong> - Enter a description for your action code.
+We would recommend that you use something meaningful here as this is what is displayed
+to users in any look windows for action codes elsewhere in Pension Master. This should
+be a description of your intended action e.g. “Pay Tax On Refund Of Contributions”. </p>
+
+<p><a name="gwa_time"></a><strong>TIME (DAYS)</strong> - Enter the time in days before which this
+action should be completed from inception. </p>
+
+<p>When the Action Code details have been entered click on ‘OK’ to save the details to
+file. You can click on ‘Cancel’ at any stage to exit the add option without saving
+the entered Action Code details. </p>
+
+<h2 id="a-namequerysearch-for-an-action-codeaquerysearch-for-an-action-code"><a name="Query/Search For An Action Code"></a>Query/Search For An Action Code</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>You may select records using any of the fields on the screen. </p>
+
+<p>Once you have entered your selection criteria, click on ‘OK’ to proceed and retrieve
+the records from the database or click on ‘Cancel’ to abort the selection and return
+to the main menu. </p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen. </p>
+
+<div class="well">
+
+  <p>Current Record 00001 / 0000x Records Found </p>
+
+</div>
+
+<h2 id="a-nameviewing-action-codesaviewing-action-codes"><a name="Viewing Action Codes"></a>Viewing Action Codes</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed. </p>
+
+<h2 id="a-nameupdating-action-codeaupdating-action-code"><a name="Updating Action Code"></a>Updating Action Code</h2>
+
+<p>Before Updating, a record must be selected through the Query option, and an error
+message is displayed if a record for update has not been selected. </p>
+
+<p>Click ‘Update’. </p>
+
+<p>The Action Code code cannot be changed as this is a key to the file. When the changes
+have been made to the record click on ‘OK’ to save the changes to file, or click on
+‘Cancel’ to exit the update option without saving changes. </p>
+
+<p>Deleting Action Code Details </p>
+
+<p>Before Deleting, a record must be selected through the Query option, and an error
+message is displayed if a record for deletion has not been selected.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You can not delete an action code that is currently being used in some workflow
+type definition (see <a href="/pension/workflow/gn_wkflw/">Workflow Management</a> for further details).</p>
+</div>
+
+<p>Click ‘Delete’. </p>
+
+<p>When the delete option is selected a window is displayed with the options yes and
+no. </p>
+
+<p>If you do not wish to delete the record, click ‘No’. You will return to the program
+menu. </p>
+
+<p>If you wish to delete the record click ‘Yes’. </p>
+
+<p>Another window is displayed asking if you are sure. </p>
+
+<p>If you do not wish to delete the record click ‘No’. </p>
+
+<p>The program returns to the main menu. </p>
+
+<p>If you wish to delete the record, click ‘Yes’. </p>
+
+<p>The record is deleted and the program returns to the main menu. </p>
+
+<h2 id="a-nameprinting-action-code-detailsaa-nameprintaprinting-action"><a name="Printing Action Code Details"></a><a name="print"></a>Printing Action</h2>
+
+<p>Code Details</p>
+
+<p>Click ‘Report’. </p>
+
+<p>A record must be selected before the report option is selected, otherwise the following
+error message will be displayed to the screen. </p>
+
+<div class="well">
+
+  <p>‘No Details Selected For Report. Please Use Query Option First.’ </p>
+
+</div>
+
+<p>When the report option is selected after a record has been queried, the user is given
+three printing options as described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>. </p>
+
+<p>If ‘Select records to print’ is selected, the following window is displayed. </p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_actn2.gif" alt="" /></p>
+
+</div>
+
+<p>If records are found to match the selection criteria the report continues and the
+report viewer is displayed to the screen. </p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Workflow Management menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

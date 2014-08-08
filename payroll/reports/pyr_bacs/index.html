@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>BACS Data File Listing Report</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>BACS Data File Listing Report</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Report">Run A Report</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to produce a list of BACS data files which have been created during previous payroll runs, depending on the scheme code entered. </p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Proceed</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/pyr_bacs.gif" alt="BACS Data File Listing Screen" /></p>
+
+  <p>BACS Data File Listing Screen</p>
+</div>
+
+<h2 id="a-namerun-a-reportarun-a-report"><a name="Run A Report"></a>Run A Report</h2>
+
+<p>Click ‘Proceed’. </p>
+
+<p><a name="pm_scheme"></a><strong>SCHEME CODE</strong> - Enter the scheme code required.  To get a list of valid scheme codes click ‘Lookup’.  When a valid scheme code has been entered the scheme description will be displayed. </p>
+
+<p>Click ‘OK’ to proceed with the BACS data file listing. You can click ‘Cancel’ to return to the proceed menu and abort report selection. </p>
+
+<p>If there are no data files held for the scheme then an error message is displayed informing the user of this.  The program then returns back to the main menu.</p>
+
+<p>If there are data files held for the scheme then the following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/pyr_bacs1.gif" alt="BACS Data File Listing Report" /></p>
+
+  <p>BACS Data File Listing Report</p>
+</div>
+
+<p><a name="choose"></a>Using the arrow keys or the scrollbar, select one of the data files listed in the table.  Click ‘OK’ to process the report, or click ‘Cancel’ to return to the main menu.</p>
+
+<p>When the selection is complete a message is displayed at the bottom of the screen:</p>
+
+<div class="well">
+  <p>Processing report … Please Wait</p>
+</div>
+
+<p>When the report has been processed and no data lines exist in the data file an error message is displayed:</p>
+
+<p><em>The data file does not contain any data lines</em></p>
+
+<p>The program returns to the main menu. </p>
+
+<p>If data lines are found in the data file the report continues and is displayed to the screen.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Payroll Master</a>.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’.  This leaves the program and returns to the Reports menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

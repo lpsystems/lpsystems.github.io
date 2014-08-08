@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Codes</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Codes</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a> </li>
+  <li><a href="#Add Codes">Add Codes</a> </li>
+  <li><a href="#Query/Search For Codes">Query/Search For Codes</a> </li>
+  <li><a href="#Viewing Codes">Viewing Codes</a> </li>
+  <li><a href="#Delete Codes">Delete Codes</a> </li>
+  <li><a href="#Printing Code Details">Printing Code Details</a> </li>
+  <li><a href="#Exit">Exit Program</a> </li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
+access this program.
+The type of access granted can be view only or full access. For the view only option,
+you will not be permitted access to any menu option that allows you to add/update/delete
+data.
+If you do not have Supervisor status, you will not be permitted access to this
+program.</p>
+</div>
+
+<p>This program allows maintenance of Codes used within <a href="/pension/file_maintenance/pem_mem/#Introduction">Members </a>.
+These are codes that are used when entering additional details for a member. </p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add </li>
+  <li>Query </li>
+  <li>Delete </li>
+  <li>Report </li>
+  <li>Exit </li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_codem1.gif" alt="Codes Screen" /></p>
+
+  <p>Codes Screen</p>
+</div>
+
+<h2 id="a-nameadd-codesaadd-codes"><a name="Add Codes"></a>Add Codes</h2>
+
+<p>Click ‘Add’.</p>
+
+<p>This allows the user to enter the following details: </p>
+
+<p><a name="pcdm_type"></a><strong>TYPE</strong> - Enter the type of the Code. This must be one
+of the following:</p>
+
+<ul>
+  <li><strong>A</strong> - for Additional Benefit Codes</li>
+  <li><strong>C</strong> - for Contribution Transactions</li>
+  <li><strong>D</strong> - for Deferred Pensioner Codes</li>
+  <li><strong>I</strong> - for Transfer In Codes</li>
+  <li><strong>O</strong> - for Transfer Out Codes</li>
+  <li><strong>P</strong> - for Pensioner Codes</li>
+  <li><strong>R</strong> - for Reason for Increase Codes</li>
+  <li><strong>S</strong> - for Special Codes</li>
+</ul>
+
+<p><a name="pcdm_code"></a><strong>CODE</strong> - Enter the Code which must be relevant to the
+Type. If you are entering a Reason for Increase or Special Code, you are allowed to
+enter any free-text for the code field. Otherwise, the Code is validated against the
+type using the following rules:</p>
+
+<ul>
+  <li><strong>A</strong> - for Additional Benefit Codes:
+    <ul>
+      <li>The first character must be either ‘A’,’S’ or ‘I’ (Add, Subtract or Ignore) </li>
+      <li>The second character must be either ‘F’ or ‘S’ (Fixed Benefit or Service) </li>
+    </ul>
+  </li>
+  <li><strong>C</strong> - No validation required.</li>
+  <li><strong>D</strong> - for Deferred Pensioner Codes:
+    <ul>
+      <li>The first character must be ‘D’ (Deferred Pensioner) </li>
+      <li>The second character must be either ‘A’,’S’ or ‘I’ (Add, Subtract or Ignore) </li>
+    </ul>
+  </li>
+  <li><strong>I</strong> - No validation required.</li>
+  <li><strong>O</strong> - for Transfer Out Codes:
+    <ul>
+      <li>The first character must be ‘T’ (Transfer In) </li>
+      <li>The second character must be either ‘P’,’S’ or ‘C’ (Personal Pension, Section 32 Policy or New Company) </li>
+    </ul>
+  </li>
+  <li><strong>P</strong> - for Pensioner Codes:
+    <ul>
+      <li>The first character must be ‘P’ (Pensioner) </li>
+      <li>The second character must be either ‘A’,’S’ or ‘I’ (Add, Subtract or Ignore) </li>
+    </ul>
+  </li>
+  <li><strong>R</strong> - for Reason for Increase Codes:
+    <ul>
+      <li>The first character must be ‘R’ (Reason for Increase) </li>
+    </ul>
+  </li>
+</ul>
+
+<p>In all cases the third character must not be blank. A Code cannot be entered against
+the same Type twice. </p>
+
+<p>Characters 3 to 8 are purely user defineable. This will allow you to differentiate
+between Codes of the same type. </p>
+
+<p>Depending on what you enter as the second character of the code, you will be presented
+with a different set of options when entering the actual details in <a href="/pension/file_maintenance/pem_mem/#Transfer In Details">Members</a> e.g.
+you will not be permitted to enter an additional pension on the Transfer In screen
+if you have used a Transfer Code that has a second character of ‘S’. </p>
+
+<p><a name="pcdm_desc"></a><strong>DESCRIPTION</strong> - Enter a description for your Code. We
+would recommend that you use something meaningful here as this is what is displayed
+to users on screens and lookup lists. </p>
+
+<p>When the Code details have been entered click on ‘OK’ to save the details to file.
+You can click on ‘Cancel’ at any stage to exit the add option without saving the entered
+Code details. </p>
+
+<h2 id="a-namequerysearch-for-codesaquerysearch-for-codes"><a name="Query/Search For Codes"></a>Query/Search For Codes</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>You may select records using the Code or Description fields. </p>
+
+<p>Once you have entered your selection criteria, click on ‘OK’ to proceed and retrieve
+the records from the database or click on ‘Cancel’ to abort the selection and return
+to the main menu. </p>
+
+<p>There is a lookup available which will display all Types and any existing Codes, just
+click on the ‘Search’ button. </p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen. </p>
+
+<div class="well">
+
+  <p>Current Record 00001 / 0000x Records Found </p>
+
+</div>
+
+<h2 id="a-nameviewing-codesaviewing-codes"><a name="Viewing Codes"></a>Viewing Codes</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed.</p>
+
+<h2 id="a-namedelete-codesadelete-codes"><a name="Delete Codes"></a>Delete Codes</h2>
+
+<p>Click ‘Delete’.</p>
+
+<p>In order to use the delete option , the code you want to delete must be displayed
+on the screen by previously using the <a href="#Query/Search For Codes">Query</a> menu
+option. You are then prompted to confirm that you want to delete this code and then
+prompted to re-confirm the deletion. </p>
+
+<p>An error message is displayed if the code you are trying to delete is currently allocated
+to a scheme. This error message indicates the first scheme number that is currently
+allocated, so that the code can be deallocated by selecting the <a href="/pension/file_maintenance/pem_sch/#Delete a Code from the Scheme">Delete
+a Code from the Scheme</a> on the <a href="/pension/file_maintenance/pem_sch/#Code Allocation">Code Allocation</a> screen
+from the <a href="/pension/file_maintenance/pem_sch/">Schemes</a> menu. </p>
+
+<p>You cannot delete the following Reason for Increase Code: </p>
+
+<ul>
+  <li>RNEWPEN </li>
+</ul>
+
+<p>This is because any Pension/Deferred Pension History lines that are added will use
+the ‘RNEWPEN’ as the default Reason for Increase Code.</p>
+
+<p>You cannot delete the following Contribution Transaction codes: </p>
+
+<ul>
+  <li>BONUS </li>
+  <li>BUY </li>
+  <li>REBATE </li>
+  <li>SWIN </li>
+  <li>SWOUT </li>
+  <li>TVIN </li>
+</ul>
+
+<p>This is because these codes are needed internally in the defined contribution functionality
+within Pension Master.</p>
+
+<h2 id="a-nameprinting-code-detailsaprinting-code-details"><a name="Printing Code Details"></a>Printing Code Details</h2>
+
+<p>This option allows you to print a list of one or all of the types of Codes available
+on your system.</p>
+
+<p>Click ‘Report’. </p>
+
+<p>The following screen will appear when this program is selected:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_codem2.gif" alt="Report Screen" /></p>
+
+  <p>Report Screen</p>
+</div>
+
+<p>Please select one of the following options: </p>
+
+<ul>
+  <li>All Codes - This will result in all codes being printed. </li>
+  <li>All Selected Codes - This will print any codes that have already been queried. If
+none have been queried, it will act in the same way as All Codes. </li>
+</ul>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the System Data menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

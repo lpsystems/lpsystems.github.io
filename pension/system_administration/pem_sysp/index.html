@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>System Parameters</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>System Parameters</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a> </li>
+  <li><a href="#Add a Record">Add A Record</a> </li>
+  <li><a href="#Basic System Parameters">Basic System Parameters</a> </li>
+  <li><a href="#2">Basic System Parameters 2</a> </li>
+  <li><a href="#Audit Trail Settings">Audit Trail Settings</a> </li>
+  <li><a href="#Password Option Details">Password Option Details</a> </li>
+  <li><a href="#Query a Record">Query a Record</a> </li>
+  <li><a href="#Update a Record">Update a Record</a> </li>
+  <li><a href="#Printing System Parameter Details">Printing System Parameter Details</a></li>
+  <li><a href="#Navigating Between Screens">Navigating Between Screens</a> </li>
+  <li><a href="#Exit">Exit Program</a> </li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up system administrator status in <a href="/pension/system_administration/gn_user/">Users</a>
+may access this program.
+If you do not have system administrator status, you will not be permitted access
+to this program.</p>
+</div>
+
+<p>This Program allows maintenance of System Parameters. This contains details of any
+system-wide variables that can be set for Pension Master.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Update </li>
+  <li>Report </li>
+  <li>Menu </li>
+  <li>Exit </li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sysp1.jpg" alt="Basic System Parameters Screen" /></p>
+
+  <p>Basic System Parameters Screen</p>
+</div>
+
+<h2 id="a-nameadd-a-recordaadd-a-record"><a name="Add a Record"></a>Add a Record</h2>
+
+<h3 id="a-namebasic-system-parametersabasic-system-parameters"><a name="Basic System Parameters"></a>Basic System Parameters</h3>
+
+<p>Click ‘Add’. You cannot use the Add option if details already exist on the System
+Parameter file. In this case you must use the query option first (see below).</p>
+
+<p><a name="pp_name"></a><strong>SYSTEM COMPANY NAME</strong> - Enter the full Company name.
+This is used by Pension Master at the top of all the main menus. An entry must be
+made in this field and the system will display en error message if this field is
+left blank.</p>
+
+<p><a name="pp_sname"></a><strong>SHORT NAME</strong> - Enter a short name for the Company. This
+is used at the top of all screens within Pension Master. An entry must be made in
+this field and the system will display en error message if this field is left blank.
+The user will then be required to enter the Company short name in this field.</p>
+
+<p><a name="pp_addr1"></a><a name="pp_addr2"></a><a name="pp_addr3"></a><a name="pp_addr4">
+</a><a name="pp_postcode"></a><strong>ADDRESS &amp; POSTCODE</strong> - Enter the address
+and postcode of the Company. At least the first two lines of the Company address
+must be entered and the system will display an error message if these fields are
+left blank.</p>
+
+<p><a name="pp_tel"></a><strong>TELEPHONE NUMBER</strong> - Enter the telephone number of the
+Company (optional).</p>
+
+<p><a name="pp_fax"></a><strong>FAX NUMBER</strong> - Enter the fax number (if any) of the Company
+(optional).</p>
+
+<p><a name="pp_country"></a><strong>COUNTRY</strong> - Enter your country or click on ‘Search’
+and select it from the pop-up picklist. This is used to determine whether the first
+field on the ‘Fund Restrictions’ screen of ‘<a href="/pension/investments/pem_invfun/">Investment Managers</a>’
+is displayed as ‘Post 1997 Investment?” (UK) or “Post 1991 Investment?” (Ireland).</p>
+
+<p><a name="pp_base"></a><strong>DEFAULT BASE CURRENCY</strong> - Enter the three letter code
+for the default base currency for schemes on your system e.g. if your schemes are
+predominately UK based schemes, enter ‘GBP’. If you are unsure of the currency codes
+available, click on the ‘Search’ button for a lookup list of those available on
+your system. See <a href="/pension/appendices/app_d/">Euro Support</a>
+for further details.</p>
+
+<p><strong>At the end of the transitional period in the introduction of the Euro i.e. on 31/12/2001,
+    you should update this field to be ‘EUR’ i.e. make the system default base curreny
+    the Euro.</strong></p>
+
+<p>You will then be prompted that all <a href="/pension/system_data/pem_stf/">annual statutory amounts</a>
+are to be converted from the NCU to Euro and that this process in not reversible.
+You will be asked whether you have an up to date backup of the current system data
+and if not, you will be given an opportunity to exit the change and take a backup.
+Once this has been done, all annual statutory amounts amounts will be converted
+to Euro’s.</p>
+
+<p>You should also make sure that each of your schemes has the scheme base currency
+field in the <a href="/pension/file_maintenance/pem_sch/#Basic Scheme Details">Basic Scheme Details</a>
+screen of <a href="/pension/file_maintenance/pem_sch/#Basic Scheme Details">Schemes</a> set to ‘EUR’ at
+this stage to ensure that all scheme and membership monetary data is converted into
+Euro’s.</p>
+
+<p><a name="pp_age_calc"></a><strong>CALCULATE AGE NEXT (N) OR LAST (L) BIRTHDAY</strong> - This
+field determines whether your Pension Master system calculates age last birthday
+or age next birthday. Valid values are ‘L’ for age last birthday and ‘N’ for age
+next birthday. This relates to the field pm_age in the member record which stores
+the age for each member and can be used in formulae, reports and mail merged output
+from Pension Master. The calculated age is displayed on the Basic Member Details
+screen in <a href="/pension/file_maintenance/pem_mem/#Basic Member Details">Members</a>. It is dynamically
+calculated each time you go into the Basic Member Details screen, add a member,
+run a Member Report or Mail Merge Report or a formula that references this new field.
+The way this is calculated differs on which program you are using as follows:</p>
+
+<ul>
+  <li>Members - always calculate age at today’s date i.e. the system date. </li>
+  <li>Member Report/Mail Merge Report - always calculate age at the report date. 
+Formula File/Quotations - always calculate age at quotation date. </li>
+</ul>
+
+<p><a name="pp_server_ip"></a><strong>WEB SERVER USER MANUAL ADDRESS</strong> - Enter the URL
+of the webserver on your network that contains the Pension Master User Manual. This
+can either be in the format http://webserver/pendoc/ or the hostname of the server,
+provided this is resolvable by all connected clients PC’s onto the correct IP address
+of the Pension Master server. If your network doesn’t have a webserver then the
+Pension Master User Manual folder should be held on the Pension Master server. The
+folder should be accessable to all users via a drive mapping. This field should
+then contain the drive mapping and the path to the folder e.g. M:\pendoc.</p>
+
+<p>This is used by the Pension Master software to find the appropriate User Manual
+page when the user clicks or selects the User Manual icon on their screen.</p>
+
+<p><a name="pp_local_path"></a><strong>LOCAL PATH</strong> - If you have indicated that you wish
+to view Pension Master reports using Adobe Acrobat Reader, enter the path on your
+PC that the report files should be saved in.</p>
+
+<p>This path is also used to indicate where you wish Pension Master to save mail merge
+and report data files when outputting data from Pension Master to Microsoft Word
+or Excel. If left blank, these files will be saved in the root of your c: drive.</p>
+
+<p>This path MUST be available to ALL PC’s that Pension Master will be used on at your
+site and can be a valid network drive path e.g. g:\reports.</p>
+
+<p><a name="pp_acrobat"></a><strong>VIEW REPORTS WITH ACROBAT?</strong> - If you wish to view
+all Pension Master reports using Adobe Acrobat reader then ensure this box is ticked.
+If the box is not ticked then the standard internal Pension Master report viewer
+will be used.</p>
+
+<p>When the System Parameter details have been entered click on ‘OK’ to save the details
+to the system parameter file. You can click on ‘Cancel’ at any stage to exit the
+add option without saving the details.</p>
+
+<h3 id="a-name2abasic-system-parameters-2"><a name="2"></a>Basic System Parameters 2</h3>
+
+<p>Click ‘Update’.</p>
+
+<p>Select the Basic System Parameters 2 screen as set out in the section <a href="#Navigating Between Screens">
+    Navigating Between Screens</a> later in this section.</p>
+
+<p>This screen allows you to set the order by which the member query displays the results
+of a search. In addition it holds certain indicator fields which allows the user to 
+enable the following processes: </p>
+
+<ul>
+  <li>Workflow </li>
+  <li>Delete Quotation History </li>
+  <li>Member Session Report </li>
+  <li>bulk Delete in Member File </li>
+</ul>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sysp2.jpg" alt="Basic Parameter Details 2 Screen" /></p>
+
+  <p>Basic Parameter Details 2 Screen</p>
+</div>
+
+<p><a name="pp_sort1"></a><strong>Member Query Sort</strong> - Enter the fields in the order
+that you wish Pension Master to sort the member query results, e.g. Surname then
+Forename will sort the members in alphabetical order of their surnames with sub-sorts
+of their forenames.</p>
+
+<p><a name="pp_capitalise"></a></p>
+
+<p><strong>CAPITALISE NAMES/TEXT FIELDS</strong> - This allows you to switch on the automatic
+casing of certain fields for the whole of your Pension Master system. The field
+will default to casing these fields i.e. a value of ‘Y’. If you wish your Pension
+Master system not to do this, for example if you are an Irish site with Gaelic surnames,
+you will have to change the field to ‘N’. At present the following fields are supported:</p>
+
+<ul>
+  <li>Title </li>
+  <li>Forename </li>
+  <li>Surname </li>
+  <li>Job Title </li>
+  <li>Member’s salutation </li>
+  <li>Full forenames </li>
+  <li>Address Lines </li>
+</ul>
+
+<p>If you change this field to “Y”, a prompt will be displayed asking if you really
+wish to change it as this will result in Pension Master automatically re-casing
+the above fields for each member record on the system. You will then be prompted
+again to ask if you really are sure that you wish to do this. This acts as a security
+procedure as <strong>it will not be possible to un-case the above fields for each member
+    once you have indicated that you wish the casing to apply</strong>. To change back
+to un-cased fields, you will manually have to amend each members record, one by
+one, which may take a long time, or alternatively, restore a backup of your system
+data taken prior to you changing the casing flag. <strong>You should thus change this field
+    to “Y” only if you are sure this is what you want to do and are aware that the process
+    is not reversible other than by a lengthy manual procedure or by restoring a system
+    backup.</strong></p>
+
+<p><a name="pp_workflow"></a><strong>USE WORKFLOW</strong> - This field denotes whether you wish
+to disable the workflow features in Pension Master. To enable workflow, make sure
+this field is checked (i.e. shows a tick in it). To disable workflow, make sure
+this field is not checked.</p>
+
+<p><a name="pp_del_quote"></a><strong>DELETE QUOTATION HISTORY</strong> - This field denotes
+whether you wish to delete member’s quotation history details. To enable deletion,
+make sure this field is ticked. To disable deletion, make sure this field is not
+ticked.</p>
+
+<p><a name="pp_del_months"></a><strong>AFTER n MONTHS OLD</strong> - This field denotes the number
+of months old the quotation history details must be before they will be deleted.
+A minimum of 1 month old is required. This field works in conjunction with the ‘Delete
+Quotation History’ field. If the ‘Delete Quotation History’ field is ticked then
+this field must be entered. If the ‘Delete Quotation History’ field is un-ticked
+then this field must be left blank.</p>
+
+<p><a name="pp_sess_rep"></a><strong>RUN MEMBER SESSION REPORT</strong> - This field denotes whether 
+you wish to disable the member session report features in Pension Master. To enable the 
+member session report, make sure this field is checked (i.e. shows a tick in it). To 
+disable the member session report, make sure this field is not checked.</p>
+
+<p><a name="pp_bulk_del"></a><strong>ALLOW BULK DELETE IN MEMBERS FILE</strong> - This field denotes 
+whether you wish to disable the bulk delete option in the Members file. To enable bulk
+delete, make sure this field is checked (i.e. shows a tick in it). To disable bulk delete,
+make sure this field is not checked.</p>
+
+<h3 id="a-nameaudit-trail-settingsaaudit-trail-settings"><a name="Audit Trail Settings"></a>Audit Trail Settings</h3>
+
+<p>Click ‘Update’.</p>
+
+<p>Select the Audit Trail Settings screen as set out in the section <a href="#Navigating Between Screens">
+    Navigating Between Screens</a> later in this section.</p>
+
+<p>This screen allows you to set the criteria by which the <a href="/pension/system_administration/per_audtr/">Audit
+    Trail</a> logs any changes and activity on Pension Master by your users.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sysp3.gif" alt="Audit Trail Settings Screen" /></p>
+
+  <p>Audit Trail Settings Screen</p>
+</div>
+
+<p><a name="pp_audit1"></a><strong>LOGINS - SUCCESSFUL LOGINS</strong> - This field denotes whether
+you wish to switch on the logging of successful logins to Pension Master for your
+system. If this is set to ‘Y’, all password changes made by users are also logged
+to the audit trail. Valid entries are ‘Y’ and ‘N’.</p>
+
+<p><a name="pp_audit2"></a><strong>LOGINS - UNSUCCESSFUL LOGINS</strong> - This field denotes
+whether you wish to switch on the logging of unsuccessful logins to Pension Master
+for your system. Valid entries are ‘Y’ and ‘N’.</p>
+
+<p><a name="pp_audit3"></a><strong>MAINTENANCE MODULES - MEMBER FILE CHANGES</strong> - This
+field denotes whether you wish to switch on the logging of changes made to member
+details in <a href="/pension/file_maintenance/pem_mem/">Members</a> for your system. Valid entries are
+‘Y’ and ‘N’.</p>
+
+<p><a name="pp_audit4"></a><strong>MAINTENANCE MODULES - ALL OTHER MAINTENANCE</strong> - This
+field denotes whether you wish to switch on the logging of changes made to all maintenance
+modules other than <a href="/pension/file_maintenance/pem_mem/">Members</a> for your system. Valid entries
+are ‘Y’ and ‘N’.</p>
+
+<p><a name="pp_audit5"></a><strong>UPDATE MODULES - LOG CHANGES</strong> - This field denotes
+whether you wish to switch on the logging of changes made to items on the ‘Updates’
+menu in Pension Master for your system. Valid entries are ‘Y’ and ‘N’.</p>
+
+<p><a name="pp_audit6"></a><strong>REPORTS - RUN REPORTS</strong> - This field denotes whether
+you wish to switch on the logging of any reports that are run on your system. Valid
+entries are ‘Y’ and ‘N’.</p>
+
+<p><a name="pp_audit7"></a><strong>REPORTS - PRINT REPORTS</strong> - This field denotes whether
+you wish to switch on the logging of any reports that are printed on your system.
+Valid entries are ‘Y’ and ‘N’.</p>
+
+<p><a name="pp_audit8"></a><strong>SYSTEM ADMINISTRATION - LOG CHANGES</strong> - This field
+denotes whether you wish to switch on the logging of changes made to any items on
+the ‘System Administration’ menu in Pension Master for your system. Valid entries
+are ‘Y’ and ‘N’.</p>
+
+<p>When the details have been entered click on ‘OK’ to save the details to the system
+parameter file. You can click on ‘Cancel’ at any stage to exit the add option without
+saving the details.</p>
+
+<h3 id="a-namepassword-option-detailsapassword-option-details"><a name="Password Option Details"></a>Password Option Details</h3>
+
+<p>Click ‘Update’.</p>
+
+<p>Select the Password Option Details screen as set out in the section <a href="#Navigating Between Screens">
+    Navigating Between Screens</a> later in this section.</p>
+
+<p>This screen allows you to set various criteria that are used by the <a href="/pension/general/gn_logon/">
+    logon screen</a> of Pension Master.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sysp4.gif" alt="Password Option Details Screen" /></p>
+
+  <p>Password Option Details Screen</p>
+</div>
+
+<p><a name="pp_pass1"></a><strong>MINIMUM PASSWORD LENGTH</strong> - This field is used to set
+a minimum length for passwords that a user may select using the <a href="/pension/general/gn_logon/">
+    logon screen</a> of Pension Master. If you do not wish to set a minimum password
+length, set this field to 0. Otherwise, enter an the minimum length to be used e.g.
+6.</p>
+
+<p><a name="pp_pass2"></a><strong>MUST CONTAIN NUMBERS AS WELL AS CHARACTERS</strong> - This
+field is used to ensure that any password a user chooses contains a mixture of numbers
+as well as characters. This gives your Pension Master system an extra level of security
+as it is likely that passwords containing both letters and numbers will be harder
+to guess than those just containing letters. If this field is set to ‘Y’ then any
+password a user chooses must contain at least one of the characters a-z (case insensitive)
+and at least one of the numbers 0-9. Valid entries for this field are ‘Y’ and ‘N’.</p>
+
+<p><a name="pp_pass3"></a><strong>DAYS ALLOWED BETWEEN PASSWORD CHANGES</strong> - This sets
+how frequently the user is forced to change their password e.g. if you set this
+field to 30, the user will be forced to change their password every 30 days. If
+you do not wish to force password changes in this way, set this field to 0.</p>
+
+<p><a name="pp_pass4"></a><strong>PASSWORD HISTORY</strong> - Set this field to a valid number
+X, where X denotes to number of passwords to keep in the password history file.
+This controls the number of new passwords that must be used by a user before an
+old password can be re-used e.g. if this is set to 3, every time a user changes
+their password, they must choose a new password that is not the same as any of the
+last three passwords used. If you do not wish to check password uniqueness in this
+way, set this field to 0.</p>
+
+<p><a name="pp_pass5"></a><strong>LIMIT USER TO ONE CONCURRENT SESSION</strong> - This field
+allows you to specify that each user can only log onto Pension Master once at any
+one point in time. Valid values are ‘Y’ and ‘N’.</p>
+
+<p><a name="pp_pass6"></a><strong>PASSWORD REQUIRED</strong> - This field allows you to specify
+if a user has to choose a password to log in to Pension Master. If this field is
+set to ‘N’ then a user may log in to Pension Master without supplying a password,
+otherwise the user will be prompted for a password at login and will not be permitted
+access to Pension Master without first supplying a non-blank password. Valid values
+are ‘Y’ and ‘N’.</p>
+
+<p>When the details have been entered click on ‘OK’ to save the details to the system
+parameter file. You can click on ‘Cancel’ at any stage to exit the add option without
+saving the details.</p>
+
+<h2 id="a-namequery-a-recordaquery-a-record"><a name="Query a Record"></a>Query a Record</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>If any match to the selection criteria is found then the record will be displayed
+to the screen. There is only one record allowed on the System Parameter file at
+any one time as this is the current corporate user of Pension Master.</p>
+
+<h2 id="a-nameupdate-a-recordaupdate-a-record"><a name="Update a Record"></a>Update a Record</h2>
+
+<p>Before Updating, a record must be selected through the query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>When the changes have been made to the record click on ‘OK’ to save the changes
+to file, or click on ‘Cancel’ to exit the update option without saving changes.</p>
+
+<h2 id="a-nameprinting-system-parameter-detailsaprinting-system-parameter-details"><a name="Printing System Parameter Details"></a>Printing System Parameter Details</h2>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+    From Pension Master</a>.</p>
+
+<h2 id="a-namenavigating-between-screensanavigating-between-screens"><a name="Navigating Between Screens"></a>Navigating Between Screens</h2>
+
+<p>To change to a one of the other screens available in System Parameters, type ‘M’,
+or click on the ‘Menu’ menu option. The screens available are:</p>
+
+<ol>
+  <li>Basic System Parameters </li>
+  <li>Audit Trail Settings </li>
+  <li>Password Option Details </li>
+</ol>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the System Administration menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

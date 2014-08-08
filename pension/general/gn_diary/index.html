@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Diary Entry</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Diary Entry</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add A Diary Item">Add a Diary Item</a></li>
+  <li><a href="#Query/Search For A Diary Item">Query/search for a Diary Item</a></li>
+  <li><a href="#Update A Diary Item">Update a Diary Item</a></li>
+  <li><a href="#Move A Diary Item">Move a Diary Item</a></li>
+  <li><a href="#Printing Diary Details">Printing Diary Details</a></li>
+  <li><a href="#Browsing Diary Details">Browsing Diary Details</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>Only users set up as a supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may Delete/Update
+items in another user’s diary.</p>
+
+</div>
+
+<p>This program is the diary system in Pension Master and allows you to add, update and
+delete diary entries for yourself and other users.</p>
+
+<p>The following options and screen appear when this program is selected.</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Move</li>
+  <li>Report</li>
+  <li>Browse</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_diary1.gif" alt="Diary Entry Details Screen" /></p>
+
+  <p>Diary Entry Details Screen</p>
+</div>
+
+<p>This screen shows all of your diary entries for diary dates less than or equal to
+today’s date. Only items with a status flag of ‘N’ or ‘W’ will be displayed i.e. new
+items or work in progress.</p>
+
+<p>To display other diary entries e.g. for jobs that you have flagged as completed or
+for diary entries with dates in the future, you should use the <a href="#Query/Search For A Diary Item">Query</a> option
+detailed below.</p>
+
+<h2 id="a-nameadd-a-diary-itemaadd-a-diary-item"><a name="Add A Diary Item"></a>Add A Diary Item</h2>
+
+<p>Click ‘Add’. The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_diary2.gif" alt="Add A Diary Item Screen" /></p>
+
+  <p>Add A Diary Item Screen</p>
+</div>
+
+<p><strong>DATE</strong> - Enter the date you wish the diary item to be posted to. You should note
+that the diary system will only display entries for dates less than or equal to today’s
+date (unless the record has been selected through the Query option - see below).</p>
+
+<p><strong>TIME</strong> - Enter the time you wish the diary item to be posted to. You should note
+that if this field is left blank, then it will default to the current time.</p>
+
+<p><strong>SOURCE</strong> - Enter the source for your diary item. Valid options are:</p>
+
+<ul>
+  <li><strong>MEM</strong> - member file</li>
+  <li><strong>SCH</strong> - scheme file</li>
+  <li><strong>COM</strong> - company file</li>
+  <li><strong>CAT</strong> - category file</li>
+  <li><strong>GEN</strong> - general systemwide diary entry i.e. a diary entry not specific to a member, scheme, company or category.</li>
+  <li><strong>INT</strong> - Internet.</li>
+</ul>
+
+<p><strong>REFERENCE</strong> - Enter a reference number for your diary entry. The format of this
+depends on how you enter the ‘SOURCE’ field as follows:</p>
+
+<ul>
+  <li><strong>AAAAA</strong> - if source is MEM.</li>
+  <li><strong>BBBB</strong> - if source is SCH.</li>
+  <li><strong>BBBB/CCCC</strong> - if source is COM</li>
+  <li><strong>BBBB/DDD</strong> - if source is CAT</li>
+  <li><strong>0</strong> - if source is GEN</li>
+</ul>
+
+<p>where AAAAA = member number, BBBB = scheme code, CCCC = company code and DDD = category
+code e.g. for category 001 in scheme 0052, enter a REFERENCE field value of 0052/001.</p>
+
+<p><strong>ACTION</strong> - Enter the text of the diary entry.</p>
+
+<p><strong>STATUS</strong> - Enter the job completed status for your diary entry. Valid values are:</p>
+
+<ul>
+  <li><strong>Y</strong> - completed</li>
+  <li><strong>W</strong> - Work-in-progress</li>
+  <li><strong>N</strong> - New</li>
+</ul>
+
+<p><a name="memo"></a></p>
+
+<p>After the status has been entered the following window will be displayed, allowing
+the user to enter a memorandum.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_diary5.gif" alt="Enter a memorandum" /></p>
+
+  <p>Enter a memorandum</p>
+</div>
+
+<p>When the diary entry has been entered click ‘OK’ to save the details.</p>
+
+<p>The cursor will now move into the lower half of the screen where you are invited to
+enter the usernames of each Pension Master user you wish the diary entry to be posted
+to. As you type in each user name, Pension Master will display that users full name
+to the screen. If you cannot remember a users username, click ‘Search’ for a lookup
+list of available users on Pension Master.</p>
+
+<p>When the user names have been entered click ‘OK’ to save the details to the diary
+file. You can click ‘Cancel’ at any stage to exit the add option without saving the
+details.</p>
+
+<h2 id="a-namequerysearch-for-a-diary-itemaa-namequeryaquerysearch-for-a-diary-item"><a name="Query/Search For A Diary Item"></a><a name="query"></a>Query/Search For A Diary Item</h2>
+
+<p>Click ‘Query’.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_diary3.gif" alt="Query/Search For A Diary Item Screen" /></p>
+
+  <p>Query/Search For A Diary Item Screen</p>
+</div>
+
+<p>Type in the criteria to select the diary entry you wish to view and click ‘OK’. You
+must enter at least a user name and date. The diary details for that user and for
+all diary entry dates less than or equal to the date entry will then be displayed.
+You can optionally use the ‘STATUS’ field to tell Pension Master to only retrieve
+those records of a certain status.</p>
+
+<p>You can click ‘Cancel’ at this stage to exit the Query option without proceeding.</p>
+
+<p>If a match to the selection criteria is found the details will be displayed to the
+screen.</p>
+
+<p>If no records are found to match the selection criteria, a message is displayed to
+the screen and the user is requested to re-enter the selection criteria.</p>
+
+<h2 id="a-nameupdate-a-diary-itemaupdate-a-diary-item"><a name="Update A Diary Item"></a>Update A Diary Item</h2>
+
+<p>Click ‘Update’.</p>
+
+<p>Move the cursor to the row to be updated and type over the entry with the new details.
+The fields are the same as those described in the section <a href="#Add A Diary Item">Add
+A Diary Item</a> above.</p>
+
+<p>You can click ‘OK’ to save the details or click ‘Cancel’ to exit without saving the
+details.</p>
+
+<h2 id="a-namemove-a-diary-itemamove-a-diary-item"><a name="Move A Diary Item"></a>Move A Diary Item</h2>
+
+<p>Click ‘Move’ menu option.</p>
+
+<p>You will be moved to the screen showing the diary entries for the current user. Highlight
+the diary entry you wish to move and click OK.</p>
+
+<p>A list of users on your Pension Master system will be displayed. Highlight the user
+you wish to move the diary entry to and click OK.</p>
+
+<p>The diay entry is moved to the specified user and the diary entries for the current
+user will be re-displayed to the screen.</p>
+
+<h2 id="a-nameprinting-diary-detailsaprinting-diary-details"><a name="Printing Diary Details"></a>Printing Diary Details</h2>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2 id="a-namebrowseaa-namebrowsing-diary-detailsabrowsing-diary-details"><a name="browse"></a><a name="Browsing Diary Details"></a>Browsing Diary Details</h2>
+
+<p>Click ‘Browse’ to view details in any screen where the data does not fit on the screen.
+Once in browse mode, use the arrow keys or the scrollbar on the right of the data
+to navigate through the data.</p>
+
+<p>Click ‘Memo’ to display a pop-up window displaying the Memo Entry. Click the ‘Printer’
+icon to print the diary entry details and memo.</p>
+
+<p>Click OK or Cancel to leave browse mode.</p>
+
+<h2 id="a-nameexitaexit"><a name="Exit"></a>Exit</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the main menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

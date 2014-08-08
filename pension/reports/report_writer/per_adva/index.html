@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Advanced Report Generator</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Advanced Report Generator</h1>
+        </div>
+        
+
+      
+<h2 id="operators">Operators</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Operator</th>
+      <th style="text-align: left">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">EF</td>
+      <td style="text-align: left"><a href="#eff_at">Effective at<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">EQ</td>
+      <td style="text-align: left"><a href="#eq_to">Equal to<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">F</td>
+      <td style="text-align: left"><a href="#first">First entry<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GT</td>
+      <td style="text-align: left"><a href="#great">Greater than<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GE</td>
+      <td style="text-align: left"><a href="#great_eq">Greater than or equal to<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">L</td>
+      <td style="text-align: left"><a href="#last">Last entry<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">LT</td>
+      <td style="text-align: left"><a href="#less">Less than<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">LE</td>
+      <td style="text-align: left"><a href="#less_eq">Less than or equal to<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">MA</td>
+      <td style="text-align: left"><a href="#match">Matches<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">NH</td>
+      <td style="text-align: left"><a href="#no_hist">No history<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">NE</td>
+      <td style="text-align: left"><a href="#not_eq">Not equal to<a></a></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">NM</td>
+      <td style="text-align: left"><a href="#not_match">Not matches<a></a></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As well as the above listed operators, there is another one called the <a href="#range">Range operator</a>. This is slightly different to all the other operators in that it is used in Field 2 and takes two values, rather than just the one value all other operators take.</p>
+
+<h2 id="a-nameeffateffective-ata"><a name="eff_at">Effective At</a></h2>
+
+<p>The user should be able to select an item from a historic array that is effective at a specific date e.g.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Date</th>
+      <th style="text-align: left">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">01/04/1999</td>
+      <td style="text-align: left">14000</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">01/04/1998</td>
+      <td style="text-align: left">13000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The result for a salary effective at 01/03/1999 is 13000 i.e. it finds the salary
+immediately prior to or on the supplied date.</p>
+
+<p>Use the operator ‘EF’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = ps1_date, OPERATOR = EF and FIELD 2 = "19990301"</p>
+
+<p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
+
+<h2 id="a-nameeqtoequal-toa"><a name="eq_to">Equal To</a></h2>
+
+<p>During any selection of records, the user will want to be able to drill down into selecting certain records that fall within a certain scheme, or category, or has a certain date. This is where the operator ‘EQ’ comes in very useful.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Member</th>
+      <th style="text-align: left">Scheme</th>
+      <th style="text-align: left">Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">101</td>
+      <td style="text-align: left">0001</td>
+      <td style="text-align: left">001</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">102</td>
+      <td style="text-align: left">0001</td>
+      <td style="text-align: left">002</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">103</td>
+      <td style="text-align: left">0002</td>
+      <td style="text-align: left">001</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">104</td>
+      <td style="text-align: left">0001</td>
+      <td style="text-align: left">001</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The result for selecting members who are in scheme 0001 are members 101, 102 and 104.</p>
+
+<p>Use the operator ‘EQ’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = pm_scheme, OPERATOR = EQ and FIELD 2 = ‘0001’</p>
+
+<h2 id="a-namefirstfirst-entrya"><a name="first">First Entry</a></h2>
+
+<p>When using a history field, e.g. a salary value, there needs to be a way of selecting the first
+entry in that history. This is where the operator ‘F’ is used.</p>
+
+<p>If you wish to select the first salary 1 entry for a member, you would enter: </p>
+
+<p>FIELD 1 = ps1_date, OPERATOR = F and FIELD 2 is left blank.</p>
+
+<p>This would then expand, in the background, to add the following to the generated WHERE clause:</p>
+
+<pre><code>AND ps1_date = ( SELECT MIN( ps1_date ) FROM pe_salary1 WHERE ps1_member = pm_member )    
+</code></pre>
+
+<p>When this operator is used, FIELD 1 should <strong>always</strong> be the date to compare
+with on that history table (e.g. pmc_due on pe_mcon, contribution history table).</p>
+
+<p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
+
+<h2 id="a-namegreatgreater-thana"><a name="great">Greater Than</a></h2>
+
+<p>The user should be able to select an item from a historic array where the date or numeric value is greater than a specific date or value e.g.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Date</th>
+      <th style="text-align: left">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">01/04/2000</td>
+      <td style="text-align: left">15500</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">01/04/1999</td>
+      <td style="text-align: left">15000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The result for salary records greater than 15000 is the record at 01/04/2000 for 15500</p>
+
+<p>Use the operator ‘GT’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = ps1_sal1, OPERATOR = GT and FIELD 2 = 15000</p>
+
+<p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
+
+<h2 id="a-namegreateqgreater-than-or-equal-toa"><a name="great_eq">Greater Than Or Equal To</a></h2>
+
+<p>The user should be able to select an item from a historic array where the date or numeric value is greater than or equal to a specific date or value e.g.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Date</th>
+      <th style="text-align: left">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">01/04/2000</td>
+      <td style="text-align: left">15500</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">01/04/1999</td>
+      <td style="text-align: left">15000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The result for salary records greater than or equal to 15000 are records at 01/04/2000 for 15500, and 01/04/1999 for 15000</p>
+
+<p>Use the operator ‘GE’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = ps1_sal1, OPERATOR = GE and FIELD 2 = 15000</p>
+
+<p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
+
+<h2 id="a-namelastlast-entrya"><a name="last">Last Entry</a></h2>
+
+<p>When using a history field, e.g. a salary value, there needs to be a way of selecting the last
+entry in that history (this is the default option when selecting a history field in the
+existing Member Report). This is where the operator ‘L’ is used.</p>
+
+<p>If you wish to select the first salary 1 entry for a member, you would enter: </p>
+
+<p>FIELD 1 = ps1_date, OPERATOR = L and FIELD 2 is left blank.</p>
+
+<p>This would then expand, in the background, to add the following to the generated WHERE clause:</p>
+
+<pre><code>AND ps1_date = ( SELECT MAX( ps1_date ) FROM pe_salary1 WHERE ps1_member = pm_member )    
+</code></pre>
+
+<p>When this operator is used, FIELD 1 should <strong>always</strong> be the date to compare
+with on that history table (e.g. pmc_due on pe_mcon, contribution history table).</p>
+
+<p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
+
+<h2 id="a-namelessless-thana"><a name="less">Less Than</a></h2>
+
+<p>The user should be able to select an item from a historic array where the date or numeric value is less than a specific date or value e.g.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Date</th>
+      <th style="text-align: left">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">01/04/2000</td>
+      <td style="text-align: left">15500</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">01/04/1999</td>
+      <td style="text-align: left">15000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The result for salary records less than 15500 is the record at 01/04/1999 for 15000</p>
+
+<p>Use the operator ‘LT’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = ps1_sal1, OPERATOR = LT and FIELD 2 = 15500</p>
+
+<p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
+
+<h2 id="a-namelesseqless-than-or-equal-toa"><a name="less_eq">Less Than Or Equal To</a></h2>
+
+<p>The user should be able to select an item from a historic array where the date or numeric value is less than or equal to a specific date or value e.g.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Date</th>
+      <th style="text-align: left">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">01/04/2000</td>
+      <td style="text-align: left">15500</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">01/04/1999</td>
+      <td style="text-align: left">15000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The result for salary records less than or equal to 15500 are records at 01/04/2000 for 15500, and 01/04/1999 for 15000</p>
+
+<p>Use the operator ‘LE’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = ps1_sal1, OPERATOR = LE and FIELD 2 = 15500</p>
+
+<p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
+
+<h2 id="a-namematchmatchesa"><a name="match">Matches</a></h2>
+
+<p>It is a requirement that WHERE clauses be done on partial strings e.g. pm_surname where
+we wish to get all surnames starting with "Smi". In SQL this would use the
+MATCHES clause.</p>
+
+<p>Use the operator ‘MA’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = pm_surname, OPERATOR = MA and FIELD 2 = ‘Smi*’</p>
+
+<p>this would be expanded, in the background, so that the SQL would be:</p>
+
+<pre><code>pm_surname MATCHES 'Smi*'.
+</code></pre>
+
+<p>The question mark can also be used in the MATCHES clause.  ‘?’ represents a single character in a string e.g. pm_surname where we wish to get all surnames starting with "Sm", and ending in "th". For this example, you would enter: </p>
+
+<p>FIELD 1 = pm_surname, OPERATOR = MA and FIELD 2 = ‘Sm?th’</p>
+
+<p>this would be expanded, in the background, so that the SQL would be:</p>
+
+<pre><code>pm_surname MATCHES 'Sm?th'.
+</code></pre>
+
+<div class="alert alert-danger" role="alert">
+  <p>Due to character strings having to be contained in single quotes (‘) in SQL statements, it is impossible to do a match where a (‘) is present in the data. For example, O’Connell or O’Donnell. </p>
+
+  <p>Therefore, if you wanted to do a match where you wanted to select surnames that start with “O’” and end in “onnell”, then we recommend you enter the following:</p>
+
+  <p>FIELD 1 = pm_surname, 
+OPERATOR = MA, 
+FIELD 2 = ‘O*?onnell’</p>
+</div>
+
+<h2 id="a-namenohistno-historya"><a name="no_hist">No History</a></h2>
+
+<p>When using a history field, e.g. a salary value, there needs to be a way of selecting members that do not have an entry on the history record for a certain date. This can be useful when doing an annual update of members salaries. You can print off this report to see what members have no salary entry for this year i.e. what members have been missed out in the update procedure.</p>
+
+<p>Use the operator ‘NH’ so that in the example where you wish to select any member
+records with no salary 1 at 1/4/2000 you would enter: </p>
+
+<p>FIELD 1 = ps1_date&amp;quot, OPERATOR = NH and FIELD 2 = "20000401".</p>
+
+<p>This operator would only be relevant when selecting a numeric item from a history table
+e.g. salary history, contribution history, NI history, investment history. If it is used,
+FIELD 1 should <strong>always</strong> be the date to compare with on that history table
+(e.g. pmc_due on pe_mcon, contribution history table), OPERATOR would always be
+"NH" and FIELD 2 would be the date at which you want to select records with no
+history.</p>
+
+<p>The use of this operator would necessitate a second SQL statement (called SQL2) being
+executed in tandem with the main SQL statement (called SQL1) generated by this module.
+This second SQL statement would be within the FOREACH loop from SQL1 and would count up
+the number of specific history entries from the relevant history table and then only allow
+records selected by SQL1 onto the report if SQL2 indicated that there were zero records
+for this member.</p>
+
+<p>In the case of the salary 1 example above, SQL2 might be:</p>
+
+<pre><code>FOREACH sql1_cur INTO p_temp.*
+    LET p_count = 0
+
+    SELECT COUNT( * )
+    INTO p_count
+    WHERE pe_salary1.ps1_member = p_temp.pm_member
+    AND pe_salary1.ps1_date = '01/04/2000'
+
+    IF p_count = 0 THEN
+        OUTPUT TO REPORT...
+    END IF
+END FOREACH
+</code></pre>
+
+<div class="alert alert-danger" role="alert">
+  <p>The use of the ‘NH’ operator is limited to one per report.  This is due to the difficulty of generating the appropriate IF statement needed with the neccessary AND/OR, and brackets entered by the user.  </p>
+
+  <p>Unlike ‘SELECT’ statements, the ‘IF’ statment must be hard-coded and cannot be made up from variables.  Therefore, the AND/OR clause is defaulted to ‘AND’, and no brackets can be entered.</p>
+</div>
+
+<h2 id="a-namenoteqnot-equal-toa"><a name="not_eq">Not Equal To</a></h2>
+
+<p>During any selection of records, the user will want to be able to drill down into selecting certain records that don’t fall within a certain scheme, or category, or doesn’t have a certain date. This is where the operator ‘NE’ comes in very useful.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Member</th>
+      <th style="text-align: left">Scheme</th>
+      <th style="text-align: left">Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">101</td>
+      <td style="text-align: left">0001</td>
+      <td style="text-align: left">001</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">102</td>
+      <td style="text-align: left">0001</td>
+      <td style="text-align: left">002</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">103</td>
+      <td style="text-align: left">0002</td>
+      <td style="text-align: left">001</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">104</td>
+      <td style="text-align: left">0001</td>
+      <td style="text-align: left">001</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The result for selecting members who are not in scheme 0001 is members 103.</p>
+
+<p>Use the operator ‘NE’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = pm_scheme, OPERATOR = NE and FIELD 2 = ‘0001’</p>
+
+<h2 id="a-namenotmatchnot-matchesa"><a name="not_match">Not Matches</a></h2>
+
+<p>It is a requirement that WHERE clauses be done on partial strings e.g. pm_surname where
+we wish to get all surnames that don’t start with "Smi". In SQL this would use the
+NOT MATCHES clause.</p>
+
+<p>Use the operator ‘NM’ so that in the above example, you would enter: </p>
+
+<p>FIELD 1 = pm_surname, OPERATOR = NM and FIELD 2 = ‘Smi*’</p>
+
+<p>this would be expanded, in the background, so that the SQL would be:</p>
+
+<pre><code>pm_surname NOT MATCHES 'Smi*'.
+</code></pre>
+
+<p>The question mark can also be used in the NOT MATCHES clause.  ‘?’ represents a single character in a string e.g. pm_surname where we wish to get all surnames that don’t start with "Sm", and don’t end in "th". For this example, you would enter: </p>
+
+<p>FIELD 1 = pm_surname, OPERATOR = NM and FIELD 2 = ‘Sm?th’</p>
+
+<p>this would be expanded, in the background, so that the SQL would be:</p>
+
+<pre><code>pm_surname NOT MATCHES 'Sm?th'.
+</code></pre>
+
+<div class="alert alert-danger" role="alert">
+  <p>Similarly to the ‘MA’ operator, due to character strings having to be contained in single quotes (‘) in SQL statements, it is impossible to use data where a (‘) is present. For example, O’Connell or O’Donnell. </p>
+
+  <p>Therefore, if you wanted to do a link where you wanted to select surnames that don’t start with “O’” and don’t end in “onnell”, then we recommend you enter the following:</p>
+
+  <p>FIELD 1 = pm_surname, 
+OPERATOR = NM, 
+FIELD 2 = ‘O*?onnell’</p>
+</div>
+
+<h2 id="a-namerangerange-operatora"><a name="range">Range Operator</a></h2>
+
+<p>This is slightly different to all the other operators in that it is used in Field 2 and takes two values, rather than just the one value all other operators take.</p>
+
+<p>It is a requirement that you may need to select records where these records fall within a range of certain criteria e.g. pm_scheme where we wish to get all members that are in schemes 0000 through to 0086.</p>
+
+<p>Use the value ‘:’ for the range opertaor so that in the above example, you would enter:</p>
+
+<p>FIELD 1 = pm_scheme, OPERATOR = EQ, FIELD 2 = ‘0000’:’0086’</p>
+
+<p>this would be expanded in SQL to be:</p>
+
+<pre><code>pm_scheme BETWEEN '0000' AND '0086'.
+</code></pre>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

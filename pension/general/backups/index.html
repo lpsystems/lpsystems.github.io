@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Backups</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Backups</h1>
+        </div>
+        
+
+      
+<div class="alert alert-danger" role="alert">
+  <p>It is of prime importance that you regularly backup your Pension Master data. L&amp;P
+Systems Limited cannot be held responsible for loss of data if these backup procedures
+are not correctly followed.
+The following guidelines are a bare minimum which you must adhere to in order to
+ensure the safety of your Pension Master data.</p>
+</div>
+
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#tapes">Backup Tapes</a> </li>
+  <li><a href="#software">Backup Software</a> </li>
+  <li><a href="#ntserverinformix">Windows NT - SQL Server Database</a> </li>
+  <li><a href="#ntserversqlserver">Windows NT - Informix Database</a> </li>
+  <li><a href="#linux">Unix or Linux</a> </li>
+</ul>
+
+<h2 id="a-nametapesabackup-tapes"><a name="tapes"></a>Backup Tapes</h2>
+
+<p>We recommend that backups should be done every day with a full system backup being
+done at least once a month.</p>
+
+<p>There should be five tapes for the backup labelled ‘Monday’ through ‘Friday’. The
+tapes for the backup should be rotated. i.e. Use ‘Monday’, ‘Tuesday’, ‘Wednesday’,
+‘Thursday’, ‘Friday’ and start again with ‘Monday’. </p>
+
+<p>Every two weeks we recommend you take the Friday tape out of circulation and archive
+it, replacing it with a new tape. You thus have a permanent snapshot of your data
+every two weeks should you wish to restore data to a specific date. </p>
+
+<p>The backup tapes should be stored in a safe place e.g. in a fireproof safe or off
+the premises. </p>
+
+<p>The tape drive you use should regularly be cleaned with the appropriate head cleaning
+tape to ensure the reliability of the tape drive. You should follow your tape drive
+manufacturers instructions in this regard at all times. </p>
+
+<p>Also, from time to time, tapes wear out if they are used too much and could result
+in the backup appearing to work properly, but in the data written to the tape being
+corrupt. It is important to monitor the situation and replace worn out tapes with
+new tapes every few months to ensure the reliability of your tapes. </p>
+
+<h2 id="a-namesoftwareabackup-software"><a name="software"></a>Backup Software</h2>
+
+<p>Pension Master can be backed up using your normal backup software. The method for
+doing this varies dependant on whether Pension Master is running on Microsoft Windows
+NT Server, Unix or Linux.</p>
+
+<p>The general principle is that the Pension Master data is stored in a particular directory
+and it is this directory that must be backed up. </p>
+
+<h2 id="a-namentserversqlawindows-nt-server---sql-server-database"><a name="ntserversql"></a>Windows NT Server - SQL Server Database</h2>
+
+<p>We assume Pension Master is installed in <em>d:\penmast\penprog</em> - substitute the
+appropriate drive letter for your Pension Master server in what follows. </p>
+
+<p>SQL Server by default will store the Pension Master data in the <em>c:\Program Files\Microsoft
+SQL Server\MSSQL\data</em> folder but this may be different if the default location
+was changed when creating the pension database. </p>
+
+<p>The backup of Pension Master data is a two stage process: </p>
+
+<ol>
+  <li>Use the standard tools provided by the SQL Server Enterprise Manager program to create
+a Maintenance Plan to backup the pension database to the folder <em>d:\penmast\backup</em> on
+a regular basis (we suggest this is done daily). </li>
+  <li>Use your backup software to backup the actual SQL Server database files (in the folder <em>c:\Program
+Files\Microsoft SQL Server\MSSQL\data</em>) and the contents of <em>d:\penmast\backup</em> on
+a regular basis. </li>
+</ol>
+
+<h2 id="a-namentserverinformixawindows-nt-server---informix-database"><a name="ntserverinformix"></a>Windows NT Server - Informix Database</h2>
+
+<p>The user that performs the backup <strong>must</strong> be a member of the Informix-Admins group
+in User Manager or User Manager For Domains.</p>
+
+<p>We assume that : </p>
+
+<ol>
+  <li>Pension Master is installed in a directory identified by the environment variable
+%LANDP%. This is typically c:\penmast but may vary from installation to installation. </li>
+  <li>Your database is stored in a directory identified by the environment variable %IFMXDATA%.
+This is typically c:\ifmxdata but may vary from installation to installation. </li>
+  <li>We are running Pension Master on a server called \FENDER, with a hostname of fender
+and that Informix is installed in %LANDP%\informix. </li>
+</ol>
+
+<p>If in doubt, contact L&amp;P Systems technical support who will be able to provide
+you with the necessary details.</p>
+
+<p>The steps to setup a backup for the Pension Master data are as follows: </p>
+
+<ol>
+  <li>Make sure you have an empty directory %LANDP%\backup. </li>
+  <li>Create a batch file in %LANDP% called backup.bat as follows:</li>
+</ol>
+
+<pre><code>@echo off 
+set LANDP=c:\penmast 
+set INFORMIXDIR=%LANDP%\informix 
+set INFORMIXSERVER=ol_fender 
+set PATH=%INFORMIXDIR%\bin;%PATH% 
+set INFORMIXSQLHOSTS=\\FENDER 
+set DBDATE=DMY4/ 
+set DBCENTURY=c 
+cd %LANDP%\backup 
+dbexport pension&lt;/td&gt;
+</code></pre>
+
+<p>To include the Pension Master data in your regular backup, make sure the above batch
+file is run prior to the backup (you can normally do this via an option in your backup
+software) and then backup the directory %LANDP%\backup.</p>
+
+<h2 id="a-namelinuxaunix-or-linux"><a name="linux"></a>Unix or Linux</h2>
+
+<p>We assume that :</p>
+
+<ol>
+  <li>Pension Master is installed in a directory identified by the environment variable
+$LANDP. This is typically /u/LandP but may vary from installation to installation. </li>
+  <li>The Pension Master data resides in a directory identified by the environment variable
+$DBPATH. This is typically $LANDP/data but may vary from installation to installation. </li>
+</ol>
+
+<p>If in doubt, contact L&amp;P Systems technical support who will be able to provide
+you with the necessary details.</p>
+
+<p>The steps to setup a backup for the Pension Master data are as follows: </p>
+
+<ol>
+  <li>Make sure the directory $DBPATH is included in the regular backup.</li>
+</ol>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

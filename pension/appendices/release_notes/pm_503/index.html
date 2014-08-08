@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Release Notes 5.03b5</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Release Notes 5.03b5</h1>
+        </div>
+        
+
+      <h2>Details Of The Changes
+</h2>
+<ol>
+<li>
+    In the <i>Salary History</i>, <i>Contribution History</i> and <i>Units History</i> screens
+    of <i>Member File Maintenance</i>, check that the history date entered is not less
+    than the date the member joined the scheme (<i>pm_dps</i>)., If it is, display an
+    error message and ask the user if they really intend to use this date. 
+</li>
+<li>
+    Added postcode field to <i>Company File Maintenance</i> and amended <i>Letter/Cert</i> option
+    to reflect this. 
+</li>
+<li>
+    Added <i>Status Code</i> to the list of possible membership selection criteria in <i>Pensionable
+    Salary Update</i> program. 
+</li>
+<li>
+    Added <i>Status Type</i> and <i>Special Code</i> to the list of possible selection
+    criteria when searching for a member record in <i>Member File Maintenance</i>. Also
+    added an <i>F8</i> lookup facility on the <i>Special Code</i> field. 
+</li>
+<li>
+    Added <i>Calculation Trace Report</i> to both <i>Member File Maintenance</i> and <i>Batch
+    Quotation Run</i> so that every time you run a calculation on <i>Pension Master</i>,
+    a report is produced showing for each member and each formula, the formula lines processed
+    together with intermediate results for each formula line. 
+</li>
+<li>
+    Extended <i>Label Printing Facility</i> in <i>Member File Maintenance</i> to give
+    more flexibility in output. First of all, the user can choose to print on to a single
+    strip of labels, as before, or on to a laser sheet (2*4) similar to an Avery L7165
+    sheet. The user is no longer restricted to just producing labels showing the members
+    name and address in company order. A free text header line is available followed by
+    six lines of selected data fields (eight line with the laser sheet option) from the
+    Members Basic and Address records and Scheme, Company and Category descriptions. The
+    labels are automatically sorted in alpha order but the user can extend this sort using
+    scheme code, company code and/or category code. All selections have a <i>F8</i> lookup
+    facility and basic help text attached. 
+</li>
+<li>
+    Added report code, description and scheme code and description to the header of the <i>Mail-Merge
+    Variable Definition Report</i> produced by the <i>Mail-Merge Integration Report</i> at
+    the request of Mark Winstanley. 
+</li>
+<li>
+    Allow use of <i>F2</i> key to delete lines of contribution details in the <i>Contribution
+    Hiostory</i> screen of <i>Member File Maintenance</i>. This is allowable in the following
+    circumstances: 
+    <ul>
+	<li>
+	    If the scheme is a defined benefits scheme. 
+	</li>
+	<li>
+	    Otherwise, if the unitposting flag for that contribution entry is set to "N" i.e.
+	    if that contribution has not yet been used to purchase units. 
+	</li>
+    </ul>
+</li>
+<li>
+    Fixed bug in <i>Quotation Screen</i> of <i>Member File Maintenance</i> where current
+    and previous quote dates were not being written back to the database prior to the
+    calculations being run, possibly resulting in last time's quotation dates being used
+    in any calculations that depend on quote dates. This is not expected to affect many
+    users as most formulae depend on termination date and not quote date. 
+</li>
+<li>
+    Display batch date, scheme code and scheme name at the top of the second screen in <i>Batch
+    Data Input</i> so as to make it clearer to the user which batch they are inputting. 
+</li>
+<li>
+    In the <i>Salary</i> section of <i>Batch Data Input</i>, the pop-up deducible window
+    for <i>Pensionable Salary</i> now appears not only when the <i>Pensionable Salary</i> is
+    blank, but also when it is zero. This is to aid input of salaries when returning to
+    a previosly saved salary batch in the situation where you have not completed entering
+    the salaries prior to saving the batch. 
+</li>
+<li>
+    Added prinouts of investment funds &gt; 0 to the report option when inputting a <i>Contribution
+    Batch</i> in <i>Batch Data Input</i>. This enables the user to check things like expenses
+    and allocations to individual funds that were not previously available at this stage. 
+</li>
+<li>
+    Contributions screen report in <i>Member File Maintenance</i> now prints details of
+    the breakdown of any expenses for each contribution source and defaults to printing
+    in landscape mode. 
+</li>
+<li>
+    Added <i>Contribution History</i> and <i>Unit History</i> to the <i>Full Member Report</i> in <i>Member
+    File Maintenance</i>. 
+</li>
+<li>
+    User can now select date fields <i>pds_date</i>, <i>pdb_date</i> and <i>ptv_date</i> using
+    the <i>defsal()</i>, <i>defhst()</i> and <i>transfer()</i>functions in <i>Formula
+    File Maintenance</i>. 
+</li>
+</ol>
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

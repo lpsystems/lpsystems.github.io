@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Release Notes 5.0.4b1</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Release Notes 5.0.4b1</h1>
+        </div>
+        
+
+      <h2>Details Of The Changes
+</h2>
+<ol>
+<li>
+    Amended the Part Time Service record. This makes the recording of the part time hours
+    worked for members easier and does not now require you to enter a complete service
+    history, regardless of wether the member was part time or not. 
+    <p>
+	If a member commences part time service then the start date, the amount of hours worked
+	and the full time hours standard should be recorded. When the member returns to full
+	time service or the amount of part time hours change, the end date should be entered. 
+    </p>
+    <p>
+	Equivalent service periods are automatically calculated in <b>days</b> as the user
+	moves from each line. 
+    </p>
+    <p>
+	The pt(date1,date2) function is now available for use in your formulae via <i>Formula
+	File Maintenance</i>. This will calculate a ratio of part time service to actual period
+	ratio which can then be applied to service or salaries to get the part time equivalent
+	of full time service. The manual page for this is as follows:
+    </p>
+    <p>
+	<b>pt(date1,date2)</b>
+    </p>
+    <p>
+	<b>OVERVIEW</b> 
+	<br />
+	Use the pt function to calculate the full time
+	equivalent service ratio 
+	<br />
+	from a Part Time Service record. 
+    </p>
+    <p>
+	<b>SYNTAX</b> 
+	<br />
+	pt(date1,date2) 
+    </p>
+    <p>
+	<b>EXPLANATION</b> 
+	<br />
+	date1 start date for date period 
+	<br />
+	date2 end date for date period 
+    </p>
+    <p>
+	<b>NOTES</b> 
+	<br />
+	The two dates must be field references to the member
+	file (pe_mem), 
+	<br />
+	constant dates entered in the format YYYYMMDD,
+	where YYYY is the year, MM 
+	<br />
+	is the month and DD is the day or references to
+	the result of another line 
+	<br />
+	of formula code within the current formula e.g.
+	@1. 
+    </p>
+    <p>
+	If date1 &gt; date2 the value returned will be
+	0. 
+    </p>
+    <p>
+	The ratio will be calculated as the total equivalent
+	service recorded 
+	<br />
+	between date1 and date2 on the Part Time Service
+	record plus the remaining 
+	<br />
+	service (assumed to be at full time), divided by
+	the period between date1 
+	<br />
+	and date2. 
+    </p>
+    <p>
+	This is displayed as a 2 decimal place result but
+	is available in the 
+	<br />
+	calculating formula to 8 decimal places. 
+    </p>
+    <p>
+	<b>EXAMPLES</b> 
+	<br />
+	pt(pm_des,pm_npd) 
+	<br />
+	pt(19950122,pm_dterm_dt) 
+	<br />
+	pt(19900406,19960405) 
+	<br />
+	pt(@1,19960405) 
+    </p>
+</li>
+<li>
+    Amended the <i>cty(), cy(), cm(), cd(), hy(), hm()</i> and <i>pt()</i>functions in <i>Formula
+    File Maintenance</i> so that the user can now access the results of other lines of
+    formulae as arguments to these functions in the format <i>@line_num</i>. 
+</li>
+<li>
+    For example, if you wish to calculate the period in years and completed months between
+    the date of transfer in number 1 and Normal Pension Date, use the following formula
+    code: 
+    <br />
+    <ol>
+    <li>
+    transfer(ptv_date,2,1)
+    </li>
+    <li>
+    cm(@1,pm_npd)
+    </li>
+    </ol>
+</li>
+<li>
+    Amended the screen selection pop-up menu in <i>Member File Maintenance</i> so that
+    a window now appears that displays all the available screens for the current scheme
+    type at once, together with the corresponding screen numbers. The user is invited
+    to select the screen they wish to view by simply entering the screen number. This
+    replaces the old scrolling menu that was found to be cumbersome to use. The new facility
+    allows the user to rapidly move from one screen to another. 
+</li>
+<li>
+    Screen numbers are consistent regardless of the scheme type currently selected i.e.
+    the <i>Quotation Screen</i> is always screen 27. 
+</li>
+<li>
+    Added a lookup facility in <i>Member File Maintenance</i> for the Query option on
+    Status Type, Marital Status and Sex. Available by clicking on the 'Search' button. 
+</li>
+</ol>
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>

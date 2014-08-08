@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+	
+    <title>Government Legislation</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <meta name="generator" content="nanoc 3.7.1">
+  </head>
+  <body role="document">
+ 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+	    
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Government Legislation</h1>
+        </div>
+        
+
+      
+<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Query/Search For Legislation Details">Query/Search For Legislation Details</a></li>
+  <li><a href="#Adding Government Legislation Details">Adding Government Legislation Details</a>
+    <ul>
+      <li><a href="#Settings">Legislation Settings</a></li>
+    </ul>
+  </li>
+  <li><a href="#Updating Government Legislation Details">Updating Government Legislation Details</a></li>
+  <li><a href="#Browsing Government Legislation Details">Browsing Government Legislation Details</a></li>
+  <li><a href="#Viewing Government Legislation Details">Viewing Government Legislation Details</a></li>
+  <li><a href="#print">Printing Government Legislation Details</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+
+<p>This Program allows maintenance of the Government Legislation details. This is where
+you will find data relating to annual statistics, including tax bands and tax rates. 
+The annual statistics can be added and updated in this program.</p>
+
+<p>The government legislation details must be set up here for the tax year, before
+you attempt to run the <a href="/payroll/payroll_procedures/py_pay/#Introduction">Payroll Run</a> program.</p>
+
+<p>The following options and screen appear when this program is selected.</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Report</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_govn1.gif" alt="Legislation Settings Screen" /></p>
+
+  <p>Legislation Settings Screen</p>
+</div>
+
+<h2 id="a-namequerysearch-for-legislation-detailsaa-namequeryaquerysearch"><a name="Query/Search For Legislation Details"></a><a name="query"></a>Query/Search</h2>
+
+<p>For Legislation Details</p>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_govn2.gif" alt="Query Screen" /></p>
+
+  <p>Query Screen</p>
+</div>
+
+<p>You may select records by using the Tax Year From field. Once you have entered
+your selection criteria, click ‘OK’ to proceed and retrieve the records from the
+database or click ‘Cancel’ to abort the selection and return to the Government Legislation
+menu.</p>
+
+<p>When a record is found to match your selection criteria, it is displayed to the
+screen.</p>
+
+<h2 id="a-nameadding-government-legislation-detailsaadding-government-legislation-details"><a name="Adding Government Legislation Details"></a>Adding Government Legislation Details</h2>
+
+<h3 id="a-namesettingsalegislation-settings"><a name="Settings"></a><strong>Legislation Settings</strong></h3>
+
+<p>Click ‘Add’.</p>
+
+<p>The Legislation Settings screen is used to hold the annual statistics, which
+are produced each year by the Government.</p>
+
+<p>Enter the fields as required as follows:</p>
+
+<p><a name="pygh_year_from"></a><strong>TAX YEAR FROM</strong> - Enter the year the tax year starts e.g. if the tax year is 2000/2001, then you
+enter 2000 in this field.</p>
+
+<p><a name="pygh_year_to"></a><strong>TAX YEAR TO</strong> - This field is automatically calculated by Payroll Master e.g. if 2000 is entered
+in the tax year from field, then the tax year to field is calculated as 2001. You
+cannot input in this field.</p>
+
+<p><a name="pygh_band_no"></a><strong>NUMBER OF BANDS</strong> - Enter the number of tax bands for the tax year. The number entered in this field
+will determine the number of rows that must be entered in the table below.</p>
+
+<p><a name="pygh_k_codes"></a><strong>‘K’ TAX CODES REGULATORY LIMIT %</strong> - Enter the regulatory % to be used for all prefix ‘K’ tax codes.</p>
+
+<p><a name="pygh_scot_var"></a><strong>SCOTTISH VARIANCE</strong> - Enter the amount of Scottish variance to be used when calculating tax for Scottish
+tax codes.</p>
+
+<p><a name="pygb_bandwidth"></a><strong>BAND WIDTH</strong> - Enter the width of the tax band.</p>
+
+<p><a name="pygb_from"></a><strong>FROM</strong> - The amount for this field is calculated by Payroll Master from the amount entered
+in the band width field. You cannot input in this field.</p>
+
+<p><a name="pygb_to"></a><strong>TO</strong> - The amount of this field is calculated by Payroll Master from the amount entered
+in the band width field. You cannot input in this field.</p>
+
+<p><a name="pygb_rate"></a><strong>RATE</strong> - Enter the % rate at which the amount of pay in the band is to be calculated at.</p>
+
+<p><a name="pygb_brb"></a><strong>BASIC RATE BAND</strong> - Enter ‘Y’ for Yes in this field if the tax band is classed as the Basic Rate Band,
+and a tick will appear in the box. If the tax band is not the Basic Rate Band then
+enter ‘N’ for No, and the box will be blank.</p>
+
+<p>Click ‘OK’ to save the Government Legislation Details, or click ‘Cancel’ to exit
+the screen without saving the details entered.</p>
+
+<h2 id="a-nameupdating-government-legislation-detailsaupdating-government-legislation-details"><a name="Updating Government Legislation Details"></a>Updating Government Legislation Details</h2>
+
+<p>The fields listed above can be updated, excluding the ‘Tax Year From’ and ‘Tax Year
+To’ fields, and the fields which cannot be accessed in the table.</p>
+
+<h2 id="a-namebrowsing-government-legislation-detailsabrowsing-government-legislation-details"><a name="Browsing Government Legislation Details"></a>Browsing Government Legislation Details</h2>
+
+<p>Click ‘Browse’ to view the data that does not fit on the screen.</p>
+
+<p>In browse mode, use the scrollbar on the right of the screen to navigate through
+the data.</p>
+
+<p>Click ‘OK’ or ‘Cancel’ to leave browse mode.</p>
+
+<h2 id="a-nameviewing-government-legislation-detailsaviewing-government-legislation-details"><a name="Viewing Government Legislation Details"></a>Viewing Government Legislation Details</h2>
+
+<p>To select all government legislation settings, click ‘Query’ and leave the ‘Tax
+Year From’ field blank. Then click ‘OK’. To view these other records selected, click
+on Next to view the next record, and Previous to view the previous record.</p>
+
+<p>You can also use the options on the toolbar to view the first, previous, next and
+last records in your query.</p>
+
+<h2 id="a-nameprintaa-nameprinting-government-legislation-detailsaprinting-government-legislation-details"><a name="print"></a><a name="Printing Government Legislation Details"></a>Printing Government Legislation Details</h2>
+
+<p>Click ‘Report’.</p>
+
+<p>If legislation details have been selected then the following window appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_govn3.gif" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>The options are as follows:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Print current record</td>
+      <td>Produce a report for the tax year details currently displayed to the screen.</td>
+    </tr>
+    <tr>
+      <td>Print all selected record(s)</td>
+      <td>Produce a report for all selected tax year details.</td>
+    </tr>
+    <tr>
+      <td>Select record(s) to print</td>
+      <td>A <a href="#select records">window</a> appears, which allows you to make a selection.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If legislation details have not been selected then the following window appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_govn4.gif" alt="Select Report Options Window" /></p>
+
+  <p><a name="select records"></a>Select Report Options Window</p>
+</div>
+
+<p>You can select the record(s) to print in this dialog box. Further details of the
+printing options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>.</p>
+
+<p>Select the appropriate option and click ‘OK’. Click ‘Cancel’ to exit the printing
+or ‘Help’ to display this help text.</p>
+
+<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and returns to the Globals menu.</p>
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2014 L&amp;P Systems Limited. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap-min.js"></script>
+  </body>
+</html>
