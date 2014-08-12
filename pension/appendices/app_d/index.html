@@ -44,9 +44,26 @@
         
 
       
-<p>This note describes the in-built support for the Euro in Pension Master.</p>
+<h2 id="a-nameindexaindex"><a name="index"></a>Index</h2>
 
-<h2 id="introduction">Introduction</h2>
+<ul>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#references">References</a></li>
+  <li><a href="#base_currency">Base Currency</a></li>
+  <li><a href="#implementation_of_the_euro">Implementation of the Euro</a>
+    <ul>
+      <li><a href="#system_parameters">System Parameters</a></li>
+      <li><a href="#schemes">Schemes</a></li>
+      <li><a href="#members">Members</a></li>
+      <li><a href="#formulae">Formulae</a></li>
+      <li><a href="#annual_statutory_amounts">Annual Statutory Amounts</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="a-nameintroductionaintroduction"><a name="introduction"></a>Introduction</h2>
+
+<p>This note describes the in-built support for the Euro in Pension Master.</p>
 
 <p>The Euro becomes a currency in it’s own right with effect from 1/1/1999. Euro notes
 and coins will not be circulated until 1/1/2002 and in the <em>transition period</em> (which
@@ -57,7 +74,7 @@ or the <em>National Currency Unit</em> (NCU) e.g. Irish Punts or Pounds Sterling
 until 31/12/2001 or can switch to operating in Euro currency at any time between 1/1/1999
 and 31/12/2001. </p>
 
-<h2 id="references">References</h2>
+<h2 id="a-namereferencesareferences"><a name="references"></a>References</h2>
 
 <ul>
   <li><a href="http://www.ispo.cec.be/y2keuro/euroit.html">IT Impact Of The Euro Website</a> (http://www.ispo.cec.be/y2keuro/euroit.html) </li>
@@ -67,17 +84,17 @@ Euro And The Rounding Of Currency Amounts</a> (http://www.ispo.cec.be/y2keuro/do
 Systems For The Euro</a> (http://www.ispo.cec.be/y2keuro/docs/wdiseuro.pdf) </li>
 </ul>
 
-<h2 id="base-currency">Base Currency</h2>
+<h2 id="a-namebasecurrencyabase-currency"><a name="base_currency"></a>Base Currency</h2>
 
 <p>This is sometimes known as the ‘lead currency’ and denotes the currency unit in which
 Pension Master processes and stores information. It is anticipated that this will
 normally be the NCU.</p>
 
-<h2 id="pension-master-implementation-of-the-euro">Pension Master Implementation Of The Euro</h2>
+<h2 id="a-nameimplementationoftheeuroaimplementation-of-the-euro"><a name="implementation_of_the_euro"></a>Implementation of the Euro</h2>
 
 <p>We have implemented support for the Euro in the following ways:</p>
 
-<h3 id="system-parameters">System Parameters</h3>
+<h3 id="a-namesystemparametersasystem-parameters"><a name="system_parameters"></a>System Parameters</h3>
 
 <p>We have introduced a new field ‘<a href="/pension/system_administration/pem_sysp/">Default Base Currency</a>’
 to the first screen of this program. This holds the 3 letter code for the default
@@ -86,7 +103,7 @@ of the valid currency codes is available in this field, just click on the ‘Ser
 button and these codes are based on internationally accepted standards used in the
 money markets. </p>
 
-<h3 id="schemes">Schemes</h3>
+<h3 id="a-nameschemesaschemes"><a name="schemes"></a>Schemes</h3>
 
 <p>We have introduced a new field ‘<a href="/pension/file_maintenance/pem_sch/">Base Currency</a>’ to the first
 screen of this program. This holds the 3 letter code for the base currency to be used
@@ -124,7 +141,7 @@ it was originally converted to Euro’s. </p>
 an obsolete currency, so all schemes that still have the NCU as their base currency
 should be converted over to Euro’s following the above procedure. </p>
 
-<h3 id="members">Members</h3>
+<h3 id="a-namemembersamembers"><a name="members"></a>Members</h3>
 
 <p>All screens containing monetary values now have an additional two fields at the top
 of the screen which show the currency code and description of the currency that the
@@ -136,7 +153,7 @@ Euro’ button in Pension Master. </p>
 <p>The above principles also apply to other areas of the scheme data that hold monetary
 values e.g. the scheme level user defined fields in <a href="/pension/file_maintenance/pem_sch/#Scheme User Defined Details">Schemes</a>. </p>
 
-<h3 id="formulae">Formulae</h3>
+<h3 id="a-nameformulaeaformulae"><a name="formulae"></a>Formulae</h3>
 
 <p>We have introduced two new functions ncu_to_eur() and eur_to_ncu() which take a monetary
 value and convert this from the NCU to Euro and from the Euro to NCU respectively.</p>
@@ -154,7 +171,7 @@ The Euro will now become the default currency for the scheme. The above procedur
 can be applied in reverse using the eur_to_ncu() function to convert calculated results
 from Euro’s into NCU for output to benefit statements and certificates. </p>
 
-<h3 id="annual-statutory-amounts">Annual Statutory Amounts</h3>
+<h3 id="a-nameannualstatutoryamountsaannual-statutory-amounts"><a name="annual_statutory_amounts"></a>Annual Statutory Amounts</h3>
 
 <p>This module now has an additional two fields at the top of the screen which show the
 currency code and description of the currency that the data is held in i.e. the base

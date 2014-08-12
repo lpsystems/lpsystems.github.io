@@ -56,17 +56,28 @@
   <li><a href="#Viewing Member Details">Viewing Member Details</a></li>
   <li><a href="#Updating Member Details">Updating Member Details</a>
     <ul>
-      <li><a href="#Personal">Member’s Personal Details</a></li>
-      <li><a href="#Pension">Member’s Pension Details</a></li>
-      <li><a href="#Year To Date">Member’s Year To Date Details</a></li>
-      <li><a href="#Bank">Member’s Bank Details</a></li>
-      <li><a href="#History">Member’s History Details</a></li>
+      <li><a href="#PERSONAL">Member’s Personal Details</a></li>
+      <li><a href="#PENSION">Member’s Pension Details</a></li>
+      <li><a href="#YTD">Member’s Year To Date Details</a></li>
+      <li><a href="#BANK">Member’s Bank Details</a></li>
+      <li><a href="#HISTORY">Current History Details</a>
+        <ul>
+          <li><a href="#DELETE">Deleting Member History Details</a></li>
+        </ul>
+      </li>
+      <li><a href="#HISTORIC">Historic Details</a></li>
       <li><a href="#ELEMENT">Member’s Pay Element Details</a></li>
     </ul>
   </li>
-  <li><a href="#print">Printing Individual Screens, Full Member Details &amp; Address Labels</a></li>
+  <li><a href="#print">Printing Individual Screens, Full Member Details &amp; Address Labels</a>
+    <ul>
+      <li><a href="#fmemprint">Full Member Report</a></li>
+      <li><a href="#addrlab">Printing Address Labels</a></li>
+    </ul>
+  </li>
   <li><a href="#action">Instigating A Workflow Action</a></li>
   <li><a href="#navigate">Navigating Between Screens</a></li>
+  <li><a href="#Producing Ad-Hoc Letters">Producing Ad-Hoc Letters</a></li>
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
@@ -102,7 +113,7 @@ follows:</p>
 </ul>
 
 <div class="screen">
-  <p><img src="/payroll/images/py_mem1.gif" alt="Member Personal Details Screen" /></p>
+  <p><img src="/payroll/images/py_mem1.jpg" alt="Member Personal Details Screen" /></p>
 
   <p>Member Personal Details Screen</p>
 </div>
@@ -112,7 +123,7 @@ follows:</p>
 <p>Click ‘Query’. The following pop-up window is displayed:</p>
 
 <div class="screen">
-  <p><img src="/payroll/images/py_mem6.gif" alt="Query Options Screen" /></p>
+  <p><img src="/payroll/images/py_mem6.jpg" alt="Query Options Screen" /></p>
 
   <p>Query Options Screen</p>
 </div>
@@ -154,7 +165,7 @@ displayed directly to the screen.</p>
 click ‘Menu’, then select the appropriate screen by moving the highlight bar and
 clicking ‘OK’.</p>
 
-<h2 id="a-namequick-searchaquick-search"><a name="Quick Search"></a>Quick Search</h2>
+<h3 id="a-namequick-searchaquick-search"><a name="Quick Search"></a>Quick Search</h3>
 
 <p>Click ‘Quick Search’. This automatically re-opens the ‘Multiple Member Selection
 Screen’ as detailed in the <a href="#Query/Search For A Member">Query/Search For A Member</a>
@@ -174,7 +185,7 @@ program and send an e-mail directly to the member.</p>
 
 <h2 id="a-nameupdating-member-detailsaupdating-a-member"><a name="Updating Member Details"></a>Updating A Member</h2>
 
-<h2 id="a-namepersonalamembers-personal-details"><a name="PERSONAL"></a>Member’s Personal Details</h2>
+<h3 id="a-namepersonalamembers-personal-details"><a name="PERSONAL"></a>Member’s Personal Details</h3>
 
 <p>Click ‘Menu’ to move to the Member’s Personal Details screen and then click ‘Update’.</p>
 
@@ -204,7 +215,11 @@ If the Status field is amended you will be prompted for an effective date of
 change. This will be written to the status history record and will enable you to
 run an accurate Member Movements Summary when required.</p>
 
-<p><a name="pmad_addr_1"></a><a name="pmad_addr_2"></a><a name="pmad_addr_3"></a><a name="pmad_addr_4"></a><a name="pmad_postcode"></a><strong>ADDRESS LINES &amp; POSTCODE</strong>
+<p><a name="pmad_addr_1"></a>
+<a name="pmad_addr_2"></a>
+<a name="pmad_addr_3"></a>
+<a name="pmad_addr_4"></a>
+<a name="pmad_postcode"></a><strong>ADDRESS LINES &amp; POSTCODE</strong>
 - Enter the member’s address and postcode (if known). These will be used on
 the P14 and P60 forms in the Year End process.</p>
 
@@ -278,7 +293,7 @@ not be included in any payroll runs.</p>
 <p>Click ‘OK’ to save the Member’s Personal Details information, or click ‘Cancel’
 to exit the screen without saving the details entered.</p>
 
-<h2 id="a-namepensionamembers-pension-details"><a name="PENSION"></a>Member’s Pension Details</h2>
+<h3 id="a-namepensionamembers-pension-details"><a name="PENSION"></a>Member’s Pension Details</h3>
 
 <p>Click ‘Menu’ to move to the Member’s Pension Details screen and then click ‘Update’.</p>
 
@@ -352,7 +367,7 @@ The date the member finished their pension is entered in this field. When a date
 <p>Click ‘OK’ to save the Member’s Pension Details information, or click ‘Cancel’ to
 exit the screen without saving the details entered.</p>
 
-<h2 id="a-nameytdamembers-year-to-date-details"><a name="YTD"></a>Member’s Year To Date Details</h2>
+<h3 id="a-nameytdamembers-year-to-date-details"><a name="YTD"></a>Member’s Year To Date Details</h3>
 
 <p>Click ‘Menu’. Double click “Member’s Year To Date Details” then click ‘Update’.</p>
 
@@ -417,7 +432,7 @@ History screen.</p>
 <p>Click ‘OK’ to save the Member’s Year To Date information, or click ‘Cancel’ to exit
 the screen without saving the details entered.</p>
 
-<h2 id="a-namebankamembers-bank-details"><a name="BANK"></a>Member’s Bank Details</h2>
+<h3 id="a-namebankamembers-bank-details"><a name="BANK"></a>Member’s Bank Details</h3>
 
 <p>Click ‘Menu’. Double click “Member’s Bank Details” and then click ‘Update’.</p>
 
@@ -464,7 +479,7 @@ if the Account Type is Building Society (BSOC).</p>
 <p>Click on ‘OK’ to save the Member’s Bank Details information, or click on ‘Cancel’
 to exit the screen without saving the details entered.</p>
 
-<h2 id="a-namehistoryacurrent-history-details"><a name="HISTORY"></a>Current History Details</h2>
+<h3 id="a-namehistoryacurrent-history-details"><a name="HISTORY"></a>Current History Details</h3>
 
 <p>Click ‘Menu’. Double click “Member’s History Details” and then click ‘Update’.</p>
 
@@ -510,7 +525,7 @@ Basis for calculating tax.</p>
 <p>Click ‘OK’ to save the Member’s History Details information, or click ‘Cancel’
 to exit the screen without saving the details entered.</p>
 
-<h2 id="a-namedeleteadeleting-member-history-details"><a name="DELETE"></a>Deleting Member History Details</h2>
+<h4 id="a-namedeleteadeleting-member-history-details"><a name="DELETE"></a>Deleting Member History Details</h4>
 
 <p>Click ‘Delete’, and you will be prompted to enter a password. This password will
 need to be set up in the <a href="/payroll/globals/py_pass/">Password Settings</a>
@@ -531,7 +546,7 @@ program here.</p>
 <p>Once a valid password has been entered the user will then be allowed to delete
 the latest history entry on the screen. On deleting this entry, the Year To Date</p>
 
-<h2 id="a-namehistoricahistoric-details"><a name="HISTORIC"></a>Historic Details</h2>
+<h3 id="a-namehistoricahistoric-details"><a name="HISTORIC"></a>Historic Details</h3>
 
 <p>This screen can be accessed by pressing <kbd>2</kbd> from the Current History Details
 screen. The following screen will appear:</p>
@@ -595,28 +610,11 @@ to exit the screen without saving the details entered.</p>
 
 <p>The options are as follows:</p>
 
-<div class="row">
-  <div class="col-md-6">
-
-    <table class="table">
-      <tbody>
-        <tr>
-          <td>Current screen</td>
-          <td>This allows you to print off details of the current screen only.</td>
-        </tr>
-        <tr>
-          <td>Full member details</td>
-          <td>Print off a Full Member Report.</td>
-        </tr>
-        <tr>
-          <td>Address labels</td>
-          <td>Print off address labels for the current member or another group of members. See the section ‘Address Labels’ for further details.</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </div>
-</div>
+<ul>
+  <li><strong>Current screen</strong> - This allows you to print off details of the current screen only.</li>
+  <li><strong>Full member details</strong> - Print off a Full Member Report.</li>
+  <li><strong>Address labels</strong> - Print off address labels for the current member or another group of members. See the section ‘Address Labels’ for further details.</li>
+</ul>
 
 <p>You can also select the records to print in this dialog box. Further details of
 these options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>.</p>
@@ -666,7 +664,7 @@ select the ‘Exit’ menu option with the arrow keys and press <kbd>Return</kbd
 
 <p>To return to the main menu when you have printed your labels, click ‘Exit’.</p>
 
-<h3 id="a-nameinstigating-a-workflow-actionaa-nameactionainstigating-a-workflow-action"><a name="Instigating A Workflow Action"></a><a name="action"></a>Instigating A Workflow Action</h3>
+<h2 id="a-nameinstigating-a-workflow-actionaa-nameactionainstigating-a-workflow-action"><a name="Instigating A Workflow Action"></a><a name="action"></a>Instigating A Workflow Action</h2>
 
 <p>A member record must be selected by clicking <a href="/payroll/maintenance/py_mem/#Query/Search For A Member">Query</a>
 before you can instigate a workflow action. Select ‘Workflow’ to instigate a workflow
