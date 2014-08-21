@@ -44,91 +44,103 @@
         
 
       
-<h2 id="operators">Operators</h2>
+<h2 id="a-nameoperatorsaoperators"><a name="operators"></a>Operators</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Operator</th>
-      <th style="text-align: left">Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">EF</td>
-      <td style="text-align: left"><a href="#eff_at">Effective at<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">EQ</td>
-      <td style="text-align: left"><a href="#eq_to">Equal to<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">F</td>
-      <td style="text-align: left"><a href="#first">First entry<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">GT</td>
-      <td style="text-align: left"><a href="#great">Greater than<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">GE</td>
-      <td style="text-align: left"><a href="#great_eq">Greater than or equal to<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">L</td>
-      <td style="text-align: left"><a href="#last">Last entry<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">LT</td>
-      <td style="text-align: left"><a href="#less">Less than<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">LE</td>
-      <td style="text-align: left"><a href="#less_eq">Less than or equal to<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">MA</td>
-      <td style="text-align: left"><a href="#match">Matches<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">NH</td>
-      <td style="text-align: left"><a href="#no_hist">No history<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">NE</td>
-      <td style="text-align: left"><a href="#not_eq">Not equal to<a></a></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">NM</td>
-      <td style="text-align: left"><a href="#not_match">Not matches<a></a></a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Operator</th>
+          <th style="text-align: left">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">EF</td>
+          <td style="text-align: left"><a href="#eff_at">Effective at<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EQ</td>
+          <td style="text-align: left"><a href="#eq_to">Equal to<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left"><a href="#first">First entry<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GT</td>
+          <td style="text-align: left"><a href="#great">Greater than<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GE</td>
+          <td style="text-align: left"><a href="#great_eq">Greater than or equal to<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left"><a href="#last">Last entry<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LT</td>
+          <td style="text-align: left"><a href="#less">Less than<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LE</td>
+          <td style="text-align: left"><a href="#less_eq">Less than or equal to<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MA</td>
+          <td style="text-align: left"><a href="#match">Matches<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NH</td>
+          <td style="text-align: left"><a href="#no_hist">No history<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NE</td>
+          <td style="text-align: left"><a href="#not_eq">Not equal to<a></a></a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NM</td>
+          <td style="text-align: left"><a href="#not_match">Not matches<a></a></a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>As well as the above listed operators, there is another one called the <a href="#range">Range operator</a>. This is slightly different to all the other operators in that it is used in Field 2 and takes two values, rather than just the one value all other operators take.</p>
 
-<h2 id="a-nameeffateffective-ata"><a name="eff_at">Effective At</a></h2>
+<h2 id="a-nameeffataeffective-at"><a name="eff_at"></a>Effective At</h2>
 
 <p>The user should be able to select an item from a historic array that is effective at a specific date e.g.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Date</th>
-      <th style="text-align: left">Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">01/04/1999</td>
-      <td style="text-align: left">14000</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">01/04/1998</td>
-      <td style="text-align: left">13000</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Date</th>
+          <th style="text-align: left">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">01/04/1999</td>
+          <td style="text-align: left">14000</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">01/04/1998</td>
+          <td style="text-align: left">13000</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>The result for a salary effective at 01/03/1999 is 13000 i.e. it finds the salary
 immediately prior to or on the supplied date.</p>
@@ -139,41 +151,47 @@ immediately prior to or on the supplied date.</p>
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2 id="a-nameeqtoequal-toa"><a name="eq_to">Equal To</a></h2>
+<h2 id="a-nameeqtoaequal-to"><a name="eq_to"></a>Equal To</h2>
 
 <p>During any selection of records, the user will want to be able to drill down into selecting certain records that fall within a certain scheme, or category, or has a certain date. This is where the operator ‘EQ’ comes in very useful.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Member</th>
-      <th style="text-align: left">Scheme</th>
-      <th style="text-align: left">Category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">101</td>
-      <td style="text-align: left">0001</td>
-      <td style="text-align: left">001</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">102</td>
-      <td style="text-align: left">0001</td>
-      <td style="text-align: left">002</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">103</td>
-      <td style="text-align: left">0002</td>
-      <td style="text-align: left">001</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">104</td>
-      <td style="text-align: left">0001</td>
-      <td style="text-align: left">001</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Member</th>
+          <th style="text-align: left">Scheme</th>
+          <th style="text-align: left">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">101</td>
+          <td style="text-align: left">0001</td>
+          <td style="text-align: left">001</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">102</td>
+          <td style="text-align: left">0001</td>
+          <td style="text-align: left">002</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">103</td>
+          <td style="text-align: left">0002</td>
+          <td style="text-align: left">001</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">104</td>
+          <td style="text-align: left">0001</td>
+          <td style="text-align: left">001</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>The result for selecting members who are in scheme 0001 are members 101, 102 and 104.</p>
 
@@ -181,7 +199,7 @@ immediately prior to or on the supplied date.</p>
 
 <p>FIELD 1 = pm_scheme, OPERATOR = EQ and FIELD 2 = ‘0001’</p>
 
-<h2 id="a-namefirstfirst-entrya"><a name="first">First Entry</a></h2>
+<h2 id="a-namefirstafirst-entry"><a name="first"></a>First Entry</h2>
 
 <p>When using a history field, e.g. a salary value, there needs to be a way of selecting the first
 entry in that history. This is where the operator ‘F’ is used.</p>
@@ -200,28 +218,34 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2 id="a-namegreatgreater-thana"><a name="great">Greater Than</a></h2>
+<h2 id="a-namegreatagreater-than"><a name="great"></a>Greater Than</h2>
 
 <p>The user should be able to select an item from a historic array where the date or numeric value is greater than a specific date or value e.g.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Date</th>
-      <th style="text-align: left">Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">01/04/2000</td>
-      <td style="text-align: left">15500</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">01/04/1999</td>
-      <td style="text-align: left">15000</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Date</th>
+          <th style="text-align: left">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">01/04/2000</td>
+          <td style="text-align: left">15500</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">01/04/1999</td>
+          <td style="text-align: left">15000</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>The result for salary records greater than 15000 is the record at 01/04/2000 for 15500</p>
 
@@ -231,28 +255,34 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2 id="a-namegreateqgreater-than-or-equal-toa"><a name="great_eq">Greater Than Or Equal To</a></h2>
+<h2 id="a-namegreateqagreater-than-or-equal-to"><a name="great_eq"></a>Greater Than Or Equal To</h2>
 
 <p>The user should be able to select an item from a historic array where the date or numeric value is greater than or equal to a specific date or value e.g.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Date</th>
-      <th style="text-align: left">Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">01/04/2000</td>
-      <td style="text-align: left">15500</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">01/04/1999</td>
-      <td style="text-align: left">15000</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Date</th>
+          <th style="text-align: left">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">01/04/2000</td>
+          <td style="text-align: left">15500</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">01/04/1999</td>
+          <td style="text-align: left">15000</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>The result for salary records greater than or equal to 15000 are records at 01/04/2000 for 15500, and 01/04/1999 for 15000</p>
 
@@ -262,7 +292,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2 id="a-namelastlast-entrya"><a name="last">Last Entry</a></h2>
+<h2 id="a-namelastalast-entry"><a name="last"></a>Last Entry</h2>
 
 <p>When using a history field, e.g. a salary value, there needs to be a way of selecting the last
 entry in that history (this is the default option when selecting a history field in the
@@ -282,28 +312,34 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2 id="a-namelessless-thana"><a name="less">Less Than</a></h2>
+<h2 id="a-namelessaless-than"><a name="less"></a>Less Than</h2>
 
 <p>The user should be able to select an item from a historic array where the date or numeric value is less than a specific date or value e.g.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Date</th>
-      <th style="text-align: left">Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">01/04/2000</td>
-      <td style="text-align: left">15500</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">01/04/1999</td>
-      <td style="text-align: left">15000</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Date</th>
+          <th style="text-align: left">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">01/04/2000</td>
+          <td style="text-align: left">15500</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">01/04/1999</td>
+          <td style="text-align: left">15000</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>The result for salary records less than 15500 is the record at 01/04/1999 for 15000</p>
 
@@ -313,28 +349,34 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2 id="a-namelesseqless-than-or-equal-toa"><a name="less_eq">Less Than Or Equal To</a></h2>
+<h2 id="a-namelesseqaless-than-or-equal-to"><a name="less_eq"></a>Less Than Or Equal To</h2>
 
 <p>The user should be able to select an item from a historic array where the date or numeric value is less than or equal to a specific date or value e.g.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Date</th>
-      <th style="text-align: left">Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">01/04/2000</td>
-      <td style="text-align: left">15500</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">01/04/1999</td>
-      <td style="text-align: left">15000</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Date</th>
+          <th style="text-align: left">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">01/04/2000</td>
+          <td style="text-align: left">15500</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">01/04/1999</td>
+          <td style="text-align: left">15000</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>The result for salary records less than or equal to 15500 are records at 01/04/2000 for 15500, and 01/04/1999 for 15000</p>
 
@@ -344,7 +386,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2 id="a-namematchmatchesa"><a name="match">Matches</a></h2>
+<h2 id="a-namematchamatches"><a name="match"></a>Matches</h2>
 
 <p>It is a requirement that WHERE clauses be done on partial strings e.g. pm_surname where
 we wish to get all surnames starting with "Smi". In SQL this would use the
@@ -378,7 +420,7 @@ OPERATOR = MA,
 FIELD 2 = ‘O*?onnell’</p>
 </div>
 
-<h2 id="a-namenohistno-historya"><a name="no_hist">No History</a></h2>
+<h2 id="a-namenohistano-history"><a name="no_hist"></a>No History</h2>
 
 <p>When using a history field, e.g. a salary value, there needs to be a way of selecting members that do not have an entry on the history record for a certain date. This can be useful when doing an annual update of members salaries. You can print off this report to see what members have no salary entry for this year i.e. what members have been missed out in the update procedure.</p>
 
@@ -423,41 +465,47 @@ END FOREACH
   <p>Unlike ‘SELECT’ statements, the ‘IF’ statment must be hard-coded and cannot be made up from variables.  Therefore, the AND/OR clause is defaulted to ‘AND’, and no brackets can be entered.</p>
 </div>
 
-<h2 id="a-namenoteqnot-equal-toa"><a name="not_eq">Not Equal To</a></h2>
+<h2 id="a-namenoteqanot-equal-to"><a name="not_eq"></a>Not Equal To</h2>
 
 <p>During any selection of records, the user will want to be able to drill down into selecting certain records that don’t fall within a certain scheme, or category, or doesn’t have a certain date. This is where the operator ‘NE’ comes in very useful.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Member</th>
-      <th style="text-align: left">Scheme</th>
-      <th style="text-align: left">Category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">101</td>
-      <td style="text-align: left">0001</td>
-      <td style="text-align: left">001</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">102</td>
-      <td style="text-align: left">0001</td>
-      <td style="text-align: left">002</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">103</td>
-      <td style="text-align: left">0002</td>
-      <td style="text-align: left">001</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">104</td>
-      <td style="text-align: left">0001</td>
-      <td style="text-align: left">001</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="text-align: left">Member</th>
+          <th style="text-align: left">Scheme</th>
+          <th style="text-align: left">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">101</td>
+          <td style="text-align: left">0001</td>
+          <td style="text-align: left">001</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">102</td>
+          <td style="text-align: left">0001</td>
+          <td style="text-align: left">002</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">103</td>
+          <td style="text-align: left">0002</td>
+          <td style="text-align: left">001</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">104</td>
+          <td style="text-align: left">0001</td>
+          <td style="text-align: left">001</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>The result for selecting members who are not in scheme 0001 is members 103.</p>
 
@@ -465,7 +513,7 @@ END FOREACH
 
 <p>FIELD 1 = pm_scheme, OPERATOR = NE and FIELD 2 = ‘0001’</p>
 
-<h2 id="a-namenotmatchnot-matchesa"><a name="not_match">Not Matches</a></h2>
+<h2 id="a-namenotmatchanot-matches"><a name="not_match"></a>Not Matches</h2>
 
 <p>It is a requirement that WHERE clauses be done on partial strings e.g. pm_surname where
 we wish to get all surnames that don’t start with "Smi". In SQL this would use the
@@ -499,7 +547,7 @@ OPERATOR = NM,
 FIELD 2 = ‘O*?onnell’</p>
 </div>
 
-<h2 id="a-namerangerange-operatora"><a name="range">Range Operator</a></h2>
+<h2 id="a-namerangearange-operator"><a name="range"></a>Range Operator</h2>
 
 <p>This is slightly different to all the other operators in that it is used in Field 2 and takes two values, rather than just the one value all other operators take.</p>
 
