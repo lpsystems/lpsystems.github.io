@@ -66,9 +66,9 @@ to the seniority or ability of each user of the system.</p>
 
 <h2 id="a-namesecurity-levelasecurity-level"><a name="Security Level"></a>Security Level</h2>
 
-<p>Each user is assigned a security level from 1 to 99. The security levels to be made
-available on your Pension Master system must be pre-set using the <a href="/pension/system_data/pem_sec/#Introduction">Security
-Levels</a> module. This defines both a security level number and a description pertaining
+<p>Each user is assigned a security level from 1 to 99. Security levels must be pre-set using
+<a href="/pension/system_data/pem_sec/#Introduction">Security Levels</a>.
+This defines both a security level number and a description pertaining
 to this security level e.g. can access scheme 0000 but not scheme 0009.</p>
 
 <p>Each member and scheme record on Pension Master is then assigned a corresponding security
@@ -87,7 +87,7 @@ in <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a>. </p>
 <h2 id="a-namesystem-administratorasystem-administrator-status"><a name="System Administrator"></a>System Administrator Status</h2>
 
 <p>A user needs to have a ‘Y’ against ‘System Administrator’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> in
-order to access the following Pension Master modules:</p>
+order to access the following Pension Master options:</p>
 
 <ul>
   <li><a href="/pension/system_administration/pem_sysp/#Introduction">System Parameters</a> </li>
@@ -103,7 +103,7 @@ order to access the following Pension Master modules:</p>
 <h2 id="a-namesupervisorasupervisor-status"><a name="Supervisor"></a>Supervisor Status</h2>
 
 <p>If a user has a ‘N’ against ‘Supervisor’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> they
-will be denied access to the following Pension Master modules.</p>
+will be denied access to the following Pension Master options.</p>
 
 <ul>
   <li><a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> </li>
@@ -128,8 +128,8 @@ will be denied access to the following Pension Master modules.</p>
 </ul>
 
 <p>If the user has a ‘V’ against ‘Supervisor’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> they
-will be allowed access to the above modules, but will be limited to view only and
-not view and update. This disables any menu items in the above modules which would
+will be allowed access to the above options, but will be limited to view only and
+not view and update. This disables any menu items in the above options which would
 allow the user to add/update/delete any item of data. The exceptions to this are <a href="/pension/workflow/gn_wkflr/#Introduction">Workflow
 Management Report</a> and <a href="/pension/system_administration/per_audtr/#Introduction">Audit Trail
 Listing</a> which are reports only and do not allow any user input other than running
@@ -139,9 +139,9 @@ the report.</p>
 will be allowed to: </p>
 
 <ul>
-  <li>Fully access the above modules. </li>
+  <li>Fully access the above options. </li>
   <li>Delete/update any other user’s diary using <a href="/pension/general/gn_diary/#Introduction">Diary File Maintenance</a>. </li>
-  <li>Undo posted units in the <a href="/pension/investments/unit_posting/peu_post/#Introduction">Post Units</a> module. </li>
+  <li>Undo posted units in <a href="/pension/investments/unit_posting/peu_post/#Introduction">Post Units</a>.</li>
   <li>Delete a member record. </li>
   <li>Un-finalise quotes in <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a>. </li>
   <li>Override quotation results in <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a>. </li>
@@ -150,8 +150,7 @@ will be allowed to: </p>
 <h2 id="a-nameupdate-member-recordsaupdate-member-records-status"><a name="Update Member Records"></a>Update Member Records Status</h2>
 
 <p>If a user has a ‘N’ against ‘Update Member Records’ in <a href="/pension/system_administration/gn_user/#Introduction">Users</a> they
-will not be allowed to add/update/delete member records in the <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a> module
-of Pension Master.</p>
+will not be allowed to add/update/delete member records in <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a>.</p>
 
 <p>Otherwise the user will be granted full access to the member records, subject to any
 other security procedures described herein. </p>
@@ -163,8 +162,7 @@ Access Details</a> screen in Schemes. There are three types of access level:</p>
 
 <ul>
   <li>All users have access to the scheme. </li>
-  <li>All members of a particular workgroup have access to the scheme. See <a href="/pension/system_administration/gn_wrkgrp/">Workgroups </a>elsewhere
-in this User Manual for further details of how workgroups are used in Pension Master. </li>
+  <li>All members of a particular workgroup have access to the scheme. See <a href="/pension/system_administration/gn_wrkgrp/">Workgroups.</a></li>
   <li>User level access. Here you define particular users via their user ID (as set up in <a href="/pension/system_administration/gn_user/#user_id">Users</a>)
 so as to restrict access to a scheme on an individual user level.</li>
 </ul>
