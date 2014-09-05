@@ -18,7 +18,7 @@
   <body role="document">
  
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
@@ -125,6 +125,9 @@
       <li><a href="#Tax Simplification Amounts">Tax Simplification Amounts</a> </li>
       <li><a href="#Annual/Lifetime Allowance">Annual/Lifetime Allowance</a> </li>
       <li><a href="#Protected A-Day Benefits">Protected A-Day Benefits</a> </li>
+      <li><a href="#care_average_revalued_earnings">Career Average Revalued Earnings</a> </li>
+      <li><a href="#disability_benefit">Disability Benefit</a> </li>
+      <li><a href="#pension_input_periods">Pension Input Periods</a> </li>
     </ul>
   </li>
   <li><a href="#Deleting Member Records">Deleting Member Records</a> </li>
@@ -146,7 +149,7 @@
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
 
-<p>This Program allows maintenance of the Member file. This is the core of the Pension
+<p>This program allows maintenance of the Member file. This is the core of the Pension
 Master system and is where you will find all the data relating to a member of the
 scheme. The data is accessed via a series of screens, each grouping together similar
 parts of the member’s data. To navigate between the screens in the Member File, use
@@ -278,6 +281,16 @@ generated and displayed to the screen. The member number will be displayed as 0 
 you have finished the input of the Basic Member Details screen and will then be displayed
 to the screen. You will not be permitted to amend this field. </p>
 
+<p><a name="pm_pay_num"></a><strong>STAFF NUMBER</strong> - This field may be useful in linking
+the staff number with member records for data transfer or reports. Typically you would
+enter the employers payroll number here. This field is optional and can be left blank
+if you so wish. </p>
+
+<p><a name="pm_rsi_num"></a><strong>NI/PPS/SSNI NUMBER</strong> - NI Number for UK schemes,
+PPS Number for Irish schemes or SSNI Number for Belgian schemes. As you enter this field, Pension Master will check all other
+member records on the database for duplicate NI/PPS/SSNI numbers and if any are found, you will be asked to
+confirm that you wish to continue or stop adding a new member.</p>
+
 <p><a name="pm_title"></a><strong>TITLE</strong> - The members title (e.g. Mrs, Mr, Dr ). This
 field is optional, but can be used in mail merges etc. and is used by Pension Master
 to default a new members sex as appropriate. </p>
@@ -310,63 +323,36 @@ the member in the scheme, e.g. active member, deferred pension The status code e
 must exist on the status file. To get a list of the existing status codes click ‘Search’.
 When a valid status code has been entered the status description will be entered. </p>
 
-<p><a name="pm_pay_num"></a><strong>STAFF NUMBER</strong> - This field may be useful in linking
-the staff number with member records for data transfer or reports. Typically you would
-enter the employers payroll number here. This field is optional and can be left blank
-if you so wish. </p>
-
-<p><a name="pm_rsi_num"></a><strong>NI/RSI NUMBER</strong> - National Insurance Number (UK) or
-RSI Number (Ireland). As you enter this field, Pension Master will check all other
-member records on the database for duplicate NI numbers and if any are found, the
-user will be prompted if he/she wishes to continue. Select ‘Y’ to continue or ‘N’
-to exit input without saving the new member details. If the UK / Irish Scheme indicator
-in Schemes is set to ‘I’, i.e. Irish Scheme, then this field will be shown as RSI
-Number and will relate to the Revenue Social Insurance Number (IRL). </p>
-
-<p><a name="pm_sex"></a><strong>SEX</strong> - You must enter a value in this field. The valid
-entries for this field are:</p>
+<p><a name="pm_sex"></a><strong>SEX</strong> - Select one of the following options from the list:</p>
 
 <ul>
-  <li><strong>M</strong> - Male</li>
-  <li><strong>F</strong> - Female</li>
+  <li>Male</li>
+  <li>Female</li>
 </ul>
 
-<p>To access a list of these valid codes click on the ‘Search’ button. </p>
-
-<p>If any other value is entered in this field and error message will be displayed and
-sex should be re-entered. </p>
-
-<p><a name="pm_marital_stat"></a><strong>MARITAL STATUS</strong> - The valid entries for this field are:</p>
+<p><a name="pm_marital_stat"></a><strong>MARITAL STATUS</strong> - Select one of the following options from the list:</p>
 
 <ul>
-  <li><strong>CP</strong> - Civil Partner</li>
-  <li><strong>CO</strong> - Cohabitant</li>
-  <li><strong>DI</strong> - Divorced</li>
-  <li><strong>MA</strong> - Married</li>
-  <li><strong>PT</strong> - Partner</li>
-  <li><strong>SE</strong> - Separated</li>
-  <li><strong>SI</strong> - Single</li>
-  <li><strong>SD</strong> - Single With Dependants</li>
-  <li><strong>UN</strong> - Unknown</li>
-  <li><strong>WI</strong> - Widowed</li>
+  <li>Civil Partner</li>
+  <li>Cohabitant</li>
+  <li>Divorced</li>
+  <li>Married</li>
+  <li>Partner</li>
+  <li>Separated</li>
+  <li>Single</li>
+  <li>Single With Dependants</li>
+  <li>Unknown</li>
+  <li>Widowed</li>
 </ul>
 
-<p>To access a list of these valid codes click ‘Search’. </p>
-
-<p>If any other value is entered in this field an error message will be displayed and
-marital status should be re-entered. </p>
-
-<p><a name="pm_dob"></a><strong>D.O.B.</strong> - This represents the members date of birth. If
+<p><a name="pm_dob"></a><strong>DATE OF BIRTH</strong> - This represents the members date of birth. If
 you enter a date for which the members current age is less than 16 or over 75, a message
 will be displayed informing you of this and asking if this is really correct. </p>
 
-<p><a name="pm_age_adm"></a><strong>AGE ADMITTED</strong> - This field immediately follows the
-members date of birth field. This denotes if the members date of birth has been confirmed
-with a birth certificate or other evidence of age. Valid entries are ‘Y’ for Yes ‘N’
-for No. If you do not enter anything in this field, it will automatically default
-to ‘N’ for No. </p>
+<p><a name="pm_age_adm"></a><strong>ADMITTED</strong> - Select ‘Yes’ to confirm that the member’s date of birth has been confirmed
+with a birth certificate or other evidence of age.</p>
 
-<p><a name="pm_dec"></a><strong>DATE ENTERED COMPANY</strong> - This denotes Date Entered Company.
+<p><a name="pm_dec"></a><strong>DATE JOINED COMPANY</strong> - This denotes Date Joined Company.
 If you are going to use the Inland Revenue Maxima (UK only) within the formulae you
 set up for this scheme, a valid date must be entered in this field. You will not be
 permitted to enter any date for date entered company which means that the member would
@@ -381,6 +367,8 @@ have commenced employment at the current employer before his/her 14<sup>th</sup>
 <p><a name="pm_dco"></a><strong>DATE CONTRACTED OUT</strong> - Date Contracted Out. If the scheme
 is not a contracted out scheme or the scheme has been set up as an Irish Scheme in
 Schemes, this field description will change to Qualifying Serv Date. </p>
+
+<p><a name="pm_sid"></a><strong>SORP ISSUED DATE</strong> - Date the SORP was Issued.</p>
 
 <p><a mame="pm_auto_enrolled"></a><strong>AUTO ENROLLED</strong></p>
 
@@ -397,7 +385,7 @@ Schemes, this field description will change to Qualifying Serv Date. </p>
   <li>The field can be updated to Y or N with no verification.</li>
 </ol>
 
-<p><a name="pm_age"></a><strong>AGE</strong> - This shows the members age at at today’s date and
+<p><a name="pm_age"></a><strong>AGE LAST BIRTHDAY</strong> - This shows the members age at at today’s date and
 is automatically calculated as long as you have already supplied the member’s date
 of birth. This field is a view only field and is re-calculated each time you view
 a member’s record. The age will be calculated as age last birthday or age next birthday
@@ -432,16 +420,16 @@ has left the scheme.</p>
 Refund of Contributions Details screen.</p>
 </div>
 
-<p><a name="pm_security"></a><strong>SECURITY RATING</strong> - Enter the security rating you wish
-to allocate for this member. This is used in conjunction with the Security Rating
-in the <a href="/pension/system_administration/gn_user/">Users</a> option
+<p><a name="pm_security"></a><strong>SECURITY RATING</strong> - Select the security rating you wish
+to allocate for this member from the list. This is used in conjunction with the Security Rating
+in the <a href="/pension/system_administration/gn_user/">Users</a>
 to determine whether the current user has access to view or update the current member
 record. The default security ratings are:</p>
 
 <ul>
-  <li><strong>1</strong> - High</li>
-  <li><strong>2</strong> - Medium</li>
-  <li><strong>3</strong> - Low</li>
+  <li>Default High Level</li>
+  <li>Default Medium Level</li>
+  <li>Default Low Level</li>
 </ul>
 
 <p><a name="pm_lam"></a><strong>LAST AMENDED</strong> - This field is used to denote the date of
@@ -449,6 +437,8 @@ the last amendment of this member record. This field is a view only field and is
 automatically every time this member is updated by a user. Detailed details of the
 changes made each time are automatically logged to the system <a href="/pension/system_administration/per_audtr/">Audit
 Trail</a> which can periodically be printed off by a suitably authorised user. </p>
+
+<p><a name="pm_la_user"></a><strong>LAST AMENDED BY</strong> - The User ID of the user who last amended the current member.</p>
 
 <p>You will now be returned to the main menu. If there are any other details you wish
 to add to the member, you should go directly to the appropriate screen and add them
@@ -466,7 +456,7 @@ now. </p>
 
 <p>You may select records by using the Member Number, Member Forename, Member Surname,
 Scheme Code, Company Code, Category Code, Status Code, Status Type, Employer Number,
-Marital Status, Sex, Date of Birth, NI/PRSI Number, Special Code or Alternative Scheme
+Marital Status, Sex, Date of Birth, NI/PPS/SSNI Number, Special Code or Alternative Scheme
 Code fields. You may also use any combination, or even partial combination, of these
 fields in order to select the required member(s). See <a href="/pension/appendices/app_b/">Selection Criteria</a>. </p>
 
@@ -592,12 +582,12 @@ History</a> screen or not. </p>
 <p><a name="pm_avc_pres"></a><strong>AVC’S PRESENT</strong> - This field is not available for user
 update. It will be automatically set to ‘Y’ or ‘N’ if there are entries for EE AVC
 in the <a href="/pension/file_maintenance/pem_mem/#Contribution Details">Contribution History</a> screen
-or not. </p>
+or not.</p>
 
 <p><a name="pm_addben_pres"></a><strong>ADDITIONAL BENEFITS</strong> - This field is not available
 for user update. It will be automatically set to ‘Y’ or ‘N’ if there are entries in
 the <a href="#Additional Benefits Details">Additional Benefits Details</a> screen
-or not. </p>
+or not.</p>
 
 <p><a name="pm_addben_num"></a><strong>NUMBER</strong> - This field is not available for user update.
 It will be automatically set to the number of <a href="#Additional Benefits Details">Additional
@@ -667,7 +657,7 @@ life assurance premium will be calculated normally, i.e. without applying the lo
 The value of this field is printed on the new <a href="/pension/reports/miscellaneous_reports/per_life/">Underwriting/Life
 Assurance Report</a>. </p>
 
-<p>Click ‘OK’ to save or ‘Cancel’ to exit without saving. </p>
+<p>Click ‘OK’ to save or ‘Cancel’ to exit without saving.  </p>
 
 <h3 id="a-nameservice-period-details2aservice-period-details"><a name="Service Period Details2"></a>Service Period Details</h3>
 
@@ -713,7 +703,7 @@ the results in your service period fields. </p>
 <p>The ‘Calculate’ button is available in any of the seven years fields on this screen. </p>
 
 <p>When all service period details have been entered click ‘OK’ to save the details or
-‘Cancel’ to exit the service period screen without saving the entered details. </p>
+‘Cancel’ to exit the service period screen without saving the entered details.  </p>
 
 <h3 id="a-nameptimeaa-namepart-time-service-detailsapart-time-service-details"><a name="PTIME"></a><a name="Part Time Service Details"></a>Part Time Service Details</h3>
 
@@ -728,7 +718,7 @@ who work part time. </p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem2b.gif" alt="Part Time Service Details Screen" /></p>
+  <p><img src="/pension/images/pem_mem2b.jpg" alt="Part Time Service Details Screen" /></p>
 
   <p>Part Time Service Details Screen</p>
 </div>
@@ -764,7 +754,7 @@ TIME HOURS</strong>. </p>
 
 <p>Click ‘Delete Row’ to delete the current row of part time hours details, if required. </p>
 
-<p>Click ‘OK’ to save or ‘Cancel’ to exit without saving. </p>
+<p>Click ‘OK’ to save or ‘Cancel’ to exit without saving.  </p>
 
 <h3 id="a-namedepaa-namedependantsnominated-beneficiary-detailsadependantsnominated-beneficiary-details"><a name="DEP"></a><a name="Dependants/Nominated Beneficiary Details"></a>Dependants/Nominated Beneficiary Details</h3>
 
@@ -783,7 +773,7 @@ the navigation buttons displayed next to the Dependant Number field. </p>
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_memc.gif" alt="Dependants Details Screen" /></p>
+  <p><img src="/pension/images/pem_memc.jpg" alt="Dependants Details Screen" /></p>
 
   <p>Dependants Details Screen</p>
 </div>
@@ -794,13 +784,13 @@ follows: </p>
 <p><a name="pd_dep"></a><strong>NAME</strong> - The dependant name must be entered. </p>
 
 <p><a name="pd_addr1"></a><a name="pd_addr2"></a><a name="pd_addr3"></a><a name="pd_addr4"></a><a name="pd_postcode"></a><strong>ADDRESS
-&amp; POSTCODE</strong> - The dependant’s address and postcode can be entered here. </p>
+&amp; POSTCODE</strong> - The dependant’s address and postcode can be entered here.  </p>
 
 <p><a name="pd_televe"></a><a name="pd_telday"></a><strong>TEL DAY &amp; TEL EVE</strong> - The
-dependant’s daytime and evening telephone numbers can be entered here. </p>
+dependant’s daytime and evening telephone numbers can be entered here.  </p>
 
 <p><a name="pd_email"></a><strong>E-MAIL ADDRESS</strong> - The dependant’s e-mail address can
-be entered here. </p>
+be entered here.  </p>
 
 <p><a name="pd_note"></a><strong>NOTE</strong> - This field can be used to enter in a note about
 the dependant. For example, if a member says “50% to each of my mother and father,
@@ -834,10 +824,10 @@ the dependant and the member. The valid entries for this field are:</p>
 </ul>
 
 <p><a name="pd_dob"></a><strong>DATE OF BIRTH</strong> - Enter the dependants date of birth (if
-available). </p>
+available).  </p>
 
 <p><a name="pd_prop_ben"></a><strong>PROP. BEN.</strong> - Enter the Proportion Of Benefits for
-that particular nominated dependant. Valid entries are from 0.00% to 100.00%. </p>
+that particular nominated dependant. Valid entries are from 0.00% to 100.00%.  </p>
 
 <p><a name="pd_eff_date"></a><strong>EFFECTIVE DATE</strong> - The date for which this dependant
 is effective from. This field must always be entered, if it is not then a message
@@ -860,7 +850,7 @@ is incorrect. </p>
 <p>When all dependant details have been entered click ‘OK’ to save the dependant details,
 or ‘Cancel’ to exit the dependant input without saving the entered details. </p>
 
-<p>When the dependant details have been saved you will be returned to the main menu. </p>
+<p>When the dependant details have been saved you will be returned to the main menu.  </p>
 
 <h3 id="a-namenotaa-namefreehand-notesamember-notes"><a name="NOT"></a><a name="Freehand Notes"></a>Member Notes</h3>
 
@@ -870,7 +860,7 @@ or ‘Cancel’ to exit the dependant input without saving the entered details. 
 The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_memd.gif" alt="Member Notes Screen" /></p>
+  <p><img src="/pension/images/pem_memd.jpg" alt="Member Notes Screen" /></p>
 
   <p>Member Notes Screen</p>
 </div>
@@ -890,19 +880,19 @@ you will see when you first enter Members.</p>
 <p>When all notes have been entered click ‘OK’ to save the notes entered, or ‘Cancel’
 to exit notes input without saving the details. </p>
 
-<p>When Notes input has finished you will be returned to the main menu. </p>
+<p>When Notes input has finished you will be returned to the main menu.  </p>
 
 <h3 id="a-namediaryaa-nameaction-diary-detailsaaction-diary-details"><a name="DIARY"></a><a name="Action Diary Details"></a>Action Diary Details</h3>
 
 <p>Select the diary screen using the menu, click ‘Update’.</p>
 
 <p>This screen allows you to view/amend all diary entries on your Pension Master system
-specific to this member. </p>
+specific to this member.  </p>
 
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem2c.gif" alt="Action Diary Screen" /></p>
+  <p><img src="/pension/images/pem_mem2c.jpg" alt="Action Diary Screen" /></p>
 
   <p>Action Diary Screen</p>
 </div>
@@ -910,20 +900,20 @@ specific to this member. </p>
 <p>This page of the member file allows the administrator to post actions specific to
 a particular member to the user’s diary. The action may be, for example, to remind
 the administrator to follow up on a possible transfer in to the Scheme in (say) two
-weeks time. </p>
+weeks time.  </p>
 
 <p>Once an entry is made for any particular member on Pension Master, the entry will
 appear in the diary at log-on time until the user has completed the action, at which
 time they will either mark the diary item as completed or delete it from their diary
-(see <a href="/pension/general/gn_diary/">Diary Maintenance</a>).</p>
+(see <a href="/pension/general/gn_diary/">Diary Maintenance</a>).  </p>
 
 <p>When updating existing diary details, go to the item to be modified and type over
 existing details. The particular fields are as follows: </p>
 
 <p><a name="Gnd_date"></a><strong>DATE</strong> - Enter the date you wish the diary item to be
-posted to. </p>
+posted to.  </p>
 
-<p><a name="Gnd_text"></a><strong>ACTION</strong> - Enter the text of the diary entry. </p>
+<p><a name="Gnd_text"></a><strong>ACTION</strong> - Enter the text of the diary entry.  </p>
 
 <p><a name="Gnd_status"></a><strong>STATUS</strong> - Enter the job completed status for your diary
 entry. Valid values are:</p>
@@ -936,7 +926,7 @@ entry. Valid values are:</p>
 
 <p>Click ‘Add Row’ to insert a diary item, or ‘Delete Row’ to delete a diary item. </p>
 
-<p>When the diary has been updated, click ‘OK’ to save or ‘Cancel’ to exit without saving. </p>
+<p>When the diary has been updated, click ‘OK’ to save or ‘Cancel’ to exit without saving.  </p>
 
 <h3 id="a-namesfeataa-namespecial-codesaspecial-codes"><a name="SFEAT"></a><a name="Special Codes"></a>Special Codes</h3>
 
@@ -948,7 +938,7 @@ been allocated against this member (see <a href="/pension/system_data/pem_codem/
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem2d.gif" alt="Special Codes Screen" /></p>
+  <p><img src="/pension/images/pem_mem2d.jpg" alt="Special Codes Screen" /></p>
 
   <p>Special Codes Screen</p>
 </div>
@@ -961,7 +951,7 @@ been allocated against this member (see <a href="/pension/system_data/pem_codem/
 
 <p>These Special Codes can be set up using <a href="/pension/system_data/pem_codem/">Codes</a>.
 Any special codes or groups must have already been assigned to the particular scheme
-using <a href="/pension/file_maintenance/pem_sch/#Code Allocation">Code Allocation</a>. </p>
+using <a href="/pension/file_maintenance/pem_sch/#Code Allocation">Code Allocation</a>.  </p>
 
 <h3 id="a-namecohstaa-namecompany-historyacompany-history"><a name="COHST"></a><a name="Company History"></a>Company History</h3>
 
@@ -973,7 +963,7 @@ over the period whilst he/she has been a member of the scheme. </p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem2e.gif" alt="Company History Screen" /></p>
+  <p><img src="/pension/images/pem_mem2e.jpg" alt="Company History Screen" /></p>
 
   <p>Company History Screen</p>
 </div>
@@ -994,7 +984,7 @@ be reset to todays date for that particular line. </p>
 
 <p>Click ‘delete Row’ to delete the current row of Company History, if required. </p>
 
-<p>Click ‘OK’ to save or ‘Cancel’ to exit without saving. </p>
+<p>Click ‘OK’ to save or ‘Cancel’ to exit without saving.  </p>
 
 <h3 id="a-namecathstaa-namecategory-historyacategory-history"><a name="CATHST"></a><a name="Category History"></a>Category History</h3>
 
@@ -1006,7 +996,7 @@ code over the period whilst he/she has been a member of the scheme. </p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem2f.gif" alt="Category History Screen" /></p>
+  <p><img src="/pension/images/pem_mem2f.jpg" alt="Category History Screen" /></p>
 
   <p>Category History Screen</p>
 </div>
@@ -1027,7 +1017,7 @@ be reset to todays date for that particular line. </p>
 
 <p>Click ‘Delete Row’ to delete the current row of Category History, if required. </p>
 
-<p>Click ‘OK’ to save or ‘Cancel’ to exit without saving. </p>
+<p>Click ‘OK’ to save or ‘Cancel’ to exit without saving.  </p>
 
 <h3 id="a-namestathstaa-namestatus-historyastatus-history"><a name="STATHST"></a><a name="Status History"></a>Status History</h3>
 
@@ -1048,7 +1038,7 @@ over the period whilst he/she has been a member of the scheme. </p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem2g.gif" alt="Status History Screen" /></p>
+  <p><img src="/pension/images/pem_mem2g.jpg" alt="Status History Screen" /></p>
 
   <p>Status History Screen</p>
 </div>
@@ -1077,7 +1067,7 @@ be reset to todays date for that particular line. </p>
 screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_meme.gif" alt="Salary History Screen" /></p>
+  <p><img src="/pension/images/pem_meme.jpg" alt="Salary History Screen" /></p>
 
   <p>Salary History Screen</p>
 </div>
@@ -1132,12 +1122,12 @@ policies taken out by a member. </p>
 are held on Pension Master for this member and the position of the record in relation
 to the total. </p>
 
-<p>To scroll between the different FSAVC’s for the member, click ‘&lt;FSAVC’ and ‘FSAVC&gt;’. </p>
+<p>To scroll between the different FSAVC’s for the member, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ and ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
 
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_fsavc.gif" alt="FSAVC Details Screen" /></p>
+  <p><img src="/pension/images/pem_fsavc.jpg" alt="FSAVC Details Screen" /></p>
 
   <p>FSAVC Details Screen</p>
 </div>
@@ -1189,7 +1179,7 @@ or click on ‘Cancel’ to exit the FSAVC input without saving the entered deta
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3p.gif" alt="Investment Setup Screen" /></p>
+  <p><img src="/pension/images/pem_mem3p.jpg" alt="Investment Setup Screen" /></p>
 
   <p>Investment Setup Screen</p>
 </div>
@@ -1205,7 +1195,7 @@ be used by <a href="/pension/investments/allocate_contributions/peu_alloc/">Cont
 enter the members specific investment instructions here. </p>
 
 <p>The details are held by effective date, with the most recent effective date shown
-first. To navigate between entries for different effective dates, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span>’.</p>
+first. To navigate between entries for different effective dates, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
 
 <p>To add details for a new effective date, click ‘Add’. To update the displayed details,
 click ‘Update’. The following window is displayed: </p>
@@ -1219,7 +1209,7 @@ click ‘Update’. The following window is displayed: </p>
 and click ‘Select’. The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3r.gif" alt="Investment Split Entry Screen" /></p>
+  <p><img src="/pension/images/pem_mem3r.jpg" alt="Investment Split Entry Screen" /></p>
 
   <p>Investment Split Entry Screen</p>
 </div>
@@ -1254,7 +1244,7 @@ to the main menu. </p>
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3o.gif" alt="Contribution Rate Percentages Screen" /></p>
+  <p><img src="/pension/images/pem_mem3o.jpg" alt="Contribution Rate Percentages Screen" /></p>
 
   <p>Contribution Rate Percentages Screen</p>
 </div>
@@ -1270,7 +1260,7 @@ default</a>, leave this screen blank and the category defaults will be used by t
 Request Run</a>. Otherwise enter the members specific investment instructions here. </p>
 
 <p>If any details are found, the most recent contribution rate percentages are displayed.
-If you want to scroll between the entries for different effective dates, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span>’.</p>
+If you want to scroll between the entries for different effective dates, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
 
 <p>If you wish to amend an existing entry, select it and then click ‘Update’. If you
 wish to add contribution rate percentages for another effective date, click ‘Add’. </p>
@@ -1327,7 +1317,7 @@ contribution amount for that contribution type. </p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3u.gif" alt="Contribution History Screen" /></p>
+  <p><img src="/pension/images/pem_mem3u.jpg" alt="Contribution History Screen" /></p>
 
   <p>Contribution History Screen</p>
 </div>
@@ -1346,7 +1336,7 @@ split by contribution type. </p>
 window is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3w.gif" alt="Add Contribution" /></p>
+  <p><img src="/pension/images/pem_mem3w.jpg" alt="Add Contribution" /></p>
 
   <p>Add Contribution</p>
 </div>
@@ -1389,7 +1379,7 @@ Units program</a>. Then, you must unallocate the approriate investment record fo
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3v.gif" alt="Investment History Screen" /></p>
+  <p><img src="/pension/images/pem_mem3v.jpg" alt="Investment History Screen" /></p>
 
   <p>Investment History Screen</p>
 </div>
@@ -1398,7 +1388,7 @@ Units program</a>. Then, you must unallocate the approriate investment record fo
 investment funds a member invests in. </p>
 
 <p>There are separate screens for each fund a member has investments in. To navigate
-between the funds, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span>’.</p>
+between the funds, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
 
 <p>There are two screens as follows: </p>
 
@@ -1425,7 +1415,7 @@ types. </p>
 window is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3x.gif" alt="Update Investment" /></p>
+  <p><img src="/pension/images/pem_mem3x.jpg" alt="Update Investment" /></p>
 
   <p>Update Investment</p>
 </div>
@@ -1440,7 +1430,7 @@ Click ‘OK’ to save the amendments back to the main screen. </p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3t.gif" alt="Investment Switches Screen" /></p>
+  <p><img src="/pension/images/pem_mem3t.jpg" alt="Investment Switches Screen" /></p>
 
   <p>Investment Switches Screen</p>
 </div>
@@ -1449,7 +1439,7 @@ Click ‘OK’ to save the amendments back to the main screen. </p>
 are in the process of being made for this member. </p>
 
 <p>There are separate screens for each investment switch a member has made. To navigate
-between the investment switches, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span>’.</p>
+between the investment switches, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
 
 <p>There are two screens as follows: </p>
 
@@ -1486,7 +1476,7 @@ switch if: </p>
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3s.gif" alt="Investment Value Summary Screen" /></p>
+  <p><img src="/pension/images/pem_mem3s.jpg" alt="Investment Value Summary Screen" /></p>
 
   <p>Investment Value Summary Screen</p>
 </div>
@@ -1520,7 +1510,7 @@ these into Pension Master as appropriate. </p>
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3c.gif" alt="NI History Screen" /></p>
+  <p><img src="/pension/images/pem_mem3c.jpg" alt="NI History Screen" /></p>
 
   <p>NI History Screen</p>
 </div>
@@ -1554,22 +1544,11 @@ service credit etc. </p>
 <p>If no Additional Benefit details are available for this member then a blank Additional
 Benefit screen is displayed. </p>
 
-<p>If the member already has Additional Benefit details entered then either the details
-will be displayed if there is only one present or a selection window listing all existing
-Additional Benefit for this member will be displayed. Select the Additional Benefit
-required using the arrow keys and press <kbd>Return</kbd>. </p>
-
-<div class="screen">
-  <p><img src="/pension/images/pem_mem3e.gif" alt="Additional Benefits Selection Screen" /></p>
-
-  <p>Additional Benefits Selection Screen</p>
-</div>
-
 <p>A menu will be displayed at the top of the screen and the first Additional Benefit
 the member has (if any) will be displayed to the screen. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3f.gif" alt="Additional Benefits Screen" /></p>
+  <p><img src="/pension/images/pem_mem3f.jpg" alt="Additional Benefits Screen" /></p>
 
   <p>Additional Benefits Screen</p>
 </div>
@@ -1584,7 +1563,7 @@ on this menu to select the appropriate additional benefit record before updating
 To delete an Additional Benefit record, you should use the Next/Previous menu option
 on this menu to select the appropriate additional benefit record before deleting it. </p>
 
-<p>To navigate between Additional Benefits records for a member, use the ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span>’ buttons on the screen. </p>
+<p>To navigate between Additional Benefits records for a member, use the ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’ buttons on the screen. </p>
 
 <p>Input the fields to record your additional benefit as follows:</p>
 
@@ -1638,7 +1617,7 @@ Additional Benefit input without saving the details entered. </p>
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3h.gif" alt="Transfer In Screen (1)" /></p>
+  <p><img src="/pension/images/pem_mem3h.jpg" alt="Transfer In Screen (1)" /></p>
 
   <p>Transfer In Screen (1)</p>
 </div>
@@ -1652,11 +1631,11 @@ transfer in is of a DC Transfer type, any entries on the members <a href="#Contr
 History</a> or <a href="#Investment History">Investment History</a> that have been
 created as a result of this transfer in are also removed.</strong> </p>
 
-<p>To navigate between Transfer In records for a member, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span> ‘ on the screen. </p>
+<p>To navigate between Transfer In records for a member, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’ on the screen. </p>
 
 <p>The input fields on the initial transfer in screen are as follows:</p>
 
-<p><a name="ptvi_code"></a><strong>TRANSFER CODE -</strong> Enter a valid Transfer In Code or select
+<p><a name="ptvi_code"></a><strong>TRANSFER CODE</strong> - Enter a valid Transfer In Code or select
 a code from the lookup list. The code must be unique for each transfer in record that
 a member record has, although you can use the same transfer in code on more than one
 member record in the same scheme. </p>
@@ -1777,7 +1756,7 @@ input without saving the details entered. </p>
 <p>After entering the second screen of transfer in details the following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3j.gif" alt="Transfer In Screen (3)" /></p>
+  <p><img src="/pension/images/pem_mem3j.jpg" alt="Transfer In Screen (3)" /></p>
 
   <p>Transfer In Screen (3)</p>
 </div>
@@ -1861,28 +1840,8 @@ the contributions are available to purchase units in the normal way. </p>
 
 <p>Select the Transfer Out screen from the menu.</p>
 
-<p>One of the following then happens: </p>
-
-<ul>
-  <li>If no transfer out details are available for this member then a blank transfer out screen is displayed. </li>
-  <li>If the member has one transfer out record, the details of this transfer out are displayed to the screen. </li>
-  <li>If the member has more than one transfer out record, then a window will be displayed
-showing all the existing transfer out’s for this member. Select the transfer required
-using the arrow keys and press <kbd>Return</kbd>. The multiple transfer out selection
-screeen is shown below: </li>
-</ul>
-
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3k.gif" alt="Transfer Out Selection Window" /></p>
-
-  <p>Transfer Out Selection Window</p>
-</div>
-
-<p>A menu will be displayed at the top of the screen and the Transfer Out selected from
-the window (if any) will be displayed to the screen. </p>
-
-<div class="screen">
-  <p><img src="/pension/images/pem_mem3l.gif" alt="Transfer Out Screen (1)" /></p>
+  <p><img src="/pension/images/pem_mem3l.jpg" alt="Transfer Out Screen (1)" /></p>
 
   <p>Transfer Out Screen (1)</p>
 </div>
@@ -1893,11 +1852,11 @@ the window (if any) will be displayed to the screen. </p>
 
 <p>To delete the current transfer out record for this member, click ‘Delete’. </p>
 
-<p>To navigate between Transfer Out records for a member, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span>’. </p>
+<p>To navigate between Transfer Out records for a member, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’. </p>
 
 <p>Input the fields to record your Transfer Out as follows:</p>
 
-<p><a name="ptvo_code"></a><strong>TRANSFER CODE -</strong> Enter a valid Transfer Out Code or
+<p><a name="ptvo_code"></a><strong>TRANSFER CODE</strong> - Enter a valid Transfer Out Code or
 select a code from the lookup list. The list has an indicator on the right-hand side
 to show if the Transfer Out Code has already been used by the current member. The
 code must be unique for each transfer out record that a member record has, although
@@ -1984,7 +1943,7 @@ input without saving the details entered. </p>
 <p>After entering the first screen of transfer out details the following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3m.gif" alt="Transfer Out Screen (2)" /></p>
+  <p><img src="/pension/images/pem_mem3m.jpg" alt="Transfer Out Screen (2)" /></p>
 
   <p>Transfer Out Screen (2)</p>
 </div>
@@ -2049,7 +2008,7 @@ may have had from the scheme. </p>
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3n.gif" alt="Refund Of Contributions Screen" /></p>
+  <p><img src="/pension/images/pem_mem3n.jpg" alt="Refund Of Contributions Screen" /></p>
 
   <p>Refund Of Contributions Screen</p>
 </div>
@@ -2136,7 +2095,7 @@ Benefit before and after the normal pension date are recorded.</p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mdpens.gif" alt="Basic Deferred Pensioner Details Screen" /></p>
+  <p><img src="/pension/images/pem_mdpens.jpg" alt="Basic Deferred Pensioner Details Screen" /></p>
 
   <p>Basic Deferred Pensioner Details Screen</p>
 </div>
@@ -2210,7 +2169,7 @@ the Deferred Pension History Screen is automatically displayed. Otherwise click 
 <p><a name="Deferred Pension History Screen"></a></p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mdpena.gif" alt="Deferred Pension History Screen" /></p>
+  <p><img src="/pension/images/pem_mdpena.jpg" alt="Deferred Pension History Screen" /></p>
 
   <p>Deferred Pension History Screen</p>
 </div>
@@ -2233,7 +2192,7 @@ side to show if the Deferred Pensioner Code has already been used by the current
 of Deferred Pension transaction:</p>
 
 <ul>
-  <li><em>*DA</em> - Deferred Pension Add</li>
+  <li><strong>DA</strong> - Deferred Pension Add</li>
   <li><strong>DI</strong> - Deferred Pension Ignore</li>
   <li><strong>DS</strong> - Deferred Pension Subtract</li>
 </ul>
@@ -2289,7 +2248,7 @@ pop-up window is displayed showing the details that have just been entered. </p>
 <p><a name="reason"></a></p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mdpenr.gif" alt="Reason for Increase Window" /></p>
+  <p><img src="/pension/images/pem_mdpenr.jpg" alt="Reason for Increase Window" /></p>
 
   <p>Reason for Increase Window</p>
 </div>
@@ -2321,14 +2280,14 @@ exit the screen without saving the details entered. </p>
 <p><a name="Deferred Pension Increase History Screen"></a></p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mdpenh.gif" alt="Deferred Pension Increase History Screen" /></p>
+  <p><img src="/pension/images/pem_mdpenh.jpg" alt="Deferred Pension Increase History Screen" /></p>
 
   <p>Deferred Pension Increase History Screen</p>
 </div>
 
 <p>The details on this screen cannot be manually altered or amended, they are simply
 a record of changes made on the Deferred Pension History Screen. Other Deferred Pension
-Codes can be viewed by clicking ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span>’. </p>
+Codes can be viewed by clicking ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’. </p>
 
 <p>The fields are described as follows: </p>
 
@@ -2500,7 +2459,7 @@ by clicking ‘2’. </p>
 <p><a name="Pension History Screen"></a></p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mpena.gif" alt="Pension History Screen" /></p>
+  <p><img src="/pension/images/pem_mpena.jpg" alt="Pension History Screen" /></p>
 
   <p>Pension History Screen</p>
 </div>
@@ -2584,7 +2543,7 @@ is displayed showing the details that have just been entered. </p>
 <p><a name="reason2"></a></p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mpenr.gif" alt="Reason for Increase Window" /></p>
+  <p><img src="/pension/images/pem_mpenr.jpg" alt="Reason for Increase Window" /></p>
 
   <p>Reason for Increase Window</p>
 </div>
@@ -2616,14 +2575,14 @@ screen without saving the details entered. </p>
 <p><a name="Pension Increase History Screen"></a></p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mpenh.gif" alt="Pension Increase History Screen" /></p>
+  <p><img src="/pension/images/pem_mpenh.jpg" alt="Pension Increase History Screen" /></p>
 
   <p>Pension Increase History Screen</p>
 </div>
 
 <p>The details on this screen cannot be manually altered or amended, they are simply
 a record of changes made on the Pension History Screen. Other Pension Codes can be
-viewed by clicking ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘Next <span class="glyphicon glyphicon-arrow-right"></span>’ </p>
+viewed by clicking ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’ </p>
 
 <p>The fields are described as follows: </p>
 
@@ -2655,7 +2614,7 @@ the first screen. </p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mpenb.gif" alt="Pensioner Bank Details Screen" /></p>
+  <p><img src="/pension/images/pem_mpenb.jpg" alt="Pensioner Bank Details Screen" /></p>
 
   <p>Pensioner Bank Details Screen</p>
 </div>
@@ -2715,7 +2674,7 @@ the beneficiary reference field. </li>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem3q.gif" alt="Death Details Screen" /></p>
+  <p><img src="/pension/images/pem_mem3q.jpg" alt="Death Details Screen" /></p>
 
   <p>Death Details Screen</p>
 </div>
@@ -2806,7 +2765,7 @@ next to the Salutation field. </p>
 <p>The following screen is displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_memj.gif" alt="Member Address Screen" /></p>
+  <p><img src="/pension/images/pem_memj.jpg" alt="Member Address Screen" /></p>
 
   <p>Member Address Screen</p>
 </div>
@@ -2858,7 +2817,7 @@ or click on ‘Cancel’ to exit address input without saving the details. </p>
 be displayed (for the selected User Defined Screen):</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_muds.gif" alt="User Defined Screen" /></p>
+  <p><img src="/pension/images/pem_muds.jpg" alt="User Defined Screen" /></p>
 
   <p>User Defined Screen</p>
 </div>
@@ -2888,7 +2847,7 @@ Member Records</a>. </p>
 will be displayed (for the selected User Defined History):</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mua.gif" alt="User Defined History" /></p>
+  <p><img src="/pension/images/pem_mua.jpg" alt="User Defined History" /></p>
 
   <p>User Defined History</p>
 </div>
@@ -2914,7 +2873,7 @@ Member Records</a>. </p>
 <p>Select the quotations screen using the menu. The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem4a.gif" alt="Quotation Type Selection Screen" /></p>
+  <p><img src="/pension/images/pem_mem4a.jpg" alt="Quotation Type Selection Screen" /></p>
 
   <p>Quotation Type Selection Screen</p>
 </div>
@@ -2926,7 +2885,7 @@ require and click ‘OK’ to select it. </p>
 <p>The following screen is displayed (for the appropriate Quotation Type):</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem4d.gif" alt="Quotations Screen" /></p>
+  <p><img src="/pension/images/pem_mem4d.jpg" alt="Quotations Screen" /></p>
 
   <p>Quotations Screen</p>
 </div>
@@ -2942,7 +2901,7 @@ in the menu. </p>
 to add quotes for. This is as follows:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem4c.gif" alt="Quotation Type Selection Screen" /></p>
+  <p><img src="/pension/images/pem_mem4c.jpg" alt="Quotation Type Selection Screen" /></p>
 
   <p>Quotation Type Selection Screen</p>
 </div>
@@ -2953,7 +2912,7 @@ it. </p>
 <p>The following screen is displayed (for the appropriate Quotation Type): </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem4d.gif" alt="Quotations Screen" /></p>
+  <p><img src="/pension/images/pem_mem4d.jpg" alt="Quotations Screen" /></p>
 
   <p>Quotations Screen</p>
 </div>
@@ -2965,7 +2924,7 @@ it. </p>
 <p>Click ‘Select’. The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem4e.gif" alt="Quotation Type Selection Screen" /></p>
+  <p><img src="/pension/images/pem_mem4e.jpg" alt="Quotation Type Selection Screen" /></p>
 
   <p>Quotation Type Selection Screen</p>
 </div>
@@ -2989,7 +2948,7 @@ the section “Add A New Quote”. </p>
 items that can be used in your benefit calculations. This is as follows: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem4f.gif" alt="Benefit Override Values Screen" /></p>
+  <p><img src="/pension/images/pem_mem4f.jpg" alt="Benefit Override Values Screen" /></p>
 
   <p>Benefit Override Values Screen</p>
 </div>
@@ -3041,8 +3000,9 @@ Parameters</a> has been ticked. </p>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
-access this option.
-If you do not have supervisor status, you will not be permitted access to this
+access this option.</p>
+
+  <p>If you do not have supervisor status, you will not be permitted access to this
 option.</p>
 </div>
 
@@ -3117,7 +3077,7 @@ for a member. </p>
 <p>Click ‘Update’. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_ipwrd.gif" alt="Internet Security Details Screen" /></p>
+  <p><img src="/pension/images/pem_ipwrd.jpg" alt="Internet Security Details Screen" /></p>
 
   <p>Internet Security Details Screen</p>
 </div>
@@ -3154,7 +3114,7 @@ Scheme Administrator to unlock the account. </p>
 <p>Click ‘Update’. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem4g.gif" alt="Combined Pension Forecast Screen" /></p>
+  <p><img src="/pension/images/pem_mem4g.jpg" alt="Combined Pension Forecast Screen" /></p>
 
   <p>Combined Pension Forecast Screen</p>
 </div>
@@ -3189,7 +3149,7 @@ Scheme Administrator to unlock the account. </p>
 
 <p><strong>PROJECTED TOTAL PERIOD 2</strong> - The projected total for period 2. You cannot update this field.</p>
 
-<h3 id="a-namemdivaa-namedivorce-detailsadivorce-details"><a name="MDIV"></a><a name="Divorce Details"></a>Divorce Details.</h3>
+<h3 id="a-namemdivaa-namedivorce-detailsadivorce-details"><a name="MDIV"></a><a name="Divorce Details"></a>Divorce Details</h3>
 
 <p>This screen allows you to add and amend details of a members divorce.</p>
 
@@ -3201,7 +3161,7 @@ the ex-spouse details.</p>
 <p>Click “Update”. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_div1.gif" alt="Ex-Spouse details screen" /></p>
+  <p><img src="/pension/images/pem_div1.jpg" alt="Ex-Spouse details screen" /></p>
 
   <p>Ex-Spouse details screen</p>
 </div>
@@ -3255,7 +3215,7 @@ amount quoted. </p>
 <p><a name="pdi_calcdate"></a><strong>TV CALCDATE</strong> - Enter the calculation date.</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_div2.gif" alt="Attachment of order details" /></p>
+  <p><img src="/pension/images/pem_div2.jpg" alt="Attachment of order details" /></p>
 
   <p>Attachment of order details</p>
 </div>
@@ -3275,9 +3235,9 @@ sum payable at retirement. </p>
 <p><a name="pdi_notes"></a><strong>NOTES</strong> - Enter any notes you wish to add here.</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_div3.gif" alt="Receiving scheme details." /></p>
+  <p><img src="/pension/images/pem_div3.jpg" alt="Receiving scheme details" /></p>
 
-  <p>Receiving scheme details.</p>
+  <p>Receiving scheme details</p>
 </div>
 
 <p><a name="pdi_rec_scheme"></a><strong>RECEIVING SCHEME</strong> - Enter the name of the
@@ -3299,7 +3259,7 @@ that the benefits were redirected. </p>
 <p><a name="pdi_comments"></a><strong>COMMENTS</strong> - Enter any comments you wish to
 add here. </p>
 
-<h3 id="a-namepaperaa-namecorrespondence-historyacorrespondence-history"><a name="PAPER"></a><a name="Correspondence History"></a>Correspondence History.</h3>
+<h3 id="a-namepaperaa-namecorrespondence-historyacorrespondence-history"><a name="PAPER"></a><a name="Correspondence History"></a>Correspondence History</h3>
 
 <p>This screen shows the recent Correspondence that has been generated via Mail Merge
 and the Letter/Cert facilities.</p>
@@ -3309,9 +3269,9 @@ and the Letter/Cert facilities.</p>
 <p>Click ‘Browse’ to view Correspondence History if there are more than 13 entries. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mpaper.gif" alt="Correspondence History details screen." /></p>
+  <p><img src="/pension/images/pem_mpaper.jpg" alt="Correspondence History details screen" /></p>
 
-  <p>Correspondence History details screen.</p>
+  <p>Correspondence History details screen</p>
 </div>
 
 <p><a name="patr_date"></a><strong>DATE</strong> - This is the date that the correspondence was
@@ -3326,16 +3286,16 @@ the correspondence. </p>
 <p><a name="patr_mm_id"></a><strong>CORRESPONDENCE</strong> - This is the mail merge or letter/cert
 description of the correspondence. </p>
 
-<h3 id="a-nametaxaa-nametax-simplification-amountsatax-simplification-amounts"><a name="TAX"></a><a name="Tax Simplification Amounts"></a>Tax Simplification Amounts.</h3>
+<h3 id="a-nametaxaa-nametax-simplification-amountsatax-simplification-amounts"><a name="TAX"></a><a name="Tax Simplification Amounts"></a>Tax Simplification Amounts</h3>
 
 <p>This screen shows the tax simplification amounts to be held against the member. This screen will only be available to UK schemes only.</p>
 
 <p>Select Tax Simplification Amounts from the menu. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mtax.gif" alt="Tax Simplification Amounts screen." /></p>
+  <p><img src="/pension/images/pem_mtax.jpg" alt="Tax Simplification Amounts screen" /></p>
 
-  <p>Tax Simplification Amounts screen.</p>
+  <p>Tax Simplification Amounts screen</p>
 </div>
 
 <p><a name="pmtx_eff_date"></a><strong>EFFECTIVE DATE</strong> - Enter the effective date. It is only possible to amend this in Add mode.</p>
@@ -3356,9 +3316,9 @@ description of the correspondence. </p>
 
 <p><a name="pmtx_dc_life_allow"></a><strong>DC LIFETIME ALLOWANCE</strong> - Enter the DC Lifetime Allowance for the date entered. </p>
 
-<h3 id="a-nameallowaa-nameannuallifetime-allowanceaannuallifetime-allowance"><a name="ALLOW"></a><a name="Annual/Lifetime Allowance"></a>Annual/Lifetime Allowance.</h3>
+<h3 id="a-nameallowaa-nameannuallifetime-allowanceaannuallifetime-allowance"><a name="ALLOW"></a><a name="Annual/Lifetime Allowance"></a>Annual/Lifetime Allowance</h3>
 
-<p>The annual/lifetime allowance amounts are held across 2 screens for the member. The annual allowance amounts are held in screen 1 and the lifetime allowance amounts are held in screen 2. Both the screens can be updated manually, or they can have data written back to them via the &lt;a href=”/pension/updates/peu_wback/”#INDEX”&gt;Writeback Results&lt;/a&gt; program. The screens will only be available to UK schemes only.</p>
+<p>The annual/lifetime allowance amounts are held across 2 screens for the member. The annual allowance amounts are held in screen 1 and the lifetime allowance amounts are held in screen 2. Both the screens can be updated manually, or they can have data written back to them via <a href="/pension/updates/peu_wback/">Writeback Results</a>. The screens will only be available to UK schemes only.</p>
 
 <div class="alert alert-danger" role="alert">
   <p>Any fresh line of data that is entered in either screen is fed through to the other screen. For example, if a new line of data was entered in the Annual Allowance screen, then you will see that a line of data for the same calculation date will appear in the Lifetime Allowance screen, however, a 0 (zero) will be displayed for each lifetime allowance amount.</p>
@@ -3367,9 +3327,9 @@ description of the correspondence. </p>
 <p>Select Annual/Lifetime Allowance from the menu. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mallow1.gif" alt="Annual Allowance screen." /></p>
+  <p><img src="/pension/images/pem_mallow1.jpg" alt="Annual Allowance screen" /></p>
 
-  <p>Annual Allowance screen.</p>
+  <p>Annual Allowance screen</p>
 </div>
 
 <p><a name="pmal_date"></a><strong>CALCULATION DATE</strong> - Enter the calculation date. The date must be in the format 05/04/yyyy, and there can only be one occurence of a particular date for the member.</p>
@@ -3383,9 +3343,9 @@ description of the correspondence. </p>
 <p><a name="pmal_aa_percent"></a><strong>ANNUAL INCREASE %</strong> - Enter the percentage of annual increase that has been used up.</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mallow2.gif" alt="Lifetime Allowance screen." /></p>
+  <p><img src="/pension/images/pem_mallow2.jpg" alt="Lifetime Allowance screen" /></p>
 
-  <p>Lifetime Allowance screen.</p>
+  <p>Lifetime Allowance screen</p>
 </div>
 
 <p><a name="pmal_date"></a><strong>CALCULATION DATE</strong> - Enter the calculation date. The date must be in the format 05/04/yyyy, and there can only be one occurence of a particular date for the member.</p>
@@ -3398,16 +3358,16 @@ description of the correspondence. </p>
 
 <p><a name="pmal_lta_percent"></a><strong>LIFETIME ALLOWANCE %</strong> - Enter the percentage of lifetime allowance that has been used up.</p>
 
-<h3 id="a-nameadayaa-nameprotected-a-day-benefitsaprotected-a-day-benefits"><a name="ADAY"></a><a name="Protected A-Day Benefits"></a>Protected A-Day Benefits.</h3>
+<h3 id="a-nameadayaa-nameprotected-a-day-benefitsaprotected-a-day-benefits"><a name="ADAY"></a><a name="Protected A-Day Benefits"></a>Protected A-Day Benefits</h3>
 
 <p>This screen holds protected A-Day benefits for the member. It can be updated manually, or it can have data written back to it via the <a href="/pension/updates/peu_wback/#INDEX">Writeback Results</a> program. This screen will only be available to UK schemes only.</p>
 
 <p>Select Protected A-Day Benefits from the menu. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_maday.gif" alt="Protected A-Day Benefits screen." /></p>
+  <p><img src="/pension/images/pem_maday.jpg" alt="Protected A-Day Benefits screen" /></p>
 
-  <p>Protected A-Day Benefits screen.</p>
+  <p>Protected A-Day Benefits screen</p>
 </div>
 
 <p><a name="pmay_value"></a><strong>CASH VALUE ON PRE A-DAY BASIS</strong> - Enter the cash value, using pre A-Day basis.</p>
@@ -3424,6 +3384,12 @@ description of the correspondence. </p>
 
 <p><a name="pmay_tv_val"></a><strong>TV CASH VALUE</strong> - Enter the transferred cash value.</p>
 
+<h3 id="a-namecareaa-namecareaveragerevaluedearningsacareer-average-revalued-earnings"><a name="CARE"></a><a name="care_average_revalued_earnings"></a>Career Average Revalued Earnings</h3>
+
+<h3 id="a-namebpenaa-namedisabilitybenefitadisability-benefit"><a name="BPEN"></a><a name="disability_benefit"></a>Disability Benefit</h3>
+
+<h3 id="a-namepipaa-namepensioninputperiodsapension-input-periods"><a name="PIP"></a><a name="pension_input_periods"></a>Pension Input Periods</h3>
+
 <h2 id="a-namedeleting-member-recordsadeleting-member-records"><a name="Deleting Member Records"></a>Deleting Member Records</h2>
 
 <p>Before Deleting, a record must be selected through the Query option, and an error
@@ -3433,8 +3399,9 @@ message is displayed if a record for deletion has not been selected.</p>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
-delete member records.
-If you do not have supervisor status, you will not be permitted access to this
+delete member records.</p>
+
+  <p>If you do not have supervisor status, you will not be permitted access to this
 option.</p>
 </div>
 
@@ -3464,7 +3431,12 @@ on the menu if you are in any other screen as it is not relevant.</p>
 <p>When the delete option is selected the following window is displayed </p>
 
 <div class="screen">
-  <p><img src="/pension/images/del_mem1.gif" alt="" /></p>
+  <p><img src="/pension/images/del_mem1.jpg" alt="" /></p>
+
+</div>
+
+<div class="screen">
+  <p><img src="/pension/images/del_mem2.jpg" alt="" /></p>
 
 </div>
 
@@ -3476,7 +3448,7 @@ to the program menu. </p>
 <p>The following window is displayed </p>
 
 <div class="screen">
-  <p><img src="/pension/images/del_mem2.gif" alt="" /></p>
+  <p><img src="/pension/images/del_mem3.jpg" alt="" /></p>
 
 </div>
 
@@ -3497,8 +3469,9 @@ to the screen informing the user of this.</p>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
-delete member records.
-If you do not have supervisor status, you will not be permitted access to this
+delete member records.</p>
+
+  <p>If you do not have supervisor status, you will not be permitted access to this
 option.</p>
 </div>
 
@@ -3512,7 +3485,7 @@ not be displayed on the menu if you are in any other screen.</p>
 <p>When the Bulk Delete option is selected the following window is displayed </p>
 
 <div class="screen">
-  <p><img src="/pension/images/del_mem3.gif" alt="" /></p>
+  <p><img src="/pension/images/del_mem4.jpg" alt="" /></p>
 
 </div>
 
@@ -3524,7 +3497,7 @@ to the program menu. </p>
 <p>The following window is displayed </p>
 
 <div class="screen">
-  <p><img src="/pension/images/del_mem4.gif" alt="" /></p>
+  <p><img src="/pension/images/del_mem5.jpg" alt="" /></p>
 
 </div>
 
@@ -3541,7 +3514,7 @@ and the program returns to the main menu. </p>
 <p>The following window now appears: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem5l.gif" alt="Select Report Options Window" /></p>
+  <p><img src="/pension/images/pem_mem5l.jpg" alt="Select Report Options Window" /></p>
 
   <p>Select Report Options Window</p>
 </div>
@@ -3583,7 +3556,7 @@ which had “N” entered. </p>
 screen is as follows: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem5k.gif" alt="Report Selection Screen" /></p>
+  <p><img src="/pension/images/pem_mem5k.jpg" alt="Report Selection Screen" /></p>
 
   <p>Report Selection Screen</p>
 </div>
@@ -3616,7 +3589,7 @@ member details: members age, how long they have been with the company and how lo
 they have been in the pension scheme. Just click ‘information’. </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem5m.gif" alt="Member Information Screen" /></p>
+  <p><img src="/pension/images/pem_mem5m.jpg" alt="Member Information Screen" /></p>
 
   <p>Member Information Screen</p>
 </div>
@@ -3630,7 +3603,7 @@ before you can instigate a workflow action.</p>
 <p>The following pop-up window is now displayed: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem5d.gif" alt="Workflow Instigation Popup" /></p>
+  <p><img src="/pension/images/pem_mem5d.jpg" alt="Workflow Instigation Popup" /></p>
 
   <p>Workflow Instigation Popup</p>
 </div>
@@ -3642,20 +3615,6 @@ Management</a> option.</p>
 
 <p>Click ‘OK’ to continue or click ‘Cancel’ to abort the instigation of this workflow
 action. </p>
-
-<p>The following screen is then displayed and allows you to enter any memoranda that
-can be attached to the diary entries created by the instigation of this workflow code: </p>
-
-<div class="screen">
-  <p><img src="/pension/images/pem_mem5e.gif" alt="Memoranda Entry Popup" /></p>
-
-  <p>Memoranda Entry Popup</p>
-</div>
-
-<p>Enter any memoranda that you require and click ‘OK’ to save. You can click ‘Cancel’
-to abort the instigation of this workflow code. </p>
-
-<p>You will be returned to the main menu. </p>
 
 <h2 id="a-namenavigateanavigating-between-screens"><a name="navigate"></a>Navigating Between Screens</h2>
 
@@ -3673,7 +3632,7 @@ pop-up menu. </p>
 <p><a name="menu"></a>The menu selection pop-up is as follows: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem5f.gif" alt="Screen Selection Screen" /></p>
+  <p><img src="/pension/images/pem_mem5f.jpg" alt="Screen Selection Screen" /></p>
 
   <p>Screen Selection Screen</p>
 </div>
@@ -3690,7 +3649,7 @@ Merge Report</a> option.</p>
 the following window opens:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem5g.gif" alt="Letter/Cert Options Screen 1" /></p>
+  <p><img src="/pension/images/pem_mem5g.jpg" alt="Letter/Cert Options Screen 1" /></p>
 
   <p>Letter/Cert Options Screen 1</p>
 </div>
@@ -3699,7 +3658,7 @@ the following window opens:</p>
 selected the following window opens: </p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem5h.gif" alt="Letter/Cert Options Screen 2" /></p>
+  <p><img src="/pension/images/pem_mem5h.jpg" alt="Letter/Cert Options Screen 2" /></p>
 
   <p>Letter/Cert Options Screen 2</p>
 </div>
@@ -3719,7 +3678,7 @@ entered, an error message is displayed and a new selection criteria should be en
 <p>When the record(s) have been selected the following window is opened:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mem5i.gif" alt="Letter/Cert Selection Screen" /></p>
+  <p><img src="/pension/images/pem_mem5i.jpg" alt="Letter/Cert Selection Screen" /></p>
 
   <p>Letter/Cert Selection Screen</p>
 </div>

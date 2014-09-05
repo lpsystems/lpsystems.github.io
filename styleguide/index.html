@@ -18,7 +18,7 @@
   <body role="document">
  
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
@@ -57,9 +57,93 @@
 
 <p>Because each page is converted into HTML markup this cleans up the pages considerably.</p>
 
+<h2 id="a-nameheadingsaheadings"><a name="headings"></a>Headings</h2>
+
+<p>Headings are indicated by the <code>##</code> at the beginning of the line. The main page heading is a <code>&lt;h1&gt;</code>, which is the taken from the title of the markdown file. Other headings then start at <code>##</code> with any sub-headings being <code>###</code> etc.</p>
+
 <h2 id="a-nameparagraphsaparagraphs"><a name="paragraphs"></a>Paragraphs</h2>
 
+<p>Paragraph tags <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> are not required as the Markdown processor takes the blank lines around the text to indicate paragraphs.</p>
+
+<h2 id="a-namelistsalists"><a name="lists"></a>Lists</h2>
+
+<p>For unordered lists start each line with <code>* </code>:</p>
+
+<pre><code>* Item 1
+  * Item a
+  * Item b
+  * Item c
+* Item 2
+* Item 3
+</code></pre>
+
+<ul>
+  <li>Item 1
+    <ul>
+      <li>Item a</li>
+      <li>Item b</li>
+      <li>Item c</li>
+    </ul>
+  </li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<p>For ordered lists start each line with <code>1. </code>:</p>
+
+<pre><code>1. Item 1
+   1. Item a
+   1. Item b
+   1. Item c
+1. Item 2
+1. Item 3
+</code></pre>
+
+<ol>
+  <li>Item 1
+    <ol>
+      <li>Item a</li>
+      <li>Item b</li>
+      <li>Item c</li>
+    </ol>
+  </li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+
+<h2 id="a-namelinksalinks"><a name="links"></a>Links</h2>
+
+<p>These have been left as standard HTML tags:</p>
+
+<pre><code>&lt;a href="/pension/system_administration/gn_user/"&gt;Users&lt;/a&gt;
+</code></pre>
+
+<p>New links could be written using the Markdown syntax:</p>
+
+<pre><code>[Users](/pension/system_administration/gn_user/)
+</code></pre>
+
 <h2 id="a-nametablesatables"><a name="tables"></a>Tables</h2>
+
+<p><a href="http://kramdown.gettalong.org/quickref.html#tables">Tables</a> are created just using pipes as column markers but they need a little extra code to style them.</p>
+
+<ol>
+  <li>The first line in pipes below indicates the table headers.</li>
+  <li>The second line shows that the columns are to be left justified.</li>
+  <li>Any subsequent lines are data lines.</li>
+</ol>
+
+<p>The <a href="http://getbootstrap.com/getting-started/">Bootstrap</a> stylesheet uses 12 columns across the screen. The <code>col-md-6</code> class indicates that the table should span half of the screen width.</p>
+
+<pre><code>&lt;div class="row"&gt;&lt;div class="col-md-6"&gt;
+
+{:.table}
+| Field | Default Value |
+|:------|:--------------|
+|Payment Frequency|12 - Monthly|
+
+&lt;/div&gt;&lt;/div&gt;
+</code></pre>
 
 <div class="row">
   <div class="col-md-6">
@@ -82,7 +166,66 @@
   </div>
 </div>
 
-<p>Escape pipes that need to be displayed by using ‘|’.</p>
+<h2 id="a-namealertaalerts"><a name="alert"></a>Alerts</h2>
+
+<p>The red warning boxes.</p>
+
+<pre><code>&lt;div class="alert alert-danger" role="alert"&gt;
+Red warning boxes.
+
+Indicating danger ahead.
+&lt;/div&gt;
+</code></pre>
+
+<div class="alert alert-danger" role="alert">
+  <p>Red warning boxes.</p>
+
+  <p>Indicating danger ahead.</p>
+</div>
+
+<h2 id="a-namewellsawells"><a name="wells"></a>Wells</h2>
+
+<p>A ‘well’ is used to indicate information that is displayed on the screen:</p>
+
+<pre><code>&lt;div class="well"&gt;
+
+Current Record 00001 / 0000x Records Found
+
+&lt;/div&gt;
+</code></pre>
+
+<div class="well">
+
+  <p>Current Record 00001 / 0000x Records Found</p>
+
+</div>
+
+<h2 id="a-namecodeacode"><a name="code"></a>Code</h2>
+
+<p>Blocks of code, such as the examples of lines in Formula, are wrapped in two lines of 5 tilde characters.</p>
+
+<pre><code>~~~~~
+@ln1 = @ln2 goto @ln3
+~~~~~
+</code></pre>
+
+<pre><code>@ln1 = @ln2 goto @ln3
+</code></pre>
+
+<h2 id="a-nameescapeaescape"><a name="escape"></a>Escape</h2>
+
+<p>Escape pipes that need to be displayed need to be escaped using <code>\</code>.</p>
+
+<h2 id="a-namekeysakeys"><a name="keys"></a>Keys</h2>
+
+<p>Key presses are wrapped in <code>&lt;kbd&gt;&lt;/kbd&gt;</code> tags like <kbd>Return</kbd>.</p>
+
+<p>Next and Previous key presses have an arrow to the left of the text using:</p>
+
+<pre><code>'&lt;span class="glyphicon glyphicon-arrow-left"&gt;&lt;/span&gt; Previous' or '&lt;span class="glyphicon glyphicon-arrow-right"&gt;&lt;/span&gt; Next'
+</code></pre>
+
+<p>‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’</p>
 
 
       <div id="footer">

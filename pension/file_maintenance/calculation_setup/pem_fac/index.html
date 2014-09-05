@@ -18,7 +18,7 @@
   <body role="document">
  
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="http:\\www.lpsystems.com\">L&amp;P Systems Limited</a>
@@ -232,8 +232,9 @@ an error message is displayed.</p>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as system administrator status in <a href="/pension/system_administration/gn_user/">Users</a> may
-update system factor tables.
-If you do not have system administrator status, you will not be permitted access
+update system factor tables.</p>
+
+  <p>If you do not have system administrator status, you will not be permitted access
 to this option for system factor tables.</p>
 </div>
 
@@ -258,44 +259,28 @@ or click ‘Cancel’ to exit the update option. </p>
 
 <h2 id="a-namedeleting-factor-tablesadeleting-factor-tables"><a name="Deleting Factor Tables"></a>Deleting Factor Tables</h2>
 
-<p>Before Deleting, a record must be selected through the query option, and an error
-message is displayed if a record for deletion has not been selected.</p>
-
-<div class="alert alert-danger" role="alert">
-  <p>A factor table should not be deleted if there are any formulae with access to it.
-Deletion of a factor table which is accessed in the formulae may cause erroneous
-calculation results and is not recommended by L&amp;P Systems Limited.
-Any formulae lines that refer to the deleted factor table will return a value of
-0, leading to incorrect calculation results in any formulae using the deleted factors.</p>
-</div>
+<p>A record must be selected through the Query option before a Factor can be deleted.</p>
 
 <p>Click ‘Delete’. </p>
 
-<p>When the delete option is selected the following menu is displayed:</p>
+<p>When the delete option is selected the following window is displayed:</p>
 
-<div class="well">
+<div class="screen">
+  <p><img src="/pension/images/pem_fac_del.jpg" alt="Delete Factors Screen" /></p>
 
-  <p>DELETE : <em>No</em> Yes </p>
-
+  <p>Delete Factors Screen</p>
 </div>
 
-<p>If you do not wish to delete the record press <kbd>N</kbd>, or click on menu option ‘No’. You
-will return to the program menu. </p>
+<p>Select one of the following options:</p>
 
-<p>If you wish to delete the record press <kbd>Y</kbd>, or click on menu option ‘Yes’. The following
-menu is displayed </p>
+<ul>
+  <li>Delete all Factor Tables for this code</li>
+  <li>Delete all Factor Tables for this code and type</li>
+  <li>Delete all Factor Tables for this code, type and sex</li>
+  <li>Delete current Factor Table</li>
+</ul>
 
-<div class="well">
-
-  <p>ARE YOU SURE : <em>No</em> Yes </p>
-
-</div>
-
-<p>If you do not wish to delete the record press <kbd>N</kbd>, or click on menu option ‘No’. The
-program returns to the main menu. </p>
-
-<p>If you wish to delete the record press <kbd>Y</kbd>, or click on menu option ‘Yes’. The record
-is deleted and the program returns to the main menu. </p>
+<p>You will then be prompted to confirm the deletion of the Factor Table.</p>
 
 <h2 id="a-nameprintaa-nameprinting-factor-tablesaa-namereportaprinting-factor-tables"><a name="print"></a><a name="Printing Factor Tables"></a><a name="report"></a>Printing Factor Tables</h2>
 
