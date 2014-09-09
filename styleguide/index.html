@@ -137,7 +137,7 @@
 
 <pre><code>&lt;div class="row"&gt;&lt;div class="col-md-6"&gt;
 
-{:.table}
+{:.table .table-condensed}
 | Field | Default Value |
 |:------|:--------------|
 |Payment Frequency|12 - Monthly|
@@ -148,7 +148,7 @@
 <div class="row">
   <div class="col-md-6">
 
-    <table class="table">
+    <table class="table table-condensed">
       <thead>
         <tr>
           <th style="text-align: left">Field</th>
@@ -226,6 +226,32 @@ Current Record 00001 / 0000x Records Found
 </code></pre>
 
 <p>‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’</p>
+
+<h2 id="a-namewordingawording"><a name="wording"></a>Wording</h2>
+
+<h3 id="drop-down-list">Drop-down List</h3>
+
+<p>These are the fields that just display a list of values underneath the field e.g. Database on the Logon screen.</p>
+
+<p>If the options are static and don’t come from a database table then write:</p>
+
+<pre><code>*SEX* - Select one of the following options from the list:
+
+* Male
+* Female
+</code></pre>
+
+<p>If the options are from a database table then write:</p>
+
+<pre><code>Select a currency from the drop-down list.
+</code></pre>
+
+<h3 id="lookup-list">Lookup List</h3>
+
+<p>Any fields that have a lookup icon which then opens a lookup list then write:</p>
+
+<pre><code>Enter a valid broker code, or click on the lookup icon for a list of broker codes.
+</code></pre>
 
 
       <div id="footer">

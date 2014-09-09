@@ -124,7 +124,7 @@ you may find in the Scheme File are as follows:</p>
 <div class="row">
   <div class="col-md-6">
 
-    <table class="table">
+    <table class="table table-condensed">
       <tbody>
         <tr>
           <td>Basic Scheme Details</td>
@@ -222,13 +222,11 @@ the ‘SCHEME CODE’ for your scheme, if necessary. This field will default to 
 set for ‘SCHEME CODE’. You can use this field to search for member records using the
 Query facility in <a href="/pension/file_maintenance/pem_mem/#Query/Search For A Member">Members</a>. </p>
 
-<p><a name="psc_base"></a><strong>BASE CURRENCY</strong> - Enter the three letter code for the
-base currency for this scheme e.g. if your scheme is UK based, enter ‘GBP’. If you
-are unsure of the currency codes available, click on the ‘Search’ button for a lookup
-list of those available on your system. See <a href="/pension/appendices/app_d/">Euro Support</a> for further details. </p>
+<p><a name="psc_base"></a><strong>BASE CURRENCY</strong> - Select a currency from the drop-down list as the
+base currency for this scheme e.g. if your scheme is UK based, enter ‘Pound Sterling’.</p>
 
 <p><strong>When your scheme opts to have it’s base currency as the Euro, you should update
-this field to be ‘EUR’.</strong> </p>
+this field to be ‘Euro’.</strong> </p>
 
 <p>You will then be prompted that all monetary values for this scheme are to be converted
 from the NCU to Euro and that this process in not reversible. You will be asked whether
@@ -265,27 +263,19 @@ Scheme (SERPS) and ‘N’ to denote that the scheme is not contracted out. If a
 values are entered in this field an error message will be displayed and the flag should
 be re-entered. This field is only relevant to UK based schemes. </p>
 
-<p><a name="psc_security"></a><strong>SECURITY RATING</strong> - Enter the security rating you
-wish to use for this scheme. This is used in conjunction with the Security Rating
+<p><a name="psc_security"></a><strong>SECURITY RATING</strong> - Select a security rating from the drop-down list
+to use for this scheme. This is used in conjunction with the Security Rating
 in the <a href="/pension/system_administration/gn_user/">Users</a> option
 to determine whether the current user has access to any member records in the current
 scheme. </p>
 
-<p>The valid security ratings are any number in the range 1 to 99, with 1 being the highest
-security level and 99 being the lowest. If you are unsure of the security levels that
-are available on your system, click on the ‘Search’ button to get a lookup list. See <a href="/pension/system_data/pem_sec/">Security
-Levels</a>.</p>
-
-<p><a name="psc_type"></a><strong>SCHEME TYPE</strong> - Enter the type of scheme as follows:</p>
+<p><a name="psc_type"></a><strong>SCHEME TYPE</strong> - Select one of the following options from the drop-down list:</p>
 
 <ul>
-  <li><strong>DB</strong> - Defined Benefits</li>
-  <li><strong>DC</strong> - Defined Contributions</li>
-  <li><strong>HY</strong> - Hybrid</li>
+  <li>Defined Benefits</li>
+  <li>Defined Contributions</li>
+  <li>Hybrid</li>
 </ul>
-
-<p>If any other values are entered in this field an error message will be displayed and
-the flag should be re-entered. </p>
 
 <p><a name="psc_updcu"></a><strong>ALLOW MANUAL UPDATE OF UNITS?</strong> - Click this field if you want to allow manual update of the investment history records for members of this scheme.</p>
 
@@ -415,10 +405,9 @@ future could be loaded into a <a href="#User Defined Screens">User Defined Scree
 then the screen could be ‘switched off’. </p>
 
 <p><a name="psl_view"></a><strong>VIEW ONLY</strong> - Each screen, including any <a href="#User Defined Screens">User
-Defined Screens</a> and <a href="#User Defined History">History</a>, can be set to
-a rating between 1 and 99. The rating must match up to one of the ratings available
-for the Security Rating, which you can find on a list by clicking on the ‘Search’
-button. The objective of this rating is to prevent unauthorised users updating/deleting
+Defined</a> and <a href="#User Defined History">History</a> screens, can be allocated a security rating from the drop-down list.</p>
+
+<p>The objective of this rating is to prevent unauthorised users updating/deleting
 important data i.e. a junior with a low security rating, will not be allowed to update/delete
 the data of a screen which is set to a higher rating. Once the ratings have
 been set for the <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a> screens, then if
@@ -435,8 +424,7 @@ to that on the <a href="/pension/file_maintenance/pem_sch/#Basic Scheme Details"
 it was first entered. This can be amended to any available <a href="/pension/system_data/pem_sec/">Security
 Rating</a> to prevent junior users being able to access that particular screen of
 members in the selected scheme. As mentioned previously, this could be implemented
-to prevent a junior administrator being able to view a directors salary screen. A
-list of available Security Ratings are available by clicking on the ‘Search’ button. </p>
+to prevent a junior administrator being able to view a directors salary screen.</p>
 
 <p>When all the details have been entered click ‘OK’ to save the member screen selection
 details, or click ‘Cancel’ to exit entry without saving the details. </p>
@@ -466,8 +454,8 @@ so as to restrict access to a scheme on an individual user level. </li>
 
 <p><a name="pse_user"></a><strong>USER</strong> - Enter ‘all’, a workgroup code or a username to
 indicate who you wish to have access to records in this scheme. In the latter two
-cases, you can click on the ‘Search’ button for a lookup list of the available workgroups
-and usernames on your Pension Master system. Workgroups are always displayed in uppercase,
+cases, you can click on the lookup icon for a list of the available workgroups
+and usernames. Workgroups are always displayed in uppercase,
 whilst usernames are always displayed in lower case.</p>
 
 <div class="alert alert-danger" role="alert">
@@ -577,19 +565,26 @@ DESCRIPTIONS/FORMATS</strong> - Enter the field descriptions and field formats f
 schemes Scheme User Defined Details. You can leave blank lines to space your record
 out and you must enter a description if you enter a format. </p>
 
-<p>The list of valid formats can be selected by clicking ‘Search’. These are listed below: </p>
+<p>Select one of the following formats from the drop-down list:</p>
 
 <ul>
-  <li><strong>DT</strong> - Date - dd/mm/yyyy </li>
-  <li><strong>IN</strong> - Indicator - Single character (uppercase only) </li>
-  <li><strong>TX</strong> - Text - Up to ten characters of free text </li>
-  <li><strong>MO</strong> - Monetary Amount - Number with two decimal places </li>
-  <li><strong>Nn</strong> - Number with n decimal places. n can equal 0, 1, 2, 3, 4, 5 or 6 e.g. N3 - Number with 3 decimal places. </li>
+  <li>Boolean - Y - Yes or N - No</li>
+  <li>Date - dd/mm/yyyy</li>
+  <li>Indicator - Single character (uppercase only)</li>
+  <li>Money - Number with two decimal places</li>
+  <li>Numeric 0 Decimal Places</li>
+  <li>Numeric 1 Decimal Places</li>
+  <li>Numeric 2 Decimal Places</li>
+  <li>Numeric 3 Decimal Places</li>
+  <li>Numeric 4 Decimal Places</li>
+  <li>Numeric 5 Decimal Places</li>
+  <li>Numeric 6 Decimal Places</li>
+  <li>Text - Up to ten characters of free text</li>
 </ul>
 
-<p>Note: Due to field formating, a field with a format of Nn cannot contain more than
-9 numbers e.g. a field with a format of N4 can only have up to 5 numbers before the
-decimal point and 4 after, similarly and field with a format of N1 can only have up
+<p>Note: Due to field formating, a field with a Numeric format cannot contain more than
+9 numbers e.g. a field with a format of Numeric 4 Decimal Places can only have up to 5 numbers before the
+decimal point and 4 after, similarly and field with a format of Numeric 1 Decimal Places can only have up
 to 8 numbers before the decimal point and 1 after. </p>
 
 <p><a name="psud_val1"></a><strong>FIELD VALUES</strong> - Enter the field values for the schemes
@@ -639,25 +634,32 @@ DESCRIPTIONS/FORMATS</strong> - Enter the field descriptions and field formats f
 User Defined Screen. You can leave blank lines to space your record out and you must
 enter a description if you enter a format. </p>
 
-<p>The list of valid formats can be selected by clicking on the ‘Search’ button. These
-are listed below: </p>
+<p>Select one of the following formats from the drop-down list:</p>
 
 <ul>
-  <li><strong>DT</strong> - Date - dd/mm/yyyy </li>
-  <li><strong>IN</strong> - Indicator - Single character (uppercase only) </li>
-  <li><strong>HD</strong> - Header - Description only. Will not allow user to enter member data against this field </li>
-  <li><strong>TX</strong> - Text - Up to ten characters of free text </li>
-  <li><strong>BO</strong> - Boolean value. Y( Yes ) or N( No ) allowed. </li>
-  <li><strong>FO</strong> - Formula calculation. Enter a valid formula code in the formula field. This formula
-will be dynamically calculated when the <a href="/pension/file_maintenance/pem_mem/#User Defined Screens">User
-Defined Screen</a> in Members is displayed or reported upon. </li>
-  <li><strong>MO</strong> - Monetary Amount - Number with two decimal places </li>
-  <li><strong>Nn</strong> - Number with n decimal places. n can equal 0, 1, 2, 3, 4, 5 or 6 e.g. N3 - Number with 3 decimal places. </li>
+  <li>Boolean - Y - Yes or N - No</li>
+  <li>Date - dd/mm/yyyy</li>
+  <li>Formula</li>
+  <li>Header - Description only. Will not allow user to enter member data against this field</li>
+  <li>Indicator - Single character (uppercase only)</li>
+  <li>Money - Number with two decimal places</li>
+  <li>Numeric 0 Decimal Places</li>
+  <li>Numeric 1 Decimal Places</li>
+  <li>Numeric 2 Decimal Places</li>
+  <li>Numeric 3 Decimal Places</li>
+  <li>Numeric 4 Decimal Places</li>
+  <li>Numeric 5 Decimal Places</li>
+  <li>Numeric 6 Decimal Places</li>
+  <li>Text - Up to ten characters of free text</li>
 </ul>
 
-<p>Note: Due to field formating, a field with a format of Nn cannot contain more than
-9 numbers e.g. a field with a format of N4 can only have up to 5 numbers before the
-decimal point and 4 after, similarly and field with a format of N1 can only have up
+<p>Note: If the Formula format is selected enter a valid formula code in the formula field. This formula
+will be dynamically calculated when the <a href="/pension/file_maintenance/pem_mem/#User Defined Screens">User
+Defined Screen</a> in Members is displayed or reported upon. </p>
+
+<p>Note: Due to field formating, a field with a Numeric format cannot contain more than
+9 numbers e.g. a field with a format of Numeric 4 Decimal Places can only have up to 5 numbers before the
+decimal point and 4 after, similarly and field with a format of Numeric 1 Decimal Places can only have up
 to 8 numbers before the decimal point and 1 after. </p>
 
 <p>When you have completed the screen click on ‘OK’ to save the details to file. You
@@ -702,20 +704,26 @@ DESCRIPTIONS/FORMATS</strong> - Enter the column descriptions and field formats 
 User Defined History. You can leave blank columns to space your record out and you
 must enter a description if you enter a format. </p>
 
-<p>The list of valid formats can be selected by clicking ‘Search’ button. These are listed
-below: </p>
+<p>Select one of the following formats from the drop-down list:</p>
 
 <ul>
-  <li><strong>DT</strong> - Date - dd/mm/yyyy </li>
-  <li><strong>IN</strong> - Indicator - Single character (uppercase only) </li>
-  <li><strong>TX</strong> - Text - Up to ten characters of free text </li>
-  <li><strong>MO</strong> - Monetary Amount - Number with two decimal places </li>
-  <li><strong>Nn</strong> - Number with n decimal places. n can equal 0, 1, 2, 3, 4, 5 or 6 e.g. N3 - Number with 3 decimal places. </li>
+  <li>Boolean - Y - Yes or N - No</li>
+  <li>Date - dd/mm/yyyy</li>
+  <li>Indicator - Single character (uppercase only)</li>
+  <li>Money - Number with two decimal places</li>
+  <li>Numeric 0 Decimal Places</li>
+  <li>Numeric 1 Decimal Places</li>
+  <li>Numeric 2 Decimal Places</li>
+  <li>Numeric 3 Decimal Places</li>
+  <li>Numeric 4 Decimal Places</li>
+  <li>Numeric 5 Decimal Places</li>
+  <li>Numeric 6 Decimal Places</li>
+  <li>Text - Up to ten characters of free text</li>
 </ul>
 
-<p>Note: Due to field formating, a field with a format of Nn cannot contain more than
-9 numbers e.g. a field with a format of N4 can only have up to 5 numbers before the
-decimal point and 4 after, similarly and field with a format of N1 can only have up
+<p>Note: Due to field formating, a field with a Numeric format cannot contain more than
+9 numbers e.g. a field with a format of Numeric 4 Decimal Places can only have up to 5 numbers before the
+decimal point and 4 after, similarly and field with a format of Numeric 1 Decimal Places can only have up
 to 8 numbers before the decimal point and 1 after.</p>
 
 <p>When you have completed the screen click ‘OK’ to save the details to file. You can
@@ -822,7 +830,7 @@ screens. </p>
 <p><a name="pspud_dpen_fmt1"></a><a name="pspud_dpen_fmt2"></a><a name="pspud_dpen_fmt3"></a><a name="pspud_dpen_fmt4"></a><a name="pspud_dpen_fmt5"></a><a name="pspud_pen_fmt1"></a><a name="pspud_pen_fmt2"></a><a name="pspud_pen_fmt3"></a><a name="pspud_pen_fmt4"></a><a name="pspud_pen_fmt5"></a><strong>FORMAT</strong> -
 Enter the formats for the fields. You must enter a format if you have entered a description. </p>
 
-<p>The list of valid formats can be selected by clicking ‘Lookup’. These are listed below: </p>
+<p>The list of valid formats can be selected by clicking the lookup icon. These are listed below: </p>
 
 <ul>
   <li><strong>DT</strong> - Date - dd/mm/yyyy </li>
@@ -904,8 +912,8 @@ or click ‘Cancel’ to exit entry without saving the details. </p>
 </div>
 
 <p><a name="pbr_code"></a><strong>BROKER CODE</strong> - Enter a valid broker code, or click on
-the ‘Search’ button for a lookup list of the broker codes currently available on your
-Pension Master system. Upon selection of a valid broker code, the broker details from
+the lookup icon for a list of broker codes.
+Upon selection of a valid broker code, the broker details from
 the <a href="/pension/file_maintenance/pem_brok/">Brokers</a> program are automatically filled out on the
 screen and saved to the scheme file. If the Broker you require is not available, add
 it first using the <a href="/pension/file_maintenance/pem_brok/">Brokers</a> program, then return to this
@@ -1080,7 +1088,7 @@ that scheme may invest in the fund. </p>
 
 <p>Fill in the details as follows: </p>
 
-<p><a name="psf_fund"></a><strong>FUND</strong> - Enter the fund code or click ‘Search’ to get
+<p><a name="psf_fund"></a><strong>FUND</strong> - Enter the fund code or click the lookup icon to see
 a list of available funds. The description field is automatically filled in once you
 have entered a valid fund code. </p>
 
@@ -1322,7 +1330,7 @@ charge you wish to apply to each members incoming contribution e.g. if you wish 
 apply £5.00 to each contribution, then enter 5.00. Enter 0.00 if you do not wish to
 take a Member Charge off the incoming contributions. </p>
 
-<p><a name="pexh_saltype"></a><strong>SALARY TYPE</strong> - Click ‘Search’ to select a valid salary
+<p><a name="pexh_saltype"></a><strong>SALARY TYPE</strong> - Click the lookup icon to select a salary
 type for calculating expenses as a percentage of salary. </p>
 
 <p><a name="pexb_cont"></a><strong>CONTRIBUTION TYPE</strong> - Enter the contribution type code
@@ -1588,7 +1596,7 @@ Information Screen</a> in Members. </p>
 <div class="row">
   <div class="col-md-6">
 
-    <table class="table">
+    <table class="table table-condensed">
       <tbody>
         <tr>
           <td><strong>Print current screen</strong></td>
@@ -1658,7 +1666,7 @@ workflow action.</p>
 </div>
 
 <p>Enter the workflow code for the workflow action you wish to instigate or click on
-the ‘Search’ button for a lookup list of the available workflow codes on your system.
+the lookup icon for a list of the available workflow codes.
 To set up a workflow code if one to suit your purpose does not already exist, use
 the <a href="/pension/workflow/gn_wkflw/#Add A Workflow Type">Workflow Management</a> option.</p>
 
