@@ -128,8 +128,7 @@ Parameters</a>are set. </p>
 
 <p><a name="force_change"></a><strong>FORCE PASSWORD CHANGE NEXT LOGIN</strong> - You can use this
 field to force the user to change their password the next time they logon to Pension
-Master via the<a href="/pension/general/gn_logon/"> logon screen</a>. Valid entries are ‘Y’ and
-‘N’. </p>
+Master via the<a href="/pension/general/gn_logon/"> logon screen</a>.</p>
 
 <p><a name="user_security"></a><strong>SECURITY LEVEL</strong> - Enter a security level for your
 user. This is used in conjunction with the security levels on each scheme record and
@@ -142,20 +141,24 @@ security level and 99 being the lowest. If you are unsure of the security levels
 are available on your system, click on the lookup icon to see a list. See the
 <a href="/pension/system_data/pem_sec/">Security Levels</a> option.</p>
 
-<p><a name="user_sysadm"></a><strong>SYSTEM ADMINISTRATOR</strong> - Enter ‘Y’ for yes or ‘N’ for
-no. This determines whether the user will have access to certain system administration
+<p><a name="user_sysadm"></a><strong>SYSTEM ADMINISTRATOR</strong> - This determines whether the user will have access to certain system administration
 parts of the system. Exact details of how this works can be found in the <a href="/pension/system_data/pem_sec/">Security Levels</a> option.</p>
 
-<p><a name="user_superv"></a><strong>SUPERVISOR</strong> - Enter ‘Y’ for yes, ‘N’ for no or ‘V’
-for view only. This determines whether the user will have access to certain parts
+<p><a name="user_superv"></a><strong>SUPERVISOR</strong> - Select one of the following options from the drop-down list:</p>
+
+<ul>
+  <li>Supervisor Full Access</li>
+  <li>Supervisor View Only</li>
+  <li>No Supervisor Access</li>
+</ul>
+
+<p>This determines whether the user will have access to certain parts
 of the system. Exact details of how this works can be found in the <a href="/pension/system_data/pem_sec/">Security Levels</a> option.</p>
 
-<p><a name="user_update"></a><strong>UPDATE MEMBER RECORDS</strong> - Enter ‘Y’ for yes and ‘N’
-for no. This determines whether you wish to allow the current user to add/update/delete
+<p><a name="user_update"></a><strong>UPDATE MEMBER RECORDS</strong> - This determines whether you wish to allow the current user to add/update/delete
 member records in <a href="/pension/file_maintenance/pem_mem/">Members</a>.</p>
 
-<p><a name="user_favourites"></a><strong>AUTOMATICALLY SHOW FAVOURITES</strong> - Enter ‘Y’ for
-yes and ‘N’ for no. This determines if the user is automatically presented with their
+<p><a name="user_favourites"></a><strong>AUTOMATICALLY EXPAND FAVOURITES</strong> - This determines if the user is automatically presented with their
 favourites menu rather then the normal Pension Master menus when they log in. </p>
 
 <p>When the first screen of user details have been entered click on ‘OK’ to save the
@@ -181,18 +184,13 @@ allow access to the ‘Main Menu’ and ‘Diary Entry’ menu options.</strong>
 </div>
 
 <p>This screen is where you setup which of the standard Pension Master menu items will
-be available to the current user. If you put a ‘N’ against an entry, the corresponding
+be available to the current user. If you untick the Access field the corresponding
 menu item will not be displayed when the user uses Pension Master. In this way, you
 can effectively and quickly restrict acces to only those menu items a user need to
 do their job. </p>
 
-<p>All available menu titles and menu options are displayed to the screen. Enter ‘Y’
-for yes or ‘N’ for no against each option depending on whether you wish this user
-to have access to this menu/menu option or not. All entries will initially default
-to ‘N’. </p>
-
-<p>Click on ‘Next Record’ to scroll down the screen or click on ‘Prev Record’ to scroll
-up the screen. </p>
+<p>All available menu titles and menu options are displayed to the screen. Tick or untick the Access field
+depending on whether you wish this user to have access to this menu/menu option or not.</p>
 
 <p>When the second screen of user details have been entered click on ‘OK’ to save the
 details to the user file. You can click on ‘Cancel’ at any stage to exit the add option
@@ -388,7 +386,7 @@ From Pension Master</a>. </p>
 <p><a name="us_passwd"></a><a name="password"></a><strong>NEW PASSWORD</strong> - This field is
 used to set a password for the user when they log into Pension Master. This is typically
 done by the System Administrator when adding a new user, at which time the System
-Administrator also sets the ‘FORCE PASSWORD CHANGE NEXT LOGIN’ field to ‘Y’ so that
+Administrator also sets the ‘Force Password Change Next Login?’ field to ‘Yes’ so that
 the user can choose their own password the first time they use Pension Master. </p>
 
 <p><strong>CONFIRM PASSWORD</strong> - Enter the pasword again to confirm the spelling. If any

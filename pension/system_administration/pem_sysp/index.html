@@ -142,16 +142,21 @@ screen of <a href="/pension/file_maintenance/pem_sch/#Basic Scheme Details">Sche
 this stage to ensure that all scheme and membership monetary data is converted into
 Euro’s.</p>
 
-<p><a name="pp_age_calc"></a><strong>CALCULATE AGE NEXT (N) OR LAST (L) BIRTHDAY</strong> - This
-field determines whether Pension Master calculates age last birthday
-or age next birthday. Valid values are ‘L’ for age last birthday and ‘N’ for age
-next birthday. This relates to the field pm_age in the member record which stores
+<p><a name="pp_age_calc"></a><strong>CALCULATE</strong> - Select one of the following options from the drop-down list:</p>
+
+<ul>
+  <li>Age Next Birthday</li>
+  <li>Age Last Birthday</li>
+</ul>
+
+<p>This relates to the field pm_age in the member record which stores
 the age for each member and can be used in formulae, reports and mail merged output
 from Pension Master. The calculated age is displayed on the Basic Member Details
 screen in <a href="/pension/file_maintenance/pem_mem/#Basic Member Details">Members</a>. It is dynamically
 calculated each time you go into the Basic Member Details screen, add a member,
-run a Member Report or Mail Merge Report or a formula that references this new field.
-The way this is calculated differs on which program you are using as follows:</p>
+run a Member Report or Mail Merge Report or a formula that references this new field.</p>
+
+<p>The way this is calculated differs on which program you are using as follows:</p>
 
 <ul>
   <li>Members - always calculate age at today’s date i.e. the system date. </li>
@@ -224,10 +229,9 @@ of their forenames.</p>
 <p><a name="pp_capitalise"></a></p>
 
 <p><strong>CAPITALISE NAMES/TEXT FIELDS</strong> - This allows you to switch on the automatic
-casing of certain fields. The field
-will default to casing these fields i.e. a value of ‘Y’. If you wish your Pension
+casing of certain fields. The field will default to casing these fields if ticked. If you wish your Pension
 Master system not to do this, for example if you are an Irish site with Gaelic surnames,
-you will have to change the field to ‘N’. At present the following fields are supported:</p>
+you will have to untick the field. At present the following fields are supported:</p>
 
 <ul>
   <li>Title </li>
@@ -239,18 +243,17 @@ you will have to change the field to ‘N’. At present the following fields ar
   <li>Address Lines </li>
 </ul>
 
-<p>If you change this field to “Y”, a prompt will be displayed asking if you really
+<p>If you tick this field, a prompt will be displayed asking if you really
 wish to change it as this will result in Pension Master automatically re-casing
 the above fields for each member record on the system. You will then be prompted
 again to ask if you really are sure that you wish to do this. This acts as a security
 procedure as <strong>it will not be possible to un-case the above fields for each member
-    once you have indicated that you wish the casing to apply</strong>. To change back
+once you have indicated that you wish the casing to apply</strong>. To change back
 to un-cased fields, you will manually have to amend each members record, one by
 one, which may take a long time, or alternatively, restore a backup of your system
 data taken prior to you changing the casing flag. <strong>You should thus change this field
-    to “Y” only if you are sure this is what you want to do and are aware that the process
-    is not reversible other than by a lengthy manual procedure or by restoring a system
-    backup.</strong></p>
+only if you are sure this is what you want to do and are aware that the process
+is not reversible other than by a lengthy manual procedure or by restoring a system backup.</strong></p>
 
 <p><a name="pp_workflow"></a><strong>USE WORKFLOW</strong> - This field denotes whether you wish
 to disable the workflow features in Pension Master. To enable workflow, make sure
@@ -298,39 +301,34 @@ make sure this field is not checked.</p>
 
 <p><a name="pp_audit1"></a><strong>LOGINS - SUCCESSFUL LOGINS</strong> - This field denotes whether
 you wish to switch on the logging of successful logins to Pension Master for your
-system. If this is set to ‘Y’, all password changes made by users are also logged
-to the audit trail. Valid entries are ‘Y’ and ‘N’.</p>
+system. If this field is ticked all password changes made by users are also logged
+to the audit trail.</p>
 
 <p><a name="pp_audit2"></a><strong>LOGINS - UNSUCCESSFUL LOGINS</strong> - This field denotes
 whether you wish to switch on the logging of unsuccessful logins to Pension Master
-for your system. Valid entries are ‘Y’ and ‘N’.</p>
+for your system.</p>
 
 <p><a name="pp_audit3"></a><strong>MAINTENANCE MODULES - MEMBER FILE CHANGES</strong> - This
 field denotes whether you wish to switch on the logging of changes made to member
-details in <a href="/pension/file_maintenance/pem_mem/">Members</a> for your system. Valid entries are
-‘Y’ and ‘N’.</p>
+details in <a href="/pension/file_maintenance/pem_mem/">Members</a> for your system.</p>
 
 <p><a name="pp_audit4"></a><strong>MAINTENANCE MODULES - ALL OTHER MAINTENANCE</strong> - This
 field denotes whether you wish to switch on the logging of changes made to all maintenance
-modules other than <a href="/pension/file_maintenance/pem_mem/">Members</a> for your system. Valid entries
-are ‘Y’ and ‘N’.</p>
+modules other than <a href="/pension/file_maintenance/pem_mem/">Members</a> for your system.</p>
 
 <p><a name="pp_audit5"></a><strong>UPDATE MODULES - LOG CHANGES</strong> - This field denotes
 whether you wish to switch on the logging of changes made to items on the ‘Updates’
-menu in Pension Master for your system. Valid entries are ‘Y’ and ‘N’.</p>
+menu in Pension Master for your system.</p>
 
 <p><a name="pp_audit6"></a><strong>REPORTS - RUN REPORTS</strong> - This field denotes whether
-you wish to switch on the logging of any reports that are run on your system. Valid
-entries are ‘Y’ and ‘N’.</p>
+you wish to switch on the logging of any reports that are run on your system.</p>
 
 <p><a name="pp_audit7"></a><strong>REPORTS - PRINT REPORTS</strong> - This field denotes whether
-you wish to switch on the logging of any reports that are printed on your system.
-Valid entries are ‘Y’ and ‘N’.</p>
+you wish to switch on the logging of any reports that are printed on your system.</p>
 
 <p><a name="pp_audit8"></a><strong>SYSTEM ADMINISTRATION - LOG CHANGES</strong> - This field
 denotes whether you wish to switch on the logging of changes made to any items on
-the ‘System Administration’ menu in Pension Master for your system. Valid entries
-are ‘Y’ and ‘N’.</p>
+the ‘System Administration’ menu in Pension Master for your system.</p>
 
 <p>When the details have been entered click on ‘OK’ to save the details to the system
 parameter file. You can click on ‘Cancel’ at any stage to exit the add option without
@@ -363,9 +361,9 @@ length, set this field to 0. Otherwise, enter an the minimum length to be used e
 field is used to ensure that any password a user chooses contains a mixture of numbers
 as well as characters. This gives Pension Master an extra level of security
 as it is likely that passwords containing both letters and numbers will be harder
-to guess than those just containing letters. If this field is set to ‘Y’ then any
+to guess than those just containing letters. If this field is ticked then any
 password a user chooses must contain at least one of the characters a-z (case insensitive)
-and at least one of the numbers 0-9. Valid entries for this field are ‘Y’ and ‘N’.</p>
+and at least one of the numbers 0-9.</p>
 
 <p><a name="pp_pass3"></a><strong>DAYS ALLOWED BETWEEN PASSWORD CHANGES</strong> - This sets
 how frequently the user is forced to change their password e.g. if you set this
@@ -382,14 +380,13 @@ way, set this field to 0.</p>
 
 <p><a name="pp_pass5"></a><strong>LIMIT USER TO ONE CONCURRENT SESSION</strong> - This field
 allows you to specify that each user can only log onto Pension Master once at any
-one point in time. Valid values are ‘Y’ and ‘N’.</p>
+one point in time.</p>
 
 <p><a name="pp_pass6"></a><strong>PASSWORD REQUIRED</strong> - This field allows you to specify
 if a user has to choose a password to log in to Pension Master. If this field is
-set to ‘N’ then a user may log in to Pension Master without supplying a password,
+ticked then a user may log in to Pension Master without supplying a password,
 otherwise the user will be prompted for a password at login and will not be permitted
-access to Pension Master without first supplying a non-blank password. Valid values
-are ‘Y’ and ‘N’.</p>
+access to Pension Master without first supplying a non-blank password.</p>
 
 <p>When the details have been entered click on ‘OK’ to save the details to the system
 parameter file. You can click on ‘Cancel’ at any stage to exit the add option without

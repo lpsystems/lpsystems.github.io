@@ -221,12 +221,14 @@ the member file an error message will be displayed and the group by field should
 re-entered. If you are unsure of the name of the field you wish to group by,
 click on the lookup icon for a list of the available fields. </p>
 
-<p><a name="tot_gr_1"></a><a name="tot_gr_2"></a><a name="tot_gr_3"></a><a name="tot_gr_4"></a><a name="tot_gr_5"></a><a name="tot_gr_6"></a><strong>TOTAL</strong> -
-The valid entries for this field are ‘Y’ for Yes and ‘N’ for No. The default is ‘N’.
-If any other value is entered in this field an error message will be displayed. This
-specifies that a total of a field/fields specified is required after the group. </p>
+<p><a name="tot_gr_1"></a>
+<a name="tot_gr_2"></a>
+<a name="tot_gr_3"></a>
+<a name="tot_gr_4"></a>
+<a name="tot_gr_5"></a>
+<a name="tot_gr_6"></a><strong>TOTAL</strong> - This indicates that a total of a field/fields specified is required after the group. </p>
 
-<p>e.g. If total required = ‘Y’ for group by pm_scheme, after the members in the Scheme
+<p>e.g. If total is ticked for group by pm_scheme, after the members in the Scheme
 have been printed a total line will be printed as follows:</p>
 
 <pre><code>--------------------------------------------------------------
@@ -236,11 +238,9 @@ have been printed a total line will be printed as follows:</p>
 --------------------------------------------------------------
 </code></pre>
 
-<p><strong>HEADING</strong> -The valid entries for this field are ‘Y’ for Yes and ‘N’ for No. The
-default is ‘N’. If any other value is entered in this field an error message will
-be displayed. This specifies that a heading will precede the group on the report. </p>
+<p><strong>HEADING</strong> - This indicates that a heading will precede the group on the report. </p>
 
-<p>e.g. If heading required = ‘Y’ for group by pm_scheme then a heading will be printed
+<p>e.g. If heading is ticked for group by pm_scheme then a heading will be printed
 as follows before the members in the Scheme are printed. </p>
 
 <div class="well">
@@ -249,13 +249,14 @@ as follows before the members in the Scheme are printed. </p>
 
 </div>
 
-<p><a name="cnt_gr_1"></a><a name="cnt_gr_2"></a><a name="cnt_gr_3"></a><a name="cnt_gr_4"></a><a name="cnt_gr_5"></a><a name="cnt_gr_6"></a><strong>COUNT</strong> -
-The valid entries for this field are ‘Y’ for Yes and ‘N’ for No. The default is ‘N’.
-If any other value is entered in this field an error message will be displayed. This
-specifies that a count of members in a group is required after the members in the
-group have been printed. </p>
+<p><a name="cnt_gr_1"></a>
+<a name="cnt_gr_2"></a>
+<a name="cnt_gr_3"></a>
+<a name="cnt_gr_4"></a>
+<a name="cnt_gr_5"></a>
+<a name="cnt_gr_6"></a><strong>COUNT</strong> - This indicates that a count of members in a group is required after the members in the group have been printed. </p>
 
-<p>e.g. If there were 23 members in a scheme and count required = ‘Y’ for group by pm_scheme
+<p>e.g. If there were 23 members in a scheme and count is ticked for group by pm_scheme
 the following line will be printed after all members in the scheme have been printed:</p>
 
 <div class="well">
@@ -786,15 +787,14 @@ to see a list of fields for the report. </p>
     </div>
 
     <p><strong>TOTAL</strong> - This denotes whether you wish a total to appear for this field and
-is only relevant for numeric fields. The valid entries for this field are ‘Y’ for
-Yes and ‘N’ for No. If you do not enter a value, this field will default to N. If
-the field is numeric a value of ‘Y’ may be entered to specify that this is a field
+is only relevant for numeric fields. 
+If the field is numeric this field may be ticked to specify that this is a field
 to be included in the totals line which was specified in the group by section. If
-‘Y’ is entered for a character or date field total (Y/N) will default to ‘N’. </p>
+the field is ticked for a character or date field the field will be unticked.</p>
 
-    <p>e.g. if you have entered <em>pm_scheme</em> in the GROUP BY field on the first screen
-with a Y against the corresponding total line, then if you have a field <em>pds_grsal</em> on
-your report with a Y against the TOTAL field, when your report is produced, after
+    <p>e.g. if you have entered pm_scheme in the GROUP BY field on the first screen
+with a tick against the corresponding total line, then if you have a field pds_grsal on
+your report with a tick against the TOTAL field, when your report is produced, after
 each scheme the report will total up the gross salary column and print the total on
 the report. </p>
 

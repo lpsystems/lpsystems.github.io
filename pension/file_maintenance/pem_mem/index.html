@@ -563,29 +563,29 @@ record? </p>
 <p>The fields available are as follows: </p>
 
 <p><a name="pm_pthrs_pres"></a><strong>PART TIME HOURS PRESENT</strong> - This field is not available
-for user update. It will be automatically set to ‘Y’ or ‘N’ if there are entries in
+for user update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries in
 the <a href="#Part Time Service Details">Part Time Service Details</a> screen or not. </p>
 
 <p><a name="pm_nom_rec_pres"></a><strong>NOMINATION RECEIVED</strong> - This field is not available
-for user update. It will be automatically set to ‘Y’ or ‘N’ if there are entries in
+for user update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries in
 the <a href="#Dependants/Nominated Beneficiary Details">Dependants Details</a> screen
 or not. </p>
 
 <p><a name="pm_note_pres"></a><strong>NOTES PRESENT</strong> - This field is not available for
-user update. It will be automatically set to ‘Y’ or ‘N’ if there are entries in the <a href="#Freehand Notes">Member
+user update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries in the <a href="#Freehand Notes">Member
 Notes</a> screen or not. </p>
 
 <p><a name="pm_sal_pres"></a><strong>SALARIES PRESENT</strong> - This field is not available for
-user update. It will be automatically set to ‘Y’ or ‘N’ if there are entries in the <a href="#Salary History">Salary
+user update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries in the <a href="#Salary History">Salary
 History</a> screen or not. </p>
 
 <p><a name="pm_avc_pres"></a><strong>AVC’S PRESENT</strong> - This field is not available for user
-update. It will be automatically set to ‘Y’ or ‘N’ if there are entries for EE AVC
+update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries for EE AVC
 in the <a href="/pension/file_maintenance/pem_mem/#Contribution Details">Contribution History</a> screen
 or not.</p>
 
 <p><a name="pm_addben_pres"></a><strong>ADDITIONAL BENEFITS</strong> - This field is not available
-for user update. It will be automatically set to ‘Y’ or ‘N’ if there are entries in
+for user update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries in
 the <a href="#Additional Benefits Details">Additional Benefits Details</a> screen
 or not.</p>
 
@@ -594,7 +594,7 @@ It will be automatically set to the number of <a href="#Additional Benefits Deta
 Benefits Details</a> screens that are present. </p>
 
 <p><a name="pm_tran_rec"></a><strong>TRANSFER RECEIVED</strong> - This field is not available for
-user update. It will be automatically set to ‘Y’ or ‘N’ if there are entries in the <a href="#Transfer In Details">Transfers
+user update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries in the <a href="#Transfer In Details">Transfers
 In Details</a> screen or not. </p>
 
 <p><a name="pm_tran_num"></a><strong>NUMBER</strong> - This field is not available for user update.
@@ -602,7 +602,7 @@ It will be automatically set to the number of <a href="#Transfer In Details">Tra
 In Details</a> screens that are present. </p>
 
 <p><a name="pm_addr_pres"></a><strong>ADDRESS PRESENT</strong> - This field is not available for
-user update. It will be automatically set to ‘Y’ or ‘N’ if there are entries in the
+user update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries in the
 address section of the <a href="/pension/file_maintenance/pem_mem/#Member Address Details">Member Address
 Details</a> screen or not. </p>
 
@@ -648,8 +648,7 @@ are there merely as another way of expressing pensionable service which may then
 used in benefit calculation formulae (see section on <a href="/pension/file_maintenance/calculation_setup/pem_form/#Introduction">Formulae</a>)
 in this User Manual for further details). </p>
 
-<p><a name="pm_med_load"></a><strong>MEMBER MEDICALLY LOADED</strong> - This field takes the values
-‘Y’ or ‘N’ and will automatically default to ‘N’. It is used to indicate to the administrator
+<p><a name="pm_med_load"></a><strong>MEMBER MEDICALLY LOADED</strong> - Indicates to the administrator
 whether this member has a medical loading imposed. It is purely an indicator and no
 supporting calculations are deemed to be necessary. The user will detail the loading
 and the benefit to which it applies on the notes screen. The medically loaded members
@@ -766,7 +765,7 @@ as indicated on the member’s application to join the scheme. </p>
 <p>These may be changed from time to time on the request of the member. </p>
 
 <p>This screen allows you to record a history of all dependants that have been allocated
-against this member. The current dependants are indicated by a ‘Y’ in the ‘Current’
+against this member. The current dependants are indicated by ‘Yes’ in the ‘Current’
 field on the screen. To scroll between the different dependants for the member, use
 the navigation buttons displayed next to the Dependant Number field. </p>
 
@@ -835,13 +834,11 @@ will be displayed informing you to do so. If this field is being updated and
 the Date Ceased has got a value in it, then the program checks that this date is before
 the Date Ceased. </p>
 
-<p><a name="pd_curr_flag"></a><strong>CURRENT</strong> - ‘Y’ or ‘N’ must be entered here to state
-whether the displayed dependant is current or whether they are a dependant that has
-been superceded by a newer dependant nomination from the member. If this field
-is left blank or another character is entered then a message will be displayed informing
-you that only Y or N must be entered. </p>
+<p><a name="pd_curr_flag"></a><strong>CURRENT</strong> - Indicates if the displayed dependant is current
+or not or whether they are a dependant that has been superceded by a newer dependant
+nomination from the member.</p>
 
-<p><a name="pd_date_cd"></a><strong>DATE CEASED</strong> - If the Current flag is ‘N’ then the
+<p><a name="pd_date_cd"></a><strong>DATE CEASED</strong> - If the Current flag is ‘No’ then the
 date ceased must be entered to inform the user when the dependant stopped being current. 
 This date must be after the Effective Date. If a date is entered, which is before
 the Effective Date, a message will be displayed informing you that the date entered
@@ -1407,7 +1404,7 @@ type and overall total contribution and total units figure across all contributi
 types. </p>
 
 <div class="alert alert-danger" role="alert">
-  <p>If the flag ‘allow manual update of units?’ is set to ‘N’ (see Schemes) you will not be permitted to directly edit the investment history for this member.</p>
+  <p>If the flag ‘Allow Manual Update of Units?’ is set to ‘No’ (see Schemes) you will not be permitted to directly edit the investment history for this member.</p>
 </div>
 
 <p><a name="UPDMINV"></a>To update an investment history, click ‘Update’. The following
@@ -2710,11 +2707,10 @@ is not to be cross-referenced. </p>
 <p><a name="pdep_name"></a><strong>BENEFICIARY NAME</strong> - Enter the name of the beneficiary. </p>
 
 <p><a name="pdep_penind"></a><strong>BENEFICIARY PENSION INDICATOR</strong> - This is a display
-only field that will either be ‘Y’ or ‘N’ dependant on whether there is a linked pension
+only field that will either be ticked or unticked dependant on whether there is a linked pension
 record. This is also indicated by whether the beneficiary
-reference field is 0 (in which case the pension indicator will be ‘N’) or a valid
-member number (in which case the pension indicator will
-be ‘Y’). </p>
+reference field is 0 (in which case the pension indicator will be unticked) or a valid
+member number (in which case the pension indicator will be ticked). </p>
 
 <p><a name="pdep_lumpsum"></a><strong>BENEFICIARY LUMP SUM</strong> - Enter the amount of the total
 lump sum payable on death (the total of ‘Lump Sum Payment’ and ‘Contributions Refunded’
@@ -2735,7 +2731,7 @@ in the section <a href="#Deleting Member Records">Deleting Member Records</a>. <
 button from the screen in Pension Master. This option is only permitted if you are
 currently editing a particular beneficiary record and that beneficiary has a linked
 pension record (i.e. the beneficiary reference is &gt; 0 and the beneficiary pension
-indicator flag is ‘Y’).</p>
+indicator flag is ticked).</p>
 
 <p>The pensioner screen for the selected beneficiary is automatically displayed with
 the following menu: </p>
@@ -3540,14 +3536,11 @@ depending on whether the current screen is a Defined Contribution scheme or a De
 Benefit scheme. If the scheme is a hybrid scheme, Pension Master defaults to printing
 all the available screens for member.</p>
 
-<p>If you wish to alter these defaults for this printout, simply move down to the desired
-screen and enter a “Y” for yes or a “N” for no against that screen. A ‘tick’
-will then appear for the screens which had “Y” entered, and a blank box for the screens
-which had “N” entered. </p>
+<p>Tick any screens that you wish to see on the report.</p>
 
-<p>Click ‘No To All’ to top de-select all screens for the printout. </p>
+<p>Click the ‘All’ button to tick all screens for the report.</p>
 
-<p>Click ‘Yes To All’ to top select all screens for the printout. </p>
+<p>Click the ‘None’ button to untick all screens for the report.</p>
 
 <p>When you have finished, click ‘OK’ to proceed to the printing stage. The screen selection
 screen is as follows: </p>
