@@ -145,7 +145,7 @@
 <p>The result for a salary effective at 01/03/1999 is 13000 i.e. it finds the salary
 immediately prior to or on the supplied date.</p>
 
-<p>Use the operator ‘EF’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘EF’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = ps1_date, OPERATOR = EF and FIELD 2 = "19990301"</p>
 
@@ -195,7 +195,7 @@ immediately prior to or on the supplied date.</p>
 
 <p>The result for selecting members who are in scheme 0001 are members 101, 102 and 104.</p>
 
-<p>Use the operator ‘EQ’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘EQ’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = pm_scheme, OPERATOR = EQ and FIELD 2 = ‘0001’</p>
 
@@ -204,7 +204,7 @@ immediately prior to or on the supplied date.</p>
 <p>When using a history field, e.g. a salary value, there needs to be a way of selecting the first
 entry in that history. This is where the operator ‘F’ is used.</p>
 
-<p>If you wish to select the first salary 1 entry for a member, you would enter: </p>
+<p>If you wish to select the first salary 1 entry for a member, you would enter:</p>
 
 <p>FIELD 1 = ps1_date, OPERATOR = F and FIELD 2 is left blank.</p>
 
@@ -249,7 +249,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>The result for salary records greater than 15000 is the record at 01/04/2000 for 15500</p>
 
-<p>Use the operator ‘GT’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘GT’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = ps1_sal1, OPERATOR = GT and FIELD 2 = 15000</p>
 
@@ -286,7 +286,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>The result for salary records greater than or equal to 15000 are records at 01/04/2000 for 15500, and 01/04/1999 for 15000</p>
 
-<p>Use the operator ‘GE’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘GE’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = ps1_sal1, OPERATOR = GE and FIELD 2 = 15000</p>
 
@@ -298,7 +298,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 entry in that history (this is the default option when selecting a history field in the
 existing Member Report). This is where the operator ‘L’ is used.</p>
 
-<p>If you wish to select the first salary 1 entry for a member, you would enter: </p>
+<p>If you wish to select the first salary 1 entry for a member, you would enter:</p>
 
 <p>FIELD 1 = ps1_date, OPERATOR = L and FIELD 2 is left blank.</p>
 
@@ -343,7 +343,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>The result for salary records less than 15500 is the record at 01/04/1999 for 15000</p>
 
-<p>Use the operator ‘LT’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘LT’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = ps1_sal1, OPERATOR = LT and FIELD 2 = 15500</p>
 
@@ -380,7 +380,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>The result for salary records less than or equal to 15500 are records at 01/04/2000 for 15500, and 01/04/1999 for 15000</p>
 
-<p>Use the operator ‘LE’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘LE’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = ps1_sal1, OPERATOR = LE and FIELD 2 = 15500</p>
 
@@ -392,7 +392,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 we wish to get all surnames starting with "Smi". In SQL this would use the
 MATCHES clause.</p>
 
-<p>Use the operator ‘MA’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘MA’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = pm_surname, OPERATOR = MA and FIELD 2 = ‘Smi*’</p>
 
@@ -401,7 +401,7 @@ MATCHES clause.</p>
 <pre><code>pm_surname MATCHES 'Smi*'.
 </code></pre>
 
-<p>The question mark can also be used in the MATCHES clause.  ‘?’ represents a single character in a string e.g. pm_surname where we wish to get all surnames starting with "Sm", and ending in "th". For this example, you would enter: </p>
+<p>The question mark can also be used in the MATCHES clause.  ‘?’ represents a single character in a string e.g. pm_surname where we wish to get all surnames starting with "Sm", and ending in "th". For this example, you would enter:</p>
 
 <p>FIELD 1 = pm_surname, OPERATOR = MA and FIELD 2 = ‘Sm?th’</p>
 
@@ -411,7 +411,7 @@ MATCHES clause.</p>
 </code></pre>
 
 <div class="alert alert-danger" role="alert">
-  <p>Due to character strings having to be contained in single quotes (‘) in SQL statements, it is impossible to do a match where a (‘) is present in the data. For example, O’Connell or O’Donnell. </p>
+  <p>Due to character strings having to be contained in single quotes (‘) in SQL statements, it is impossible to do a match where a (‘) is present in the data. For example, O’Connell or O’Donnell.</p>
 
   <p>Therefore, if you wanted to do a match where you wanted to select surnames that start with “O’” and end in “onnell”, then we recommend you enter the following:</p>
 
@@ -425,7 +425,7 @@ FIELD 2 = ‘O*?onnell’</p>
 <p>When using a history field, e.g. a salary value, there needs to be a way of selecting members that do not have an entry on the history record for a certain date. This can be useful when doing an annual update of members salaries. You can print off this report to see what members have no salary entry for this year i.e. what members have been missed out in the update procedure.</p>
 
 <p>Use the operator ‘NH’ so that in the example where you wish to select any member
-records with no salary 1 at 1/4/2000 you would enter: </p>
+records with no salary 1 at 1/4/2000 you would enter:</p>
 
 <p>FIELD 1 = ps1_date&amp;quot, OPERATOR = NH and FIELD 2 = "20000401".</p>
 
@@ -460,7 +460,7 @@ END FOREACH
 </code></pre>
 
 <div class="alert alert-danger" role="alert">
-  <p>The use of the ‘NH’ operator is limited to one per report.  This is due to the difficulty of generating the appropriate IF statement needed with the neccessary AND/OR, and brackets entered by the user.  </p>
+  <p>The use of the ‘NH’ operator is limited to one per report.  This is due to the difficulty of generating the appropriate IF statement needed with the neccessary AND/OR, and brackets entered by the user.</p>
 
   <p>Unlike ‘SELECT’ statements, the ‘IF’ statment must be hard-coded and cannot be made up from variables.  Therefore, the AND/OR clause is defaulted to ‘AND’, and no brackets can be entered.</p>
 </div>
@@ -509,7 +509,7 @@ END FOREACH
 
 <p>The result for selecting members who are not in scheme 0001 is members 103.</p>
 
-<p>Use the operator ‘NE’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘NE’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = pm_scheme, OPERATOR = NE and FIELD 2 = ‘0001’</p>
 
@@ -519,7 +519,7 @@ END FOREACH
 we wish to get all surnames that don’t start with "Smi". In SQL this would use the
 NOT MATCHES clause.</p>
 
-<p>Use the operator ‘NM’ so that in the above example, you would enter: </p>
+<p>Use the operator ‘NM’ so that in the above example, you would enter:</p>
 
 <p>FIELD 1 = pm_surname, OPERATOR = NM and FIELD 2 = ‘Smi*’</p>
 
@@ -528,7 +528,7 @@ NOT MATCHES clause.</p>
 <pre><code>pm_surname NOT MATCHES 'Smi*'.
 </code></pre>
 
-<p>The question mark can also be used in the NOT MATCHES clause.  ‘?’ represents a single character in a string e.g. pm_surname where we wish to get all surnames that don’t start with "Sm", and don’t end in "th". For this example, you would enter: </p>
+<p>The question mark can also be used in the NOT MATCHES clause.  ‘?’ represents a single character in a string e.g. pm_surname where we wish to get all surnames that don’t start with "Sm", and don’t end in "th". For this example, you would enter:</p>
 
 <p>FIELD 1 = pm_surname, OPERATOR = NM and FIELD 2 = ‘Sm?th’</p>
 
@@ -538,7 +538,7 @@ NOT MATCHES clause.</p>
 </code></pre>
 
 <div class="alert alert-danger" role="alert">
-  <p>Similarly to the ‘MA’ operator, due to character strings having to be contained in single quotes (‘) in SQL statements, it is impossible to use data where a (‘) is present. For example, O’Connell or O’Donnell. </p>
+  <p>Similarly to the ‘MA’ operator, due to character strings having to be contained in single quotes (‘) in SQL statements, it is impossible to use data where a (‘) is present. For example, O’Connell or O’Donnell.</p>
 
   <p>Therefore, if you wanted to do a link where you wanted to select surnames that don’t start with “O’” and don’t end in “onnell”, then we recommend you enter the following:</p>
 

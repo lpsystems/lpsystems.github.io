@@ -190,7 +190,7 @@ create their own load. These templates are based on the formats shown below for 
 
 <h2 id="a-nameschaddraaddresses---new-type-load-only---template-tempsadd"><a name="schaddr"></a>Addresses - ‘New’ type load only - Template TEMPSADD</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -202,11 +202,11 @@ create their own load. These templates are based on the formats shown below for 
 
 <p>Any of the fields on the scheme address screen table can be updated, apart from the Scheme Code and Address Code, as these are the table’s mandatory fields.</p>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
-  <p>schemecode,addresscode,addressname,addressline1,addressline2,addressline3,addressline4,postcode,telephone,fax,email   </p>
+  <p>schemecode,addresscode,addressname,addressline1,addressline2,addressline3,addressline4,postcode,telephone,fax,email</p>
 
 </div>
 
@@ -216,7 +216,7 @@ create their own load. These templates are based on the formats shown below for 
 
 <h2 id="a-namebasicdpenabasic-deferred-pensioner-details---new-type-load-only---template-tempdpns"><a name="basicdpen"></a>Basic Deferred Pensioner Details - ‘New’ type load only - Template TEMPDPNS</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -249,7 +249,7 @@ create their own load. These templates are based on the formats shown below for 
 
 <h2 id="a-namebasicmemabasic-member-details---new-type-load-only---template-tempmem"><a name="basicmem"></a>Basic Member Details - ‘New’ type load only - Template TEMPMEM</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -493,7 +493,7 @@ create their own load. These templates are based on the formats shown below for 
 
 <h2 id="a-namebasicpenabasic-pensioner-details---new-type-load-only---template-temppens"><a name="basicpen"></a>Basic Pensioner Details - ‘New’ type load only - Template TEMPPENS</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -544,7 +544,7 @@ create their own load. These templates are based on the formats shown below for 
 
 <p>Any of the fields on the basic pensioner details screen table can be updated, apart from the Member Number, as this is the table’s mandatory field.</p>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <ul>
   <li>identifier,dateretired,datepensioncommenced,precommutationpension,postcommutationpension,lumpsumamount,datelumpsumpaid,payfrequency</li>
@@ -559,10 +559,10 @@ create their own load. These templates are based on the formats shown below for 
 <p>Pension Master has been changed so that an unlimited number of Contributions can now
 be held against a scheme, rather than just the standard five (EEORD, EEAVC, ERORD,
 EEPR and ERPR). Due to this enhancement, the database tables, which hold all the Contribution
-details, have also been changed to allow for this. </p>
+details, have also been changed to allow for this.</p>
 
 <p>It would be unpractical and unfair to expect the user to change their old data file
-format of: </p>
+format of:</p>
 
 <div class="well">
 
@@ -570,7 +570,7 @@ format of: </p>
 
 </div>
 
-<p>to the new data file format of: </p>
+<p>to the new data file format of:</p>
 
 <div class="well">
 
@@ -579,10 +579,10 @@ format of: </p>
 </div>
 
 <p>where batchnumber and ordernumber are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
-1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>. </p>
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
 
 <p>The General Data Load program would ideally like the data file to be in the new format,
-however, the user can still use the old format. </p>
+however, the user can still use the old format.</p>
 
 <p>If the old format is being used then it is recommended to use the template TEMPCONT to add the load on, and then the user should leave the details in screen 2 as they appear. However, as the template uses the Staff Number as the default identifier, the user must change the first line in screen 2 to either Member Number or NI/PRSI Number if needs be.</p>
 
@@ -593,7 +593,7 @@ they are using, during the running process.</p>
 
 <h2 id="a-namedeathadeath-details---new-type-load-only---template-tempdth"><a name="death"></a>Death Details - ‘New’ type load only - Template TEMPDTH</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -603,7 +603,7 @@ they are using, during the running process.</p>
 
 <h2 id="a-namedefpenadeferred-pension-history---new-type-load-only---template-tempdpna"><a name="defpen"></a>Deferred Pension History - ‘New’ type load only - Template TEMPDPNA</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -613,7 +613,7 @@ they are using, during the running process.</p>
 
 <h2 id="a-namedeathdepadependant-death-details---new-type-load-only---template-tempddep"><a name="deathdep"></a>Dependant Death Details - ‘New’ type load only - Template TEMPDDEP</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -650,7 +650,7 @@ they are using, during the running process.</p>
 
 <h2 id="a-namedepsadependants-details---new-type-load-only---template-tempdep"><a name="deps"></a>Dependants Details - ‘New’ type load only - Template TEMPDEP</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -663,7 +663,7 @@ they are using, during the running process.</p>
 
 <h2 id="a-namediaryadiary-entry-for-members---new-type-load-only---template-tempdrym"><a name="diary"></a>Diary Entry for Members - ‘New’ type load only - Template TEMPDRYM</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -708,7 +708,7 @@ they are using, during the running process.</p>
 
 <h2 id="a-namememaddramember-address-details---new-type-load-only---template-tempaddr"><a name="memaddr"></a>Member Address Details - ‘New’ type load only - Template TEMPADDR</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -750,7 +750,7 @@ they are using, during the running process.</p>
 
 <p>Any of the fields on the member address screen table can be updated, apart from the Member Number and Member Address Number, as these are the table’s mandatory fields.</p>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -764,7 +764,7 @@ they are using, during the running process.</p>
 
 <h2 id="a-namememcontamember-contribution-history---new-type-load-only---template-tempchst"><a name="memcont"></a>Member Contribution History - ‘New’ type load only - Template TEMPCHST</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -780,7 +780,7 @@ one found in the datafile will over-write any previously loaded.</p>
 
 <h2 id="a-namememinvamember-investment-history---new-type-load-only---template-tempihst"><a name="meminv"></a>Member Investment History - ‘New’ type load only - Template TEMPIHST</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -796,7 +796,7 @@ one found in the datafile will over-write any previously loaded.</p>
 
 <h2 id="a-namememinvsetupamember-investment-setup-details---new-type-load-only---template-tempfund"><a name="meminvsetup"></a>Member Investment Setup Details - ‘New’ type load only - Template TEMPFUND</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -805,7 +805,7 @@ one found in the datafile will over-write any previously loaded.</p>
 </div>
 
 <p>where schmemflag is defaulted to M, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
-1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of M</a>. </p>
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of M</a>.</p>
 
 <div class="alert alert-danger" role="alert">
   <p>If there are any datalines in the datafile which exist for the same contribution
@@ -815,7 +815,7 @@ found in the datafile will over-write any previously loaded.</p>
 
 <h2 id="a-namememnotesamember-notes---new-type-load-only---template-tempnot"><a name="memnotes"></a>Member Notes - ‘New’ type load only - Template TEMPNOT</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -856,7 +856,7 @@ found in the datafile will over-write any previously loaded.</p>
 
 <h2 id="a-namenihistani-history---new-type-load-only---template-tempnih"><a name="nihist"></a>NI History - ‘New’ type load only - Template TEMPNIH</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -872,7 +872,7 @@ loaded.</p>
 
 <h2 id="a-namenihistbatchani-history-batch-details---new-type-load-only---template-tempni"><a name="nihistbatch"></a>NI History Batch Details - ‘New’ type load only - Template TEMPNI</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -881,11 +881,11 @@ loaded.</p>
 </div>
 
 <p>where batchnumber and niorder are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
-1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>. </p>
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
 
 <h2 id="a-namepthrsapart-time-service---new-type-load-only---template-temppthr"><a name="pthrs"></a>Part Time Service - ‘New’ type load only - Template TEMPPTHR</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -918,7 +918,7 @@ loaded.</p>
 
 <h2 id="a-namepenapension-history---new-type-load-only---template-temppena"><a name="pen"></a>Pension History - ‘New’ type load only - Template TEMPPENA</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -930,7 +930,7 @@ loaded.</p>
 
 <p>Any of the fields on the pension history screen table can be updated, apart from the Member Number, Pension Code and Date to Commence, as these are the table’s mandatory fields.</p>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -944,7 +944,7 @@ loaded.</p>
 
 <h2 id="a-namesalbatchasalary-batch-details---new-type-load-only---template-tempsal"><a name="salbatch"></a>Salary Batch Details - ‘New’ type load only - Template TEMPSAL</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -953,11 +953,11 @@ loaded.</p>
 </div>
 
 <p>where batchnumber and batchorder are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
-1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>. </p>
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
 
 <h2 id="a-namesalhist1asalary-history-1---new-type-load-only---template-tempsal1"><a name="salhist1"></a>Salary History 1 - ‘New’ type load only - Template TEMPSAL1</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -973,7 +973,7 @@ loaded.</p>
 
 <h2 id="a-namesalhist2asalary-history-2---new-type-load-only---template-tempsal2"><a name="salhist2"></a>Salary History 2 - ‘New’ type load only - Template TEMPSAL2</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -989,7 +989,7 @@ loaded.</p>
 
 <h2 id="a-namesalhist3asalary-history-3---new-type-load-only---template-tempsal3"><a name="salhist3"></a>Salary History 3 - ‘New’ type load only - Template TEMPSAL3</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -1005,7 +1005,7 @@ loaded.</p>
 
 <h2 id="a-namesalhist4asalary-history-4---new-type-load-only---template-tempsal4"><a name="salhist4"></a>Salary History 4 - ‘New’ type load only - Template TEMPSAL4</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -1021,7 +1021,7 @@ loaded.</p>
 
 <h2 id="a-namespeccodeaspecial-codes---new-type-load-only---template-tempspec"><a name="speccode"></a>Special Codes - ‘New’ type load only - Template TEMPSPEC</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -1031,7 +1031,7 @@ loaded.</p>
 
 <h2 id="a-nametvinatransfer-in-details---new-type-load-only---template-temptvin"><a name="tvin"></a>Transfer In Details - ‘New’ type load only - Template TEMPTVIN</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -1041,7 +1041,7 @@ loaded.</p>
 
 <h2 id="a-namepricesaunit-price-details---new-type-load-only---template-tempprc"><a name="prices"></a>Unit Price Details - ‘New’ type load only - Template TEMPPRC</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -1086,7 +1086,7 @@ loaded.</p>
 
 <h2 id="a-nameudhauser-defined-history---new-type-load-only---template-tempudh"><a name="udh"></a>User Defined History - ‘New’ type load only - Template TEMPUDH</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -1104,7 +1104,7 @@ over-write any previously loaded.</p>
 
 <p>Any of the fields on the User Defined History table can be updated, apart from the Member Number, User Defined History Type and User Defined History Date, as these are the table’s mandatory fields.</p>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -1120,7 +1120,7 @@ over-write any previously loaded.</p>
 
 <h2 id="a-nameudsauser-defined-screens---new-type-load-only---template-tempuds"><a name="uds"></a>User Defined Screens - ‘New’ type load only - Template TEMPUDS</h2>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 
@@ -1138,7 +1138,7 @@ over-write any previously loaded.</p>
 
 <p>Any of the fields on the User Defined Screens table can be updated, apart from the Member Number and User Defined Screen Type, as these are the table’s mandatory fields.</p>
 
-<p>The data file format is: </p>
+<p>The data file format is:</p>
 
 <div class="well">
 

@@ -74,21 +74,21 @@ a decimal field, then a formatting report will be generated informing the user o
 this. If no problems are found, then the program goes on to check that the data values
 are valid, e.g. if a record is being added which holds a Scheme Code, then the Scheme
 Code must be valid. If any problems are found, then an exceptions report will be generated
-informing the user of this. </p>
+informing the user of this.</p>
 
 <p>If all the data lines held within the data file are correct, then the user can continue
-and load the data into the database. </p>
+and load the data into the database.</p>
 
 <p>The external data file being used must be in the required format. In order for
 the user to ensure this, they should use a software package, like Microsoft Excel,
-to reformat the data file prior to using this program. </p>
+to reformat the data file prior to using this program.</p>
 
 <p>The following options and screen appear when this program is selected:</p>
 
 <ul>
-  <li>Add </li>
-  <li>Query </li>
-  <li>Exit </li>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Exit</li>
 </ul>
 
 <div class="screen">
@@ -99,31 +99,31 @@ to reformat the data file prior to using this program. </p>
 
 <h2 id="a-nameaddaadd-a-general-data-load"><a name="add"></a>Add a General Data Load</h2>
 
-<p>Click ‘Add’. </p>
+<p>Click ‘Add’.</p>
 
-<p>Enter the selection criteria required. </p>
+<p>Enter the selection criteria required.</p>
 
-<p><a name="imp_name"></a><strong>IMPORT NAME</strong> - Enter an import name. </p>
+<p><a name="imp_name"></a><strong>IMPORT NAME</strong> - Enter an import name.</p>
 
-<p><a name="imp_desc"></a><strong>IMPORT DESCRIPTION</strong> - Enter an import description. </p>
+<p><a name="imp_desc"></a><strong>IMPORT DESCRIPTION</strong> - Enter an import description.</p>
 
 <p><a name="sch_code"></a><strong>SCHEME CODE</strong> - Enter a scheme code. Click the lookup icon for
-a list of valid scheme codes. </p>
+a list of valid scheme codes.</p>
 
 <p><a name="imp_source"></a><strong>IMPORT FROM</strong> - Enter the filename path of the data
-file you are going to use. The following window will pop-up on entering this field. </p>
+file you are going to use. The following window will pop-up on entering this field.</p>
 
 <div class="screen">
   <p><img src="/pension/images/file_open.jpg" alt="" /></p>
 
 </div>
 
-<p>Select your data file, then click ‘Open’. </p>
+<p>Select your data file, then click ‘Open’.</p>
 
 <p>If the data file is held on the Pension Master server, for example, a ‘csv’ file then
 click ‘Cancel’ and enter the filename straight into the filename field on the screen.
 Note that in this case, the data file is expected to be in the same directory as the
-Pension Master programs on the server. </p>
+Pension Master programs on the server.</p>
 
 <p>If a filename is entered which does not exist then an error message will appear informing
 you of this, and you will be invited to re-enter a valid filename for your data file.</p>
@@ -133,22 +133,22 @@ you of this, and you will be invited to re-enter a valid filename for your data 
 </div>
 
 <p>This field must have a filename entered into it in order for the loading process to
-continue. </p>
+continue.</p>
 
 <p><a name="imp_dest"></a><strong>IMPORT TO</strong> - Enter the table to which you wish to load
 the data into. This field must have a table name entered into it for the loading process
-to continue. Click the lookup icon to see a list of database tables. </p>
+to continue. Click the lookup icon to see a list of database tables.</p>
 
 <p><a name="up_type"></a><strong>UPDATE TYPE</strong> - Select what type of data load you wish
-to use. </p>
+to use.</p>
 
 <ul>
   <li><strong>New</strong> - This will allow new records to be added to Pension Master. Tables used
 for this option are Contribution History Batch Details, Salary Batch Details and N.I.
-History Batch Details. </li>
+History Batch Details.</li>
   <li><strong>Update</strong> - This will only replace data in fields specified in the Import, all
 other data not specified will remain. Table used for this option is Basic Member Details.
-Only the updating of Marital Status or the updating of Company codes can be carried out. </li>
+Only the updating of Marital Status or the updating of Company codes can be carried out.</li>
 </ul>
 
 <p><a name="rec_type"></a><strong>RECORD TYPE</strong> - Enter the Delimiter, which is a character
@@ -156,33 +156,33 @@ used to separate each of the fields in the data file. This should be either
 of the following:</p>
 
 <ul>
-  <li>a comma (,) </li>
-  <li>a pipe (|) </li>
-  <li>a colon (:) </li>
-  <li>a semi-colon (;) </li>
-  <li>a tab </li>
-  <li>a flat file ( no separators ) </li>
+  <li>a comma (,)</li>
+  <li>a pipe (|)</li>
+  <li>a colon (:)</li>
+  <li>a semi-colon (;)</li>
+  <li>a tab</li>
+  <li>a flat file ( no separators )</li>
 </ul>
 
 <p>This field must have a delimiter entered into it in order for the loading process
 to continue.</p>
 
 <p><a name="imp_del"></a><strong>DELETE ORIGINAL?</strong> - Tick this box if you wish to delete
-the data file, upon completion of the data load. </p>
+the data file, upon completion of the data load.</p>
 
 <p><a name="mem_note"></a><strong>MEMBER NOTES?</strong> - Tick this box if you wish to write out
 a note to each member in the data file. This can only be used with database tables
-that contain a member number field. </p>
+that contain a member number field.</p>
 
 <p><a name="imp_header"></a><strong>HEADER SIZE</strong> - Enter the number of lines the header
 takes up in the data file. If this box is left blank, it is assumed the data file
-has no header, and a default of 0 is entered. </p>
+has no header, and a default of 0 is entered.</p>
 
 <p><a name="imp_footer"></a><strong>FOOTER SIZE</strong> - Enter the number of lines the footer
 takes up in the data file. If this box is left blank, it is assumed the data file
-has no footer, and a default of 0 is entered. </p>
+has no footer, and a default of 0 is entered.</p>
 
-<p>Once details have been entered, then click ‘OK’. Screen 2 will now appear. </p>
+<p>Once details have been entered, then click ‘OK’. Screen 2 will now appear.</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload3.jpg" alt="Field entry" /></p>
@@ -192,7 +192,7 @@ has no footer, and a default of 0 is entered. </p>
 
 <p><a name="rule"></a><strong>RULE</strong> - This informs the import process of the action you
 are taking on the data, and therefore how the data, when sent to a Pension Master
-field, will be interpreted. </p>
+field, will be interpreted.</p>
 
 <p>There are numerous possible entries for this field from a numeric value of 0 through
 15 inclusive. These numbers relate to a particular function:</p>
@@ -216,17 +216,17 @@ field, will be interpreted. </p>
   <li><strong>15</strong> - ddmmyy(dd/mm/yy) prefix year with 1st 2 digits of the future year</li>
 </ul>
 
-<p>If the rule is left blank, it is defaulted to rule 0. </p>
+<p>If the rule is left blank, it is defaulted to rule 0.</p>
 
 <p><a name="field_desc"></a><strong>FIELD</strong> - Enter a field name that you wish the import
-data to be sent to. Click the lookup icon for a list of field names. </p>
+data to be sent to. Click the lookup icon for a list of field names.</p>
 
 <p><a name="start"></a><strong>START</strong> - The Start value can represent two types of position,
 depending on the record type entered on Screen 1. If the record type is anything other
 than ‘Flat’, then the start value relates to the field’s position in the data lines.
 The following will show how this is set:</p>
 
-<p>Pipe - 123|2222.33|3333.44|4444.55|5555.66|6666.77 </p>
+<p>Pipe - 123|2222.33|3333.44|4444.55|5555.66|6666.77</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload4.jpg" alt="" /></p>
@@ -235,9 +235,9 @@ The following will show how this is set:</p>
 
 <p><a name="length"></a><strong>LENGTH</strong> - When dealing with flat files the length column
 also gets used. The number of characters a section of data uses from the Start position
-to the end of that section of data must be entered here. </p>
+to the end of that section of data must be entered here.</p>
 
-<p>Flat - 1232222.333333.444444.555555.666666.77 </p>
+<p>Flat - 1232222.333333.444444.555555.666666.77</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload5.jpg" alt="" /></p>
@@ -245,16 +245,16 @@ to the end of that section of data must be entered here. </p>
 </div>
 
 <p><a name="value"></a><strong>VALUE</strong> - This field will only become available if you have
-specified rule 1 or 7. </p>
+specified rule 1 or 7.</p>
 
 <p>If rule 1 has been selected, then enter in the constant data you wish to send through
 to Pension Master during import. If the load type is ‘New’, then some database fields
 should use 0 as the constant data. This is because these fields have an auto-generated
 amount calculated for them during the running process. Click <a href="/pension/updates/import_data/pem_dloadb/">here</a> for
-a list of these fields. </p>
+a list of these fields.</p>
 
 <p>If rule 7 then enter the translation code to be used. A list of valid translation
-codes will be displayed to the screen on entering this field. </p>
+codes will be displayed to the screen on entering this field.</p>
 
 <p><strong>Auto Enrolment</strong></p>
 
@@ -263,13 +263,13 @@ codes will be displayed to the screen on entering this field. </p>
   <li>If the user is loading the AE field, then the value in the file will be loaded. The values for the field must be Y or N for an AE scheme and N only for a non AE scheme. If any other values exist for the field in the data file, the load will not progress.</li>
 </ol>
 
-<p>Once all fields have been entered click ‘OK’ to save your import settings. </p>
+<p>Once all fields have been entered click ‘OK’ to save your import settings.</p>
 
 <h2 id="a-namequeryaquerying-a-general-data-load"><a name="query"></a>Querying a General Data Load</h2>
 
-<p>Click ‘Query’. </p>
+<p>Click ‘Query’.</p>
 
-<p>The screen below will appear. </p>
+<p>The screen below will appear.</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload6.jpg" alt="" /></p>
@@ -277,17 +277,17 @@ codes will be displayed to the screen on entering this field. </p>
 </div>
 
 <p><a name="popup"></a>Enter the Import Code and/or Scheme Code details. If any load
-details match the entered criteria, then a pop-up window will appear listing them. </p>
+details match the entered criteria, then a pop-up window will appear listing them.</p>
 
-<p>Select a load and click ‘OK’ to display the details to the screen. </p>
+<p>Select a load and click ‘OK’ to display the details to the screen.</p>
 
 <h2 id="a-nameupdateaupdating-a-general-data-load"><a name="update"></a>Updating a General Data Load</h2>
 
-<p>Click ‘Update’. </p>
+<p>Click ‘Update’.</p>
 
-<p>A load must have been selected before this option can be used. </p>
+<p>A load must have been selected before this option can be used.</p>
 
-<p>Enter the amended details and click ‘OK’ to save them. </p>
+<p>Enter the amended details and click ‘OK’ to save them.</p>
 
 <p><strong>Auto Enrolment</strong></p>
 
@@ -297,11 +297,11 @@ details match the entered criteria, then a pop-up window will appear listing the
 
 <h2 id="a-namerun-a-general-data-loadarunning-a-general-data-load"><a name="Run a General Data Load"></a>Running a General Data Load</h2>
 
-<p>Click ‘Run’. </p>
+<p>Click ‘Run’.</p>
 
-<p>A load must have been selected before this option can be used. </p>
+<p>A load must have been selected before this option can be used.</p>
 
-<p>The following pop-up window is displayed: </p>
+<p>The following pop-up window is displayed:</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload7.jpg" alt="" /></p>
@@ -312,39 +312,39 @@ details match the entered criteria, then a pop-up window will appear listing the
 the same process, however, the actual load will update the database tables. It is
 recommended that a provisional load is always run first. This is so that if any errors/conflicts
 are found within the data file, then they can be dealt with before an actual load
-is run. </p>
+is run.</p>
 
 <p>The process starts by checking that the data file entered doesn’t contains blank lines
 nor is empty. If it is then an appropriate message will be displayed informing the
-user of this. The process is then abandoned. </p>
+user of this. The process is then abandoned.</p>
 
 <p>The process will continue to check that the data inside the data file is correct and
 valid. If any formatting errors are found, then a Formatting report will be produced
 listing these errors. If any data is found to be invalid then an Exceptions report
-will be produced, listing the exceptions. </p>
+will be produced, listing the exceptions.</p>
 
 <p>If there are no formatting errors, then a report will be produced out to Microsoft Excel, which will either list all the new records that have been produced for a ‘New’ type load, or all the records which will be amended with data fro an ‘Update’ type load.</p>
 
 <p>If all data is present and correct, then the user can continue to load the data. Only
-Actual loads will load into the actual database tables. </p>
+Actual loads will load into the actual database tables.</p>
 
 <h2 id="a-namedeleteadeleting-a-general-data-load"><a name="delete"></a>Deleting a General Data Load</h2>
 
-<p>Click ‘Delete’. </p>
+<p>Click ‘Delete’.</p>
 
-<p>A load must have been selected before this option can be used. </p>
+<p>A load must have been selected before this option can be used.</p>
 
 <p>Template loads cannot be deleted. If one is trying to be deleted, then a warning message
-will appear informing the user that this cannot happen. </p>
+will appear informing the user that this cannot happen.</p>
 
 <h2 id="a-nameadd-infoaadditional-information"><a name="add info"></a>Additional Information</h2>
 
 <p>If the Contribution History Batch Details, Salary Batch Details or N.I. History Batch
 Details table is being loaded into, then extra information is needed in order for
-the process to complete successfully. </p>
+the process to complete successfully.</p>
 
 <p>During the early stage of the Run process, one of the following pop-up windows will
-appear to the screen: </p>
+appear to the screen:</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload8.jpg" alt="Contribution History Batch Details" /></p>
@@ -354,7 +354,7 @@ appear to the screen: </p>
 
 <p>Enter the Date Due, Date Received and Transaction Type. The Date Received cannot be
 before the Date Due. Click the calendar icon to see a calendar for the date fields and a list
-of valid transaction types for the Transaction Type field. </p>
+of valid transaction types for the Transaction Type field.</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload9.jpg" alt="Salary Batch Details" /></p>
@@ -363,7 +363,7 @@ of valid transaction types for the Transaction Type field. </p>
 </div>
 
 <p>Enter the Batch Date and Salary Screen. Click the calendar icon to see a calendar for the date
-field and a list of Salary Screens for the Salary Screen field. </p>
+field and a list of Salary Screens for the Salary Screen field.</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload10.jpg" alt="N.I. History Batch Details" /></p>
@@ -371,16 +371,16 @@ field and a list of Salary Screens for the Salary Screen field. </p>
   <p>N.I. History Batch Details</p>
 </div>
 
-<p>Enter the Batch Date. Click the calendar icon to see the calendar. </p>
+<p>Enter the Batch Date. Click the calendar icon to see the calendar.</p>
 
 <p>When these details have been entered, they will help create a Batch Header. Once an
 actual load has been run, the batch can be viewed in the <a href="/pension/updates/pem_bat/#Introduction">Batch
-Data Input</a> program. </p>
+Data Input</a> program.</p>
 
 <h2 id="a-namemem-notesamember-notes"><a name="mem notes"></a>Member Notes</h2>
 
 <p>If the ‘Member Notes?’ field has been ticked in Screen 1, then the following pop-up
-window will appear during the run process: </p>
+window will appear during the run process:</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload11.jpg" alt="Member Notes" /></p>
@@ -389,29 +389,29 @@ window will appear during the run process: </p>
 </div>
 
 <p><a name="rec_type"></a><strong>RECORD TYPE</strong> - This field will default to the record
-type entered in Screen 1. You cannot enter into this field. </p>
+type entered in Screen 1. You cannot enter into this field.</p>
 
 <p><a name="note"></a><strong>NOTE</strong> - Enter the note you wish to send through to each member
-in the data file. </p>
+in the data file.</p>
 
 <p><a name="attach"></a><strong>ATTACH</strong> - Tick this field if there is data in the data
-file which can be attached to the note. </p>
+file which can be attached to the note.</p>
 
 <p><a name="start"></a><strong>START</strong> - If the Attach field is ticked then you will be
 required to enter a value here. This field has the same principle as the <a href="/pension/updates/import_data/pem_dload/#start">Start</a> field
-in Screen 2. </p>
+in Screen 2.</p>
 
 <p><a name="length"></a><strong>LENGTH</strong> - This field will only be available if the record
 type is ‘Flat’. In the case of this, then a value must be entered. This field has
 the same principle as the <a href="/pension/updates/import_data/pem_dload/#length">Length</a> field in Screen
-2. </p>
+2.</p>
 
 <h2 id="a-namesplit-fileasplit-file"><a name="split file"></a>Split File</h2>
 
 <p>This facility allows the user to split up a data file using a specified piece of data.
-This is useful in the following examples: </p>
+This is useful in the following examples:</p>
 
-<p><strong>Datafile 1.</strong> </p>
+<p><strong>Datafile 1.</strong></p>
 
 <table>
   <tbody>
@@ -439,14 +439,14 @@ This is useful in the following examples: </p>
 
 <p>The field in position 4 contains a date in one line but nothing in the other. This
 file can be split depending on position 4 being blank or existing, generating 2 new
-files. </p>
+files.</p>
 
 <p>If this data needs to be loaded with the condition of, ‘if the date in position 4
 exists then load that date, otherwise use a default date of dd/mm/yyyy’, then the
 file containing a date can be loaded normally. The file containing a blank date can
-use a default date of dd/mm/yyyy with rule 1. </p>
+use a default date of dd/mm/yyyy with rule 1.</p>
 
-<p><strong>Datafile 2.</strong> </p>
+<p><strong>Datafile 2.</strong></p>
 
 <table>
   <tbody>
@@ -473,10 +473,10 @@ use a default date of dd/mm/yyyy with rule 1. </p>
 </table>
 
 <p>The field in position 3 contains a record identifier. This file can be split based
-on position 3, generating a number of new files. </p>
+on position 3, generating a number of new files.</p>
 
 <p>If this data needs to be loaded to different database tables, depending on the record
-indentifier, then it now can be with the new files created. </p>
+indentifier, then it now can be with the new files created.</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload14.jpg" alt="" /></p>
@@ -484,36 +484,36 @@ indentifier, then it now can be with the new files created. </p>
 </div>
 
 <p><a name="imp_source"></a><strong>IMPORT FILE</strong> - Enter the name of the file you wish
-to split. </p>
+to split.</p>
 
 <p><a name="rec_type"></a><strong>RECORD TYPE</strong> - Enter the Delimiter, which is a character
 used to separate each of the fields in the data file. This should be either of the
-following: </p>
+following:</p>
 
 <ul>
-  <li>a comma (,) </li>
-  <li>a pipe (|) </li>
-  <li>a colon (:) </li>
-  <li>a semi-colon (;) </li>
-  <li>a tab </li>
-  <li>a flat file ( no separators ) </li>
+  <li>a comma (,)</li>
+  <li>a pipe (|)</li>
+  <li>a colon (:)</li>
+  <li>a semi-colon (;)</li>
+  <li>a tab</li>
+  <li>a flat file ( no separators )</li>
 </ul>
 
 <p><a name="start"></a><strong>START</strong> - Enter the Start value. This uses the same principle
 as the <a href="/pension/updates/import_data/pem_dload/#start">Start</a> field in Screen 2.</p>
 
 <p><a name="length"></a><strong>LENGTH</strong> - Enter the Length value. This uses the same principle
-as the <a href="/pension/updates/import_data/pem_dload/#length">Length</a> field in Screen 2. </p>
+as the <a href="/pension/updates/import_data/pem_dload/#length">Length</a> field in Screen 2.</p>
 
 <p><a name="blank_exists"></a><strong>BLANK/EXISTS?</strong> - Tick this field is you wish to split
-the file based on the specified data being blank or exists. </p>
+the file based on the specified data being blank or exists.</p>
 
 <h2 id="a-namenavigateanavigating-between-screens"><a name="navigate"></a>Navigating Between Screens</h2>
 
 <p>Click ‘Menu’. A pop-up menu will open on the screen which allows the user to pick
-one of the screens available. Click ‘Cancel’ to abort the screen selection process. </p>
+one of the screens available. Click ‘Cancel’ to abort the screen selection process.</p>
 
-<p>The menu selection pop-up is as follows: </p>
+<p>The menu selection pop-up is as follows:</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload12.jpg" alt="Menu Screen Selection" /></p>
@@ -525,7 +525,7 @@ one of the screens available. Click ‘Cancel’ to abort the screen selection p
 
 <p>Click the ‘Report’ icon.</p>
 
-<p>The following window now appears: </p>
+<p>The following window now appears:</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_dload13.jpg" alt="Select Report Options Window" /></p>
@@ -533,7 +533,7 @@ one of the screens available. Click ‘Cancel’ to abort the screen selection p
   <p>Select Report Options Window</p>
 </div>
 
-<p>The options are as follows: </p>
+<p>The options are as follows:</p>
 
 <div class="row">
   <div class="col-md-6">
@@ -559,7 +559,7 @@ one of the screens available. Click ‘Cancel’ to abort the screen selection p
 </div>
 
 <p>Select the appropriate option and click ‘OK’. Click ‘Cancel’ to exit the printing
-or ‘Help’ to display this help text. </p>
+or ‘Help’ to display this help text.</p>
 
 <h2 id="a-nameexitaexit-program"><a name="exit"></a>Exit Program</h2>
 

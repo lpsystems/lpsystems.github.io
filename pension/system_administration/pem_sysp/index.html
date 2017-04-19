@@ -47,17 +47,17 @@
 <h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
 
 <ul>
-  <li><a href="#Introduction">Introduction</a> </li>
-  <li><a href="#Add a Record">Add A Record</a> </li>
-  <li><a href="#Basic System Parameters">Basic System Parameters</a> </li>
-  <li><a href="#2">Basic System Parameters 2</a> </li>
-  <li><a href="#Audit Trail Settings">Audit Trail Settings</a> </li>
-  <li><a href="#Password Option Details">Password Option Details</a> </li>
-  <li><a href="#Query a Record">Query a Record</a> </li>
-  <li><a href="#Update a Record">Update a Record</a> </li>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add a Record">Add A Record</a></li>
+  <li><a href="#Basic System Parameters">Basic System Parameters</a></li>
+  <li><a href="#2">Basic System Parameters 2</a></li>
+  <li><a href="#Audit Trail Settings">Audit Trail Settings</a></li>
+  <li><a href="#Password Option Details">Password Option Details</a></li>
+  <li><a href="#Query a Record">Query a Record</a></li>
+  <li><a href="#Update a Record">Update a Record</a></li>
   <li><a href="#Printing System Parameter Details">Printing System Parameter Details</a></li>
-  <li><a href="#navigate">Navigating Between Screens</a> </li>
-  <li><a href="#Exit">Exit Program</a> </li>
+  <li><a href="#navigate">Navigating Between Screens</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
@@ -76,10 +76,10 @@ system-wide variables that can be set for Pension Master.</p>
 <p>The following options and screen appear when this program is selected:</p>
 
 <ul>
-  <li>Update </li>
-  <li>Report </li>
-  <li>Menu </li>
-  <li>Exit </li>
+  <li>Update</li>
+  <li>Report</li>
+  <li>Menu</li>
+  <li>Exit</li>
 </ul>
 
 <div class="screen">
@@ -159,9 +159,9 @@ run a Member Report or Mail Merge Report or a formula that references this new f
 <p>The way this is calculated differs on which program you are using as follows:</p>
 
 <ul>
-  <li>Members - always calculate age at today’s date i.e. the system date. </li>
+  <li>Members - always calculate age at today’s date i.e. the system date.</li>
   <li>Member Report/Mail Merge Report - always calculate age at the report date. 
-Formula File/Quotations - always calculate age at quotation date. </li>
+Formula File/Quotations - always calculate age at quotation date.</li>
 </ul>
 
 <p><a name="pp_server_ip"></a><strong>WEB SERVER USER MANUAL ADDRESS</strong> - Enter the URL
@@ -176,21 +176,13 @@ then contain the drive mapping and the path to the folder e.g. M:\pendoc.</p>
 <p>This is used by the Pension Master software to find the appropriate User Manual
 page when the user clicks or selects the User Manual icon on their screen.</p>
 
-<p><a name="pp_local_path"></a><strong>LOCAL PATH</strong> - If you have indicated that you wish
-to view Pension Master reports using Adobe Acrobat Reader, enter the path on your
-PC that the report files should be saved in.</p>
+<p><a name="pp_import_source"></a><strong>IMPORT SOURCE</strong> - The Import Source can either be set to Network Drive or Local Drive.</p>
 
-<p>This path is also used to indicate where you wish Pension Master to save mail merge
-and report data files when outputting data from Pension Master to Microsoft Word
-or Excel. If left blank, these files will be saved in the root of your c: drive.</p>
+<p>If the Import Source is set to Network Drive then a Network Drive Path can be entered foreither General Data Load and Mail Merge. This can either be a drive mapping (e.g. L: or P:) or a network location (e.g. \PMSERV\dataloads). The folders would need to be set as sharable with the correct permissions for the Pension Master user account on the server. Contact L&amp;P Systems Limited for assistance.</p>
 
-<p>This path MUST be available to ALL PC’s that Pension Master will be used on at your
-site and can be a valid network drive path e.g. g:\reports.</p>
+<p>The Network Drive Path could also be left blank if data is loaded from more than one location on the server.If the Import Source is set to Network Drive then the file that is entered as the Import File will be used for the data load. The Import File can be manually changed or selected from the data load folder using the file picker.</p>
 
-<p><a name="pp_acrobat"></a><strong>VIEW REPORTS WITH ACROBAT?</strong> - If you wish to view
-all Pension Master reports using Adobe Acrobat reader then ensure this box is ticked.
-If the box is not ticked then the standard internal Pension Master report viewer
-will be used.</p>
+<p>If the Import Source is set to Local Drive then General Data Load, allows the file to be selected manually from a folder using the browser each time.</p>
 
 <p>When the System Parameter details have been entered click on ‘OK’ to save the details
 to the system parameter file. You can click on ‘Cancel’ at any stage to exit the
@@ -204,13 +196,14 @@ add option without saving the details.</p>
 
 <p>This screen allows you to set the order by which the member query displays the results
 of a search. In addition it holds certain indicator fields which allows the user to 
-enable the following processes: </p>
+enable the following processes:</p>
 
 <ul>
-  <li>Workflow </li>
-  <li>Delete Quotation History </li>
-  <li>Member Session Report </li>
-  <li>bulk Delete in Member File </li>
+  <li>Workflow</li>
+  <li>Delete Quotation History</li>
+  <li>Member Session Report</li>
+  <li>Bulk Delete in Member File</li>
+  <li>Include NI/RSI/PPS/TRN Numbers in Standard Reports</li>
 </ul>
 
 <p>The following screen is displayed:</p>
@@ -234,13 +227,13 @@ Master system not to do this, for example if you are an Irish site with Gaelic s
 you will have to untick the field. At present the following fields are supported:</p>
 
 <ul>
-  <li>Title </li>
-  <li>Forename </li>
-  <li>Surname </li>
-  <li>Job Title </li>
-  <li>Member’s salutation </li>
-  <li>Full forenames </li>
-  <li>Address Lines </li>
+  <li>Title</li>
+  <li>Forename</li>
+  <li>Surname</li>
+  <li>Job Title</li>
+  <li>Member’s salutation</li>
+  <li>Full forenames</li>
+  <li>Address Lines</li>
 </ul>
 
 <p>If you tick this field, a prompt will be displayed asking if you really
@@ -281,6 +274,10 @@ disable the member session report, make sure this field is not checked.</p>
 whether you wish to disable the bulk delete option in the Members file. To enable bulk
 delete, make sure this field is checked (i.e. shows a tick in it). To disable bulk delete,
 make sure this field is not checked.</p>
+
+<p><a name="pp_nipps_rep"></a><strong>Include NI/RSI/PPS/TRN Numbers in Standard Reports</strong> - This field denotes 
+whether you wish to disable the displaying of the PPS Number in any of the standard reports delete option in the Members file. To enable, make sure this field is checked (i.e. shows a tick in it). To disable bulk delete,
+make sure this field is checked.</p>
 
 <h3 id="a-nameaudit-trail-settingsaaudit-trail-settings"><a name="Audit Trail Settings"></a>Audit Trail Settings</h3>
 
@@ -419,9 +416,9 @@ to file, or click on ‘Cancel’ to exit the update option without saving chang
 or click on the ‘Menu’ menu option. The screens available are:</p>
 
 <ol>
-  <li>Basic System Parameters </li>
-  <li>Audit Trail Settings </li>
-  <li>Password Option Details </li>
+  <li>Basic System Parameters</li>
+  <li>Audit Trail Settings</li>
+  <li>Password Option Details</li>
 </ol>
 
 <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>

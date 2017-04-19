@@ -50,9 +50,9 @@
 
 <p>Use the canada function to calculate the best band of consecutive years information
 over a given period. e.g. to calculate the best three year average gross salary over
-the last ten years. </p>
+the last ten years.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>canada(field no.,n1,n2) 
 </code></pre>
@@ -65,13 +65,13 @@ the last ten years. </p>
   <li>n2 - is the number of consecutive years to average the field over.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>If field no. is set to 0 then a total of all of the 5 salaries in pe_salary1 will
-be used to calculate the average. </li>
-  <li>If n1= 0 or n2 = 0, the function will return a value of 0. </li>
-  <li>n1 can take any value less than 40. i.e you can average the field over no more than 40 years. </li>
+be used to calculate the average.</li>
+  <li>If n1= 0 or n2 = 0, the function will return a value of 0.</li>
+  <li>n1 can take any value less than 40. i.e you can average the field over no more than 40 years.</li>
   <li>If n2 &gt; number of years for a particular member then the function performs the
 average over the number of years data available.  e.g. if you try to use canada(1,10,3) and there is only 2 years gross
 salary details for a particular member, the function will look at consecutive two
@@ -88,36 +88,36 @@ canada(2,3,1)
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use the esb_code function to extract the allowance codes applicable to a member. </p>
+<p>Use the esb_code function to extract the allowance codes applicable to a member.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>esb_code(date,num,screen) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date - denotes the date you wish to lookup allowance codes for. This can be either: 
+  <li>date - denotes the date you wish to lookup allowance codes for. This can be either:
     <ul>
-      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date. </li>
-      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000. </li>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
     </ul>
   </li>
-  <li>num - denotes the sequential number of the allowance for the member. This can be either: 
+  <li>num - denotes the sequential number of the allowance for the member. This can be either:
     <ul>
       <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a
-number in the range 1 to 15. </li>
-      <li>a number in the range 1-15. </li>
+number in the range 1 to 15.</li>
+      <li>a number in the range 1-15.</li>
     </ul>
   </li>
-  <li>screen - denotes the screen number for the allowance code to be extracted from. Valid entries are either 1 or 2. </li>
+  <li>screen - denotes the screen number for the allowance code to be extracted from. Valid entries are either 1 or 2.</li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>If the member does not have a code in the position indicated by num, a value of NOT_FOUND is returned by this function. </li>
+  <li>If the member does not have a code in the position indicated by num, a value of NOT_FOUND is returned by this function.</li>
 </ol>
 
 <p><strong>EXAMPLES</strong></p>
@@ -131,36 +131,36 @@ esb_code(20010101,15,2)
 <p><strong>OVERVIEW</strong></p>
 
 <p>Use the esb_value function to extract the value corresponding to an allowance code
-applicable to a member. </p>
+applicable to a member.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>esb_value(date,code,screen) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date - denotes the date you wish to lookup allowance codes for. This can be either: 
+  <li>date - denotes the date you wish to lookup allowance codes for. This can be either:
     <ul>
-      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date. </li>
-      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000. </li>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
     </ul>
   </li>
-  <li>code - denotes the allowance code to be looked up. This can be either: 
+  <li>code - denotes the allowance code to be looked up. This can be either:
     <ul>
-      <li>@line_num i.e. a reference to a previous line of your formula that contains the allowance code </li>
-      <li>an allowance code. </li>
+      <li>@line_num i.e. a reference to a previous line of your formula that contains the allowance code</li>
+      <li>an allowance code.</li>
     </ul>
   </li>
-  <li>screen - denotes the screen number for the allowance code to be extracted from. Valid entries are either 1 or 2. </li>
+  <li>screen - denotes the screen number for the allowance code to be extracted from. Valid entries are either 1 or 2.</li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
   <li>If there is no allowance value for the selected date, allowance code and screen number,
-a value of zero is returned by this function. </li>
+a value of zero is returned by this function.</li>
 </ol>
 
 <p><strong>EXAMPLES</strong></p>
@@ -174,9 +174,9 @@ esb_value(20010101,@1,2)
 <p><strong>OVERVIEW</strong></p>
 
 <p>Use the croda_avg function to calculate the average of a field over a particular number
-of years. </p>
+of years.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>croda_avg(field,n,fld1,fld2) 
 </code></pre>
@@ -190,19 +190,19 @@ of years. </p>
   <li>fld2 - is full or part time selection.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>Only salaries upto and including the <a href="/pension/file_maintenance/pem_mem/#calc_date">Calculation
-Date</a> are used in the calculations. </li>
+Date</a> are used in the calculations.</li>
   <li>If a user defined history is selected ensure that the data type of the field is either
 N2 or MO. If any other type is selected for this function, e.g. DT, then an error
-message is displayed. </li>
-  <li>If n = 0, the function will return a value of 0. </li>
-  <li>n can take any value less than 40. i.e you can average the field over no more than 40 years. </li>
+message is displayed.</li>
+  <li>If n = 0, the function will return a value of 0.</li>
+  <li>n can take any value less than 40. i.e you can average the field over no more than 40 years.</li>
   <li>fld1 can take the alphabetic values ‘e’ and ‘l’:
     <ul>
-      <li>‘e’ will commence the averaging period from the Calculation Date. </li>
+      <li>‘e’ will commence the averaging period from the Calculation Date.</li>
       <li>‘l’ will commence the averaging period from the Calculation Date but will ignore the latest entry.</li>
     </ul>
   </li>

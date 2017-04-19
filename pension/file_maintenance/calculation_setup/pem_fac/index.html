@@ -47,14 +47,14 @@
 <h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
 
 <ul>
-  <li><a href="#Introduction">Introduction</a> </li>
-  <li><a href="#Add a Factor Table">Add a Factor Table</a> </li>
-  <li><a href="#Query/Search For A Factor Table">Query/Search for a Factor Table</a> </li>
-  <li><a href="#Viewing Factor Tables">Viewing Factor Tables</a> </li>
-  <li><a href="#Updating Factor Tables">Updating Factor Tables</a> </li>
-  <li><a href="#Deleting Factor Tables">Deleting Factor Tables</a> </li>
-  <li><a href="#Printing Factor Tables">Printing Factor Tables</a> </li>
-  <li><a href="#Exit">Exit Program</a> </li>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add a Factor Table">Add a Factor Table</a></li>
+  <li><a href="#Query/Search For A Factor Table">Query/Search for a Factor Table</a></li>
+  <li><a href="#Viewing Factor Tables">Viewing Factor Tables</a></li>
+  <li><a href="#Updating Factor Tables">Updating Factor Tables</a></li>
+  <li><a href="#Deleting Factor Tables">Deleting Factor Tables</a></li>
+  <li><a href="#Printing Factor Tables">Printing Factor Tables</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
@@ -72,11 +72,11 @@ program.</p>
 </div>
 
 <p>This module allows you to define factor tables for use in your benefit calculation
-formulae. These are made up as follows: </p>
+formulae. These are made up as follows:</p>
 
 <ul>
-  <li>Header information which holds details of the factor table code and a brief description of the factor table. </li>
-  <li>Sets of rates for various indices, one rate for each index. </li>
+  <li>Header information which holds details of the factor table code and a brief description of the factor table.</li>
+  <li>Sets of rates for various indices, one rate for each index.</li>
 </ul>
 
 <p>The details can then be accessed during formulae calculation and can be used to store
@@ -85,17 +85,17 @@ factor tables. These could represent, for example, transfer value factors for a 
 benefit scheme, or fund projection factors for a defined contribution scheme.</p>
 
 <p>As you might expect, actuarial factors are indexed by age and sex and term related
-factor tables are indexed by term (in years) and sex. </p>
+factor tables are indexed by term (in years) and sex.</p>
 
 <p>The following options and screen appear when this program is selected:</p>
 
 <ul>
-  <li>Add </li>
-  <li>Query </li>
-  <li>Update </li>
-  <li>Delete </li>
-  <li>Report </li>
-  <li>Exit </li>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Delete</li>
+  <li>Report</li>
+  <li>Exit</li>
 </ul>
 
 <div class="screen">
@@ -114,11 +114,11 @@ exists on the Factor Table File an error message will be displayed and you will 
 required to enter a unique factor code. Enter the code as appropriate. You can use
 up to 8 characters for your code. Spaces are not allowed in Factor Table Codes as
 these would be interpreted incorrectly in any formulae using these factors, and only
-uppercase is allowed. </p>
+uppercase is allowed.</p>
 
 <p>You should note that where the factor table is not defined as unisex, you will be
 allowed to enter two separate factor tables under the same code, one for males and
-one for females. </p>
+one for females.</p>
 
 <p><a name="pfac_desc"></a><strong>DESCRIPTION</strong> - A description for your factor table must
 be entered. If a description is not entered an error message will be displayed and
@@ -128,23 +128,23 @@ parts of the system to identify each factor table, so we suggest you choose a me
 description e.g. <em>Immediate Annuities 9% Int, 0% Esc.</em></p>
 
 <p><a name="pfac_type"></a><strong>TYPE</strong> - Enter a factor table type for your factor table.
-You must enter a valid option here. The valid options are: </p>
+You must enter a valid option here. The valid options are:</p>
 
 <ul>
-  <li><strong>A</strong> - Actuarial </li>
-  <li><strong>S</strong> - System </li>
-  <li><strong>T</strong> - Term Related </li>
+  <li><strong>A</strong> - Actuarial</li>
+  <li><strong>S</strong> - System</li>
+  <li><strong>T</strong> - Term Related</li>
 </ul>
 
 <p>If any other value is entered, an error message will be displayed and the table type
 should be re-entered.</p>
 
-<p><a name="pfac_sex"></a><strong>SEX</strong> - Valid entries for this field are: </p>
+<p><a name="pfac_sex"></a><strong>SEX</strong> - Valid entries for this field are:</p>
 
 <ul>
-  <li><strong>M</strong> - Male </li>
-  <li><strong>F</strong> - Female </li>
-  <li><strong>U</strong> - Unisex </li>
+  <li><strong>M</strong> - Male</li>
+  <li><strong>F</strong> - Female</li>
+  <li><strong>U</strong> - Unisex</li>
 </ul>
 
 <p>If any other value is entered, an error message will be displayed and sex should be
@@ -153,30 +153,30 @@ re-entered.</p>
 <p><a name="pfac_date"></a><strong>DATE</strong> - Enter a factor table date for your factor table.
 This should be entered either in the format “dd/mm/yy” or “dd/mm/yyyy”. This date
 will allow you to store historical factor tables. In formulae a factor code as of
-a certain date may be used. </p>
+a certain date may be used.</p>
 
 <p><a name="range_from"></a><strong>RANGE FROM</strong> - Enter the lower range limit you wish
 your table to apply from e.g. if you wish to enter a table for ages 18-65, enter 18
 here. This value must be entered and must be greater than 0. This value, combined
 with the RANGE TO field will be used to set up the indices in the lower portion
-of the screen so that you can input valid factors against each index. </p>
+of the screen so that you can input valid factors against each index.</p>
 
 <p><a name="range_to"></a><strong>RANGE TO</strong> - Enter the upper range limit you wish your
 table to apply to e.g. if you wish to enter a table for ages 18-65, enter 65 here.
 This value must be entered and must be no less that the value you entered in the RANGE FROM
 field. This value, combined with the RANGE FROM field will be used to set up the indices
 in the lower portion of the screen so that you can input valid factors against each
-index. </p>
+index.</p>
 
 <p><strong>FACTOR</strong> - Enter the value of the factor for each index. The factors will initially
-all default to 0 and can be overtyped with the appropriate values. </p>
+all default to 0 and can be overtyped with the appropriate values.</p>
 
 <p>When the Factor Table details have been entered click ‘OK’ to save Factor Table details.
 You can click ‘Cancel’ at any stage to exit the add option without saving the entered
-Factor table details. </p>
+Factor table details.</p>
 
 <p>If, at this stage, any of your factors are still equal to 0, an error message is displayed
-warning you of this and then the following message appears at the top of the screen: </p>
+warning you of this and then the following message appears at the top of the screen:</p>
 
 <div class="well">
 
@@ -185,7 +185,7 @@ warning you of this and then the following message appears at the top of the scr
 </div>
 
 <p>Enter Y if you wish to continue and save the factor table details or N if you wish
-to continue editing the factors prior to saving them. </p>
+to continue editing the factors prior to saving them.</p>
 
 <h2 id="a-namequerysearch-for-a-factor-tableaa-namequeryaquerysearch"><a name="Query/Search For A Factor Table"></a><a name="query"></a>Query/Search</h2>
 
@@ -201,7 +201,7 @@ to continue editing the factors prior to saving them. </p>
 
 <p>You may select records using the Table Code, Type or Sex fields. You may also use
 any combination (or even partial combination) of these fields in order to select the
-required factor table record(s). </p>
+required factor table record(s).</p>
 
 <p>If you are unsure of the factor table code to query, click the lookup icon to see a
 list of the factor tables. The Table Type and
@@ -209,10 +209,10 @@ Sex fields will automatically be filled in based on the Factor Table Code chosen
 
 <p>Once you have entered your selection criteria, click ‘OK’ to proceed and retrieve
 the records from the database or click ‘Cancel’ to abort the selection and return
-to the Factors main menu. </p>
+to the Factors main menu.</p>
 
 <p>If any match to the selection criteria is found then the first record will be displayed
-to the screen and a message displayed to the bottom of the screen. </p>
+to the screen and a message displayed to the bottom of the screen.</p>
 
 <div class="well">
 
@@ -238,29 +238,29 @@ to this option for system factor tables.</p>
 </div>
 
 <p>Before Updating, a record must be selected through the Query option, and an error
-message is displayed if a record for update has not been selected. </p>
+message is displayed if a record for update has not been selected.</p>
 
-<p>Click ‘Update’. </p>
+<p>Click ‘Update’.</p>
 
 <p>The Factor table code cannot be changed as this is one of the fields which is a key
-to the factor table file. </p>
+to the factor table file.</p>
 
 <p>Changing the date at this point, will result in a new factor table being created for
-this date. Please use the delete option if you do not require the amended factor table. </p>
+this date. Please use the delete option if you do not require the amended factor table.</p>
 
 <p>If you wish to add or delete factors for a certain range, then amend the RANGE FROM
 and/or RANGE TO fields to reflect the new factor table range. The factors themselves
 will be added to or deleted as appropriate. If new factors are added in this way,
-they will initially default to 0 and should be overtyped with their new values. </p>
+they will initially default to 0 and should be overtyped with their new values.</p>
 
 <p>When changes have been made to the record click ‘OK’ to save the changes to file,
-or click ‘Cancel’ to exit the update option. </p>
+or click ‘Cancel’ to exit the update option.</p>
 
 <h2 id="a-namedeleting-factor-tablesadeleting-factor-tables"><a name="Deleting Factor Tables"></a>Deleting Factor Tables</h2>
 
 <p>A record must be selected through the Query option before a Factor can be deleted.</p>
 
-<p>Click ‘Delete’. </p>
+<p>Click ‘Delete’.</p>
 
 <p>When the delete option is selected the following window is displayed:</p>
 
@@ -285,7 +285,7 @@ or click ‘Cancel’ to exit the update option. </p>
 
 <p>Click the ‘Report’ icon.</p>
 
-<p>The following window now appears: </p>
+<p>The following window now appears:</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_fac5.jpg" alt="Select Report Options Window" /></p>
@@ -299,7 +299,7 @@ or click ‘Cancel’ to exit the update option. </p>
 </ul>
 
 <p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
-From Pension Master</a>. </p>
+From Pension Master</a>.</p>
 
 <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
 

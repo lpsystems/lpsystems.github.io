@@ -48,31 +48,31 @@
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to extract a members additional benefit depending on the benefit code. </p>
+<p>Use this function to extract a members additional benefit depending on the benefit code.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>addben(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - is a reference to the Benefit Code of the Additional Benefit record that you wish to select the benefit from. </li>
+  <li>code - is a reference to the Benefit Code of the Additional Benefit record that you wish to select the benefit from.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>This function will return the Additional Benefit depending on the code entered. If
 the second character of the code is a “F” then the value of the Fixed Benefit for
 that code will be returned. If the second character of the code is a “S” then the
-value of the Added Years + Added Months / 12 + Added Days / 365 will be returned. </li>
+value of the Added Years + Added Months / 12 + Added Days / 365 will be returned.</li>
   <li>If the initial letter of the code is A the result returned will be positive. If it
-is S the result will be negative and finally, if it is I the result will be set to 0. </li>
+is S the result will be negative and finally, if it is I the result will be set to 0.</li>
 </ol>
 
-<p><strong>EXAMPLES</strong> </p>
+<p><strong>EXAMPLES</strong></p>
 
 <pre><code>addben(SSSTRIKE) 
 addben(AFEXEMP) 
@@ -80,599 +80,599 @@ addben(AFEXEMP)
 
 <h2 id="a-name02aadditionalbenefitfldcode"><a name="02"></a>#additional_benefit_fld(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on an Additional Benefits screen of the
-specified code. This will be taken from the additional benefits file (pe_addb). </p>
+specified code. This will be taken from the additional benefits file (pe_addb).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#additional_benefit_fld(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the Benefit Code (see Additional Benefit Codes) that you wish to
 retrieve an Additional Benefit Field for. This must be in UPPERCASE and must exist
 as a valid Additional Benefit Code. If a member does not have an Additional Benefit
-record with a matching code, this function call will return a value of 0. </li>
+record with a matching code, this function call will return a value of 0.</li>
   <li>additional_benefit_fld is any valid field on the additional benefit table. For a
-list of valid fields click <a href="/pension/appendices/app_a/#pe_addb">here</a> </li>
+list of valid fields click <a href="/pension/appendices/app_a/#pe_addb">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>additional_benefit_fld must be a valid field on the Member Additional Benefit file (pe_addb). </li>
-  <li>code must be in UPPERCASE. </li>
-  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode). </li>
+  <li>additional_benefit_fld must be a valid field on the Member Additional Benefit file (pe_addb).</li>
+  <li>code must be in UPPERCASE.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
   <li>If the Additional Benefits Field is not found, either because it does not exist, has
 not yet been run, or results from incorrect specification of code, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#padb_date(SSSTRIKE)
 </code></pre>
 
 <p>This extracts the date held in the Date of Benefit field of the Additional
-Benefit record with the Benefit Code of SSSTRIKE for each member concerned. </p>
+Benefit record with the Benefit Code of SSSTRIKE for each member concerned.</p>
 
 <h2 id="a-name03abasicdeferredpensionerfield"><a name="03"></a>#basic_deferred_pensioner_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the Basic Deferred Pensioner file in
-your formula. </p>
+your formula.</p>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>basic_deferred_pension_field must be a valid field on the Basic Deferred Pensioner File (pe_dpens). </li>
+  <li>basic_deferred_pension_field must be a valid field on the Basic Deferred Pensioner File (pe_dpens).</li>
   <li>basic_deferred_pensioner_field is any valid field on the basic deferred pensioner
-table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpens">here</a> </li>
+table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpens">here</a></li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pdps_max_sch_csh
 </code></pre>
 
-<p>This extracts the value of the Maximum Scheme Cash at Date of Withdrawal for the member concerned. </p>
+<p>This extracts the value of the Maximum Scheme Cash at Date of Withdrawal for the member concerned.</p>
 
 <h2 id="a-name04abasicpensionerfield"><a name="04"></a>#basic_pensioner_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Basic Pensioner file in your formula. </p>
+<p>Use this to refer to the value of a field on the Basic Pensioner file in your formula.</p>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>basic_pension_field must be a valid field on the Basic Pensioner File (pe_pens). </li>
+  <li>basic_pension_field must be a valid field on the Basic Pensioner File (pe_pens).</li>
   <li>basic_pensioner_field is any valid field on the basic pensioner table. For a list
-of valid fields click <a href="/pension/appendices/app_a/#pe_pens">here</a> </li>
+of valid fields click <a href="/pension/appendices/app_a/#pe_pens">here</a></li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pps_precom_pen
 </code></pre>
 
-<p>This extracts the value of the Pre-Commutation Pension for the member concerned. </p>
+<p>This extracts the value of the Pre-Commutation Pension for the member concerned.</p>
 
 <h2 id="a-name05abrokerfieldcode"><a name="05"></a>#broker_field(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to access broker fields. </p>
+<p>Use this function to access broker fields.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#broker_field(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - is the broker code. </li>
-  <li>broker_field is any valid field on the broker table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_broker">here</a> </li>
+  <li>code - is the broker code.</li>
+  <li>broker_field is any valid field on the broker table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_broker">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pbr_desc(00001)
 </code></pre>
 
-<p>This extracts the broker name for code ‘00001’. </p>
+<p>This extracts the broker name for code ‘00001’.</p>
 
 <h2 id="a-name06abulkswitchheaderfielddatebulkid"><a name="06"></a>#bulk_switch_header_field(date,bulk_id)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to access a field in the header of a bulk switch. </p>
+<p>Use this function to access a field in the header of a bulk switch.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#switch_header_field(date,bulk_id) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date - is the switch date. </li>
-  <li>bulk_id - is the bulk id number for the switch. </li>
+  <li>date - is the switch date.</li>
+  <li>bulk_id - is the bulk id number for the switch.</li>
   <li>bulk_switch_header_field is any valid field on the bulk switch header table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_h">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_h">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psbh_expenses(19900101,27) 
 </code></pre>
 
 <h2 id="a-name07abulkswitchmemberfieldbulkidfundcodeconttype"><a name="07"></a>#bulk_switch_member_field(bulk_id,fund_code,cont_type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function a members bulk switch. </p>
+<p>Use this function a members bulk switch.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#bulk_switch_member_field(bulk_id,fund_code,cont_type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>bulk_id - the bulk_id number for the switch. </li>
-  <li>fund_code - is a valid fund code for the switch you wish to reference. </li>
-  <li>cont_type - the cont type for the field you wish to reference. </li>
+  <li>bulk_id - the bulk_id number for the switch.</li>
+  <li>fund_code - is a valid fund code for the switch you wish to reference.</li>
+  <li>cont_type - the cont type for the field you wish to reference.</li>
   <li>bulk_switch_member_field is any valid field on the bulk switch member table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_m">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_m">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psbm_num_units(19,0151CASH,EEAVC) 
 </code></pre>
 
 <h2 id="a-name08abulkswitchnewfundfielddatebulkid"><a name="08"></a>#bulk_switch_new_fund_field(date,bulk_id)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this function to reference a field in the new fund section of the switch details
-screen. </p>
+screen.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#switch_new_fund(date,bulk_id) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date - is the switch date. </li>
-  <li>bulk_id - is the bulk id number for the switch. </li>
+  <li>date - is the switch date.</li>
+  <li>bulk_id - is the bulk id number for the switch.</li>
   <li>bulk_switch_new_fund_field is any valid field on the bulk switch new fund table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_n">here</a> </li>
+For a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_n">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psbn_percent(19900101,27) 
 </code></pre>
 
 <h2 id="a-name09abulkswitcholdfundfielddatefundcodeconttypebulkid"><a name="09"></a>#bulk_switch_old_fund_field(date,fund_code,cont_type,bulk_id)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this function to reference a field in the old fund section of the switch details
-screen. </p>
+screen.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#switch_old_fund_field(date,fund_code,cont_type,bulk_id) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date - is the switch date. </li>
-  <li>fund_code - is a valid fund code for the switch you wish to reference. </li>
-  <li>cont_type - the cont type for the field you wish to reference. </li>
-  <li>bulk_id - the bulk_id number for the switch. </li>
+  <li>date - is the switch date.</li>
+  <li>fund_code - is a valid fund code for the switch you wish to reference.</li>
+  <li>cont_type - the cont type for the field you wish to reference.</li>
+  <li>bulk_id - the bulk_id number for the switch.</li>
   <li>bulk_switch_old_fund_field is any valid field on the bulk switch old fund table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_b">here</a> </li>
+For a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_b">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psbb_sale_value(19900101,0151CASH,EEAVC,27) 
 </code></pre>
 
 <h2 id="a-name10acategorycontributioninterestfieldconttype"><a name="10"></a>#category_contribution_interest_field(cont_type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to Category Contribution &amp; Interest details held against each
-Scheme. </p>
+Scheme.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#category_contribution_interest_field(cont_type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>cont_type - is the contribution type that you wish to reference, e.g. EEAVC. </li>
+  <li>cont_type - is the contribution type that you wish to reference, e.g. EEAVC.</li>
   <li>category_contribution_interest_field is any valid field on the category contribution
-interest table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catint">here</a> </li>
+interest table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catint">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pcti_int(EEAVC)
 </code></pre>
 
-<p>This refers to the Interest Amount of the EEAVC Contribution Type based upon the members scheme. </p>
+<p>This refers to the Interest Amount of the EEAVC Contribution Type based upon the members scheme.</p>
 
 <h2 id="a-name11acategoryratedefaultsbodyfieldconttype"><a name="11"></a>#category_rate_defaults_body_field(cont_type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the body of the Category Rate Defaults held against a Category
-in your formula. </p>
+in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#category_rate_defaults_body_field(cont_type) 
 </code></pre>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>category_rate_defaults_body_field must be a valid field on the Category Rate Defaults Body File (pe_catcont_b). </li>
+  <li>category_rate_defaults_body_field must be a valid field on the Category Rate Defaults Body File (pe_catcont_b).</li>
   <li>category_rate_defaults_body_field is any valid field on the category rate defaults
-body table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catcont_b">here</a> </li>
+body table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catcont_b">here</a></li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pccb_rate(EEAVC) 
 </code></pre>
 
 <h2 id="a-name12acategoryratedefaultsheaderfield"><a name="12"></a>#category_rate_defaults_header_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the header of the Category Rate Defaults held against a Category
-in your formula. </p>
+in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#category_rate_defaults_header_field(cont_type) 
 </code></pre>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>category_rate_defaults_header_field must be a valid field on the Category Rate Defaults Header File (pe_catcont_h). </li>
+  <li>category_rate_defaults_header_field must be a valid field on the Category Rate Defaults Header File (pe_catcont_h).</li>
   <li>category_rate_defaults_header_field is any valid field on the category rate defaults
-header table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catcont_h">here</a> </li>
+header table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catcont_h">here</a></li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pcch_frequency 
 </code></pre>
 
 <h2 id="a-name13acontexpheadfield"><a name="13"></a>#cont_exp_head_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the Contribution Expenses held against a Scheme in your formula. </p>
+<p>Use this to refer to the Contribution Expenses held against a Scheme in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#cont_exp_head_field 
 </code></pre>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>cont_exp_head_field must be a valid field on the Contribution Expenses File (pe_exp_h). </li>
+  <li>cont_exp_head_field must be a valid field on the Contribution Expenses File (pe_exp_h).</li>
   <li>cont_exp_head_field is any valid field on the contribution expenses header table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_h">here</a> </li>
+For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_h">here</a></li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pexh_memch 
 </code></pre>
 
 <h2 id="a-name14acontexpbodyfieldconttype"><a name="14"></a>#cont_exp_body_field(cont_type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the Contribution Expenses held against a Scheme in your formula. </p>
+<p>Use this to refer to the Contribution Expenses held against a Scheme in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#cont_exp_body_field(cont_type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>cont_type - denotes the contribution type code to be referred to. </li>
+  <li>cont_type - denotes the contribution type code to be referred to.</li>
   <li>cont_exp_body_field is any valid field on the contribution expenses body table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_b">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_b">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>cont_exp_body_field must be a valid field on the Contribution Expenses File (pe_exp_b). </li>
+  <li>cont_exp_body_field must be a valid field on the Contribution Expenses File (pe_exp_b).</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pexb_sal(EEAVC) 
 </code></pre>
 
 <h2 id="a-name15acontfieldfundcodetypedateflagconttype"><a name="15"></a>#cont_field(fund_code,type,date,flag,cont_type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to a field on the Contribution or Investment History file in your
-formula. </p>
+formula.</p>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>fund_code - the investment fund code or ‘TOT’. </li>
-  <li>type - denotes the transaction type you wish to include e.g. BUY, TRANSFER, SWITCH.  This defaults to BUY. </li>
+  <li>fund_code - the investment fund code or ‘TOT’.</li>
+  <li>type - denotes the transaction type you wish to include e.g. BUY, TRANSFER, SWITCH.  This defaults to BUY.</li>
   <li>date - is the date at which the Contribution or Investment is effective. i.e. the
-value previous to this date will be returned. </li>
-  <li>flag - denotes which date on the pe_mcon/pe_minv table to do the comparisons on as follows: 
+value previous to this date will be returned.</li>
+  <li>flag - denotes which date on the pe_mcon/pe_minv table to do the comparisons on as follows:
     <ul>
-      <li>1 - date due </li>
-      <li>2 - date received </li>
-      <li>3 - date invested (not available if fund_code is TOT) </li>
+      <li>1 - date due</li>
+      <li>2 - date received</li>
+      <li>3 - date invested (not available if fund_code is TOT)</li>
     </ul>
   </li>
-  <li>cont_type - denotes the contribution type code to be referred to. </li>
+  <li>cont_type - denotes the contribution type code to be referred to.</li>
   <li>cont_field is any valid field on the contribution/investment history table. For a
-list of valid fields click <a href="/pension/appendices/app_a/#pe_mcon">here</a> </li>
+list of valid fields click <a href="/pension/appendices/app_a/#pe_mcon">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>cont_field must be a valid field on the Contribution History File (pe_mcon) or Investment History File (pe_minv). </li>
+  <li>cont_field must be a valid field on the Contribution History File (pe_mcon) or Investment History File (pe_minv).</li>
   <li>a fund code of ‘TOT’ is used to denote that you wish to get the total contribution
 for a particular date across all investment funds i.e. the amount of the contribution <strong>before</strong> it
-was allocated to individual funds. </li>
-  <li>the date argument can be set to TODAY to return the value previous to today. </li>
+was allocated to individual funds.</li>
+  <li>the date argument can be set to TODAY to return the value previous to today.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmc_amount(TOT,BUY,TODAY,1,EEORD)
 </code></pre>
 
-<p>This refers to the Employee Ordinary contributions of a member with a transaction type of BUY and based on date due of TODAY. </p>
+<p>This refers to the Employee Ordinary contributions of a member with a transaction type of BUY and based on date due of TODAY.</p>
 
 <pre><code>#pmi_units(MANAGED,BUY,20010427,1,EEORD)
 </code></pre>
 
-<p>This refers to the Employee Ordinary units of a member in investment fund MANAGED with a transaction type of BUY and based on date due of “27/04/2001”. </p>
+<p>This refers to the Employee Ordinary units of a member in investment fund MANAGED with a transaction type of BUY and based on date due of “27/04/2001”.</p>
 
 <h2 id="a-name16acontplusintfielddateconttype"><a name="16"></a>#cont_plus_int_field(date,cont_type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to a field on the Contributions Plus Interest file in your formula. </p>
+<p>Use this to refer to a field on the Contributions Plus Interest file in your formula.</p>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>date - is the date at which the Contribution or Investment is effective. i.e. the
-value previous to this date will be returned. </li>
-  <li>cont_type - denotes the contribution type code to be referred to. </li>
+value previous to this date will be returned.</li>
+  <li>cont_type - denotes the contribution type code to be referred to.</li>
   <li>cont_plus_int_field is any valid field on the contribution plus interest table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_mint">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_mint">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>cont_plus_int_field must be a valid field on the Contributions Plus Interest file (pe_mint). </li>
-  <li>the date argument can be set to TODAY to return the value previous to today. </li>
+  <li>cont_plus_int_field must be a valid field on the Contributions Plus Interest file (pe_mint).</li>
+  <li>the date argument can be set to TODAY to return the value previous to today.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmin_amount(TODAY,EEORD)
 </code></pre>
 
-<p>This refers to the Employee Ordinary contributions of a member based on date of TODAY. </p>
+<p>This refers to the Employee Ordinary contributions of a member based on date of TODAY.</p>
 
 <pre><code>#pmin_interest(TODAY,EEORD)
 </code></pre>
 
-<p>This refers to the Employee Ordinary interest of a member based on date of TODAY. </p>
+<p>This refers to the Employee Ordinary interest of a member based on date of TODAY.</p>
 
 <h2 id="a-name17acontratefielddateconttype"><a name="17"></a>#cont_rate_field(date,cont_type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the contribution rate percentages table. </p>
+<p>Use this to refer to the value of a field on the contribution rate percentages table.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#cont_rate_field(date,cont_type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>Date - is the date at which you wish to refer to a contribution at. </li>
-  <li>cont_type - is the contribution type that you wish to reference, e.g EEAVC. </li>
+  <li>Date - is the date at which you wish to refer to a contribution at.</li>
+  <li>cont_type - is the contribution type that you wish to reference, e.g EEAVC.</li>
   <li>cont_rate_field is any valid field on the contribution rate percentages table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_mcontp">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_mcontp">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pcp_rate(19900101,EEAVC) 
 </code></pre>
 
 <h2 id="a-name18acontsetupfieldconttype"><a name="18"></a>#cont_setup_field(cont_type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to Contribution Types Setup against each Scheme. </p>
+<p>Use this to refer to Contribution Types Setup against each Scheme.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#cont_setup_field(cont_type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>cont_type - is the contribution type that you wish to reference, e.g. EEAVC. </li>
+  <li>cont_type - is the contribution type that you wish to reference, e.g. EEAVC.</li>
   <li>cont_setup_field is any valid field on the contribution types setup table. For a
-list of valid fields click <a href="/pension/appendices/app_a/#pe_scont">here</a> </li>
+list of valid fields click <a href="/pension/appendices/app_a/#pe_scont">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psct_desc(EEAVC)
 </code></pre>
 
-<p>This refers to the Description of the EEAVC Contribution Type based upon the members scheme. </p>
+<p>This refers to the Description of the EEAVC Contribution Type based upon the members scheme.</p>
 
 <h2 id="a-name19adeathfield"><a name="19"></a>#death_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Death Details File in your formula. </p>
+<p>Use this to refer to the value of a field on the Death Details File in your formula.</p>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>death_field must be a valid field on the Death Details File (pe_death). </li>
+  <li>death_field must be a valid field on the Death Details File (pe_death).</li>
   <li>death_field is any valid field on the death details table. For a list of valid fields
-click <a href="/pension/appendices/app_a/#pe_death">here</a> </li>
+click <a href="/pension/appendices/app_a/#pe_death">here</a></li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pde_contref
 </code></pre>
 
-<p>This refers to the contributions refunded on the death of a member. </p>
+<p>This refers to the contributions refunded on the death of a member.</p>
 
 <h2 id="a-name20adeathdepfieldnn"><a name="20"></a>#death_dep_field(nn)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the Death Dependants Details File in
-your formula. </p>
+your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#death_dep_field(nn) 
 </code></pre>
 
-<p><strong>EXPLANTION</strong> </p>
+<p><strong>EXPLANTION</strong></p>
 
 <ul>
-  <li>nn - is the dependants number. </li>
+  <li>nn - is the dependants number.</li>
   <li>death_dep_field is any valid field on the death dependants details table. For a list
-of valid fields click <a href="/pension/appendices/app_a/#pe_deathdep">here</a> </li>
+of valid fields click <a href="/pension/appendices/app_a/#pe_deathdep">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>death_dep_field must be a valid field on the Death Dependants Details File (pe_deathdep). </li>
+  <li>death_dep_field must be a valid field on the Death Dependants Details File (pe_deathdep).</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pdep_name(13427)
 </code></pre>
 
-<p>This refers to the death dependants name with a member number of 13427. </p>
+<p>This refers to the death dependants name with a member number of 13427.</p>
 
 <h2 id="a-name21adeferredpensionhistoryfieldcode"><a name="21"></a>#deferred_pension_history_field(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the Deferred Pension History file in
-your formula. </p>
+your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#deferred_pension_history_field(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Deferred Pension Code</a> that
 you wish to retrieve a Deferred Pension History Field for. This must be in UPPERCASE
 and must exist as a valid Deferred Pension Code. If a member does not have a Deferred
 Pension History record with a matching code, this function call will return a value
-of 0. </li>
+of 0.</li>
   <li>deferred_pension_history_field is any valid field on the deferred pension history
-table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpena">here</a> </li>
+table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpena">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>deferred_pension_history_field must be a valid field on the Deferred Pension History file (pe_dpena). </li>
-  <li>code must be in UPPERCASE. </li>
-  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode). </li>
+  <li>deferred_pension_history_field must be a valid field on the Deferred Pension History file (pe_dpena).</li>
+  <li>code must be in UPPERCASE.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
   <li>If the Deferred Pension History Field is not found, either because it does not exist,
 has not yet been run, or results from incorrect specification of code, this function
-call will return a value of 0. </li>
+call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pdpa_init_pen(DAPEN)
 </code></pre>
 
 <p>This extracts the value of the Initial Pension of the Deferred Pension
-History record with the Deferred Pension Code of ‘DAPEN’ for each member concerned. </p>
+History record with the Deferred Pension Code of ‘DAPEN’ for each member concerned.</p>
 
 <h2 id="a-name22adeferredpensionhistorytotalsfield"><a name="22"></a>#deferred_pension_history_totals_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the total of a field on the Deferred Pension History file in
-your formula. </p>
+your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#deferred_pension_history_totals_field 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>deferred_pension_history_totals_field is any valid field on the deferred pension
-history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpent">here</a> </li>
-  <li>The Deferred Pension History Totals that can be used in a formula are calculated as follows: 
+history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpent">here</a></li>
+  <li>The Deferred Pension History Totals that can be used in a formula are calculated as follows:
     <ul>
       <li>If the Deferred Pension Code starts with ‘DA’ then the value is ADDED to the total value.</li>
       <li>If the Deferred Pension Code starts with ‘DI’ then the value is IGNORED (not included in the total value).</li>
@@ -683,388 +683,388 @@ to Commence</a> is on or before the Calaculation Date, ANY FUTURE DATES WILL BE 
   </li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>deferred_pension_history_totals_field must be a valid field on the Deferred Pension
-History Totals file (pe_dpent). </li>
-  <li>If the Deferred Pension History Totals Field is not found this function call will return a value of 0. </li>
+History Totals file (pe_dpent).</li>
+  <li>If the Deferred Pension History Totals Field is not found this function call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pdpt_init_pen
 </code></pre>
 
-<p>This extracts the value of the Total Initial Pension of the Deferred Pension History record for each member concerned. </p>
+<p>This extracts the value of the Total Initial Pension of the Deferred Pension History record for each member concerned.</p>
 
 <h2 id="a-name23adeferredpensionincreasehistoryfieldcodedate"><a name="23"></a>#deferred_pension_increase_history_field(code,date)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the Deferred Pension Increase History
-file in your formula. </p>
+file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#deferred_pension_increase_history_field(code,date) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Deferred Pension Code</a> that
 you wish to retrieve a Deferred Pension Increase History Field for. This must be in
 UPPERCASE and must exist as a valid Deferred Pension Code. If a member does not have
 a Deferred Pension Increase History record with a matching code, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
   <li>date - refers to the Effective Date. If no value can be found for this date then the
-most recent value will be returned. </li>
+most recent value will be returned.</li>
   <li>deferred_pension_increase_history_totals_field is any valid field on the deferred
-pension increase history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpenh">here</a> </li>
+pension increase history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpenh">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>deferred_pension_increase_history_field must be a valid field on the Deferred Pension Increase History file (pe_dpenh). </li>
-  <li>code must be in UPPERCASE. </li>
-  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode). </li>
+  <li>deferred_pension_increase_history_field must be a valid field on the Deferred Pension Increase History file (pe_dpenh).</li>
+  <li>code must be in UPPERCASE.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
   <li>if the Deferred Pension Increase History Field is not found, either because it does
 not exist, has not yet been run, or results from incorrect specification of code,
-this function call will return a value of 0. </li>
+this function call will return a value of 0.</li>
   <li>the value extracted is the value corresponding to the most recent date on the Deferred
-Pension Increase History file for the member concerned. </li>
+Pension Increase History file for the member concerned.</li>
   <li>the date argument can be a field from the Member File, Basic Pensioner Details File
-or the Basic Deferred Pensioner Details File. </li>
-  <li>the date argument can be set to TODAY to return the value previous to today. </li>
+or the Basic Deferred Pensioner Details File.</li>
+  <li>the date argument can be set to TODAY to return the value previous to today.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pdph_pen_amt(DAPEN,20000101)
 </code></pre>
 
 <p>This extracts the value of the Pension Amount of the Deferred
 Pension Increase History record with the Deferred Pension Code of ‘DAPEN’ as at 01/01/2000
-for each member concerned. </p>
+for each member concerned.</p>
 
 <h2 id="a-name24adepfieldcurrflagbenflagdepflagnn"><a name="24"></a>#dep_field(curr_flag,ben_flag,dep_flag,nn)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Dependants Details file in your formula. </p>
+<p>Use this to refer to the value of a field on the Dependants Details file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#dep_field(curr_flag,ben_flag,dep_flag,nn) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>dep_field is any valid field on the dependants details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dep">here</a> </li>
-  <li>curr_flag - refers to the value of Current flag for the dependant you wish to retrieve a Dependants Detail field for. </li>
-  <li>ben_flag - refers to the value of Beneficiary flag for the dependant you wish to retrieve a Dependants Detail field for. </li>
-  <li>dep_flag - refers to the value of Dependant flag for the dependant you wish to retrieve a Dependants Detail field for. </li>
+  <li>dep_field is any valid field on the dependants details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dep">here</a></li>
+  <li>curr_flag - refers to the value of Current flag for the dependant you wish to retrieve a Dependants Detail field for.</li>
+  <li>ben_flag - refers to the value of Beneficiary flag for the dependant you wish to retrieve a Dependants Detail field for.</li>
+  <li>dep_flag - refers to the value of Dependant flag for the dependant you wish to retrieve a Dependants Detail field for.</li>
   <li>nn - refers to the index number of the dependants whose curr_flag, ben_flag and dep_flag match 
 the criteria given above when they are ordered by member number and dependants number.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>dep_field must be a valid field on the Dependants Details file (pe_dep). </li>
+  <li>dep_field must be a valid field on the Dependants Details file (pe_dep).</li>
   <li>If a member does not have a dependant whose curr_flag and ben_flag match the criteria 
-given, this function call will return a value of 0. </li>
+given, this function call will return a value of 0.</li>
   <li>curr_flag must be one of ‘Y’, ‘N’, ‘A’, for dependants whose Current Flag is selected, is not selected or has any value respectively.</li>
   <li>ben_flag must be one of ‘Y’, ‘N’, ‘A’, for dependants whose Beneficiary Flag is selected, 
 is not selected or has any value respectively.</li>
   <li>dep_flag must be one of ‘Y’, ‘N’, ‘A’, for dependants whose Dependant Flag is selected, is not selected or has any value respectively.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pd_dep(Y,N,Y,1)
 </code></pre>
 
 <p>This extracts the Dependants Name for the first Dependant whose Current Flag
-is selected, whose Beneficiary Flag is not selected and whose Dependant Flag is selected. </p>
+is selected, whose Beneficiary Flag is not selected and whose Dependant Flag is selected.</p>
 
 <h2 id="a-name25adivorcefieldnn"><a name="25"></a>#divorce_field(nn)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Divorce Details file in your formula. </p>
+<p>Use this to refer to the value of a field on the Divorce Details file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#divorce_field(nn) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>nn - refers to the divorce number that you wish to retrieve a Divorce Detail Field
 for. If a member does not have a Divorce Detail record with a matching number, this
-function call will return a value of 0. </li>
+function call will return a value of 0.</li>
   <li>divorce_field is any valid field on the divorce details table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_divorce">here</a> </li>
+fields click <a href="/pension/appendices/app_a/#pe_divorce">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>divorce_field must be a valid field on the Divorce Details file (pe_divorce). </li>
+  <li>divorce_field must be a valid field on the Divorce Details file (pe_divorce).</li>
   <li>If the Divorce Detail Field is not found, either because it does not exist, has not
 yet been run, or results from incorrect specification of number, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pdi_exsp_addr1(01)
 </code></pre>
 
-<p>This extracts the value of the Ex-Spouses Address Line 1 for the first Divorce Details. </p>
+<p>This extracts the value of the Ex-Spouses Address Line 1 for the first Divorce Details.</p>
 
 <h2 id="a-name26afsavcfieldnn"><a name="26"></a>#fsavc_field(nn)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the FSAVC Details file in your formula. </p>
+<p>Use this to refer to the value of a field on the FSAVC Details file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#fsavc_field(nn) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>nn - refers to the FSAVC number that you wish to retrieve a FSAVC Detail Field for.
 If a member does not have a FSAVC Detail record with a matching number, this function
-call will return a value of 0. </li>
-  <li>fsavc_field is any valid field on the FSAVC details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_fsavc">here</a> </li>
+call will return a value of 0.</li>
+  <li>fsavc_field is any valid field on the FSAVC details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_fsavc">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>fsavc_field must be a valid field on the FSAVC Details file (pe_fsavc). </li>
+  <li>fsavc_field must be a valid field on the FSAVC Details file (pe_fsavc).</li>
   <li>If the FSAVC Detail Field is not found, either because it does not exist, has not
 yet been run, or results from incorrect specification of number, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pfsavc_provider(01) extracts the value of the Provider for the first FSAVC Details. 
 </code></pre>
 
 <h2 id="a-name27ahistoryfieldtypedate"><a name="27"></a>#history_field(type,date)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this function to refer to the value of a Status History, Category History or Company
-History field in your formula. </p>
+History field in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#history_field(type,date) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the type of history record as follows:
     <ul>
-      <li>S - Status History </li>
-      <li>A - Category History </li>
-      <li>C - Company History </li>
+      <li>S - Status History</li>
+      <li>A - Category History</li>
+      <li>C - Company History</li>
     </ul>
   </li>
   <li>date - date must be a field reference to the member file (pe_mem), a constant date
 entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
 the day or a reference to the result of a previous formula line (as long as it evaluates
-to a valid date) in the format @line_num e.g. @2. </li>
+to a valid date) in the format @line_num e.g. @2.</li>
   <li>history_field is any valid field on the status, category or company history table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dec_str">here</a> </li>
+For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dec_str">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>the function will return the most recent value held in the column which is either
-on or before the specified date. </li>
+on or before the specified date.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pdec_newstat(S,20020102)
 </code></pre>
 
-<p>This extracts the new status history as at 02/01/2002. </p>
+<p>This extracts the new status history as at 02/01/2002.</p>
 
 <pre><code>#pdec_note(C,20020707)
 </code></pre>
 
-<p>This extracts the company history note as at 07/07/2002. </p>
+<p>This extracts the company history note as at 07/07/2002.</p>
 
 <h2 id="a-name28ainvestmentfundfieldfundcode"><a name="28"></a>#investment_fund_field(fund_code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this function to refer to the value of a field on the Investment Fund Details
-screen. </p>
+screen.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#investment_fund_field(fund_code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>fund_code - refers to the Fund Code that you wish to retrieve. This must be in UPPERCASE
-and must exist as a valid Fund Code. </li>
+and must exist as a valid Fund Code.</li>
   <li>investment_fund_field is any valid field on the investment fund details table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_invfun">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_invfun">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>fund_code must be a valid Fund Code. </li>
+  <li>fund_code must be a valid Fund Code.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pif_desc(0151CASH) 
 </code></pre>
 
 <h2 id="a-name29ainvestmentsetupfielddatefundcodeconttypeindicator"><a name="29"></a>#investment_setup_field(date,fund_code,cont_type,indicator)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to refer to the value of a field </p>
+<p>Use this function to refer to the value of a field</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#investment_setup_field(date,fund_code,cont_type,indicator) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date - Is the effective date for the investment setup field that you wish to reference. </li>
-  <li>fund_code - refers to the fund that you wish to access the investment setup field for. </li>
-  <li>cont_type - refers to the contribution type that you wish to access the investment setup field for. </li>
-  <li>indicator - refers to either Member Investment Setup or Scheme Investment Setup. </li>
+  <li>date - Is the effective date for the investment setup field that you wish to reference.</li>
+  <li>fund_code - refers to the fund that you wish to access the investment setup field for.</li>
+  <li>cont_type - refers to the contribution type that you wish to access the investment setup field for.</li>
+  <li>indicator - refers to either Member Investment Setup or Scheme Investment Setup.</li>
   <li>investment_setup_field is any valid field on the investment setup details table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_minvf">here</a> </li>
+For a list of valid fields click <a href="/pension/appendices/app_a/#pe_minvf">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>Date must be a valid effective date. fund_code must be in UPPERCASE and be a valid
-fund code. cont_type must be a valid contribution type for that scheme. </li>
-  <li>Indicator must be either ‘M’ or ‘S’. </li>
+fund code. cont_type must be a valid contribution type for that scheme.</li>
+  <li>Indicator must be either ‘M’ or ‘S’.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pminf_rate(19900101,0151CASH,EEAVC,M) 
 </code></pre>
 
 <h2 id="a-name30alifestyleheaderfieldmatrixcode"><a name="30"></a>#lifestyle_header_field(matrix_code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to refer to a field in the header of a lifestyle matrix. </p>
+<p>Use this function to refer to a field in the header of a lifestyle matrix.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#lifestyle_header_field(matrix_code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>matrix_code - is the code for the lifestyle matrix you wish to reference. </li>
+  <li>matrix_code - is the code for the lifestyle matrix you wish to reference.</li>
   <li>lifestyle_header_field is any valid field on the lifestyle header matrix table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_slife_h">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_slife_h">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pslh_desc(TERM1) 
 </code></pre>
 
 <h2 id="a-name31alifestylebodyfieldmatrixcodeindex"><a name="31"></a>#lifestyle_body_field(matrix_code,index)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to refer to a field in the body of a lifestyle matrix. </p>
+<p>Use this function to refer to a field in the body of a lifestyle matrix.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#lifestyle_body_field(matrix_code,index) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>matrix_code - is the code for the lifestyle matrix you wish to reference. </li>
-  <li>index - is the record number of the lifestyle matrix you wish to reference. </li>
+  <li>matrix_code - is the code for the lifestyle matrix you wish to reference.</li>
+  <li>index - is the record number of the lifestyle matrix you wish to reference.</li>
   <li>lifestyle_body_field is any valid field on the lifestyle body matrix table. For a
-list of valid fields click <a href="/pension/appendices/app_a/#pe_slife_b">here</a> </li>
+list of valid fields click <a href="/pension/appendices/app_a/#pe_slife_b">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pslb_rate(TERM1,1) 
 </code></pre>
 
 <h2 id="a-name32amemberaddressfieldnn"><a name="32"></a>#member_address_field(nn)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the Member Address Details file in your
-formula. </p>
+formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#member_address_field(nn) 
 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>nn - refers to the address number that you wish to retrieve a Member Address Detail
 Field for. If a member does not have an Address record with a matching number, this
-function call will return a value of 0. </li>
+function call will return a value of 0.</li>
   <li>member_address_field is any valid field on the member address details table. For
 a list of valid fields click <a href="/pension/appendices/app_a/#pe_maddr">here</a>.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>member_address_field must be a valid field on the Member Address Details file (pe_maddr). </li>
+  <li>member_address_field must be a valid field on the Member Address Details file (pe_maddr).</li>
   <li>An address number of 0 will return the current address.</li>
   <li>If the Address Detail Field is not found, either because it does not exist, has not
-yet been run, or results from incorrect specification of number, this function call will return a value of 0. </li>
+yet been run, or results from incorrect specification of number, this function call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmad_addr_1(01)
 </code></pre>
 
-<p>This extracts the value of the Member’s Address Line 1 for the first Address Details. </p>
+<p>This extracts the value of the Member’s Address Line 1 for the first Address Details.</p>
 
 <pre><code>#pmad_addr_1(0)
 </code></pre>
@@ -1073,124 +1073,124 @@ yet been run, or results from incorrect specification of number, this function c
 
 <h2 id="a-name33amemberfield"><a name="33"></a>#member_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Member File in your formula. </p>
+<p>Use this to refer to the value of a field on the Member File in your formula.</p>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>member_field must be a valid field on the Member File (pe_mem). </li>
-  <li>member_field is any valid field on the basic member details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mem">here</a> </li>
+  <li>member_field must be a valid field on the Member File (pe_mem).</li>
+  <li>member_field is any valid field on the basic member details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mem">here</a></li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pm_npa refers to the Normal Pension Age of a member. 
 </code></pre>
 
 <h2 id="a-name34amemberlifetimeannualallowancefielddate"><a name="34"></a>#member_lifetime/annual_allowance_field(date)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Member Lifetime/Annual Allowance file in your formula. </p>
+<p>Use this to refer to the value of a field on the Member Lifetime/Annual Allowance file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#member_lifetime/annual_allowance_field(date) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>date - refers to the Calculation Date that you wish to retrieve a Member Lifetime/Annual Allowance Field for. This can take the value of a
 hard-coded date in the format yyyy0405, a date field reference off the Basic Member Details table, the quotation date, or a previous line reference.
 If a member does not have a Member Lifetime/Annual Allowance record with a same calculation date to the one entered, this function call will
 return a value of 0.</li>
-  <li>member_lifetime/annual_allowance_field is any valid field on the member lifetime/annual allowance table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mallow">here</a> </li>
+  <li>member_lifetime/annual_allowance_field is any valid field on the member lifetime/annual allowance table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mallow">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>member_lifetime/annual_allowance_field must be a valid field on the Member Lifetime/Annual Allowance file (pe_mallow). </li>
+  <li>member_lifetime/annual_allowance_field must be a valid field on the Member Lifetime/Annual Allowance file (pe_mallow).</li>
   <li>If the Member Lifetime/Annual Allowance Field is not found, either because it does not exist, has not yet
-been run, or results from incorrect specification of number, this function call will return a value of 0. </li>
+been run, or results from incorrect specification of number, this function call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmal_nrd_pen(20000405)
 </code></pre>
 
-<p>This extracts the value of the NRD Pension for 05/04/2000. </p>
+<p>This extracts the value of the NRD Pension for 05/04/2000.</p>
 
 <h2 id="a-name35amembernotefieldnn"><a name="35"></a>#member_note_field(nn)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Member Notes file in your formula. </p>
+<p>Use this to refer to the value of a field on the Member Notes file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#member_note_field(nn) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>nn - refers to the Note number that you wish to retrieve a Member Note Field for.
 If a member does not have a Member Note record with a matching number, this function
-call will return a value of 0. </li>
+call will return a value of 0.</li>
   <li>member_note_field is any valid field on the member notes table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_not">here</a> </li>
+fields click <a href="/pension/appendices/app_a/#pe_not">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>member_note_field must be a valid field on the Member Note file (pe_not). </li>
+  <li>member_note_field must be a valid field on the Member Note file (pe_not).</li>
   <li>If the Member Note Field is not found, either because it does not exist, has not yet
 been run, or results from incorrect specification of number, this function call will
-return a value of 0. </li>
+return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pn_note(01) extracts the value of the Note written for the first Member Note. 
 </code></pre>
 
 <h2 id="a-name36amembertaxsimplificationfielddate"><a name="36"></a>#member_tax_simplification_field(date)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Member Tax Simplification file in your formula. </p>
+<p>Use this to refer to the value of a field on the Member Tax Simplification file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#member_tax_simplification_field(date) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>date - refers to the Effective Date that you wish to retrieve a Member Tax Simplification Field for. This can take the value of a
 hard-coded date in the format yyyymmdd, a date field reference off the Basic Member Details table, the quotation date, or a previous line reference.
-If a member does not have a Member Tax Simplification record with a date effective to the one entered, this function call will return a value of 0. </li>
+If a member does not have a Member Tax Simplification record with a date effective to the one entered, this function call will return a value of 0.</li>
   <li>member_tax_simplification_field is any valid field on the member tax simplification table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_mtax">here</a> </li>
+fields click <a href="/pension/appendices/app_a/#pe_mtax">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>member_tax_simplification_field must be a valid field on the Member Tax Simplification file (pe_mtax). </li>
+  <li>member_tax_simplification_field must be a valid field on the Member Tax Simplification file (pe_mtax).</li>
   <li>If the Member Tax Simplification Field is not found, either because it does not exist, has not yet
 been run, or results from incorrect specification of number, this function call will
-return a value of 0. </li>
+return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmtx_life_allow(pm_qtdt_c)
 #pmtx_pen_fact(@1)
@@ -1198,31 +1198,31 @@ return a value of 0. </li>
 
 <h2 id="a-name37anifield"><a name="37"></a>#ni_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the NI History file in your formula. </p>
+<p>Use this to refer to the value of a field on the NI History file in your formula.</p>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>ni_field must be a valid field on the NI History File (pe_nih). </li>
-  <li>ni_field is any valid field on the NI history table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_nih">here</a> </li>
+  <li>ni_field must be a valid field on the NI History File (pe_nih).</li>
+  <li>ni_field is any valid field on the NI history table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_nih">here</a></li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pi_nisal
 </code></pre>
 
-<p>This refers to the most recent NI Salary of a member. </p>
+<p>This refers to the most recent NI Salary of a member.</p>
 
 <h2 id="a-name38aparttimehoursfieldnn"><a name="38"></a>#part_time_hours_field(nn)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the part time hours information in your formula. </p>
+<p>Use this to refer to the part time hours information in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#part_time_hours_field(nn)
 </code></pre>
@@ -1237,11 +1237,11 @@ return a value of 0. </li>
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>part_time_hours_field must be a valid field on the Part Time Hours Table (pe_pthrs). </li>
+  <li>part_time_hours_field must be a valid field on the Part Time Hours Table (pe_pthrs).</li>
   <li>if the line number is greater than the number of lines on the screen for a member then the oldest line with be used.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pth_pt_hrs(1)
 </code></pre>
@@ -1255,61 +1255,61 @@ return a value of 0. </li>
 
 <h2 id="a-name39apensionhistoryfieldcode"><a name="39"></a>#pension_history_field(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Pension History file in your formula. </p>
+<p>Use this to refer to the value of a field on the Pension History file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#pension_history_field(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Pension Code</a> that you
 wish to retrieve a Pension History Field for. This must be in UPPERCASE and must exist
 as a valid Pension Code. If a member does not have a Pension History record with a
-matching code, this function call will return a value of 0. </li>
+matching code, this function call will return a value of 0.</li>
   <li>pension_history_field is any valid field on the pension history table. For a list
-of valid fields click <a href="/pension/appendices/app_a/#pe_pena">here</a> </li>
+of valid fields click <a href="/pension/appendices/app_a/#pe_pena">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>pension_history_field must be a valid field on the Pension History file (pe_pena). </li>
-  <li>code must be in UPPERCASE. </li>
-  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode). </li>
+  <li>pension_history_field must be a valid field on the Pension History file (pe_pena).</li>
+  <li>code must be in UPPERCASE.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
   <li>if the Pension History Field is not found, either because it does not exist, has not
 yet been run, or results from incorrect specification of code, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#ppa_init_pen(PAPEN)
 </code></pre>
 
-<p>This extracts the value of the Initial Pension of the Pension History record with the Pension Code of ‘PAPEN’ for each member concerned. </p>
+<p>This extracts the value of the Initial Pension of the Pension History record with the Pension Code of ‘PAPEN’ for each member concerned.</p>
 
 <h2 id="a-name40apensionhistorytotalsfield"><a name="40"></a>#pension_history_totals_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the total of a field on the Pension History file in your formula. </p>
+<p>Use this to refer to the total of a field on the Pension History file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#pension_history_totals_field 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>pension_history_totals_field is any valid field on the pension history totals table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_pent">here</a> </li>
-  <li>The Pension History Totals that can be used in a formula are calculated as follows: 
+For a list of valid fields click <a href="/pension/appendices/app_a/#pe_pent">here</a></li>
+  <li>The Pension History Totals that can be used in a formula are calculated as follows:
     <ul>
       <li>If the Pension Code starts with ‘PA’ then the value is ADDED to the total value.</li>
       <li>If the Pension Code starts with ‘PI’ then the value is IGNORED (not included in the total value).</li>
@@ -1320,414 +1320,414 @@ to Commence</a> is on or before the Calculation Date, ANY FUTURE DATES WILL BE I
   </li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>pension_history_totals_field must be a valid field on the Pension History Totals file (pe_pent). </li>
-  <li>If the Pension History Totals Field is not found this function call will return a value of 0. </li>
+  <li>pension_history_totals_field must be a valid field on the Pension History Totals file (pe_pent).</li>
+  <li>If the Pension History Totals Field is not found this function call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#ppt_init_pen
 </code></pre>
 
-<p>This extracts the value of the Total Initial Pension of the Pension History record for each member concerned. </p>
+<p>This extracts the value of the Total Initial Pension of the Pension History record for each member concerned.</p>
 
 <h2 id="a-name41apensionincreasehistoryfieldcodedate"><a name="41"></a>#pension_increase_history_field(code,date)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Pension Increase History file in your formula. </p>
+<p>Use this to refer to the value of a field on the Pension Increase History file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#pension_increase_history_field(code,date) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Pension Code</a> that you
 wish to retrieve a Pension Increase History Field for. This must be in UPPERCASE and
 must exist as a valid Pension Code. If a member does not have a Pension Increase History
-record with a matching code, this function call will return a value of 0. </li>
-  <li>date - refers to the Effective Date. If no value can be found for this date then the most recent value will be returned. </li>
+record with a matching code, this function call will return a value of 0.</li>
+  <li>date - refers to the Effective Date. If no value can be found for this date then the most recent value will be returned.</li>
   <li>pension_increase_history_totals_field is any valid field on the pension increase
-history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_penh">here</a> </li>
+history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_penh">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>pension_increase_history_field must be a valid field on the Pension Increase History file (pe_penh). </li>
-  <li>code must be in UPPERCASE. </li>
-  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode). </li>
+  <li>pension_increase_history_field must be a valid field on the Pension Increase History file (pe_penh).</li>
+  <li>code must be in UPPERCASE.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
   <li>if the Pension Increase History Field is not found, either because it does not exist,
 has not yet been run, or results from incorrect specification of code, this function
-call will return a value of 0. </li>
-  <li>the value extracted is the value corresponding to the most recent date on the Pension Increase History file for the member concerned. </li>
-  <li>the date argument can be a field from the Member File, Basic Pensioner Details File or the Basic Deferred Pensioner Details File. </li>
-  <li>the date argument can be set to TODAY to return the value previous to today. </li>
+call will return a value of 0.</li>
+  <li>the value extracted is the value corresponding to the most recent date on the Pension Increase History file for the member concerned.</li>
+  <li>the date argument can be a field from the Member File, Basic Pensioner Details File or the Basic Deferred Pensioner Details File.</li>
+  <li>the date argument can be set to TODAY to return the value previous to today.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pph_pen_amt(PAPEN,20000101)
 </code></pre>
 
 <p>This extracts the value of the Pension Amount of the Pension
 Increase History record with the Pension Code of ‘PAPEN’ as at 01/01/2000 for each
-member concerned. </p>
+member concerned.</p>
 
 <h2 id="a-name42aquotationfieldtypeindex"><a name="42"></a>#quotation_field(type,index)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the results of a quotation that has already been run for the
-current member. This will be taken from the quotation results file (pe_mquote). </p>
+current member. This will be taken from the quotation results file (pe_mquote).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#quotation_field(type,index) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the Quotation Type (see Categories) that you wish to retrieve a quotation
 result for. This must be in UPPERCASE and must exist as a valid Quotation Type for
 the appropriate Category for each member this formula is to be used for. If this is
-not the case, this function call will return a value of 0. </li>
+not the case, this function call will return a value of 0.</li>
   <li>index - refers to the Quotation Index under the Quotation Type for the quotation you
 wish to retrieve a result for e.g. if you wished to retrieve the first calculation
 under Quotation Type NORM, you would use an index value of 1, if you wish to retrieve
-the second value you would use an index value of 2. </li>
-  <li>quotation_field is any valid field on the quotation results table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mquote">here</a> </li>
+the second value you would use an index value of 2.</li>
+  <li>quotation_field is any valid field on the quotation results table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mquote">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>quotation_field must be a valid field on the Member Quotation Results file (pe_mquote). </li>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Category for each member that this formula is to be used to run quotations for. </li>
-  <li>index is a numeric value from 1,…,n where n is the number of separate formulae attached to Quotation Type type. </li>
+  <li>quotation_field must be a valid field on the Member Quotation Results file (pe_mquote).</li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Category for each member that this formula is to be used to run quotations for.</li>
+  <li>index is a numeric value from 1,…,n where n is the number of separate formulae attached to Quotation Type type.</li>
   <li>if the quotation result is not found, either because it does not exist, has not yet
 been run, or results from incorrect specification of type or index, this function
-call will return a value of 0. </li>
+call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmq_current(NORM,1)
 </code></pre>
 
-<p>This extracts the current quotation result for the first quotation under the Quotation Type NORM for each member concerned. </p>
+<p>This extracts the current quotation result for the first quotation under the Quotation Type NORM for each member concerned.</p>
 
 <h2 id="a-name43aquothistfldtyperecindex"><a name="43"></a>#quot_hist_fld(type,rec,index)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the results of a quotation history that has already been run
 for the current member. This will be taken from the quotation history results file
-(pe_mquote_hist). </p>
+(pe_mquote_hist).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#quot_hist_fld(type,rec,index) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the Quotation Type (see Categories) that you wish to retrieve a quotation
 result for. This must be in UPPERCASE and must exist as a valid Quotation Type for
 the appropriate Category for each member this formula is to be used for. If this is
-not the case, this function call will return a value of 0. </li>
+not the case, this function call will return a value of 0.</li>
   <li>rec - refers to the History Record Number under the Quotation Type for the quotation
 you wish to retrieve a result for e.g. if you wished to retrieve results for the first
-history record, you would use a record number of 1. </li>
+history record, you would use a record number of 1.</li>
   <li>index - refers to the Quotation Index under the Quotation Type for the quotation you
 wish to retrieve a result for e.g. if you wished to retrieve the first calculation
 under Quotation Type NORM, you would use an index value of 1, if you wish to retrieve
-the second value you would use an index value of 2. </li>
+the second value you would use an index value of 2.</li>
   <li>quot_hist_field is any valid field on the quotation history results table. For a
-list of valid fields click <a href="/pension/appendices/app_a/#pe_mquote_hist">here</a> </li>
+list of valid fields click <a href="/pension/appendices/app_a/#pe_mquote_hist">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>quotation_field must be a valid field on the Member Quotation History Results file (pe_mquote_hist). </li>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Category for each member that this formula is to be used to run quotations for. </li>
-  <li>rec is a numeric value from 1,…,n where n is the highest history record number present for the Quotation Type type. </li>
-  <li>index is a numeric value from 1,…,n where n is the number of separate formulae attached to Quotation Type type. </li>
+  <li>quotation_field must be a valid field on the Member Quotation History Results file (pe_mquote_hist).</li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Category for each member that this formula is to be used to run quotations for.</li>
+  <li>rec is a numeric value from 1,…,n where n is the highest history record number present for the Quotation Type type.</li>
+  <li>index is a numeric value from 1,…,n where n is the number of separate formulae attached to Quotation Type type.</li>
   <li>if the quotation result is not found, either because it does not exist, has not yet
 been run, or results from incorrect specification of type, index or rec, this function
-call will return a value of 0. </li>
+call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmqhh_value(NORM,1,1)
 </code></pre>
 
-<p>This extracts the quotation result for the first history record for the first quotation under the Quotation Type NORM for each member concerned. </p>
+<p>This extracts the quotation result for the first history record for the first quotation under the Quotation Type NORM for each member concerned.</p>
 
 <h2 id="a-name44aquotationheaderfieldtype"><a name="44"></a>#quotation_header_field(type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the member quotation header fields for a quotation that has already
 been run for the current member. This will be taken from the member quotation header
-file (pe_mquote_h). </p>
+file (pe_mquote_h).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#quotation_header_field(type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the Quotation Type (see Categories) that you wish to retrieve a quotation
 header field for. This must be in UPPERCASE and must exist as a valid Quotation Type
 for the appropriate Category for each member this formula is to be used for. If this
-is not the case, this function call will return a value of 0. </li>
+is not the case, this function call will return a value of 0.</li>
   <li>quotation_header_field is any valid field on the quotation header table. For a list
-of valid fields click <a href="/pension/appendices/app_a/#pe_mquote_hist">here</a> </li>
+of valid fields click <a href="/pension/appendices/app_a/#pe_mquote_hist">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>quotation_header_field must be a valid field on the Member Quotation Header file (pe_mquote_h). </li>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Category for each member that this formula is to be used to run quotations for. </li>
+  <li>quotation_header_field must be a valid field on the Member Quotation Header file (pe_mquote_h).</li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Category for each member that this formula is to be used to run quotations for.</li>
   <li>if the quotation_header_field is not found, either because it does not exist, has
 not yet been run, or results from incorrect specification of type, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmqh_calcdate(NORM)
 </code></pre>
 
-<p>This extracts the calculation date for the Quotation Type NORM for each member concerned. </p>
+<p>This extracts the calculation date for the Quotation Type NORM for each member concerned.</p>
 
 <h2 id="a-name45arefundfield"><a name="45"></a>#refund_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Refund Details File in your formula. </p>
+<p>Use this to refer to the value of a field on the Refund Details File in your formula.</p>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>refund_field is any valid field on the refund details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_refund">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>refund_field must be a valid field on the Refund Details File (pe_refund). </li>
+  <li>refund_field must be a valid field on the Refund Details File (pe_refund).</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pre_cep
 </code></pre>
 
-<p>This refers to the CEP payable in connection with the refund. </p>
+<p>This refers to the CEP payable in connection with the refund.</p>
 
 <h2 id="a-name46asalaryfield"><a name="46"></a>#salary_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the most recent value of a field on the Salary History file in your formula. </p>
+<p>Use this to refer to the most recent value of a field on the Salary History file in your formula.</p>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>salary_field is any valid field on the salary history table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_salary1">here</a> </li>
+  <li>salary_field is any valid field on the salary history table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_salary1">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>Only salaries at or prior to <a href="/pension/file_maintenance/pem_mem/#calc_date">Calculation Date</a> are included in the calculations. </li>
-  <li>salary_field must be a valid field on the Salary History File (pe_salary1, pe_salary2, pe_salary3, pe_salary4). </li>
+  <li>Only salaries at or prior to <a href="/pension/file_maintenance/pem_mem/#calc_date">Calculation Date</a> are included in the calculations.</li>
+  <li>salary_field must be a valid field on the Salary History File (pe_salary1, pe_salary2, pe_salary3, pe_salary4).</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#ps1_sal1
 </code></pre>
 
-<p>This refers to the most recent salary found in the first column on the first screen of Salary History in Members. </p>
+<p>This refers to the most recent salary found in the first column on the first screen of Salary History in Members.</p>
 
 <pre><code>#ps4_sal2
 </code></pre>
 
-<p>This refers to the most recent salary found in the second column on the fourth screen of Salary History in Members. </p>
+<p>This refers to the most recent salary found in the second column on the fourth screen of Salary History in Members.</p>
 
 <h2 id="a-name47aschemeaddressfieldcode"><a name="47"></a>#scheme_address_field(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Scheme Address Details file in your formula. </p>
+<p>Use this to refer to the value of a field on the Scheme Address Details file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#scheme_address_field(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the address code that you wish to retrieve a Scheme Address Detail
 Field for. If a scheme does not have an Address record with a matching code, this
-function call will return a value of 0. </li>
+function call will return a value of 0.</li>
   <li>scheme_address_field is any valid field on the scheme address table. For a list of
-valid fields click <a href="/pension/appendices/app_a/#pe_saddr">here</a> </li>
+valid fields click <a href="/pension/appendices/app_a/#pe_saddr">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>scheme_address_field must be a valid field on the Scheme Address Details file (pe_saddr). </li>
+  <li>scheme_address_field must be a valid field on the Scheme Address Details file (pe_saddr).</li>
   <li>If the Address Detail Field is not found, either because it does not exist, has not
 yet been run, or results from incorrect specification of code, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psa_addr1(SCHEME)
 </code></pre>
 
-<p>This extracts the value of the Scheme’s Address Line 1 for the ‘Scheme’ Address Details. </p>
+<p>This extracts the value of the Scheme’s Address Line 1 for the ‘Scheme’ Address Details.</p>
 
 <h2 id="a-name48aschemefield"><a name="48"></a>#scheme_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Scheme file in your formula. </p>
+<p>Use this to refer to the value of a field on the Scheme file in your formula.</p>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>scheme_field is any valid field on the scheme table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sch">here</a> </li>
+  <li>scheme_field is any valid field on the scheme table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sch">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>scheme_field must be a valid field on the Scheme File (pe_sch). </li>
+  <li>scheme_field must be a valid field on the Scheme File (pe_sch).</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psc_unit_fd1
 </code></pre>
 
-<p>For a money purchase type scheme refers to the unit price for the first fund that the member is a member of. </p>
+<p>For a money purchase type scheme refers to the unit price for the first fund that the member is a member of.</p>
 
 <h2 id="a-name49aschemeinvestmentfundfieldfundcode"><a name="49"></a>#scheme_investment_fund_field(fund_code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to refer to the value of a field on the Scheme Investment Funds screen. </p>
+<p>Use this function to refer to the value of a field on the Scheme Investment Funds screen.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#scheme_investment_fund_field(fund_code)
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>fund_code - refers to the Fund Code that you wish to retrieve. This must be in UPPERCASE
-and must exist as a valid Fund Code. </li>
+and must exist as a valid Fund Code.</li>
   <li>scheme_investment_fund_field is any valid field on the scheme investment fund table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sfunds">here</a> </li>
+For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sfunds">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>fund_code must be a valid Fund Code. </li>
+  <li>fund_code must be a valid Fund Code.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psf_start(0151CASH) 
 </code></pre>
 
 <h2 id="a-name50aschemeuserdefinedfield"><a name="50"></a>#scheme_user_defined_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Scheme User Defined Details in your formula. This will be taken from the file (pe_suds). </p>
+<p>Use this to refer to the value of a field on the Scheme User Defined Details in your formula. This will be taken from the file (pe_suds).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#scheme_user_defined_field 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>scheme_user_defined_field is any valid field on the scheme user defined table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_suds">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_suds">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>scheme_user_defined_field must be a valid field on the Scheme User Defined Details file (pe_suds). </li>
-  <li>If the Scheme User Defined Field is not the value field or the field is blank, this function call will return a value of 0. </li>
+  <li>scheme_user_defined_field must be a valid field on the Scheme User Defined Details file (pe_suds).</li>
+  <li>If the Scheme User Defined Field is not the value field or the field is blank, this function call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psud_val1
 </code></pre>
 
-<p>This extracts the data held in field 1 of the Scheme User Defined Details screen. </p>
+<p>This extracts the data held in field 1 of the Scheme User Defined Details screen.</p>
 
 <h2 id="a-name51aspecialcodefieldcode"><a name="51"></a>#special_code_field(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this function to condition a jump to relevant sections of a formula depending
-on a special code. The full syntax follows a similar picture as the goto functions. </p>
+on a special code. The full syntax follows a similar picture as the goto functions.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#special_code_field(code) = special_code goto @ln 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - is a reference to the Special Code you wish to condition against. </li>
-  <li>special_code - should match the code entry. </li>
-  <li>ln - is the line number the calculation will move to if the condition is true. </li>
+  <li>code - is a reference to the Special Code you wish to condition against.</li>
+  <li>special_code - should match the code entry.</li>
+  <li>ln - is the line number the calculation will move to if the condition is true.</li>
   <li>special_code_field is any valid field on the special code table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sfeat">here</a>.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>code must be a valid Special Code as set up in Codes. This system will prompt you if an incorrect code is entered. </li>
-  <li>Any operator can be used although equals = and not equals ! will be the ones most commonly used. </li>
+  <li>code must be a valid Special Code as set up in Codes. This system will prompt you if an incorrect code is entered.</li>
+  <li>Any operator can be used although equals = and not equals ! will be the ones most commonly used.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psft_code(EXPWISH) = EXPWISH goto @5 
 #psft_code(AVCPAYER) ! AVCPAYER goto @14 
@@ -1735,26 +1735,26 @@ on a special code. The full syntax follows a similar picture as the goto functio
 
 <h2 id="a-name52astatusfield"><a name="52"></a>#status_field</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to refer to the value of a field on the Status File in your formula. </p>
+<p>Use this function to refer to the value of a field on the Status File in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#status_field(status_code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>status_code - is a valid status code.</li>
-  <li>status_field is any valid field on the status table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sta">here</a> </li>
+  <li>status_field is any valid field on the status table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sta">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>status_field must be a valid field on the Status File (pe_sta). </li>
+  <li>status_field must be a valid field on the Status File (pe_sta).</li>
   <li>The only field name that can be entered is pm_status as this is the only status code held on the member file.</li>
 </ol>
 
@@ -1763,60 +1763,60 @@ on a special code. The full syntax follows a similar picture as the goto functio
 <pre><code>#ps_desc(pm_status)
 </code></pre>
 
-<p>This refers to the Status Description of the current member. </p>
+<p>This refers to the Status Description of the current member.</p>
 
 <h2 id="a-name53aswitchheaderfielddatebulkid"><a name="53"></a>#switch_header_field(date,bulk_id)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to access a field in the header of a switch. </p>
+<p>Use this function to access a field in the header of a switch.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#switch_header_field(date,bulk_id) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date - is the switch date. </li>
-  <li>bulk_id - is the bulk id number for the switch. </li>
+  <li>date - is the switch date.</li>
+  <li>bulk_id - is the bulk id number for the switch.</li>
   <li>switch_header_field is any valid field on the switch header table. For a list of
-valid fields click <a href="/pension/appendices/app_a/#pe_switch_h">here</a> </li>
+valid fields click <a href="/pension/appendices/app_a/#pe_switch_h">here</a></li>
 </ul>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pswh_expenses(19900101,27) 
 </code></pre>
 
 <h2 id="a-name54aswitchnewfundfielddatefromdatetobulkid"><a name="54"></a>#switch_new_fund_field(date_from,date_to,bulk_id)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to reference a field in the new fund section of the switch details screen. </p>
+<p>Use this function to reference a field in the new fund section of the switch details screen.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#switch_new_fund(date_from.date_to,bulk_id) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date_from/date_to - uses the switch date. </li>
-  <li>bulk_id - is the bulk id number for the switch. </li>
+  <li>date_from/date_to - uses the switch date.</li>
+  <li>bulk_id - is the bulk id number for the switch.</li>
   <li>switch_new_fund_field is any valid field on the switch in table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_switch_n">here</a> </li>
+fields click <a href="/pension/appendices/app_a/#pe_switch_n">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>if you want to total a numeric field within the date range then enter ALL as the bulk_id. </li>
+  <li>if you want to total a numeric field within the date range then enter ALL as the bulk_id.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pswn_percent(1990010120000101,27) 
 #pswn_percent(19920301,20020401,ALL) 
@@ -1824,35 +1824,35 @@ fields click <a href="/pension/appendices/app_a/#pe_switch_n">here</a> </li>
 
 <h2 id="a-name55aswitcholdfundfielddatefromdatetofundcodeconttypebulkid"><a name="55"></a>#switch_old_fund_field(date_from,date_to,fund_code,cont_type,bulk_id)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to reference a field in the old fund section of the switch details screen. </p>
+<p>Use this function to reference a field in the old fund section of the switch details screen.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#switch_old_fund_field(date_from,date_to,fund_code,cont_type,bulk_id) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date_from/date_to - uses the switch date. </li>
-  <li>fund_code - is a valid fund code for the switch you wish to reference. </li>
-  <li>cont_type - the cont type for the field you wish to reference. </li>
-  <li>bulk_id - the bulk_id number for the switch. </li>
-  <li>switch_old_fund_field is any valid field on the switch out table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_switch_b">here</a> </li>
+  <li>date_from/date_to - uses the switch date.</li>
+  <li>fund_code - is a valid fund code for the switch you wish to reference.</li>
+  <li>cont_type - the cont type for the field you wish to reference.</li>
+  <li>bulk_id - the bulk_id number for the switch.</li>
+  <li>switch_old_fund_field is any valid field on the switch out table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_switch_b">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>if you want to total a numeric field within the date range then enter ALL as either
 the fund_code, cont_type or the bulk_id. e.g. using 0151CASH as the fund code and
 ALL for cont_type and bulk_id will total values for all contribution type’s and bulk
-id’s for the 0151CASH fund. </li>
+id’s for the 0151CASH fund.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pswb_sale_value(19900101,20020101,0151CASH,EEAVC,27) 
 #pswb_sale_units(19990101,20020104,0151CASH,ALL,ALL) 
@@ -1860,45 +1860,45 @@ id’s for the 0151CASH fund. </li>
 
 <h2 id="a-name56atottvinfielddate1date2"><a name="56"></a>tot_tvin(field,date1,date2)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to either total a specified numeric field on a Transfer In screen, or to
 total the Total Pension, Old Fixed PUP 2 and Old Fixed PUP 3, between two given dates.
-This data will be taken from the transfer in file (pe_tvin). </p>
+This data will be taken from the transfer in file (pe_tvin).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>tot_tvin(field,date1,date2) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>field - is represented by either a valid numeric field on the transfer in details
 file (pe_tvin), or by ‘TOTAL’ which totals the Total Pension, Old Fixed PUP 2 and
-Old Fixed PUP 3. </li>
-  <li>date1 - is the date for which you wish to start totalling from. </li>
-  <li>date2 - is the date for which you wish to total to. </li>
+Old Fixed PUP 3.</li>
+  <li>date1 - is the date for which you wish to start totalling from.</li>
+  <li>date2 - is the date for which you wish to total to.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>Only transfer in’s with a date transfer received prior to <a href="/pension/file_maintenance/pem_mem/#calc_date">Calculation
-Date</a> are included in the calculations. </li>
+Date</a> are included in the calculations.</li>
   <li>When entering a field from the Transfer In file (pe_tvin), it must be numeric. If
-the field is a character/date field then an error message is displayed. </li>
-  <li>‘TOTAL’ must be entered in UPPERCASE. </li>
+the field is a character/date field then an error message is displayed.</li>
+  <li>‘TOTAL’ must be entered in UPPERCASE.</li>
   <li>The date arguments must either be a date field from the Member File, a reference to
-a previous line, or in the format yyyymmdd. </li>
+a previous line, or in the format yyyymmdd.</li>
   <li>If the Transfer In Field is not found, either because it does not exist, it is blank
 or results from incorrect specification of code, this function call will return a
-value of 0. </li>
+value of 0.</li>
   <li>If a Date Transfer Received does not exist for a Transfer In then the value of the
-field will be included in the total. </li>
+field will be included in the total.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>tot_tvin(ptvi_total_pen,pm_dob,pm_npd) 
 tot_tvin(ptvi_val,19990101,20000101) 
@@ -1907,37 +1907,37 @@ tot_tvin(TOTAL,@1,pm_dtlft)
 
 <h2 id="a-name57atottvoutfielddate1date2"><a name="57"></a>tot_tvout(field,date1,date2)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to total a specified numeric field on a Transfer Out screen between two given
-dates. This data will be taken from the transfer out file (pe_tvout). </p>
+dates. This data will be taken from the transfer out file (pe_tvout).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>tot_tvout(field,date1,date2) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>field - is a valid numeric field on the transfer out details file (pe_tvout). </li>
-  <li>date1 - is the date for which you wish to start totalling from. </li>
-  <li>date2 - is the date for which you wish to total to. </li>
+  <li>field - is a valid numeric field on the transfer out details file (pe_tvout).</li>
+  <li>date1 - is the date for which you wish to start totalling from.</li>
+  <li>date2 - is the date for which you wish to total to.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>field must be a valid numeric field on the Transfer Out file (pe_tvout). If the field
-is a character/date field then an error message is displayed. </li>
+is a character/date field then an error message is displayed.</li>
   <li>If the Transfer Out Field is not found, either because it does not exist, it is blank
 or results from incorrect specification of code, this function call will return a
-value of 0. </li>
+value of 0.</li>
   <li>If a Date Transfer Agreed does not exist for a Transfer Out then the value of the
-field will be included in the total. </li>
+field will be included in the total.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>tot_tvout(ptvo_val,pm_dob,pm_npd) 
 tot_tvout(ptvo_val,19990101,20000101) 
@@ -1945,116 +1945,116 @@ tot_tvout(ptvo_val,19990101,20000101)
 
 <h2 id="a-name58atransferinfieldcode"><a name="58"></a>#transfer_in_field(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Transfer In Details file in your formula. </p>
+<p>Use this to refer to the value of a field on the Transfer In Details file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#transfer_in_field(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the transfer in code that you wish to retrieve a Transfer In Detail
 Field for. If a member does not have a Transfer record with a matching code, this
-function call will return a value of 0. </li>
+function call will return a value of 0.</li>
   <li>transfer_in_field is any valid field on the transfer in table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_tvin">here</a> </li>
+fields click <a href="/pension/appendices/app_a/#pe_tvin">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>transfer_in_field must be a valid field on the Transfer In Details file (pe_tvin). </li>
+  <li>transfer_in_field must be a valid field on the Transfer In Details file (pe_tvin).</li>
   <li>If the Transfer In Detail Field is not found, either because it does not exist, has
 not yet been run, or results from incorrect specification of code, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#ptvi_val(TCCONT)
 </code></pre>
 
-<p>This extracts the value of the Transfer Value for the ‘TCCONT’ Transfer code Details. </p>
+<p>This extracts the value of the Transfer Value for the ‘TCCONT’ Transfer code Details.</p>
 
 <h2 id="a-name59atransferoutfieldcode"><a name="59"></a>#transfer_out_field(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Transfer Out Details file in your formula. </p>
+<p>Use this to refer to the value of a field on the Transfer Out Details file in your formula.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#transfer_out_field(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the transfer out code that you wish to retrieve a Transfer Out Detail
 Field for. If a member does not have a Transfer record with a matching code, this
-function call will return a value of 0. </li>
+function call will return a value of 0.</li>
   <li>transfer_out_field is any valid field on the transfer out table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_tvout">here</a> </li>
+fields click <a href="/pension/appendices/app_a/#pe_tvout">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>transfer_out_field must be a valid field on the Transfer Out Details file (pe_tvout). </li>
+  <li>transfer_out_field must be a valid field on the Transfer Out Details file (pe_tvout).</li>
   <li>If the Transfer Out Detail Field is not found, either because it does not exist, has
 not yet been run, or results from incorrect specification of code, this function call
-will return a value of 0. </li>
+will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#ptvo_val(TCCOPEN)
 </code></pre>
 
-<p>This extracts the value of the Transfer Value for the ‘TCCOPEN’ Transfer code Details. </p>
+<p>This extracts the value of the Transfer Value for the ‘TCCOPEN’ Transfer code Details.</p>
 
 <h2 id="a-name60atvincode"><a name="60"></a>tvin(code)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this function to retrieve specific transfer in details from a members record.
 Depending on the type of transfer in corresponding to the transfer in code entered
-the function will return either Pension, Service or Contribution data. </p>
+the function will return either Pension, Service or Contribution data.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>tvin(code) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - is a reference to the transfer in code of the transfer in record that you wish
-to select the transfer from. </li>
+to select the transfer from.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>code must be in UPPERCASE. </li>
+  <li>code must be in UPPERCASE.</li>
   <li>code must exist in the codes file (pe_codem) and also must be allocated to the members
-scheme as a transfer in type code (pe_scode). </li>
+scheme as a transfer in type code (pe_scode).</li>
   <li>this function will return a value depending on the code entered. It does this by referring
 to the transfer type field on the first screen of transfer in details on the member
-record for this transfer in code as follows: 
+record for this transfer in code as follows:
     <ol>
-      <li>Additional Pension - the value of the total additional pension granted for that code will be returned. </li>
-      <li>Additional Service - the value of the ( Added Years + Added Months / 12 + Added Days / 365 ) * Accrual Rate will be returned. </li>
-      <li>DC Transfer - the value of the total contribution type 1 contributions will be returned. </li>
+      <li>Additional Pension - the value of the total additional pension granted for that code will be returned.</li>
+      <li>Additional Service - the value of the ( Added Years + Added Months / 12 + Added Days / 365 ) * Accrual Rate will be returned.</li>
+      <li>DC Transfer - the value of the total contribution type 1 contributions will be returned.</li>
     </ol>
   </li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>tvin(TP000001) 
 tvin(TS000023) 
@@ -2062,140 +2062,140 @@ tvin(TS000023)
 
 <h2 id="a-name61audhtypecolyyyymmdd-basis"><a name="61"></a>udh(type,col,yyyymmdd, basis)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use the udh function to lookup a specific field on the User Defined History file (pe_mua)
-for a specified year, month and day. </p>
+for a specified year, month and day.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>udh(type,col,yyyymmdd,basis) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the User Defined History Type (see Schemes) that you wish to retrieve
 a User data item. This must be in UPPERCASE and must exist as a valid User Defined
 History Type for the appropriate Scheme for each member this formula is to be used
-for. If this is not the case, this function call will return a value of 0. </li>
-  <li>col - refers to the required column as follows: 
+for. If this is not the case, this function call will return a value of 0.</li>
+  <li>col - refers to the required column as follows:
     <ul>
-      <li>1 - Column 1 </li>
-      <li>2 - Column 2 </li>
-      <li>3 - Column 3 </li>
-      <li>4 - Column 4 </li>
-      <li>5 - Column 5 </li>
-      <li>6 - Date </li>
+      <li>1 - Column 1</li>
+      <li>2 - Column 2</li>
+      <li>3 - Column 3</li>
+      <li>4 - Column 4</li>
+      <li>5 - Column 5</li>
+      <li>6 - Date</li>
     </ul>
   </li>
   <li>yyyymmdd - is the date for which you wish to lookup the user defined history data
 item. The function will return a value on or before this date with yyyy being the
-year value, mm being the month value and dd being the day value. </li>
-  <li>basis - The two options are AT and EF as follows: 
+year value, mm being the month value and dd being the day value.</li>
+  <li>basis - The two options are AT and EF as follows:
     <ul>
-      <li>AT - Will return a value recorded at a specific date. </li>
+      <li>AT - Will return a value recorded at a specific date.</li>
       <li>EF - Will return the value that is effective at the date entered eg 19990101. If there is no corresponding date
 the system will find the most recent date prior to the one selected.</li>
     </ul>
   </li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for. </li>
-  <li>the col must be between 1 and 6. </li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for.</li>
+  <li>the col must be between 1 and 6.</li>
   <li>if the User Defined History data item is not found, either because it does not exist,
 it is blank or results from incorrect specification of type, this function call will
-return a value of 0. </li>
+return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>udh(MOBILE,1,19970101,AT)
 </code></pre>
 
-<p>This extracts the data held in column 1 at 1/1/1997 for the User Defined History Type MOBILE for each member concerned. </p>
+<p>This extracts the data held in column 1 at 1/1/1997 for the User Defined History Type MOBILE for each member concerned.</p>
 
 <h2 id="a-name62audhtottypecoldate1date2"><a name="62"></a>udhtot(type,col,date_1,date_2)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use the udhtot function to total up a numeric column on the User Defined History file
-(pe_mua) between two dates. </p>
+(pe_mua) between two dates.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>udhtot(type,col,date_1,date_2) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the User Defined History Type (see Schemes) that you wish to retrieve
 a User data item. This must be in UPPERCASE and must exist as a valid User Defined
 History Type for the appropriate Scheme for each member this formula is to be used
-for. If this is not the case, this function call will return a value of 0. </li>
-  <li>col - refers to the required column as follows: 
+for. If this is not the case, this function call will return a value of 0.</li>
+  <li>col - refers to the required column as follows:
     <ul>
-      <li>1 - Column 1 </li>
-      <li>2 - Column 2 </li>
-      <li>3 - Column 3 </li>
-      <li>4 - Column 4 </li>
-      <li>5 - Column 5 </li>
+      <li>1 - Column 1</li>
+      <li>2 - Column 2</li>
+      <li>3 - Column 3</li>
+      <li>4 - Column 4</li>
+      <li>5 - Column 5</li>
     </ul>
   </li>
-  <li>date_1 - is the date for which you wish to start totalling from. </li>
-  <li>date_2 - is the date for which you wish to total to. </li>
+  <li>date_1 - is the date for which you wish to start totalling from.</li>
+  <li>date_2 - is the date for which you wish to total to.</li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for. </li>
-  <li>the col must be between 1 and 5. </li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for.</li>
+  <li>the col must be between 1 and 5.</li>
   <li>if the User Defined History data item is not found, either because it does not exist,
 it is blank or results from incorrect specification of type, this function call will
-return a value of 0. </li>
+return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>udhtot(BIK,1,19970101,20000801)
 </code></pre>
 
-<p>This totals the data held in column 1 after 1/1/1997 and before 1/8/2000 for the User Defined History Type BIK for each member concerned. </p>
+<p>This totals the data held in column 1 after 1/1/1997 and before 1/8/2000 for the User Defined History Type BIK for each member concerned.</p>
 
 <h2 id="a-name63aunitpricefundbasisdate"><a name="63"></a>unit_price(fund,basis,date)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use the unit_price function to lookup a unit price for a specified investment fund
 at a specific date. The unit price is taken from the <a href="/pension/investments/pem_invfun/#Unit Prices">Unit
-Price</a> screen in Investment Funds for defined contribution or hybrid schemes. </p>
+Price</a> screen in Investment Funds for defined contribution or hybrid schemes.</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>unit_price(fund,basis,date) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>fund - is the investment fund code. </li>
+  <li>fund - is the investment fund code.</li>
   <li>basis - whether or not the unit price you require is the bid, mid or offer price and
-takes the values b, m or o respectively. </li>
+takes the values b, m or o respectively.</li>
   <li>date - the date for your unit price. This must be a field reference to a date field
 on the member file (pe_mem), a constant date entered in the format YYYYMMDD where
 YYYY is the year, MM is the month and DD is the day or a reference to the result of
-another line of formula code within the current formula e.g. @1. the day value. </li>
-  <li>the date argument can be set to TODAY. This will then use the most recent unit price. </li>
+another line of formula code within the current formula e.g. @1. the day value.</li>
+  <li>the date argument can be set to TODAY. This will then use the most recent unit price.</li>
 </ul>
 
-<p><strong>EXAMPLES</strong> </p>
+<p><strong>EXAMPLES</strong></p>
 
 <pre><code>unit_price(MANAGED,b,19951201) 
 unit_price(EQUITY,o,@1) 
@@ -2205,29 +2205,29 @@ unit_price(CASH,m,TODAY)
 
 <h2 id="a-name64aunitpricesfieldfunddate"><a name="64"></a>#unit_prices_field(fund,date)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on Unit Prices of the specified fund code
-for a given date. This will be taken from the unit prices file (pe_prices). </p>
+for a given date. This will be taken from the unit prices file (pe_prices).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>unit_prices_field(fund,date) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>fund - is the investment fund code. </li>
+  <li>fund - is the investment fund code.</li>
   <li>date - the date for your unit price. This must be a field reference to a date field
 on the member file (pe_mem), a constant date entered in the format YYYYMMDD where
 YYYY is the year, MM is the month and DD is the day or a reference to the result of
-another line of formula code within the current formula e.g. @1. the day value. </li>
+another line of formula code within the current formula e.g. @1. the day value.</li>
   <li>unit_prices_field is any valid field on the unit prices table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_prices">here</a> </li>
+fields click <a href="/pension/appendices/app_a/#pe_prices">here</a></li>
 </ul>
 
-<p><strong>EXAMPLES</strong> </p>
+<p><strong>EXAMPLES</strong></p>
 
 <pre><code>#ppr_bprice(MANAGED,19951201) 
 #ppr_date(0000CASH,@1) 
@@ -2236,46 +2236,46 @@ fields click <a href="/pension/appendices/app_a/#pe_prices">here</a> </li>
 
 <h2 id="a-name65auserdefinedhistoryfieldtypedate"><a name="65"></a>#user_defined_history_field(type,date)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on a User Defined History of the specified
-type for a given date. This will be taken from the user defined history file (pe_mua). </p>
+type for a given date. This will be taken from the user defined history file (pe_mua).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#user_defined_history_field(type,date) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the User Defined History Type (see Schemes) that you wish to retrieve
 a User Defined Field for. This must be in UPPERCASE and must exist as a valid User
 Defined History Type for the appropriate Scheme for each member this formula is to
-be used for. If this is not the case, this function call will return a value of 0. </li>
+be used for. If this is not the case, this function call will return a value of 0.</li>
   <li>date - date must be a field reference to the member file (pe_mem), a constant date
 entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
 the day or a reference to the result of a previous formula line (as long as it evaluates
-to a valid date) in the format @line_num e.g. @2. </li>
+to a valid date) in the format @line_num e.g. @2.</li>
   <li>user_defined_history_field is any valid field on the user defined history table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mua">here</a> </li>
+For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mua">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>user_defined_history_field must be a valid field on the Member User Defined History file (pe_mua). </li>
-  <li>type must be in UPPERCASE. </li>
+  <li>user_defined_history_field must be a valid field on the Member User Defined History file (pe_mua).</li>
+  <li>type must be in UPPERCASE.</li>
   <li>the function will return the most recent value held in the column which is either
-on of before the specified date. If you wish to find a historic value use the <a href="#0429">udh(type,col,yyyymmdd,basis)</a> function. </li>
+on of before the specified date. If you wish to find a historic value use the <a href="#0429">udh(type,col,yyyymmdd,basis)</a> function.</li>
   <li>type must exist for the appropriate Scheme for each member that this formula is to
-be used to run quotations for. </li>
-  <li>if the User Defined Field is not found, either because it does not exist, or results from incorrect specification of type, this function call will return a value of 0. </li>
+be used to run quotations for.</li>
+  <li>if the User Defined Field is not found, either because it does not exist, or results from incorrect specification of type, this function call will return a value of 0.</li>
   <li>if the User Defined Field is blank and the field type is either Boolean, Date, Indicator or Text then the function call will return a value of blank, however, if the field type is Monetary Amount or Number (0 - 6), then it will return a value of 0.</li>
-  <li>the date argument can be set to TODAY to return the value previous to today. </li>
+  <li>the date argument can be set to TODAY to return the value previous to today.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pma_col2(CARS,pm_dob) 
 #pma_col1(CARS,@1) 
@@ -2283,214 +2283,214 @@ be used to run quotations for. </li>
 </code></pre>
 
 <p>These will extract data held in the specified column of the User Defined History Type
-CARS which is either on or before the spedified date, for each member concerned. </p>
+CARS which is either on or before the spedified date, for each member concerned.</p>
 
 <h2 id="a-name66auserdefinedhistorybodyfieldtype"><a name="66"></a>#user_defined_history_body_field(type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the User Defined History Body section,
 in Schemes, for the specified type. This will be taken from the user defined history
-body file (pe_uda_b). </p>
+body file (pe_uda_b).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#user_defined_history_body_field(type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the History Type that you wish to retrieve a User Defined History
 Body Field for. This must be in UPPERCASE and must exist as a valid History Type for
 the appropriate Scheme for each member this formula is to be used for. If this is
-not the case, this function call will return a value of 0. </li>
+not the case, this function call will return a value of 0.</li>
   <li>user_defined_history_body_field is any valid field on the user defined history body
-table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_uda_b">here</a> </li>
+table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_uda_b">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>user_defined_history_body_field must be a valid field on the Scheme’s User Defined History Body file (pe_uda_b). </li>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for. </li>
+  <li>user_defined_history_body_field must be a valid field on the Scheme’s User Defined History Body file (pe_uda_b).</li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for.</li>
   <li>if the User Defined History Body Field is not found, either because it does not exist,
 or results from incorrect specification of type, this function call will
-return a value of 0. </li>
-  <li>if the User Defined History Body Field is blank, this function call will return a value of blank. </li>
+return a value of 0.</li>
+  <li>if the User Defined History Body Field is blank, this function call will return a value of blank.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#puab_desc1_1(CARS) 
 #puab_fmt1(CARS) 
 </code></pre>
 
 <p>These will extract data held in the specified field for the History Type CARS for
-each member concerned. </p>
+each member concerned.</p>
 
 <h2 id="a-name67auserdefinedhistoryheaderfieldtype"><a name="67"></a>#user_defined_history_header_field(type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the User Defined History Header section,
 in Schemes, for the specified type. This will be taken from the user defined history
-header file (pe_uda_h). </p>
+header file (pe_uda_h).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#user_defined_history_header_field(type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the History Type that you wish to retrieve a User Defined History
 Header Field for. This must be in UPPERCASE and must exist as a valid History Type
 for the appropriate Scheme for each member this formula is to be used for. If this
-is not the case, this function call will return a value of 0. </li>
+is not the case, this function call will return a value of 0.</li>
   <li>user_defined_history_header_field is any valid field on the user defined history
-header table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_uda_h">here</a> </li>
+header table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_uda_h">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
   <li>user_defined_history_header_field must be a valid field on the Scheme’s User Defined
-History Header file (pe_uda_h). </li>
-  <li>type must be in UPPERCASE. </li>
+History Header file (pe_uda_h).</li>
+  <li>type must be in UPPERCASE.</li>
   <li>type must exist for the appropriate Scheme for each member that this formula is to
-be used to run quotations for. </li>
+be used to run quotations for.</li>
   <li>if the User Defined History Header Field is not found, either because it does not
 exist, it is blank or results from incorrect specification of type, this function
-call will return a value of 0. </li>
+call will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#puah_desc(CARS) 
 </code></pre>
 
-<p>This will extract data held in the specified field for the History Type CARS for each member concerned. </p>
+<p>This will extract data held in the specified field for the History Type CARS for each member concerned.</p>
 
 <h2 id="a-name68auserdefinedscreenfieldtype"><a name="68"></a>#user_defined_screen_field(type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on a User Defined Screen of the specified
-type. This will be taken from the user defined screen file (pe_muds). </p>
+type. This will be taken from the user defined screen file (pe_muds).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#user_defined_screen_field(type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the User Defined Screen Type (see Schemes) that you wish to retrieve
 a User Defined Field for. This must be in UPPERCASE and must exist as a valid User
 Defined Screen Type for the appropriate Scheme for each member this formula is to
-be used for. If this is not the case, this function call will return a value of 0. </li>
+be used for. If this is not the case, this function call will return a value of 0.</li>
   <li>user_defined_screen_field is any valid field on the user defined screen table. For
-a list of valid fields click <a href="/pension/appendices/app_a/#pe_muds">here</a> </li>
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_muds">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>user_defined_screen_field must be a valid field on the Member User Defined Screen file (pe_muds). </li>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for. </li>
-  <li>If the User Defined Field is not found, either because it does not exist, or results from incorrect specification of type, this function call will return a value of 0. </li>
+  <li>user_defined_screen_field must be a valid field on the Member User Defined Screen file (pe_muds).</li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for.</li>
+  <li>If the User Defined Field is not found, either because it does not exist, or results from incorrect specification of type, this function call will return a value of 0.</li>
   <li>if the User Defined Field is blank and the field type is either Boolean, Date, Formula, Header, Indicator or Text then the function call will return a value of blank, however, if the field type is Monetary Amount or Number (0 - 6), then it will return a value of 0.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pmu_fld2(CARS)
 </code></pre>
 
-<p>This extracts the data held in field 2 of the User Defined Screen Type CARS for each member concerned. </p>
+<p>This extracts the data held in field 2 of the User Defined Screen Type CARS for each member concerned.</p>
 
 <h2 id="a-name69auserdefinedscreenbodyfieldtype"><a name="69"></a>#user_defined_screen_body_field(type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the User Defined Screen Body section,
 in Schemes, for the specified type. This will be taken from the user defined Screen
-body file (pe_uds_b). </p>
+body file (pe_uds_b).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#user_defined_screen_body_field(type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the Screen Type that you wish to retrieve a User Defined Screen Body
 Field for. This must be in UPPERCASE and must exist as a valid Screen Type for the
 appropriate Scheme for each member this formula is to be used for. If this is not
-the case, this function call will return a value of 0. </li>
+the case, this function call will return a value of 0.</li>
   <li>user_defined_screen_body_field is any valid field on the user defined screen body
-table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_uds_b">here</a> </li>
+table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_uds_b">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>user_defined_screen_body_field must be a valid field on the Scheme’s User Defined Screen Body file (pe_uds_b). </li>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for. </li>
+  <li>user_defined_screen_body_field must be a valid field on the Scheme’s User Defined Screen Body file (pe_uds_b).</li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for.</li>
   <li>if the User Defined Screen Body Field is not found, either because it does not exist,
 or results from incorrect specification of type, this function call will
-return a value of 0. </li>
-  <li>if the User Defined Screen Body Field is blank, this function call will return a value of blank. </li>
+return a value of 0.</li>
+  <li>if the User Defined Screen Body Field is blank, this function call will return a value of blank.</li>
 </ol>
 
-<p><strong>EXAMPLE</strong> </p>
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pudb_desc1(SAMPLE) 
 #pudb_fmt1(SAMPLE) 
 </code></pre>
 
-<p>These will extract data held in the specified field for the Screen Type SAMPLE for each member concerned. </p>
+<p>These will extract data held in the specified field for the Screen Type SAMPLE for each member concerned.</p>
 
 <h2 id="a-name70auserdefinedscreenheaderfieldtype"><a name="70"></a>#user_defined_screen_header_field(type)</h2>
 
-<p><strong>OVERVIEW</strong> </p>
+<p><strong>OVERVIEW</strong></p>
 
 <p>Use this to refer to the value of a field on the User Defined Screen Header section,
 in Schemes, for the specified type. This will be taken from the user defined screen
-header file (pe_uds_h). </p>
+header file (pe_uds_h).</p>
 
-<p><strong>SYNTAX</strong> </p>
+<p><strong>SYNTAX</strong></p>
 
 <pre><code>#user_defined_screen_header_field(type) 
 </code></pre>
 
-<p><strong>EXPLANATION</strong> </p>
+<p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>type - refers to the Screen Type that you wish to retrieve a User Defined Screen Header
 Field for. This must be in UPPERCASE and must exist as a valid Screen Type for the
 appropriate Scheme for each member this formula is to be used for. If this is not
-the case, this function call will return a value of 0. </li>
+the case, this function call will return a value of 0.</li>
   <li>user_defined_screen_header_field is any valid field on the user defined screen header
-table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_uds_h">here</a> </li>
+table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_uds_h">here</a></li>
 </ul>
 
-<p><strong>NOTES</strong> </p>
+<p><strong>NOTES</strong></p>
 
 <ol>
-  <li>user_defined_screen_header_field must be a valid field on the Scheme’s User Defined Screen Header file (pe_uds_h). </li>
-  <li>type must be in UPPERCASE. </li>
-  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for. </li>
+  <li>user_defined_screen_header_field must be a valid field on the Scheme’s User Defined Screen Header file (pe_uds_h).</li>
+  <li>type must be in UPPERCASE.</li>
+  <li>type must exist for the appropriate Scheme for each member that this formula is to be used to run quotations for.</li>
   <li>if the User Defined Screen Header Field is not found, either because it does not exist,
 it is blank or results from incorrect specification of type, this function call will
-return a value of 0. </li>
+return a value of 0.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
