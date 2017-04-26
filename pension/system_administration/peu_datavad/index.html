@@ -7,7 +7,7 @@
     <meta name="description" content="User Manual">
     <meta name="author" content="Carl D. Patterson">
 	
-    <title>Remove Members' Special Codes</title>
+    <title>Data Validation Report</title>
 
     <link rel="stylesheet" href="/css/bootstrap-min.css">
     <link rel="stylesheet" href="/css/bootstrap-theme-min.css">
@@ -39,7 +39,7 @@
     <div class="container theme-showcase" role="main">
       
         <div class="page-header">
-          <h1>Remove Members' Special Codes</h1>
+          <h1>Data Validation Report</h1>
         </div>
         
 
@@ -54,7 +54,28 @@
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
 
-<p>This program deletes a member’s special code in bulk relating to the standard selection criteria screen of scheme, company, category, status and group. For all members in the selection if they have the special code assigned to them they are produced out to a report before the user is asked if they wish to continue and delete the special codes from these members. The following options and screen appear when this program is selected:</p>
+<p>This program allows the user to analyse member address data, investment fund data and data held in any of the status history screens. You can select one or all the reports to run at the same time. The reports are produce into pdfs and list the following for each report :</p>
+
+<p>Member Address Validation
+Member XXXX has more than one current address.
+Member XXXX only has one address and it’s not current.
+Member XXXX has more than one address and none of them are current.</p>
+
+<p>Investment Fund Price Validation
+Fund XXXX has a zero price with the Buy Basis set to Bid for DD/MM/YYYY.
+Fund XXXX has a zero price with the Sell Basis set to Bid for DD/MM/YYYY.
+Fund XXXX has a zero price with the Buy Basis set to Mid for DD/MM/YYYY.
+Fund XXXX has a zero price with the Sell Basis set to Mid for DD/MM/YYYY.
+Fund XXXX has a zero price with the Buy Basis set to Offer for DD/MM/YYYY.
+Fund XXXX has a zero price with the Sell Basis set to Offer for DD/MM/YYYY.</p>
+
+<p>Member Status/Company/Category/Marital Status History Validation
+Member XXXX, Test Member has no Status/Company/Category History.
+Member XXXX, Test Member has more then 1 Status/Company/Category History record at the same effective date and at least 1 of the records has a 0 background id.
+Member XXXX, Test Member current status/Company/Category code doesn’t match with the top line of their Status History/Company/Category code
+Member XXXX, Test Member has a line in their Status/Company/Category History where the New code equals the Old code.
+Member XXXX, Test Member has a line in their Status/Company/Category History where the New code doesn’t match the Old code of the line above it.
+Member XXXX, Test Member last line of their Status/Company/Category History doesn’t have an Old code of ‘NEW’.This program deletes a member’s special code in bulk relating to the standard selection criteria screen of scheme, company, category, status and group. For all members in the selection if they have the special code assigned to them they are produced out to a report before the user is asked if they wish to continue and delete the special codes from these members. The following options and screen appear when this program is selected:</p>
 
 <ul>
   <li>Proceed</li>
@@ -62,9 +83,9 @@
 </ul>
 
 <div class="screen">
-  <p><img src="/pension/images/peu_sfeat_del1.jpg" alt="Remove Members' Special Codes" /></p>
+  <p><img src="/pension/images/peu_datavad1.jpg" alt="Data Validation Report " /></p>
 
-  <p>Remove Members’ Special Codes</p>
+  <p>Data Validation Report</p>
 </div>
 
 <h2 id="a-nameproceedaproceed"><a name="Proceed"></a>Proceed</h2>
@@ -78,7 +99,7 @@
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 19/04/2017 12:40:57.</p>
+        <p>Build Date 26/04/2017 09:23:54.</p>
       </div>
     </div>
 
