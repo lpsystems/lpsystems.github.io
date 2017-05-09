@@ -137,7 +137,7 @@ used in the General Data Load program.</p>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Marital Status</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="#mencontrate">Member Contribution Rate Percentage Load</a></td>
+          <td style="text-align: left"><a href="#memcontrate">Member Contribution Rate Percentage Load</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Contribution Type<br />Effective Date<br />Formula Code<br />Matrix Code<br />Percent/Annual Flatrate<br />Salary Type<br />Type</td>
         </tr>
         <tr>
@@ -283,7 +283,7 @@ create their own load. These templates are based on the formats shown below for 
   </div>
 </div>
 
-<h2 id="a-namebasicpenabasic-deferred-pensioner-details---update-type-load-only---template-tempudps"><a name="basicpen"></a>Basic Deferred Pensioner Details - ‘Update’ type load only - Template TEMPUDPS</h2>
+<h2 id="a-namebasicdpenabasic-deferred-pensioner-details---update-type-load-only---template-tempudps"><a name="basicdpen"></a>Basic Deferred Pensioner Details - ‘Update’ type load only - Template TEMPUDPS</h2>
 
 <p>Any of the fields on the basic deferred pensioner details screen table can be updated, apart from the Member Number, as this is the table’s mandatory field.</p>
 
@@ -523,8 +523,7 @@ create their own load. These templates are based on the formats shown below for 
   </div>
 </div>
 
-<h2 id="a-namembrupdt">&lt;a name=”mbrupdt”</h2>
-<p>## Basic Member Details - ‘Update’ type load only - Templates TEMPCOMP/TEMPMAR</p>
+<h2 id="a-namembrupdtabasic-member-details---update-type-load-only---templates-tempcomptempmar"><a name="mbrupdt"></a>Basic Member Details - ‘Update’ type load only - Templates TEMPCOMP/TEMPMAR</h2>
 
 <p>Any field on the Basic Member Details table can be updated, apart from the Member Number, as this is the member’s unique identifier on Pension Master. The data file format is:</p>
 
@@ -757,648 +756,649 @@ they are using, during the running process.</p>
 
   <p>identifier,pensioncode,datetocommence,initialpension,dateoflastinc,currentpension,currentspouses,dateofcessation</p>
 
-  <h2 id="a-namedeathdepadependant-death-details---new-type-load-only---template-tempddep"><a name="deathdep"></a>Dependant Death Details - ‘New’ type load only - Template TEMPDDEP</h2>
+</div>
 
-  <p>The data file format is:</p>
+<h2 id="a-namedeathdepadependant-death-details---new-type-load-only---template-tempddep"><a name="deathdep"></a>Dependant Death Details - ‘New’ type load only - Template TEMPDDEP</h2>
 
-  <div class="well">
+<p>The data file format is:</p>
 
-    <p>identifier,deathdepref,deathdepname,deathdeplumpsum</p>
+<div class="well">
 
-  </div>
+  <p>identifier,deathdepref,deathdepname,deathdeplumpsum</p>
 
-  <p>The fields with default values are:</p>
+</div>
 
-  <div class="row">
-    <div class="col-md-6">
+<p>The fields with default values are:</p>
 
-      <table class="table table-condensed">
-        <thead>
-          <tr>
-            <th style="text-align: left">Field</th>
-            <th style="text-align: left">Default Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: left">Death Dependants Name</td>
-            <td style="text-align: left">Forename and Surname based on the death dependants member number</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">Death Dependants Pension Indicator</td>
-            <td style="text-align: left">Y - Yes</td>
-          </tr>
-        </tbody>
-      </table>
+<div class="row">
+  <div class="col-md-6">
 
-    </div>
-  </div>
-
-  <h2 id="a-namedepsadependants-details---new-type-load-only---template-tempdep"><a name="deps"></a>Dependants Details - ‘New’ type load only - Template TEMPDEP</h2>
-
-  <p>The data file format is:</p>
-
-  <div class="well">
-
-    <p>identifier,dependantsnumber,dependantsname,dependantstype,dependantspropben</p>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Death Dependants Name</td>
+          <td style="text-align: left">Forename and Surname based on the death dependants member number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Death Dependants Pension Indicator</td>
+          <td style="text-align: left">Y - Yes</td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
+</div>
 
-  <p>where dependantsnumber is defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+<h2 id="a-namedepsadependants-details---new-type-load-only---template-tempdep"><a name="deps"></a>Dependants Details - ‘New’ type load only - Template TEMPDEP</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,dependantsnumber,dependantsname,dependantstype,dependantspropben</p>
+
+</div>
+
+<p>where dependantsnumber is defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
 1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
 
-  <h2 id="a-namediaryadiary-entry-for-members---new-type-load-only---template-tempdrym"><a name="diary"></a>Diary Entry for Members - ‘New’ type load only - Template TEMPDRYM</h2>
+<h2 id="a-namediaryadiary-entry-for-members---new-type-load-only---template-tempdrym"><a name="diary"></a>Diary Entry for Members - ‘New’ type load only - Template TEMPDRYM</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>diarydate,diaryref,diaryaction</p>
+  <p>diarydate,diaryref,diaryaction</p>
 
-  </div>
+</div>
 
-  <p>The fields with default values are:</p>
+<p>The fields with default values are:</p>
 
-  <div class="row">
-    <div class="col-md-6">
+<div class="row">
+  <div class="col-md-6">
 
-      <table class="table table-condensed">
-        <thead>
-          <tr>
-            <th style="text-align: left">Field</th>
-            <th style="text-align: left">Default Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: left">Diary Entry Status</td>
-            <td style="text-align: left">N - New</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">Diary Reference</td>
-            <td style="text-align: left">0</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">Diary Time</td>
-            <td style="text-align: left">00:00:00</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">Source of Diary Entry</td>
-            <td style="text-align: left">MEM - Member</td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-
-  <h2 id="a-namememaddramember-address-details---new-type-load-only---template-tempaddr"><a name="memaddr"></a>Member Address Details - ‘New’ type load only - Template TEMPADDR</h2>
-
-  <p>The data file format is:</p>
-
-  <div class="well">
-
-    <p>identifier,addressnumber,addressline1,addressline2,addressline3,addressline4,addressline5,postcode,telephoneeve,telephoneday</p>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Diary Entry Status</td>
+          <td style="text-align: left">N - New</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Diary Reference</td>
+          <td style="text-align: left">0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Diary Time</td>
+          <td style="text-align: left">00:00:00</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Source of Diary Entry</td>
+          <td style="text-align: left">MEM - Member</td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
+</div>
 
-  <p>where addressnumber is defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+<h2 id="a-namememaddramember-address-details---new-type-load-only---template-tempaddr"><a name="memaddr"></a>Member Address Details - ‘New’ type load only - Template TEMPADDR</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,addressnumber,addressline1,addressline2,addressline3,addressline4,addressline5,postcode,telephoneeve,telephoneday</p>
+
+</div>
+
+<p>where addressnumber is defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
 1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
 
-  <p>The fields with default values are:</p>
+<p>The fields with default values are:</p>
 
-  <div class="row">
-    <div class="col-md-6">
+<div class="row">
+  <div class="col-md-6">
 
-      <table class="table table-condensed">
-        <thead>
-          <tr>
-            <th style="text-align: left">Field</th>
-            <th style="text-align: left">Default Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: left">Member’s Current Flag</td>
-            <td style="text-align: left">N - No</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">Member’s Suspect Flag</td>
-            <td style="text-align: left">N - No</td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-
-  <h2 id="a-namememaddramember-address-details---update-type-load-only---template-tempaddu"><a name="memaddr"></a>Member Address Details - ‘Update’ type load only - Template TEMPADDU</h2>
-
-  <p>Any of the fields on the member address screen table can be updated, apart from the Member Number and Member Address Number, as these are the table’s mandatory fields.</p>
-
-  <p>The data file format is:</p>
-
-  <div class="well">
-
-    <p>identifier,addressnumber,addressline1,addressline2,addressline3,addressline4,addressline5,postcode,telephoneeve,telephoneday</p>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Member’s Current Flag</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Member’s Suspect Flag</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If any of the datalines in the datafile reference a member number and member address number that do not exist on Pension Master e.g. there is a dataline that references address number 2 but there is only 1 address for the member on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the datafile before you try to load the data again.</p>
-  </div>
+<h2 id="a-namememaddramember-address-details---update-type-load-only---template-tempaddu"><a name="memaddr"></a>Member Address Details - ‘Update’ type load only - Template TEMPADDU</h2>
 
-  <h2 id="a-namememcontamember-contribution-history---new-type-load-only---template-tempchst"><a name="memcont"></a>Member Contribution History - ‘New’ type load only - Template TEMPCHST</h2>
+<p>Any of the fields on the member address screen table can be updated, apart from the Member Number and Member Address Number, as these are the table’s mandatory fields.</p>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,datedue,daterecvd,transtype,conttype,amount</p>
+  <p>identifier,addressnumber,addressline1,addressline2,addressline3,addressline4,addressline5,postcode,telephoneeve,telephoneday</p>
 
-  </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If there are any datalines in the datafile which exist for the same contribution
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number and member address number that do not exist on Pension Master e.g. there is a dataline that references address number 2 but there is only 1 address for the member on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the datafile before you try to load the data again.</p>
+</div>
+
+<h2 id="a-namememcontamember-contribution-history---new-type-load-only---template-tempchst"><a name="memcont"></a>Member Contribution History - ‘New’ type load only - Template TEMPCHST</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,datedue,daterecvd,transtype,conttype,amount</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same contribution
 type, date due, member number, date received and transaction type, then an exception report will be created with the line number and the load will be abandoned.</p>
-  </div>
+</div>
 
-  <h2 id="a-namememinvamember-investment-history---new-type-load-only---template-tempihst"><a name="meminv"></a>Member Investment History - ‘New’ type load only - Template TEMPIHST</h2>
+<h2 id="a-namememinvamember-investment-history---new-type-load-only---template-tempihst"><a name="meminv"></a>Member Investment History - ‘New’ type load only - Template TEMPIHST</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,fund,datedue,daterecvd,dateinvested,transtype,conttype,amount,units</p>
+  <p>identifier,fund,datedue,daterecvd,dateinvested,transtype,conttype,amount,units</p>
 
-  </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If there are any datalines in the datafile which exist for the same member number, investment fund, contribution
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number, investment fund, contribution
 type, date due, date received, date invested and transaction type, then an exception report will be created with the line number and the load will be abandoned.</p>
-  </div>
+</div>
 
-  <h2 id="a-namememinvsetupamember-investment-setup-details---new-type-load-only---template-tempfund"><a name="meminvsetup"></a>Member Investment Setup Details - ‘New’ type load only - Template TEMPFUND</h2>
+<h2 id="a-namememinvsetupamember-investment-setup-details---new-type-load-only---template-tempfund"><a name="meminvsetup"></a>Member Investment Setup Details - ‘New’ type load only - Template TEMPFUND</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,schmemflag,effdate,fundcode,conttype,allocate%</p>
+  <p>identifier,schmemflag,effdate,fundcode,conttype,allocate%</p>
 
-  </div>
+</div>
 
-  <p>where schmemflag is defaulted to M, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+<p>where schmemflag is defaulted to M, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
 1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of M</a>.</p>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If there are any datalines in the datafile which exist for the same contribution
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same contribution
 type, effective date, fund code, member number and sch/mem flag, then an exception report will be created with the line number and the load will be abandoned.</p>
-  </div>
+</div>
 
-  <h2 id="a-namememcontrateamember-contribution-rate-percentage-details---new-type-load-only---template-temprate"><a name="memcontrate"></a>Member Contribution Rate Percentage Details - ‘New’ type load only - Template TEMPRATE</h2>
+<h2 id="a-namememcontrateamember-contribution-rate-percentage-details---new-type-load-only---template-temprate"><a name="memcontrate"></a>Member Contribution Rate Percentage Details - ‘New’ type load only - Template TEMPRATE</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,effectivedate,contributiontype,type,perflatrate,salary,formula,matrix</p>
+  <p>identifier,effectivedate,contributiontype,type,perflatrate,salary,formula,matrix</p>
 
-  </div>
+</div>
 
-  <p>All the field above have to be listed but they can refer to blank columns in your file.</p>
+<p>All the field above have to be listed but they can refer to blank columns in your file.</p>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If there are any datalines in the datafile which exist for the same contribution
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same contribution
 type, effective date, member number, then an exception report will be created with the line number and the load will be abandoned.</p>
-  </div>
+</div>
 
-  <h2 id="a-namememcontrateamember-contribution-rate-percentage-details---update-type-load-only---template-tempurat"><a name="memcontrate"></a>Member Contribution Rate Percentage Details - ‘Update’ type load only - Template TEMPURAT</h2>
+<h2 id="a-namememcontrateamember-contribution-rate-percentage-details---update-type-load-only---template-tempurat"><a name="memcontrate"></a>Member Contribution Rate Percentage Details - ‘Update’ type load only - Template TEMPURAT</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,effectivedate,contributiontype,type,perflatrate,salary,formula,matrix</p>
+  <p>identifier,effectivedate,contributiontype,type,perflatrate,salary,formula,matrix</p>
 
-  </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If any of the datalines in the datafile reference a member number, contribution code and effective date that do not exist on Pension Master, then that particular dataline will be ignored but will not stop the rest of the datalines being processed..</p>
-  </div>
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number, contribution code and effective date that do not exist on Pension Master, then that particular dataline will be ignored but will not stop the rest of the datalines being processed..</p>
+</div>
 
-  <h2 id="a-namememnotesamember-notes---new-type-load-only---template-tempnot"><a name="memnotes"></a>Member Notes - ‘New’ type load only - Template TEMPNOT</h2>
+<h2 id="a-namememnotesamember-notes---new-type-load-only---template-tempnot"><a name="memnotes"></a>Member Notes - ‘New’ type load only - Template TEMPNOT</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,notenum,note</p>
+  <p>identifier,notenum,note</p>
 
-  </div>
+</div>
 
-  <p>The fields with default values are:</p>
+<p>The fields with default values are:</p>
 
-  <div class="row">
-    <div class="col-md-6">
+<div class="row">
+  <div class="col-md-6">
 
-      <table class="table table-condensed">
-        <thead>
-          <tr>
-            <th style="text-align: left">Field</th>
-            <th style="text-align: left">Default Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: left">Notes Date</td>
-            <td style="text-align: left">Today’s date</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">Notes User</td>
-            <td style="text-align: left">User running the General Data Load</td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-
-  <div class="alert alert-danger" role="alert">
-    <p>Due to the possibility of notes containing characters such as commas (,), colons (:) etc, which are examples of delimiters, then L&amp;P Systems Ltd recommend that a tab delimitered file is used when loading member notes.</p>
-  </div>
-
-  <h2 id="a-namemultiplebatconamultiple-contribution-batch---new-type-load-only---template-tempconm"><a name="multiplebatcon"></a>Multiple Contribution Batch - ‘New’ type load only - Template TEMPCONM</h2>
-
-  <p>Pension Master can hold an unlimited number of Contributions type now against a scheme, rather than just the standard five (EEORD, EEAVC, ERORD,EEPR and ERPR. So this load is use if you want to create a batch with more than one contribution type.</p>
-
-  <div class="well">
-
-    <p>identifier,amount1,amount2,amount3,amount4,amount5</p>
-
-    <p>The batchnumber is created when the load is completed and the user get a popup to select the date due and received.</p>
-  </div>
-
-  <h2 id="a-namenihistani-history---new-type-load-only---template-tempnih"><a name="nihist"></a>NI History - ‘New’ type load only - Template TEMPNIH</h2>
-
-  <p>The data file format is:</p>
-
-  <div class="well">
-
-    <p>identifier,year,amount</p>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Notes Date</td>
+          <td style="text-align: left">Today’s date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Notes User</td>
+          <td style="text-align: left">User running the General Data Load</td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If there are any datalines in the datafile which exist for the same member number
+<div class="alert alert-danger" role="alert">
+  <p>Due to the possibility of notes containing characters such as commas (,), colons (:) etc, which are examples of delimiters, then L&amp;P Systems Ltd recommend that a tab delimitered file is used when loading member notes.</p>
+</div>
+
+<h2 id="a-namemultiplebatconamultiple-contribution-batch---new-type-load-only---template-tempconm"><a name="multiplebatcon"></a>Multiple Contribution Batch - ‘New’ type load only - Template TEMPCONM</h2>
+
+<p>Pension Master can hold an unlimited number of Contributions type now against a scheme, rather than just the standard five (EEORD, EEAVC, ERORD,EEPR and ERPR. So this load is use if you want to create a batch with more than one contribution type.</p>
+
+<div class="well">
+
+  <p>identifier,amount1,amount2,amount3,amount4,amount5</p>
+
+  <p>The batchnumber is created when the load is completed and the user get a popup to select the date due and received.</p>
+</div>
+
+<h2 id="a-namenihistani-history---new-type-load-only---template-tempnih"><a name="nihist"></a>NI History - ‘New’ type load only - Template TEMPNIH</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,year,amount</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
 and history year, then an exception report will be created with the line number and the load will be abandoned.</p>
-  </div>
+</div>
 
-  <h2 id="a-namenihistbatchani-history-batch-details---new-type-load-only---template-tempni"><a name="nihistbatch"></a>NI History Batch Details - ‘New’ type load only - Template TEMPNI</h2>
+<h2 id="a-namenihistbatchani-history-batch-details---new-type-load-only---template-tempni"><a name="nihistbatch"></a>NI History Batch Details - ‘New’ type load only - Template TEMPNI</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,batchnumber,niorder,amount</p>
+  <p>identifier,batchnumber,niorder,amount</p>
 
-  </div>
+</div>
 
-  <p>where batchnumber and niorder are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+<p>where batchnumber and niorder are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
 1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
 
-  <h2 id="a-namepthrsapart-time-service---new-type-load-only---template-temppthr"><a name="pthrs"></a>Part Time Service - ‘New’ type load only - Template TEMPPTHR</h2>
+<h2 id="a-namepthrsapart-time-service---new-type-load-only---template-temppthr"><a name="pthrs"></a>Part Time Service - ‘New’ type load only - Template TEMPPTHR</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,fromdate,parttimehours,fulltimehours</p>
+  <p>identifier,fromdate,parttimehours,fulltimehours</p>
 
-  </div>
+</div>
 
-  <p>The fields with default values are:</p>
+<p>The fields with default values are:</p>
 
-  <div class="row">
-    <div class="col-md-6">
+<div class="row">
+  <div class="col-md-6">
 
-      <table class="table table-condensed">
-        <thead>
-          <tr>
-            <th style="text-align: left">Field</th>
-            <th style="text-align: left">Default Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: left">Part Time Equivalent Service</td>
-            <td style="text-align: left">Same equation used to calculate this that is<br />used in the Part Time screen in Members</td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-
-  <h2 id="a-namepenapension-history---new-type-load-only---template-temppena"><a name="pen"></a>Pension History - ‘New’ type load only - Template TEMPPENA</h2>
-
-  <p>The data file format is:</p>
-
-  <div class="well">
-
-    <p>identifier,pensioncode,datetocommence,initpen</p>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Part Time Equivalent Service</td>
+          <td style="text-align: left">Same equation used to calculate this that is<br />used in the Part Time screen in Members</td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
+</div>
 
-  <h2 id="a-namepenapension-history---update-type-load-only---template-tempupna"><a name="pen"></a>Pension History - ‘Update’ type load only - Template TEMPUPNA</h2>
+<h2 id="a-namepenapension-history---new-type-load-only---template-temppena"><a name="pen"></a>Pension History - ‘New’ type load only - Template TEMPPENA</h2>
 
-  <p>Any of the fields on the pension history screen table can be updated, apart from the Member Number, Pension Code and Date to Commence, as these are the table’s mandatory fields.</p>
+<p>The data file format is:</p>
 
-  <p>The data file format is:</p>
+<div class="well">
 
-  <div class="well">
+  <p>identifier,pensioncode,datetocommence,initpen</p>
 
-    <p>identifier,pensioncode,datetocommence,initialpension,dateoflastinc,currentpension,currentspouses,dateofcessation</p>
+</div>
 
-  </div>
+<h2 id="a-namepenapension-history---update-type-load-only---template-tempupna"><a name="pen"></a>Pension History - ‘Update’ type load only - Template TEMPUPNA</h2>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If any of the datalines in the datafile reference a member number, pension code and date to commence that do not exist on Pension Master, then that particular dataline will be ignored but will not stop the rest of the datalines being processed.</p>
-  </div>
+<p>Any of the fields on the pension history screen table can be updated, apart from the Member Number, Pension Code and Date to Commence, as these are the table’s mandatory fields.</p>
 
-  <h2 id="a-namesalbatchasalary-batch-details---new-type-load-only---template-tempsal"><a name="salbatch"></a>Salary Batch Details - ‘New’ type load only - Template TEMPSAL</h2>
+<p>The data file format is:</p>
 
-  <p>The data file format is:</p>
+<div class="well">
 
-  <div class="well">
+  <p>identifier,pensioncode,datetocommence,initialpension,dateoflastinc,currentpension,currentspouses,dateofcessation</p>
 
-    <p>identifier,batchnumber,batchorder,amount1,amount2,amount3,amount4,amount5</p>
+</div>
 
-  </div>
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number, pension code and date to commence that do not exist on Pension Master, then that particular dataline will be ignored but will not stop the rest of the datalines being processed.</p>
+</div>
 
-  <p>where batchnumber and batchorder are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+<h2 id="a-namesalbatchasalary-batch-details---new-type-load-only---template-tempsal"><a name="salbatch"></a>Salary Batch Details - ‘New’ type load only - Template TEMPSAL</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,batchnumber,batchorder,amount1,amount2,amount3,amount4,amount5</p>
+
+</div>
+
+<p>where batchnumber and batchorder are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
 1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
 
-  <h2 id="a-namesalhist1asalary-history-1---new-type-load-only---template-tempsal1"><a name="salhist1"></a>Salary History 1 - ‘New’ type load only - Template TEMPSAL1</h2>
+<h2 id="a-namesalhist1asalary-history-1---new-type-load-only---template-tempsal1"><a name="salhist1"></a>Salary History 1 - ‘New’ type load only - Template TEMPSAL1</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,saldate,amount1,amount2,amount3</p>
+  <p>identifier,saldate,amount1,amount2,amount3</p>
 
-  </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If there are any datalines in the datafile which exist for the same member number
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
 and salary date, then an exception report will be created with the line number and the load will be abandoned.</p>
-  </div>
+</div>
 
-  <h2 id="a-namesalhist1asalary-history-1---update-type-load-only---template-tempusl1"><a name="salhist1"></a>Salary History 1 - ‘Update’ type load only - Template TEMPUSL1</h2>
+<h2 id="a-namesalhist1asalary-history-1---update-type-load-only---template-tempusl1"><a name="salhist1"></a>Salary History 1 - ‘Update’ type load only - Template TEMPUSL1</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,saldate,amount1,amount2,amount3</p>
+  <p>identifier,saldate,amount1,amount2,amount3</p>
 
-  </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
-  </div>
+<div class="alert alert-danger" role="alert">
+  <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+</div>
 
-  <h2 id="a-namesalhist2asalary-history-2---new-type-load-only---template-tempsal2"><a name="salhist2"></a>Salary History 2 - ‘New’ type load only - Template TEMPSAL2</h2>
+<h2 id="a-namesalhist2asalary-history-2---new-type-load-only---template-tempsal2"><a name="salhist2"></a>Salary History 2 - ‘New’ type load only - Template TEMPSAL2</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,saldate,amount1,amount2,amount3</p>
+  <p>identifier,saldate,amount1,amount2,amount3</p>
 
-  </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>If there are any datalines in the datafile which exist for the same member number
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
 and salary date, then an exception report will be created with the line number and the load will be abandoned.</p>
-  </div>
+</div>
 
-  <h2 id="a-namesalhist2asalary-history-2---update-type-load-only---template-tempusl2"><a name="salhist2"></a>Salary History 2 - ‘Update’ type load only - Template TEMPUSL2</h2>
+<h2 id="a-namesalhist2asalary-history-2---update-type-load-only---template-tempusl2"><a name="salhist2"></a>Salary History 2 - ‘Update’ type load only - Template TEMPUSL2</h2>
 
-  <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-  <div class="well">
+<div class="well">
 
-    <p>identifier,saldate,amount1,amount2,amount3</p>
+  <p>identifier,saldate,amount1,amount2,amount3</p>
 
-  </div>
+</div>
 
-  <div class="alert alert-danger" role="alert">
-    <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+<div class="alert alert-danger" role="alert">
+  <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+</div>
 
-    <h2 id="a-namesalhist3asalary-history-3---new-type-load-only---template-tempsal3"><a name="salhist3"></a>Salary History 3 - ‘New’ type load only - Template TEMPSAL3</h2>
+<h2 id="a-namesalhist3asalary-history-3---new-type-load-only---template-tempsal3"><a name="salhist3"></a>Salary History 3 - ‘New’ type load only - Template TEMPSAL3</h2>
 
-    <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-    <div class="well">
+<div class="well">
 
-      <p>identifier,saldate,amount1,amount2,amount3</p>
+  <p>identifier,saldate,amount1,amount2,amount3</p>
 
-    </div>
+</div>
 
-    <div class="alert alert-danger" role="alert">
-      <p>If there are any datalines in the datafile which exist for the same member number
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
 and salary date, then an exception report will be created with the line number and the load will be abandoned.</p>
-    </div>
+</div>
 
-    <h2 id="a-namesalhist3asalary-history-3---update-type-load-only---template-tempusl3"><a name="salhist3"></a>Salary History 3 - ‘Update’ type load only - Template TEMPUSL3</h2>
+<h2 id="a-namesalhist3asalary-history-3---update-type-load-only---template-tempusl3"><a name="salhist3"></a>Salary History 3 - ‘Update’ type load only - Template TEMPUSL3</h2>
 
-    <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-    <div class="well">
+<div class="well">
 
-      <p>identifier,saldate,amount1,amount2,amount3</p>
+  <p>identifier,saldate,amount1,amount2,amount3</p>
 
-    </div>
+</div>
 
-    <div class="alert alert-danger" role="alert">
-      <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+<div class="alert alert-danger" role="alert">
+  <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+</div>
 
-      <h2 id="a-namesalhist4asalary-history-4---new-type-load-only---template-tempsal4"><a name="salhist4"></a>Salary History 4 - ‘New’ type load only - Template TEMPSAL4</h2>
+<h2 id="a-namesalhist4asalary-history-4---new-type-load-only---template-tempsal4"><a name="salhist4"></a>Salary History 4 - ‘New’ type load only - Template TEMPSAL4</h2>
 
-      <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-      <div class="well">
+<div class="well">
 
-        <p>identifier,saldate,amount1,amount2,amount3</p>
+  <p>identifier,saldate,amount1,amount2,amount3</p>
 
-      </div>
+</div>
 
-      <div class="alert alert-danger" role="alert">
-        <p>If there are any datalines in the datafile which exist for the same member number
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
 and salary date, then an exception report will be created with the line number and the load will be abandoned.</p>
-      </div>
+</div>
 
-      <h2 id="a-namesalhist4asalary-history-4---update-type-load-only---template-tempusl4"><a name="salhist4"></a>Salary History 4 - ‘Update’ type load only - Template TEMPUSL4</h2>
+<h2 id="a-namesalhist4asalary-history-4---update-type-load-only---template-tempusl4"><a name="salhist4"></a>Salary History 4 - ‘Update’ type load only - Template TEMPUSL4</h2>
 
-      <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-      <div class="well">
+<div class="well">
 
-        <p>identifier,saldate,amount1,amount2,amount3</p>
+  <p>identifier,saldate,amount1,amount2,amount3</p>
 
-      </div>
+</div>
 
-      <div class="alert alert-danger" role="alert">
-        <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+<div class="alert alert-danger" role="alert">
+  <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+</div>
 
-        <h2 id="a-namespeccodeaspecial-codes---new-type-load-only---template-tempspec"><a name="speccode"></a>Special Codes - ‘New’ type load only - Template TEMPSPEC</h2>
+<h2 id="a-namespeccodeaspecial-codes---new-type-load-only---template-tempspec"><a name="speccode"></a>Special Codes - ‘New’ type load only - Template TEMPSPEC</h2>
 
-        <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-        <div class="well">
+<div class="well">
 
-          <p>identifier,codegroup,specialcode</p>
+  <p>identifier,codegroup,specialcode</p>
 
-        </div>
+</div>
 
-        <h2 id="a-nametvinatransfer-in-details---new-type-load-only---template-temptvin"><a name="tvin"></a>Transfer In Details - ‘New’ type load only - Template TEMPTVIN</h2>
+<h2 id="a-nametvinatransfer-in-details---new-type-load-only---template-temptvin"><a name="tvin"></a>Transfer In Details - ‘New’ type load only - Template TEMPTVIN</h2>
 
-        <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-        <div class="well">
+<div class="well">
 
-          <p>identifier,transferincode,transferintype,transferindate,transfervalue</p>
+  <p>identifier,transferincode,transferintype,transferindate,transfervalue</p>
 
-        </div>
+</div>
 
-        <h2 id="a-nametvoutatransfer-out-details---new-type-load-only---template-temptvo"><a name="tvout"></a>Transfer Out Details - ‘New’ type load only - Template TEMPTVO</h2>
+<h2 id="a-nametvoutatransfer-out-details---new-type-load-only---template-temptvo"><a name="tvout"></a>Transfer Out Details - ‘New’ type load only - Template TEMPTVO</h2>
 
-        <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-        <div class="well">
+<div class="well">
 
-          <p>identifier,transferoutcode,transferdateagree,transfervalue</p>
+  <p>identifier,transferoutcode,transferdateagree,transfervalue</p>
 
-        </div>
+</div>
 
-        <h2 id="a-namepricesaunit-price-details---new-type-load-only---template-tempprc"><a name="prices"></a>Unit Price Details - ‘New’ type load only - Template TEMPPRC</h2>
+<h2 id="a-namepricesaunit-price-details---new-type-load-only---template-tempprc"><a name="prices"></a>Unit Price Details - ‘New’ type load only - Template TEMPPRC</h2>
 
-        <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-        <div class="well">
+<div class="well">
 
-          <p>fundcode,unitpricedate,bidprice,midprice,offerprice</p>
+  <p>fundcode,unitpricedate,bidprice,midprice,offerprice</p>
 
-        </div>
+</div>
 
-        <p>The fields with default values are:</p>
+<p>The fields with default values are:</p>
 
-        <div class="row">
-          <div class="col-md-6">
+<div class="row">
+  <div class="col-md-6">
 
-            <table class="table table-condensed">
-              <thead>
-                <tr>
-                  <th style="text-align: left">Field</th>
-                  <th style="text-align: left">Default Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="text-align: left">Bid Price</td>
-                  <td style="text-align: left">0</td>
-                </tr>
-                <tr>
-                  <td style="text-align: left">Mid Price</td>
-                  <td style="text-align: left">0</td>
-                </tr>
-                <tr>
-                  <td style="text-align: left">Offer Price</td>
-                  <td style="text-align: left">0</td>
-                </tr>
-              </tbody>
-            </table>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Bid Price</td>
+          <td style="text-align: left">0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Mid Price</td>
+          <td style="text-align: left">0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Offer Price</td>
+          <td style="text-align: left">0</td>
+        </tr>
+      </tbody>
+    </table>
 
-          </div>
-        </div>
+  </div>
+</div>
 
-        <div class="alert alert-danger" role="alert">
-          <p>If there are any datalines in the datafile which exist for the same fund code and unit price date, then an exception report will be created with the line number and the load will be abandoned.</p>
-        </div>
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same fund code and unit price date, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
 
-        <h2 id="a-nameudhauser-defined-history---new-type-load-only---template-tempudh"><a name="udh"></a>User Defined History - ‘New’ type load only - Template TEMPUDH</h2>
+<h2 id="a-nameudhauser-defined-history---new-type-load-only---template-tempudh"><a name="udh"></a>User Defined History - ‘New’ type load only - Template TEMPUDH</h2>
 
-        <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-        <div class="well">
+<div class="well">
 
-          <p>identifier,udhtype,udhdate,amount1,amount2,amount3</p>
+  <p>identifier,udhtype,udhdate,amount1,amount2,amount3</p>
 
-        </div>
+</div>
 
-        <div class="alert alert-danger" role="alert">
-          <p>If there are any datalines in the datafile which exist for the same member number,
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number,
 user defined history type and date, then an exception report will be created with the line number and the load will be abandoned.</p>
-        </div>
+</div>
 
-        <h2 id="a-nameudhauser-defined-history---update-type-load-only---template-tempudhu"><a name="udh"></a>User Defined History - ‘Update’ type load only - Template TEMPUDHU</h2>
+<h2 id="a-nameudhauser-defined-history---update-type-load-only---template-tempudhu"><a name="udh"></a>User Defined History - ‘Update’ type load only - Template TEMPUDHU</h2>
 
-        <p>Any of the fields on the User Defined History table can be updated, apart from the Member Number, User Defined History Type and User Defined History Date, as these are the table’s mandatory fields.</p>
+<p>Any of the fields on the User Defined History table can be updated, apart from the Member Number, User Defined History Type and User Defined History Date, as these are the table’s mandatory fields.</p>
 
-        <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-        <div class="well">
+<div class="well">
 
-          <p>identifier,udhtype,udhdate,amount1,amount2,amount3,amount4,amount5</p>
+  <p>identifier,udhtype,udhdate,amount1,amount2,amount3,amount4,amount5</p>
 
-        </div>
+</div>
 
-        <div class="alert alert-danger" role="alert">
-          <p>If there are any datalines in the datafile which exist for the same member number,
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number,
 user defined history type and date, then an exception report will be created with the line number and the load will be abandoned.</p>
-        </div>
+</div>
 
-        <h2 id="a-nameudsauser-defined-screens---new-type-load-only---template-tempuds"><a name="uds"></a>User Defined Screens - ‘New’ type load only - Template TEMPUDS</h2>
+<h2 id="a-nameudsauser-defined-screens---new-type-load-only---template-tempuds"><a name="uds"></a>User Defined Screens - ‘New’ type load only - Template TEMPUDS</h2>
 
-        <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-        <div class="well">
+<div class="well">
 
-          <p>identifier,udstype,field1,field2,field3,field4,field5,field6,field7,field8,field9,field10,field11,field12</p>
+  <p>identifier,udstype,field1,field2,field3,field4,field5,field6,field7,field8,field9,field10,field11,field12</p>
 
-        </div>
+</div>
 
-        <div class="alert alert-danger" role="alert">
-          <p>If there are any datalines in the datafile which exist for the same member number and
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number and
 user defined screen type, then an exception report will be created with the line number and the load will be abandoned.</p>
-        </div>
+</div>
 
-        <h2 id="a-nameudsauser-defined-screens---update-type-load-only---template-tempudsu"><a name="uds"></a>User Defined Screens - ‘Update’ type load only - Template TEMPUDSU</h2>
+<h2 id="a-nameudsauser-defined-screens---update-type-load-only---template-tempudsu"><a name="uds"></a>User Defined Screens - ‘Update’ type load only - Template TEMPUDSU</h2>
 
-        <p>Any of the fields on the User Defined Screens table can be updated, apart from the Member Number and User Defined Screen Type, as these are the table’s mandatory fields.</p>
+<p>Any of the fields on the User Defined Screens table can be updated, apart from the Member Number and User Defined Screen Type, as these are the table’s mandatory fields.</p>
 
-        <p>The data file format is:</p>
+<p>The data file format is:</p>
 
-        <div class="well">
+<div class="well">
 
-          <p>identifier,udstype,field1,field2,field3,field4,field5,field6,field7,field8,field9,field10,field11,field12</p>
+  <p>identifier,udstype,field1,field2,field3,field4,field5,field6,field7,field8,field9,field10,field11,field12</p>
 
-        </div>
+</div>
 
-        <div class="alert alert-danger" role="alert">
-          <p>If there are any datalines in the datafile which exist for the same member number and
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number and
 user defined screen type, then an exception report will be created with the line number and the load will be abandoned.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 09/05/2017 12:53:38.</p>
+        <p>Build Date 09/05/2017 14:05:38.</p>
       </div>
     </div>
 
