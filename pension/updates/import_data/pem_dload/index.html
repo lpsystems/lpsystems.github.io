@@ -321,160 +321,161 @@ is run.</p>
 <div class="screen">
   <p><img src="/pension/images/pem_dload16.jpg" alt="" /></p>
 
-  <p>The process starts by checking that the data file entered doesn’t contains blank lines
+</div>
+
+<p>The process starts by checking that the data file entered doesn’t contains blank lines
 nor is empty. If it is then an appropriate message will be displayed informing the
 user of this. The process is then abandoned.</p>
 
-  <p>The process will continue to check that the data inside the data file is correct and
+<p>The process will continue to check that the data inside the data file is correct and
 valid. If any formatting errors are found, then a Formatting report will be produced
 listing these errors. If any data is found to be invalid then an Exceptions report
 will be produced, listing the exceptions.</p>
 
-  <p>If there are no formatting errors, then a report will be produced out to Microsoft Excel, which will either list all the new records that have been produced for a ‘New’ type load, or all the records which will be amended with data fro an ‘Update’ type load.</p>
+<p>If there are no formatting errors, then a report will be produced out to Microsoft Excel, which will either list all the new records that have been produced for a ‘New’ type load, or all the records which will be amended with data fro an ‘Update’ type load.</p>
 
-  <p>If all data is present and correct, then the user can continue to load the data. Only
+<p>If all data is present and correct, then the user can continue to load the data. Only
 Actual loads will load into the actual database tables.</p>
 
-  <h2 id="a-namedeleteadeleting-a-general-data-load"><a name="delete"></a>Deleting a General Data Load</h2>
+<h2 id="a-namedeleteadeleting-a-general-data-load"><a name="delete"></a>Deleting a General Data Load</h2>
 
-  <p>Click ‘Delete’.</p>
+<p>Click ‘Delete’.</p>
 
-  <p>A load must have been selected before this option can be used.</p>
+<p>A load must have been selected before this option can be used.</p>
 
-  <p>Template loads cannot be deleted. If one is trying to be deleted, then a warning message
+<p>Template loads cannot be deleted. If one is trying to be deleted, then a warning message
 will appear informing the user that this cannot happen.</p>
 
-  <h2 id="a-nameadd-infoaadditional-information"><a name="add info"></a>Additional Information</h2>
+<h2 id="a-nameadd-infoaadditional-information"><a name="add info"></a>Additional Information</h2>
 
-  <p>If the Contribution History Batch Details, Salary Batch Details or N.I. History Batch
+<p>If the Contribution History Batch Details, Salary Batch Details or N.I. History Batch
 Details table is being loaded into, then extra information is needed in order for
 the process to complete successfully.</p>
 
-  <p>During the early stage of the Run process, one of the following pop-up windows will
+<p>During the early stage of the Run process, one of the following pop-up windows will
 appear to the screen:</p>
 
-  <div class="screen">
-    <p><img src="/pension/images/pem_dload8.jpg" alt="Contribution History Batch Details" /></p>
+<div class="screen">
+  <p><img src="/pension/images/pem_dload8.jpg" alt="Contribution History Batch Details" /></p>
 
-    <p>Contribution History Batch Details</p>
-  </div>
+  <p>Contribution History Batch Details</p>
+</div>
 
-  <p>Enter the Date Due, Date Received and Transaction Type. The Date Received cannot be
+<p>Enter the Date Due, Date Received and Transaction Type. The Date Received cannot be
 before the Date Due. Click the calendar icon to see a calendar for the date fields and a list
 of valid transaction types for the Transaction Type field.</p>
 
-  <div class="screen">
-    <p><img src="/pension/images/pem_dload9.jpg" alt="Salary Batch Details" /></p>
+<div class="screen">
+  <p><img src="/pension/images/pem_dload9.jpg" alt="Salary Batch Details" /></p>
 
-    <p>Salary Batch Details</p>
-  </div>
+  <p>Salary Batch Details</p>
+</div>
 
-  <p>Enter the Batch Date and Salary Screen. Click the calendar icon to see a calendar for the date
+<p>Enter the Batch Date and Salary Screen. Click the calendar icon to see a calendar for the date
 field and a list of Salary Screens for the Salary Screen field.</p>
 
-  <div class="screen">
-    <p><img src="/pension/images/pem_dload10.jpg" alt="N.I. History Batch Details" /></p>
+<div class="screen">
+  <p><img src="/pension/images/pem_dload10.jpg" alt="N.I. History Batch Details" /></p>
 
-    <p>N.I. History Batch Details</p>
-  </div>
+  <p>N.I. History Batch Details</p>
+</div>
 
-  <p>Enter the Batch Date. Click the calendar icon to see the calendar.</p>
+<p>Enter the Batch Date. Click the calendar icon to see the calendar.</p>
 
-  <p>When these details have been entered, they will help create a Batch Header. Once an
+<p>When these details have been entered, they will help create a Batch Header. Once an
 actual load has been run, the batch can be viewed in the <a href="/pension/updates/pem_bat/#Introduction">Batch
 Data Input</a> program.</p>
 
-  <h2 id="a-namemem-notesamember-notes"><a name="mem notes"></a>Member Notes</h2>
+<h2 id="a-namemem-notesamember-notes"><a name="mem notes"></a>Member Notes</h2>
 
-  <p>If the ‘Member Notes?’ field has been ticked in Screen 1, then the following pop-up
+<p>If the ‘Member Notes?’ field has been ticked in Screen 1, then the following pop-up
 window will appear during the run process:</p>
 
-  <div class="screen">
-    <p><img src="/pension/images/pem_dload11.jpg" alt="Member Notes" /></p>
+<div class="screen">
+  <p><img src="/pension/images/pem_dload11.jpg" alt="Member Notes" /></p>
 
-    <p>Member Notes</p>
-  </div>
+  <p>Member Notes</p>
+</div>
 
-  <p><a name="rec_type"></a><strong>RECORD TYPE</strong> - This field will default to the record
+<p><a name="rec_type"></a><strong>RECORD TYPE</strong> - This field will default to the record
 type entered in Screen 1. You cannot enter into this field.</p>
 
-  <p><a name="note"></a><strong>NOTE</strong> - Enter the note you wish to send through to each member
+<p><a name="note"></a><strong>NOTE</strong> - Enter the note you wish to send through to each member
 in the data file.</p>
 
-  <p><a name="attach"></a><strong>ATTACH</strong> - Tick this field if there is data in the data
+<p><a name="attach"></a><strong>ATTACH</strong> - Tick this field if there is data in the data
 file which can be attached to the note.</p>
 
-  <p><a name="start"></a><strong>START</strong> - If the Attach field is ticked then you will be
+<p><a name="start"></a><strong>START</strong> - If the Attach field is ticked then you will be
 required to enter a value here. This field has the same principle as the <a href="/pension/updates/import_data/pem_dload/#start">Start</a> field
 in Screen 2.</p>
 
-  <p><a name="length"></a><strong>LENGTH</strong> - This field will only be available if the record
+<p><a name="length"></a><strong>LENGTH</strong> - This field will only be available if the record
 type is ‘Flat’. In the case of this, then a value must be entered. This field has
 the same principle as the <a href="/pension/updates/import_data/pem_dload/#length">Length</a> field in Screen
 2.</p>
 
-  <h2 id="a-namenavigateanavigating-between-screens"><a name="navigate"></a>Navigating Between Screens</h2>
+<h2 id="a-namenavigateanavigating-between-screens"><a name="navigate"></a>Navigating Between Screens</h2>
 
-  <p>Click ‘Menu’. A pop-up menu will open on the screen which allows the user to pick
+<p>Click ‘Menu’. A pop-up menu will open on the screen which allows the user to pick
 one of the screens available. Click ‘Cancel’ to abort the screen selection process.</p>
 
-  <p>The menu selection pop-up is as follows:</p>
+<p>The menu selection pop-up is as follows:</p>
 
-  <div class="screen">
-    <p><img src="/pension/images/pem_dload12.jpg" alt="Menu Screen Selection" /></p>
+<div class="screen">
+  <p><img src="/pension/images/pem_dload12.jpg" alt="Menu Screen Selection" /></p>
 
-    <p>Menu Screen Selection</p>
+  <p>Menu Screen Selection</p>
+</div>
+
+<h2 id="a-namereportareporting-a-load"><a name="report"></a>Reporting a Load</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload13.jpg" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>The options are as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Print current record</strong></td>
+          <td>Produces a report of the translation details currently being viewed.</td>
+        </tr>
+        <tr>
+          <td><strong>Print all selected record(s)</strong></td>
+          <td>Produces a report for all the translation codes selected.</td>
+        </tr>
+        <tr>
+          <td><strong>Select record(s) to print</strong></td>
+          <td>Allows the user to select the records for which a report will be produced for.</td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
+</div>
 
-  <h2 id="a-namereportareporting-a-load"><a name="report"></a>Reporting a Load</h2>
-
-  <p>Click the ‘Report’ icon.</p>
-
-  <p>The following window now appears:</p>
-
-  <div class="screen">
-    <p><img src="/pension/images/pem_dload13.jpg" alt="Select Report Options Window" /></p>
-
-    <p>Select Report Options Window</p>
-  </div>
-
-  <p>The options are as follows:</p>
-
-  <div class="row">
-    <div class="col-md-6">
-
-      <table class="table table-condensed">
-        <tbody>
-          <tr>
-            <td><strong>Print current record</strong></td>
-            <td>Produces a report of the translation details currently being viewed.</td>
-          </tr>
-          <tr>
-            <td><strong>Print all selected record(s)</strong></td>
-            <td>Produces a report for all the translation codes selected.</td>
-          </tr>
-          <tr>
-            <td><strong>Select record(s) to print</strong></td>
-            <td>Allows the user to select the records for which a report will be produced for.</td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-
-  <p>Select the appropriate option and click ‘OK’. Click ‘Cancel’ to exit the printing
+<p>Select the appropriate option and click ‘OK’. Click ‘Cancel’ to exit the printing
 or ‘Help’ to display this help text.</p>
 
-  <h2 id="a-nameexitaexit-program"><a name="exit"></a>Exit Program</h2>
+<h2 id="a-nameexitaexit-program"><a name="exit"></a>Exit Program</h2>
 
-  <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
-</div>
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 15/05/2017 12:55:48.</p>
+        <p>Build Date 15/05/2017 14:05:38.</p>
       </div>
     </div>
 
