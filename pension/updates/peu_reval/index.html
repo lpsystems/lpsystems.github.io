@@ -56,8 +56,7 @@
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
 
-<p>The Care Revaluation Run calculates new pension values based upon either a percentage
-rate or the result of a formula.</p>
+<p>The Care Revaluation Run calculates new pension values based upon the result of a formula.</p>
 
 <p>The program is split into 4 main sections described as follows:</p>
 
@@ -117,15 +116,16 @@ each care code type. This allows them to be saved, using a descriptive name, for
 
 <h2 id="a-namerunarun-care-revaluation-runs"><a name="Run"></a>Run CARE Revaluation Runs</h2>
 
-<p>Click ‘Run’, and then select either ‘Actual’ or’Provisional’ option from the pop-up window.</p>
+<p>Click ‘Run’, and then select either ‘Actual’ or ‘Provisional’ option from the pop-up window.</p>
 
 <p>Provisional option allows an revaluation run to be performed but <strong>does not update</strong> the
 Care History Screens.</p>
 
-<p>Then you have the option of doing a Revalualtion Run or a Recalculation of Revaluations Run. The Revaluation Run simply calculates the revaluation and updates the members care screen. The Recalculation of Revaluation Run recalculates from either 
+<p>Then you have the option of doing a Revalualtion Run or a <a href="#recalrevalrun">Recalculation of Revaluation Run </a>. The Revaluation Run simply calculates the revaluation and updates the members care screen. 
+The Recalculation of Revaluation Run recalculates from either:
 * The first revaluation record on the members revaluation screen
 * Date Joined for Pension
-* You indicate the date from which the recalculation of the  revaluation is to commence</p>
+* You indicate the date from which the recalculation of the revaluation is to commence</p>
 
 <p>A small Run Parameters window is displayed allowing you enter the scheme code and the date of the Care
 Run to be entered:</p>
@@ -146,12 +146,6 @@ for increases to this scheme.</p>
 <p><a name="incr_pp_date"></a><strong>REVALUATION DATE</strong> - Enter the date from which your pension
 increases are applicable in the format ddmmyy or dd/mm/yyyy. A value must be entered
 in this field and the date must be a valid date.</p>
-
-<p>This date is used to update the Date of Last Increase on the History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension History Screen">Pension
-History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension History Screen">Deferred Pension
-History</a>) and also to generate a new line on the Increase History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension Increase History Screen">Pension
-Increase History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension Increase History Screen">Deferred
-Pension Increase History</a>).</p>
 
 <p><a name="incr_pp_saved"></a><strong>USE A SAVED REVALUATION PARAMETER?</strong> - Check the tick
 box if you wish to select a previously saved Increase Parameter.</p>
@@ -185,17 +179,14 @@ When the selection criteria have been entered click on ‘OK’ to proceed or cl
 This simply states that all members have been selected and that the processing could
 possibly take some time.</p>
 
-<p>The following screen is displayed if Pensioners have been selected using the Run Parameter
-window:</p>
+<p>The following screen is displayed if saved parmeter wasn’t selected using
+the Run Parameter window:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/per_reval4.jpg" alt="Provisional Pension Increase Run Screen" /></p>
+  <p><img src="/pension/images/per_reval4.jpg" alt="CARE Increase Run Screen" /></p>
 
   <p>CARE Pension Increase Run Screen</p>
 </div>
-
-<p>The following screen is displayed if saved parmeter wasn’t selected using
-the Run Parameter window:</p>
 
 <p>You are now given the option to run a quote before the actual care run. You would use this option if you needed the results of a current quote in the formulae for your care run. Therefore if you select Y then in the next field you are able to select a quotation type that you have set up for that scheme. On selecting the quote to run, the batch quotation run will be triggered in the background</p>
 
@@ -220,13 +211,146 @@ If a member has a date joined plan but it is after the revaluation date, then th
 
 <p>If you had selected to run a provisional the process has now completed. However if you opted to run an actual run you are given a message asking if you want to update the revaluations. If you select to update the member records then the revaluation is written back to screen 1 and screen 2 of the members care record. The user is now offered the option to save the care revaluation parameters to that scheme for further use</p>
 
+<h2 id="a-nameeditaedit-a-saved-care-revaluation-run"><a name="Edit"></a>Edit a Saved CARE Revaluation Run</h2>
+
+<p>Click ‘Run’, and then select either ‘Actual’ or ‘Provisional’ option from the pop-up window.</p>
+
+<p>A small Run Parameters window is displayed allowing you enter the scheme code and the date of the Care
+Run to be entered:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval5.jpg" alt="Run Parameters Window" /></p>
+
+  <p>Run Parameters Window</p>
+</div>
+
+<p>This window allows additional run parameters to be entered as follows:</p>
+
+<p><a name="pp_scheme"></a><strong>SCHEME</strong> - Enter the Scheme Code or select a code from
+the lookup list. The code that is entered will be used to select only members for
+this scheme. It will also allow any increase parameters that are saved to be re-used
+for increases to this scheme.</p>
+
+<p><a name="incr_pp_date"></a><strong>REVALUATION DATE</strong> - Enter the date from which your pension
+increases are applicable in the format ddmmyy or dd/mm/yyyy. A value must be entered
+in this field and the date must be a valid date.</p>
+
+<p><a name="incr_pp_saved"></a><strong>USE A SAVED REVALUATION PARAMETER?</strong> - Check the tick
+box to select a previously saved Increase Parameter.</p>
+
+<p><a name="incr_pp_formula"></a>** ACCESS PARAMETER FORMUALE SCREEN?** - Check the tick
+box to access the edit the formula. Can only be accessed by users with administration status.</p>
+
+<p>A lookup list will be displayed showing all the saved parameters for that particular scheme and pension type</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval6.jpg" alt="Saved Parameters Window" /></p>
+
+  <p>Saved Parameters Window</p>
+</div>
+
+<p>The following screen is displayed if showing all the formulae assigned to each CARE code.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval7.jpg" alt="CARE Increase Run Screen" /></p>
+
+  <p>CARE Pension Increase Run Screen- Edit</p>
+</div>
+
+<p>Tab down to edit or add a CARE code press run and the process is the same as above.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval7.jpg" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2 id="a-namerecalrevalrunarun-care-revaluation-runs---recalculation-of-revaluation-run"><a name="recalrevalrun"></a>Run CARE Revaluation Runs - Recalculation of Revaluation Run</h2>
+
+<p>Click ‘Run’, and then select either ‘Actual’ or ‘Provisional’ option from the pop-up window.</p>
+
+<p>Provisional option allows an revaluation run to be performed but <strong>does not update</strong> the
+Care History Screens.</p>
+
+<p>The Recalculation of Revaluation Run recalculates from either:
+* The first revaluation record on the members revaluation screen
+* Date Joined for Pension
+* You indicate the date from which the recalculation of the revaluation is to commence</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>Please be aware that by using this Revaluation Type, you will not be able to undo the records if mistakes are made. The undo option in this program simply removes the last CARE Revaluation History record for the member. It doesn’t return the reocrd to its orginal state.</p>
+</div>
+
+<p>A Run Parameters window is displayed allowing you enter the scheme code and which option you wish to Run:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval8.jpg" alt="Run Parameters Window" /></p>
+
+  <p>Run Parameters Window - Recalculation of Revaluation</p>
+</div>
+
+<p><a name="pp_option1"></a><strong>OPTION 1</strong> Recalculation from 1st revaluation record on revaluation screen. - The recalculation process takes the earliest date on the care screen and uses that as the revaluation date for the first recalculation and then reruns and overwrites. Then it goes to the second earliest revaluation date and does the same process and so on and so on till the latest date.  This is the default option.</p>
+
+<p><a name="pp_option2"></a><strong>OPTION 2</strong> Revaluation from date joined for pension.- All existing records for that member for that care code will be removed and all newly calculated records will be added on. As a result, when selecting this option you are asked twice if you are sure you want to use the option.</p>
+
+<p>This option has 3 additional parameters that are filled in under the ‘Option 2 Only’ section so that the dates of each revaluation can be determined. This information can also be entered at scheme level under the Care Titles screen. If there are values in the Care Tilte screen at scheme level, the ‘Option 2 Only’ section will be auto populated with these values but they can be overwritten if required.</p>
+
+<ul>
+  <li>Revaluation Frequency
+    <ul>
+      <li>Annual</li>
+      <li>Biannual</li>
+      <li>Quarterly</li>
+      <li>Monthly</li>
+    </ul>
+  </li>
+  <li>Effective date type
+    <ul>
+      <li>Renewal date</li>
+      <li>Calendar year</li>
+    </ul>
+  </li>
+  <li>Day of Revaluation
+    <ul>
+      <li>Month Start</li>
+      <li>Month End</li>
+      <li>Specific Day in Month</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Then assumptions for frequency; 
+* If the frequency is annual and the effective date is renewal year with a value of 1/7 and the day of revaluation day was ‘Month End’, the revaluation date would be 30/6 after the date joined for pension for the first revaluation and the next revaluation would be 30/6 of the next year etc. If it is calendar year, it would be 31/12 after the date joined for pension for the first revaluation and the next revaluation would be 31/12 of the next year etc.
+* If the frequency is biannual and the effective date is renewal year with a value of 1/3 and the day of revaluation day was ‘Month End’, the revaluation date would be 31/8 if the date joined for pension was prior to 31/8 or 28/2 if after 31/8 for the first revaluation and the next revaluation would be six months later. If it was calendar year, it would be 30/6 if the date joined for pension was prior to 30/6 but 31/12 if it was after 30/6 for the first revaluation. The next revaluation would be 6 months later. 
+* If the frequency is quarterly and the effective date is renewal year with a value of 1/3, and the day of revaluation day was ‘Month End’, the revaluation date would be 31/5 after the date joined for pension if date joined for pension was prior to 31/5 or 31/8, 30/11 or 28/2 depending on what month the member joined within the renewal year for the first revaluation and the next revaluation would be 3 months later. If it was calendar year, it would be 31/3 after the date joined for pension if the date joined for pension was at or prior to 31/3 and if not the quarter end after they joined for pension, 30/6, 30/9 or 31/12  for the first revaluation and 3 months later for the next revaluation. 
+* If the frequency is monthly and the day of revaluation day is ‘Month End’, the first revaluation date is the month end relative to date joined for pension.</p>
+
+<p><a name="pp_option3"></a><strong>OPTION 3</strong> Date from which revaluation is to commence 
+It is assumed that there are records already on the care screen if you choose this option, and that only records where the revaluation date is at or after the date input would be recalculated in the same way as option one.  A message to this effect is presented when you select this option</p>
+
+<p>The process is then the same as the revalutaion run. When the run is completed you will be given the option to save this parameter and if you opt to do so the parameter is saved under the revaluation of recalculations types. If you wish to make edit afterwards you tick the saved parameters field and its the same process as revaluation run.</p>
+
 <h2 id="a-nameundoaundo-care-revaluation-runs"><a name="Undo"></a>Undo CARE Revaluation Runs</h2>
 
 <p>Click ‘Undo’.</p>
 
+<p>The latest revaluation can be undo via the care revaluation menu. This can be done for all members or a selection based on your selection criteria. Therefore this is the way you can unwind the record back using multiple undo runs. You must start at the latest date and you select per care code. If you have two care codes at the same date they can be removed together, if they are at separate dates you must remove each one separately</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval9.jpg" alt="Undo Parameters Window" /></p>
+
+  <p>Undo Parameters Window -</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>Please be aware that by using this Revaluation Type, you will not be able to undo the records if mistakes are made. The undo option in this program simply removes the last CARE Revaluation History record for the member. It doesn’t return the reocrd to its orginal state.</p>
+</div>
+
 <h2 id="a-namedeleteadelete-care-revaluation-runs"><a name="Delete"></a>Delete CARE Revaluation Runs</h2>
 
 <p>Click ‘Delete’.</p>
+
+<p>You can only delete saved parmeter runs and you are asked before it you are certain. This doesn’t delete anything off the member record it only deletes saved parameter runs assigned to the scheme.</p>
 
 <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
 
@@ -235,7 +359,7 @@ If a member has a date joined plan but it is after the revaluation date, then th
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 17/05/2017 11:37:48.</p>
+        <p>Build Date 17/05/2017 14:57:02.</p>
       </div>
     </div>
 
