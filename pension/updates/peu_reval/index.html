@@ -56,6 +56,52 @@
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
 
+<p>The Care Revaluation Run calculates new pension values based upon either a percentage
+rate or the result of a formula.</p>
+
+<p>The program is split into 4 main sections described as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Provisional</strong></td>
+          <td>This allows an increase run to be performed but <strong>does not update</strong> the Care Amount History.</td>
+        </tr>
+        <tr>
+          <td><strong>Actual</strong></td>
+          <td>This allows an increase run to be performed and <strong>does update</strong> the Care Amount History.</td>
+        </tr>
+        <tr>
+          <td><strong>Undo</strong></td>
+          <td>This allows an increase run to be removed from the Care Amount History screen and reverts the values on the History screen back to before the Actual Increase run was performed.</td>
+        </tr>
+        <tr>
+          <td><strong>Delete</strong></td>
+          <td>This allows a previously Care Revaluation Parameter to be removed.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The members that are increased can be selected using standard <a href="/pension/appendices/app_b/#Simple Selection Criteria">Simple
+Selection Criteria</a> (i.e. Scheme, Company, Category, Status, Special Code and Member).
+A list of Care Codes currently allocated to the scheme is displayed allowing either
+all the codes to be updated with a global Formula/Fixed Rate or to be increased individually.</p>
+
+<p>The information used to select the members and the specific increase information used
+against each Care Code can be saved as an individual set of parameters (known as
+a Pension Increase Parameter Set). These parameters are specific to each scheme and
+each care code type. This allows them to be saved, using a descriptive name, for future use.</p>
+
+<p>Select the Care Revaluation Run option from the Updates menu.</p>
+
+<p>The following options and screen is displayed:</p>
+
 <ul>
   <li>Run</li>
   <li>Undo</li>
@@ -71,7 +117,108 @@
 
 <h2 id="a-namerunarun-care-revaluation-runs"><a name="Run"></a>Run CARE Revaluation Runs</h2>
 
-<p>Click ‘Run’.</p>
+<p>Click ‘Run’, and then select either ‘Actual’ or’Provisional’ option from the pop-up window.</p>
+
+<p>Provisional option allows an revaluation run to be performed but <strong>does not update</strong> the
+Care History Screens.</p>
+
+<p>Then you have the option of doing a Revalualtion Run or a Recalculation of Revaluations Run. The Revaluation Run simply calculates the revaluation and updates the members care screen. The Recalculation of Revaluation Run recalculates from either 
+* The first revaluation record on the members revaluation screen
+* Date Joined for Pension
+* You indicate the date from which the recalculation of the  revaluation is to commence</p>
+
+<p>A small Run Parameters window is displayed allowing you enter the scheme code and the date of the Care
+Run to be entered:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval2.jpg" alt="Run Parameters Window" /></p>
+
+  <p>Run Parameters Window</p>
+</div>
+
+<p>This window allows additional run parameters to be entered as follows:</p>
+
+<p><a name="pp_scheme"></a><strong>SCHEME</strong> - Enter the Scheme Code or select a code from
+the lookup list. The code that is entered will be used to select only members for
+this scheme. It will also allow any increase parameters that are saved to be re-used
+for increases to this scheme.</p>
+
+<p><a name="incr_pp_date"></a><strong>REVALUATION DATE</strong> - Enter the date from which your pension
+increases are applicable in the format ddmmyy or dd/mm/yyyy. A value must be entered
+in this field and the date must be a valid date.</p>
+
+<p>This date is used to update the Date of Last Increase on the History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension History Screen">Pension
+History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension History Screen">Deferred Pension
+History</a>) and also to generate a new line on the Increase History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension Increase History Screen">Pension
+Increase History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension Increase History Screen">Deferred
+Pension Increase History</a>).</p>
+
+<p><a name="incr_pp_saved"></a><strong>USE A SAVED REVALUATION PARAMETER?</strong> - Check the tick
+box if you wish to select a previously saved Increase Parameter.</p>
+
+<p>If you are using a saved Revaluation Parameter then a lookup list will be displayed showing
+all the saved parameters for that particular scheme and pension type.</p>
+
+<p>When the Run Parameters have been entered, click ‘OK’ to proceed or click ‘Cancel’
+to return to the main menu.</p>
+
+<p>The following selection criteria screen will be displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval3.jpg" alt="CARE Revaluation Run Screen" /></p>
+
+  <p>CARE Increase Run Screen</p>
+</div>
+
+<p>If an Existing Increase has been selected from the Run Parameter window then the name
+of the parameter file selected will appear at the top of the screen. The screen will
+also be pre-filled with any information that was used as selection criteria when the
+original increase as saved.</p>
+
+<p><a name="pm_company"></a><a name="pm_category"></a><a name="pm_status"></a><a name="psft_code"></a><a name="pm_member"></a><strong>SELECTION
+CRITERIA</strong> - Select the group of members you require to run pension increases for
+using the Company, Category, Status, Special Code and Member fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+When the selection criteria have been entered click on ‘OK’ to proceed or click on
+‘Cancel’ to return to the main menu.</p>
+
+<p>A confirmation message will be displayed if no selection criteria has been entered.
+This simply states that all members have been selected and that the processing could
+possibly take some time.</p>
+
+<p>The following screen is displayed if Pensioners have been selected using the Run Parameter
+window:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_reval4.jpg" alt="Provisional Pension Increase Run Screen" /></p>
+
+  <p>CARE Pension Increase Run Screen</p>
+</div>
+
+<p>The following screen is displayed if saved parmeter wasn’t selected using
+the Run Parameter window:</p>
+
+<p>You are now given the option to run a quote before the actual care run. You would use this option if you needed the results of a current quote in the formulae for your care run. Therefore if you select Y then in the next field you are able to select a quotation type that you have set up for that scheme. On selecting the quote to run, the batch quotation run will be triggered in the background</p>
+
+<ul>
+  <li>
+    <p>Any warnings/exceptions will be produced as usual and you will be given the option to continue or cancel the care run program. Please note that the use of pop ups in any formulae within this quotation will return a value of zero for that formulae. So it’s advised that you remove any pop-ups from formulae so that no warnings are produced</p>
+  </li>
+  <li>Each of the care code assigned to the scheme appear that you have set up you should insert a formula from the scheme formulae file or use the lookup.</li>
+  <li>You don’t have to have a formula against every Care Code set up for the program to run as there may be times when you only want to run a revaluation for one of the Care Codes. If there are no formulas at all against a Care Code nothing runs for that Care Code.</li>
+</ul>
+
+<p>When the increase information has been entered click on ‘OK’ to proceed or click on
+‘Cancel’ to return to the main menu.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>The Formula must have previously been entered into the formula file using <a href="/pension/file_maintenance/calculation_setup/pem_form/#Introduction">Formulae</a>.
+It should be checked to ensure that the formula correctly calculates the values.</p>
+</div>
+
+<p>When the run has completed you will receive a message telling you how many revaluations have been completed and how many warnings have been found. You have the option to view them in a report. An example of a warning would be that; ‘Revaluation Date (01/02/2011 is on or after the care revaluation run date’. It is essential that you view these reports, which are output to excel, to check the warnings and ensure the calculations are correct.
+If a member has a date joined plan but it is after the revaluation date, then they will be ignored as mentioned above. If the member has no date joined plan then they will be output to the warnings report informing the user of their blank date, but they will not processed. Members whose date joined plan is on or before the revaluation date will be processed in the normal manner. Members that have been listed as having a warning will not be updated</p>
+
+<p>If you had selected to run a provisional the process has now completed. However if you opted to run an actual run you are given a message asking if you want to update the revaluations. If you select to update the member records then the revaluation is written back to screen 1 and screen 2 of the members care record. The user is now offered the option to save the care revaluation parameters to that scheme for further use</p>
 
 <h2 id="a-nameundoaundo-care-revaluation-runs"><a name="Undo"></a>Undo CARE Revaluation Runs</h2>
 
@@ -88,7 +235,7 @@
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 15/05/2017 14:05:39.</p>
+        <p>Build Date 17/05/2017 11:37:48.</p>
       </div>
     </div>
 
