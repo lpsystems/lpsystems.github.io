@@ -49,6 +49,12 @@
 <p>The following table lists all database tables held on Pension Master, which can be
 used in the General Data Load program.</p>
 
+<h2 id="data-file-formats--field-default-values">Data File Formats &amp; Field Default Values.</h2>
+
+<p>Templates can be found in the General Data Load program which the user can use to
+create their own load. These templates are based on the formats shown below for each database table the template load codes are listed beside the description. Query the template load code and then press update to assigned it to a scheme for loading.
+Also, during the load some fields may not be included in the data file, or the data in the data file is found to be blank. In these cases the fields are automatically updated by the General Data Load with a default value. The fields with default values are also listed below for each database table</p>
+
 <div class="row">
   <div class="col-md-6">
 
@@ -218,12 +224,6 @@ used in the General Data Load program.</p>
   </div>
 </div>
 
-<h2 id="data-file-formats--field-default-values">Data File Formats &amp; Field Default Values.</h2>
-
-<p>Templates can be found in the General Data Load program which the user can use to
-create their own load. These templates are based on the formats shown below for each database table. 
- Also, during the load some fields may not be included in the datafile, or the data in the datafile is found to be blank. In these cases the fields are automatically updated by the General Data Load with a default value. The fields with default values are also listed below for each database table.</p>
-
 <h2 id="a-nameschaddraaddresses---new-type-load-only---template-tempsadd"><a name="schaddr"></a>Addresses - ‘New’ type load only - Template TEMPSADD</h2>
 
 <p>The data file format is:</p>
@@ -247,7 +247,7 @@ create their own load. These templates are based on the formats shown below for 
 </div>
 
 <div class="alert alert-danger" role="alert">
-  <p>If any of the datalines in the datafile reference a scheme code and address code that do not exist on Pension Master e.g. there is a dataline that references address code TEST but there is no TEST address for the scheme on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the datafile before you try to load the data again.</p>
+  <p>If any of the datalines in the datafile reference a scheme code and address code that do not exist on Pension Master e.g. there is a dataline that references address code TEST but there is no TEST address for the scheme on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the data file before you try to load the data again.</p>
 </div>
 
 <h2 id="a-namebasicdpenabasic-deferred-pensioner-details---new-type-load-only---template-tempdpns"><a name="basicdpen"></a>Basic Deferred Pensioner Details - ‘New’ type load only - Template TEMPDPNS</h2>
@@ -534,7 +534,7 @@ create their own load. These templates are based on the formats shown below for 
 </div>
 
 <div class="alert alert-danger" role="alert">
-  <p>If the user is updating a member’s company, category or status code then they will be prompted with a pop-up window which will ask them to either enter a ‘Start’ position or a ‘Default Date’, which will be used to set the Effective Date of the code amendment. This will be displayed on the correspoding company/category/status history screen for the member.</p>
+  <p>If the user is updating a member’s company, category or status code then they will be prompted with a pop-up window which will ask them to either enter a ‘Start’ position or a ‘Default Date’, which will be used to set the Effective Date of the code amendment. This will be displayed on the corresponding company/category/status history screen for the member.</p>
 
   <p>The ‘Start’ field allows the user to have an effective date present in the datafile for each member, so the user should enter the field position of where this date is in the datafile being used.</p>
 
@@ -1398,7 +1398,7 @@ user defined screen type, then an exception report will be created with the line
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 17/05/2017 14:57:01.</p>
+        <p>Build Date 18/05/2017 15:21:03.</p>
       </div>
     </div>
 
