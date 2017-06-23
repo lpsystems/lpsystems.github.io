@@ -110,12 +110,6 @@ that shows how many units were bought by the contribution.</p>
 contributions you are posting to units. If you are unsure of what code to use, click
 the lookup icon to see a list of transaction codes.</p>
 
-<p><a name="s_apply"></a><strong>APPLY ALLOCATION RATE</strong> - This field only applies for ‘SWIN’ (Switch In) transaction types. Tick this field if you want to apply the allocation rate set at Scheme level. Leaving this field unticked will mean that 100% allocation rate is used.</p>
-
-<p><a name="pmi_fund"></a><strong>FUND</strong> - Enter the investment fund you wish to post units
-for. If you want to post units for all investment funds with unposted units at this
-date for the selected members, enter ‘ALL’.</p>
-
 <p><a name="report_type"></a><a name="s_rep_type"></a><strong>REPORT TYPE</strong> - Select the
 report type as follows:</p>
 
@@ -127,6 +121,8 @@ unit posting. Each fund starts on a new page.</li>
 types for each member.</li>
 </ul>
 
+<p><a name="pmi_fund"></a><strong>FUND</strong> - The investment funds that have unposted units at the selected dates will be listed, if you wish to posted units for a fund insert a date in the date invested field. YOu can have different dates for each of the rows, or if you don’t wish to post the units at this time leave the field blank. If you want to post units for all investment funds with unposted units at this date for the selected members, enter a date in the first row under ‘ALL’.</p>
+
 <p>Pension Master then proceeds to calculate and post the units for the contributions
 to each member selected. The unit price used for this will be based on the <a href="/pension/investments/pem_invfun/#pif_buy_basis">unit
 buy basis</a> field in Investment Funds and is looked up on the <a href="/pension/investments/pem_invfun/#Unit Prices">Unit
@@ -134,16 +130,9 @@ Prices file</a> at the date you have entered in Date Invested. Full account of a
 unit <a href="/pension/file_maintenance/pem_sch/#Investment Funds">allocation percentage</a> for the fund
 concerned is allowed for.</p>
 
-<p><a name="p_price"></a>If no unit buy basis price exists for the entered Date Invested,
-a window is displayed as follows:</p>
+<p><a name="p_price"></a>If no unit buy basis price exists for the funds an exception report is produced.</p>
 
-<div class="screen">
-  <p><img src="/pension/images/peu_post3.gif" alt="" /></p>
-
-</div>
-
-<p>Enter the appropraite unit price and click ‘OK’. This process will continue for all
-funds where a relevant unit buy price is not found.</p>
+<p>&lt;/div&gt;</p>
 
 <p>The number of new units is calculated as follows:</p>
 
@@ -251,6 +240,65 @@ From Pension Master</a>.</p>
 
 <p>The system will then return to the main menu.</p>
 
+<h2 id="a-namechargeacharge"><a name="Charge"></a>Charge</h2>
+
+<p>Click ‘Charge’.</p>
+
+<p>You will be asked if you wish to do a Provisional or an Actual run. A Provisional
+run does all that an actual run does, but does not write any results to the database. Then you will be asked if it should be completed on a value of unit basis.</p>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_company"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_code"></a><strong>SELECTION
+CRITERIA</strong> - Select the group of members you require to calculate unit dividends
+for using the Scheme, Company, Category, Status, Special Code and Member Number fields
+(see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+When the selection criteria have been entered click on ‘OK’ to proceed.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the unit charge run.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_post5.jpg" alt="Charge Details Screen" /></p>
+
+  <p>Charge Details Screen</p>
+</div>
+
+<p><strong>END DATE FOR UNIT/VALUE CALCUATIONS</strong> - Enter the date the units/value in respect of your charge are to be
+calculated at.</p>
+
+<p><strong>DATE TYPE FOR UNIT/VALUE CALCUATIONS</strong> - Enter the date type from the investment history screen that should be used in conjunction with the end date.</p>
+
+<p><strong>TRANSACTION TYPE</strong> - Insert or select a type from the dropdown.</p>
+
+<p><strong>DATE DUE</strong> - Enter the date for your charge.</p>
+
+<p><strong>DATE RECEIVED</strong> - Enter the date for your charge This is generally going
+to be the same as DATE DUE.</p>
+
+<p>All the funds and descriptions are now listed for you to insert a charge %.</p>
+
+<p>Pension Master then proceeds to calculate the charge on each fund for each member
+selected.</p>
+
+<p>The <strong>POST CHARGE</strong> is for the Charge runs that are completed on a value basis. When the unit price is know you complete in the same way as the run purchase process.</p>
+
+<p>If successful, a report detailing the proposed charge is displayed and can
+be printed at this time. The type of report produced depends on the <a href="#report_type">Report
+Type</a> field.</p>
+
+<p>If the charge run was un-successful, an exception report will be produced which
+details the records that were rejected and the reason why. You must address each exception
+before being able to proceed.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p>The system will then return to the main menu.</p>
+
 <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
@@ -258,7 +306,7 @@ From Pension Master</a>.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 02/06/2017 10:04:56.</p>
+        <p>Build Date 23/06/2017 16:09:01.</p>
       </div>
     </div>
 
