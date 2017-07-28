@@ -57,7 +57,7 @@
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at mauris id massa ultrices fringilla nec quis mi. Maecenas et erat tincidunt, varius lacus at, convallis orci. Maecenas in pharetra nulla, a ullamcorper neque. Donec sagittis at orci sit amet porta. Duis ut quam orci. Nulla ex magna, consequat in tortor commodo, tempus mollis dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ut orci id turpis pulvinar fermentum.</p>
+<p>The Rebalance switches program allows users perform a mini lifestyle on the members investment portfolio for members whose investment set up is currently not lifestyling. The members entire accumulated fund at the process date will be rebalanced.  The objective of this program is to enable the user to process the outstanding ‘not yet processed’ switches on a scheme or for specific selection criteria in a scheme in one go.  These rebalance switches would have been added via the member screen or through the <a href="/pension/updates/import_data/peu_rebalance_load/">Load Rebalance Switch Program </a></p>
 
 <ul>
   <li>Add</li>
@@ -72,17 +72,25 @@
   <p>Selection Screen</p>
 </div>
 
+<h2 id="a-nameaddaadding-rebalance-switches"><a name="Add"></a>Adding Rebalance Switches</h2>
+
+<p>Click ‘Add’.</p>
+
 <div class="screen">
   <p><img src="/pension/images/peu_rebalance3.jpg" alt="Selection Screen" /></p>
 
   <p>Selection Screen</p>
 </div>
 
-<h2 id="a-nameaddaadding-rebalance-switches"><a name="Add"></a>Adding Rebalance Switches</h2>
+<p>If there are any rebalance switches where processing has already commenced but not finished for any member in the selection criteria input, the bulk switch will be aborted. You will be advised of the reason for the bulk switch cannot proceed and you will be able to view the members involved.</p>
 
-<p>Click ‘Add’.</p>
+<p>If there are any ‘not processed switches’ for the selection criteria they appear. You can click ‘OK’ to save the Rebalance Switch details, or click ‘Cancel’ to exit the add option without saving the entered details.</p>
 
-<p>You can click ‘OK’ to save the Rebalance Switch details, or click ‘Cancel’ to exit the add option without saving the entered details.</p>
+<p>When the details have been saved you now have the option to sell. The process date will always be todays date. When you press sell the user is brought into the unit prices screen to input the sale date and the prices will be retrieved from the unit prices screen in investments. If there is no price for the date input, a warning will be produced.</p>
+
+<p>You then have the option to complete the switch. If you choose NO, the sale process will be aborted. If you choose YES the sale  will be updated in the member screen.</p>
+
+<p>To post the proceeds of the rebalance sales to units, is completed via the <a href="/pension/investments/unit_posting/per_post/">Unit Posting Program </a>. The transaction type to post is the REBALIN transaction type.</p>
 
 <h2 id="a-namequeryaquery-rebalance-switches"><a name="Query"></a>Query Rebalance Switches</h2>
 
@@ -98,20 +106,32 @@
 
 <p>Before deleting, a record must be selected through the query option, and an error message is displayed if a record for deletion has not been selected.</p>
 
+<p>The rebalance switch can only be deleted if the Purchase Stage has not been completed. If the Purchase Stage has been completed, you need to unpost the purchase stage units before you can proceed with the delete</p>
+
 <p>Click ‘Delete’.</p>
 
-<h2 id="a-nameprintaprinting-rebalance-switches"><a name="Print"></a>Printing Rebalance Switches</h2>
+<ul>
+  <li>If the rebalance switch is processed via the Process Rebalance Switches Option, then it can only be deleted via this option by querying the bulk process id.</li>
+  <li>If the rebalance switch is deleted via the member record, all data relative to the switch is deleted.</li>
+  <li>If the rebalance switch is deleted via the bulk rebalance switch screen, you have the option of leaving the unprocessed Rebalance Switch on the member record so that you can start the rebalance process again.</li>
+</ul>
 
-<p>Click the ‘Report’ icon.</p>
+<div class="screen">
+  <p><img src="/pension/images/peu_rebalance4.jpg" alt="Delete Message Rebalance Switch Screen" /></p>
 
-<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+  <h2 id="a-nameprintaprinting-rebalance-switches"><a name="Print"></a>Printing Rebalance Switches</h2>
 
-<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+  <p>Click the ‘Report’ icon.</p>
+
+  <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+
+  <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+</div>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 23/06/2017 16:09:01.</p>
+        <p>Build Date 28/07/2017 11:25:22.</p>
       </div>
     </div>
 
