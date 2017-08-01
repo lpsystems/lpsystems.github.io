@@ -82,8 +82,8 @@ addben(AFEXEMP)
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on an Additional Benefits screen of the
-specified code. This will be taken from the additional benefits file (pe_addb).</p>
+<p>Use this to refer to the value of a field on the Additional Benefits screen for the
+specified code. This will be taken from the Additional Benefits table (pe_addb).</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -93,7 +93,7 @@ specified code. This will be taken from the additional benefits file (pe_addb).<
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - refers to the Benefit Code (see Additional Benefit Codes) that you wish to
+  <li>code - refers to the Benefit Code (see <a href="/pension/system_data/pem_codem/">Additional Benefit Codes</a>) that you wish to
 retrieve an Additional Benefit Field for. This must be in UPPERCASE and must exist
 as a valid Additional Benefit Code. If a member does not have an Additional Benefit
 record with a matching code, this function call will return a value of 0.</li>
@@ -104,8 +104,9 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_addb">here</a>
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>additional_benefit_fld must be a valid field on the Member Additional Benefit file (pe_addb).</li>
+  <li>additional_benefit_fld must be a valid field on the Additional Benefit table (pe_addb).</li>
   <li>code must be in UPPERCASE.</li>
+  <li>code can only contain alphanumeric values.</li>
   <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
   <li>If the Additional Benefits Field is not found, either because it does not exist, has
 not yet been run, or results from incorrect specification of code, this function call
@@ -2503,7 +2504,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 01/08/2017 12:23:11.</p>
+        <p>Build Date 01/08/2017 15:50:11.</p>
       </div>
     </div>
 

@@ -80,7 +80,7 @@
 <pre><code>'Special'
 </code></pre>
 
-<h2 id="a-name03a-----"><a name="03"></a>+ - * / ^</h2>
+<h2 id="a-name03a---------"><a name="03"></a>+ - * / ^ &gt; &lt; ! =</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
@@ -94,7 +94,17 @@
   <li><code>*</code> represents multiplication.</li>
   <li><code>/</code> represents division.</li>
   <li><code>^</code> represents exponentiation.</li>
+  <li><code>&gt;</code> represents greater than.</li>
+  <li><code>&lt;</code> represents less than.</li>
+  <li><code>!</code> represents doesn’t equal.</li>
+  <li><code>=</code> represents equals.</li>
 </ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Combining arithmetic operators is only allowed for =&gt; and &lt;=.</li>
+</ol>
 
 <p><strong>EXAMPLES</strong></p>
 
@@ -190,11 +200,7 @@ be invited to re-enter the line number after the @ symbol.</li>
   </div>
 </div>
 
-<p>Depending on the member’s Normal Pension Age, the result of the formula is either
-his/her average user defined salary 1 for the last 3 years, times the appropriate
-factor in the actuarial table AAAA, if the NPA is &lt;= 60, or, if NPA &gt; 60, then
-the salary is averaged over the last 4 years and that figure is then multiplied by
-the appropriate factor in table AAAA.</p>
+<p>The result of the formula is dependant on the member’s Normal Pension Age. If the NPA is &lt;= 60, then the result is his/her average user defined salary 1 for the last 3 years, multiplied by the appropriate factor in the actuarial table AAAA. If the NPA is &gt; 60, then the result is his/her average user defined salary 1 for the last 4 years, multiplied by the appropriate factor in table AAAA.</p>
 
 <h2 id="a-name07aannuityintratedate1date2"><a name="07"></a>annuity(int_rate,date1,date2)</h2>
 
@@ -749,7 +755,7 @@ dateformat(@1,D2)
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 01/08/2017 12:23:11.</p>
+        <p>Build Date 01/08/2017 15:50:11.</p>
       </div>
     </div>
 
