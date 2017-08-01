@@ -27,7 +27,7 @@ function getQueryParams(qs) {
 //L&P SYSTEMS LIMITED                3 lp
 //LIBERTY                            7
 //OGIER                            146 ogier
-//P F P                             23 pfp
+//ASCOT LLOYD                       23 ascot_lloyd
 //SOURCE                            73 source
 //SOVEREIGN                         32 sovereign
 //TEST                               1
@@ -46,7 +46,7 @@ $('.lp').parent().hide();
 $('.ogier').parent().hide();
 $('.sovereign').parent().hide();
 $('.source').parent().hide();
-$('.pfp').parent().hide();
+$('.ascot_lloyd').parent().hide();
 $('.ucc').parent().hide();
 $('.vhi').parent().hide();
 
@@ -83,8 +83,8 @@ if (typeof query.client != 'undefined') {
     $('.source').parent().show();
   }
 
-  if (query.client == 'pfp' || query.client == 'all') {
-    $('.pfp').parent().show();
+  if (query.client == 'ascot_lloyd' || query.client == 'all') {
+    $('.ascot_lloyd').parent().show();
   }
 
   if (query.client == 'ucc' || query.client == 'all') {
