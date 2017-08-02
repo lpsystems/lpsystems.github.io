@@ -82,7 +82,7 @@ addben(AFEXEMP)
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Additional Benefits Details">Member’s Additional Benefits</a> screen for the specified code.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Additional Benefits Details">Member’s Additional Benefits</a> screen for the specified additional benefit code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -92,7 +92,7 @@ addben(AFEXEMP)
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - is the benefit code (see <a href="/pension/system_data/pem_codem/">Additional Benefit Codes</a>) that you wish to
+  <li>code - is the <a href="/pension/system_data/pem_codem/">Additional Benefit Codes</a> that you wish to
 retrieve an Additional Benefit field value for. This must exist as a valid Additional Benefit Code. If a member does not have an Additional Benefit
 record with a matching code, this function call will return a value of 0.</li>
   <li>additional_benefit_fld - is any valid field on the Additional Benefit table. For a
@@ -115,6 +115,111 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_addb">here</a>
 
 <p>This extracts the date held in the Date of Benefit field of the Additional
 Benefit record with the Benefit Code of SSSTRIKE for each member concerned.</p>
+
+<h2 id="a-name73aadviserfldcode"><a name="73"></a>#adviser_fld(code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_adviser/">Adviser</a> screen for the specified adviser code.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#adviser_fld(code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - is the Adviser Code that you wish to retrieve an Adviser field value for. This must exist as a valid Adviser Code. If the system does not have an Adviser record with a matching code, this function call will return a value of 0.</li>
+  <li>adviser_fld - is any valid field on the Adviser Details table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_adviser">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>adviser_fld must be a valid field on the Adviser Details table (pe_adviser).</li>
+  <li>code must be in UPPERCASE and no longer than 10 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Adviser Details table (pe_adviser).</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pad_addr2(MANAGER)
+</code></pre>
+
+<p>This extracts the value held in the Adviser Address Line 2 field of the Adviser Details record with the Adviser Code of MANAGER.</p>
+
+<h2 id="a-name74aadviserassocfundfldcode"><a name="74"></a>#adviser_assoc_fund_fld(code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_adviser/">Adviser Associated Investment Funds</a> screen for the specified adviser code.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#adviser_assoc_fund_fld(code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - is the Adviser Code that you wish to retrieve an Associated Investment Funds field value for. This must exist as a valid Adviser Code. If the system does not have an Associated Investment Fund record with a matching code, this function call will return a value of 0.</li>
+  <li>adviser_assoc_fund_fld - is any valid field on the Adviser Associated Investment Funds table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_advfund">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>adviser_assoc_fund_fld must be a valid field on the Adviser Associated Investment Funds table (pe_advfund).</li>
+  <li>code must be in UPPERCASE and no longer than 10 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Adviser Details table (pe_adviser).</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#padf_fund(MANAGER)
+</code></pre>
+
+<p>This extracts the value held in the Adviser Associated Fund field of the Adviser Associated Investment Funds record with the Adviser Code of MANAGER.</p>
+
+<h2 id="a-name75aadviserassocschemefldcode"><a name="75"></a>#adviser_assoc_scheme_fld(code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_adviser/">Adviser Associated Schemes</a> screen for the specified adviser code.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#adviser_assoc_scheme_fld(code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - is the Adviser Code that you wish to retrieve an Associated Schemes field value for. This must exist as a valid Adviser Code. If the system does not have an Associated Schemes record with a matching code, this function call will return a value of 0.</li>
+  <li>adviser_assoc_scheme_fld - is any valid field on the Adviser Associated Schemes table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_advsch">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>adviser_assoc_scheme_fld must be a valid field on the Adviser Associated Schemes table (pe_advsch).</li>
+  <li>code must be in UPPERCASE and no longer than 10 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Adviser Details table (pe_adviser).</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pads_scheme(MANAGER)
+</code></pre>
+
+<p>This extracts the value held in the Adviser Associated Scheme field of the Adviser Associated Schemes record with the Adviser Code of MANAGER.</p>
 
 <h2 id="a-name03abasicdeferredpensionerfield"><a name="03"></a>#basic_deferred_pensioner_field</h2>
 
@@ -163,7 +268,7 @@ of valid fields click <a href="/pension/appendices/app_a/#pe_pens">here</a></li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_brok/">Broker</a> screen for the specified code.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_brok/">Broker</a> screen for the specified broker code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -298,6 +403,44 @@ For a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_b
 
 <pre><code>#psbb_sale_value(19900101,0151CASH,EEAVC,27) 
 </code></pre>
+
+<h2 id="a-name77acarehistoryfieldcode"><a name="77"></a>#care_history_field(code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#care_average_revalued_earnings">Career Average Revalued Earnings</a> screen for the specified CARE code.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#care_history_field(code)  
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - is the <a href="/pension/system_data/pem_codem/#Introduction">CARE Code</a> that you wish to
+retrieve a Career Average Revalued Earnings field value for. This must exist as a valid CARE Code. If a member does not have an Career Average Revalued Earnings record with a matching code, this function call will return a value of 0.</li>
+  <li>care_history_field - is any valid field on the Career Average Revalued Earnings table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_carea">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>care_history_field must be a valid field on the Career Average Revalued Earnings table (pe_carea).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
+  <li>If the Career Average Revalued Earnings field is not found, either because it does not exist or results from incorrect specification of code, this function
+call will return a value of 0.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pca_amount1(CARE1)
+</code></pre>
+
+<p>This extracts the value held in the CARE History Amount 1 field of the Career Average Revalued Earnings record with the CARE Code of CARE1 for each member concerned.</p>
 
 <h2 id="a-name10acategorycontributioninterestfieldconttype"><a name="10"></a>#category_contribution_interest_field(cont_type)</h2>
 
@@ -679,7 +822,7 @@ of valid fields click <a href="/pension/appendices/app_a/#pe_deathdep">here</a><
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#deferred_pension_history">Deferred Pension History</a> screen for the specified Deferred Pension Code.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#deferred_pension_history">Deferred Pension History</a> screen for the specified deferred pension code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -689,7 +832,7 @@ of valid fields click <a href="/pension/appendices/app_a/#pe_deathdep">here</a><
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - is the benefit code (see <a href="/pension/system_data/pem_codem/#Introduction">Additional Benefit Codes</a>) that you wish to
+  <li>code - is the <a href="/pension/system_data/pem_codem/#Introduction">Deferred Pension Code</a> that you wish to
 retrieve a Deferred Pension History field value for. This must exist as a valid Deferred Pension Code. If a member does not have an Deferred
 Pension History record with a matching code, this function call will return a value of 0.</li>
   <li>deferred_pension_history_field - is any valid field on the Deferred Pension History table. For a
@@ -699,11 +842,11 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_dpena">here</a
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>deferred_pension_history_field must be a valid field on the Deferred Pension History file (pe_dpena).</li>
+  <li>deferred_pension_history_field must be a valid field on the Deferred Pension History table (pe_dpena).</li>
   <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
   <li>code can only contain alphanumeric values.</li>
   <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
-  <li>If the Deferred Pension History Field is not found, either because it does not exist or results from incorrect specification of code, this function
+  <li>If the Deferred Pension History field is not found, either because it does not exist or results from incorrect specification of code, this function
 call will return a value of 0.</li>
 </ol>
 
@@ -851,11 +994,50 @@ is not selected or has any value respectively.</li>
 <p>This extracts the Dependants Name for the first Dependant whose Current Flag
 is selected, whose Beneficiary Flag is not selected and whose Dependant Flag is selected.</p>
 
+<h2 id="a-name76adisabilitybenefithistoryfieldcode"><a name="76"></a>#disability_benefit_history_field(code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#disability_benefit">Disability Benefit History</a> screen for the specified disability benefit code.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#disability_benefit_history_field(code)  
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - is the <a href="/pension/system_data/pem_codem/#Introduction">Disability Benefit Code</a> that you wish to
+retrieve a Disability Benefit History field value for. This must exist as a valid Disability Benefit Code. If a member does not have an Disability Benefit History record with a matching code, this function call will return a value of 0.</li>
+  <li>disability_benefit_history_field - is any valid field on the Disability Benefit History table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_bpena">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>disability_benefit_history_field must be a valid field on the Disability Benefit History table (pe_bpena).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
+  <li>If the Disability Benefit History field is not found, either because it does not exist or results from incorrect specification of code, this function
+call will return a value of 0.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pbpa_init_ben(BAPEN)
+</code></pre>
+
+<p>This extracts the value held in the Initial Benefit field of the Disability Benefit
+History record with the Disability Benefit Code of BAPEN for each member concerned.</p>
+
 <h2 id="a-name25adivorceandspousesfieldnn"><a name="25"></a>#divorce_and_spouses_field(nn)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Divorce and Spouses Details">Divorce and Spouses Details</a> screen for the specified Spouse number.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Divorce and Spouses Details">Divorce and Spouses Details</a> screen for the specified spouse number.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1180,7 +1362,7 @@ been run, or results from incorrect specification of number, this function call 
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#NOT">Member Notes</a> screen for the specified Notes number.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#NOT">Member Notes</a> screen for the specified notes number.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1309,32 +1491,31 @@ Field for with line 1 being the most recent.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Pension History file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#pension_history">Pension History</a> screen for the specified pension code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>#pension_history_field(code) 
+<pre><code>#pension_history_field(code)  
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
   <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Pension Code</a> that you
-wish to retrieve a Pension History Field for. This must be in UPPERCASE and must exist
-as a valid Pension Code. If a member does not have a Pension History record with a
+wish to retrieve a Pension History field value for. This must exist as a valid Pension Code. If a member does not have a Pension History record with a
 matching code, this function call will return a value of 0.</li>
-  <li>pension_history_field is any valid field on the pension history table. For a list
+  <li>pension_history_field is any valid field on the Pension History table. For a list
 of valid fields click <a href="/pension/appendices/app_a/#pe_pena">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>pension_history_field must be a valid field on the Pension History file (pe_pena).</li>
-  <li>code must be in UPPERCASE.</li>
+  <li>pension_history_field must be a valid field on the Pension History table (pe_pena).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
   <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
-  <li>if the Pension History Field is not found, either because it does not exist, has not
-yet been run, or results from incorrect specification of code, this function call
+  <li>if the Pension History field is not found, either because it does not exist, or results from incorrect specification of code, this function call
 will return a value of 0.</li>
 </ol>
 
@@ -1343,7 +1524,7 @@ will return a value of 0.</li>
 <pre><code>#ppa_init_pen(PAPEN)
 </code></pre>
 
-<p>This extracts the value of the Initial Pension of the Pension History record with the Pension Code of ‘PAPEN’ for each member concerned.</p>
+<p>This extracts the value held in the Initial Pension field of the Pension History record with the Pension Code of PAPEN for each member concerned.</p>
 
 <h2 id="a-name40apensionhistorytotalsfield"><a name="40"></a>#pension_history_totals_field</h2>
 
@@ -1630,29 +1811,29 @@ will return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Scheme Address Details file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_sch/#Address Details">Scheme Address Details</a> screen for the specified address code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>#scheme_address_field(code) 
+<pre><code>#scheme_address_field(code)  
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - refers to the address code that you wish to retrieve a Scheme Address Detail
-Field for. If a scheme does not have an Address record with a matching code, this
-function call will return a value of 0.</li>
-  <li>scheme_address_field is any valid field on the scheme address table. For a list of
-valid fields click <a href="/pension/appendices/app_a/#pe_saddr">here</a></li>
+  <li>code - refers to the Address Code that you wish to retrieve a Scheme Address field value for. This must exist as a valid Address Code. If a member does not have a Scheme Address record with a matching code, this function call will return a value of 0.</li>
+  <li>scheme_address_field is any valid field on the Scheme Address table. For a list
+of valid fields click <a href="/pension/appendices/app_a/#pe_saddr">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>scheme_address_field must be a valid field on the Scheme Address Details file (pe_saddr).</li>
-  <li>If the Address Detail Field is not found, either because it does not exist, has not
-yet been run, or results from incorrect specification of code, this function call
+  <li>scheme_address_field must be a valid field on the Scheme Address table (pe_saddr).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must be a valid code on the Scheme Address table (pe_saddr).</li>
+  <li>if the Scheme Address field is not found, either because it does not exist, or results from incorrect specification of code, this function call
 will return a value of 0.</li>
 </ol>
 
@@ -1661,7 +1842,7 @@ will return a value of 0.</li>
 <pre><code>#psa_addr1(SCHEME)
 </code></pre>
 
-<p>This extracts the value of the Scheme’s Address Line 1 for the ‘Scheme’ Address Details.</p>
+<p>This extracts the value held in the Address Line 1 field of the Scheme Address record with the Address Code of SCHEME.</p>
 
 <h2 id="a-name48aschemefield"><a name="48"></a>#scheme_field</h2>
 
@@ -1788,35 +1969,45 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_suds">here</
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to condition a jump to relevant sections of a formula depending
-on a special code. The full syntax follows a similar picture as the goto functions.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Special Codes">Special Codes</a> screen for the specified special code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>#special_code_field(code) = special_code goto @ln 
+<pre><code>#special_code_field(code) 
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - is a reference to the Special Code you wish to condition against.</li>
-  <li>special_code - should match the code entry.</li>
-  <li>ln - is the line number the calculation will move to if the condition is true.</li>
-  <li>special_code_field is any valid field on the special code table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sfeat">here</a>.</li>
+  <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Special Code</a> that you
+wish to retrieve a Special Code field value for. This must exist as a valid Special Code. If a member does not have a Special Code record with a
+matching code, this function call will return a value of 0.</li>
+  <li>special_code_field is any valid field on the Special Codes table. For a list
+of valid fields click <a href="/pension/appendices/app_a/#pe_sfeat">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>code must be a valid Special Code as set up in Codes. This system will prompt you if an incorrect code is entered.</li>
-  <li>Any operator can be used although equals = and not equals ! will be the ones most commonly used.</li>
+  <li>special_code_field must be a valid field on the Special Codes table (pe_sfeat).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
+  <li>if the Special Codes field is not found, either because it does not exist, or results from incorrect specification of code, this function call
+will return a value of 0.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psft_code(EXPWISH) = EXPWISH goto @5 
-#psft_code(AVCPAYER) ! AVCPAYER goto @14 
 </code></pre>
+
+<p>This extracts the value held in the Special Code field of the Special Code record with the Special Code of EXPWISH. If the value returned is EXPWISH then go to line 5.</p>
+
+<pre><code>#psft_code(AVCPAYER) ! AVCPAYER goto @14 
+</code></pre>
+
+<p>This extracts the value held in the Special Code field of the Special Code record with the Special Code of AVCPAYER. If the value returned isn’t AVCPAYER then go to line 14.</p>
 
 <h2 id="a-name52astatusfield"><a name="52"></a>#status_field</h2>
 
@@ -2032,7 +2223,7 @@ tot_tvout(ptvo_val,19990101,20000101)
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Transfer In Details file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Transfer In Details">Transfer In Details</a> screen for the specified transfer in code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -2042,34 +2233,35 @@ tot_tvout(ptvo_val,19990101,20000101)
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - refers to the transfer in code that you wish to retrieve a Transfer In Detail
-Field for. If a member does not have a Transfer record with a matching code, this
-function call will return a value of 0.</li>
-  <li>transfer_in_field is any valid field on the transfer in table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_tvin">here</a></li>
+  <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Transfer In Code</a> that you
+wish to retrieve a Transfer In Details field value for. This must exist as a valid Transfer In Code. If a member does not have a Transfer In Details record with a matching code, this function call will return a value of 0.</li>
+  <li>transfer_in_field is any valid field on the Transfer In Details table. For a list
+of valid fields click <a href="/pension/appendices/app_a/#pe_tvin">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>transfer_in_field must be a valid field on the Transfer In Details file (pe_tvin).</li>
-  <li>If the Transfer In Detail Field is not found, either because it does not exist, has
-not yet been run, or results from incorrect specification of code, this function call
+  <li>transfer_in_field must be a valid field on the Transfer In Details table (pe_tvin).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
+  <li>if the Transfer In Details field is not found, either because it does not exist, or results from incorrect specification of code, this function call
 will return a value of 0.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
 
-<pre><code>#ptvi_val(TCCONT)
+<pre><code>#ptvi_val(TCCONT) 
 </code></pre>
 
-<p>This extracts the value of the Transfer Value for the ‘TCCONT’ Transfer code Details.</p>
+<p>This extracts the value held in the Transfer Value field of the Transfer In Details record with the Transfer In Code of TCCONT.</p>
 
 <h2 id="a-name59atransferoutfieldcode"><a name="59"></a>#transfer_out_field(code)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Transfer Out Details file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Transfer Out Details">Transfer Out Details</a> screen for the specified transfer out code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -2079,28 +2271,29 @@ will return a value of 0.</li>
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - refers to the transfer out code that you wish to retrieve a Transfer Out Detail
-Field for. If a member does not have a Transfer record with a matching code, this
-function call will return a value of 0.</li>
-  <li>transfer_out_field is any valid field on the transfer out table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_tvout">here</a></li>
+  <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Transfer Out Code</a> that you
+wish to retrieve a Transfer Out Details field value for. This must exist as a valid Transfer Out Code. If a member does not have a Transfer Out Details record with a matching code, this function call will return a value of 0.</li>
+  <li>transfer_out_field is any valid field on the Transfer Out Details table. For a list
+of valid fields click <a href="/pension/appendices/app_a/#pe_tvout">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>transfer_out_field must be a valid field on the Transfer Out Details file (pe_tvout).</li>
-  <li>If the Transfer Out Detail Field is not found, either because it does not exist, has
-not yet been run, or results from incorrect specification of code, this function call
+  <li>transfer_out_field must be a valid field on the Transfer Out Details table (pe_tvout).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
+  <li>if the Transfer Out Details field is not found, either because it does not exist, or results from incorrect specification of code, this function call
 will return a value of 0.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
 
-<pre><code>#ptvo_val(TCCOPEN)
+<pre><code>#ptvo_val(TCCOPEN) 
 </code></pre>
 
-<p>This extracts the value of the Transfer Value for the ‘TCCOPEN’ Transfer code Details.</p>
+<p>This extracts the value held in the Transfer Value field of the Transfer Out Details record with the Transfer Out Code of TCCOPEN.</p>
 
 <h2 id="a-name60atvincode"><a name="60"></a>tvin(code)</h2>
 
@@ -2588,7 +2781,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 01/08/2017 21:48:38.</p>
+        <p>Build Date 02/08/2017 08:40:21.</p>
       </div>
     </div>
 
