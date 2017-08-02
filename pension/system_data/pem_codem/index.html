@@ -99,60 +99,160 @@ These are codes that are used when entering additional details for a member.</p>
 of the following:</p>
 
 <ul>
+  <li><strong>G</strong> - for Accounting Codes</li>
   <li><strong>A</strong> - for Additional Benefit Codes</li>
+  <li><strong>L</strong> - for Asset Classes</li>
+  <li><strong>F</strong> - for Award Types</li>
+  <li><strong>E</strong> - for Career Average Revalued Earnings Codes</li>
   <li><strong>C</strong> - for Contribution Transactions</li>
+  <li><strong>Q</strong> - for Country</li>
   <li><strong>D</strong> - for Deferred Pensioner Codes</li>
-  <li><strong>I</strong> - for Transfer In Codes</li>
-  <li><strong>O</strong> - for Transfer Out Codes</li>
+  <li><strong>B</strong> - for Disability Benefit Codes</li>
+  <li><strong>T</strong> - for FATCA Status</li>
+  <li><strong>M</strong> - for Investment Managers</li>
+  <li><strong>H</strong> - for Locations</li>
   <li><strong>P</strong> - for Pensioner Codes</li>
   <li><strong>R</strong> - for Reason for Increase Codes</li>
+  <li><strong>K</strong> - for Risk Profile Codes</li>
   <li><strong>S</strong> - for Special Codes</li>
+  <li><strong>J</strong> - for Teams</li>
+  <li><strong>N</strong> - for Team Locations</li>
+  <li><strong>I</strong> - for Transfer In Codes</li>
+  <li><strong>O</strong> - for Transfer Out Codes</li>
+  <li><strong>X</strong> - for Agent Network</li>
+  <li><strong>Y</strong> - for Broker Company</li>
 </ul>
 
 <p><a name="pcdm_code"></a><strong>CODE</strong> - Enter the Code which must be relevant to the
-Type. If you are entering a Reason for Increase or Special Code, you are allowed to
-enter any free-text for the code field. Otherwise, the Code is validated against the
-type using the following rules:</p>
+Type. The code can only contain alphanumeric characters. Some codes allow free format text, whereas others have validation applied to them using the following rules:</p>
 
 <ul>
-  <li><strong>A</strong> - for Additional Benefit Codes:
+  <li><strong>G</strong> - for Accounting Codes
+    <ul>
+      <li>No validation required</li>
+    </ul>
+  </li>
+  <li><strong>A</strong> - for Additional Benefit Codes
     <ul>
       <li>The first character must be either ‘A’,’S’ or ‘I’ (Add, Subtract or Ignore)</li>
       <li>The second character must be either ‘F’ or ‘S’ (Fixed Benefit or Service)</li>
+      <li>Third character must be present</li>
     </ul>
   </li>
-  <li><strong>C</strong> - No validation required.</li>
-  <li><strong>D</strong> - for Deferred Pensioner Codes:
+  <li><strong>L</strong> - for Asset Classes
     <ul>
-      <li>The first character must be ‘D’ (Deferred Pensioner)</li>
+      <li>No validation required</li>
+    </ul>
+  </li>
+  <li><strong>F</strong> - for Award Types
+    <ul>
+      <li>Third character must be present</li>
+    </ul>
+  </li>
+  <li><strong>E</strong> - for Career Average Revalued Earnings Codes
+    <ul>
+      <li>The first character must be ‘C’ (Career Averafe Revalued Earnings)</li>
       <li>The second character must be either ‘A’,’S’ or ‘I’ (Add, Subtract or Ignore)</li>
+      <li>Third character must be present</li>
     </ul>
   </li>
-  <li><strong>I</strong> - No validation required.</li>
-  <li><strong>O</strong> - for Transfer Out Codes:
+  <li><strong>C</strong> - for Contribution Transactions
     <ul>
-      <li>The first character must be ‘T’ (Transfer In)</li>
-      <li>The second character must be either ‘P’,’S’ or ‘C’ (Personal Pension, Section 32 Policy or New Company)</li>
+      <li>At least 3 character must be present</li>
     </ul>
   </li>
-  <li><strong>P</strong> - for Pensioner Codes:
+  <li><strong>Q</strong> - for Country
+    <ul>
+      <li>Must be 2 characters long</li>
+    </ul>
+  </li>
+  <li><strong>D</strong> - for Deferred Pensioner Codes
+    <ul>
+      <li>The first character must be ‘D’ (Deferred Pension)</li>
+      <li>The second character must be either ‘A’,’S’ or ‘I’ (Add, Subtract or Ignore)</li>
+      <li>Third character must be present</li>
+    </ul>
+  </li>
+  <li><strong>B</strong> - for Disability Benefit Codes
+    <ul>
+      <li>The first character must be ‘B’ (Disability Benefit)</li>
+      <li>The second character must be either ‘A’,’S’ or ‘I’ (Add, Subtract or Ignore)</li>
+      <li>Third character must be present</li>
+    </ul>
+  </li>
+  <li><strong>T</strong> - for FATCA Status
+    <ul>
+      <li>No validation required</li>
+    </ul>
+  </li>
+  <li><strong>M</strong> - for Investment Managers
+    <ul>
+      <li>No validation required</li>
+    </ul>
+  </li>
+  <li><strong>H</strong> - for Locations
+    <ul>
+      <li>At least 3 character must be present</li>
+    </ul>
+  </li>
+  <li><strong>P</strong> - for Pensioner Codes
     <ul>
       <li>The first character must be ‘P’ (Pensioner)</li>
       <li>The second character must be either ‘A’,’S’ or ‘I’ (Add, Subtract or Ignore)</li>
+      <li>Third character must be present</li>
     </ul>
   </li>
-  <li><strong>R</strong> - for Reason for Increase Codes:
+  <li><strong>R</strong> - for Reason for Increase Codes
     <ul>
       <li>The first character must be ‘R’ (Reason for Increase)</li>
+      <li>Third character must be present</li>
+    </ul>
+  </li>
+  <li><strong>K</strong> - for Risk Profile Codes
+    <ul>
+      <li>No longer than 2 characters</li>
+    </ul>
+  </li>
+  <li><strong>S</strong> - for Special Codes
+    <ul>
+      <li>At least 3 character must be present</li>
+    </ul>
+  </li>
+  <li><strong>J</strong> - for Teams
+    <ul>
+      <li>No validation required</li>
+    </ul>
+  </li>
+  <li><strong>N</strong> - for Team Locations
+    <ul>
+      <li>No validation required</li>
+    </ul>
+  </li>
+  <li><strong>I</strong> - for Transfer In Codes
+    <ul>
+      <li>At least 3 character must be present</li>
+    </ul>
+  </li>
+  <li><strong>O</strong> - for Transfer Out Codes
+    <ul>
+      <li>The first character must be ‘T’ (Transfer Out)</li>
+      <li>The second character must be either ‘P’,’S’ or ‘C’ (Personal Pension, Section 32 Policy or New Company)</li>
+      <li>Third character must be present</li>
+    </ul>
+  </li>
+  <li><strong>X</strong> - for Agent Network
+    <ul>
+      <li>No validation required</li>
+    </ul>
+  </li>
+  <li><strong>Y</strong> - for Broker Company
+    <ul>
+      <li>No validation required</li>
     </ul>
   </li>
 </ul>
 
-<p>In all cases the third character must not be blank. A Code cannot be entered against
-the same Type twice.</p>
-
-<p>Characters 3 to 8 are purely user defineable. This will allow you to differentiate
-between Codes of the same type.</p>
+<p>Apart from Country and Risk Profile codes, which have length restrictions on them, characters 3 to 8 are user defined. This will allow you to differentiate between Codes of the same type.</p>
 
 <p>Depending on what you enter as the second character of the code, you will be presented
 with a different set of options when entering the actual details in <a href="/pension/file_maintenance/pem_mem/#Transfer In Details">Members</a> e.g.
@@ -264,7 +364,7 @@ none have been queried, it will act in the same way as All Codes.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 02/08/2017 08:40:25.</p>
+        <p>Build Date 02/08/2017 13:00:01.</p>
       </div>
     </div>
 
