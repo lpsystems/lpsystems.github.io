@@ -686,6 +686,10 @@
           <td style="text-align: left"><a href="#pe_loan_h">Member Loans</a></td>
         </tr>
         <tr>
+          <td style="text-align: left"><a href="#pe_loan_r">pe_loan_r</a></td>
+          <td style="text-align: left"> </td>
+        </tr>
+        <tr>
           <td style="text-align: left"><a href="#pe_lrp">pe_lrp</a></td>
           <td style="text-align: left"> </td>
         </tr>
@@ -17172,6 +17176,20 @@
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">14</td>
         </tr>
+        <tr>
+          <td style="text-align: left">plb_allowed_units</td>
+          <td style="text-align: left">Allowed Fund Units</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(11,4)</td>
+          <td style="text-align: left">15</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plb_cont_order</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Smallint</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">16</td>
+        </tr>
       </tbody>
     </table>
 
@@ -17291,6 +17309,84 @@
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">14</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2 id="a-namepeloanrapeloanr"><a name="pe_loan_r"></a>pe_loan_r</h2>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field Name</th>
+          <th style="text-align: left">Field Description</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Length</th>
+          <th style="text-align: left">Seq.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">plr_member</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">1</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plr_num</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Smallint</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">2</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plr_date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">3</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plr_fund</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">10</td>
+          <td style="text-align: left">4</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plr_cont</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">5</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plr_repayment_amount</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(12,2)</td>
+          <td style="text-align: left">6</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plr_exchange</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(12,6)</td>
+          <td style="text-align: left">7</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plr_amount_fund</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(12,2)</td>
+          <td style="text-align: left">8</td>
         </tr>
       </tbody>
     </table>
@@ -20827,6 +20923,13 @@
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(15,12)</td>
           <td style="text-align: left">25</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pmi_repayment</td>
+          <td style="text-align: left">REPAYMENT Amount</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">26</td>
         </tr>
       </tbody>
     </table>
@@ -37937,7 +38040,7 @@
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 04/08/2017 12:34:20.</p>
+        <p>Build Date 04/08/2017 13:00:11.</p>
       </div>
     </div>
 
