@@ -303,11 +303,11 @@ as a valid Broker Code. If there is no Broker record with a matching code, this 
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to access a field in the header of a bulk switch.</p>
+<p>Use this to refer to the value of a field in the header section on the <a href="/pension/investments/switches/peu_switch/">Investment Switches</a> screen for the specified date and bulk id.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>#switch_header_field(date,bulk_id)
+<pre><code>#bulk_switch_header_field(date,bulk_id)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -315,14 +315,24 @@ as a valid Broker Code. If there is no Broker record with a matching code, this 
 <ul>
   <li>date - is the switch date.</li>
   <li>bulk_id - is the bulk id number for the switch.</li>
-  <li>bulk_switch_header_field is any valid field on the bulk switch header table. For
+  <li>bulk_switch_header_field - is any valid field on the Bulk Switch Header table. For
 a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_h">here</a></li>
 </ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>bulk_switch_header_field must be a valid field on the Bulk Switch Header table (pe_bulksw_h).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>bulk_id can only contain numeric values.</li>
+</ol>
 
 <p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psbh_expenses(19900101,27)
 </code></pre>
+
+<p>This extracts the value held in the Bulk Switch Expenses field of the Bulk Switch Header record with the Switch date of 01/01/1990 and Bulk Id of 27.</p>
 
 <h2 id="a-name07abulkswitchmemberfieldbulkidfundcodeconttype"><a name="07"></a>#bulk_switch_member_field(bulk_id,fund_code,cont_type)</h2>
 
@@ -354,12 +364,11 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_m">he
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to reference a field in the new fund section of the switch details
-screen.</p>
+<p>Use this to refer to the value of a field in the switch in section on the <a href="/pension/investments/switches/peu_switch/">Investment Switches</a> screen for the specified date and bulk id.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>#switch_new_fund(date,bulk_id)
+<pre><code>#bulk_switch_new_fund_field(date,bulk_id)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -367,14 +376,24 @@ screen.</p>
 <ul>
   <li>date - is the switch date.</li>
   <li>bulk_id - is the bulk id number for the switch.</li>
-  <li>bulk_switch_new_fund_field is any valid field on the bulk switch new fund table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_n">here</a></li>
+  <li>bulk_switch_new_fund_field - is any valid field on the Bulk Switch In table. For
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_n">here</a></li>
 </ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>bulk_switch_new_fund_field must be a valid field on the Bulk Switch In table (pe_bulksw_n).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>bulk_id can only contain numeric values.</li>
+</ol>
 
 <p><strong>EXAMPLE</strong></p>
 
 <pre><code>#psbn_percent(19900101,27)
 </code></pre>
+
+<p>This extracts the value held in the Bulk Switch Percentage field of the Bulk Switch In record with the Switch date of 01/01/1990 and Bulk Id of 27.</p>
 
 <h2 id="a-name09abulkswitcholdfundfielddatefundcodeconttypebulkid"><a name="09"></a>#bulk_switch_old_fund_field(date,fund_code,cont_type,bulk_id)</h2>
 
@@ -709,23 +728,30 @@ was allocated to individual funds.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to a field on the Contributions Plus Interest file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#contribution_and_interest_details">Contributions Plus Interest</a> screen for the specified date and contribution type code.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#cont_plus_int_field(date,cont_type)
+</code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>date - is the date at which the Contribution or Investment is effective. i.e. the
+  <li>date - is the date at which the Contribution or Interest is effective. i.e. the
 value previous to this date will be returned.</li>
   <li>cont_type - denotes the contribution type code to be referred to.</li>
-  <li>cont_plus_int_field is any valid field on the contribution plus interest table. For
+  <li>cont_plus_int_field - is any valid field on the Contribution Plus Interest table. For
 a list of valid fields click <a href="/pension/appendices/app_a/#pe_mint">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>cont_plus_int_field must be a valid field on the Contributions Plus Interest file (pe_mint).</li>
-  <li>the date argument can be set to TODAY to return the value previous to today.</li>
+  <li>cont_plus_int_field must be a valid field on the Contributions Plus Interest table (pe_mint).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>, or TODAY which will return the value previous to today.</li>
+  <li>cont_type must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>cont_type must exist in the <a href="/pension/file_maintenance/pem_sch/#Contribution Type Setup">Contribution Type Setup</a> screen for the member’s scheme.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -733,12 +759,12 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_mint">here</
 <pre><code>#pmin_amount(TODAY,EEORD)
 </code></pre>
 
-<p>This refers to the Employee Ordinary contributions of a member based on date of TODAY.</p>
+<p>This extracts the value held in the Contribution Amount field of the Contributions Plus Interest record based on a date of TODAY and the Contribution Type Code of EEORD for the member’s scheme.</p>
 
 <pre><code>#pmin_interest(TODAY,EEORD)
 </code></pre>
 
-<p>This refers to the Employee Ordinary interest of a member based on date of TODAY.</p>
+<p>This extracts the value held in the Contribution Interest To Date field of the Contributions Plus Interest record based on a date of TODAY and the Contribution Type Code of EEORD for the member’s scheme.</p>
 
 <h2 id="a-name17acontratefielddateconttype"><a name="17"></a>#cont_rate_field(date,cont_type)</h2>
 
@@ -2134,7 +2160,7 @@ of valid fields click <a href="/pension/appendices/app_a/#pe_sta">here</a></li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to access a field in the header of a switch.</p>
+<p>Use this to refer to the value of a field in the switch header section on the <a href="/pension/file_maintenance/pem_mem/#Investment Switches">Member Investment Switches</a> screen for the specified date and bulk id.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -2146,14 +2172,24 @@ of valid fields click <a href="/pension/appendices/app_a/#pe_sta">here</a></li>
 <ul>
   <li>date - is the switch date.</li>
   <li>bulk_id - is the bulk id number for the switch.</li>
-  <li>switch_header_field is any valid field on the switch header table. For a list of
-valid fields click <a href="/pension/appendices/app_a/#pe_switch_h">here</a></li>
+  <li>switch_header_field - is any valid field on the Member Investment Switches Header table. For
+a list of valid fields click <a href="/pension/appendices/app_a/#pe_switch_h">here</a></li>
 </ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>switch_header_field must be a valid field on the Member Investment Switches Header table (pe_switch_h).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>bulk_id can only contain numeric values.</li>
+</ol>
 
 <p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pswh_expenses(19900101,27)
 </code></pre>
+
+<p>This extracts the value held in the Switch Header Expenses field of the Member Investment Switches Header record with the Switch date of 01/01/1990 and Bulk Id of 27.</p>
 
 <h2 id="a-name54aswitchnewfundfielddatefromdatetobulkid"><a name="54"></a>#switch_new_fund_field(date_from,date_to,bulk_id)</h2>
 
@@ -2835,7 +2871,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 07/08/2017 12:23:43.</p>
+        <p>Build Date 07/08/2017 14:37:12.</p>
       </div>
     </div>
 

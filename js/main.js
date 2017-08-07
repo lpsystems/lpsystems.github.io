@@ -60,6 +60,7 @@ $('.sovereign').parent().hide();
 $('.source').parent().hide();
 $('.ucc').parent().hide();
 $('.vhi').parent().hide();
+$('.jmmb').parent().hide();
 
 if (typeof query.client != 'undefined') {
   if (query.client == 'ascot_lloyd' || query.client == 'berkeley_burke' || query.client == 'corpad') {
@@ -108,5 +109,9 @@ if (typeof query.client != 'undefined') {
 
   if (query.client == 'vhi' || query.client == 'all') {
     $('.vhi').parent().show();
+  }
+
+  if (query.client == 'jmmb' || query.client == 'all') {
+    $('.jmmb').parent().show();
   }
 }
