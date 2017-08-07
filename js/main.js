@@ -11,34 +11,43 @@ function getQueryParams(qs) {
   return params;
 }
 
-//BELGIUM                            3
-//BERKELEY BURKE                     1
-//CORPAD                             1
-//CRODA INTERNATIONAL PLC            2 croda
-//ELECTRICITY SUPPLY BOARD           1
-//FRIENDS FIRST                      2 friends_first
-//HARBOUR PENSIONS                  19
-//INVESCO                            7
-//IRISH CEMENT                       2 irish_cement
-//JOAN                               6
-//KLEINWORT BENSON                  70 kleinwort_benson
-//L&P FINANCIAL TRUSTEES LIMITED     3 lp
-//L&P SYSTEMS                        8
-//L&P SYSTEMS LIMITED                3 lp
-//LIBERTY                            7
-//INTERTRUST                       146 intertrust
-//ASCOT LLOYD                       23 ascot_lloyd
-//SOURCE                            73 source
-//SOVEREIGN                         32 sovereign
-//TEST                               1
-//TOWERS WATSON                     40
-//UNIVERSITY COLLEGE, CORK           9 ucc
-//VHI                                8
-//JMMB                                 jmmb
+// ASCOT LLOYD                       26
+// BELGIUM                            3
+// BERKELEY BURKE                    40
+// CORPAD                             9
+// CRODA INTERNATIONAL PLC            2
+// ELECTRICITY SUPPLY BOARD           1
+// ELIAN                              1
+// FRIENDS FIRST                      2
+// GOODBODY                         121
+// HARBOUR PENSIONS                  23
+// INTERTRUST                       262
+// INVESCO                           30
+// IRISH CEMENT                       2
+// JMMB                              87
+// JOAN                               6
+// KLEINWORT BENSON                  70
+// L&P FINANCIAL TRUSTEES LIMITED     3
+// L&P SYSTEMS                        8
+// L&P SYSTEMS LIMITED                3
+// LIBERTY                            5
+// My WorkPlace Pension              38
+// NEWELL PALMER                      2
+// OGIER                              1
+// P F P                              1
+// SOURCE                            88
+// SOVEREIGN                         32
+// TEST                               1
+// TOWERS WATSON                     63
+// UNIVERSITY COLLEGE, CORK           7
+// VHI                                8
 
 var query = getQueryParams(document.location.search);
 //alert(query.client);
 
+$('.ascot_lloyd').parent().hide();
+$('.berkeley_burke').parent().hide();
+$('.corpad').parent().hide();
 $('.croda').parent().hide();
 $('.friends_first').parent().hide();
 $('.irish_cement').parent().hide();
@@ -47,11 +56,15 @@ $('.lp').parent().hide();
 $('.intertrust').parent().hide();
 $('.sovereign').parent().hide();
 $('.source').parent().hide();
-$('.ascot_lloyd').parent().hide();
 $('.ucc').parent().hide();
 $('.vhi').parent().hide();
 
 if (typeof query.client != 'undefined') {
+  if (query.client == 'ascot_lloyd' || query.client == 'berkeley_burke' || query.client == 'corpad') {
+    alert(query.client);
+    // $('.croda').parent().show();
+  }
+
   if (query.client == 'croda' || query.client == 'all') {
     $('.croda').parent().show();
   }
