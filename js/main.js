@@ -45,6 +45,8 @@ function getQueryParams(qs) {
 var query = getQueryParams(document.location.search);
 //alert(query.client);
 
+$('.payroll').hide();
+
 $('.ascot_lloyd').parent().hide();
 $('.berkeley_burke').parent().hide();
 $('.corpad').parent().hide();
@@ -61,8 +63,7 @@ $('.vhi').parent().hide();
 
 if (typeof query.client != 'undefined') {
   if (query.client == 'ascot_lloyd' || query.client == 'berkeley_burke' || query.client == 'corpad') {
-    alert(query.client);
-    // $('.croda').parent().show();
+    $('.payroll').show();
   }
 
   if (query.client == 'croda' || query.client == 'all') {
