@@ -46,18 +46,20 @@ var query = getQueryParams(document.location.search);
 //alert(query.client);
 
 $('.payroll').hide();
+$('.parent').hide();
+
 
 $('.ascot_lloyd').parent().hide();
 $('.berkeley_burke').parent().hide();
 $('.corpad').parent().hide();
-$('.croda').parent().hide();
+$('.croda').parent.hide();
 $('.friends_first').parent().hide();
 $('.irish_cement').parent().hide();
 $('.kleinwort_benson').parent().hide();
 $('.lp').parent().hide();
 $('.intertrust').parent().hide();
 $('.sovereign').parent().hide();
-$('.source').parent().hide();
+$('.source').hide();
 $('.ucc').parent().hide();
 $('.vhi').parent().hide();
 $('.jmmb').parent().hide();
