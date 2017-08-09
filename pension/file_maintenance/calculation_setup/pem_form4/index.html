@@ -759,7 +759,7 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_mint">here</
 <pre><code>#pmin_amount(TODAY,EEORD)
 </code></pre>
 
-<p>This extracts the value held in the Contribution Amount field of the Contributions Plus Interest record based on a date of TODAY and the Contribution Type Code of EEORD for the member’s scheme.</p>
+<p>This extracts the value held in the Contribution Amount field of the Contributions Plus Interest record based on a date of TODAY and the Contribution Type Code of EEORD for each member concerned.</p>
 
 <pre><code>#pmin_interest(TODAY,EEORD)
 </code></pre>
@@ -770,7 +770,7 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_mint">here</
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the contribution rate percentages table.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Contribution Rate Percentages">Contributions Rate Percentages</a> screen for the specified date and contribution type code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -780,16 +780,28 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_mint">here</
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>Date - is the date at which you wish to refer to a contribution at.</li>
-  <li>cont_type - is the contribution type that you wish to reference, e.g EEAVC.</li>
-  <li>cont_rate_field is any valid field on the contribution rate percentages table. For
+  <li>date - is the date at which the Contribution Rate Percentage is effective. i.e. the
+value previous to this date will be returned.</li>
+  <li>cont_type - denotes the contribution type code to be referred to.</li>
+  <li>cont_rate_field - is any valid field on the Contribution Rate Percentages table. For
 a list of valid fields click <a href="/pension/appendices/app_a/#pe_mcontp">here</a></li>
 </ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>cont_rate_field must be a valid field on the Contribution Rate Percentages table (pe_mcontp).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>cont_type must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>cont_type must exist in the <a href="/pension/file_maintenance/pem_sch/#Contribution Type Setup">Contribution Type Setup</a> screen for the member’s scheme.</li>
+</ol>
 
 <p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pcp_rate(19900101,EEAVC)
 </code></pre>
+
+<p>This extracts the value held in the Percent/Annual Flatrate field of the Contributions Rate Percentages for date effected at 01/01/1990 and the Contribution Type Code of EEAVC for each member concerned.</p>
 
 <h2 id="a-name18acontsetupfieldconttype"><a name="18"></a>#cont_setup_field(cont_type)</h2>
 
@@ -2871,7 +2883,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 07/08/2017 14:37:12.</p>
+        <p>Build Date 09/08/2017 08:55:16.</p>
       </div>
     </div>
 

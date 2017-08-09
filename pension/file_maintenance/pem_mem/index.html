@@ -159,9 +159,9 @@
 Master system and is where you will find all the data relating to a member of the
 scheme. The data is accessed via a series of screens, each grouping together similar
 parts of the member’s data. To navigate between the screens in the Member File, use
-the ‘Menu’ menu option that is described in more detail later in this section.</p>
+the ‘Menu’ as described in <a href="#navigate">Navigating Between Screens</a>.</p>
 
-<p>The different screens of information that you may find in the Member File are as follows:</p>
+<p>Some of the main screens of information that you may find in the Member File are as follows:</p>
 
 <div class="row">
   <div class="col-md-6">
@@ -181,20 +181,8 @@ the ‘Menu’ menu option that is described in more detail later in this sectio
           <td>Member Notes</td>
         </tr>
         <tr>
-          <td>Action Diary</td>
-          <td>Special Codes</td>
-        </tr>
-        <tr>
-          <td>Company History</td>
-          <td>Category History</td>
-        </tr>
-        <tr>
           <td>Status History</td>
           <td>Salary History</td>
-        </tr>
-        <tr>
-          <td>Free Standing AVC</td>
-          <td>Member Investment Setup</td>
         </tr>
         <tr>
           <td>Contribution Rate Percentages</td>
@@ -227,14 +215,6 @@ the ‘Menu’ menu option that is described in more detail later in this sectio
         <tr>
           <td>Member Address</td>
           <td>Internet Security Details</td>
-        </tr>
-        <tr>
-          <td>Divorce and Spouses’ Details</td>
-          <td>User Defined Screens</td>
-        </tr>
-        <tr>
-          <td>User Defined History</td>
-          <td> </td>
         </tr>
       </tbody>
     </table>
@@ -292,10 +272,7 @@ the staff number with member records for data transfer or reports. Typically you
 enter the employers payroll number here. This field is optional and can be left blank
 if you so wish.</p>
 
-<p><a name="pm_rsi_num"></a><strong>NI/PPS/SSNI Number</strong> - NI Number for UK schemes,
-PPS Number for Irish schemes or SSNI Number for Belgian schemes. As you enter this field, Pension Master will check all other
-member records on the database for duplicate NI/PPS/SSNI numbers and if any are found, you will be asked to
-confirm that you wish to continue or stop adding a new member.</p>
+<p><a name="pm_rsi_num"></a><strong>NI/PPS/TRN Number</strong> - This is where you store the members personal security number. As you enter this field, Pension Master will check all other member records on the database for duplicate numbers and if any are found, you will be asked to confirm that you wish to continue or stop adding a new member. There is also validation against the format of the number.</p>
 
 <p><a name="pm_title"></a><strong>Title</strong> - The members title (e.g. Mrs, Mr, Dr ). This
 field is optional, but can be used in mail merges etc. and is used by Pension Master
@@ -376,7 +353,7 @@ Schemes, this field description will change to Qualifying Serv Date.</p>
 
 <p><a name="pm_sid"></a><strong>SORP Issued Date</strong> - Date the SORP was Issued.</p>
 
-<p><a mame="pm_auto_enrolled"></a><strong>Auto Enrolled</strong></p>
+<p><a mame="pm_auto_enrolled"></a><strong>Auto Enrolled</strong> UK Only Schemes</p>
 
 <p>Adding a New Member</p>
 
@@ -438,9 +415,9 @@ record. The default security ratings are:</p>
   <li>Default Low Level</li>
 </ul>
 
-<p><a name="pm_avc"></a><strong>AVC Indicator</strong></p>
+<p><a name="pm_avc"></a><strong>AVC Indicator</strong> - The field can be updated to Y or N if the member has AVC type contributions. This field gets update automatically if a AVC type of contributions is added to the contribution screen.</p>
 
-<p><a name="pm_pao"></a><strong>PAO Indicator</strong></p>
+<p><a name="pm_pao"></a><strong>PAO Indicator</strong> - The field can be updated to Y or N if the member has a Pension Adjustment Order held against them.</p>
 
 <p><a name="pm_lam"></a><strong>Last Amended</strong> - This field is used to denote the date of
 the last amendment of this member record. This field is a view only field and is updated
@@ -667,6 +644,14 @@ Pension Ratio and Scheme Max Ratio respectively. It is not necessary that you us
 are there merely as another way of expressing pensionable service which may then be
 used in benefit calculation formulae (see section on <a href="/pension/file_maintenance/calculation_setup/pem_form/#Introduction">Formulae</a>)
 in this User Manual for further details).</p>
+
+<p><a name="pm_divpres"></a><strong>Divorce Present</strong> - This field is not available for user update. It will be automatically set to ‘Yes’ or ‘No’ if there are entries in the &lt;a href=<a href="#Divorce and Spouse Details">Divorce and Spouse Details</a> screen or not.</p>
+
+<p><a name="pm_nitab"></a><strong>Preferred Currency</strong> - This is available for you to record the members
+preferred currency for multi currency schemes. Valid entries for this field are those in the drop box.</p>
+
+<p><a name="pm_nitab"></a><strong>Preferred Language</strong> - This is available for you to record the members
+preferred language for multi regional schemes. Valid entries for this field are those in the drop box.</p>
 
 <p>Click ‘OK’ to save or ‘Cancel’ to exit without saving.</p>
 
@@ -3864,7 +3849,7 @@ labels that you have selected.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 07/08/2017 14:37:13.</p>
+        <p>Build Date 09/08/2017 08:55:17.</p>
       </div>
     </div>
 
