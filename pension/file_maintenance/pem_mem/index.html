@@ -754,7 +754,7 @@ TIME HOURS</strong>.</p>
 
 <p>Click ‘OK’ to save or ‘Cancel’ to exit without saving.</p>
 
-<h3 id="a-namedepaa-namedependantsnominated-beneficiary-detailsadependantsnominated-beneficiary-details"><a name="DEP"></a><a name="Dependants/Nominated Beneficiary Details"></a>Dependants/Nominated Beneficiary Details</h3>
+<h3 id="a-namedepaa-namedependantsbeneficiary-detailsadependantsnominated-beneficiary-details"><a name="DEP"></a><a name="Dependants/Beneficiary Details"></a>Dependants/Nominated Beneficiary Details</h3>
 
 <p>Select the dependants details screen using the menu, then click ‘Update’.</p>
 
@@ -780,6 +780,8 @@ the navigation buttons displayed next to the Dependant Number field.</p>
 follows:</p>
 
 <p><a name="pd_dep"></a><strong>Name</strong> - The dependant name must be entered.</p>
+
+<p><a name="pd_dep"></a><strong>Security Number</strong> - The dependant security number entered here if know.</p>
 
 <p><a name="pd_addr1"></a>
 <a name="pd_addr2"></a>
@@ -848,12 +850,12 @@ the dependant and the member. Select one of the following options from the list:
 
 <p><a name="pd_dob"></a><strong>Date of Birth</strong> - Enter the dependants date of birth (if available).</p>
 
-<p><a name="pd_ben_flag"></a><strong>Beneficiary</strong></p>
+<p><a name="pd_ben_flag"></a><strong>Beneficiary</strong> - Enter Y or N if beneficiary.</p>
 
 <p><a name="pd_prop_ben"></a><strong>Benefit Proportion</strong> - Enter the Proportion Of Benefits for
 that particular nominated dependant. Valid entries are from 0.00% to 100.00%.</p>
 
-<p><a name="pd_dep_flag"></a><strong>Dependant</strong></p>
+<p><a name="pd_dep_flag"></a><strong>Dependant</strong> - Enter Y or N if dependant.</p>
 
 <p><a name="pd_curr_flag"></a><strong>Current</strong> - Indicates if the displayed dependant is current
 or not or whether they are a dependant that has been superceded by a newer dependant
@@ -871,9 +873,38 @@ This date must be after the Effective Date. If a date is entered, which is befor
 the Effective Date, a message will be displayed informing you that the date entered
 is incorrect.</p>
 
-<p><a name="pd_apprvd_flag"></a><strong>Approved</strong></p>
+<p><a name="pd_apprvd_flag"></a><strong>Approved</strong> - Indicates if the displayed dependant is approved.</p>
 
-<p><a name="pd_date_apprvd"></a><strong>Date Approved</strong></p>
+<p><a name="pd_date_apprvd"></a><strong>Date Approved</strong> - Enter the date approved.</p>
+
+<p><a name="pd_has_trus"></a><strong>Has Trustee</strong> - Enter if the dependent has a trustee (ie under 18’s). If this has been selected then you have access to screen 2 trustees details.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_memc2.jpg" alt="Dependants Details Screen" /></p>
+
+  <p>Trustee Details Screen</p>
+</div>
+
+<p>The member details will be displayed at the top of the screen. Enter the details as
+follows:</p>
+
+<p><a name="pd_dep"></a><strong>Name</strong> - The dependant name must be entered.</p>
+
+<p><a name="pd_dep"></a><strong>Security Number</strong> - The dependant security number entered here if know.</p>
+
+<p><a name="pd_addr1"></a>
+<a name="pd_addr2"></a>
+<a name="pd_addr3"></a>
+<a name="pd_addr4"></a>
+<a name="pd_postcode"></a><strong>Address &amp; Postcode</strong> - The dependant’s address and postcode can be entered here.</p>
+
+<p><a name="pd_televe"></a><strong>Telephone (Eve)</strong> - The dependant’s evening telephone number can be entered here.</p>
+
+<p><a name="pd_telday"></a><strong>Telephone (Day)</strong> - The dependant’s daytime telephone number can be entered here.</p>
+
+<p><a name="pd_email"></a><strong>Email</strong> - The dependant’s email address can be entered here.</p>
 
 <p>When all dependant details have been entered click ‘OK’ to save the dependant details,
 or ‘Cancel’ to exit the dependant input without saving the entered details.</p>
@@ -1129,10 +1160,6 @@ will remove the line.</p>
 
 <p>Click ‘OK’ to save or ‘Cancel’ to exit without saving.</p>
 
-<h3 id="a-nameavc-detailsaavc-details"><a name="AVC Details"></a>AVC Details</h3>
-
-<p>This option is to be implemented in a future release of Pension Master.</p>
-
 <h3 id="a-namefsavcafsavc-details"><a name="FSAVC"></a>FSAVC Details</h3>
 
 <p>Select the FSAVC provider’s details screen using the menu, click ‘Update’.</p>
@@ -1142,8 +1169,7 @@ also input other essential information such as the date the policy commenced. Th
 allows you to record a history of all free standing additional voluntary contributions
 policies taken out by a member.</p>
 
-<p>A new display has been added to the title bar. This shows how many FSAVC policies
-are held on Pension Master for this member and the position of the record in relation
+<p>A display in the title bar shows how many FSAVC policies are held on Pension Master for this member and the position of the record in relation
 to the total.</p>
 
 <p>To scroll between the different FSAVC’s for the member, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ and ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
@@ -1310,7 +1336,7 @@ F i.e. an entry of ‘F’ is in the <a href="#pm_nitab">NI Table</a> field
 on the <a href="#Member Indicator Details">Member Indicators screen</a>
 in the members record.</p>
 
-<p><a name="pcp_rate"></a><strong>ANNUAL RATE</strong> - If PERCENT type code is used, enter the percentage rate to use.</p>
+<p><a name="pcp_rate"></a><strong>PERCENT/ANNUAL FLATRATE</strong> - If PERCENT type code is used, enter the percentage rate to use otherwise enter the flatrate.</p>
 
 <p><a name="pcp_salary"></a><strong>SALARY TO USE</strong> - If PERCENT type code is used, enter
 the salary to use in the calculation.</p>
@@ -1346,7 +1372,7 @@ contribution amount for that contribution type.</p>
 </div>
 
 <p>This screen is used to hold details of the contributions paid in respect of a member.
-This screen can be updated manually or by <a href="/pension/updates/pem_bat/">Batch Data Input</a>.</p>
+This screen can be updated manually or by <a href="/pension/updates/pem_bat/">Batch Data Input</a> or by <a href="/pension/updates/import_data/pem_dload.md/">General Data Load</a>.</p>
 
 <p>There are potentially three screens as follows:</p>
 
@@ -1393,7 +1419,7 @@ added to contributions. It is updated by using the <a href="/pension/updates/peu
 <div class="alert alert-danger" role="alert">
   <p>This investment history for a member is normally updated by running the <a href="/pension/investments/allocate_contributions/peu_alloc/">Contribution Allocation</a> and <a href="/pension/investments/unit_posting/peu_post/">Post Units</a> options.</p>
 
-  <p>L&amp;P Systems Limited does not generally recommend that you directly edit the investment history for a member, as set out below, as it may cause inconsistencies between the correspoding contribution entries.</p>
+  <p>L&amp;P Systems Limited does not generally recommend that you directly edit the investment history for a member, as set out below, as it may cause inconsistencies between the corresponding contribution entries.</p>
 
   <p>As a general procedure, you must first unpost the appropriate units for this member using the <a href="/pension/investments/unit_posting/peu_post/">Post
 Units program</a>. Then, you must unallocate the approriate investment record for this member using the <a href="/pension/investments/allocate_contributions/peu_alloc/">Contribution Allocation program</a>. Then, adjust the corresponding entry and re-allocate and re-post the contributions to units (adjusting the unit price on the appropriate investment fund record if neccessary).</p>
@@ -2189,7 +2215,7 @@ Pension Increase History Screen</a>.</p>
 not catered for within the Deferred Pensioner screens. The field titles and the type
 of data that can be entered is held against the Scheme of the current member. These
 fields must be previously defined using the <a href="/pension/file_maintenance/pem_sch/#Deferred Pensioner/Pensioner Fields">Deferred
-Pensioner/Pensioner Fields</a> menu option on the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> menu.</p>
+Pensioner/Pensioner Fields</a> menu option on the <a href="/pension/file_maintenance/pem_sch/#introduction">Schemes</a> menu.</p>
 
 <p>Click ‘OK’ to save the Basic Deferred Pensioner Details information, or click ‘Cancel’
 to exit the screen without saving the details entered.</p>
@@ -2479,7 +2505,7 @@ Increase History Screen</a>.</p>
 not catered for within the Pensioner screens. The field titles and the type of data
 that can be entered is held against the Scheme of the current member. These fields
 must be previously defined using the <a href="/pension/file_maintenance/pem_sch/#Deferred Pensioner/Pensioner Fields">Deferred
-Pensioner/Pensioner Fields</a> menu option on the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> menu.</p>
+Pensioner/Pensioner Fields</a> menu option on the <a href="/pension/file_maintenance/pem_sch/#introduction">Schemes</a> menu.</p>
 
 <p>Click on ‘OK’ to save the Basic Pensioner Details information, or click on ‘Cancel’
 to exit the screen without saving the details entered.</p>
@@ -3849,7 +3875,7 @@ labels that you have selected.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 10/08/2017 10:09:05.</p>
+        <p>Build Date 11/08/2017 09:04:55.</p>
       </div>
     </div>
 
