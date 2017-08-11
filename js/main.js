@@ -46,7 +46,7 @@ var query = getQueryParams(document.location.search);
 //alert(query.client);
 
 $('.payroll').hide();
-$('.hide-grandparent').parent().parent().hide();
+$('.hide-grandparent').parent().parent().css( "border", "3px solid green" );
 
 $('.ascot_lloyd').parent().hide();
 $('.berkeley_burke').parent().hide();
