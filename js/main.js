@@ -46,6 +46,7 @@ var query = getQueryParams(document.location.search);
 //alert(query.client);
 
 $('.payroll').hide();
+$('.hide-grandparent').parent().parent().hide();
 
 $('.ascot_lloyd').parent().hide();
 $('.berkeley_burke').parent().hide();
@@ -53,6 +54,7 @@ $('.corpad').parent().hide();
 $('.croda').parent().hide();
 $('.friends_first').parent().hide();
 $('.irish_cement').parent().hide();
+$('.jmmb').parent().hide();
 $('.kleinwort_benson').parent().hide();
 $('.lp').parent().hide();
 $('.intertrust').parent().hide();
@@ -60,11 +62,22 @@ $('.sovereign').parent().hide();
 $('.source').parent().hide();
 $('.ucc').parent().hide();
 $('.vhi').parent().hide();
-$('.jmmb').parent().hide();
 
 if (typeof query.client != 'undefined') {
   if (query.client == 'ascot_lloyd' || query.client == 'berkeley_burke' || query.client == 'corpad') {
     $('.payroll').show();
+  }
+
+  if (query.client == 'ascot_lloyd' || query.client == 'all') {
+    $('.ascot_lloyd').parent().show();
+  }
+
+  if (query.client == 'berkeley_burke' || query.client == 'all') {
+    $('.berkeley_burke').parent().show();
+  }
+
+  if (query.client == 'corpad' || query.client == 'all') {
+    $('.corpad').parent().show();
   }
 
   if (query.client == 'croda' || query.client == 'all') {
@@ -77,6 +90,10 @@ if (typeof query.client != 'undefined') {
 
   if (query.client == 'irish_cement' || query.client == 'all') {
     $('.irish_cement').parent().show();
+  }
+
+  if (query.client == 'jmmb' || query.client == 'all') {
+    $('.jmmb').parent().show();
   }
 
   if (query.client == 'kleinwort_benson' || query.client == 'all') {
@@ -109,9 +126,5 @@ if (typeof query.client != 'undefined') {
 
   if (query.client == 'vhi' || query.client == 'all') {
     $('.vhi').parent().show();
-  }
-
-  if (query.client == 'jmmb' || query.client == 'all') {
-    $('.jmmb').parent().show();
   }
 }
