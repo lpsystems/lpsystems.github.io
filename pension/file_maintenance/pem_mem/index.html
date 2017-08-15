@@ -70,8 +70,8 @@
       <li><a href="#Company History">Company History</a></li>
       <li><a href="#Category History">Category History</a></li>
       <li><a href="#Status History">Status History</a></li>
+      <li><a href="#Marital Status History">Marital Status History</a></li>
       <li><a href="#Salary History">Salary History Details</a></li>
-      <li><a href="#AVC Details">AVC Details</a></li>
       <li><a href="#FSAVC">FSAVC Details</a></li>
       <li><a href="#Investment Setup">Investment Setup</a></li>
       <li><a href="#Contribution Rate Percentages">Contribution Rate Percentages</a></li>
@@ -84,6 +84,7 @@
       </li>
       <li><a href="#Investment History">Investment History</a></li>
       <li><a href="#Investment Switches">Investment Switches</a></li>
+      <li><a href="#Rebalance Switches">Rebalance Switches</a></li>
       <li><a href="#Investment Value Summary">Investment Value Summary</a></li>
       <li><a href="#NI Salary">NI Salary</a></li>
       <li><a href="#Additional Benefits Details">Additional Benefits Details</a></li>
@@ -103,11 +104,19 @@
           <li><a href="#pension_history">Screen 2) Pension History</a></li>
           <li><a href="#pension_increase_history">Screen 3) Pension Increase History</a></li>
           <li><a href="#pensioner_bank_details">Screen 4) Pensioner Bank Details</a></li>
-        </ul>
-      </li>
-      <li><a href="#Death Details">Death Details</a>
-        <ul>
-          <li><a href="#Viewing/Updating Linked Beneficiary Records">Viewing/Updating Linked Beneficiary Records</a></li>
+          <li><a href="#Disability Details">Pensioner Details</a>
+            <ul>
+              <li><a href="#basic_disability_details">Screen 1) Basic disability Details</a></li>
+              <li><a href="#pension_history">Screen 2) Pension History</a></li>
+              <li><a href="#pension_increase_history">Screen 3) Pension Increase History</a></li>
+              <li><a href="#pensioner_bank_details">Screen 4) Pensioner Bank Details</a></li>
+            </ul>
+          </li>
+          <li><a href="#Death Details">Death Details</a>
+            <ul>
+              <li><a href="#Viewing/Updating Linked Beneficiary Records">Viewing/Updating Linked Beneficiary Records</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li><a href="#Member Address Details">Member Address Details</a></li>
@@ -134,7 +143,6 @@
       <li><a href="#care_average_revalued_earnings">Career Average Revalued Earnings</a></li>
       <li><a href="#disability_benefit">Disability Benefit</a></li>
       <li><a href="#pension_input_periods">Pension Input Periods</a></li>
-      <li><a href="#Re">Pension Input Periods</a></li>
     </ul>
   </li>
   <li><a href="#Deleting Member Records">Deleting Member Records</a></li>
@@ -1518,6 +1526,47 @@ switch if:</p>
   <li>there are any switches for this member after date requested for the switch to be deleted.</li>
 </ul>
 
+<h3 id="a-namerebalance-switchesaa-namerswitarebalance-switches"><a name="Rebalance Switches"></a><a name="RSWIT"></a>Rebalance Switches</h3>
+
+<p>Click Menu and then select the Rebalance Switches option and click ‘OK’.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_mem3y.jpg" alt="Rebalance Switches Screen" /></p>
+
+  <p>Rebalance Switches Screen</p>
+</div>
+
+<p>This screen is used to display any rebalance investment switches that may have been made, or
+are in the process of being made for this member.</p>
+
+<p>There are separate screens for each rebalance switch a member has made. To navigate
+between the investment switches, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
+
+<p><strong>Member Switch Details</strong></p>
+
+<p>This screen displays details of which fund(s) the proportions to be rebalanced.</p>
+
+<p>Further details of how rebalance switches are done in Pension Master can be found
+in <a href="/pension/investments/switches/peu_rebalance/">Rebalance Switches</a>.</p>
+
+<p>To add a rebalance switch for the member, click ‘Add’.</p>
+
+<p>To enter rebalance details for an existing switch, click ‘Update’.</p>
+
+<p>To process a rebalance of units for a switch that is marked as Not yet Processed, click ‘Process’.</p>
+
+<p>To process a sale of units for a switch that is marked as Pending, click ‘Sell’.</p>
+
+<p>To delete an existing switch, click ‘Delete’. You will not be able to delete an existing
+switch if:</p>
+
+<ul>
+  <li>the entry on <a href="#Investment History">Investment History</a> relating to the rebalance have been posted to units.</li>
+  <li>there are any switches for this member after date requested for the switch to be deleted.</li>
+</ul>
+
 <h3 id="a-nameinvestment-value-summaryaa-namemivalainvestment-value-summary"><a name="Investment Value Summary"></a><a name="MIVAL"></a>Investment Value Summary</h3>
 
 <p>Click ‘Menu’ and then select the Investment Value Summary option and click ‘OK’.</p>
@@ -1542,6 +1591,15 @@ displayed if any unit prices are used that are older than 90 days from today’s
   <li><strong style="color: red">Red</strong> - Unallocated contributions i.e. contributions that have not yet been used to buy units.
 These are taken at face value e.g. £100 of unallocated contributions has a value of £100.</li>
 </ul>
+
+<p>Screen 2 shows the fund value spilt by the member’s contributions types.
+There are separate screens for each contribution type a member has. To navigate  between the investment switches, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_mem3z.jpg" alt="Investment Value Summary Screen by Contribution" /></p>
+
+  <p>Investment Value Summary Screen by Contribution Type</p>
+</div>
 
 <h3 id="a-namenihaa-nameni-salaryani-salary"><a name="NIH"></a><a name="NI Salary"></a>NI Salary</h3>
 
@@ -1779,6 +1837,8 @@ Enter the Contracted Out To date in the format ddmmyy or dd/mm/yyyy.</p>
 <p><a name="ptvi_fin_rem"></a><strong>Final Remuneration</strong> - Enter the final remuneration
 of the member from their previous scheme.</p>
 
+<p><a name="ptvi_avc_draw"></a><strong>AVC’s Drawdown</strong> - Enter Yes or No from the dropdown.</p>
+
 <p><a name="ptvi_ca"></a><strong>CA Received (UK)</strong> - Enter the Certified Amount received.</p>
 
 <p><a name="ptvi_cep"></a><strong>CEP Received (UK)</strong> - Enter the Certified Equivalent Premium received.</p>
@@ -1863,6 +1923,9 @@ be entered.</p>
 
 <p><a name="ptvi_sc_ref"></a><strong>Transferring Scheme - Reference</strong> - Enter the reference
 code (if applicable) for this transfer in.</p>
+
+<p><a name="ptvi_sc_conname"></a><strong>Transferring Scheme - Contact Name</strong> - Enter the contact name
+(if applicable) for this transfer in.</p>
 
 <p><a name="ptvi_sc_pol"></a><strong>Transferring Scheme - Policy Number</strong> - Enter the policy
 number (if applicable) for this transfer in.</p>
@@ -1951,6 +2014,10 @@ transfer out as pending otherwise.</p>
 <p><a name="ptvo_date_start"></a><strong>Date Started New Employment</strong> - Enter the Started
 New Employment Date in the format ddmmyy or dd/mm/yyyy. The Started New Employment
 Date cannot be before the Date the member Left service.</p>
+
+<p><a name="ptvo_date_start"></a><strong>Documents to Receiving Scheme Date</strong> - Enter date documents sent in the format ddmmyy or dd/mm/yyyy.</p>
+
+<p><a name="ptvo_date_start"></a><strong>Date In Specie Transfer Completed</strong> - Enter the Date in the format ddmmyy or dd/mm/yyyy.</p>
 
 <p><a name="ptvo_scon"></a><strong>New Scheme SCON (UK)</strong> - Enter the SCON for the receiving scheme
 (if any). This is only relevant for contracted-out schemes. If the members scheme
@@ -2174,6 +2241,10 @@ Maximum Cash at the date of withdrawal.</p>
 
 <p><a name="pdps_max_sch_csh"></a><strong>Max Scheme Cash at DOW</strong> - Enter the Maximum Scheme
 Cash at the date of withdrawal.</p>
+
+<p><a name="pdps_max_sch_csh"></a><strong>Final Pensionable Salary</strong> - Enter the final pensionable salary if know.</p>
+
+<p><a name="pdps_max_sch_csh"></a><strong>Tax Free Lump Sum Waived</strong> - Enter either Yes or No.</p>
 
 <p><a name="pdps_dt_cess"></a><strong>Cessation Date</strong> - Enter the Date at which the Deferred
 Pension Ceased, in the format ddmmyy or dd/mm/yyyy.</p>
@@ -2496,6 +2567,7 @@ Pension Provider.</p>
 increases. These discrepancies, if they occur, will be seen on the <a href="#Pension Increase History Screen">Pension
 Increase History Screen</a>.</p>
 </div>
+<p><a name="pps_arf_armf_provider"></a><strong>ARF/AMRF P</strong> - Select one of the following options from the list:</p>
 
 <p><a name="pps_field_1"></a>
 <a name="pps_field_2"></a>
@@ -3875,7 +3947,7 @@ labels that you have selected.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 11/08/2017 12:40:14.</p>
+        <p>Build Date 15/08/2017 08:24:51.</p>
       </div>
     </div>
 
