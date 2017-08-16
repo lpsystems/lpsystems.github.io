@@ -2567,7 +2567,16 @@ Pension Provider.</p>
 increases. These discrepancies, if they occur, will be seen on the <a href="#Pension Increase History Screen">Pension
 Increase History Screen</a>.</p>
 </div>
-<p><a name="pps_arf_armf_provider"></a><strong>ARF/AMRF P</strong> - Select one of the following options from the list:</p>
+
+<p><a name="pps_arf_armf_provider"></a><strong>ARF/AMRF Provider</strong> - Enter the name of the provider.</p>
+
+<p><a name="pps_arf_policy"></a><strong>ARF Policy</strong> - Enter the name of the policy number.</p>
+
+<p><a name="pps_arf_amount"></a><strong>ARF Amount</strong> - Enter the amount.</p>
+
+<p><a name="pps_amrf_policy"></a><strong>AMRF Policy</strong> - Enter the name of the policy number.</p>
+
+<p><a name="pps_amrf_amount"></a><strong>AMRF Amount</strong> - Enter the amount.</p>
 
 <p><a name="pps_field_1"></a>
 <a name="pps_field_2"></a>
@@ -2770,9 +2779,9 @@ the first screen.</p>
 Number. This field will only be displayed if the Account Type, that has been selected
 above, is Building Society.</p>
 
-<p><a name="pps_iban"></a><strong>Account Details - IBAN</strong></p>
+<p><a name="pps_iban"></a><strong>Account Details - IBAN</strong> - Enter the IBAN number.</p>
 
-<p><a name="pps_bic"></a><strong>Account Details - BIC</strong></p>
+<p><a name="pps_bic"></a><strong>Account Details - BIC</strong> - Enter the BIC number.</p>
 
 <p>Click ‘OK’ to save the Pensioner Bank Details information, or click ‘Cancel’ to exit
 the screen without saving the details entered.</p>
@@ -2923,6 +2932,9 @@ address entered is the (Current) Member Address or the (Non-Current) Alternative
 <p><a name="pmad_televe"></a><strong>Telephone (Eve)</strong> - Enter the members evening telephone number (if known).
 <a name="pmad_telday"></a><strong>Telephone (Day)</strong> - Enter the members daytime telephone number (if known).</p>
 
+<p><a name="pmad_eff_date"></a><strong>Effective Date</strong> - This field is updated when a change has been made.
+<a name="pmad_system_id"></a><strong>Changed By</strong> - This field indicates how the change was made i.e. via Pension Master, or On Line or via a dataload.</p>
+
 <p><a name="pmad_email"></a><strong>Email</strong> - Enter the members e-mail address
 (if known). This must contain the ‘@’ symbol that is present in all e-mail addresses.</p>
 
@@ -3014,7 +3026,7 @@ Member Records</a>.</p>
 
 <h3 id="a-namequotesaa-namerunning-benefit-quotationscalculationsarunning-benefit-quotationscalculations"><a name="QUOTES"></a><a name="Running Benefit Quotations/Calculations"></a>Running Benefit Quotations/Calculations</h3>
 
-<p>Select the quotations screen using the menu. The following screen is displayed:</p>
+<p>Select the quotations screen using the menu. The following screen is displayed if the member has had more than one quotation run on it. If none have been run the pop up doesn’t display :</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_mem4a.jpg" alt="Quotation Type Selection Screen" /></p>
@@ -3088,8 +3100,20 @@ the section “Add A New Quote”.</p>
 
 <p>Click ‘Calculate’.</p>
 
-<p><a name="additional"></a>A pop-up window now appears asking for various optional data
-items that can be used in your benefit calculations. This is as follows:</p>
+<div class="screen">
+  <p><img src="/pension/images/pem_mem4h.jpg" alt="Calculations Data Screen" /></p>
+
+  <p>Calculations Data Screen</p>
+</div>
+
+<p><a name="calc_date"></a><strong>Calculation Date</strong> - Enter the calculation date or date
+the member is to leave the scheme for calculation purposes.</p>
+
+<p>If you wish to see the quote results and the warning report tick the next fields else no reports are produced.</p>
+
+<p><a name="additional"></a>A pop-up window may now appear asking for various optional data
+items that can be used in your benefit calculations. This is dependent on how your System Administrator has set
+up the calculations for your scheme A sample is as follows:</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_mem4f.jpg" alt="Benefit Override Values Screen" /></p>
@@ -3097,54 +3121,40 @@ items that can be used in your benefit calculations. This is as follows:</p>
   <p>Benefit Override Values Screen</p>
 </div>
 
-<p>The main fields are as follows:</p>
+<p>The sample of fields are as follows:</p>
 
 <p><strong>Salary for Revenue Max</strong> - Enter a salary figure for calculating Revenue Maxima
 figures as appropriate. This is dependent on how your System Administrator has set
 up the formulae for your scheme - consult them to see if this field is relevant. Otherwise
-just leave the value as zero.</p>
-
-<p><a name="calc_date"></a><strong>Calculation Date</strong> - Enter the calculation date or date
-the member is to leave the scheme for calculation purposes. If you have filled in
-the <strong>DATE LEFT</strong> field on the Basic Member Details screen of the Member File (see
-earlier in this section for further details) then the termination date will default
-to <strong>DATE LEFT</strong> and you will not be allowed to amend it. Otherwise enter a termination
-date in the format ddmmyyyy or dd/mm/yyyy.</p>
-
-<p><a name="finalise"></a><strong>Finalise</strong></p>
-
-<p><a name="update_manually"></a><strong>Update Manually</strong></p>
+just leave the values as zero.</p>
 
 <p><a name="current_quote_date"></a><strong>Current Quote Date</strong> - Enter the quotation date. This is a date field and may be entered
 in the format ddmmyy or dd/mm/yyyy. The quotation date defaults to today’s date if
 left blank. The quotation date can be used in calculations, so a date in the future
 may be entered for a member retiring in the future for example.</p>
 
-<p><a name="previous_quote_date"></a><strong>Previous Quote Date</strong></p>
-
-<p><strong>INDEX</strong></p>
-
-<p><strong>QUOTE DESCRIPTION</strong></p>
-
-<p><strong>CURRENT</strong></p>
-
-<p><strong>PREVIOUS</strong></p>
-
 <p>Also, if you are using any <a href="/pension/file_maintenance/calculation_setup/pem_fac/">Actuarial Factors</a>
 then the members age will be worked out using
 this supplied quotation date and the members date of birth. This will determine which
 actuarial factor is used.</p>
 
-<p>When printing out the quotation results, if notes exist on the <em>Member Notes</em> screen
-for that member, a message is printed at the foot of the report warning you of this
-and suggesting that you check the notes to make sure nothing of relevance to the quotes
-exists for this member.</p>
-
 <p>Click ‘OK’ when in the field Quote Date to calculate quotes, otherwise click on ‘Cancel’
 to exit the quotation screen without updating the quotes.</p>
 
-<p>If there have been any warnings found, a ‘*** Warnings Found ***’ will be displayed
-to the bottom of the screen in red to warn you of this.</p>
+<p>Other fields on the screen are as follows :</p>
+
+<p><a name="previous_quote_date"></a><strong>Previous Quote Date</strong></p>
+
+<p><strong>INDEX</strong> - The index number is the quote line number it can be used in reports/mail merges/ or other quotes/calculations.</p>
+
+<p><strong>QUOTE DESCRIPTION</strong> -  The description written under quotation set up.</p>
+
+<p><strong>CURRENT</strong> - The value of the current quote.</p>
+
+<p><strong>PREVIOUS</strong> - The value of the previous quote.</p>
+
+<p>If there have been any warnings found, a ‘*** Warnings ***’  button will be displayed
+on the right hand side of the screen under Writeback.</p>
 
 <p>When a quotation is calculated, a historical record is created. To scroll through
 the historical quotation records, use the arrowed buttons. The historical records
@@ -3239,11 +3249,7 @@ for a member.</p>
 </div>
 
 <p>When a member applies for access to Pension Master Online the password and security
-details will automatically be updated from the Apply For Access form. When the request
-is received, in a Diary Entry from Pension Master Online, the members details should
-be cross checked against those held on Pension Master. If this is satisfactory then
-this screen can the updated and the Allow Access field can be checked. An email should
-then be sent to the member indicating that access has been granted.</p>
+details will automatically be updated from the Apply For Access form.</p>
 
 <p><a name="pm_int_access"></a><strong>Allow Access</strong> - Select ‘Yes’ from the list to allow members
 access to Pension Master Online.</p>
@@ -3947,7 +3953,7 @@ labels that you have selected.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 15/08/2017 08:24:51.</p>
+        <p>Build Date 16/08/2017 08:43:59.</p>
       </div>
     </div>
 
