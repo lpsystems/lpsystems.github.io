@@ -3047,8 +3047,7 @@ require and click ‘OK’ to select it.</p>
 </div>
 
 <p>Note that if there have been any warnings found last time this quotation was run,
-a ‘*** Warnings Found ***’ will be displayed to the bottom of the screen in red to
-warn you of this. If you wish to view those warnings you can click the warnings button
+a ‘*** Warnings ***’ button will be display. If you wish to view those warnings you can click the warnings button
 in the menu.</p>
 
 <h3 id="a-nameadd-a-new-quoteaadd-a-new-quote"><a name="Add A New Quote"></a>Add A New Quote</h3>
@@ -3106,8 +3105,8 @@ the section “Add A New Quote”.</p>
   <p>Calculations Data Screen</p>
 </div>
 
-<p><a name="calc_date"></a><strong>Calculation Date</strong> - Enter the calculation date or date
-the member is to leave the scheme for calculation purposes.</p>
+<p><a name="calc_date"></a><strong>Calculation Date</strong> - Enter the calculation date or this could be date
+the member is to leave/retire the scheme for calculation purposes.</p>
 
 <p>If you wish to see the quote results and the warning report tick the next fields else no reports are produced.</p>
 
@@ -3121,7 +3120,7 @@ up the calculations for your scheme A sample is as follows:</p>
   <p>Benefit Override Values Screen</p>
 </div>
 
-<p>The sample of fields are as follows:</p>
+<p>A sample of a field is as follows:</p>
 
 <p><strong>Salary for Revenue Max</strong> - Enter a salary figure for calculating Revenue Maxima
 figures as appropriate. This is dependent on how your System Administrator has set
@@ -3147,7 +3146,7 @@ to exit the quotation screen without updating the quotes.</p>
 
 <p><strong>INDEX</strong> - The index number is the quote line number it can be used in reports/mail merges/ or other quotes/calculations.</p>
 
-<p><strong>QUOTE DESCRIPTION</strong> -  The description written under quotation set up.</p>
+<p><strong>QUOTE DESCRIPTION</strong> -  The description written under quotation set up at category level.</p>
 
 <p><strong>CURRENT</strong> - The value of the current quote.</p>
 
@@ -3485,6 +3484,8 @@ description of the correspondence.</p>
 
 <p><a name="pmtx_dc_life_allow"></a><strong>DC Lifetime Allowance</strong> - Enter the DC Lifetime Allowance for the date entered.</p>
 
+<p><a name="pmtx_dc_ann_allow"></a><strong>MP Annual Allowance</strong> - Enter the DC Annual Allowance for the date entered.</p>
+
 <h3 id="a-nameallowaa-nameannuallifetime-allowanceaannuallifetime-allowance"><a name="ALLOW"></a><a name="Annual/Lifetime Allowance"></a>Annual/Lifetime Allowance</h3>
 
 <p>The annual/lifetime allowance amounts are held across 2 screens for the member. The annual allowance amounts are held in screen 1 and the lifetime allowance amounts are held in screen 2. Both the screens can be updated manually, or they can have data written back to them via <a href="/pension/updates/peu_wback/">Writeback Results</a>. The screens will only be available to UK schemes only.</p>
@@ -3554,6 +3555,111 @@ description of the correspondence.</p>
 <p><a name="pmay_tv_val"></a><strong>TV Cash Value</strong> - Enter the transferred cash value.</p>
 
 <h3 id="a-namecareaa-namecareaveragerevaluedearningsacareer-average-revalued-earnings"><a name="CARE"></a><a name="care_average_revalued_earnings"></a>Career Average Revalued Earnings</h3>
+<p>A members Care Averaged Average Earning details are held on 2 separate screens, all are accessible
+from the menu at the top of the screen by selecting the appropriate number. The screens
+are described as follows:</p>
+
+<h4 id="a-namecarepensionamountascreen-1-career-average-revalued-earnings-current-amount"><a name="care_pension_amount"></a>Screen 1) Career Average Revalued Earnings Current Amount</h4>
+
+<p>This is used to record the component parts of the members care pension, e.g.
+those parts of the members care pension that escalate or are calculated at different rates. Care
+Pension Codes are used to indicate whether the component values are Added/Ignored
+or Subtracted from the calculation of the members total Care Pension.</p>
+
+<p>The Care Headings are initially entered via the <a href="/pension/file_maintenance/pem_sch.md/">Care Screens</a> menu
+option in the Scheme File. The scheme needs to be set up as a Care scheme under basic scheme details.</p>
+
+<p>Scheme using the <a href="/pension/file_maintenance/pem_sch/#Code Allocation">Code
+Allocation</a> menu option on the <a href="/pension/file_maintenance/pem_sch/">Schemes</a> menu</p>
+
+<p>It is also where you can record if a member has other care benefits in the scheme by inserting the member’s
+number of the deferred record.</p>
+
+<h4 id="a-namedeferredpensionincreasehistoryascreen-2-career-average-revalued-earnings--increase-history"><a name="deferred_pension_increase_history"></a>Screen 2) Career Average Revalued Earnings -Increase History</h4>
+
+<p>This records the full increase history of any changes made to a members Deferred
+Pension benefit on the Deferred Pension History Screen. There is one screen per deferred
+pension code shown on the Deferred Pension History screen with the facility to scroll
+between the different deferred pension codes. The last 10 alterations made to a Deferred
+Pension Code are displayed on the screen with options on the menu to allow any other
+codes to be shown.</p>
+
+<p>Select the Care screen from the Members menu, then click ‘Update’.</p>
+
+<p>The following screen is displayed:</p>
+
+<p><a name="Career Average Revalued Earning"></a></p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_mcare1.jpg" alt="Career Average Revalued Earnings Screen" /></p>
+
+  <p>Career Average Revalued Earnings Totals</p>
+</div>
+
+<p>Update is the only option and each line is updated individually. This screen can also be update via the Care Revaluation Run <a href="/pension/updates/peu_reval.md/">Care Revaluation Run</a> menu
+option on the Updates Menu</p>
+
+<p>The following buttons are active whilst you are editing the Career Average Revalued Earnings:</p>
+
+<ul>
+  <li><strong>Insert</strong> - Open up a blank line for entry of new Care Pension details at the current cursor location.</li>
+  <li><strong>Append</strong> - Adds a blank line for entry at the end of the current screen.</li>
+  <li><strong>Delete Row</strong> - Deleting a line will also delete all the care revaluation history associate with this care code. You will be prompted to confirm that this action is Ok.</li>
+</ul>
+
+<p>The input fields on the Career Average Revalued Earnings screen are as follows:</p>
+
+<p><a name="pdpa_code"></a><strong>PENSION CODE</strong> - Enter a valid Care Code
+or select a code from the lookup list. The list has an indicator on the right-hand
+side to show if the Care Code has already been used by the current member.</p>
+
+<p>The first two characters of the Care Code indicate a different type
+of Care Pension transaction:</p>
+
+<ul>
+  <li><strong>CA</strong> - Care Pension Add</li>
+  <li><strong>CI</strong> - Care Pension Ignore</li>
+  <li><strong>CS</strong> - Care Pension Subtract</li>
+</ul>
+
+<p>The Care Pensioner Codes are initially entered via the <a href="/pension/system_data/pem_codem/">Codes</a> menu
+option on the System Data Menu. This allows
+Codes to be entered with a brief description. For the code to be used against the
+member, the code must be assigned to the members Scheme using the <a href="/pension/file_maintenance/pem_sch/#Code Allocation">Code
+Allocation</a> menu option on the <a href="/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
+
+<p>The totals at the bottom of the Care History Screen are calculated as
+follows:</p>
+
+<ul>
+  <li>If the Care Pension Code starts with ‘CA’ then the value is <strong>added</strong> to the total value.</li>
+  <li>If the Care Pension Code starts with ‘CI’ then the value is <strong>ignored</strong> (not included in the total value).</li>
+  <li>If the Care Pension Code starts with ‘CS’ then the value is <strong>subtracted</strong> from the total value.</li>
+</ul>
+
+<p>The date should be entered in the format ddmmyy or dd/mm/yyyy and the date must be later than the last date on the Career Average Revalued Earning
+History screen for that code.</p>
+
+<p>The other fields formats are defined as per the scheme set up.</p>
+
+<p>Click ‘OK’ to save the Career Average Revalued Earning information, or click ‘Cancel’ to
+exit the screen without saving the details entered.</p>
+
+<p>The Career Average Revalued Earning History screen can be selected by clicking ‘2’.</p>
+
+<p>The following screen is displayed:</p>
+
+<p><a name="Career Average Revalued Earning Increase History Screen"></a></p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_mcare2.jpg" alt="Career Average Revalued Earning Increase History Screen" /></p>
+
+  <p>Career Average Revalued Earning Increase History Screen</p>
+</div>
+
+<p>The details on this screen cannot be manually altered or amended, they are simply
+a record of changes made on the Career Average Revalued Earning Screen. Other Care
+Codes can be viewed by clicking ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
 
 <h3 id="a-namebpenaa-namedisabilitybenefitadisability-benefit"><a name="BPEN"></a><a name="disability_benefit"></a>Disability Benefit</h3>
 
@@ -3726,26 +3832,22 @@ screen is as follows:</p>
   <p>Report Selection Screen</p>
 </div>
 
-<h3 id="a-nameaddrlabaaddress-labels"><a name="addrlab"></a>Address Labels</h3>
+<h3 id="a-nameaddrlabaaddress-labels"><a name="#addrlab"></a>Address Labels</h3>
 
-<p>Printing Address Labels works in a similar way to the <a href="/pension/reports/report_writer/per_unp/">Mail
-Merge Report</a>. It generates a data file that can by used by Microsoft Word to produce
-almost any type of label.</p>
+<p>Printing Address Labels works using <a href="/pension/reports/report_writer/per_unp/">Mail Merge Report</a>.
+When adding a Mail Merge Report check the ‘Use for Member Labels?’ box.
+This will indicate that this particular Mail Merge Report is to be used
+to generate Member Labels. When the report is saved, irrespective of the
+scheme it is saved under, the report ID and description will appear in
+the Member Labels selection window.</p>
 
-<p>If a <a href="/pension/file_maintenance/pem_sch/#Template Path">template path</a> has already been setup
-for this scheme then you will be asked if you wish to use this template, or generate
-a set of labels from scratch. If you use the template then the program generates the
-Word document based upon the label settings that are in the template document. If
-you select to generate a fresh set of labels then the program opens Word and links
-the data file to the open document. That is all that Pension Master can do automatically
-and it is now up to you to complete the address labels using Microsoft Word alone.
-The Mail Merge Helper window is opened and the process can be completed as follows:</p>
-
-<ol>
-  <li>Click on Setup to select the type and size of label.</li>
-  <li>Enter any text and mail merge fields in the Create Labels window.</li>
-  <li>Then click on Merge.</li>
-</ol>
+<p>To generate member address labels select the Report option from the
+Members menu or press <kbd>R</kbd>. Select ‘Address Labels’ as the Report Type and
+either ‘Current Record’, ‘All Selected record(s)’ or ‘Select record(s)’
+to print from the Records to Print section. Then select a Mail Merge Report
+from the list of those that have been previously setup to produce member
+labels. Your word processor will open and automatically generate the member
+labels that you have selected.</p>
 
 <h2 id="a-namememinfoamember-information-screen"><a name="meminfo"></a>Member Information Screen</h2>
 
@@ -3828,18 +3930,6 @@ selected the following window opens:</p>
   <p>Letter/Cert Options Screen 2</p>
 </div>
 
-<p>The menu options are as follows:</p>
-
-<ul>
-  <li><strong>Record</strong> - Prints the current screen Record.</li>
-  <li><strong>Query</strong> - Prints all the currently selected records.</li>
-  <li><strong>Select</strong> - Allows selection of records for the Letter/Certificate using the Member Number, Scheme, Company, Category or Status Code fields.</li>
-  <li><strong>Exit</strong> - Closes the window and leaves the Letter/Cert option.</li>
-</ul>
-
-<p>If the Select option was chosen and no records are found to match the selection criteria
-entered, an error message is displayed and a new selection criteria should be entered.</p>
-
 <p>When the record(s) have been selected the following window is opened:</p>
 
 <div class="screen">
@@ -3848,37 +3938,19 @@ entered, an error message is displayed and a new selection criteria should be en
   <p>Letter/Cert Selection Screen</p>
 </div>
 
-<p>To exit the Letter/Cert option at this stage, select the ‘Exit’ option.</p>
+<p>Enter the report code or press okay to display the reports that are available for that scheme.</p>
 
-<p>To choose a standard dataset press <kbd>Q</kbd> or select the ‘Query’ menu option
-with the arrow keys and press <kbd>Return</kbd>. Enter the selection criteria
-for the dataset and click on ‘OK’, or press <kbd>Return</kbd> when in the Letter/Cert
-description field. Pension Master defaults to selecting all available datasets
-for the scheme implied by the current selection criteria, which is usually
-the scheme the current member is in.</p>
+<p>To exit the Letter/Cert option at this stage, select the ‘Cancel’ option.</p>
 
-<p>All datasets that match the selection criteria will be displayed. If
-more than 10 records are displayed click on ‘Next Record’ to view the next
-screen of datasets, and click on ‘Prev Record’ to view the previous screen.
-If more than 50 records are selected then an error message will be displayed.</p>
-
-<p>Only the first 50 records will be displayed, and if the dataset required
-is not on the list then click on ‘Cancel’ to exit the search list, press
-<kbd>L</kbd> for ‘Letter/Cert’ again, the press either <kbd>Q</kbd>’ or <kbd>S</kbd> for ‘Query’ and
-‘Search’ respectively and enter more selective criteria.</p>
-
-<p>Using the arrow keys go to the dataset that is required and click on
-‘OK’ to select that dataset.</p>
+<p>Using the arrow keys go to the report that is required and click on
+‘OK’ to select that report.</p>
 
 <p>You will be returned to the main menu and your wordprocessor
 will automatiaclly start, loading the document template you defined in
-the Document Path field in the <a href="/pension/reports/report_writer/per_unp/">Mail Merge Report</a>.
-The mail merge data file will be created as penmast.doc
-in the c:\ root directory of your PC and should now be merged with the
-document template that has just been opened in your wordprocessor.</p>
+the Document Path field in the <a href="/pension/reports/report_writer/per_unp/">Mail Merge Report</a>.</p>
 
 <div class="alert alert-danger" role="alert">
-  <p>To create a new dataset for use in the letter/cert option see <a href="/pension/reports/report_writer/per_unp/#Create A New Report">Create a New Report in the Mail Merge Report</a>.</p>
+  <p>To create a new report for use in the letter/cert option see <a href="/pension/reports/report_writer/per_unp/#Create A New Report">Create a New Report in the Mail Merge Report</a>.</p>
 </div>
 
 <h2 id="a-nameproducing-ad-hoc-lettersaproducing-ad-hoc-letters"><a name="Producing Ad-Hoc Letters"></a>Producing Ad-Hoc Letters</h2>
@@ -3929,23 +4001,6 @@ Contribution History, Units History and Investment Value Summary screens
 of Members. In all other screens of the member record, these options will
 not be displayed to the menu.</p>
 
-<h2 id="a-nameprinting-address-labelsaa-namelabelsaprinting-address-labels"><a name="Printing Address Labels"></a><a name="labels"></a>Printing Address Labels</h2>
-
-<p>Printing Address Labels works using <a href="/pension/reports/report_writer/per_unp/">Mail Merge Report</a>.
-When adding a Mail Merge Report check the ‘Use for Member Labels?’ box.
-This will indicate that this particular Mail Merge Report is to be used
-to generate Member Labels. When the report is saved, irrespective of the
-scheme it is saved under, the report ID and description will appear in
-the Member Labels selection window.</p>
-
-<p>To generate member address labels select the Report option from the
-Members menu or press <kbd>R</kbd>. Select ‘Address Labels’ as the Report Type and
-either ‘Current Record’, ‘All Selected record(s)’ or ‘Select record(s)’
-to print from the Records to Print section. Then select a Mail Merge Report
-from the list of those that have been previously setup to produce member
-labels. Your word processor will open and automatically generate the member
-labels that you have selected.</p>
-
 <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
@@ -3953,7 +4008,7 @@ labels that you have selected.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 16/08/2017 08:47:50.</p>
+        <p>Build Date 17/08/2017 12:44:13.</p>
       </div>
     </div>
 
