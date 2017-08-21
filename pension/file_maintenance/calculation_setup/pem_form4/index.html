@@ -427,7 +427,7 @@ For a list of valid fields click <a href="/pension/appendices/app_a/#pe_bulksw_b
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#care_average_revalued_earnings">Career Average Revalued Earnings</a> screen for the specified CARE code.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#care_pension_amount">Career Average Revalued Earnings</a> screen for the specified CARE code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -460,6 +460,46 @@ call will return a value of 0.</li>
 </code></pre>
 
 <p>This extracts the value held in the CARE History Amount 1 field of the Career Average Revalued Earnings record with the CARE Code of CARE1 for each member concerned.</p>
+
+<h2 id="a-name81acarerevaluationhistoryfieldcodedate"><a name="81"></a>#care_revaluation_history_field(code,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#care_pension_increase_history">Career Average Revalued Earnings</a> screen for the specified CARE code and date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#care_revaluation_history_field(code,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - is the <a href="/pension/system_data/pem_codem/#Introduction">CARE Code</a> that you wish to
+retrieve a Career Average Revalued Earnings Revaluation field value for. This must exist as a valid CARE Code. If a member does not have a Career Average Revalued Earnings Revaluation record with a matching code, this function call will return a value of 0.</li>
+  <li>date - refers to the Effective Date that you wish to retrieve a Career Average Revalued Earnings Revaluation field value for.
+If a member does not have a Career Average Revalued Earnings Revaluation record with a same effective date to the one entered, this function call will return a value of 0.</li>
+  <li>care_revaluation_history_field - is any valid field on the Career Average Revalued Earnings Revaluation table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_careh">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>care_revaluation_history_field must be a valid field on the Career Average Revalued Earnings Revaluation table (pe_careh).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, a date field reference off the <a href="/pension/appendices/app_a/#pe_pens">Basic Pensioner Details</a> table, a date field reference off the <a href="/pension/appendices/app_a/#pe_dpens">Basic Deferred Pensioner Details</a> table, TODAY to return the value previous to today, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>If the Career Average Revalued Earnings Revaluation field is not found, either because it does not exist or results from incorrect specification of code, this function call will return a value of 0.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pcah_amount1(CARE1,20000101)
+</code></pre>
+
+<p>This extracts the value held in the CARE Revaluation History Amount 1 field of the Career Average Revalued Earnings Revaluation record with the CARE Code of CARE1 as at 01/01/2000 for each member concerned.</p>
 
 <h2 id="a-name79acategoryautoenrolmentmincontratebodyfielddate"><a name="79"></a>#category_auto_enrolment_min_cont_rate_body_field(date)</h2>
 
@@ -977,8 +1017,7 @@ History Totals file (pe_dpent).</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Deferred Pension Increase History
-file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#deferred_pension_increase_history">Deferred Pension Increase History</a> screen for the specified deferred pension code and date.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -988,31 +1027,24 @@ file in your formula.</p>
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Deferred Pension Code</a> that
-you wish to retrieve a Deferred Pension Increase History Field for. This must be in
-UPPERCASE and must exist as a valid Deferred Pension Code. If a member does not have
-a Deferred Pension Increase History record with a matching code, this function call
-will return a value of 0.</li>
-  <li>date - refers to the Effective Date. If no value can be found for this date then the
-most recent value will be returned.</li>
-  <li>deferred_pension_increase_history_totals_field is any valid field on the deferred
-pension increase history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpenh">here</a></li>
+  <li>code - is the <a href="/pension/system_data/pem_codem/#Introduction">Deferred Pension Code</a> that you wish to
+retrieve a Deferred Pension Increase History field value for. This must exist as a valid Deferred Pension Code. If a member does not have an Deferred
+Pension History record with a matching code, this function call will return a value of 0.</li>
+  <li>date - refers to the Effective Date that you wish to retrieve a Deferred Pension Increase History field value for.
+If a member does not have a Deferred Pension Increase History record with a same effective date to the one entered, this function call will return a value of 0.</li>
+  <li>deferred_pension_increase_history_field - is any valid field on the Deferred Pension Increase History table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_dpenh">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>deferred_pension_increase_history_field must be a valid field on the Deferred Pension Increase History file (pe_dpenh).</li>
-  <li>code must be in UPPERCASE.</li>
+  <li>deferred_pension_increase_history_field must be a valid field on the Deferred Pension Increase History table (pe_dpenh).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
   <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
-  <li>if the Deferred Pension Increase History Field is not found, either because it does
-not exist, has not yet been run, or results from incorrect specification of code,
-this function call will return a value of 0.</li>
-  <li>the value extracted is the value corresponding to the most recent date on the Deferred
-Pension Increase History file for the member concerned.</li>
-  <li>the date argument can be a field from the Member File, Basic Pensioner Details File
-or the Basic Deferred Pensioner Details File.</li>
-  <li>the date argument can be set to TODAY to return the value previous to today.</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, a date field reference off the <a href="/pension/appendices/app_a/#pe_pens">Basic Pensioner Details</a> table, a date field reference off the <a href="/pension/appendices/app_a/#pe_dpens">Basic Deferred Pensioner Details</a> table, TODAY to return the value previous to today, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>If the Deferred Pension Increase History field is not found, either because it does not exist or results from incorrect specification of code, this function call will return a value of 0.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -1020,9 +1052,8 @@ or the Basic Deferred Pensioner Details File.</li>
 <pre><code>#pdph_pen_amt(DAPEN,20000101)
 </code></pre>
 
-<p>This extracts the value of the Pension Amount of the Deferred
-Pension Increase History record with the Deferred Pension Code of ‘DAPEN’ as at 01/01/2000
-for each member concerned.</p>
+<p>This extracts the value held in the Pension Amount field of the Deferred Pension Increase
+History record with the Deferred Pension Code of DAPEN as at 01/01/2000 for each member concerned.</p>
 
 <h2 id="a-name24adepfieldcurrflagbenflagdepflagnn"><a name="24"></a>#dep_field(curr_flag,ben_flag,dep_flag,nn)</h2>
 
@@ -1070,7 +1101,7 @@ is selected, whose Beneficiary Flag is not selected and whose Dependant Flag is 
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#disability_benefit">Disability Benefit History</a> screen for the specified disability benefit code.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#disability_history">Disability Benefit History</a> screen for the specified disability benefit code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1104,6 +1135,47 @@ call will return a value of 0.</li>
 
 <p>This extracts the value held in the Initial Benefit field of the Disability Benefit
 History record with the Disability Benefit Code of BAPEN for each member concerned.</p>
+
+<h2 id="a-name80adisabilitybenefitincreasehistoryfieldcodedate"><a name="80"></a>#disability_benefit_increase_history_field(code,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#disability_increase_history">Disability Benefit Increase History</a> screen for the specified disability benefit code and date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#disability_benefit_increase_history_field(code,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - is the <a href="/pension/system_data/pem_codem/#Introduction">Disability Benefit Code</a> that you wish to
+retrieve a Disability Benefit Increase History field value for. This must exist as a valid Disability Benefit Code. If a member does not have a Disability Benefit Increase History record with a matching code, this function call will return a value of 0.</li>
+  <li>date - refers to the Effective Date that you wish to retrieve a Disability Benefit Increase History field value for.
+If a member does not have a Disability Benefit Increase History record with a same effective date to the one entered, this function call will return a value of 0.</li>
+  <li>disability_benefit_increase_history_field - is any valid field on the Disability Benefit Increase History table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_bpenh">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>disability_benefit_increase_history_field must be a valid field on the Disability Benefit Increase History table (pe_bpenh).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, a date field reference off the <a href="/pension/appendices/app_a/#pe_pens">Basic Pensioner Details</a> table, a date field reference off the <a href="/pension/appendices/app_a/#pe_dpens">Basic Deferred Pensioner Details</a> table, TODAY to return the value previous to today, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>If the Disability Benefit Increase History field is not found, either because it does not exist or results from incorrect specification of code, this function call will return a value of 0.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pbph_ben_amt(BAPEN,20000101)
+</code></pre>
+
+<p>This extracts the value held in the Benefit Amount field of the Disability Benefit Increase
+History record with the Disability Benefit Code of BAPEN as at 01/01/2000 for each member concerned.</p>
 
 <h2 id="a-name25adivorceandspousesfieldnn"><a name="25"></a>#divorce_and_spouses_field(nn)</h2>
 
@@ -1178,8 +1250,7 @@ will return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to refer to the value of a Status History, Category History or Company
-History field in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Company History">Company History</a>, <a href="/pension/file_maintenance/pem_mem/#Company History">Company History</a>, <a href="/pension/file_maintenance/pem_mem/#Category History">Category History</a>, <a href="/pension/file_maintenance/pem_mem/#Status History">Status History</a>, or <a href="/pension/file_maintenance/pem_mem/#Marital Status History">Marital Status History</a> screens for the specified screen type and date.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1189,24 +1260,18 @@ History field in your formula.</p>
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>type - refers to the type of history record as follows:
-    <ul>
-      <li>S - Status History</li>
-      <li>A - Category History</li>
-      <li>C - Company History</li>
-    </ul>
-  </li>
-  <li>date - date must be a field reference to the member file (pe_mem), a constant date
-entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
-the day or a reference to the result of a previous formula line (as long as it evaluates
-to a valid date) in the format @line_num e.g. @2.</li>
-  <li>history_field is any valid field on the status, category or company history table.
+  <li>type - refers to the type of history record</li>
+  <li>date - refers to the Effective Date that you wish to retrieve a History field value for.
+If a member does not have a History record with a same effective date to the one entered, this function call will return a value of 0.</li>
+  <li>history_field - is any valid field on the Status, Category, Company or Marital Status History table.
 For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dec_str">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
+  <li>type must be in uppercase and take the value of either S (Status History), A (Category History), C (Company History) or M (Marital Status History)</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
   <li>the function will return the most recent value held in the column which is either
 on or before the specified date.</li>
 </ol>
@@ -1216,12 +1281,12 @@ on or before the specified date.</li>
 <pre><code>#pdec_newstat(S,20020102)
 </code></pre>
 
-<p>This extracts the new status history as at 02/01/2002.</p>
+<p>This extracts the value held in the New field of the Status History record as at 02/01/2002 for each member concerned.</p>
 
 <pre><code>#pdec_note(C,20020707)
 </code></pre>
 
-<p>This extracts the company history note as at 07/07/2002.</p>
+<p>This extracts the value held in the Note field of the Company History record as at 07/07/2002 for each member concerned.</p>
 
 <h2 id="a-name28ainvestmentfundfieldfundcode"><a name="28"></a>#investment_fund_field(fund_code)</h2>
 
@@ -1658,7 +1723,7 @@ to Commence</a> is on or before the Calculation Date, ANY FUTURE DATES WILL BE I
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Pension Increase History file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#pension_increase_history">Pension Increase History</a> screen for the specified pension code and date.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1668,27 +1733,23 @@ to Commence</a> is on or before the Calculation Date, ANY FUTURE DATES WILL BE I
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>code - refers to the <a href="/pension/system_data/pem_codem/#Introduction">Pension Code</a> that you
-wish to retrieve a Pension Increase History Field for. This must be in UPPERCASE and
-must exist as a valid Pension Code. If a member does not have a Pension Increase History
-record with a matching code, this function call will return a value of 0.</li>
-  <li>date - refers to the Effective Date. If no value can be found for this date then the most recent value will be returned.</li>
-  <li>pension_increase_history_totals_field is any valid field on the pension increase
-history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_penh">here</a></li>
+  <li>code - is the <a href="/pension/system_data/pem_codem/#Introduction">Pension Code</a> that you wish to
+retrieve a Pension Increase History field value for. This must exist as a valid Pension Code. If a member does not have a Pension Increase History record with a matching code, this function call will return a value of 0.</li>
+  <li>date - refers to the Effective Date that you wish to retrieve a Pension Increase History field value for.
+If a member does not have a Pension Increase History record with a same effective date to the one entered, this function call will return a value of 0.</li>
+  <li>pension_increase_history_field - is any valid field on the Pension Increase History table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_penh">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>pension_increase_history_field must be a valid field on the Pension Increase History file (pe_penh).</li>
-  <li>code must be in UPPERCASE.</li>
+  <li>pension_increase_history_field must be a valid field on the Pension Increase History table (pe_penh).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
   <li>code must exist in the Codes file (pe_codem) and also be allocated to the members scheme (pe_scode).</li>
-  <li>if the Pension Increase History Field is not found, either because it does not exist,
-has not yet been run, or results from incorrect specification of code, this function
-call will return a value of 0.</li>
-  <li>the value extracted is the value corresponding to the most recent date on the Pension Increase History file for the member concerned.</li>
-  <li>the date argument can be a field from the Member File, Basic Pensioner Details File or the Basic Deferred Pensioner Details File.</li>
-  <li>the date argument can be set to TODAY to return the value previous to today.</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, a date field reference off the <a href="/pension/appendices/app_a/#pe_pens">Basic Pensioner Details</a> table, a date field reference off the <a href="/pension/appendices/app_a/#pe_dpens">Basic Deferred Pensioner Details</a> table, TODAY to return the value previous to today, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>If the Pension Increase History field is not found, either because it does not exist or results from incorrect specification of code, this function call will return a value of 0.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -1696,9 +1757,8 @@ call will return a value of 0.</li>
 <pre><code>#pph_pen_amt(PAPEN,20000101)
 </code></pre>
 
-<p>This extracts the value of the Pension Amount of the Pension
-Increase History record with the Pension Code of ‘PAPEN’ as at 01/01/2000 for each
-member concerned.</p>
+<p>This extracts the value held in the Pension Amount field of the Pension Increase
+History record with the Pension Code of PAPEN as at 01/01/2000 for each member concerned.</p>
 
 <h2 id="a-name42aquotationfieldtypeindex"><a name="42"></a>#quotation_field(type,index)</h2>
 
@@ -2883,7 +2943,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 17/08/2017 20:07:27.</p>
+        <p>Build Date 21/08/2017 15:49:29.</p>
       </div>
     </div>
 

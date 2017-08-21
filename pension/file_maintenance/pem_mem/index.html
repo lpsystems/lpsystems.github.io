@@ -103,7 +103,7 @@
           <li><a href="#basic_pensioner_details">Screen 1) Basic Pensioner Details</a></li>
           <li><a href="#pension_history">Screen 2) Pension History</a></li>
           <li><a href="#pension_increase_history">Screen 3) Pension Increase History</a></li>
-          <li><a href="#pensioner_bank_details">Screen 4) Pensioner Bank Details&lt;</a></li>
+          <li><a href="#pensioner_bank_details">Screen 4) Pensioner Bank Details</a></li>
         </ul>
       </li>
       <li><a href="#Death Details">Death Details</a>
@@ -132,8 +132,20 @@
       <li><a href="#Tax Simplification Amounts">Tax Simplification Amounts</a></li>
       <li><a href="#Annual/Lifetime Allowance">Annual/Lifetime Allowance</a></li>
       <li><a href="#Protected A-Day Benefits">Protected A-Day Benefits</a></li>
-      <li><a href="#care_average_revalued_earnings">Career Average Revalued Earnings</a></li>
-      <li><a href="#disability_benefit">Disability Benefit</a></li>
+      <li><a href="#care_average_revalued_earnings">Career Average Revalued Earnings</a>
+        <ul>
+          <li><a href="#care_pension_amount">Screen 1) Career Average Revalued Earnings Current Amount</a></li>
+          <li><a href="#care_pension_increase_history">Screen 2) Career Average Revalued Earnings -Increase History</a></li>
+        </ul>
+      </li>
+      <li><a href="#disability_benefit">Disability Benefit</a>
+        <ul>
+          <li><a href="#basic_disability_details">Screen 1) Basic Disability Details</a></li>
+          <li><a href="#disability_history">Screen 2) Disability History</a></li>
+          <li><a href="#disability_increase_history">Screen 3) Disability Increase History</a></li>
+          <li><a href="#disability_bank_details">Screen 4) Disability Bank Details</a></li>
+        </ul>
+      </li>
       <li><a href="#pension_input_periods">Pension Input Periods</a></li>
     </ul>
   </li>
@@ -1115,6 +1127,8 @@ be reset to todays date for that particular line.</p>
 <p>Click ‘Delete Row’ to delete the current row of Status History, if required.</p>
 
 <p>Click ‘OK’ to save or ‘Cancel’ to exit without saving.</p>
+
+<h3 id="a-namemarhstaa-namemarital-status-historyamarital-status-history"><a name="MARHST"></a><a name="Marital Status History"></a>Marital Status History</h3>
 
 <h3 id="a-namesalaryaa-namesalary-historyasalary-history-details"><a name="SALARY"></a><a name="Salary History"></a>Salary History Details</h3>
 
@@ -3558,7 +3572,7 @@ those parts of the members care pension that escalate or are calculated at diffe
 Pension Codes are used to indicate whether the component values are Added/Ignored
 or Subtracted from the calculation of the members total Care Pension.</p>
 
-<p>The Care Headings are initially entered via the &lt;a href=”/pension/file_maintenance/pem_sch/”#Care Screens”&lt;/a&gt; menu
+<p>The Care Headings are initially entered via the &lt;a href=”/pension/file_maintenance/pem_sch/”Care Screens”&lt;/a&gt; menu
 option in the Scheme File. The scheme needs to be set up as a Care scheme under basic scheme details.</p>
 
 <p>It is also where you can record if a member has other care benefits in the scheme by inserting the member’s
@@ -3655,9 +3669,9 @@ Codes can be viewed by clicking ‘<span class="glyphicon glyphicon-arrow-left">
 the menu at the top of the screen by selecting the appropriate number. The screens
 are described as follows:</p>
 
-<h4 id="a-namebasicdisabilitydetailsascreen-1-basic-disability-details"><a name="basic_disability_details"></a>Screen 1) Basic disability Details</h4>
+<h4 id="a-namebasicdisabilitydetailsascreen-1-basic-disability-details"><a name="basic_disability_details"></a>Screen 1) Basic Disability Details</h4>
 
-<p>This contains typical disability data that relates to the members Diaability benefits.
+<p>This contains typical disability data that relates to the members Disability benefits.
 Information such as, Disability Date and the Date the Benefit Commenced, and Payment and Pension Provider details.
 Data must be entered on this screen before the 3 other screens can be accessed.</p>
 
@@ -3735,7 +3749,7 @@ Benefit Provider.</p>
   <li>Weekly</li>
 </ul>
 
-<p>Click on ‘OK’ to save the Basic Pensioner Details information, or click on ‘Cancel’
+<p>Click on ‘OK’ to save the Basic Disability Details information, or click on ‘Cancel’
 to exit the screen without saving the details entered.</p>
 
 <p>If no Disability History data has previously been entered for this member then the Disability
@@ -3745,7 +3759,7 @@ by clicking ‘2’.</p>
 <p><a name="Disability History Screen"></a></p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mdisb2.jpg" alt="Disability History Screen" /></p>
+  <p><img src="/pension/images/pem_mdisb3.jpg" alt="Disability History Screen" /></p>
 
   <p>Disability History Screen</p>
 </div>
@@ -3806,10 +3820,10 @@ in this field.</p>
 <p>The totals at the bottom of the Disability History Screen are calculated as follows:</p>
 
 <ul>
-  <li>If the Pension Code starts with ‘BA’ then the value is <strong>added</strong> to the total value.</li>
-  <li>If the Pension Code starts with ‘BI’ then the value is <strong>ignored</strong> (not included
+  <li>If the Code starts with ‘BA’ then the value is <strong>added</strong> to the total value.</li>
+  <li>If the Code starts with ‘BI’ then the value is <strong>ignored</strong> (not included
 in the total value).</li>
-  <li>If the Pension Code starts with ‘BS’ then the value is <strong>subtracted</strong> from the
+  <li>If the Code starts with ‘BS’ then the value is <strong>subtracted</strong> from the
 total value.</li>
 </ul>
 
@@ -3855,7 +3869,7 @@ screen without saving the details entered.</p>
 <p><a name="Disability Increase History Screen"></a></p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_mdisb3.jpg" alt="Pension Increase History Screen" /></p>
+  <p><img src="/pension/images/pem_mdisb2.jpg" alt="Pension Increase History Screen" /></p>
 
   <p>Disability Increase History Screen</p>
 </div>
@@ -3866,7 +3880,7 @@ viewed by clicking ‘<span class="glyphicon glyphicon-arrow-left"></span> Previ
 
 <p>The fields are described as follows:</p>
 
-<p><a name="pbph_code"></a><strong>Disability CODE</strong> - The <a href="#ppa_code">Pension Code</a> of
+<p><a name="pbph_code"></a><strong>DISABILITY CODE</strong> - The <a href="#ppa_code">Pension Code</a> of
 the Pension that was added or amended.</p>
 
 <p><a name="pbph_eff_dt"></a><strong>EFFECTIVE DATE</strong> - Is taken from the <a href="#ppa_dt_last_inc">Date
@@ -3938,7 +3952,7 @@ in the section <a href="/pension/file_maintenance/pem_mem/#Deleting Member Recor
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/del_mem4.jpg" alt="" /></p>
+  <p><img src="/pension/images/del_penip.jpg" alt="" /></p>
 
 </div>
 
@@ -4299,7 +4313,7 @@ not be displayed to the menu.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 17/08/2017 20:07:28.</p>
+        <p>Build Date 21/08/2017 15:49:30.</p>
       </div>
     </div>
 
