@@ -1250,7 +1250,7 @@ will return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Company History">Company History</a>, <a href="/pension/file_maintenance/pem_mem/#Company History">Company History</a>, <a href="/pension/file_maintenance/pem_mem/#Category History">Category History</a>, <a href="/pension/file_maintenance/pem_mem/#Status History">Status History</a>, or <a href="/pension/file_maintenance/pem_mem/#Marital Status History">Marital Status History</a> screens for the specified screen type and date.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Company History">Company History</a>, <a href="/pension/file_maintenance/pem_mem/#Category History">Category History</a>, <a href="/pension/file_maintenance/pem_mem/#Status History">Status History</a>, or <a href="/pension/file_maintenance/pem_mem/#Marital Status History">Marital Status History</a> screens for the specified screen type and date.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1363,7 +1363,7 @@ fund code. cont_type must be a valid contribution type for that scheme.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field in the header section on the &lt;a href=”/pension/file_maintenance/pem_sch/#Lifestyle Matrix Setup&lt;/a&gt; screen for the specified fund code.</p>
+<p>Use this to refer to the value of a field in the header section on the <a href="/pension/file_maintenance/pem_sch/#Lifestyle Matrix Setup">Lifestyle Matrix Setup</a> screen for the specified matrix code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1397,7 +1397,7 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_slife_h">here<
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this function to refer to a field in the body of a lifestyle matrix.</p>
+<p>Use this to refer to the value of a field in the body section on the <a href="/pension/file_maintenance/pem_sch/#Lifestyle Matrix Setup">Lifestyle Matrix Setup</a> screen for the specified matrix code and index.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1407,16 +1407,27 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_slife_h">here<
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>matrix_code - is the code for the lifestyle matrix you wish to reference.</li>
-  <li>index - is the record number of the lifestyle matrix you wish to reference.</li>
-  <li>lifestyle_body_field is any valid field on the lifestyle body matrix table. For a
+  <li>matrix_code - is the Matrix Code that you wish to retrieve a Lifestyle Matrix Body field value for. This must exist as a valid Matrix Code.</li>
+  <li>index - is the Term to TPD or Start Age (depending on the matrix type) number of the lifestyle matrix you wish to reference.</li>
+  <li>lifestyle_body_field - is any valid field on the Lifestyle Matrix Body table. For a
 list of valid fields click <a href="/pension/appendices/app_a/#pe_slife_b">here</a></li>
 </ul>
 
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>lifestyle_body_field must be a valid field on the Lifestyle Matrix Body table (pe_slife_b).</li>
+  <li>code must be in UPPERCASE and no longer than 8 characters in length.</li>
+  <li>code must exist in the Lifestyle Matrix Header table (pe_slife_h).</li>
+  <li>index must be a valid Term to TPD or Start Age (depending on the matrix type) number of the lifestyle matrix.</li>
+</ol>
+
 <p><strong>EXAMPLE</strong></p>
 
-<pre><code>#pslb_rate(TERM1,1)
+<pre><code>#pslb_rate(TERM1,25)
 </code></pre>
+
+<p>This extracts the value held in the Lifestyle Matrix Rate field of the Lifestyle Matrix Body record with the Matrix Code of TERM1 and Term to TPD or Start Age (depending on the matrix type) of 25.</p>
 
 <h2 id="a-name32amemberaddressfieldnn"><a name="32"></a>#member_address_field(nn)</h2>
 
@@ -1764,8 +1775,7 @@ History record with the Pension Code of PAPEN as at 01/01/2000 for each member c
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the results of a quotation that has already been run for the
-current member. This will be taken from the quotation results file (pe_mquote).</p>
+<p>Use this to refer to the value of a result field on the <a href="/pension/file_maintenance/pem_mem/#Quotation Screen">Quotation Results</a> screen for the specified quotation type and index.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1775,15 +1785,15 @@ current member. This will be taken from the quotation results file (pe_mquote).<
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>type - refers to the Quotation Type (see Categories) that you wish to retrieve a quotation
+  <li>type - refers to the Quotation Type (see <a href="/pension/file_maintenance/pem_cat/#Add A Quotation Type">Categories<a>) that you wish to retrieve a quotation
 result for. This must be in UPPERCASE and must exist as a valid Quotation Type for
 the appropriate Category for each member this formula is to be used for. If this is
-not the case, this function call will return a value of 0.</li>
+not the case, this function call will return a value of 0.</a></a></li>
   <li>index - refers to the Quotation Index under the Quotation Type for the quotation you
 wish to retrieve a result for e.g. if you wished to retrieve the first calculation
 under Quotation Type NORM, you would use an index value of 1, if you wish to retrieve
 the second value you would use an index value of 2.</li>
-  <li>quotation_field is any valid field on the quotation results table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mquote">here</a></li>
+  <li>quotation_field - is any valid field on the quotation results table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mquote">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
@@ -1803,7 +1813,7 @@ call will return a value of 0.</li>
 <pre><code>#pmq_current(NORM,1)
 </code></pre>
 
-<p>This extracts the current quotation result for the first quotation under the Quotation Type NORM for each member concerned.</p>
+<p>This extracts the value held in the Current Quotation Result field of the Quotation Results record with the Quotation Type of NORM and quotation index 1.</p>
 
 <h2 id="a-name43aquothistfieldtyperecindex"><a name="43"></a>#quot_hist_field(type,rec,index)</h2>
 
@@ -2682,39 +2692,45 @@ unit_price(CASH,m,TODAY)
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on Unit Prices of the specified fund code
-for a given date. This will be taken from the unit prices file (pe_prices).</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/investments/pem_invfun/#Unit Prices">Unit Prices</a> screen for the specified fund code and date.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>unit_prices_field(fund,date)
+<pre><code>#unit_prices_field(fund,date)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>fund - is the investment fund code.</li>
-  <li>date - the date for your unit price. This must be a field reference to a date field
-on the member file (pe_mem), a constant date entered in the format YYYYMMDD where
-YYYY is the year, MM is the month and DD is the day or a reference to the result of
-another line of formula code within the current formula e.g. @1. the day value.</li>
-  <li>unit_prices_field is any valid field on the unit prices table. For a list of valid
-fields click <a href="/pension/appendices/app_a/#pe_prices">here</a></li>
+  <li>fund - is the <a href="/pension/investments/pem_invfun/#Basic Fund Details Screen">Fund Code</a> that you wish to
+retrieve a Unit Price field value for. This must exist as a valid Fund Code.</li>
+  <li>date - is the unit price date.</li>
+  <li>unit_prices_field - is any valid field on the Unit Prices table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_prices">here</a></li>
 </ul>
 
-<p><strong>EXAMPLES</strong></p>
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>unit_prices_field must be a valid field on the Unit Prices table (pe_prices).</li>
+  <li>code must be in UPPERCASE and no longer than 10 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Investment Fund table (pe_invfun).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
 
 <pre><code>#ppr_bprice(MANAGED,19951201)
-#ppr_date(0000CASH,@1)
-#ppr_oprice(CGU,pm_dtlft)
 </code></pre>
+
+<p>This extracts the value held in the Bid Price field of the Unit Price record with the Fund Code of MANAGED and date of 01/12/1995.</p>
 
 <h2 id="a-name65auserdefinedhistoryfieldtypedate"><a name="65"></a>#user_defined_history_field(type,date)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on a User Defined History of the specified
-type for a given date. This will be taken from the user defined history file (pe_mua).</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#User Defined History">User Defined History</a> screen for the specified user defined history type and date.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -2724,41 +2740,33 @@ type for a given date. This will be taken from the user defined history file (pe
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>type - refers to the User Defined History Type (see Schemes) that you wish to retrieve
-a User Defined Field for. This must be in UPPERCASE and must exist as a valid User
-Defined History Type for the appropriate Scheme for each member this formula is to
-be used for. If this is not the case, this function call will return a value of 0.</li>
-  <li>date - date must be a field reference to the member file (pe_mem), a constant date
-entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
-the day or a reference to the result of a previous formula line (as long as it evaluates
-to a valid date) in the format @line_num e.g. @2.</li>
-  <li>user_defined_history_field is any valid field on the user defined history table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mua">here</a></li>
+  <li>type - is the user defined history type that you wish to retrieve the User Defined History field value for. This must exist as a valid <a href="/pension/file_maintenance/pem_sch/#User Defined History">History Type</a> for the member’s scheme.</li>
+  <li>date - is the user defined history date.</li>
+  <li>user_defined_history_field - is any valid field on the User Defined History table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_mua">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>user_defined_history_field must be a valid field on the Member User Defined History file (pe_mua).</li>
-  <li>type must be in UPPERCASE.</li>
+  <li>user_defined_history_field must be a valid field on the User Defined History table (pe_mua).</li>
+  <li>code must be in UPPERCASE and no longer than 6 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
   <li>the function will return the most recent value held in the column which is either
 on of before the specified date. If you wish to find a historic value use the <a href="#0429">udh(type,col,yyyymmdd,basis)</a> function.</li>
   <li>type must exist for the appropriate Scheme for each member that this formula is to
 be used to run quotations for.</li>
-  <li>if the User Defined Field is not found, either because it does not exist, or results from incorrect specification of type, this function call will return a value of 0.</li>
-  <li>if the User Defined Field is blank and the field type is either Boolean, Date, Indicator or Text then the function call will return a value of blank, however, if the field type is Monetary Amount or Number (0 - 6), then it will return a value of 0.</li>
-  <li>the date argument can be set to TODAY to return the value previous to today.</li>
+  <li>if the User Defined History Field is not found, either because it does not exist, or results from incorrect specification of type, this function call will return a value of 0.</li>
+  <li>if the User Defined History Field is blank and the field type is either Boolean, Date, Indicator or Text then the function call will return a value of blank, however, if the field type is Monetary Amount or Number (0 - 6), then it will return a value of 0.</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, TODAY to return the value previous to today, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pma_col2(CARS,pm_dob)
-#pma_col1(CARS,@1)
-#pma_col3(CARS,19990101)
 </code></pre>
 
-<p>These will extract data held in the specified column of the User Defined History Type
-CARS which is either on or before the spedified date, for each member concerned.</p>
+<p>This extracts the value held in the User Defined History Column 2 field of the User Defined History record with the User Defined History Type of CARS where the date is on or before the member’s date of birth.</p>
 
 <h2 id="a-name66auserdefinedhistorybodyfieldtype"><a name="66"></a>#user_defined_history_body_field(type)</h2>
 
@@ -2943,7 +2951,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 21/08/2017 15:49:29.</p>
+        <p>Build Date 22/08/2017 08:26:16.</p>
       </div>
     </div>
 
