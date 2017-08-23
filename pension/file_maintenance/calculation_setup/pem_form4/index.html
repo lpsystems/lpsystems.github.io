@@ -659,6 +659,44 @@ header table. For a list of valid fields click <a href="/pension/appendices/app_
 <pre><code>#pcch_frequency
 </code></pre>
 
+<h2 id="a-name82achargingunitpricesfieldfunddate"><a name="82"></a>#charging_unit_prices_field(fund,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the Charging Unit Prices screen for the specified fund code and date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#charging_unit_prices_field(fund,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>fund - is the <a href="/pension/investments/pem_invfun/#Basic Fund Details Screen">Fund Code</a> that you wish to
+retrieve a Charging Unit Price field value for. This must exist as a valid Fund Code.</li>
+  <li>date - is the unit price date.</li>
+  <li>charging_unit_prices_field - is any valid field on the Charging Unit Prices table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_chprices">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>charging_unit_prices_field must be a valid field on the Charging Unit Prices table (pe_chprices).</li>
+  <li>code must be in UPPERCASE and no longer than 10 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>code must exist in the Investment Fund table (pe_invfun).</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pcpr_gprice(MANAGED,19951201)
+</code></pre>
+
+<p>This extracts the value held in the Gross Price field of the Charging Unit Price record with the Fund Code of MANAGED and date of 01/12/1995.</p>
+
 <h2 id="a-name13acontexpheadfield"><a name="13"></a>#cont_exp_head_field</h2>
 
 <p><strong>OVERVIEW</strong></p>
@@ -2951,7 +2989,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 22/08/2017 08:26:16.</p>
+        <p>Build Date 23/08/2017 08:45:31.</p>
       </div>
     </div>
 

@@ -270,7 +270,7 @@ value with the new value.</p>
 <div class="alert alert-danger" role="alert">
   <p>If either of the ‘Normal Pension Age’ fields are amended the system will warn the
 user that if these fields are changed it will result in normal pension ages and dates
-being recalculated for all active members of that sex in the selected scheme/category. 
+being recalculated for all active members of that sex in the selected scheme/category.
 This will also occur if the ‘Normal Pension Date Adjustment’ fields are amended.
 A user prompt will follow this warning to allow the user to cancel this amendment.</p>
 </div>
@@ -400,7 +400,7 @@ contributions you require for this contribution type. The valid options are:</p>
 
 <p>Note that types EEPR and ERPR are only calculated for members who are on NI Table
 F i.e. an entry of ‘F’ is in the <a href="/pension/file_maintenance/pem_mem/#pm_nitab">NI Table</a> field
-on the <a href="/pension/file_maintenance/pem_mem/#Member Indicator Details">Member Indicators screen</a> 
+on the <a href="/pension/file_maintenance/pem_mem/#Member Indicator Details">Member Indicators screen</a>
 in the members record.</p>
 
 <p><a name="pcc_rate"></a><strong>ANNL RATE</strong> - If PERCENT type code is used, enter the
@@ -457,11 +457,84 @@ for the category, then tick this field.</p>
 
 <p>Select the DC Benefit Statement Configuration screen using the menu.</p>
 
-<p><strong>Auto Enrolment Minimum Contribution Rates</strong></p>
+<p>The following screen is displayed:</p>
 
-<p>This screen helps to identify the contribution types related to auto enrolment and the dates and contribution rates associated with them.</p>
+<div class="screen">
+  <p><img src="/pension/images/pem_cat16.jpg" alt="DC Generic Configuration" /></p>
 
-<p>These new fields have to be updated by the user for any existing scheme where the dcgeneric screens have already been set up for the category. For any new categories, the copy function attached to the dc configuration will now include this screen.</p>
+  <p>DC Generic Configuration</p>
+</div>
+
+<p>This screen record contribution types and other information required to produce the calculations in the DC Generic Quotation.</p>
+
+<p><strong>Salary Information</strong>
+<a name="pcdc_salary"></a><strong>Salary</strong> - The salary must be entered and the salary
+entered must exist on the scheme file. You can click the lookup icon to see a list of salary codes.</p>
+
+<p><a name="pcdc_pen_sal"></a><strong>Pensionable Salary</strong> - The salary must be entered and the salary
+entered must exist on the scheme file. You can click the lookup icon to see a list of salary codes.</p>
+
+<p><strong>Risk Information</strong>
+<a name="pcdc_risk_salary"></a><strong>Risk Salary</strong> - The salary must be entered and the salary
+entered must exist on the scheme file. You can click the lookup icon to see a list of salary codes.</p>
+
+<p><a name="pcdc_sdis_sal"></a><strong>Spouse’s DIS Salary</strong> - The salary must be entered and the salary
+entered must exist on the scheme file. You can click the lookup icon to see a list of salary codes.</p>
+
+<p><strong>Non-TV Contribution Types</strong>
+<a name="pcdc_con_type1"></a><strong>Contribution Type</strong> - A Non -TV contribution code must be entered and the type
+entered must exist on the scheme file. You can click the lookup icon to see a list of types.</p>
+
+<p><strong>Risk Multiples</strong>
+<a name="pcdc_marr_mult"></a><strong>Married Members</strong> - Entered the multiple for married members.</p>
+
+<p><a name="pcdc_sin_mult"></a><strong>Single Members</strong> - Entered the multiple for single members.</p>
+
+<p><a name="pcdc_sdis_pc"></a><strong>Spouse’s Pension DIS %</strong> - Entered the percentage.</p>
+
+<p><a name="pcdc_phi_pc"></a><strong>PHI Member’s Benefit %</strong> - Entered the percentage.</p>
+
+<p><a name="pcdc_offset_pc"></a><strong>State Disability Offset %</strong> - Entered the percentage.</p>
+
+<p><a name="pcdc_offset_dt"></a><strong>Date for Offset</strong> - Entered the date.</p>
+
+<p><a name="pcdc_phi_max"></a><strong>Maximum PHI Benefit</strong> - Entered the amount.</p>
+
+<p><strong>DC Generic Configuration Projection Criteria  - UK Only Schemes</strong></p>
+
+<p>Screen 2</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_cat17.jpg" alt="DC Generic Configuration Projection Criteria" /></p>
+
+  <p>DC Generic Configuration Projection Criteria</p>
+</div>
+
+<p><a name="pcdc_interest_code"></a><strong>Interest Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
+
+<p><a name="pcdc_expense_code"></a><strong>Expense Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
+
+<p><a name="pcdc_salary_code"></a><strong>Salary Increase Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
+
+<p><a name="pcdc_inflate_code"></a><strong>Inflation Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
+
+<p><a name="pcdc_annuity_code"></a><strong>State Disability Offset %</strong> - Entered the factor table code or use the lookup to select it.</p>
+
+<p><strong>Auto Enrolment Minimum Contribution Rates  - UK Only Schemes</strong></p>
+
+<p>Screen 3 helps to identify the contribution types related to auto enrolment and the dates and contribution rates associated with them.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_cat17.jpg" alt="Minimum Contribution Rates" /></p>
+
+  <p>Minimum Contribution Rates</p>
+</div>
+
+<p>These fields have to be updated by the user for any existing scheme where the dcgeneric screens have already been set up for the category. For any new categories, the copy function attached to the dc configuration will now include this screen.</p>
 
 <h3 id="a-nameadd-a-quotation-typeaadd-a-quotation-type"><a name="Add A Quotation Type"></a>Add A Quotation Type</h3>
 
@@ -494,7 +567,7 @@ finalised quotations back to the member record, or they can just simply finalise
 from your quotations. e.g. you might set up a User Defined Screen called ‘REFUND’
 to hold details of the results of refund of contributions calculations that have been
 finalised.</li>
-  <li>By directly sending the finalised quotations through to a screen held in Member File. 
+  <li>By directly sending the finalised quotations through to a screen held in Member File.
 The screens set up for this facility are:</li>
 </ol>
 
@@ -675,7 +748,7 @@ mandatory when performing a deferred pension / pension increase run.</p>
 <p>When all the details have been entered click ‘OK’ to save the details to file. You
 can click ‘Cancel’ to exit the option without saving the details.</p>
 
-<h3 id="a-nameforfeitaforfeiturevesting-matrix"><a name="FORFEIT"></a>Forfeiture/Vesting Matrix”&gt;</h3>
+<h3 id="a-nameforfeitaforfeiturevesting-matrix"><a name="FORFEIT"></a>Forfeiture/Vesting Matrix</h3>
 
 <h2 id="a-namedeleting-categoriesadeleting-categories"><a name="Deleting Categories"></a>Deleting Categories</h2>
 
@@ -799,7 +872,7 @@ menu.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 22/08/2017 08:26:16.</p>
+        <p>Build Date 23/08/2017 08:45:32.</p>
       </div>
     </div>
 
