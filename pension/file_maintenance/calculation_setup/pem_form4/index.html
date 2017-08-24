@@ -221,6 +221,44 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_advsch">here</
 
 <p>This extracts the value held in the Adviser Associated Scheme field of the Adviser Associated Schemes record with the Adviser Code of MANAGER.</p>
 
+<h2 id="a-name83aadviserbanktransactionsfieldcodedate"><a name="83="></a>#adviser_bank_transactions_field(code,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_adviser/">Adviser Bank Transactions</a> screen for the specified Adviser code and date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#adviser_bank_transactions_field(code,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - is the <a href="/pension/file_maintenance/pem_adviser/#pad_code">Adviser Code</a> that you wish to
+retrieve an Adviser Bank Transaction field value for. This must exist as a valid Adviser Code.</li>
+  <li>date - refers to the Effective Date that you wish to retrieve an Adviser Bank Transaction field value for.</li>
+  <li>adviser_bank_transactions_field - is any valid field on the Adviser Bank Transaction table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_abanktran">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>adviser_bank_transactions_field must be a valid field on the Adviser Bank Transaction table (pe_abanktran).</li>
+  <li>code must be in UPPERCASE and no longer than 10 characters in length.</li>
+  <li>code can only contain alphanumeric values.</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, a date field reference off the <a href="/pension/appendices/app_a/#pe_mem">Basic Member Details</a> table, or a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>If the Adviser Bank Transaction field is not found, either because it does not exist or results from incorrect specification of code, this function call will return a value of 0.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pabt_credit_debit(ADVISER,20000101)
+</code></pre>
+
+<p>This extracts the value held in the Adviser Bank Transactions Credit/Debit field of the Adviser Bank Transaction record with the Adviser Code of ADVISER as at 01/01/2000.</p>
+
 <h2 id="a-name03abasicdeferredpensionerfield"><a name="03"></a>#basic_deferred_pensioner_field</h2>
 
 <p><strong>OVERVIEW</strong></p>
@@ -1135,6 +1173,48 @@ is not selected or has any value respectively.</li>
 <p>This extracts the Dependants Name for the first Dependant whose Current Flag
 is selected, whose Beneficiary Flag is not selected and whose Dependant Flag is selected.</p>
 
+<h2 id="a-name84adeptrusteefieldcurrflagbenflagdepflagnn"><a name="84"></a>#dep_trustee_field(curr_flag,ben_flag,dep_flag,nn)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the Dependants Details file in your formula.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#dep_trustee_field(curr_flag,ben_flag,dep_flag,nn)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>dep_trustee_field is any valid field on the dependants details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dep">here</a></li>
+  <li>curr_flag - refers to the value of Current flag for the dependant you wish to retrieve a Dependants Detail field for.</li>
+  <li>ben_flag - refers to the value of Beneficiary flag for the dependant you wish to retrieve a Dependants Detail field for.</li>
+  <li>dep_flag - refers to the value of Dependant flag for the dependant you wish to retrieve a Dependants Detail field for.</li>
+  <li>nn - refers to the index number of the dependants whose curr_flag, ben_flag and dep_flag match
+the criteria given above when they are ordered by member number and dependants number.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>dep_trustee_field must be a valid field on the Dependants Details file (pe_dep).</li>
+  <li>If a member does not have a dependant whose curr_flag and ben_flag match the criteria
+given, this function call will return a value of 0.</li>
+  <li>curr_flag must be one of ‘Y’, ‘N’, ‘A’, for dependants whose Current Flag is selected, is not selected or has any value respectively.</li>
+  <li>ben_flag must be one of ‘Y’, ‘N’, ‘A’, for dependants whose Beneficiary Flag is selected,
+is not selected or has any value respectively.</li>
+  <li>dep_flag must be one of ‘Y’, ‘N’, ‘A’, for dependants whose Dependant Flag is selected, is not selected or has any value respectively.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pd_dep(Y,N,Y,1)
+</code></pre>
+
+<p>This extracts the Dependants Name for the first Dependant whose Current Flag
+is selected, whose Beneficiary Flag is not selected and whose Dependant Flag is selected.</p>
+
 <h2 id="a-name76adisabilitybenefithistoryfieldcode"><a name="76"></a>#disability_benefit_history_field(code)</h2>
 
 <p><strong>OVERVIEW</strong></p>
@@ -1361,6 +1441,8 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_invfun">here</
 </code></pre>
 
 <p>This extracts the value held in the Investment Fund Description field of the Investment Fund record with the Fund Code of 0151CASH.</p>
+
+<h2 id="a-name85ainvestmenthistoryfieldfundcodetrantypedatecontdateconttype"><a name="85"></a>#investment_history_field(fund_code,tran_type,date,cont_date,cont_type)</h2>
 
 <h2 id="a-name29ainvestmentsetupfielddatefundcodeconttypeindicator"><a name="29"></a>#investment_setup_field(date,fund_code,cont_type,indicator)</h2>
 
@@ -1823,10 +1905,10 @@ History record with the Pension Code of PAPEN as at 01/01/2000 for each member c
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>type - refers to the Quotation Type (see <a href="/pension/file_maintenance/pem_cat/#Add A Quotation Type">Categories<a>) that you wish to retrieve a quotation
+  <li>type - refers to the Quotation Type (see <a href="/pension/file_maintenance/pem_cat/#Add A Quotation Type">Categories</a>) that you wish to retrieve a quotation
 result for. This must be in UPPERCASE and must exist as a valid Quotation Type for
 the appropriate Category for each member this formula is to be used for. If this is
-not the case, this function call will return a value of 0.</a></a></li>
+not the case, this function call will return a value of 0.</li>
   <li>index - refers to the Quotation Index under the Quotation Type for the quotation you
 wish to retrieve a result for e.g. if you wished to retrieve the first calculation
 under Quotation Type NORM, you would use an index value of 1, if you wish to retrieve
@@ -1852,57 +1934,6 @@ call will return a value of 0.</li>
 </code></pre>
 
 <p>This extracts the value held in the Current Quotation Result field of the Quotation Results record with the Quotation Type of NORM and quotation index 1.</p>
-
-<h2 id="a-name43aquothistfieldtyperecindex"><a name="43"></a>#quot_hist_field(type,rec,index)</h2>
-
-<p><strong>OVERVIEW</strong></p>
-
-<p>Use this to refer to the results of a quotation history that has already been run
-for the current member. This will be taken from the quotation history results file
-(pe_mquote_hist).</p>
-
-<p><strong>SYNTAX</strong></p>
-
-<pre><code>#quot_hist_field(type,rec,index)
-</code></pre>
-
-<p><strong>EXPLANATION</strong></p>
-
-<ul>
-  <li>type - refers to the Quotation Type (see Categories) that you wish to retrieve a quotation
-result for. This must be in UPPERCASE and must exist as a valid Quotation Type for
-the appropriate Category for each member this formula is to be used for. If this is
-not the case, this function call will return a value of 0.</li>
-  <li>rec - refers to the History Record Number under the Quotation Type for the quotation
-you wish to retrieve a result for e.g. if you wished to retrieve results for the first
-history record, you would use a record number of 1.</li>
-  <li>index - refers to the Quotation Index under the Quotation Type for the quotation you
-wish to retrieve a result for e.g. if you wished to retrieve the first calculation
-under Quotation Type NORM, you would use an index value of 1, if you wish to retrieve
-the second value you would use an index value of 2.</li>
-  <li>quot_hist_field is any valid field on the quotation history results table. For a
-list of valid fields click <a href="/pension/appendices/app_a/#pe_mquote_hist">here</a></li>
-</ul>
-
-<p><strong>NOTES</strong></p>
-
-<ol>
-  <li>quotation_field must be a valid field on the Member Quotation History Results file (pe_mquote_hist).</li>
-  <li>type must be in UPPERCASE.</li>
-  <li>type must exist for the appropriate Category for each member that this formula is to be used to run quotations for.</li>
-  <li>rec is a numeric value from 1,…,n where n is the highest history record number present for the Quotation Type type.</li>
-  <li>index is a numeric value from 1,…,n where n is the number of separate formulae attached to Quotation Type type.</li>
-  <li>if the quotation result is not found, either because it does not exist, has not yet
-been run, or results from incorrect specification of type, index or rec, this function
-call will return a value of 0.</li>
-</ol>
-
-<p><strong>EXAMPLE</strong></p>
-
-<pre><code>#pmqhh_value(NORM,1,1)
-</code></pre>
-
-<p>This extracts the quotation result for the first history record for the first quotation under the Quotation Type NORM for each member concerned.</p>
 
 <h2 id="a-name44aquotationheaderfieldtype"><a name="44"></a>#quotation_header_field(type)</h2>
 
@@ -2989,7 +3020,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 23/08/2017 08:45:31.</p>
+        <p>Build Date 24/08/2017 10:04:02.</p>
       </div>
     </div>
 

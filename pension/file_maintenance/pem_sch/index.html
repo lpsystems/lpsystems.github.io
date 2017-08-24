@@ -89,6 +89,12 @@
       <li><a href="#Investment Value Summary">Investment Value Summary</a></li>
       <li><a href="#Address Details">Address Details</a></li>
       <li><a href="#Member Information Setup">Member Information Setup</a></li>
+      <li><a href="#SSEXP">Advisors</a></li>
+      <li><a href="#SSEXP">Care Titles</a></li>
+      <li><a href="#SSEXP">Charging %</a></li>
+      <li><a href="#SSEXP">Contribution Rate Matrix</a></li>
+      <li><a href="#SSEXP">Trustee</a></li>
+      <li><a href="#SSEXP">SMPI Expenses</a></li>
       <li><a href="#Tax Simplification Amounts">Tax Simplification Amounts</a></li>
       <li><a href="#Forfeiture Matrix">Forfeiture Matrix</a></li>
     </ul>
@@ -213,7 +219,7 @@ generated for you. You will not be permitted to amend this.</p>
 
 <p><a name="psc_desc"></a><strong>SCHEME NAME</strong> - The scheme name must be entered.</p>
 
-<p><a name="psc_uk_i_ind"></a><strong>UK/IRISH SCHEME</strong> - The relevant indicator must
+<p><a name="psc_region"></a><strong>REGION</strong> - The relevant indicator must
 be entered. The valid entries in this field are “U” for UK and “I” for Irish. This
 will determine how a members State Pension Age is calculated and how certain screens
 are displayed.</p>
@@ -251,22 +257,6 @@ categories for this scheme (see the <a href="/pension/file_maintenance/pem_cat/"
 record a market adjustment factor that you may use to adjust transfer values in a
 defined benefits scheme to allow for current market conditions.</p>
 
-<p><a name="psc_tol_pct"></a><strong>TOLERANCE %</strong> - This field is used to set a tolerance
-percentage against which incoming salaries, contributions and NI history details are
-checked. E.g. if you set a tolerance percentage of 20%, any salaries, contributions
-or NI details that are more or less than 20% deviant from the value they were last
-time they were loaded onto Pension Master will produce a warning message. If you do
-not wish to use this feature, set the tolerance percentage to 0.</p>
-
-<p><a name="psc_c_out"></a><strong>CONTRACTED OUT</strong> - Indicates that the scheme is contracted
-out of the State Earnings Related Pension Scheme (SERPS). This field is only relevant to UK based schemes.</p>
-
-<p><a name="psc_security"></a><strong>SECURITY RATING</strong> - Select a security rating from the drop-down list
-to use for this scheme. This is used in conjunction with the Security Rating
-in the <a href="/pension/system_administration/gn_user/">Users</a> option
-to determine whether the current user has access to any member records in the current
-scheme.</p>
-
 <p><a name="psc_type"></a><strong>SCHEME TYPE</strong> - Select one of the following options from the drop-down list:</p>
 
 <ul>
@@ -275,7 +265,8 @@ scheme.</p>
   <li>Hybrid</li>
 </ul>
 
-<p><a name="psc_updcu"></a><strong>ALLOW MANUAL UPDATE OF UNITS?</strong> - Click this field if you want to allow manual update of the investment history records for members of this scheme.</p>
+<p><a name="psc_c_out"></a><strong>CONTRACTED OUT</strong> - Indicates that the scheme is contracted
+out of the State Earnings Related Pension Scheme (SERPS). This field is only relevant to UK based schemes.</p>
 
 <p><a name="psc_econ"></a><strong>SCHEME ECON (UK)/REVENUE REFERENCE NUMBER (IRL)</strong> - Enter
 the Scheme ECON (UK schemes) or the Revenue Reference (Irish schemes) as appropriate.</p>
@@ -292,13 +283,6 @@ on reports as required.</p>
 <p><a name="pcpfs_cpf"></a><strong>PROVIDER REFERENCE FOR CPF (UK)</strong> - This field appears on
 the screen for UK based schemes only and holds the Provider Reference number for Combined Pension Forecast.</p>
 
-<p><a name="psc_test"></a><strong>TEST SCHEME</strong> - This field denotes that the scheme
-is a test scheme. Test schemes can only contain up to a maximum of 10 members. These
-members are not included in the total of chargeable members calculated on the <a href="/pension/system_administration/pem_fees/">Quarterly
-Fees Print</a>.</p>
-
-<p><a name="psc_tax_ref"></a><strong>TAX REFERENCE NUMBER</strong> - Enter the tax reference number for the pension scheme. The tax reference number must be in the format 12345678AB, where the first 8 characters are numeric and the last 2 characters are letters A-Z. If the user enters less than 10 characters then preceding 0s (zeros) will automatically fill up the field e.g. if the user enters 123456AB, then this will automatically be changed to 00123456AB.</p>
-
 <p><a name="psc_auto_enrolled"></a><strong>AUTO ENROLLED</strong></p>
 
 <ol>
@@ -309,6 +293,50 @@ Fees Print</a>.</p>
 </ol>
 
 <p><a name="psc_staging_date"></a><strong>STAGING DATE</strong></p>
+
+<p><a name="psc_director"></a><strong>DIRECTORS SCHEME</strong> - This field denotes that the scheme
+is a director scheme.</p>
+
+<p><a name="psc_test"></a><strong>TEST SCHEME</strong> - This field denotes that the scheme
+is a test scheme. Test schemes can only contain up to a maximum of 10 members. These
+members are not included in the total of chargeable members calculated on the <a href="/pension/system_administration/pem_fees/">Quarterly
+Fees Print</a>.</p>
+
+<p><a name="psc_prsa"></a><strong>PRSA SCHEME</strong> - This field denotes that the scheme
+is a PRSA scheme.</p>
+
+<p><a name="psc_tol_pct"></a><strong>TOLERANCE %</strong> - This field is used to set a tolerance
+percentage against which incoming salaries, contributions and NI history details are
+checked. E.g. if you set a tolerance percentage of 20%, any salaries, contributions
+or NI details that are more or less than 20% deviant from the value they were last
+time they were loaded onto Pension Master will produce a warning message. If you do
+not wish to use this feature, set the tolerance percentage to 0.</p>
+
+<p><a name="psc_security"></a><strong>SECURITY RATING</strong> - Select a security rating from the drop-down list
+to use for this scheme. This is used in conjunction with the Security Rating
+in the <a href="/pension/system_administration/gn_user/">Users</a> option
+to determine whether the current user has access to any member records in the current
+scheme.</p>
+
+<p><a name="psc_updcu"></a><strong>ALLOW MANUAL UPDATE OF UNITS?</strong> - Click this field if you want to allow manual update of the investment history records for members of this scheme.</p>
+
+<p><a name="psc_status"></a><strong>STATUS</strong> - This field denotes that the status of the scheme Select one of the options from the drop-down list.</p>
+
+<p><a name="psc_care"></a><strong>CARE SCHEME</strong> - This field denotes that the scheme
+is a CARE scheme. By ticking this then have access to the care screens at scheme and member level.</p>
+
+<p><a name="psc_ssas"></a><strong>SSAS SCHEME</strong> - This field denotes that the scheme
+is a SSAS scheme. By ticking this then have access to the SSAS screens at scheme and member level.</p>
+
+<p><a name="psc_tot_chrg"></a><strong>TOTAL CHARGE</strong> - This field denotes the total charge % for a scheme.</p>
+
+<p><a name="psc_tax_ref"></a><strong>TAX REFERENCE NUMBER</strong> - Enter the tax reference number for the pension scheme. The tax reference number must be in the format 12345678AB, where the first 8 characters are numeric and the last 2 characters are letters A-Z. If the user enters less than 10 characters then preceding 0s (zeros) will automatically fill up the field e.g. if the user enters 123456AB, then this will automatically be changed to 00123456AB.</p>
+
+<p><a name="psc_pip_date"></a><strong>PIP RENEWAL DATE</strong> - Enter the PIP renewal date in the format DD/MM/YYYY.</p>
+
+<p><a name="psc_sal_freq"></a><strong>SALARY FREQUENCY</strong> - This field denotes the salary frequency used in the Contribution Salary Cap Report. <a href="/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap</a></p>
+
+<p><a name="psc_cont_sal_cap"></a><strong>CONTRIBUTION SALARY CAP</strong> - This field denotes the cap used in the Contribution Salary Cap Report. <a href="/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap</a></p>
 
 <p>Click ‘OK’ to save the details to the scheme file or click ‘Cancel’ to exit the add
 option without saving the details.</p>
@@ -767,7 +795,7 @@ title exactly as you wish it to appear on the salary history screen.</p>
 screen. e.g. If PENSIONABLE was entered in Salary Title 1 and SALARY was entered
 in Salary Title 2, then</p>
 
-<p>PENSIONABLE 
+<p>PENSIONABLE
 SALARY</p>
 
 <p>would be displayed.</p>
@@ -1727,7 +1755,7 @@ menu.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 23/08/2017 08:45:32.</p>
+        <p>Build Date 24/08/2017 10:04:04.</p>
       </div>
     </div>
 

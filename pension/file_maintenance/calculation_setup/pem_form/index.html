@@ -58,7 +58,7 @@
   <li><a href="#Printing Formulae">Printing Formulae</a></li>
   <li><a href="#Exit">Exit Program</a></li>
   <li><a href="/pension/file_maintenance/calculation_setup/gn_wiz">Formulae Wizard</a></li>
-  <li>Comparison Functions
+  <li><a name="comp_func"></a>Comparison Functions
     <ul>
       <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#01">@ln1 ! @ln2 goto @ln3</a></li>
       <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#02">@ln1 &lt; @ln2 goto @ln3</a></li>
@@ -73,7 +73,7 @@
       <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#11">min(fld1,fld2)</a></li>
     </ul>
   </li>
-  <li>Date Functions
+  <li><a name="date_func"></a>Date Functions
     <ul>
       <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#01">TODAY</a></li>
       <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#02">addday(date,num)</a></li>
@@ -117,86 +117,91 @@
     <ul>
       <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#01">addben(code)</a></li>
       <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#02">#additional_benefit_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#73">#adviser_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#74">#adviser_assoc_fund_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#75">#adviser_assoc_scheme_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#03">#basic_deferred_pensioner_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#04">#basic_pensioner_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#05">#broker_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#06">#bulk_switch_header_field(date,bulk_id)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#07">#bulk_switch_member_field(bulk_id,fund_code,cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#08">#bulk_switch_new_fund_field(date,bulk_id)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#09">#bulk_switch_old_fund_field(date,fund_code,cont_type,bulk_id)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#77">#care_history_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#81">#care_revaluation_history_field(code,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#79">#category_auto_enrolment_min_cont_rate_body_field(date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#10">#category_contribution_interest_field(cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#71">#category_forfeiture_matrix_header_field(cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#11">#category_rate_defaults_body_field(cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#12">#category_rate_defaults_header_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#82">#charging_unit_prices_field(fund,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#13">#cont_exp_head_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#14">#cont_exp_body_field(cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#15">#cont_field(fund_code,type,date,flag,cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#16">#cont_plus_int_field(date,cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#17">#cont_rate_field(date,cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#18">#cont_setup_field(cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#19">#death_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#20">#death_dep_field(nn)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#21">#deferred_pension_history_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#22">#deferred_pension_history_totals_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#23">#deferred_pension_increase_history_field(code,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#24">#dep_field(curr_flag,ben_flag,dep_flag,nn)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#76">#disability_benefit_history_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#80">#disability_benefit_increase_history_field(code,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#25">#divorce_and_spouses_field(nn)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#26">#fsavc_field(nn)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#27">#history_field(type,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#28">#investment_fund_field(fund_code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#29">#investment_setup_field(date,fund_code,cont_type,indicator)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#30">#lifestyle_header_field(matrix_code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#31">#lifestyle_body_field(matrix_code,index)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#32">#member_address_field(nn)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#33">#member_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#34">#member_lifetime/annual_allowance_field(date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#35">#member_note_field(nn)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#36">#member_tax_simplification_field(date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#37">#ni_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#38">#part_time_hours_field(nn)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#39">#pension_history_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#40">#pension_history_totals_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#41">#pension_increase_history_field(code,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#42">#quotation_field(type,index)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#43">#quot_hist_field(type,index,rec)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#44">#quotation_header_field(type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#45">#refund_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#46">#salary_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#47">#scheme_address_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#48">#scheme_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#72">#scheme_forfeiture_matrix_header_field(cont_type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#49">#scheme_investment_fund_field(fund_code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#78">#scheme_tax_simplification_field(date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#50">#scheme_user_defined_field</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#51">#special_code_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#52">#status_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#53">#switch_header_field(date,bulk_id)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#54">#switch_new_fund_field(date_from,date_to,bulk_id)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#55">#switch_old_fund_field(date_from,date_to,fund_code,cont_type,bulk_id)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#56">tot_tvin(field,date1,date2)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#57">tot_tvout(field,date1,date2)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#58">#transfer_in_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#59">#transfer_out_field(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#60">tvin(code)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#61">udh(type,col,yyyymmdd, basis)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#62">udhtot(type,col,date_1,date_2)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#63">unit_price(fund,basis,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#64">#unit_prices_field(fund,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#65">#user_defined_history_field(type,date)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#66">#user_defined_history_body_field(type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#67">#user_defined_history_header_field(type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#68">#user_defined_screen_field(type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#69">#user_defined_screen_body_field(type)</a></li>
-      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#70">#user_defined_screen_header_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#03">#adviser_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#04">#adviser_assoc_fund_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#05">#adviser_assoc_scheme_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#06">#adviser_bank_transactions_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#07">#basic_deferred_pensioner_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#08">#basic_pensioner_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#09">#broker_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#10">#bulk_switch_header_field(date,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#11">#bulk_switch_member_field(bulk_id,fund_code,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#12">#bulk_switch_new_fund_field(date,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#13">#bulk_switch_old_fund_field(date,fund_code,cont_type,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#14">#care_history_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#15">#care_revaluation_history_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#16">#category_auto_enrolment_min_cont_rate_body_field(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#17">#category_contribution_interest_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#18">#category_forfeiture_matrix_header_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#19">#category_rate_defaults_body_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#20">#category_rate_defaults_header_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#21">#charging_unit_prices_field(fund,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#22">#cont_exp_head_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#23">#cont_exp_body_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#24">#cont_field(fund_code,type,date,flag,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#25">#cont_plus_int_field(date,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#26">#cont_rate_field(date,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#27">#cont_setup_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#28">#death_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#29">#death_dep_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#30">#deferred_pension_history_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#31">#deferred_pension_history_totals_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#32">#deferred_pension_increase_history_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#33">#dep_field(curr_flag,ben_flag,dep_flag,nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#34">#dep_trustee_field(curr_flag,ben_flag,dep_flag,nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#35">#disability_benefit_history_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#36">#disability_benefit_increase_history_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#37">#divorce_and_spouses_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#38">#fsavc_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#39">#history_field(type,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#40">#investment_fund_field(fund_code)</a>
+        <ul>
+          <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#41">#investment_history_field(fund_code,tran_type,date,cont_date,cont_type)</a></li>
+        </ul>
+      </li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#42">#investment_setup_field(date,fund_code,cont_type,indicator)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#43">#lifestyle_header_field(matrix_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#44">#lifestyle_body_field(matrix_code,index)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#45">#member_address_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#46">#member_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#47">#member_lifetime/annual_allowance_field(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#48">#member_note_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#49">#member_tax_simplification_field(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#50">#ni_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#51">#part_time_hours_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#52">#pension_history_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#53">#pension_history_totals_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#54">#pension_increase_history_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#55">#quotation_field(type,index)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#56">#quotation_header_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#57">#refund_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#58">#salary_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#59">#scheme_address_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#60">#scheme_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#61">#scheme_forfeiture_matrix_header_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#62">#scheme_investment_fund_field(fund_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#63">#scheme_tax_simplification_field(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#64">#scheme_user_defined_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#65">#special_code_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#66">#status_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#67">#switch_header_field(date,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#68">#switch_new_fund_field(date_from,date_to,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#69">#switch_old_fund_field(date_from,date_to,fund_code,cont_type,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#70">tot_tvin(field,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#71">tot_tvout(field,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#72">#transfer_in_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#73">#transfer_out_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#74">tvin(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#75">udh(type,col,yyyymmdd, basis)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#76">udhtot(type,col,date_1,date_2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#77">unit_price(fund,basis,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#78">#unit_prices_field(fund,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#79">#user_defined_history_field(type,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#80">#user_defined_history_body_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#81">#user_defined_history_header_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#82">#user_defined_screen_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#83">#user_defined_screen_body_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#84">#user_defined_screen_header_field(type)</a></li>
     </ul>
   </li>
   <li>GMP Functions
@@ -556,7 +561,7 @@ From Pension Master</a>.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 23/08/2017 08:45:31.</p>
+        <p>Build Date 24/08/2017 10:04:01.</p>
       </div>
     </div>
 
