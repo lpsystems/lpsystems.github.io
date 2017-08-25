@@ -263,15 +263,24 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_abanktran">her
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Basic Deferred Pensioner file in
-your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#basic_deferred_pensioner_details">Basic Deferred Pensioner</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#basic_deferred_pensioner_field
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>basic_deferred_pensioner_field - is any valid field on the Basic Deferred Pensioner table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_dpens">here</a></li>
+</ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>basic_deferred_pension_field must be a valid field on the Basic Deferred Pensioner File (pe_dpens).</li>
-  <li>basic_deferred_pensioner_field is any valid field on the basic deferred pensioner
-table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpens">here</a></li>
+  <li>basic_deferred_pension_field must be a valid field on the Basic Deferred Pensioner table (pe_dpens).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -279,20 +288,30 @@ table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_d
 <pre><code>#pdps_max_sch_csh
 </code></pre>
 
-<p>This extracts the value of the Maximum Scheme Cash at Date of Withdrawal for the member concerned.</p>
+<p>This extracts the value held in the Maximum Scheme Cash at Date of Withdrawal field of the Basic Deferred Pensioner record for each member concerned.</p>
 
 <h2 id="a-name08abasicpensionerfield"><a name="08"></a>#basic_pensioner_field</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Basic Pensioner file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#basic_pensioner_details">Basic Pensioner</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#basic_pensioner_field
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>basic_pensioner_field - is any valid field on the Basic Pensioner table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_pens">here</a></li>
+</ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>basic_pension_field must be a valid field on the Basic Pensioner File (pe_pens).</li>
-  <li>basic_pensioner_field is any valid field on the basic pensioner table. For a list
-of valid fields click <a href="/pension/appendices/app_a/#pe_pens">here</a></li>
+  <li>basic_pension_field must be a valid field on the Basic Pensioner table (pe_pens).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -300,7 +319,7 @@ of valid fields click <a href="/pension/appendices/app_a/#pe_pens">here</a></li>
 <pre><code>#pps_precom_pen
 </code></pre>
 
-<p>This extracts the value of the Pre-Commutation Pension for the member concerned.</p>
+<p>This extracts the value held in the Pre-Commutation Pension field of the Basic Pensioner record for each member concerned.</p>
 
 <h2 id="a-name09abrokerfieldcode"><a name="09"></a>#broker_field(code)</h2>
 
@@ -671,7 +690,7 @@ return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_cat/#ContributionRate">Category Contribution Rate Defaults</a> screen for the specified contribution type code.</p>
+<p>Use this to refer to the value of a field in the body section on the <a href="/pension/file_maintenance/pem_cat/#ContributionRate">Category Contribution Rate Defaults</a> screen for the specified contribution type code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -681,14 +700,14 @@ return a value of 0.</li>
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>cont_type - is the contribution type that you wish to retrieve the Category Contribution Rate Defaults field value for. This must exist as a valid Contribution Type code for the member’s scheme.</li>
-  <li>category_rate_defaults_body_field - is any valid field on the Category Contribution Rate Defaults table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catcont_b">here</a></li>
+  <li>cont_type - is the contribution type that you wish to retrieve the Category Contribution Rate Body Defaults field value for. This must exist as a valid Contribution Type code for the member’s scheme.</li>
+  <li>category_rate_defaults_body_field - is any valid field on the Category Contribution Rate Body Defaults table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catcont_b">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>category_rate_defaults_body_field must be a valid field on the Category Contribution Rate Defaults table (pe_catcont_b).</li>
+  <li>category_rate_defaults_body_field must be a valid field on the Category Contribution Rate Body Defaults table (pe_catcont_b).</li>
   <li>cont_type must be in UPPERCASE and no longer than 8 characters in length.</li>
   <li>cont_type must exist in the <a href="/pension/file_maintenance/pem_sch/#Contribution Type Setup">Contribution Type Setup</a> screen for the member’s scheme.</li>
 </ol>
@@ -698,32 +717,38 @@ return a value of 0.</li>
 <pre><code>#pccb_rate(EEAVC)
 </code></pre>
 
-<p>This extracts the value held in the Contribution Percent/Annual Flatrate field of the Category Contribution Rate Defaults record with the Contribution Type Code of EEAVC for the member’s scheme.</p>
+<p>This extracts the value held in the Contribution Percent/Annual Flatrate field of the Category Contribution Rate Body Defaults record with the Contribution Type Code of EEAVC for the member’s scheme and category.</p>
 
 <h2 id="a-name20acategoryratedefaultsheaderfield"><a name="20"></a>#category_rate_defaults_header_field</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the header of the Category Rate Defaults held against a Category
-in your formula.</p>
+<p>Use this to refer to the value of a field in the header section on the <a href="/pension/file_maintenance/pem_cat/#ContributionRate">Category Contribution Rate Defaults</a> screen.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>#category_rate_defaults_header_field(cont_type)
+<pre><code>#category_rate_defaults_header_field
 </code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>category_rate_defaults_header_field - is any valid field on the Category Contribution Rate Defaults
+Header table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catcont_h">here</a></li>
+</ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>category_rate_defaults_header_field must be a valid field on the Category Rate Defaults Header File (pe_catcont_h).</li>
-  <li>category_rate_defaults_header_field is any valid field on the category rate defaults
-header table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_catcont_h">here</a></li>
+  <li>category_rate_defaults_header_field must be a valid field on the Category Contribution Rate Header Defaults table (pe_catcont_h).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
 
 <pre><code>#pcch_frequency
 </code></pre>
+
+<p>This extracts the value held in the Contribution Frequency field of the Category Contribution Rate Header Defaults record for the member’s scheme and category.</p>
 
 <h2 id="a-name21achargingunitpricesfieldfunddate"><a name="21"></a>#charging_unit_prices_field(fund,date)</h2>
 
@@ -767,19 +792,23 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_chprices">here
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the Contribution Expenses held against a Scheme in your formula.</p>
+<p>Use this to refer to the value of a field in the header section on the <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> screen.</p>
 
 <p><strong>SYNTAX</strong></p>
 
 <pre><code>#cont_exp_head_field
 </code></pre>
 
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>cont_exp_head_field - is any valid field on the Contribution Expenses Header table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_h">here</a></li>
+</ul>
+
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>cont_exp_head_field must be a valid field on the Contribution Expenses File (pe_exp_h).</li>
-  <li>cont_exp_head_field is any valid field on the contribution expenses header table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_h">here</a></li>
+  <li>cont_exp_head_field must be a valid field on the Contribution Expenses table (pe_exp_h).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -787,11 +816,13 @@ For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_h">h
 <pre><code>#pexh_memch
 </code></pre>
 
+<p>This extracts the value held in the Member Charge field of the Contribution Expenses Header record for the member’s scheme.</p>
+
 <h2 id="a-name23acontexpbodyfieldconttype"><a name="23"></a>#cont_exp_body_field(cont_type)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> screen for the specified contribution type code.</p>
+<p>Use this to refer to the value of a field in the body section on the <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> screen for the specified contribution type code.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -801,14 +832,14 @@ For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_h">h
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>cont_type - is the contribution type that you wish to retrieve the Contribution Expenses field value for. This must exist as a valid Contribution Type code for the member’s scheme.</li>
-  <li>cont_exp_body_field - is any valid field on the Contribution Expenses table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_b">here</a></li>
+  <li>cont_type - is the contribution type that you wish to retrieve the Contribution Expenses Body field value for. This must exist as a valid Contribution Type code for the member’s scheme.</li>
+  <li>cont_exp_body_field - is any valid field on the Contribution Expenses Body table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_b">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>cont_exp_body_field must be a valid field on the Contribution Expenses table (pe_exp_b).</li>
+  <li>cont_exp_body_field must be a valid field on the Contribution Expenses Body table (pe_exp_b).</li>
   <li>cont_type must be in UPPERCASE and no longer than 8 characters in length.</li>
   <li>cont_type must exist in the <a href="/pension/file_maintenance/pem_sch/#Contribution Type Setup">Contribution Type Setup</a> screen for the member’s scheme.</li>
 </ol>
@@ -818,7 +849,7 @@ For a list of valid fields click <a href="/pension/appendices/app_a/#pe_exp_h">h
 <pre><code>#pexb_sal(EEAVC)
 </code></pre>
 
-<p>This extracts the value held in the Salary Percentage field of the Contribution Expenses record with the Contribution Type Code of EEAVC for the member’s scheme.</p>
+<p>This extracts the value held in the Salary Percentage field of the Contribution Expenses Body record with the Contribution Type Code of EEAVC for the member’s scheme.</p>
 
 <h2 id="a-name24acontributionhistoryfieldfundcodetypedateflagconttype"><a name="24"></a>#contribution_history_field(fund_code,type,date,flag,cont_type)</h2>
 
@@ -984,14 +1015,23 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_mcontp">here
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Death Details File in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Death Details">Death Details</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#death_field
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>death_field - is any valid field on the Death Details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_death">here</a></li>
+</ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>death_field must be a valid field on the Death Details File (pe_death).</li>
-  <li>death_field is any valid field on the death details table. For a list of valid fields
-click <a href="/pension/appendices/app_a/#pe_death">here</a></li>
+  <li>death_field must be a valid field on the Death Details table (pe_death).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -999,7 +1039,7 @@ click <a href="/pension/appendices/app_a/#pe_death">here</a></li>
 <pre><code>#pde_contref
 </code></pre>
 
-<p>This refers to the contributions refunded on the death of a member.</p>
+<p>This extracts the value held in the Contributions Refunded on Death field of the Death Details record for each member concerned.</p>
 
 <h2 id="a-name29adeathdepfieldnn"><a name="29"></a>#death_dep_field(nn)</h2>
 
@@ -1078,8 +1118,7 @@ History record with the Deferred Pension Code of DAPEN for each member concerned
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the total of a field on the Deferred Pension History file in
-your formula.</p>
+<p>Use this to refer to the value in the totals section of a field on the <a href="/pension/file_maintenance/pem_mem/#Deferred Pension History Screen">Deferred Pension History</a> screen.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1089,15 +1128,15 @@ your formula.</p>
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>deferred_pension_history_totals_field is any valid field on the deferred pension
-history totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpent">here</a></li>
+  <li>deferred_pension_history_totals_field - is any valid field on the Deferred Pension
+History Totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_dpent">here</a></li>
   <li>The Deferred Pension History Totals that can be used in a formula are calculated as follows:
     <ul>
       <li>If the Deferred Pension Code starts with ‘DA’ then the value is ADDED to the total value.</li>
       <li>If the Deferred Pension Code starts with ‘DI’ then the value is IGNORED (not included in the total value).</li>
       <li>If the Deferred Pension Code starts with ‘DS’ then the value is SUBTRACTED from the total value.</li>
       <li>Also the value will only be included in the total calculation if the <a href="/pension/file_maintenance/pem_mem/#pdpa_dt_commence">Date
-to Commence</a> is on or before the Calaculation Date, ANY FUTURE DATES WILL BE IGNORED regardless of the Deferred Pension Code type.</li>
+to Commence</a> is on or before the Calculation Date, ANY FUTURE DATES WILL BE IGNORED regardless of the Deferred Pension Code type.</li>
     </ul>
   </li>
 </ul>
@@ -1106,7 +1145,7 @@ to Commence</a> is on or before the Calaculation Date, ANY FUTURE DATES WILL BE 
 
 <ol>
   <li>deferred_pension_history_totals_field must be a valid field on the Deferred Pension
-History Totals file (pe_dpent).</li>
+History Totals table (pe_dpent).</li>
   <li>If the Deferred Pension History Totals Field is not found this function call will return a value of 0.</li>
 </ol>
 
@@ -1115,7 +1154,8 @@ History Totals file (pe_dpent).</li>
 <pre><code>#pdpt_init_pen
 </code></pre>
 
-<p>This extracts the value of the Total Initial Pension of the Deferred Pension History record for each member concerned.</p>
+<p>This extracts the value held in the Total Initial Pension field of the Deferred Pension
+History Totals record for each member concerned.</p>
 
 <h2 id="a-name32adeferredpensionincreasehistoryfieldcodedate"><a name="32"></a>#deferred_pension_increase_history_field(code,date)</h2>
 
@@ -1668,19 +1708,32 @@ of valid fields click <a href="/pension/appendices/app_a/#pe_maddr">here</a></li
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Member File in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Basic Member Details2">Basic Member Details</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#member_field
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>member_field - is any valid field on the Basic Member Details table. For a list
+of valid fields click <a href="/pension/appendices/app_a/#pe_mem">here</a></li>
+</ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>member_field must be a valid field on the Member File (pe_mem).</li>
-  <li>member_field is any valid field on the basic member details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_mem">here</a></li>
+  <li>member_field must be a valid field on the Basic Member Details File (pe_mem).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
 
-<pre><code>#pm_npa refers to the Normal Pension Age of a member.
+<pre><code>#pm_npa
 </code></pre>
+
+<p>This extracts the value held in the Normal Pension Age in Years field of the Basic Member Details record for each member concerned.</p>
 
 <h2 id="a-name47amemberlifetimeannualallowancefielddate"><a name="47"></a>#member_lifetime/annual_allowance_field(date)</h2>
 
@@ -1793,13 +1846,26 @@ return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the NI History file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Ni History">NI History</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#ni_field
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - refers to the Effective Date that you wish to retrieve a Member Tax Simplification field value for.
+If a member does not have a Member Tax Simplification record with a same effective date to the one entered, this function call will
+return a value of 0.</li>
+  <li>ni_field - is any valid field on the NI history table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_nih">here</a></li>
+</ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>ni_field must be a valid field on the NI History File (pe_nih).</li>
-  <li>ni_field is any valid field on the NI history table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_nih">here</a></li>
+  <li>ni_field must be a valid field on the NI History table (pe_nih).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -1807,7 +1873,7 @@ return a value of 0.</li>
 <pre><code>#pi_nisal
 </code></pre>
 
-<p>This refers to the most recent NI Salary of a member.</p>
+<p>This extracts the most recent value held in the NI Contributions/Earnings field of the NI History record for each member concerned.</p>
 
 <h2 id="a-name51aparttimehoursfieldnn"><a name="51"></a>#part_time_hours_field(nn)</h2>
 
@@ -1891,7 +1957,7 @@ will return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the total of a field on the Pension History file in your formula.</p>
+<p>Use this to refer to the value in the totals section of a field on the <a href="/pension/file_maintenance/pem_mem/#Pension History Screen">Pension History</a> screen.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -1901,8 +1967,8 @@ will return a value of 0.</li>
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>pension_history_totals_field is any valid field on the pension history totals table.
-For a list of valid fields click <a href="/pension/appendices/app_a/#pe_pent">here</a></li>
+  <li>pension_history_totals_field - is any valid field on the Pension
+History Totals table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_pent">here</a></li>
   <li>The Pension History Totals that can be used in a formula are calculated as follows:
     <ul>
       <li>If the Pension Code starts with ‘PA’ then the value is ADDED to the total value.</li>
@@ -1917,7 +1983,7 @@ to Commence</a> is on or before the Calculation Date, ANY FUTURE DATES WILL BE I
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>pension_history_totals_field must be a valid field on the Pension History Totals file (pe_pent).</li>
+  <li>pension_history_totals_field must be a valid field on the Pension History Totals table (pe_pent).</li>
   <li>If the Pension History Totals Field is not found this function call will return a value of 0.</li>
 </ol>
 
@@ -1926,7 +1992,8 @@ to Commence</a> is on or before the Calculation Date, ANY FUTURE DATES WILL BE I
 <pre><code>#ppt_init_pen
 </code></pre>
 
-<p>This extracts the value of the Total Initial Pension of the Pension History record for each member concerned.</p>
+<p>This extracts the value held in the Total Initial Pension field of the Pension
+History Totals record for each member concerned.</p>
 
 <h2 id="a-name54apensionincreasehistoryfieldcodedate"><a name="54"></a>#pension_increase_history_field(code,date)</h2>
 
@@ -2055,18 +2122,23 @@ will return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Refund Details File in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Refund Of Contributions Details">Refund of Contributions Details</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#refund_field
+</code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>refund_field is any valid field on the refund details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_refund">here</a></li>
+  <li>refund_field - is any valid field on the Refund of Contributions Details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_refund">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>refund_field must be a valid field on the Refund Details File (pe_refund).</li>
+  <li>refund_field must be a valid field on the Refund of Contributions Details table (pe_refund).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -2074,18 +2146,23 @@ will return a value of 0.</li>
 <pre><code>#pre_cep
 </code></pre>
 
-<p>This refers to the CEP payable in connection with the refund.</p>
+<p>This extracts the value held in the CEP Payable field of the Refund of Contributions Details record for each member concerned.</p>
 
 <h2 id="a-name58asalaryfield"><a name="58"></a>#salary_field</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the most recent value of a field on the Salary History file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#Salary History">Salary History</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#salary_field
+</code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>salary_field is any valid field on the salary history table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_salary1">here</a></li>
+  <li>salary_field - is any valid field on the Salary History table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_salary1">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
@@ -2100,12 +2177,7 @@ will return a value of 0.</li>
 <pre><code>#ps1_sal1
 </code></pre>
 
-<p>This refers to the most recent salary found in the first column on the first screen of Salary History in Members.</p>
-
-<pre><code>#ps4_sal2
-</code></pre>
-
-<p>This refers to the most recent salary found in the second column on the fourth screen of Salary History in Members.</p>
+<p>This extracts the most recent value held in the Screen 1 Salary 1 field of the Salary History record for each member concerned.</p>
 
 <h2 id="a-name59aschemeaddressfieldcode"><a name="59"></a>#scheme_address_field(code)</h2>
 
@@ -2148,26 +2220,31 @@ will return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Scheme file in your formula.</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_sch/#Basic Scheme Details">Basic Scheme Details</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#scheme_field
+</code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>scheme_field is any valid field on the scheme table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sch">here</a></li>
+  <li>scheme_field - is any valid field on the Basic Scheme Details table. For a list of valid fields click <a href="/pension/appendices/app_a/#pe_sch">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>scheme_field must be a valid field on the Scheme File (pe_sch).</li>
+  <li>scheme_field must be a valid field on the Basic Scheme Details table (pe_sch).</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
 
-<pre><code>#psc_unit_fd1
+<pre><code>#psc_base
 </code></pre>
 
-<p>For a money purchase type scheme refers to the unit price for the first fund that the member is a member of.</p>
+<p>This extracts the value held in the Base Currency field of the Basic Scheme Details record for each member’s scheme.</p>
 
 <h2 id="a-name61aschemeforfeiturematrixheaderfieldconttype"><a name="61"></a>#scheme_forfeiture_matrix_header_field(cont_type)</h2>
 
@@ -2281,7 +2358,7 @@ return a value of 0.</li>
 
 <p><strong>OVERVIEW</strong></p>
 
-<p>Use this to refer to the value of a field on the Scheme User Defined Details in your formula. This will be taken from the file (pe_suds).</p>
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_sch/#Scheme User Defined Details">Scheme User Defined Details</a> screen.</p>
 
 <p><strong>SYNTAX</strong></p>
 
@@ -2291,14 +2368,14 @@ return a value of 0.</li>
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>scheme_user_defined_field is any valid field on the scheme user defined table. For
+  <li>scheme_user_defined_field - is any valid field on the Scheme User Defined Details table. For
 a list of valid fields click <a href="/pension/appendices/app_a/#pe_suds">here</a></li>
 </ul>
 
 <p><strong>NOTES</strong></p>
 
 <ol>
-  <li>scheme_user_defined_field must be a valid field on the Scheme User Defined Details file (pe_suds).</li>
+  <li>scheme_user_defined_field must be a valid field on the Scheme User Defined Details table (pe_suds).</li>
   <li>If the Scheme User Defined Field is not the value field or the field is blank, this function call will return a value of 0.</li>
 </ol>
 
@@ -2307,7 +2384,7 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_suds">here</
 <pre><code>#psud_val1
 </code></pre>
 
-<p>This extracts the data held in field 1 of the Scheme User Defined Details screen.</p>
+<p>This extracts the value held in the Scheme User Defined Value 1 field of the Scheme User Defined Details record for each member’s scheme.</p>
 
 <h2 id="a-name65aspecialcodefieldcode"><a name="65"></a>#special_code_field(code)</h2>
 
@@ -3111,7 +3188,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 24/08/2017 17:59:35.</p>
+        <p>Build Date 25/08/2017 14:25:50.</p>
       </div>
     </div>
 
