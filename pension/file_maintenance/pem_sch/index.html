@@ -89,7 +89,7 @@
       <li><a href="#Investment Value Summary">Investment Value Summary</a></li>
       <li><a href="#Address Details">Address Details</a></li>
       <li><a href="#Member Information Setup">Member Information Setup</a></li>
-      <li><a href="#SSEXP">Advisors</a></li>
+      <li><a href="#Advisors">Advisors</a></li>
       <li><a href="#SSEXP">Care Titles</a></li>
       <li><a href="#SSEXP">Charging %</a></li>
       <li><a href="#SSEXP">Contribution Rate Matrix</a></li>
@@ -1546,6 +1546,22 @@ These are taken at face value e.g. £100 of unallocated contributions has a valu
 £100.</li>
 </ul>
 
+<p>The following screen is displayed when you select screen 2:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2i.jpg" alt="Summary By Contribution Type" /></p>
+
+  <p>Summary By Contribution Type</p>
+</div>
+
+<p>The following screen is displayed when you select screen 3:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2i.jpg" alt="Summary Suspense Account" /></p>
+
+  <p>Summary Suspense Account</p>
+</div>
+
 <h3 id="a-namesaddraa-nameaddress-detailsaaddress-details"><a name="SADDR"></a><a name="Address Details"></a>Address Details</h3>
 
 <p>Click Menu and then select the Address Details option and press <kbd>Return</kbd>.</p>
@@ -1670,7 +1686,78 @@ Information Screen</a> in Members.</p>
 
 <p><a name="pstx_dc_life_allow"></a><strong>DC LIFETIME ALLOWANCE</strong> - Enter the DC Lifetime Allowance for the date entered.</p>
 
+<p>a name=”pstx_dc_life_allow”&gt;&lt;/a&gt;<strong>MP LIFETIME ALLOWANCE</strong> - Enter the MP Lifetime Allowance for the date entered.</p>
+
+<h3 id="a-nameadvisaa-nameadvisorsaadvisors"><a name="ADVIS"></a><a name="ADVISORS"></a>Advisors</h3>
+
+<p>Click Menu and then select the Advisors option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1j.jpg" alt="Advisor Screen" /></p>
+
+  <p>Advisor Screen</p>
+</div>
+
+<p><a name="pbr_code"></a><strong>Advisor CODE</strong> - Enter a valid broker code, or click on
+the lookup icon for a list of Advisor codes.
+Upon selection of a valid advisor code, the advisor details from
+the <a href="/pension/file_maintenance/pem_brok/">Brokers</a> program are automatically filled out on the
+screen and saved to the scheme file. If the Advisor you require is not available, add
+it first using the <a href="/pension/file_maintenance/pem_advisor/">Advisors</a> program, then return to this
+screen to assign the advisor to the scheme.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the advisor details, or click
+‘Cancel’ to exit entry without saving the details.</p>
+
+<h3 id="a-namecareaa-namecare-title-screenacare-title-screen"><a name="CARE"></a><a name="Care Title Screen"></a>Care Title Screen</h3>
+
+<p>Click Menu. Then select the Care Title Screen option and press <kbd>Return</kbd>.</p>
+
+<p>This screen contains description and format information assigned to the five title fields. The fields relate Care Averaged Screens that will be displayed at member level. The Care Screen box needs to be ticked on the Basic Scheme Screen initially to access this screen in the scheme menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_caret.jpg" alt="Care Title Screen" /></p>
+
+  <p>Care Title  Set Up Fields Screen</p>
+</div>
+
+<p>Update the description as you want them to appear at member level. A date and care code field already appears in the first two columns.</p>
+
+<p><a name="pctt_desc1"></a><a name="pctt_desc2"></a><a name="pctt_desc3"></a><a name="pctt_desc4"></a><a name="pctt_desc5"></a><a name="pctt_desc6"></a><strong>DESCRIPTION</strong> -
+Enter a description of the field that will be displayed on the Care
+screens at member level.</p>
+
+<p><a name="pctt_total1"></a><a name="pctt_total2"></a><a name="pctt_total3"></a><a name="pctt_total4"></a><a name="pctt_total5"></a><a name="pctt_total6"></a><strong>TOTAL</strong> -
+Tick the total box if you wish to see that column total on the member screen.</p>
+
+<p>The following fields need only to be updated to be used with the Recalculation of Revaluations option in the Care Run. Further details of these
+options can be found <a href="/pension/updates/peu_reval/#destdlg">here</a></p>
+
+<p><a name="pctt_freq"></a><strong>REVALUATION FREQUENCY</strong> - Enter the frequency from the drop down.</p>
+
+<p><a name="pctt_date_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Enter the date from the drop down</p>
+
+<p><a name="pctt_reval_day"></a><strong>DATE OF REVALUATION</strong> - Enter the date of the revaluation from the drop down.</p>
+
+<p>a name=”pctt_dsy”&gt;&lt;/a&gt;<strong>DAY</strong> - Enter the day if the value of the previous field is specfic day. Valid entries are 1 - 31.</p>
+
+<p>When you have completed the screen press <kbd>Esc</kbd> to save the details to the file.
+<kbd>Del</kbd> can be pressed to exit the update option without saving the details.</p>
+
+<p>To exit the Care Title Screen, click ‘Exit’. The program will
+return to the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> menu.</p>
+
+<h3 id="a-namecharaa-namecharging--acharging-"><a name="CHAR"></a><a name="Charging % "></a>Charging %</h3>
+
+<p>Click Menu. Then select the Charging %  Screen option and press <kbd>Return</kbd></p>
+
 <h3 id="a-nameforfeitaa-nameforfeiture-matrixaforfeiture-matrix"><a name="FORFEIT"></a><a name="Forfeiture Matrix"></a>Forfeiture Matrix</h3>
+
+<p>Click Menu. Then select the Forfeiture Matrix Screen option and press <kbd>Return</kbd></p>
 
 <h2 id="a-nameprintaa-nameprinting-scheme-detailsaprinting-scheme-details"><a name="print"></a><a name="Printing Scheme Details"></a>Printing Scheme Details</h2>
 
@@ -1821,7 +1908,7 @@ menu.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 30/08/2017 09:42:16.</p>
+        <p>Build Date 30/08/2017 16:04:40.</p>
       </div>
     </div>
 
