@@ -1123,8 +1123,17 @@ have entered a valid fund code.</p>
 <p><a name="psf_allocation"></a><strong>ALLOCATION PERCENTAGE</strong> - Enter the unit allocation
 rate for investments in this fund. This defaults to 100%.</p>
 
-<p><a name="psf_allocation"></a><strong>ALLOCATION PERCENTAGE</strong> - Enter the unit allocation
+<p><a name="psf_start"></a><strong>START</strong> - Enter the unit allocation
 rate for investments in this fund. This defaults to 100%.</p>
+
+<p><a name="psf_end"></a><strong>END</strong> - Enter the unit allocation
+rate for investments in this fund. This defaults to 100%.</p>
+
+<p><a name="psf_ls_illiquid"></a><strong>LS ILLIQUID</strong> - Enter the %. This is used with the Lifestyle matrices that have been set up for the scheme.</p>
+
+<p><a name="psf_rebate_perc"></a><strong>ANNUAL REBATE</strong> - Enter the %.</p>
+
+<p><a name="psf_rebate_freq"></a><strong>REBATE FREQUENCY</strong> - Enter the frequency.</p>
 
 <p>You cannot delete a fund from a scheme if any members of the scheme have investments
 in that fund.</p>
@@ -1132,13 +1141,31 @@ in that fund.</p>
 <p>When all the details have been entered click ‘OK’ to save the details, or click on
 ‘Cancel’ to exit entry without saving the details.</p>
 
+<p>To update or add the funds investment manager or policy number details select screen 2. An investment manager code must already have been entered using <a href="/pension/system_data/pem_codem/#Add Codes">Codes</a></p>
+
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_sch2q.jpg" alt="Investment Funds Screen 2" /></p>
+  <p><img src="/pension/images/pem_sch2q.jpg" alt="Investment Funds Policy Numbers " /></p>
 
-  <p>Investment Funds Screen 2</p>
+  <p>Investment Funds Policy Numbers</p>
 </div>
+
+<p>Fill in the details as follows:</p>
+
+<p><a name="psp_fund"></a><strong>FUND</strong> - Enter the fund code or click the lookup icon to see
+a list of available funds. The description field is automatically filled in once you
+have entered a valid fund code.</p>
+
+<p><a name="psp_manager"></a><strong>FUND MANAGER</strong> - Enter the unit allocation
+rate for investments in this fund. This defaults to 100%.</p>
+
+<p><strong>DESCRIPTION</strong> - This defaults to the description already held at fund level.</p>
+
+<p><a name="psp_policy"></a><strong>INV MGR SCH REF POLICY NUMBER</strong> - Enter the policy number.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click on
+‘Cancel’ to exit entry without saving the details.</p>
 
 <h3 id="a-namescontaa-namecontribution-type-setupacontribution-type-setup"><a name="SCONT"></a><a name="Contribution Type Setup"></a>Contribution Type Setup</h3>
 
@@ -1182,6 +1209,23 @@ No i.e. unticked.</p>
 
 <p><a name="psct_lifestyle"></a><strong>LIFESTYLING ALLOWED?</strong> - Is lifetyling allowed for
 this contribution type. This field will default to No i.e. unticked.</p>
+
+<p><a name="psct_curr"></a><strong>CURRENCY</strong> - Is lifetyling allowed for
+this contribution type. This field will default to No i.e. unticked.</p>
+
+<p><a name="psct_dc"></a><strong>DC CONTRIBUTION TYPE</strong> - Is lifetyling allowed for
+this contribution type. This field will default to No i.e. unticked.</p>
+
+<p><a name="psct_dc_type"></a><strong>REGULAR DC CONTRIBUTION TYPE</strong> - Used in conjunction with the DC
+Generic quote for the projections calculation.</p>
+
+<p><a name="psct_type"></a><strong>CONTRIBUTION TYPE</strong> - Indicates the type of either ‘EE, ER, AVC etc’.</p>
+
+<p><a name="psct_tvin"></a><strong>CONTRIBUTION TYPE SOLELY FOR TVIN</strong> - Tick if this contribution should
+only be used for TVIN’s and the transaction type of TVIN.</p>
+
+<p><a name="psct_cap"></a><strong>INCLUDED SALARY CAP?</strong> - Tick if this contribution should be used in the
+salary cap report.</p>
 
 <p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
 to exit entry without saving the details.</p>
@@ -1252,6 +1296,14 @@ to exit entry without saving the details.</p>
 and you can continue to enter details for all your other contribution types. When
 you have done this, click ‘OK’ in the ‘Select Contribution Type’ window to return
 to the main menu.</p>
+
+<p>Screen 2 shows the investment totals.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2r.jpg" alt="Investment Total Screen" /></p>
+
+  <p>Investment Total Screen</p>
+</div>
 
 <h3 id="a-nameslifeaa-namelifestyle-matrix-setupalifestyle-matrix-setup"><a name="SLIFE"></a><a name="Lifestyle Matrix Setup"></a>Lifestyle Matrix Setup</h3>
 
@@ -1769,7 +1821,7 @@ menu.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 29/08/2017 10:28:59.</p>
+        <p>Build Date 30/08/2017 09:42:16.</p>
       </div>
     </div>
 
