@@ -89,14 +89,14 @@
       <li><a href="#Investment Value Summary">Investment Value Summary</a></li>
       <li><a href="#Address Details">Address Details</a></li>
       <li><a href="#Member Information Setup">Member Information Setup</a></li>
-      <li><a href="#Advisors">Advisors</a></li>
-      <li><a href="#SSEXP">Care Titles</a></li>
-      <li><a href="#SSEXP">Charging %</a></li>
-      <li><a href="#SSEXP">Contribution Rate Matrix</a></li>
-      <li><a href="#SSEXP">Trustee</a></li>
-      <li><a href="#SSEXP">SMPI Expenses</a></li>
+      <li>&lt;a href=”#Advisors”class=”source ascot_lloyd”&gt;Advisors&lt;/a&gt;</li>
+      <li><a href="#CARE">Care Titles</a></li>
+      <li>&lt;a href=”#Charging”class=”source ascot_lloyd”&gt;Charging %&lt;/a&gt;</li>
+      <li><a href="#Contribution Rate Matrix">Contribution Rate Matrix</a></li>
+      <li><a href="#Trustee">Trustee</a></li>
+      <li><a href="#SMPI">SMPI Expenses</a></li>
       <li><a href="#Tax Simplification Amounts">Tax Simplification Amounts</a></li>
-      <li><a href="#Forfeiture Matrix">Forfeiture Matrix</a></li>
+      <li>&lt;a href=”#Forfeiture Matrix”class=”intertrust”&gt;Forfeiture Matrix&lt;/a&gt;</li>
     </ul>
   </li>
   <li><a href="#Printing Scheme Details">Printing Scheme Details</a>
@@ -1686,7 +1686,7 @@ Information Screen</a> in Members.</p>
 
 <p><a name="pstx_dc_life_allow"></a><strong>DC LIFETIME ALLOWANCE</strong> - Enter the DC Lifetime Allowance for the date entered.</p>
 
-<p>a name=”pstx_dc_life_allow”&gt;&lt;/a&gt;<strong>MP LIFETIME ALLOWANCE</strong> - Enter the MP Lifetime Allowance for the date entered.</p>
+<p><a name="pstx_mp_life_allow"></a><strong>MP LIFETIME ALLOWANCE</strong> - Enter the MP Lifetime Allowance for the date entered.</p>
 
 <h3 id="a-nameadvisaa-nameadvisorsaadvisors"><a name="ADVIS"></a><a name="ADVISORS"></a>Advisors</h3>
 
@@ -1700,7 +1700,7 @@ Information Screen</a> in Members.</p>
   <p>Advisor Screen</p>
 </div>
 
-<p><a name="pbr_code"></a><strong>Advisor CODE</strong> - Enter a valid broker code, or click on
+<p><a name="pbr_code"></a><strong>Advisor CODE</strong> - Enter a valid advisor code, or click on
 the lookup icon for a list of Advisor codes.
 Upon selection of a valid advisor code, the advisor details from
 the <a href="/pension/file_maintenance/pem_brok/">Brokers</a> program are automatically filled out on the
@@ -1715,14 +1715,14 @@ screen to assign the advisor to the scheme.</p>
 
 <p>Click Menu. Then select the Care Title Screen option and press <kbd>Return</kbd>.</p>
 
-<p>This screen contains description and format information assigned to the five title fields. The fields relate Care Averaged Screens that will be displayed at member level. The Care Screen box needs to be ticked on the Basic Scheme Screen initially to access this screen in the scheme menu.</p>
+<p>This screen contains description and format information assigned to the six title fields. The fields relate to the Care Averaged Screens that will be displayed at member level. The Care Screen box needs to be ticked on the Basic Scheme Screen initially to access this screen in the scheme menu.</p>
 
 <p>The following screen is displayed:</p>
 
 <div class="screen">
   <p><img src="/pension/images/pem_caret.jpg" alt="Care Title Screen" /></p>
 
-  <p>Care Title  Set Up Fields Screen</p>
+  <p>Care Title Set Up Fields Screen</p>
 </div>
 
 <p>Update the description as you want them to appear at member level. A date and care code field already appears in the first two columns.</p>
@@ -1743,13 +1743,83 @@ options can be found <a href="/pension/updates/peu_reval/#destdlg">here</a></p>
 
 <p><a name="pctt_reval_day"></a><strong>DATE OF REVALUATION</strong> - Enter the date of the revaluation from the drop down.</p>
 
-<p>a name=”pctt_dsy”&gt;&lt;/a&gt;<strong>DAY</strong> - Enter the day if the value of the previous field is specfic day. Valid entries are 1 - 31.</p>
+<p><a name="pctt_dsy"></a><strong>DAY</strong> - Enter the day if the value of the previous field is specfic day. Valid entries are 1 - 31.</p>
 
 <p>When you have completed the screen press <kbd>Esc</kbd> to save the details to the file.
 <kbd>Del</kbd> can be pressed to exit the update option without saving the details.</p>
 
 <p>To exit the Care Title Screen, click ‘Exit’. The program will
 return to the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> menu.</p>
+
+<h3 id="a-namecontribution-rates-matrixacontribution-rates-matrix"><a name="Contribution Rates Matrix"></a>Contribution Rates Matrix</h3>
+
+<p>Select the Contribution Rates Matrix screen using the menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_schconmat.jpg" alt="DC Generic Configuration" /></p>
+
+  <p>Matrix Details</p>
+</div>
+
+<p>This screen allows you to set up matrix for the calculations of the rates for contribution.</p>
+
+<p><a name="psmb_matrix"></a><strong>MATRIX</strong> - Enter the code.</p>
+
+<p><a name="psmh_type"></a><strong>TYPE</strong> - Enter or select a type from the dropdown box.</p>
+
+<p><a name="psmh_eff_dt"></a><strong>EFFECTIVE DATE</strong> - The date type of either immediate or renewal date must be entered.</p>
+
+<p><a name="psmh_eff_dt"></a><strong>SALARY</strong> - The salary type from the salaries set up for the scheme.</p>
+
+<p><strong>SALARY CAP FACTOR TABLE</strong>
+<a name="psmh_fact_code"></a><strong>CODE</strong> - Enter a valid factor code use the search if code isn’t know.</p>
+
+<p><a name="psmh_fact_index"></a><strong>INDEX</strong> - Entered the index.</p>
+
+<p><a name="psmh_pt_adj"></a><strong>PART TIME ADJUSTMENT %</strong> - Entered the % for part time members if required.</p>
+
+<p><a name="psmh_cap_inc_rate"></a><strong>SALARY CAP INCREASE RATE</strong> - Entered or select from the dropdown box.</p>
+
+<p><a name="psmh_service_dt"></a><strong>SERVICE DATE</strong> - Entered the date.</p>
+
+<p><a name="psmb_age"></a><strong>AGE</strong> - Entered the age.</p>
+
+<p><a name="psmb_service"></a><strong>SERVICE</strong> - Entered the service.</p>
+
+<p><a name="psmb_perc_for_age"></a><strong>TOTAL % FOR AGE</strong> - Entered the amount.</p>
+
+<p><a name="psmb_perc_for_serv"></a><strong>TOTAL % FOR SERVICE</strong> - Entered the amount.</p>
+
+<h3 id="a-namestrusaa-namescheme-trusteeascheme-trustee"><a name="STRUS"></a><a name="Scheme Trustee"></a>Scheme Trustee</h3>
+
+<p>Click Menu and then select the Trustee Details option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_strus.jpg" alt="Trustee Details Screen" /></p>
+
+  <p>Trustee Details Screen</p>
+</div>
+
+<p>Trustee details can be added, updated and deleted in this screen.</p>
+
+<p>To navigate between entries, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
+
+<p><a name="pstr_name"></a><a name="psa_addr_name"></a><strong>NAME</strong> -
+Enter the name of the Trustee.</p>
+
+<p><a name="pstr_addr1"></a><a name="pstr_addr2"></a><a name="pstr_addr3"></a><a name="pstr_addr4"></a><a name="pstr_postcode"></a><strong>ADDRESS
+DETAILS</strong> - Enter the address details, including the postcode.</p>
+
+<p><a name="pstr_sole_corp"></a><strong>SOLE</strong> - Tick if trustee type is sole.</p>
+
+<p><a name="pstr_indi_corp"></a><strong>CORPORATE</strong> - Tick if trustee type is a corporate.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the trustee, or click “Cancel’’
+to exit entry without saving the details.</p>
 
 <h3 id="a-namecharaa-namecharging--acharging-"><a name="CHAR"></a><a name="Charging % "></a>Charging %</h3>
 
@@ -1908,7 +1978,7 @@ menu.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 30/08/2017 16:04:40.</p>
+        <p>Build Date 31/08/2017 12:43:36.</p>
       </div>
     </div>
 
