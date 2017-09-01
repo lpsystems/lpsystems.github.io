@@ -48,19 +48,155 @@
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Running">Running</a></li>
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
 
+<p>Pension.txt Creator is a separate application that extracts pre determined field values directly from your pension master database. It was designed to extract the mail merge data for defined contribution schemes benefit statements. The tables it extracts data from are as follows :</p>
+
+<ul>
+  <li>Basic Member Address</li>
+  <li>Member Addresses</li>
+  <li>Scheme Addresses as indicated in the DCgeneric Set up.</li>
+  <li>Additional Scheme Addresses for the following:</li>
+  <li>Investment Managers that have the address code INVEST1 to INVEST5</li>
+  <li>Employers that have the address codes DCER1 to DCER3</li>
+  <li>Quotation Screens</li>
+  <li>Dcgeneric Conifigure fields for death in serviced multiples, spouses death in service benefit % and Disability Benefit</li>
+</ul>
+
+<div class="alert alert-danger" role="alert">
+  <p>In relation to the quotation screens, it extracts all of the indexes in the quotation type that you have indicated.
+Make sure that you have run the quotes you want to extract results from before you use the pension.txt creator</p>
+</div>
+
+<h2 id="a-namerunningarunning"><a name="Running"></a>Running</h2>
+
+<p>On your pc proceed as follows</p>
+
+<p>Click Start
+All Programs
+Penmast.txt Creator</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pencreator.jpg" alt="Pension Creator" /></p>
+
+  <p>Pension Creator</p>
+</div>
+
+<p><a name="pm_sql"></a><strong>SQL SERVER NAME</strong> - The SQL Server Name will be auto populated. It is the server where the pension
+creator programs reside. The name you insert here is saved to a configure file and will be the default for when you next use the creator.</p>
+
+<p><a name="pm_database"></a><strong>DATABASE</strong> - You must select your database from the dropdown window. Generally, the database will be Pension and as such it appears first on the list</p>
+
+<p><a name="pm_database"></a><strong>USERNAME &amp; PASSWORD</strong> - Input your pension master user name and password and click the ok. The database you have
+selected will be checked for the user details you put in and access will only be granted if your user details are on the database.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pencreator1.jpg" alt="Selection Section" /></p>
+
+  <p>selection Section</p>
+</div>
+
+<p><a name="pm_sch"></a><strong>SELECT SCHEME</strong> - Use the dropdown window to select your scheme. The schemes are listed alphabetically by description. This field is mandatory</p>
+
+<p><a name="pm_cat"></a><strong>SELECT CATEGORY</strong> - Use the dropdown window to select your category. The categories are listed alphabetically by description. This field is mandatory. You only have the option of running the creator for one category or all categories.</p>
+
+<p><a name="pm_quote"></a><strong>SELECT QUOTATION</strong> - Use the dropdown window to select your quote. The quotes specific to the category selected are listed alphabetically by description. This field is mandatory.</p>
+
+<p><a name="pmi_type"></a><strong>TRANSACTION TYPE</strong> - Enter the transaction type for the
+contributions you are posting to units. If you are unsure of what code to use, click
+the lookup icon to see a list of transaction codes</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If your quote has the ‘DCGENST’ flag field ticked, this field will be automatically ticked. If you do not want the DCGENST quote results, just untick this field.
+Include SORPS results (available for Irish schemes only and works the same as Include DCGENST results flag.</p>
+</div>
+
+<p><strong>SELECTION CRITERIA SECTION</strong></p>
+
+<p>The selection criteria section allows you to select by company, status type and special code.</p>
+
+<p>Use the dropdown window to make your selection. You only have the option of selecting one or all. If you leave these fields blank, it is assumed you have opted for All.</p>
+
+<p>GROUP BY SECTION</p>
+
+<p>There are 4 levels to group by and the field options are as follows -</p>
+
+<ul>
+  <li>Category</li>
+  <li>Company</li>
+  <li>Surname</li>
+  <li>Forename</li>
+  <li>Status Type</li>
+  <li>Staff Number</li>
+  <li>NI/PPS Number</li>
+</ul>
+
+<p>If you leave the group by fields blank, the members will appear in surname, forename order in the file.</p>
+
+<p><strong>RUNNING THE FILE</strong></p>
+
+<p>When you have entered all the criteria on the screen, click the create button on the bottom right of the screen. You will be advised  of the
+number of members processed and where the pension.txt file will reside. It is usually in c:\penmast on your PC.</p>
+
+<p>The following message is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pencreator2.jpg" alt="Message" /></p>
+
+  <p>Message</p>
+</div>
+
+<p><strong>USING THE PENSION.TXT FILE WITH YOUR BENEFIT STATEMENT TEMPLATE</strong></p>
+
+<p>Your benefit statement template will be looking for penmast.doc so you need to update the template to link to the correct data source file Using windows 2007 proceed as follows:</p>
+
+<ul>
+  <li>Click the mailings tab</li>
+  <li>Click the Select Recipients icon</li>
+</ul>
+
+<p>The screen looks like this:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pencreator3.jpg" alt="Mailing Tab" /></p>
+
+  <p>Mailing Tab</p>
+</div>
+
+<ul>
+  <li>From the dropdown list select ‘use existing list’ and the window below will appear. Select My Computer in the left menu bar and find you
+pension.txt file (it will reside in the folder indicated in the ‘local path’ field in system parameters, usually c:\penmast) and click on it.</li>
+</ul>
+
+<p>The screen looks like this:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pencreator4.jpg" alt="Mailing Tab" /></p>
+
+  <p>Mailing Tab</p>
+</div>
+
+<ul>
+  <li>You will now be back in your template. Save it so the new data source file is saved for all future use of the template.</li>
+  <li>Continue your mail merge in the usual manner</li>
+</ul>
+
 <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
 
-<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+<p>Click ‘Exit’. This leaves the program and closes application.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 31/08/2017 12:56:05.</p>
+        <p>Build Date 01/09/2017 09:50:22.</p>
       </div>
     </div>
 
