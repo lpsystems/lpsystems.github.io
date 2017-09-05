@@ -290,6 +290,37 @@ list of valid fields click <a href="/pension/appendices/app_a/#pe_dpens">here</a
 
 <p>This extracts the value held in the Maximum Scheme Cash at Date of Withdrawal field of the Basic Deferred Pensioner record for each member concerned.</p>
 
+<h2 id="a-name86abasicdisabilitybenefitfield"><a name="86"></a>#basic_disability_benefit_field</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/file_maintenance/pem_mem/#basic_disability_details">Basic Disability Benefit</a> screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#basic_disability_benefit_field
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>basic_disability_benefit_field - is any valid field on the Basic Disability Benefit table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_bpens">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>basic_disability_benefit_field must be a valid field on the Basic Disability Benefit table (pe_bpens).</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pbps_policy
+</code></pre>
+
+<p>This extracts the value held in the Policy Number field of the Basic Disability Benefit record for each member concerned.</p>
+
 <h2 id="a-name08abasicpensionerfield"><a name="08"></a>#basic_pensioner_field</h2>
 
 <p><strong>OVERVIEW</strong></p>
@@ -1473,6 +1504,45 @@ on or before the specified date.</li>
 </code></pre>
 
 <p>This extracts the value held in the Note field of the Company History record as at 07/07/2002 for each member concerned.</p>
+
+<h2 id="a-name85ainvestmentassetmixandamcfieldfundcodedate"><a name="85"></a>#investment_asset_mix_and_amc_field(fund_code,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the <a href="/pension/investments/pem_invfun/#ASSMIX">Asset Mix and AMC</a> screen for the specified fund code and date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#investment_asset_mix_and_amc_field(fund_code,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>fund_code - is the <a href="/pension/investments/pem_invfun/#Basic Fund Details Screen">Fund Code</a> that you wish to
+retrieve an Investment Fund field value for. This must exist as a valid Fund Code. If a member does not have an Investment Fund record with a matching code, this function call will return a value of 0.</li>
+  <li>date - Is the effective date for the Asset Mix and AMC field that you wish to reference.</li>
+  <li>investment_asset_mix_and_amc_field - is any valid field on the Asset Mix and AMC table. For a
+list of valid fields click <a href="/pension/appendices/app_a/#pe_assmix">here</a></li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>investment_asset_mix_and_amc_field must be a valid field on the Asset Mix and AMC table (pe_assmix).</li>
+  <li>fund_code must be in UPPERCASE and no longer than 10 characters in length.</li>
+  <li>fund_code can only contain alphanumeric values.</li>
+  <li>fund_code must exist in the Investment Fund table (pe_invfun).</li>
+  <li>fund_code can be a <a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">previous line reference</a>.</li>
+  <li>date can take the value of either a hard-coded date in the format YYYYMMDD, or TODAY which will return the value previous to today.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>#pam_cash(0151CASH,TODAY)
+</code></pre>
+
+<p>This extracts the value held in the Cash field of the Asset Mix and AMC record with the Fund Code of 0151CASH and effective date as at today.</p>
 
 <h2 id="a-name40ainvestmentfundfieldfundcode"><a name="40"></a>#investment_fund_field(fund_code)</h2>
 
@@ -3188,7 +3258,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 01/09/2017 15:50:06.</p>
+        <p>Build Date 05/09/2017 12:23:57.</p>
       </div>
     </div>
 

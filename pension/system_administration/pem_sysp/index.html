@@ -97,12 +97,12 @@ Parameter file. In this case you must use the query option first (see below).</p
 
 <p><a name="pp_name"></a><strong>SYSTEM COMPANY NAME</strong> - Enter the full Company name.
 This is used by Pension Master at the top of all the main menus. An entry must be
-made in this field and the system will display en error message if this field is
+made in this field and the system will display an error message if this field is
 left blank.</p>
 
 <p><a name="pp_sname"></a><strong>SHORT NAME</strong> - Enter a short name for the Company. This
 is used at the top of all screens within Pension Master. An entry must be made in
-this field and the system will display en error message if this field is left blank.
+this field and the system will display an error message if this field is left blank.
 The user will then be required to enter the Company short name in this field.</p>
 
 <p><a name="pp_addr1"></a><a name="pp_addr2"></a><a name="pp_addr3"></a><a name="pp_addr4">
@@ -126,14 +126,14 @@ is displayed as ‘Post 1997 Investment?” (UK) or “Post 1991 Investment?” 
 e.g. if your schemes are predominately UK based schemes, select ‘Pound Sterling’.</p>
 
 <p><strong>At the end of the transitional period in the introduction of the Euro i.e. on 31/12/2001,
-you should update this field to be ‘Euro’ i.e. make the system default base curreny
+you should update this field to be ‘Euro’ i.e. make the system default base currency
 the Euro.</strong></p>
 
 <p>You will then be prompted that all <a href="/pension/system_data/pem_stf/">annual statutory amounts</a>
 are to be converted from the NCU to Euro and that this process in not reversible.
 You will be asked whether you have an up to date backup of the current system data
 and if not, you will be given an opportunity to exit the change and take a backup.
-Once this has been done, all annual statutory amounts amounts will be converted
+Once this has been done, all annual statutory amounts will be converted
 to Euro’s.</p>
 
 <p>You should also make sure that each of your schemes has the scheme base currency
@@ -160,8 +160,8 @@ run a Member Report or Mail Merge Report or a formula that references this new f
 
 <ul>
   <li>Members - always calculate age at today’s date i.e. the system date.</li>
-  <li>Member Report/Mail Merge Report - always calculate age at the report date.
-Formula File/Quotations - always calculate age at quotation date.</li>
+  <li>Member Report/Mail Merge Report - always calculate age at the report date.</li>
+  <li>Formula File/Quotations - always calculate age at quotation date.</li>
 </ul>
 
 <p><a name="pp_server_ip"></a><strong>WEB SERVER USER MANUAL ADDRESS</strong> - Enter the URL
@@ -170,7 +170,7 @@ can either be in the format http://webserver/pendoc/ or the hostname of the serv
 provided this is resolvable by all connected clients PC’s onto the correct IP address
 of the Pension Master server. If your network doesn’t have a webserver then the
 Pension Master User Manual folder should be held on the Pension Master server. The
-folder should be accessable to all users via a drive mapping. This field should
+folder should be accessible to all users via a drive mapping. This field should
 then contain the drive mapping and the path to the folder e.g. M:\pendoc.</p>
 
 <p>This is used by the Pension Master software to find the appropriate User Manual
@@ -178,9 +178,9 @@ page when the user clicks or selects the User Manual icon on their screen.</p>
 
 <p><a name="pp_import_source"></a><strong>IMPORT SOURCE</strong> - The Import Source can either be set to Network Drive or Local Drive.</p>
 
-<p>If the Import Source is set to Network Drive then a Network Drive Path can be entered foreither General Data Load and Mail Merge. This can either be a drive mapping (e.g. L: or P:) or a network location (e.g. \PMSERV\dataloads). The folders would need to be set as sharable with the correct permissions for the Pension Master user account on the server. Contact L&amp;P Systems Limited for assistance.</p>
+<p>If the Import Source is set to Network Drive then a Network Drive Path can be entered for either General Data Load and Mail Merge. This can either be a drive mapping (e.g. L: or P:) or a network location (e.g. \PMSERV\dataloads). The folders would need to be set as sharable with the correct permissions for the Pension Master user account on the server. Contact L&amp;P Systems Limited for assistance.</p>
 
-<p>The Network Drive Path could also be left blank if data is loaded from more than one location on the server.If the Import Source is set to Network Drive then the file that is entered as the Import File will be used for the data load. The Import File can be manually changed or selected from the data load folder using the file picker.</p>
+<p>The Network Drive Path could also be left blank if data is loaded from more than one location on the server. If the Import Source is set to Network Drive then the file that is entered as the Import File will be used for the data load. The Import File can be manually changed or selected from the data load folder using the file picker.</p>
 
 <p>If the Import Source is set to Local Drive then General Data Load, allows the file to be selected manually from a folder using the browser each time.</p>
 
@@ -278,6 +278,17 @@ make sure this field is not checked.</p>
 <p><a name="pp_nipps_rep"></a><strong>Include NI/RSI/PPS/TRN Numbers in Standard Reports</strong> - This field denotes
 whether you wish to disable the displaying of the PPS Number in any of the standard reports delete option in the Members file. To enable, make sure this field is checked (i.e. shows a tick in it). To disable bulk delete,
 make sure this field is checked.</p>
+
+<p><a name="pp_internet_encryption"></a><strong>Encrypt Internet Security Details</strong> - When this option has been selected and confirmed the following fields on the <a href="/pension/file_maintenance/pem_mem/#Internet Security Details">Internet Security Details</a> screen in Members will be encrypted:</p>
+
+<ul>
+  <li>Mother’s Maiden Name</li>
+  <li>Place of Birth</li>
+  <li>First School</li>
+  <li>Memorable Word</li>
+</ul>
+
+<p>This process <strong>cannot</strong> be reversed and should only be selected after consultation with L&amp;P Systems Limited.</p>
 
 <h3 id="a-name2aa-nameaudit-trail-settingsaaudit-trail-settings"><a name="2"></a><a name="Audit Trail Settings"></a>Audit Trail Settings</h3>
 
@@ -428,7 +439,7 @@ or click on the ‘Menu’ menu option. The screens available are:</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 01/09/2017 15:50:12.</p>
+        <p>Build Date 05/09/2017 12:24:05.</p>
       </div>
     </div>
 
