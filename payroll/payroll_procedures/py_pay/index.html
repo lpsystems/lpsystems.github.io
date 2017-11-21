@@ -514,22 +514,11 @@ then the user returns back to the payroll menu, with the payroll run committed s
 
 <p>Selecting the ‘Submit’ menu option will open up a new screen where you will enter the Scheme Code, Category Code (if applicable) and Sender. It is important that you enter the Scheme and Category exactly as you did for the payroll run itself. You will need the Accounts Office Reference number, Gateway ID and Password that has been provided by HMRC. On clicking ‘OK’ the program will generate an XML file which will then be sent to HMRC.</p>
 
-<p>If this is the last payroll payment of the tax year then tick the Final Submission For Year? check box. This sets the following year end questions and declarations to ‘No’ by default:</p>
-
-<ul>
-  <li>Free of Tax payments made to employee</li>
-  <li>Did anyone else pay expenses or in any way provide vouchers or benefits to any of your employees while they were employed by you during the period?</li>
-  <li>Did anyone employed by a person or company outside the UK work for you in the UK for 30 days or more in a row?</li>
-  <li>Have you paid any of an employee’s pay to someone other than the employee?</li>
-  <li>Completed forms P11D and P11D(b) are due</li>
-  <li>Are you a service company</li>
-</ul>
-
-<p>If any of the above need to be set to ‘Yes’ then please contact us.</p>
-
 <p>After the XML file has been sent to HMRC you will receive a confirmation message. This only indicates that HMRC have received the submission and not that the data is valid and has been accepted.</p>
 
 <p>The Payroll Run doesn’t pick up members whose Date Finished Pension is before the Payroll Run Date, however, the Submit option in the Payroll Run does pick up extra members who have their Last Payment field ticked. When a leaver is picked up only the members figures to date will be sent along with the leaving date. Once the submission has been successful the Last Payment indicator will be unticked.</p>
+
+<p><strong>Final Submission For Year?</strong> - If this is the last payroll payment of the tax year then tick this check box.</p>
 
 <p><strong>Transferring Scheme?</strong> - This field should only be selected when you (the client) are transferring the scheme to another provider and are therefore no longer running the payroll. When this field is selected all payroll members within the scheme must have the Date Finished Pension and Last Payment fields filled in, and it’s only members with a Last Payment field ticked that are picked up.</p>
 
@@ -538,7 +527,7 @@ then the user returns back to the payroll menu, with the payroll run committed s
 <ul>
   <li>Run the last payroll as normal, submit and check it.</li>
   <li>Fill in the Date Finished Pension and tick the Last Payment field.</li>
-  <li>Go to the ‘Submit’ option in Payroll Run and fill in all the details making sure the new ‘Transferring Scheme?’ field is ticked. Click ‘OK’ and then ‘Check’ the submission.</li>
+  <li>Go to the ‘Submit’ option in Payroll Run and fill in all the details making sure the ‘Transferring Scheme?’ field is ticked. Click ‘OK’ and then ‘Check’ the submission.</li>
 </ul>
 
 <p>N.B. It is important that the final FPS (Transferring Scheme submission) is submitted to HMRC before the new provider submits their first FPS.</p>
@@ -603,7 +592,7 @@ then the user returns back to the payroll menu, with the payroll run committed s
 
       <div id="footer">
         <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 06/10/2017 19:45:57.</p>
+        <p>Build Date 21/11/2017 12:18:22.</p>
       </div>
     </div>
 
