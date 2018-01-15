@@ -48,12 +48,8 @@
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
-  <li><a href="#Query/Search For Legislation Details">Query/Search For Legislation Details</a></li>
-  <li><a href="#Adding UK/Scottish Income Tax Rates Details">Adding UK/Scottish Income Tax Rates Details</a>
-    <ul>
-      <li><a href="#Settings">Legislation Settings</a></li>
-    </ul>
-  </li>
+  <li><a href="#Query/Search For Income Tax Rates Details">Query/Search For Income Tax Rates Details</a></li>
+  <li><a href="#Adding UK/Scottish Income Tax Rates Details">Adding UK/Scottish Income Tax Rates Details</a></li>
   <li><a href="#Updating UK/Scottish Income Tax Rates Details">Updating UK/Scottish Income Tax Rates Details</a></li>
   <li><a href="#Browsing UK/Scottish Income Tax Rates Details">Browsing UK/Scottish Income Tax Rates Details</a></li>
   <li><a href="#Viewing UK/Scottish Income Tax Rates Details">Viewing UK/Scottish Income Tax Rates Details</a></li>
@@ -67,10 +63,10 @@
 you will find data relating to annual statistics, including tax bands and tax rates.
 The annual statistics can be added and updated in this program.</p>
 
-<p>The tax rates must be set up here for the tax year, before
+<p>The UK and Scottish tax rates must both be set up here for the tax year, before
 you attempt to run the <a href="/payroll/payroll_procedures/py_pay/#Introduction">Payroll Run</a> program.</p>
 
-<p>The following options and screen appear when this program is selected.</p>
+<p>The following options and screens appear when this program is selected.</p>
 
 <ul>
   <li>Add</li>
@@ -81,12 +77,18 @@ you attempt to run the <a href="/payroll/payroll_procedures/py_pay/#Introduction
 </ul>
 
 <div class="screen">
-  <p><img src="/payroll/images/py_govn1.jpg" alt="Legislation Settings Screen" /></p>
+  <p><img src="/payroll/images/py_uk_govn1.jpg" alt="UK Income Tax Rates Screen" /></p>
 
-  <p>Legislation Settings Screen</p>
+  <p>UK Income Tax Rates Screen</p>
 </div>
 
-<h2 id="a-namequerysearch-for-legislation-detailsaa-namequeryaquerysearch-for-legislation-details"><a name="Query/Search For Legislation Details"></a><a name="query"></a>Query/Search For Legislation Details</h2>
+<div class="screen">
+  <p><img src="/payroll/images/py_scottish_govn1.jpg" alt="Scottish Income Tax Rates Screen" /></p>
+
+  <p>Scottish Income Tax Rates Screen</p>
+</div>
+
+<h2 id="a-namequerysearch-for-income-tax-rates-detailsaa-namequeryaquerysearch-for-income-tax-rates-details"><a name="Query/Search For Income Tax Rates Details"></a><a name="query"></a>Query/Search For Income Tax Rates Details</h2>
 
 <p>Click ‘Query’. The following pop-up window is displayed:</p>
 
@@ -106,37 +108,32 @@ screen.</p>
 
 <h2 id="a-nameadding-ukscottish-income-tax-rates-detailsaadding-ukscottish-income-tax-rates-details"><a name="Adding UK/Scottish Income Tax Rates Details"></a>Adding UK/Scottish Income Tax Rates Details</h2>
 
-<h3 id="a-namesettingsalegislation-settings"><a name="Settings"></a>Legislation Settings</h3>
-
 <p>Click ‘Add’.</p>
 
-<p>The Legislation Settings screen is used to hold the annual statistics, which
-are produced each year by the Government.</p>
+<p>The UK/Scottish Income Tax Rates screens are used to hold the annual statistics, which
+are produced each year by the Government. Ensure you are viewing the UK Income Tax Rates screen on clicking ‘Add’ if it’s UK Income Tax Rates you are wanting to add. Ensure you are viewing the Scottish Income Tax Rates screen on clicking ‘Add’ if it’s Scotish Income Tax Rates you are wanting to add.</p>
 
 <p>Enter the fields as required as follows:</p>
 
-<p><a name="pygh_year_from"></a><strong>TAX YEAR FROM</strong> - Enter the year the tax year starts e.g. if the tax year is 2000/2001, then you
-enter 2000 in this field.</p>
+<p><a name="pygh_year_from"></a><strong>TAX YEAR FROM</strong> - Enter the year the tax year starts e.g. if the tax year is 2017/2018, then you
+enter 2017 in this field.</p>
 
-<p><a name="pygh_year_to"></a><strong>TAX YEAR TO</strong> - This field is automatically calculated by Payroll Master e.g. if 2000 is entered
-in the tax year from field, then the tax year to field is calculated as 2001. You
+<p><a name="pygh_year_to"></a><strong>TAX YEAR TO</strong> - This field is automatically calculated by Payroll Master e.g. if 2017 is entered
+in the tax year from field, then the tax year to field is calculated as 2018. You
 cannot input in this field.</p>
 
 <p><a name="pygh_band_no"></a><strong>NUMBER OF BANDS</strong> - Enter the number of tax bands for the tax year. The number entered in this field
 will determine the number of rows that must be entered in the table below.</p>
 
-<p><a name="pygh_k_codes"></a><strong>‘K’ TAX CODES REGULATORY LIMIT %</strong> - Enter the regulatory % to be used for all prefix ‘K’ tax codes.</p>
-
-<p><a name="pygh_scot_var"></a><strong>SCOTTISH VARIANCE</strong> - Enter the amount of Scottish variance to be used when calculating tax for Scottish
-tax codes.</p>
+<p><a name="pygh_k_codes"></a><strong>OVERRIDING REGULATORY LIMIT %</strong> - Enter the overriding regulatory % to be used for all tax codes.</p>
 
 <p><a name="pygb_bandwidth"></a><strong>BAND WIDTH</strong> - Enter the width of the tax band.</p>
 
-<p><a name="pygb_from"></a><strong>FROM</strong> - The amount for this field is calculated by Payroll Master from the amount entered
-in the band width field. You cannot input in this field.</p>
+<p><a name="pygb_from"></a><strong>FROM</strong> - The amount for this field is automatically calculated by Payroll Master from the amount entered
+in the band width field. This field is not accessible.</p>
 
-<p><a name="pygb_to"></a><strong>TO</strong> - The amount of this field is calculated by Payroll Master from the amount entered
-in the band width field. You cannot input in this field.</p>
+<p><a name="pygb_to"></a><strong>TO</strong> - The amount of this field is automatically calculated by Payroll Master from the amount entered
+in the band width field. This field is not accessible.</p>
 
 <p><a name="pygb_rate"></a><strong>RATE</strong> - Enter the % rate at which the amount of pay in the band is to be calculated at.</p>
 
@@ -147,8 +144,8 @@ the screen without saving the details entered.</p>
 
 <h2 id="a-nameupdating-ukscottish-income-tax-rates-detailsaupdating-ukscottish-income-tax-rates-details"><a name="Updating UK/Scottish Income Tax Rates Details"></a>Updating UK/Scottish Income Tax Rates Details</h2>
 
-<p>The fields listed above can be updated, excluding the ‘Tax Year From’ and ‘Tax Year
-To’ fields, and the fields which cannot be accessed in the table.</p>
+<p>The fields listed above can be updated, apart from the ‘Tax Year From’ and ‘Tax Year
+To’ fields, and the fields which aren’t accessible in the table.</p>
 
 <h2 id="a-namebrowsing-ukscottish-income-tax-rates-detailsabrowsing-ukscottish-income-tax-rates-details"><a name="Browsing UK/Scottish Income Tax Rates Details"></a>Browsing UK/Scottish Income Tax Rates Details</h2>
 
@@ -163,7 +160,7 @@ the data.</p>
 
 <p>To select all tax rate settings, click ‘Query’ and leave the ‘Tax
 Year From’ field blank. Then click ‘OK’. To view these other records selected, click
-on Next to view the next record, and Previous to view the previous record.</p>
+on Next to view the next record, and Previous to view the previous record. Click the UK and Scottish screen buttons to flick between the 2 types of Income Tax Rates.</p>
 
 <p>You can also use the options on the toolbar to view the first, previous, next and
 last records in your query.</p>
@@ -172,7 +169,7 @@ last records in your query.</p>
 
 <p>Click the ‘Report’ icon.</p>
 
-<p>If legislation details have been selected then the following window appears:</p>
+<p>If Income Tax Rates have been selected then the following window appears:</p>
 
 <div class="screen">
   <p><img src="/payroll/images/py_govn3.jpg" alt="Select Report Options Window" /></p>
@@ -188,11 +185,11 @@ last records in your query.</p>
     <table class="table table-condensed">
       <tbody>
         <tr>
-          <td><strong>Print current record</strong></td>
+          <td><strong>Current record</strong></td>
           <td>Produce a report for the tax year details currently displayed to the screen.</td>
         </tr>
         <tr>
-          <td><strong>Print all selected record(s)</strong></td>
+          <td><strong>All selected record(s)</strong></td>
           <td>Produce a report for all selected tax year details.</td>
         </tr>
         <tr>
@@ -225,8 +222,8 @@ or ‘Help’ to display this help text.</p>
 
 
       <div id="footer">
-        <p>Copyright &copy; 1987-2017 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 21/11/2017 12:18:22.</p>
+        <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
+        <p>Build Date 15/01/2018 14:14:21.</p>
       </div>
     </div>
 
