@@ -194,44 +194,11 @@ the member of the scheme.</p>
 
 <p>Enter the fields required as follows:</p>
 
-<p><a name="pm_title"></a><strong>TITLE</strong>
-- The member’s title (e.g. Mrs, Mr, Dr ). This field is optional, but can be used
-in Mail Merge Reports.</p>
-
-<p><a name="pm_forename"></a><a name="pm_surname"></a><strong>FORENAME &amp; SURNAME</strong>
-- A forename and surname for the member must be entered. The forename field is used
-to automatically generate the member initials field on the Member Address screen
-in Pension Master.</p>
-
-<p><a name="pm_status"></a><strong>STATUS CODE</strong>
-- This represents the current status of the member in the scheme, e.g. pensioner,
-deferred pensioner. In Payroll Master, you can only update the member’s status to
-either a death type or a leaver type. The status code entered must exist on
-the status file. Click on the Lookup icon to see a list of existing status codes. When
-a valid status code has been selected the status description will be entered.</p>
-
-<p><a name="change"></a>
-If the Status field is amended you will be prompted for an effective date of
-change. This will be written to the status history record and will enable you to
-run an accurate Member Movements Summary when required.</p>
-
-<p><a name="pmad_addr_1"></a>
-<a name="pmad_addr_2"></a>
-<a name="pmad_addr_3"></a>
-<a name="pmad_addr_4"></a>
-<a name="pmad_postcode"></a><strong>ADDRESS LINES &amp; POSTCODE</strong>
-- Enter the member’s address and postcode (if known). These will be used on
-the P14 and P60 forms in the Year End process.</p>
-
-<p><a name="pmad_suspect"></a><strong>SUSPECT</strong>
-- If the address entered is suspect then tick this field.</p>
-
-<p><a name="pmad_televe"></a><a name="pmad_telday"></a><strong>TELEPHONE NUMBER</strong>
-- Enter the member’s evening and daytime telephone numbers (if known).</p>
-
-<p><a name="pmad_email"></a><strong>E-MAIL ADDRESS</strong>
-- Enter the member’s e-mail address (if known). This must contain the ‘@’ symbol
-that is present in all e-mail addresses.</p>
+<p><a name="pm_pay_num"></a><strong>STAFF NUMBER</strong>
+- Enter the member’s staff number. Payroll Master will
+check other member records in the member’s scheme for duplicate Staff numbers and if any
+are found, the user will be asked whether they would like to continue. Click ‘Yes’
+to continue or ‘No’ to exit. This field is optional.</p>
 
 <p><a name="pm_rsi_num"></a><strong>NI/PRSI NUMBER</strong>
 - National Insurance Number (UK) or PRSI Number (Ireland). Payroll Master will
@@ -241,9 +208,36 @@ to continue or ‘No’ to exit. If the UK / Irish Scheme indicator, in Pension 
 is set to ‘I’, i.e. Irish Scheme, then this field will be shown as PRSI Number and
 will relate to the Pay Related Social Insurance Number (IRL).</p>
 
+<p><a name="pm_title"></a><strong>TITLE</strong>
+- The member’s title (e.g. Mrs, Mr, Dr ). This field is optional, but can be used
+in Mail Merge Reports.</p>
+
+<p><a name="pm_forename"></a><a name="pm_surname"></a><strong>FORENAME &amp; SURNAME</strong>
+- A forename and surname for the member must be entered. The forename field is used
+to automatically generate the member initials field on the Member Address screen
+in Pension Master.</p>
+
 <p><a name="pps_pay_num"></a><strong>PAYROLL NUMBER</strong>
 - This field may be useful in linking the payroll number with member records for
 data transfer or reports.</p>
+
+<p><a name="pm_marital_stat"></a><strong>MARITAL STATUS</strong> - Select one of the following options from the drop-down list:</p>
+
+<ul>
+  <li>Civil Partner</li>
+  <li>Cohabitant</li>
+  <li>Divorced</li>
+  <li>Married</li>
+  <li>Partner</li>
+  <li>Separated</li>
+  <li>Single</li>
+  <li>Single With Dependants</li>
+  <li>Unknown</li>
+  <li>Widowed</li>
+</ul>
+
+<p><a name="pps_hold"></a><strong>ON HOLD</strong> - Tick this field if the member’s payroll is to be put on hold.
+If the field is ticked then the member will not be included in any payroll runs.</p>
 
 <p><a name="pm_sex"></a><strong>SEX</strong> - You must enter a value in this field. Select
 one of the following options from the drop-down list:</p>
@@ -253,28 +247,29 @@ one of the following options from the drop-down list:</p>
   <li>Female</li>
 </ul>
 
-<p><a name="pm_marital_stat"></a><strong>MARITAL STATUS</strong> - Select one of the following options from the drop-down list:</p>
-
-<ul>
-  <li>Single</li>
-  <li>Married</li>
-  <li>Partner</li>
-  <li>Separated</li>
-  <li>Single With Dependants</li>
-  <li>Divorced</li>
-  <li>Widowed</li>
-  <li>Civil Partner</li>
-  <li>Marital Status Unknown</li>
-</ul>
-
 <p><a name="pm_dob"></a><strong>D.O.B.</strong>
 - Date of Birth. This is a date field and should be entered in the format ddmmyy
 or dd/mm/yyyy. If you enter a date for which the member’s current age is less than
 16 or over 75, an error message will be displayed and you will be asked to re-enter
 the member’s date of birth.</p>
 
-<p><a name="pps_hold"></a><strong>ON HOLD</strong> - Tick this field if the member’s payroll is to be put on hold.
-If the field is ticked then the member will not be included in any payroll runs.</p>
+<p><a name="pmad_addr_1"></a>
+<a name="pmad_addr_2"></a>
+<a name="pmad_addr_3"></a>
+<a name="pmad_addr_4"></a>
+<a name="pmad_addr_5"></a>
+<a name="pmad_postcode"></a><strong>ADDRESS LINES &amp; POSTCODE</strong>
+- Enter the member’s address and postcode (if known). These will be used in the Payroll Run RTI submissions, and P60 forms in the Year End process.</p>
+
+<p><a name="pmad_televe"></a><a name="pmad_telday"></a><strong>TELEPHONE NUMBER</strong>
+- Enter the member’s evening and daytime telephone numbers (if known).</p>
+
+<p><a name="pmad_email"></a><strong>E-MAIL ADDRESS</strong>
+- Enter the member’s e-mail address (if known). This must contain the ‘@’ symbol
+that is present in all e-mail addresses.</p>
+
+<p><a name="pmad_suspect"></a><strong>SUSPECT</strong>
+- If the address entered is suspect then tick this field.</p>
 
 <p>Click ‘OK’ to save the Member’s Personal Details information, or click ‘Cancel’
 to exit the screen without saving the details entered.</p>
@@ -324,15 +319,38 @@ the member is to use:</p>
   <li>4 Weekly</li>
   <li>Fortnightly</li>
   <li>Weekly</li>
+  <li>Irregular (Flexi-Access members only)</li>
+  <li>One-Off (Flexi-Access members only)</li>
 </ul>
 
-<p>This field must be entered. If it is not then it will default to 12-Monthly.</p>
+<p>This field must be entered. If it is not then it will default to Monthly.</p>
 
 <div class="alert alert-danger" role="alert">
 
   <p>The Payment Frequency of a member can only be changed before the first Payroll Run
 of a new tax year is carried out. This is to prevent irregularities in the member’s
 net pay.</p>
+
+</div>
+
+<p><a name="pps_first_month"></a><strong>TAX MONTH OF 1ST PAYMENT</strong>
+- This field holds the tax month the first payment of the tax year the member is to be paid in. This field is referred to in the Payroll Run if the member being paid has a payment frequency of Annual, Half Yealy or Quarterly, AND has either had no payroll run for them before on Payroll Master before i.e. a new member, or it is the first payroll of the tax year for them. Once the first payroll of the tax year has been processed for the member, this field isn’t referred to again until the next new tax year. A tax month must be entered in this field.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>The Tax Month of 1st Payment can take the following values:</p>
+
+  <ul>
+    <li>Annual - 1 to 12</li>
+    <li>Half Yearly - 1 to 6</li>
+    <li>Quarterly - 1 to 3</li>
+    <li>Monthly - 1</li>
+    <li>4 Weekly - 1</li>
+    <li>Fortnightly - 1</li>
+    <li>Weekly - 1</li>
+    <li>Irregular (Flexi-Access members only) - 1</li>
+    <li>One-Off (Flexi-Access members only) - 1</li>
+  </ul>
 
 </div>
 
@@ -386,7 +404,7 @@ The amount for this field can be found on the member’s P45 form.</p>
 
 <p><a name="pytd_gross_emp"></a><strong>GROSS PAY FOR TAX - CURRENT EMPLOYMENT</strong>
 - The member’s amount of gross pay for tax for their current employment/pension.
-This field is automatically updated when a payroll and/or year end are run. 
+This field is automatically updated when a payroll and/or year end are run.
 If the amount shown in this field needs to be amended, it can be done in this screen.</p>
 
 <p><a name="pytd_gross_ytd"></a><strong>GROSS PAY FOR TAX - TAX YEAR VALUES TO DATE</strong>
@@ -475,7 +493,7 @@ to exit the screen without saving the details entered.</p>
 </div>
 
 <p>The details on this screen cannot be manually altered or amended, they are
-a record of the payments calculated at each payroll run throughout the tax year. 
+a record of the payments calculated at each payroll run throughout the tax year.
 The details are copied into the Historic Details screen (screen 2) when the Year
 End program is run. The Current History Details screen is cleared out in preparation
 for the new tax year.</p>
@@ -494,13 +512,16 @@ for the new tax year.</p>
 <p><a name="pyh_tax"></a><strong>TAX CODE</strong>
 - The tax code of the member, used in the payroll.</p>
 
-<p><a name="pyh_wkmth"></a><strong>WK1 MTH1</strong>
+<p><a name="pyh_wkmth"></a><strong>WEEK1/MONTH1</strong>
 - If the member was using the Week1/Month1 Basis for calculating tax a tick
 will be displayed here. If the field is blank the member was using the Cumulative
 Basis for calculating tax.</p>
 
 <p><a name="pyh_gross"></a><strong>TOTAL GROSS PAY</strong>
 - The total gross pay of the member, calculated from the payroll.</p>
+
+<p><a name="pyh_taxpaid"></a><strong>TOTAL TAX PAID</strong>
+- The total tax paid of the member, calculated from the payroll.</p>
 
 <p><a name="pyh_net"></a><strong>TOTAL NET PAY</strong>
 - The total net pay of the member, calculated from the payroll.</p>
@@ -531,7 +552,7 @@ the latest history entry on the screen. On deleting this entry, the Year To Date
 
 <h3 id="a-namehistoricahistoric-details"><a name="HISTORIC"></a>Historic Details</h3>
 
-<p>This screen can be accessed by pressing <kbd>2</kbd> from the Current History Details
+<p>This screen can be accessed by pressing <kbd>Screen 2</kbd> from the Current History Details
 screen. The following screen will appear:</p>
 
 <div class="screen">
@@ -704,7 +725,7 @@ window.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 15/01/2018 14:14:22.</p>
+        <p>Build Date 16/01/2018 12:49:35.</p>
       </div>
     </div>
 
