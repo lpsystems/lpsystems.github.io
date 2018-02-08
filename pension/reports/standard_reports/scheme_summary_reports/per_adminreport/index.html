@@ -7,7 +7,7 @@
     <meta name="description" content="User Manual">
     <meta name="author" content="Carl D. Patterson">
 
-    <title>Exchange Rates</title>
+    <title>Scheme Administration Report</title>
 
     <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
@@ -39,7 +39,7 @@
     <div class="container theme-showcase" role="main">
       
         <div class="page-header">
-          <h1>Exchange Rates</h1>
+          <h1>Scheme Administration Report</h1>
         </div>
       
 
@@ -48,55 +48,58 @@
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
-  <li><a href="#Add">Adding Exchange Rates</a></li>
-  <li><a href="#Query">Query Exchange Rates</a></li>
-  <li><a href="#Update">Update Exchange Rates</a></li>
-  <li><a href="#Delete">Delete Exchange Rates</a></li>
-  <li><a href="#Report">Printing Exchnage Rates</a></li>
+  <li><a href="#Run A Report">Run A Report</a></li>
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
 <h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
 
-<div class="alert alert-danger" role="alert">
-  <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
-access this program.</p>
-
-  <p>The type of access granted can be view only or full access. For the view only option,
-you will not be permitted access to any menu option that allows you to add/update/delete
-data.</p>
-
-  <p>If you do not have Supervisor status, you will not be permitted access to this
-program.</p>
-</div>
-
-<p>This program allows maintenance of the Exchange Rates that are used for multi currency schemes. In order to set up a currency for a fund you need to set up a fund manager code in the codes progam. The exchange rates are assigned to the fund and are used during the process of the members contrbutions. This is to allow for one or many rates across the system.  All of the fund codes are displayed when you enter the screen first you need to scroll to the one you want to update before you press update.</p>
-
-<p>The following options and screen appear when this program is selected:</p>
+<p>This program allows the user to produce a report that will give the <strong>**</strong><strong>**</strong><strong>**</strong><em>**</em> for a scheme for a certain time period for all or one funds or transaction type compared to any of the dates on the investment history screen</p>
 
 <ul>
-  <li>Update</li>
-  <li>Checked</li>
+  <li>Proceed</li>
   <li>Exit</li>
 </ul>
 
 <div class="screen">
-  <p><img src="/pension/images/pem_exchange1.jpg" alt="Codes Screen" /></p>
+  <p><img src="/pension/images/per_scont_post1.jpg" alt="Selection Screen" /></p>
 
-  <p>Exchange Rate Screen</p>
+  <p>Selection Screen</p>
 </div>
 
-<h2 id="a-nameupdate-ratesaupdate-rates"><a name="Update Rates"></a>Update Rates</h2>
+<h2 id="a-namerun-a-reportarun-a-report"><a name="Run A Report"></a>Run A Report</h2>
 
-<p>Click ‘Update’.</p>
+<div class="screen">
+  <p><img src="/pension/images/per_scont_post2.jpg" alt="Selection Screen" /></p>
 
-<p>Now simply enter the new rate for the currency. The available currency will be displayed in a drop down list. Only rates that have been checked are used in the allocating and unit processing programs.</p>
+  <p>Selection Screen</p>
+</div>
 
-<h2 id="a-namecheck-ratesacheck-rates"><a name="Check Rates"></a>Check Rates</h2>
+<p>Fund – You can enter either ALL for all funds in your selection criteria or you can enter in a fund code or you can use the dropdown box to select from the list of funds associated with your selection criteria
+Transaction Type – You can enter either ALL for all types, or you can enter one from the drop down list. 
+Start Date / End Date – This is the beginning and end date of the period that you require the report for. These dates can then be compared against the due, received or invested dates in the members investment history screen. 
+Report Type - The difference in the detailed report is that the contribution types are broken down and you get the date due, received and invested listed as well.</p>
 
-<p>Click ‘Checked’.</p>
+<div class="screen">
+  <p><img src="/pension/images/per_scont_post3.jpg" alt="" /></p>
 
-<p>To check a rate simply tick the box beside the rate. The same user that updated the rate can’t check the rate aswell.</p>
+</div>
+
+<p>Click ‘Proceed’.</p>
+
+<p>When the report has been processed and no records are found to match the selection
+criteria an error message is displayed:</p>
+
+<div class="well">
+
+  <p>There are no records to match the selection criteria</p>
+
+</div>
+
+<p>If records are found to match the selection criteria the report continues and options
+are then displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing From Pension Master</a>.</p>
 
 <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
 
@@ -105,7 +108,7 @@ program.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 08/02/2018 09:05:59.</p>
+        <p>Build Date 08/02/2018 09:05:58.</p>
       </div>
     </div>
 
