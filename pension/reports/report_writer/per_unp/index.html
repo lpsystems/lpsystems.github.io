@@ -426,7 +426,7 @@ fund to look the field up in. These are shown in the following table:</p>
         <tr>
           <td style="text-align: left"><strong>pe_mquote</strong> (Quotation Results)</td>
           <td style="text-align: left"><strong>pmq_type</strong> (Quotation Type)</td>
-          <td style="text-align: left"><strong>pmq_index</strong> (Quotation Index)</td>
+          <td style="text-align: left"><strong>pmq_index</strong> (Quotation Index or Range)</td>
           <td style="text-align: left">-</td>
           <td style="text-align: left">-</td>
           <td style="text-align: left">-</td>
@@ -722,6 +722,45 @@ A date must be entered in this field.</p>
 <div class="alert alert-danger" role="alert">
   <p>If the index for Member Address Details (pe_maddr) is 0 then the current address will be returned.</p>
 </div>
+
+<p>The speed of data extraction during the Mail-Merge Report can be improved in two ways:</p>
+
+<ul>
+<li>
+Fields that belong to the same database table only have the user security check performed once. As soon as the table changes the security check is performed again. For example:
+
+1. pm_member
+1. ps_sal1
+1. pmq_current(CERT,1)
+1. pmu_fld1(INFO)
+1. pm_dob
+
+will have the security check performed 5 times, for each time the source table changes.
+
+1. pm_member
+1. pm_forename
+1. pm_surname
+1. pm_sex
+1. pm_dob
+
+will only have the security checked once for the Basic Member Details (pe_mem) table.
+
+So to improve performance it is advisable to group fields that belong to the same database table.
+</li>
+<li>
+It is now possible to use a range of Quotation Indexes when extracting information from the Member Quotation Results (pe_mquote) table. Instead of listing 5 quotation lines individually:
+
+1. pmq_current(CERT,1)
+1. pmq_current(CERT,2)
+1. pmq_current(CERT,3)
+1. pmq_current(CERT,4)
+1. pmq_current(CERT,5)
+
+it is faster to use a range:
+
+1. pmq_current(CERT,1-5)
+</li>
+</ul>
 
 <h2 id="a-nameto-output-the-results-of-a-particular-formulaato-output-the-results-of-a-particular-formula"><a name="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
 
@@ -1044,7 +1083,7 @@ to perform mail merges.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 08/02/2018 09:05:57.</p>
+        <p>Build Date 13/02/2018 09:06:40.</p>
       </div>
     </div>
 
