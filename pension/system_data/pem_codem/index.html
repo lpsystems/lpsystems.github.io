@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
 
-    <meta name="generator" content="nanoc 3.7.1">
+    <meta name="generator" content="nanoc 4.9.1">
   </head>
   <body role="document">
 
@@ -44,7 +44,7 @@
       
 
       
-<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+<h2><a name="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -56,7 +56,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+<h2><a name="Introduction"></a>Introduction</h2>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
@@ -89,7 +89,7 @@ These are codes that are used when entering additional details for a member.</p>
   <p>Codes Screen</p>
 </div>
 
-<h2 id="a-nameadd-codesaadd-codes"><a name="Add Codes"></a>Add Codes</h2>
+<h2><a name="Add Codes"></a>Add Codes</h2>
 
 <p>Click ‘Add’.</p>
 
@@ -98,30 +98,106 @@ These are codes that are used when entering additional details for a member.</p>
 <p><a name="pcdm_type"></a><strong>TYPE</strong> - Enter the type of the Code. This must be one
 of the following:</p>
 
-<ul>
-  <li><strong>G</strong> - for Accounting Codes</li>
-  <li><strong>A</strong> - for Additional Benefit Codes</li>
-  <li><strong>L</strong> - for Asset Classes</li>
-  <li><strong>F</strong> - for Award Types</li>
-  <li><strong>E</strong> - for Career Average Revalued Earnings Codes</li>
-  <li><strong>C</strong> - for Contribution Transactions</li>
-  <li><strong>Q</strong> - for Country</li>
-  <li><strong>D</strong> - for Deferred Pensioner Codes</li>
-  <li><strong>B</strong> - for Disability Benefit Codes</li>
-  <li><strong>T</strong> - for FATCA Status</li>
-  <li><strong>M</strong> - for Investment Managers</li>
-  <li><strong>H</strong> - for Locations</li>
-  <li><strong>P</strong> - for Pensioner Codes</li>
-  <li><strong>R</strong> - for Reason for Increase Codes</li>
-  <li><strong>K</strong> - for Risk Profile Codes</li>
-  <li><strong>S</strong> - for Special Codes</li>
-  <li><strong>J</strong> - for Teams</li>
-  <li><strong>N</strong> - for Team Locations</li>
-  <li><strong>I</strong> - for Transfer In Codes</li>
-  <li><strong>O</strong> - for Transfer Out Codes</li>
-  <li><strong>X</strong> - for Agent Network</li>
-  <li><strong>Y</strong> - for Broker Company</li>
-</ul>
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">G</td>
+          <td style="text-align: left">Accounting Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Additional Benefit Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">X</td>
+          <td style="text-align: left">Agent Network</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Asset Classes</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Award Description</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Award Type</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left">Broker Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">Career Average Revalued Earnings Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Contribution Transactions</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Deferred Pensioner Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Disability Benefit Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Investment Manager</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">H</td>
+          <td style="text-align: left">Location</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Pensioner Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Reason for Increase Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">K</td>
+          <td style="text-align: left">Risk Profile Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Special Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Transfer In Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Transfer Out Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">X</td>
+          <td style="text-align: left">Agent Network</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left">Broker Company</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p><a name="pcdm_code"></a><strong>CODE</strong> - Enter the Code which must be relevant to the
 Type. The code can only contain alphanumeric characters. Some codes allow free format text, whereas others have validation applied to them using the following rules:</p>
@@ -267,7 +343,7 @@ to users on screens and lookup lists.</p>
 You can click on ‘Cancel’ at any stage to exit the add option without saving the entered
 Code details.</p>
 
-<h2 id="a-namequeryaa-namequerysearch-for-codesaquerysearch-for-codes"><a name="Query"></a><a name="Query/Search For Codes"></a>Query/Search For Codes</h2>
+<h2><a name="Query"></a><a name="Query/Search For Codes"></a>Query/Search For Codes</h2>
 
 <p>Click ‘Query’.</p>
 
@@ -289,14 +365,14 @@ to the screen and a message displayed to the bottom of the screen.</p>
 
 </div>
 
-<h2 id="a-nameviewing-codesaviewing-codes"><a name="Viewing Codes"></a>Viewing Codes</h2>
+<h2><a name="Viewing Codes"></a>Viewing Codes</h2>
 
 <p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
 the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
 an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
 an error message is displayed.</p>
 
-<h2 id="a-namedelete-codesadelete-codes"><a name="Delete Codes"></a>Delete Codes</h2>
+<h2><a name="Delete Codes"></a>Delete Codes</h2>
 
 <p>Click ‘Delete’.</p>
 
@@ -334,7 +410,7 @@ the ‘RNEWPEN’ as the default Reason for Increase Code.</p>
 <p>This is because these codes are needed internally in the defined contribution functionality
 within Pension Master.</p>
 
-<h2 id="a-nameprinting-code-detailsaprinting-code-details"><a name="Printing Code Details"></a>Printing Code Details</h2>
+<h2><a name="Printing Code Details"></a>Printing Code Details</h2>
 
 <p>This option allows you to print a list of one or all of the types of Codes available
 on your system.</p>
@@ -357,14 +433,14 @@ on your system.</p>
 none have been queried, it will act in the same way as All Codes.</li>
 </ul>
 
-<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+<h2><a name="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 27/02/2018 10:37:25.</p>
+        <p>Build Date 06/03/2018 09:15:49.</p>
       </div>
     </div>
 

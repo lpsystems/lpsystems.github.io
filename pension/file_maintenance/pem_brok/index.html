@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
 
-    <meta name="generator" content="nanoc 3.7.1">
+    <meta name="generator" content="nanoc 4.9.1">
   </head>
   <body role="document">
 
@@ -44,7 +44,7 @@
       
 
       
-<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+<h2><a name="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -57,7 +57,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+<h2><a name="Introduction"></a>Introduction</h2>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
@@ -96,7 +96,7 @@ to generate mail merge letters.</li>
   <p>Broker Details Screen</p>
 </div>
 
-<h2 id="a-nameadd-a-brokeraadd-a-broker"><a name="Add A Broker"></a>Add A Broker</h2>
+<h2><a name="Add A Broker"></a>Add A Broker</h2>
 
 <p>Click ‘Add’.</p>
 
@@ -108,9 +108,14 @@ entered an error message will be displayed and broker code will have to be re-en
 must be entered in this field and will be used in subsequent lookups for the broker
 details.</p>
 
-<p><a name="pbr_company"></a><strong>BROKER COMPANY</strong> - Enter the broker company using the dropdown. If your database doesn’t use broker companies use the default already listed.</p>
+<p><a name="pbr_company"></a><strong>BROKER COMPANY</strong> - Enter the broker company using the drop-down list. If your database doesn’t use broker companies use the default already listed.</p>
 
-<p><a name="pbr_agent"></a><strong>AGENT COMPANY</strong> - Enter the agent company using the dropdown. If your database doesn’t use agent companies use the default already listed</p>
+<p><a name="pbr_agent"></a><strong>AGENT COMPANY</strong> - Enter the agent company using the drop-down list. If your database doesn’t use agent companies use the default already listed.</p>
+
+<ul>
+  <li>Agent</li>
+  <li>Introducer</li>
+</ul>
 
 <p><a name="pbr_addr1"></a><a name="pbr_addr2"></a><a name="pbr_addr3"></a><a name="pbr_addr4"></a><a name="pbr_postcode"></a><strong>BROKER
 ADDRESS</strong> - Enter the brokers address and postcode as appropriate.</p>
@@ -134,7 +139,13 @@ DETAILS</strong> - Enter the name, surname and title of the main contacts of the
 These fields are not required but can be useful as a point of reference or in a mail
 merge.</p>
 
-<p><a name="pbr_status"></a><strong>STATUS</strong> - Enter the status if applicable from the dropdown.</p>
+<p><a name="pbr_status"></a><strong>STATUS</strong> - Enter the status if applicable from the drop-down list:</p>
+
+<ul>
+  <li>Active</li>
+  <li>Pending</li>
+  <li>Closed</li>
+</ul>
 
 <p><a name="pbr_has_ifa"></a><strong>HAS IFA</strong> - Enter ‘Yes’ or ‘No’.</p>
 
@@ -146,7 +157,32 @@ merge.</p>
 
 <p><a name="pbr_fee"></a><strong>RETENTION FEE</strong> - Enter the fee if applicable.</p>
 
-<p><a name="pbr_agent"></a><strong>AGENT OR INTRODUCER</strong> - Enter A for Agent or I for Introducer.</p>
+<p><a name="pbr_agent"></a><strong>AGENT OR INTRODUCER</strong> - Enter the Agent or Introducer:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Agent</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Introducer</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
 
 <p>When the broker details have been entered click ‘OK’ to save the details to the broker
 file. You can click ‘Cancel’ at any stage to exit the add option without saving the
@@ -184,7 +220,7 @@ broker.</p>
 
 <p><a name="pbr_home_email"></a><strong>BROKER E-MAIL ADDRESS</strong> - Enter the broker’s E-Mail address.</p>
 
-<h2 id="a-namequerysearch-for-a-brokeraa-namequeryaquerysearch-for-a-broker"><a name="Query/Search For A Broker"></a><a name="query"></a>Query/Search For A Broker</h2>
+<h2><a name="Query/Search For A Broker"></a><a name="query"></a>Query/Search For A Broker</h2>
 
 <p>Click ‘Query’. The following pop-up window is displayed:</p>
 
@@ -214,14 +250,14 @@ to the screen and a message displayed to the bottom of the screen.</p>
 
 </div>
 
-<h2 id="a-nameviewing-brokersaviewing-brokers"><a name="Viewing Brokers"></a>Viewing Brokers</h2>
+<h2><a name="Viewing Brokers"></a>Viewing Brokers</h2>
 
 <p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
 the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
 an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
 an error message is displayed.</p>
 
-<h2 id="a-nameupdating-brokersaupdating-brokers"><a name="Updating Brokers"></a>Updating Brokers</h2>
+<h2><a name="Updating Brokers"></a>Updating Brokers</h2>
 
 <p>Before Updating, a record must be selected through the Query option, and an error
 message is displayed if a record for update has not been selected.</p>
@@ -232,7 +268,7 @@ message is displayed if a record for update has not been selected.</p>
 changes have been made to the record click ‘OK’ to save the changes to file, or click
 ‘Cancel’ to exit the update option without saving the changes.</p>
 
-<h2 id="a-namedeleting-broker-detailsadeleting-broker-details"><a name="Deleting Broker Details"></a>Deleting Broker Details</h2>
+<h2><a name="Deleting Broker Details"></a>Deleting Broker Details</h2>
 
 <p>Before Deleting, a record must be selected through the Query option, and an error
 message is displayed if a record for deletion has not been selected.</p>
@@ -245,7 +281,7 @@ of this and you will not be able to delete the broker code.</p>
 
 <p>You will be asked to confirm and then re-confirm deletion of this Broker.</p>
 
-<h2 id="a-nameprinting-broker-detailsaa-namereportaprinting-broker-details"><a name="Printing Broker Details"></a><a name="report"></a>Printing Broker Details</h2>
+<h2><a name="Printing Broker Details"></a><a name="report"></a>Printing Broker Details</h2>
 
 <p>Click the ‘Report’ icon.</p>
 
@@ -303,14 +339,14 @@ are then displayed for printing.</p>
 <p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+<h2><a name="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 27/02/2018 10:37:14.</p>
+        <p>Build Date 06/03/2018 09:15:40.</p>
       </div>
     </div>
 

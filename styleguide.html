@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
 
-    <meta name="generator" content="nanoc 3.7.1">
+    <meta name="generator" content="nanoc 4.9.1">
   </head>
   <body role="document">
 
@@ -44,28 +44,40 @@
       
 
       
-<h2 id="index">Index</h2>
+<h2>Index</h2>
 
 <ul>
   <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#headings">Headings</a></li>
   <li><a href="#paragraphs">Paragraphs</a></li>
+  <li><a href="#lists">Lists</a></li>
+  <li><a href="#links">Links</a></li>
+  <li><a href="#tables">Tables</a></li>
+  <li><a href="#alert">Alerts</a></li>
+  <li><a href="#wells">Wells</a></li>
+  <li><a href="#code">Code</a></li>
+  <li><a href="#escape">Escape</a></li>
+  <li><a href="#keys">Keys</a></li>
+  <li><a href="#wording">Wording</a></li>
+  <li><a href="#client">Client Specific Areas</a></li>
+  <li><a href="#static">Codes &amp; Descriptions</a></li>
 </ul>
 
-<h2 id="a-nameintroductionaintroduction"><a name="introduction"></a>Introduction</h2>
+<h2><a name="introduction"></a>Introduction</h2>
 
 <p>The Pension Master User Manual is generated using a static website generator called <a href="http://nanoc.ws/">Nanoc</a>. This allows all the pages to be written using <a href="http://daringfireball.net/projects/markdown/">Markdown</a> or in this case a variant called <a href="http://kramdown.gettalong.org/index.html">Kramdown</a>.</p>
 
 <p>Because each page is converted into HTML markup this cleans up the pages considerably.</p>
 
-<h2 id="a-nameheadingsaheadings"><a name="headings"></a>Headings</h2>
+<h2><a name="headings"></a>Headings</h2>
 
 <p>Headings are indicated by the <code>##</code> at the beginning of the line. The main page heading is a <code>&lt;h1&gt;</code>, which is the taken from the title of the markdown file. Other headings then start at <code>##</code> with any sub-headings being <code>###</code> etc.</p>
 
-<h2 id="a-nameparagraphsaparagraphs"><a name="paragraphs"></a>Paragraphs</h2>
+<h2><a name="paragraphs"></a>Paragraphs</h2>
 
 <p>Paragraph tags <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> are not required as the Markdown processor takes the blank lines around the text to indicate paragraphs.</p>
 
-<h2 id="a-namelistsalists"><a name="lists"></a>Lists</h2>
+<h2><a name="lists"></a>Lists</h2>
 
 <p>For unordered lists start each line with <code>* </code>:</p>
 
@@ -111,7 +123,7 @@
   <li>Item 3</li>
 </ol>
 
-<h2 id="a-namelinksalinks"><a name="links"></a>Links</h2>
+<h2><a name="links"></a>Links</h2>
 
 <p>These have been left as standard HTML tags:</p>
 
@@ -123,7 +135,7 @@
 <pre><code>[Users](/pension/system_administration/gn_user/)
 </code></pre>
 
-<h2 id="a-nametablesatables"><a name="tables"></a>Tables</h2>
+<h2><a name="tables"></a>Tables</h2>
 
 <p><a href="http://kramdown.gettalong.org/quickref.html#tables">Tables</a> are created just using pipes as column markers but they need a little extra code to style them.</p>
 
@@ -166,7 +178,7 @@
   </div>
 </div>
 
-<h2 id="a-namealertaalerts"><a name="alert"></a>Alerts</h2>
+<h2><a name="alert"></a>Alerts</h2>
 
 <p>The red warning boxes.</p>
 
@@ -183,7 +195,7 @@ Indicating danger ahead.
   <p>Indicating danger ahead.</p>
 </div>
 
-<h2 id="a-namewellsawells"><a name="wells"></a>Wells</h2>
+<h2><a name="wells"></a>Wells</h2>
 
 <p>A ‘well’ is used to indicate information that is displayed on the screen:</p>
 
@@ -200,7 +212,7 @@ Record 1 of 2
 
 </div>
 
-<h2 id="a-namecodeacode"><a name="code"></a>Code</h2>
+<h2><a name="code"></a>Code</h2>
 
 <p>Blocks of code, such as the examples of lines in Formula, are wrapped in two lines of 5 tilde characters.</p>
 
@@ -212,11 +224,11 @@ Record 1 of 2
 <pre><code>@ln1 = @ln2 goto @ln3
 </code></pre>
 
-<h2 id="a-nameescapeaescape"><a name="escape"></a>Escape</h2>
+<h2><a name="escape"></a>Escape</h2>
 
 <p>Escape pipes that need to be displayed need to be escaped using <code>\</code>.</p>
 
-<h2 id="a-namekeysakeys"><a name="keys"></a>Keys</h2>
+<h2><a name="keys"></a>Keys</h2>
 
 <p>Key presses are wrapped in <code>&lt;kbd&gt;&lt;/kbd&gt;</code> tags like <kbd>Return</kbd>.</p>
 
@@ -227,9 +239,9 @@ Record 1 of 2
 
 <p>‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’</p>
 
-<h2 id="a-namewordingawording"><a name="wording"></a>Wording</h2>
+<h2><a name="wording"></a>Wording</h2>
 
-<h3 id="drop-down-list">Drop-down List</h3>
+<h3>Drop-down List</h3>
 
 <p>These are the fields that just display a list of values underneath the field e.g. Database on the Logon screen.</p>
 
@@ -246,34 +258,85 @@ Record 1 of 2
 <pre><code>Select a currency from the drop-down list.
 </code></pre>
 
-<h3 id="lookup-list">Lookup List</h3>
+<h3>Lookup List</h3>
 
 <p>Any fields that have a lookup icon which then opens a lookup list then write:</p>
 
 <pre><code>Enter a valid broker code, or click on the lookup icon for a list of broker codes.
 </code></pre>
 
-<h3 id="client-specific-areas">Client specific areas</h3>
+<h2><a name="client"></a>Client Specific Areas</h2>
 
 <p>Areas that are only to be displayed for certain clients then we will give the clients class tags of:</p>
 
-<p>Ascot Lloyd - ascot_lloyd
-Source - source
-JMMB - jmmb
-Intertrust - intertrust
-Irish Cement - irish_cement
-Kleinwort Benson - kleinwort_benson
-Sovereign - sovereign
-Friends First - friends_first
-L&amp;P - lp
-VHI - vhi
-UCC - ucc
-Croda - croda</p>
+<ul>
+  <li>Ascot Lloyd - ascot_lloyd</li>
+  <li>Source - source</li>
+  <li>JMMB - jmmb</li>
+  <li>Intertrust - intertrust</li>
+  <li>Irish Cement - irish_cement</li>
+  <li>Kleinwort Benson - kleinwort_benson</li>
+  <li>Sovereign - sovereign</li>
+  <li>Friends First - friends_first</li>
+  <li>L&amp;P - lp</li>
+  <li>VHI - vhi</li>
+  <li>UCC - ucc</li>
+  <li>Croda - croda</li>
+</ul>
+
+<h2><a name="static"></a>Codes &amp; Descriptions</h2>
+
+<p>Static information, which takes the form of Codes and Descriptions, is hardcoded into Pension Master. This can be included automatically using specific <a href="https://en.wikipedia.org/wiki/ERuby">ERB</a> tags:</p>
+
+<pre><code>&lt; % = static_description_list("pm_sex") % &gt;
+
+but without the spaces between the &lt;, %, = and % &gt;
+</code></pre>
+
+<p>This produces:</p>
+
+<ul>
+  <li>Male</li>
+  <li>Female</li>
+</ul>
+
+<pre><code>&lt; % = static_code_description_table("pm_sex") % &gt;
+
+but without the spaces between the &lt;, %, = and % &gt;
+</code></pre>
+
+<p>This produces:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Male</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Female</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 27/02/2018 10:37:27.</p>
+        <p>Build Date 06/03/2018 09:15:50.</p>
       </div>
     </div>
 

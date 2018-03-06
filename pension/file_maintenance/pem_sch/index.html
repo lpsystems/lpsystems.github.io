@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
 
-    <meta name="generator" content="nanoc 3.7.1">
+    <meta name="generator" content="nanoc 4.9.1">
   </head>
   <body role="document">
 
@@ -44,7 +44,7 @@
       
 
       
-<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+<h2><a name="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -111,7 +111,7 @@
   <li><a href="#Exit">Exit program</a></li>
 </ul>
 
-<h2 id="a-nameintroductionaintroduction"><a name="Introduction"></a>Introduction</h2>
+<h2><a name="Introduction"></a>Introduction</h2>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
@@ -205,9 +205,9 @@ you may find in the Scheme File are as follows:</p>
   <p>Basic Scheme Details Screen</p>
 </div>
 
-<h2 id="a-nameadding-a-schemeaadding-a-scheme"><a name="Adding A Scheme"></a>Adding A Scheme</h2>
+<h2><a name="Adding A Scheme"></a>Adding A Scheme</h2>
 
-<h3 id="a-nameschaa-namebasic-scheme-detailsabasic-scheme-details"><a name="SCH"></a><a name="Basic Scheme Details"></a>Basic Scheme Details</h3>
+<h3><a name="SCH"></a><a name="Basic Scheme Details"></a>Basic Scheme Details</h3>
 
 <p>Click ‘Add’.</p>
 
@@ -220,10 +220,16 @@ generated for you. You will not be permitted to amend this.</p>
 
 <p><a name="psc_desc"></a><strong>SCHEME NAME</strong> - The scheme name must be entered.</p>
 
-<p><a name="psc_region"></a><strong>REGION</strong> - The relevant indicator must
-be entered. The valid entries in this field are “U” for UK and “I” for Irish. This
-will determine how a members State Pension Age is calculated and how certain screens
-are displayed.</p>
+<p><a name="psc_region"></a><strong>REGION</strong> - This will determine how a members State Pension Age is calculated
+and how certain screens are displayed. Select the Region from the drop-down list:</p>
+
+<ul>
+  <li>UK</li>
+  <li>Ireland</li>
+  <li>Belgium</li>
+  <li>Denmark</li>
+  <li>Jamaica</li>
+</ul>
 
 <p><a name="psc_alt_code"></a><strong>ALTERNATIVE SCHEME CODE</strong> - Enter an alternative to
 the ‘SCHEME CODE’ for your scheme, if necessary. This field will default to the value
@@ -321,7 +327,23 @@ scheme.</p>
 
 <p><a name="psc_updcu"></a><strong>ALLOW MANUAL UPDATE OF UNITS?</strong> - Click this field if you want to allow manual update of the investment history records for members of this scheme.</p>
 
-<p><a name="psc_status"></a><strong>STATUS</strong> - This field denotes that the status of the scheme Select one of the options from the drop-down list.</p>
+<p><a name="psc_status"></a><strong>STATUS</strong> - This field denotes that the status of the scheme Select one of the options from the drop-down list:</p>
+
+<ul>
+  <li>Active</li>
+  <li>Frozen</li>
+  <li>Frozen DB with Active DC</li>
+  <li>In Wind Up</li>
+  <li>Inactive</li>
+  <li>Paid Up</li>
+  <li>Test</li>
+  <li>Transferred</li>
+  <li>Wound Up</li>
+  <li>Not Staged Yet</li>
+  <li>Not Proceeding</li>
+  <li>Not Decided</li>
+  <li>Transferring Out</li>
+</ul>
 
 <p><a name="psc_care"></a><strong>CARE SCHEME</strong> - This field denotes that the scheme
 is a CARE scheme. By ticking this then have access to the care screens at scheme and member level.</p>
@@ -335,9 +357,14 @@ is a SSAS scheme. By ticking this then have access to the SSAS screens at scheme
 
 <p><a name="psc_pip_date"></a><strong>PIP RENEWAL DATE</strong> - Enter the PIP renewal date in the format DD/MM/YYYY.</p>
 
-<p><a name="psc_sal_freq"></a><strong>SALARY FREQUENCY</strong> - This field denotes the salary frequency used in the Contribution Salary Cap Report. <a href="/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap</a></p>
+<p><a name="psc_sal_freq"></a><strong>SALARY FREQUENCY</strong> - This field denotes the salary frequency used in the <a href="/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap Report</a>. Select a Salary Frequency from the drop-down list:</p>
 
-<p><a name="psc_cont_sal_cap"></a><strong>CONTRIBUTION SALARY CAP</strong> - This field denotes the cap used in the Contribution Salary Cap Report. <a href="/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap</a></p>
+<ul>
+  <li>Annually</li>
+  <li>Monthly</li>
+</ul>
+
+<p><a name="psc_cont_sal_cap"></a><strong>CONTRIBUTION SALARY CAP</strong> - This field denotes the cap used in the <a href="/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap Report</a>.</p>
 
 <p>Click ‘OK’ to save the details to the scheme file or click ‘Cancel’ to exit the add
 option without saving the details.</p>
@@ -346,7 +373,7 @@ option without saving the details.</p>
 to add to the scheme, you should go directly to the appropriate screen and add them
 now.</p>
 
-<h2 id="a-namequerysearch-for-a-schemeaa-namequeryaquerysearch-for-a-scheme"><a name="Query/Search For A Scheme"></a><a name="query"></a>Query/Search For A Scheme</h2>
+<h2><a name="Query/Search For A Scheme"></a><a name="query"></a>Query/Search For A Scheme</h2>
 
 <p>Click ‘Query’. The following pop-up window is displayed:</p>
 
@@ -368,7 +395,7 @@ to the Schemes main menu.</p>
 appropriate screen by moving the highlight bar. See later in this chapter for more
 on the Menu option in Schemes.</p>
 
-<h2 id="a-namebrowsing-scheme-detailsabrowsing-scheme-details"><a name="Browsing Scheme Details"></a>Browsing Scheme Details</h2>
+<h2><a name="Browsing Scheme Details"></a>Browsing Scheme Details</h2>
 
 <p>Click ‘Browse’ to view details in any screen where the data does not fit on the screen.</p>
 
@@ -377,12 +404,12 @@ to navigate around the data.</p>
 
 <p>Click ‘OK’ or ‘Cancel’ to leave browse mode.</p>
 
-<h2 id="a-nameviewing-scheme-detailsaviewing-scheme-details"><a name="Viewing Scheme Details"></a>Viewing Scheme Details</h2>
+<h2><a name="Viewing Scheme Details"></a>Viewing Scheme Details</h2>
 
 <p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
 the previous record. You can also use the First, Previous, Next and Last toolbar icons.</p>
 
-<h2 id="a-nameupdating-scheme-detailsaupdating-scheme-details"><a name="Updating Scheme Details"></a>Updating Scheme Details</h2>
+<h2><a name="Updating Scheme Details"></a>Updating Scheme Details</h2>
 
 <p>Click ‘Update’.</p>
 
@@ -395,7 +422,7 @@ dates being recalculated for all members in the selected scheme.
 A user prompt will follow this warning to allow the user to cancel this amendment.</p>
 </div>
 
-<h3 id="a-nameselaa-namemember-screen-selectionamember-screen-selection"><a name="SEL"></a><a name="Member Screen Selection"></a>Member Screen Selection</h3>
+<h3><a name="SEL"></a><a name="Member Screen Selection"></a>Member Screen Selection</h3>
 
 <p>Click Menu and then select the Member Screen Selection option and press <kbd>Return</kbd>.</p>
 
@@ -455,7 +482,7 @@ to prevent a junior administrator being able to view a directors salary screen.<
 <p>When all the details have been entered click ‘OK’ to save the member screen selection
 details, or click ‘Cancel’ to exit entry without saving the details.</p>
 
-<h3 id="a-nameuseraa-nameuser-access-detailsauser-access-details"><a name="USER"></a><a name="User Access Details"></a>User Access Details</h3>
+<h3><a name="USER"></a><a name="User Access Details"></a>User Access Details</h3>
 
 <p>Click Menu. Then select the User Access Details option from the selection screen.</p>
 
@@ -502,7 +529,7 @@ scheme.</p>
 access details, or click on ‘Cancel’ to exit user access entry without saving the
 details.</p>
 
-<h3 id="a-namescodeaa-namecode-allocationacode-allocation"><a name="SCODE"></a><a name="Code Allocation"></a>Code Allocation</h3>
+<h3><a name="SCODE"></a><a name="Code Allocation"></a>Code Allocation</h3>
 
 <p>Click Menu and then select the Code Allocation option from the selection screen.</p>
 
@@ -550,7 +577,7 @@ of ‘2TIMES’ or any member who has codes in the ‘LUMPSUM’ group.</p>
 ‘RNEWPEN’. This is because any Pension/Deferred Pension History lines that are added
 will use the ‘RNEWPEN’ as the default Reason for Increase Code.</p>
 
-<h3 id="a-namenoteaa-namescheme-notesascheme-notes"><a name="NOTE"></a><a name="Scheme Notes"></a>Scheme Notes</h3>
+<h3><a name="NOTE"></a><a name="Scheme Notes"></a>Scheme Notes</h3>
 
 <p>Click Menu and then select the Notes option.</p>
 
@@ -574,7 +601,7 @@ button.</p>
 <p>Click ‘OK’ to save the notes the scheme notes file or click ‘Cancel’ to exit input
 of the notes without saving the entered notes.</p>
 
-<h3 id="a-namesudsaa-namescheme-user-defined-detailsascheme-user-defined-details"><a name="SUDS"></a><a name="Scheme User Defined Details"></a>Scheme User Defined Details</h3>
+<h3><a name="SUDS"></a><a name="Scheme User Defined Details"></a>Scheme User Defined Details</h3>
 
 <p>Click Menu and then select the Scheme User Defined Details option.</p>
 
@@ -625,7 +652,7 @@ format of MO or Nn, the existing value will be redisplayed left justified.</p>
 <p>When you have completed the screen click ‘OK’ to save the details to file. You can
 click ‘Cancel’ to exit the add option without saving the details</p>
 
-<h3 id="a-nameudsaa-nameuser-defined-screensauser-defined-screens"><a name="UDS"></a><a name="User Defined Screens"></a>User Defined Screens</h3>
+<h3><a name="UDS"></a><a name="User Defined Screens"></a>User Defined Screens</h3>
 
 <p>Click the Menu option and then select the User Defined Screen option.</p>
 
@@ -702,7 +729,7 @@ You will be prevented from deleting a user defined screen if there is a member
 in current scheme with data present for this user defined screen.</p>
 </div>
 
-<h3 id="a-nameudaaa-nameuser-defined-historyauser-defined-history"><a name="UDA"></a><a name="User Defined History"></a>User Defined History</h3>
+<h3><a name="UDA"></a><a name="User Defined History"></a>User Defined History</h3>
 
 <p>Click Menu and then select the User Defined History option.</p>
 
@@ -768,7 +795,7 @@ in current scheme with data present for this user defined history.</strong></p>
 
 </div>
 
-<h3 id="a-namestitleaa-namesalary-descriptionsasalary-descriptions"><a name="STITLE"></a><a name="Salary Descriptions"></a>Salary Descriptions</h3>
+<h3><a name="STITLE"></a><a name="Salary Descriptions"></a>Salary Descriptions</h3>
 
 <p>Click Menu and then select the Salary Descriptions option and press <kbd>Return</kbd>.</p>
 
@@ -831,7 +858,7 @@ amount will then be subtracted from the first column on the salary history scree
 if one exists. This field also relates to the Salary Screens in <a href="/pension/updates/pem_bat/#To Add A Salary History Batch">Batch
 Data Input</a>.</p>
 
-<h3 id="a-namespudaa-namedeferred-pensionerpensioner-fieldsadeferred-pensionerpensioner-fields"><a name="SPUD"></a><a name="Deferred Pensioner/Pensioner Fields"></a>Deferred Pensioner/Pensioner Fields</h3>
+<h3><a name="SPUD"></a><a name="Deferred Pensioner/Pensioner Fields"></a>Deferred Pensioner/Pensioner Fields</h3>
 
 <p>Click Menu. Then select the Def. Pensioner/Pensioner Fields option and press <kbd>Return</kbd>.</p>
 
@@ -889,7 +916,7 @@ Member in the current Scheme with data present in the field.</p>
 <p>To exit the Def Pensioner/Pensioner Fields screen, click ‘Exit’. The program will
 return to the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> menu.</p>
 
-<h3 id="a-nameservaa-nameservice-period-namesaservice-period-names"><a name="SERV"></a><a name="Service Period Names"></a>Service Period Names</h3>
+<h3><a name="SERV"></a><a name="Service Period Names"></a>Service Period Names</h3>
 
 <p>Click Menu and then select the Service Period Names option and press <kbd>Return</kbd>.</p>
 
@@ -928,7 +955,7 @@ do not wish to use a certain field, simply blank it out.</p>
 <p>When all the details have been entered click ‘OK’ to save the service period names,
 or click ‘Cancel’ to exit entry without saving the details.</p>
 
-<h3 id="a-namebrokaa-namebroker-detailsabroker-details"><a name="BROK"></a><a name="Broker Details"></a>Broker Details</h3>
+<h3><a name="BROK"></a><a name="Broker Details"></a>Broker Details</h3>
 
 <p>Click Menu and then select the Broker Details option and press <kbd>Return</kbd>.</p>
 
@@ -951,7 +978,7 @@ screen to assign the broker to the scheme.</p>
 <p>When all the details have been entered click ‘OK’ to save the broker details, or click
 ‘Cancel’ to exit entry without saving the details.</p>
 
-<h3 id="a-namerenewalaa-namerenewal-detailsarenewal-details"><a name="RENEWAL"></a><a name="Renewal Details"></a>Renewal Details</h3>
+<h3><a name="RENEWAL"></a><a name="Renewal Details"></a>Renewal Details</h3>
 
 <p>Click Menu and then select the Renewal Details option and press <kbd>Return</kbd>.</p>
 
@@ -973,7 +1000,7 @@ received, in a case where each company runs their own individual payroll and hen
 sends in their own data. This avoids having to wait for the whole scheme to send in
 data before any work on the renewal can be processed.</p>
 
-<h4 id="a-nameadd-a-renewal-entryaadd-a-renewal-entry"><a name="Add A Renewal Entry"></a>Add A Renewal Entry</h4>
+<h4><a name="Add A Renewal Entry"></a>Add A Renewal Entry</h4>
 
 <p>Click ‘Add’.</p>
 
@@ -1010,7 +1037,7 @@ the renewal for this company in the format dd/mm/yyyy or ddmmyyyy.</p>
 <p>When all the details have been entered click ‘OK’ to save the renewal details, or
 click ‘Cancel’ to exit entry without saving the details.</p>
 
-<h4 id="a-nameupdate-a-renewal-entryaupdate-a-renewal-entry"><a name="Update A Renewal Entry"></a>Update A Renewal Entry</h4>
+<h4><a name="Update A Renewal Entry"></a>Update A Renewal Entry</h4>
 
 <p>Click ‘Update’.</p>
 
@@ -1020,7 +1047,7 @@ Entry</a>.</p>
 <p>When all the details have been entered click ‘OK’ to save the renewal details, or
 click ‘Cancel’ to exit entry without saving the details.</p>
 
-<h4 id="a-namedelete-a-renewal-entryadelete-a-renewal-entry"><a name="Delete A Renewal Entry"></a>Delete A Renewal Entry</h4>
+<h4><a name="Delete A Renewal Entry"></a>Delete A Renewal Entry</h4>
 
 <p>Click Delete.</p>
 
@@ -1038,7 +1065,7 @@ menu.</p>
 <p>If you wish to delete the record click ‘Yes’. The record is deleted, and the program
 returns to the main menu.</p>
 
-<h4 id="a-nameget-next-renewal-entryaget-next-renewal-entry"><a name="Get Next Renewal Entry"></a>Get Next Renewal Entry</h4>
+<h4><a name="Get Next Renewal Entry"></a>Get Next Renewal Entry</h4>
 
 <p>Click ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
 
@@ -1047,7 +1074,7 @@ then use the Update option to make any changes that you require. You can click o
 ‘OK’ to save the changes or click on ‘Cancel’ to return to the menu without saving
 the changes.</p>
 
-<h4 id="a-nameget-previous-renewal-entryaget-previous-renewal-entry"><a name="Get Previous Renewal Entry"></a>Get Previous Renewal Entry</h4>
+<h4><a name="Get Previous Renewal Entry"></a>Get Previous Renewal Entry</h4>
 
 <p>Click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’.</p>
 
@@ -1055,7 +1082,7 @@ the changes.</p>
 then use the Update option to make any changes that you require. You can click ‘OK’
 to save the changes or click ‘Cancel’ to return to the menu without saving the changes.</p>
 
-<h3 id="a-nameactuaryaa-nameactuarial-detailsaactuarial-details"><a name="ACTUARY"></a><a name="Actuarial Details"></a>Actuarial Details</h3>
+<h3><a name="ACTUARY"></a><a name="Actuarial Details"></a>Actuarial Details</h3>
 
 <p>Click Menu then select the Actuarial Details option and press <kbd>Return</kbd>.</p>
 
@@ -1099,7 +1126,7 @@ Calculation Report</a>.</p>
 <p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
 to exit entry without saving the details.</p>
 
-<h3 id="a-namesfundsaa-nameinvestment-fundsainvestment-funds"><a name="SFUNDS"></a><a name="Investment Funds"></a>Investment Funds</h3>
+<h3><a name="SFUNDS"></a><a name="Investment Funds"></a>Investment Funds</h3>
 
 <p>Click Menu and then select the Investment Funds option and press <kbd>Return</kbd>.</p>
 
@@ -1134,7 +1161,14 @@ rate for investments in this fund. This defaults to 100%.</p>
 
 <p><a name="psf_rebate_perc"></a><strong>ANNUAL REBATE</strong> - Enter the %.</p>
 
-<p><a name="psf_rebate_freq"></a><strong>REBATE FREQUENCY</strong> - Enter the frequency.</p>
+<p><a name="psf_rebate_freq"></a><strong>REBATE FREQUENCY</strong> - Select the Rebate Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
 
 <p>You cannot delete a fund from a scheme if any members of the scheme have investments
 in that fund.</p>
@@ -1168,7 +1202,7 @@ rate for investments in this fund. This defaults to 100%.</p>
 <p>When all the details have been entered click ‘OK’ to save the details, or click on
 ‘Cancel’ to exit entry without saving the details.</p>
 
-<h3 id="a-namescontaa-namecontribution-type-setupacontribution-type-setup"><a name="SCONT"></a><a name="Contribution Type Setup"></a>Contribution Type Setup</h3>
+<h3><a name="SCONT"></a><a name="Contribution Type Setup"></a>Contribution Type Setup</h3>
 
 <p>Click Menu and then select the Contribution Type Setup option and press <kbd>Return</kbd>.</p>
 
@@ -1220,7 +1254,14 @@ this contribution type. This field will default to No i.e. unticked.</p>
 <p><a name="psct_dc_type"></a><strong>REGULAR DC CONTRIBUTION TYPE</strong> - Used in conjunction with the DC
 Generic quote for the projections calculation.</p>
 
-<p><a name="psct_type"></a><strong>CONTRIBUTION TYPE</strong> - Indicates the type of either ‘EE, ER, AVC etc’.</p>
+<p><a name="psct_type"></a><strong>CONTRIBUTION TYPE</strong> - Select the Contribution Type from the drop-down list:</p>
+
+<ul>
+  <li>AVC</li>
+  <li>EE</li>
+  <li>ER</li>
+  <li>Other</li>
+</ul>
 
 <p><a name="psct_tvin"></a><strong>CONTRIBUTION TYPE SOLELY FOR TVIN</strong> - Tick if this contribution should
 only be used for TVIN’s and the transaction type of TVIN.</p>
@@ -1231,7 +1272,7 @@ salary cap report.</p>
 <p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
 to exit entry without saving the details.</p>
 
-<h3 id="a-namesinvfaa-nameinvestment-setupainvestment-setup"><a name="SINVF"></a><a name="Investment Setup"></a>Investment Setup</h3>
+<h3><a name="SINVF"></a><a name="Investment Setup"></a>Investment Setup</h3>
 
 <p>Click Menu and then select the Investment Setup option and press <kbd>Return</kbd>.</p>
 
@@ -1306,7 +1347,7 @@ to the main menu.</p>
   <p>Investment Total Screen</p>
 </div>
 
-<h3 id="a-nameslifeaa-namelifestyle-matrix-setupalifestyle-matrix-setup"><a name="SLIFE"></a><a name="Lifestyle Matrix Setup"></a>Lifestyle Matrix Setup</h3>
+<h3><a name="SLIFE"></a><a name="Lifestyle Matrix Setup"></a>Lifestyle Matrix Setup</h3>
 
 <p>Click Menu and then select the Lifestyle Matrix Setip option and press <kbd>Return</kbd>.</p>
 
@@ -1384,7 +1425,7 @@ this lifestyle matrix and age/term.</p>
 <p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
 to exit entry without saving the details.</p>
 
-<h3 id="a-namesexpacontribution-expenses"><a name="SEXP"></a>Contribution Expenses</h3>
+<h3><a name="SEXP"></a>Contribution Expenses</h3>
 
 <p>Click Menu and then select the Contribution Expenses option and press <kbd>Return</kbd>.</p>
 
@@ -1457,7 +1498,7 @@ can use this to calculate your expenses.</p>
 <p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
 to exit entry without saving the details.</p>
 
-<h3 id="a-namessexpaswitch-assumptions"><a name="SSEXP"></a>Switch Assumptions</h3>
+<h3><a name="SSEXP"></a>Switch Assumptions</h3>
 
 <p>Click Menu and then select the Switch Assumptions option and press <kbd>Return</kbd>.</p>
 
@@ -1500,7 +1541,7 @@ off switches, set this to zero.</p>
 <p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
 to exit entry without saving the details.</p>
 
-<h3 id="a-namesuspenseaa-namesuspense-accountaunit-suspense-account"><a name="SUSPENSE"></a><a name="Suspense Account"></a>Unit Suspense Account</h3>
+<h3><a name="SUSPENSE"></a><a name="Suspense Account"></a>Unit Suspense Account</h3>
 
 <p>To proceed to the scheme address, click Menu and then select the Unit Suspense Account
 option and press <kbd>Return</kbd>.</p>
@@ -1521,7 +1562,7 @@ are retained as units.</p>
 <p>The screen is view only and is updated by <a href="/pension/investments/peu_assbal/">Asset
 Balance</a> or <a href="/pension/investments/peu_asset/">Asset Transfer</a>.</p>
 
-<h3 id="a-namesinvaa-nameinvestment-value-summaryainvestment-value-summary"><a name="SINV"></a><a name="Investment Value Summary"></a>Investment Value Summary</h3>
+<h3><a name="SINV"></a><a name="Investment Value Summary"></a>Investment Value Summary</h3>
 
 <p>Click Menu and then select the Investment Value Summary option and press <kbd>Return</kbd>.</p>
 
@@ -1563,7 +1604,7 @@ These are taken at face value e.g. £100 of unallocated contributions has a valu
   <p>Summary Suspense Account</p>
 </div>
 
-<h3 id="a-namesaddraa-nameaddress-detailsaaddress-details"><a name="SADDR"></a><a name="Address Details"></a>Address Details</h3>
+<h3><a name="SADDR"></a><a name="Address Details"></a>Address Details</h3>
 
 <p>Click Menu and then select the Address Details option and press <kbd>Return</kbd>.</p>
 
@@ -1596,7 +1637,7 @@ DETAILS</strong> - Enter the signatory details.</p>
 <p>When all the details have been entered click ‘OK’ to save the address, or click “Cancel’’
 to exit entry without saving the details.</p>
 
-<h3 id="a-namememinfoaa-namemember-information-setupamember-information-setup"><a name="MEMINFO"></a><a name="Member Information Setup"></a>Member Information Setup</h3>
+<h3><a name="MEMINFO"></a><a name="Member Information Setup"></a>Member Information Setup</h3>
 
 <p>To proceed to the Member Information Setup screen press <kbd>M</kbd>, or select the Menu option
 and then select the Member Information Setup option and press <kbd>Return</kbd>.</p>
@@ -1657,7 +1698,7 @@ Information Screen</a> in Members.</p>
   <li><strong>RM99</strong> - Years and Months Rounded to 99 Days (where 99 is a valid number between 01 and 31).</li>
 </ul>
 
-<h3 id="a-namestaxaa-nametax-simplification-amountsatax-simplification-amounts"><a name="STAX"></a><a name="Tax Simplification Amounts"></a>Tax Simplification Amounts</h3>
+<h3><a name="STAX"></a><a name="Tax Simplification Amounts"></a>Tax Simplification Amounts</h3>
 
 <p>This screen shows the tax simplification amounts to be held against the scheme.</p>
 
@@ -1689,7 +1730,7 @@ Information Screen</a> in Members.</p>
 
 <p><a name="pstx_mp_life_allow"></a><strong>MP LIFETIME ALLOWANCE</strong> - Enter the MP Lifetime Allowance for the date entered.</p>
 
-<h3 id="a-nameadvisaa-nameadvisorsaadvisors"><a name="ADVIS"></a><a name="Advisors"></a>Advisors</h3>
+<h3><a name="ADVIS"></a><a name="Advisors"></a>Advisors</h3>
 
 <p>Click Menu and then select the Advisors option and press <kbd>Return</kbd>.</p>
 
@@ -1712,7 +1753,7 @@ screen to assign the advisor to the scheme.</p>
 <p>When all the details have been entered click ‘OK’ to save the advisor details, or click
 ‘Cancel’ to exit entry without saving the details.</p>
 
-<h3 id="a-namecareaa-namecare-title-screenacare-title-screen"><a name="CARE"></a><a name="Care Title Screen"></a>Care Title Screen</h3>
+<h3><a name="CARE"></a><a name="Care Title Screen"></a>Care Title Screen</h3>
 
 <p>Click Menu. Then select the Care Title Screen option and press <kbd>Return</kbd>.</p>
 
@@ -1738,11 +1779,29 @@ Tick the total box if you wish to see that column total on the member screen.</p
 <p>The following fields need only to be updated to be used with the Recalculation of Revaluations option in the Care Run. Further details of these
 options can be found <a href="/pension/updates/peu_reval/#destdlg">here</a></p>
 
-<p><a name="pctt_freq"></a><strong>REVALUATION FREQUENCY</strong> - Enter the frequency from the drop down.</p>
+<p><a name="pctt_freq"></a><strong>REVALUATION FREQUENCY</strong> - Select the frequency from the drop-down list:</p>
 
-<p><a name="pctt_date_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Enter the date from the drop down</p>
+<ul>
+  <li>Annual</li>
+  <li>Biannual</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
 
-<p><a name="pctt_reval_day"></a><strong>DATE OF REVALUATION</strong> - Enter the date of the revaluation from the drop down.</p>
+<p><a name="pctt_date_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the date type from the drop-down list:</p>
+
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+</ul>
+
+<p><a name="pctt_reval_day"></a><strong>DATE OF REVALUATION</strong> - Select the date of the revaluation from the drop-down list:</p>
+
+<ul>
+  <li>Month Start</li>
+  <li>Month End</li>
+  <li>Specific Day in Month</li>
+</ul>
 
 <p><a name="pctt_dsy"></a><strong>DAY</strong> - Enter the day if the value of the previous field is specfic day. Valid entries are 1 - 31.</p>
 
@@ -1752,7 +1811,7 @@ options can be found <a href="/pension/updates/peu_reval/#destdlg">here</a></p>
 <p>To exit the Care Title Screen, click ‘Exit’. The program will
 return to the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> menu.</p>
 
-<h3 id="a-namecontribution-rates-matrixacontribution-rates-matrix"><a name="Contribution Rates Matrix"></a>Contribution Rates Matrix</h3>
+<h3><a name="Contribution Rates Matrix"></a>Contribution Rates Matrix</h3>
 
 <p>Select the Contribution Rates Matrix screen using the menu.</p>
 
@@ -1768,22 +1827,51 @@ return to the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes<
 
 <p><a name="psmb_matrix"></a><strong>MATRIX</strong> - Enter the code.</p>
 
-<p><a name="psmh_type"></a><strong>TYPE</strong> - Enter or select a type from the dropdown box.</p>
+<p><a name="psmh_type"></a><strong>TYPE</strong> - Select a Type from the drop-down list:</p>
 
-<p><a name="psmh_eff_dt"></a><strong>EFFECTIVE DATE</strong> - The date type of either immediate or renewal date must be entered.</p>
+<ul>
+  <li>Salary</li>
+  <li>Age</li>
+  <li>Service</li>
+  <li>Combined</li>
+</ul>
 
-<p><a name="psmh_eff_dt"></a><strong>SALARY</strong> - The salary type from the salaries set up for the scheme.</p>
+<p><a name="psmh_eff_dt"></a><strong>EFFECTIVE DATE</strong> - Select a date type from the drop-down list:</p>
 
-<p><strong>SALARY CAP FACTOR TABLE</strong>
-<a name="psmh_fact_code"></a><strong>CODE</strong> - Enter a valid factor code use the search if code isn’t know.</p>
+<ul>
+  <li>Immediate</li>
+  <li>Renewal Date</li>
+</ul>
+
+<p><a name="psmh_salary"></a><strong>SALARY</strong> - The salary type from the salaries set up for the scheme.</p>
+
+<p><strong>SALARY CAP FACTOR TABLE</strong></p>
+
+<p><a name="psmh_fact_code"></a><strong>CODE</strong> - Enter a valid factor code use the search if code isn’t know.</p>
 
 <p><a name="psmh_fact_index"></a><strong>INDEX</strong> - Entered the index.</p>
 
 <p><a name="psmh_pt_adj"></a><strong>PART TIME ADJUSTMENT %</strong> - Entered the % for part time members if required.</p>
 
-<p><a name="psmh_cap_inc_rate"></a><strong>SALARY CAP INCREASE RATE</strong> - Entered or select from the dropdown box.</p>
+<p><a name="psmh_cap_inc_rate"></a><strong>SALARY CAP INCREASE RATE</strong> - Enter or select from the drop-down list:</p>
 
-<p><a name="psmh_service_dt"></a><strong>SERVICE DATE</strong> - Entered the date.</p>
+<ul>
+  <li>Date Joined Company</li>
+  <li>None - Fixed Cap</li>
+  <li>CPI</li>
+  <li>Salary Growth</li>
+  <li>CPI Capped at 3%</li>
+  <li>CPI Capped at 4%</li>
+  <li>CPI Capped at 5%</li>
+</ul>
+
+<p><a name="psmh_service_dt"></a><strong>SERVICE DATE</strong> - Select the Service Date from the drop-down list:</p>
+
+<ul>
+  <li>Date Joined Company</li>
+  <li>Date Joined Scheme</li>
+  <li>Qualifying Service Date</li>
+</ul>
 
 <p><a name="psmb_age"></a><strong>AGE</strong> - Entered the age.</p>
 
@@ -1793,7 +1881,7 @@ return to the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes<
 
 <p><a name="psmb_perc_for_serv"></a><strong>TOTAL % FOR SERVICE</strong> - Entered the amount.</p>
 
-<h3 id="a-namestrusaa-nametrusteeascheme-trustee"><a name="STRUS"></a><a name="Trustee"></a>Scheme Trustee</h3>
+<h3><a name="STRUS"></a><a name="Trustee"></a>Scheme Trustee</h3>
 
 <p>Click Menu and then select the Trustee Details option and press <kbd>Return</kbd>.</p>
 
@@ -1822,7 +1910,7 @@ DETAILS</strong> - Enter the address details, including the postcode.</p>
 <p>When all the details have been entered click ‘OK’ to save the trustee, or click “Cancel’’
 to exit entry without saving the details.</p>
 
-<h3 id="a-namesorpexaa-namesorp-expensesasorp-expenses"><a name="SORPEX"></a><a name="SORP Expenses"></a>SORP Expenses</h3>
+<h3><a name="SORPEX"></a><a name="SORP Expenses"></a>SORP Expenses</h3>
 
 <p>Click Menu and then select the SORP Expenses option and press <kbd>Return</kbd>. This screen is only available of Irish DC Schemes.</p>
 
@@ -1847,21 +1935,40 @@ See <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> 
 
 <p>Fixed contribution expenses by unit disinvestments charges for active members.</p>
 
-<p><a name="psexpa_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop down to select a valid one.</p>
+<p><a name="psexpa_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop_down list to select a valid one.</p>
 
 <p><a name="psexpa_ann_fix_amt"></a><strong>ANNUAL FIXED AMOUNT</strong> - Enter the fixed amount</p>
 
-<p><a name="psexpa_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop down to select a valid one.</p>
+<p><a name="psexpa_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
 
 <p><a name="psexpa_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
 
-<p><a name="psexpa_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Insert None,CPI or Earnings</p>
+<p><a name="psexpa_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
 
-<p><a name="psexpa_eff_dat_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Insert type of Calendar, Renewal or Other.</p>
+<ul>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
+</ul>
 
-<p><a name="psexpa_eff_day"></a><strong>EFFECTIVE DAY</strong> - Enter a day ie 1 if type is Other.</p>
+<p><a name="psexpa_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
 
-<p><a name="psexpa_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month ie 4 if type is Other.</p>
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psexpa_eff_day"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpa_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
 
 <p>The following screen is displayed when you press 3:</p>
 
@@ -1873,21 +1980,40 @@ See <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> 
 
 <p>Fixed contribution expenses by unit disinvestments charges for deferred members</p>
 
-<p><a name="psexpd_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop down to select a valid one.</p>
+<p><a name="psexpd_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop_down list to select a valid one.</p>
 
 <p><a name="psexpd_ann_fix_amt"></a><strong>ANNUAL FIXED AMOUNT</strong> - Enter the fixed amount</p>
 
-<p><a name="psexpd_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop down to select a valid one.</p>
+<p><a name="psexpd_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
 
 <p><a name="psexpd_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
 
-<p><a name="psexpd_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Insert None,CPI or Earnings</p>
+<p><a name="psexpd_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
 
-<p><a name="psexpd_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Insert type of Calendar, Renewal or Other.</p>
+<ul>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
+</ul>
 
-<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day ie 1 if type is Other.</p>
+<p><a name="psexpd_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
 
-<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month ie 4 if type is Other.</p>
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
 
 <p>The following screen is displayed when you press 4:</p>
 
@@ -1899,19 +2025,19 @@ See <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> 
 
 <p>Expenses taken as a percentage of a fund for all members.</p>
 
-<p><a name="psexpf_fund"></a><strong>FUND TYPE</strong> - Insert the contribution code or use the drop down to select a valid one.</p>
+<p><a name="psexpf_fund"></a><strong>FUND TYPE</strong> - Insert the contribution code or use the drop-down list to select a valid one.</p>
 
 <p><a name="psexpf_ann"></a><strong>ANNUAL %</strong> - Enter the fixed amount</p>
 
-<p><a name="psexpf_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop down to select a valid one.</p>
+<p><a name="psexpf_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop-down list to select a valid one.</p>
 
 <p><a name="psexpf_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Insert type of Calendar, Renewal or Other.</p>
 
-<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day ie 1 if type is Other.</p>
+<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
 
-<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month ie 4 if type is Other.</p>
+<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
 
-<h3 id="a-namesmpiexaa-namesmpi-expensesasmpi-expenses"><a name="SMPIEX"></a><a name="SMPI Expenses"></a>SMPI Expenses</h3>
+<h3><a name="SMPIEX"></a><a name="SMPI Expenses"></a>SMPI Expenses</h3>
 
 <p>Click Menu and then select the SMPI Expenses option and press <kbd>Return</kbd>. This screen is only available of UK DC Schemes.</p>
 
@@ -1936,21 +2062,40 @@ See <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> 
 
 <p>Fixed contribution expenses by unit disinvestments charges for active members.</p>
 
-<p><a name="psexpa_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop down to select a valid one.</p>
+<p><a name="psexpa_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop-down list to select a valid one.</p>
 
 <p><a name="psexpa_ann_fix_amt"></a><strong>ANNUAL FIXED AMOUNT</strong> - Enter the fixed amount</p>
 
-<p><a name="psexpa_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop down to select a valid one.</p>
+<p><a name="psexpa_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
 
 <p><a name="psexpa_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
 
-<p><a name="psexpa_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Insert None, CPI or Earnings</p>
+<p><a name="psexpa_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
 
-<p><a name="psexpa_eff_dat_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Insert type of Calendar, Renewal or Other.</p>
+<ul>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
+</ul>
 
-<p><a name="psexpa_eff_day"></a><strong>EFFECTIVE DAY</strong> - Enter a day ie 1 if type is Other.</p>
+<p><a name="psexpa_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
 
-<p><a name="psexpa_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month ie 4 if type is Other.</p>
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psexpa_eff_day"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpa_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
 
 <p>The following screen is displayed when you press 3:</p>
 
@@ -1962,21 +2107,40 @@ See <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> 
 
 <p>Fixed contribution expenses by unit disinvestments charges for deferred members</p>
 
-<p><a name="psexpd_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop down to select a valid one.</p>
+<p><a name="psexpd_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop-down list to select a valid one.</p>
 
 <p><a name="psexpd_ann_fix_amt"></a><strong>ANNUAL FIXED AMOUNT</strong> - Enter the fixed amount</p>
 
-<p><a name="psexpd_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop down to select a valid one.</p>
+<p><a name="psexpd_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
 
 <p><a name="psexpd_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
 
-<p><a name="psexpd_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Insert None,CPI or Earnings</p>
+<p><a name="psexpd_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
 
-<p><a name="psexpd_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Insert type of Calendar, Renewal or Other.</p>
+<ul>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
+</ul>
 
-<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day ie 1 if type is Other.</p>
+<p><a name="psexpd_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
 
-<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month ie 4 if type is Other.</p>
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
 
 <p>The following screen is displayed when you press 4:</p>
 
@@ -1988,27 +2152,27 @@ See <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> 
 
 <p>Expenses taken as a percentage of a fund for all members.</p>
 
-<p><a name="psexpf_fund"></a><strong>FUND TYPE</strong> - Insert the contribution code or use the drop down to select a valid one.</p>
+<p><a name="psexpf_fund"></a><strong>FUND TYPE</strong> - Insert the contribution code or use the drop-down list to select a valid one.</p>
 
 <p><a name="psexpf_ann"></a><strong>ANNUAL %</strong> - Enter the fixed amount</p>
 
-<p><a name="psexpf_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop down to select a valid one.</p>
+<p><a name="psexpf_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop-down list to select a valid one.</p>
 
 <p><a name="psexpf_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Insert type of Calendar, Renewal or Other.</p>
 
-<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day ie 1 if type is Other.</p>
+<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
 
-<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month ie 4 if type is Other.</p>
+<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
 
-<h3 id="a-namecharaa-namecharging--acharging-"><a name="CHAR"></a><a name="Charging % "></a>Charging %</h3>
+<h3><a name="CHAR"></a><a name="Charging % "></a>Charging %</h3>
 
 <p>Click Menu. Then select the Charging %  Screen option and press <kbd>Return</kbd></p>
 
-<h3 id="a-nameforfeitaa-nameforfeiture-matrixaforfeiture-matrix"><a name="FORFEIT"></a><a name="Forfeiture Matrix"></a>Forfeiture Matrix</h3>
+<h3><a name="FORFEIT"></a><a name="Forfeiture Matrix"></a>Forfeiture Matrix</h3>
 
 <p>Click Menu. Then select the Forfeiture Matrix Screen option and press <kbd>Return</kbd></p>
 
-<h2 id="a-nameprintaa-nameprinting-scheme-detailsaprinting-scheme-details"><a name="print"></a><a name="Printing Scheme Details"></a>Printing Scheme Details</h2>
+<h2><a name="print"></a><a name="Printing Scheme Details"></a>Printing Scheme Details</h2>
 
 <p>Click the ‘Report’ icon.</p>
 
@@ -2051,7 +2215,7 @@ options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>.</p>
 <p>Select the appropriate option and click on ‘OK’. Click on ‘Cancel’ to exit the printing
 or ‘Help’ to display this help text.</p>
 
-<h3 id="a-namefschprintafull-scheme-details"><a name="fschprint"></a>Full Scheme Details</h3>
+<h3><a name="fschprint"></a>Full Scheme Details</h3>
 
 <p>If you chose to print off a Full Scheme Details Report, a window will now appear which
 asks which screens you wish to print off for this scheme. Various default screens
@@ -2077,7 +2241,7 @@ selection screen is as follows:</p>
 <p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-<h2 id="a-nameinstigating-a-workflow-actionainstigating-a-workflow-action"><a name="Instigating A Workflow Action"></a>Instigating A Workflow Action</h2>
+<h2><a name="Instigating A Workflow Action"></a>Instigating A Workflow Action</h2>
 
 <p>Select the ‘Workflow’ button to instigate a workflow action for the current scheme.
 A scheme record must be selected using the Query option before you can instigate a
@@ -2099,7 +2263,7 @@ the <a href="/pension/workflow/gn_wkflw/#Add A Workflow Type">Workflow Managemen
 <p>You can click ‘OK’ to continue or click ‘Cancel’ to abort the instigation of this
 workflow action.</p>
 
-<h2 id="a-namequickaproducing-ad-hoc-letters"><a name="quick"></a>Producing Ad-Hoc Letters</h2>
+<h2><a name="quick"></a>Producing Ad-Hoc Letters</h2>
 
 <p>If you wish to send an ad-hoc letter to one of the addresses for the current scheme,
 you can easily do it using the ‘Quick Letter’ facility. All that is required is that
@@ -2129,7 +2293,7 @@ the end of the letter.</p>
 from your wordprocessor as required. To return to Pension Master, simply click on
 the titlebar of an active Pension Master window.</p>
 
-<h2 id="a-namenavigateanavigating-between-screens"><a name="navigate"></a>Navigating Between Screens</h2>
+<h2><a name="navigate"></a>Navigating Between Screens</h2>
 
 <p>Click ‘Menu’. A pop-up menu will appear on the screen which allows the user access
 to the various pages of the Scheme File by picking from a list of the available pages.
@@ -2150,14 +2314,14 @@ menu.</p>
   <p>Screen Selection Screen</p>
 </div>
 
-<h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+<h2><a name="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 27/02/2018 10:37:15.</p>
+        <p>Build Date 06/03/2018 09:15:45.</p>
       </div>
     </div>
 

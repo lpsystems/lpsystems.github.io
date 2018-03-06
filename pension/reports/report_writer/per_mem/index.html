@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
 
-    <meta name="generator" content="nanoc 3.7.1">
+    <meta name="generator" content="nanoc 4.9.1">
   </head>
   <body role="document">
 
@@ -44,7 +44,7 @@
       
 
       
-<h2 id="a-nameindexaindex"><a name="INDEX"></a>Index</h2>
+<h2><a name="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -60,7 +60,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2 id="a-name1aa-nameintroductionaintroduction"><a name="1"></a><a name="Introduction"></a>Introduction</h2>
+<h2><a name="1"></a><a name="Introduction"></a>Introduction</h2>
 
 <p>This program produces a report of member details as selected by the user. You can:</p>
 
@@ -95,7 +95,7 @@ menu option:</p>
   <p>Member Report Main Screen</p>
 </div>
 
-<h2 id="a-nameadd-a-new-reportaadd-a-new-report"><a name="Add A New Report"></a>Add A New Report</h2>
+<h2><a name="Add A New Report"></a>Add A New Report</h2>
 
 <p>Click ‘Add’</p>
 
@@ -266,7 +266,12 @@ the following line will be printed after all members in the scheme have been pri
 
 </div>
 
-<p><a name="seq_gr_1"></a><a name="seq_gr_2"></a><a name="seq_gr_3"></a><a name="seq_gr_4"></a><a name="seq_gr_5"></a><a name="seq_gr_6"></a><strong>SEQUENCE</strong> -
+<p><a name="seq_gr_1"></a>
+<a name="seq_gr_2"></a>
+<a name="seq_gr_3"></a>
+<a name="seq_gr_4"></a>
+<a name="seq_gr_5"></a>
+<a name="seq_gr_6"></a><strong>SEQUENCE</strong> -
 The valid entries for this field are ‘A’ for Ascending and ‘D’ for Descending. The
 default is ‘A’. If any other value is entered in this field an error message will
 be displayed. This specifies that a group be sorted into ascending or descending order
@@ -291,7 +296,7 @@ the remaining fields to proceed to the following screen.</p>
 appear on your report or the result of a particular formula to output to the report.
 Which one is dependent on how you enter the field:</p>
 
-<h2 id="a-nameto-output-a-particular-fieldato-output-a-particular-field"><a name="To Output A Particular Field"></a>To Output A Particular Field</h2>
+<h2><a name="To Output A Particular Field"></a>To Output A Particular Field</h2>
 
 <p>Enter the fieldname you wish to appear in the output. If you are unsure of the name
 of the field, click on the lookup icon to see a list of the available fields.</p>
@@ -725,203 +730,206 @@ fund to look the field up in. These are shown in the following table:</p>
       </tbody>
     </table>
 
-    <p>e.g. if you wished to output total employee ordinary contributions for investment
+  </div>
+</div>
+
+<p>e.g. if you wished to output total employee ordinary contributions for investment
 fund 2, you would enter pdh_tee_ordc(02).</p>
 
-    <div class="alert alert-danger" role="alert">
-      <p>The arguments have to be enclosed in brackets () and where there is more than one
+<div class="alert alert-danger" role="alert">
+  <p>The arguments have to be enclosed in brackets () and where there is more than one
 argument, the arguments are separated by a comma e.g. pmq_current(NORM,1) - this selects
 the first quotation result for Quotation Type NORM.</p>
-    </div>
+</div>
 
-    <p><a name="popup"></a></p>
+<p><a name="popup"></a></p>
 
-    <div class="alert alert-danger" role="alert">
-      <p>If flag 2 is used as the 2nd argument for the Unit Prices table, then during the report run a popup window will appear that prompts the user to enter a date.
+<div class="alert alert-danger" role="alert">
+  <p>If flag 2 is used as the 2nd argument for the Unit Prices table, then during the report run a popup window will appear that prompts the user to enter a date.
 Only one popup window appears per run, no matter how many flag 2 references are used throughout the report set up.
 A date must be entered in this field.</p>
-    </div>
+</div>
 
-    <div class="alert alert-danger" role="alert">
-      <p>If the index for Member Address Details (pe_maddr) is 0 then the current address will be returned.</p>
-    </div>
+<div class="alert alert-danger" role="alert">
+  <p>If the index for Member Address Details (pe_maddr) is 0 then the current address will be returned.</p>
+</div>
 
-    <h2 id="a-nameto-output-the-results-of-a-particular-formulaato-output-the-results-of-a-particular-formula"><a name="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
+<h2><a name="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
 
-    <p>To reference calculations in your report, enter the appropriate formula code in the
+<p>To reference calculations in your report, enter the appropriate formula code in the
 format:</p>
 
-    <div class="well">
+<div class="well">
 
-      <p>#calc(formula_code,width)</p>
+  <p>#calc(formula_code,width)</p>
 
-    </div>
+</div>
 
-    <ul>
-      <li>where formula_code is a valid formula code for the scheme implied by the current selection
+<ul>
+  <li>where formula_code is a valid formula code for the scheme implied by the current selection
 criteria. If an invalid formula code is entered, you will be warned of this and invited
 to re-enter a valid formula code.</li>
-      <li>where width is a number that is between 10 and 100. The minimum width of the result
+  <li>where width is a number that is between 10 and 100. The minimum width of the result
 of a formula is 10, this is the width of the standard date format (dd/mm/yyyy). The
 maximum width, 100, is the longest character string that can be produced by a formula.</li>
-    </ul>
+</ul>
 
-    <p>If you are unsure of a particular formula code, type at least the # of the #calc and
+<p>If you are unsure of a particular formula code, type at least the # of the #calc and
 then click on the lookup icon to see a list of formula codes
 for the current implied scheme. Upon selecting a formula code, the report field will
 automatically be filled in with the correct #calc(formula_code,width) syntax e.g.</p>
 
-    <p>#calc(092,10). The width of the formula result is defaulted to 10 but may be changed as required.</p>
+<p>#calc(092,10). The width of the formula result is defaulted to 10 but may be changed as required.</p>
 
-    <p>The field must be set up in <a href="/pension/reports/report_writer/pem_rep/">Member Report Units</a>
+<p>The field must be set up in <a href="/pension/reports/report_writer/pem_rep/">Member Report Units</a>
 or can be a direct link to a valid formula for the current scheme.
 In the case of a field, if it does not exist in Member Report Units an error message
 will be displayed and the fieldname must be re-entered. Click on the lookup icon
 to see a list of fields for the report.</p>
 
-    <p>When a field is entered a message will be displayed:</p>
+<p>When a field is entered a message will be displayed:</p>
 
-    <div class="well">
+<div class="well">
 
-      <p>Report Width : xx</p>
+  <p>Report Width : xx</p>
 
-    </div>
+</div>
 
-    <p><strong>TOTAL</strong> - This denotes whether you wish a total to appear for this field and
+<p><strong>TOTAL</strong> - This denotes whether you wish a total to appear for this field and
 is only relevant for numeric fields.
 If the field is numeric this field may be ticked to specify that this is a field
 to be included in the totals line which was specified in the group by section. If
 the field is ticked for a character or date field the field will be unticked.</p>
 
-    <p>e.g. if you have entered pm_scheme in the GROUP BY field on the first screen
+<p>e.g. if you have entered pm_scheme in the GROUP BY field on the first screen
 with a tick against the corresponding total line, then if you have a field pds_grsal on
 your report with a tick against the TOTAL field, when your report is produced, after
 each scheme the report will total up the gross salary column and print the total on
 the report.</p>
 
-    <p><a name="3"></a>The third screen is displayed as follows:</p>
+<p><a name="3"></a>The third screen is displayed as follows:</p>
 
-    <div class="screen">
-      <p><img src="/pension/images/per_mem7.jpg" alt="Heading Selection Screen" /></p>
+<div class="screen">
+  <p><img src="/pension/images/per_mem7.jpg" alt="Heading Selection Screen" /></p>
 
-      <p>Heading Selection Screen</p>
-    </div>
+  <p>Heading Selection Screen</p>
+</div>
 
-    <p><strong>HEADING 1/ HEADING 2</strong> - Enter up to two lines of column headings for each field
+<p><strong>HEADING 1/ HEADING 2</strong> - Enter up to two lines of column headings for each field
 that is to be output to the report. The column headings default to the appropriate
 values that have been set up in <a href="/pension/reports/report_writer/pem_rep/">Member Report Units</a>
 and can be overwritten by the user. These are then saved with the report for future use.</p>
 
-    <div class="alert alert-danger" role="alert">
-      <p>If you are producing the report in Report and not Export format, the width of the
+<div class="alert alert-danger" role="alert">
+  <p>If you are producing the report in Report and not Export format, the width of the
 report should not go over 180 characters. If the report width goes over 180 characters,
 an error message will be displayed and you should then remove any fields that you
 do not require from your report so that the total report width is less than 180 characters.</p>
-    </div>
+</div>
 
-    <p>When all fields have been entered click on ‘OK’ to process the report or click on
+<p>When all fields have been entered click on ‘OK’ to process the report or click on
 ‘Cancel’ to abort without processing your report. A message will be displayed:</p>
 
-    <div class="well">
+<div class="well">
 
-      <p>Processing report … Please Wait</p>
+  <p>Processing report … Please Wait</p>
 
-    </div>
+</div>
 
-    <p>If you have opted to export your data, Microsoft Excel will be started automatically
+<p>If you have opted to export your data, Microsoft Excel will be started automatically
 and your data placed into a fresh spreadsheet within Excel. The filename for this
 spreadsheet is c:\penmast.xls. Once you have finished with this spreadsheet, exit
 Microsoft Excel to return control to the Member Report program.</p>
 
-    <div class="alert alert-danger" role="alert">
-      <p>Pension Master will automatically overwrite the file c:\penmast.xls with the new
+<div class="alert alert-danger" role="alert">
+  <p>Pension Master will automatically overwrite the file c:\penmast.xls with the new
 data export if you run the Member Report with the export option. Any data that is
 currently in that file will thus be overwritten.</p>
 
-      <p>If you wish to keep this data, we suggest you manually copy the file c:\penmast.xls
+  <p>If you wish to keep this data, we suggest you manually copy the file c:\penmast.xls
 to another directory prior to running your data export.</p>
-    </div>
+</div>
 
-    <p><a name="save"></a></p>
+<p><a name="save"></a></p>
 
-    <p>When the report has been processed you will be asked if you wish to save this report for later use.</p>
+<p>When the report has been processed you will be asked if you wish to save this report for later use.</p>
 
-    <p><strong>REPORT CODE</strong> - Enter a short alphanumeric code of up to 8 characters to save
+<p><strong>REPORT CODE</strong> - Enter a short alphanumeric code of up to 8 characters to save
 your report under. If the report code already exists on the report file for the current
 scheme then you will be asked if you want to overwrite it, or enter another report
 code.</p>
 
-    <p><strong>SCHEME CODE</strong> - Enter the scheme code for this report. This is the scheme code
+<p><strong>SCHEME CODE</strong> - Enter the scheme code for this report. This is the scheme code
 that corresponds to the scheme you wish to use this report for. You should note, however,
 that this will not preclude you using this report for other schemes if you so wish.
 The scheme code must be a valid code on the scheme file and if it is not, an error
 message will be displayed. If you are unsure of the scheme code, click on the lookup icon
 for a list of available schemes.</p>
 
-    <p><strong>REPORT DESCRIPTION</strong> -The report description must be entered. This is a more
+<p><strong>REPORT DESCRIPTION</strong> -The report description must be entered. This is a more
 lengthy description for your report which you can use to identify the report for future
 use e.g. “Basic Membership Listing”.</p>
 
-    <p>When the report description has been entered click on ‘OK’ to save the report to file,
+<p>When the report description has been entered click on ‘OK’ to save the report to file,
 or click on ‘Cancel’ to cancel saving the report to file.</p>
 
-    <p>If you do not wish to save the report, click on the ‘No’ menu option .</p>
+<p>If you do not wish to save the report, click on the ‘No’ menu option .</p>
 
-    <p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-    <h2 id="a-namesearch-for-an-existing-reportasearch-for-an-existing-report"><a name="Search For An Existing Report"></a>Search For An Existing Report</h2>
+<h2><a name="Search For An Existing Report"></a>Search For An Existing Report</h2>
 
-    <p>Click ‘Query’.</p>
+<p>Click ‘Query’.</p>
 
-    <p>The following window will now be displayed:</p>
+<p>The following window will now be displayed:</p>
 
-    <div class="screen">
-      <p><img src="/pension/images/per_mem4.jpg" alt="Report Selection Screen" /></p>
+<div class="screen">
+  <p><img src="/pension/images/per_mem4.jpg" alt="Report Selection Screen" /></p>
 
-      <p>Report Selection Screen</p>
-    </div>
+  <p>Report Selection Screen</p>
+</div>
 
-    <p>Enter the selection criteria for the report and click on ‘OK’, or <kbd>Return</kbd> when
+<p>Enter the selection criteria for the report and click on ‘OK’, or <kbd>Return</kbd> when
 in the report description field. Pension Master defaults to selecting all available
 reports for the scheme implied by the current selection criteria, which is usually
 the scheme the current member is in.</p>
 
-    <p>All reports that match the selection criteria will be displayed. If more than 10 records
+<p>All reports that match the selection criteria will be displayed. If more than 10 records
 are selected click on the ‘Next Record’ button to view the next screen of reports,
 and click on the ‘Prev Record’ button to view the previous screen.</p>
 
-    <p>Using the arrow keys, go to the report that is required and click on ‘OK’ to select
+<p>Using the arrow keys, go to the report that is required and click on ‘OK’ to select
 it.</p>
 
-    <p>If the existing report used Advanced Selection Criteria then this window will automatically
+<p>If the existing report used Advanced Selection Criteria then this window will automatically
 displayed. Otherwise the main Member Report screen will be shown. Enter the selection
 criteria for members as required and click on ‘OK’. If no member records are found
 then an error message will be displayed.</p>
 
-    <p>You will then be returned to the main menu and can select the appropriate menu option
+<p>You will then be returned to the main menu and can select the appropriate menu option
 as required.</p>
 
-    <h2 id="a-namere-run-an-existing-reportare-run-an-existing-report"><a name="Re-Run An Existing Report"></a>Re-Run An Existing Report</h2>
+<h2><a name="Re-Run An Existing Report"></a>Re-Run An Existing Report</h2>
 
-    <p>Click ‘Run’.</p>
+<p>Click ‘Run’.</p>
 
-    <div class="alert alert-danger" role="alert">
-      <p>You must have selected a report to run using the ‘Query’ menu option prior to selecting
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to run using the ‘Query’ menu option prior to selecting
 the ‘Run’ menu option. If you have not done this then an error message will
 be displayed and you will be returned to the main menu.</p>
-    </div>
+</div>
 
-    <p>You are now prompted as to whether you wish the output of the report to be in export
+<p>You are now prompted as to whether you wish the output of the report to be in export
 file format.</p>
 
-    <p>The report will produce a data export file in .CSV (comma separated value) file format
+<p>The report will produce a data export file in .CSV (comma separated value) file format
 and also export the data directly into a Microsoft Excel spreadsheet on your PC.</p>
 
-    <p>Details of where these data files can be found is set out in the <a href="#Where To Find The Resulting Exported Data File">Where
+<p>Details of where these data files can be found is set out in the <a href="#Where To Find The Resulting Exported Data File">Where
 To Find The Resulting Exported Data File</a> section later in this document.</p>
 
-    <p>If you have chosen to export your report data, you will then be asked if you wish
+<p>If you have chosen to export your report data, you will then be asked if you wish
 to print column headers on the exported data. Answer ‘Yes’ or ‘No’ as appropriate.
 If you are doing a data extract for electronic transmission onto another software
 system, you would normally not export column headings and just send a block of data
@@ -929,116 +937,114 @@ which can then be easily imported into other software systems. If, however you w
 to export the data to an Excel spreadsheet that can be easily understood by another
 user we would recommend that you export column headings.</p>
 
-    <p>If you choose not to output the report in export format, the report will be produced
+<p>If you choose not to output the report in export format, the report will be produced
 in normal report format and be available to view/print in the same way as all other
 reports in Pension Master.</p>
 
-    <div class="well">
+<div class="well">
 
-      <p>Processing report … Please Wait</p>
+  <p>Processing report … Please Wait</p>
 
-    </div>
+</div>
 
-    <p>If you have selected the eXport option from the menu, Microsoft Excel will be started
+<p>If you have selected the eXport option from the menu, Microsoft Excel will be started
 automatically and your data placed into a fresh spreadsheet within Excel. The filename
 for this spreadsheet is c:\penmast.xls. Once you have finished with this spreadsheet,
 exit Microsoft Excel to return control to the Member Report program.</p>
 
-    <div class="alert alert-danger" role="alert">
-      <p>Pension Master will automatically overwrite the file c:\penmast.xls with the new
+<div class="alert alert-danger" role="alert">
+  <p>Pension Master will automatically overwrite the file c:\penmast.xls with the new
 data export if you run the Member Report with the eXport menu option. Any data that
 is currently in that file will thus be overwritten.</p>
 
-      <p>If you wish to keep this data, we suggest you manually copy the file c:\penmast.xls
+  <p>If you wish to keep this data, we suggest you manually copy the file c:\penmast.xls
 to another directory prior to running your data export.</p>
-    </div>
+</div>
 
-    <h2 id="a-nameupdate-an-existing-reportaupdate-an-existing-report"><a name="Update An Existing Report"></a>Update An Existing Report</h2>
+<h2><a name="Update An Existing Report"></a>Update An Existing Report</h2>
 
-    <p>Click ‘Update’.</p>
+<p>Click ‘Update’.</p>
 
-    <div class="alert alert-danger" role="alert">
-      <p>You must have selected a report to run using the ‘Query’ menu option prior to selecting
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to run using the ‘Query’ menu option prior to selecting
 the ‘Update’ menu option. If you have not done this then an error message will
 be displayed and you will be returned to the main menu.</p>
-    </div>
+</div>
 
-    <p>The report advance selection ciretia can be overwritten if required, or click on ‘OK’ to go on to the
+<p>The report advance selection ciretia can be overwritten if required, or click on ‘OK’ to go on to the
 next screen. If you need to make changes to the fields saved in this report tick screen 2. If the change is to the column headings tick screen 3.</p>
 
-    <p>The fields saved for this report will be displayed to the second screen. These fields
+<p>The fields saved for this report will be displayed to the second screen. These fields
 may be overwritten if required by pressing update in that screen. Each screen is dealt with individually.</p>
 
-    <p>To add a field in the middle of the report click on the ‘Add Row’ button, and enter
+<p>To add a field in the middle of the report click on the ‘Add Row’ button, and enter
 the fieldname.</p>
 
-    <p>To delete a field in the middle of the report click on the ‘Delete Row’ button.</p>
+<p>To delete a field in the middle of the report click on the ‘Delete Row’ button.</p>
 
-    <p>To append extra fields to the end of the report go to the next blank field and enter
+<p>To append extra fields to the end of the report go to the next blank field and enter
 extra fields. To process the report click on ‘OK’. A message will be displayed:</p>
 
-    <p>When you have made your changes to the screen press ok. To rerun the report with the changes simply press ‘Run’.</p>
+<p>When you have made your changes to the screen press ok. To rerun the report with the changes simply press ‘Run’.</p>
 
-    <h2 id="a-namedelete-a-member-reportadelete-a-member-report"><a name="Delete A Member Report"></a>Delete A Member Report</h2>
+<h2><a name="Delete A Member Report"></a>Delete A Member Report</h2>
 
-    <p>Click ‘Delete’.</p>
+<p>Click ‘Delete’.</p>
 
-    <div class="alert alert-danger" role="alert">
-      <p>You must have selected a report to delete using the ‘Query’ menu option prior to
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to delete using the ‘Query’ menu option prior to
 selecting the ‘Delete’ menu option. If you have not done this then an error
 message will be displayed and you will be returned to the main menu.</p>
-    </div>
+</div>
 
-    <p>This option allows you to delete an existing Member Report from Pension Master.</p>
+<p>This option allows you to delete an existing Member Report from Pension Master.</p>
 
-    <p>When the delete option is selected you will be asked to confirm and re-confirm that you wish to delete the current Member Report.</p>
+<p>When the delete option is selected you will be asked to confirm and re-confirm that you wish to delete the current Member Report.</p>
 
-    <h2 id="a-namelist-reports-currently-set-upaa-namelistalist-reports-currently-set-up"><a name="List Reports Currently Set Up"></a><a name="list"></a>List Reports Currently Set Up</h2>
+<h2><a name="List Reports Currently Set Up"></a><a name="list"></a>List Reports Currently Set Up</h2>
 
-    <p>Click on the ‘List’ menu option.</p>
+<p>Click on the ‘List’ menu option.</p>
 
-    <p>This allows you to produce a list of all the Member Reports that are currently on
+<p>This allows you to produce a list of all the Member Reports that are currently on
 Pension Master, sorted by scheme code and report code.</p>
 
-    <p>The following screen is displayed:</p>
+<p>The following screen is displayed:</p>
 
-    <div class="screen">
-      <p><img src="/pension/images/per_mem5.jpg" alt="Scheme Selection Screen" /></p>
+<div class="screen">
+  <p><img src="/pension/images/per_mem5.jpg" alt="Scheme Selection Screen" /></p>
 
-      <p>Scheme Selection Screen</p>
-    </div>
+  <p>Scheme Selection Screen</p>
+</div>
 
-    <p>Enter the selection criteria to select the scheme or schemes you require for the report
+<p>Enter the selection criteria to select the scheme or schemes you require for the report
 and click on ‘OK’ to proceed.</p>
 
-    <p>The following message is now displayed:</p>
+<p>The following message is now displayed:</p>
 
-    <div class="well">
+<div class="well">
 
-      <p>Processing report … Please Wait</p>
+  <p>Processing report … Please Wait</p>
 
-    </div>
+</div>
 
-    <p>Once the report has been produced, options are displayed for printing.</p>
+<p>Once the report has been produced, options are displayed for printing.</p>
 
-    <p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-    <h2 id="a-namewhere-to-find-the-resulting-exported-data-fileawhere-to-find-the-resulting-exported-data-file"><a name="Where To Find The Resulting Exported Data File"></a>Where To Find The Resulting Exported Data File</h2>
+<h2><a name="Where To Find The Resulting Exported Data File"></a>Where To Find The Resulting Exported Data File</h2>
 
-    <p>The data is written into a file, c:\penmast.csv, as a comma seperated values (CSV)
+<p>The data is written into a file, c:\penmast.csv, as a comma seperated values (CSV)
 formatted file.</p>
 
-    <h2 id="a-nameexitaexit-program"><a name="Exit"></a>Exit Program</h2>
+<h2><a name="Exit"></a>Exit Program</h2>
 
-    <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
-  </div>
-</div>
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 27/02/2018 10:37:23.</p>
+        <p>Build Date 06/03/2018 09:15:47.</p>
       </div>
     </div>
 

@@ -1,0 +1,5155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+
+    <title>Codes & Descriptions</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Codes & Descriptions</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#gn_diary">Diary Entry</a>
+    <ul>
+      <li><a href="#gnd_source">Source of Diary Entry</a></li>
+      <li><a href="#gnd_status">Diary Entry Status</a></li>
+    </ul>
+  </li>
+  <li><a href="#gn_exchange">Exchange Rates</a>
+    <ul>
+      <li><a href="#gne_curr_from">Currency Code From</a></li>
+      <li><a href="#gne_curr_to">Currency Code To</a></li>
+    </ul>
+  </li>
+  <li><a href="#gn_user">User Details</a>
+    <ul>
+      <li><a href="#user_superv">User Supervisory Status</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_annuity">Annuity</a>
+    <ul>
+      <li><a href="#pa_pay_freq">Pay Frequency</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_bat_head">Batch Data Input Details</a>
+    <ul>
+      <li><a href="#ba_type">Batch Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_bpens">Basic Disability Benefit Details</a>
+    <ul>
+      <li><a href="#pbps_pay_freq">Pay Frequency</a></li>
+      <li><a href="#pbps_reason_cess">Cessation Details Reason</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_broker">Broker Details</a>
+    <ul>
+      <li><a href="#pbr_agent">Agent or Introducer</a></li>
+      <li><a href="#pbr_status">Broker Status</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_bulkrebal_h">Bulk Rebalance Switch Header Details</a>
+    <ul>
+      <li><a href="#pbrh_status">Switch Status</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_bulksw_h">Bulk Investment Switch Header Details</a>
+    <ul>
+      <li><a href="#psbh_basis">Switch Basis</a></li>
+      <li><a href="#psbh_dt_type">Bulk Switch Date Type</a></li>
+      <li><a href="#psbh_expenses">Bulk Switch Expenses</a></li>
+      <li><a href="#psbh_sale_trans">Sale Transaction Type</a></li>
+      <li><a href="#psbh_status">Switch Status</a></li>
+      <li><a href="#psbh_type">Switch Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_care_title">CARE Title Details</a>
+    <ul>
+      <li><a href="#pctt_date_type">Option 2 Effective Date Type</a></li>
+      <li><a href="#pctt_freq">Option 2 Revaluation Frequency</a></li>
+      <li><a href="#pctt_reval_day">Option 2 Day of Revaluation</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_cashsetup">Cash Investment Setup</a>
+    <ul>
+      <li><a href="#pcs_active">Active/Inactive</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_cat">Category Details</a>
+    <ul>
+      <li><a href="#pct_end_mth">Normal Pension Date Adjustment</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_catcont_h">Category Contribution Details Header</a>
+    <ul>
+      <li><a href="#pcch_frequency">Contribution Frequency</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_cforfeit_h">Category Forfeiture Matrix Header</a>
+    <ul>
+      <li><a href="#pcfh_date">Forfeiture Start Date</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_codem">Codes Details</a>
+    <ul>
+      <li><a href="#pcdm_type">Code Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_cover">Cover Details</a>
+    <ul>
+      <li><a href="#pco_payment_type">Payment Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_cvesting_h">Scheme Vesting Matrix Header</a>
+    <ul>
+      <li><a href="#pcvh_date">Vesting Start Date</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_dec_str">History Details</a>
+    <ul>
+      <li><a href="#pdec_newstat">History New Code</a></li>
+      <li><a href="#pdec_oldstat">History Old Code</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_dep">Dependants/Beneficiaries Details</a>
+    <ul>
+      <li><a href="#pd_class">Dependants Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_dirdebsch">Direct Debit Schemes</a>
+    <ul>
+      <li><a href="#pdds_return_code">Return Code</a></li>
+      <li><a href="#pdds_transaction_code">Transaction Code</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_dpens">Basic Deferred Pensioner Details</a>
+    <ul>
+      <li><a href="#pdps_pay_freq">Pay Frequency</a></li>
+      <li><a href="#pdps_reason_cess">Cessation Details Reason</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_fac_h">Factor Head Details</a>
+    <ul>
+      <li><a href="#pfach_sex">Factor Table Sex</a></li>
+      <li><a href="#pfach_type">Type of Factor</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_invfun">Investment Fund Details</a>
+    <ul>
+      <li><a href="#pif_buy_basis">Unit Buy Basis</a></li>
+      <li><a href="#pif_sell_basis">Unit Sell Basis</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_lifeswit_h">Lifestyle Switch Header Details</a>
+    <ul>
+      <li><a href="#plsh_status">Lifestyle Switch Status</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_maddr">Member Address Details</a>
+    <ul>
+      <li><a href="#pmad_system_id">Member’s Address Changed By</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_mcover">Member Cover Details</a>
+    <ul>
+      <li><a href="#pmco_calc_type">Calculation Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_mem">Basic Member Details</a>
+    <ul>
+      <li><a href="#pm_economic_status">Economic Status</a></li>
+      <li><a href="#pm_marital_stat">Marital Status</a></li>
+      <li><a href="#pm_sex">Sex</a></li>
+      <li><a href="#pm_title">Title</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_pens">Basic Pensioner Details</a>
+    <ul>
+      <li><a href="#pps_pay_freq">Pay Frequency</a></li>
+      <li><a href="#pps_reason_cess">Cessation Details Reason</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_product">Product Details</a>
+    <ul>
+      <li><a href="#ppr_payment_type">Payment Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_rebalance_h">Rebalance Switch Header Details</a>
+    <ul>
+      <li><a href="#prbh_expenses">Rebalance Switch Header Expenses</a></li>
+      <li><a href="#prbh_status">Rebalance Switch Header Status Code</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_renewal">Renewal Details</a>
+    <ul>
+      <li><a href="#prnl_full_part">Full / Partial Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sasset_h">Scheme Asset Header Details</a>
+    <ul>
+      <li><a href="#psash_asset_type">Asset Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sch">Scheme File</a>
+    <ul>
+      <li><a href="#psc_base">Base Currency</a></li>
+      <li><a href="#psc_carried_int_plan_type">Carried Interest Plan Type</a></li>
+      <li><a href="#psc_emp_type">Employment Type</a></li>
+      <li><a href="#psc_er_conts">ER Conts Option</a></li>
+      <li><a href="#psc_leaver">Leaver Option</a></li>
+      <li><a href="#psc_product_type">Product Type</a></li>
+      <li><a href="#psc_region">Scheme Region</a></li>
+      <li><a href="#psc_sal_freq">Salary Frequency</a></li>
+      <li><a href="#psc_status">Status</a></li>
+      <li><a href="#psc_type">Scheme Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sch_mmc">Scheme Monetary Movements Configuration</a>
+    <ul>
+      <li><a href="#psm_type">Movement Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_schmat_h">Scheme Contribution Matrix Header</a>
+    <ul>
+      <li><a href="#psmh_cap_inc_rate">Salary Cap Increase Rate</a></li>
+      <li><a href="#psmh_eff_dt">Effective Date</a></li>
+      <li><a href="#psmh_service_dt">Service Date</a></li>
+      <li><a href="#psmh_type">Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_scont">Scheme Contribution Type Setup</a>
+    <ul>
+      <li><a href="#psct_type">Contribution Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_scover">Scheme Cover Details</a>
+    <ul>
+      <li><a href="#psco_calc_type">Calculation Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sforfeit_h">Scheme Forfeiture Matrix Header</a>
+    <ul>
+      <li><a href="#psfh_date">Forfeiture Start Date</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sfunds">Scheme Investment Fund Details</a>
+    <ul>
+      <li><a href="#psf_rebate_freq">Rebate Frequency</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_slife_h">Scheme Lifestyle Matrix Header Details</a>
+    <ul>
+      <li><a href="#pslh_freq">Scheme Lifestyle Matrix Frequency</a></li>
+      <li><a href="#pslh_type">Scheme Lifestyle Matrix Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sorpexpa">Fixed Cont. Expenses by Unit Dis. Active</a>
+    <ul>
+      <li><a href="#psexpa_eff_dt_type">Effective Date Type</a></li>
+      <li><a href="#psexpa_freq">Frequency</a></li>
+      <li><a href="#psexpa_fut_incr_basis">Future Increases Basis</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sorpexpd">Fixed Cont. Exp. by Unit Dis.  Deferred</a>
+    <ul>
+      <li><a href="#psexpd_eff_dt_type">Effective Date Type</a></li>
+      <li><a href="#psexpd_freq">Frequency</a></li>
+      <li><a href="#psexpd_fut_incr_basis">Future Increases Basis</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sorpexpf">% of Fund Exp. by Unit Dis.</a>
+    <ul>
+      <li><a href="#psexpf_eff_dt_type">Effective Date Type</a></li>
+      <li><a href="#psexpf_freq">Frequency</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_spouses">Divorce and Spouses’ Details</a>
+    <ul>
+      <li><a href="#pmsp_ctry_law">Country of law</a></li>
+      <li><a href="#pmsp_title">Spouse’s Title</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sregfee">Scheme Regular Contribution Fee Details</a>
+    <ul>
+      <li><a href="#psre_calc_type">Calculation Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sta">Status Details</a>
+    <ul>
+      <li><a href="#ps_type">Status Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_stock">Plan Stock Account Details</a>
+    <ul>
+      <li><a href="#pst_process">Process Update</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_strus">Scheme Trustees</a>
+    <ul>
+      <li><a href="#pstr_sole_corp">Sole/Co. Trustee</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_svesting_h">Scheme Vesting Matrix Header</a>
+    <ul>
+      <li><a href="#psvh_date">Vesting Start Date</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sw_win">Switch Window Settings</a>
+    <ul>
+      <li><a href="#psw_frequency">Frequency</a></li>
+      <li><a href="#psw_length_type">Length Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_switch_h">Switch Header Details</a>
+    <ul>
+      <li><a href="#pswh_basis">Switch Header Basis</a></li>
+      <li><a href="#pswh_dt_type">Switch Header Date Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_switch_h">Switch Header Details</a>
+    <ul>
+      <li><a href="#pswh_expenses">Switch Header Expenses</a></li>
+      <li><a href="#pswh_sale_trans">Switch Header Sale Transaction Type</a></li>
+      <li><a href="#pswh_status">Switch Header Status Code</a></li>
+      <li><a href="#pswh_type">Switch Header Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sysp">System Parameters Details</a>
+    <ul>
+      <li><a href="#pp_age_calc">System Parameter Age Calculation</a></li>
+      <li><a href="#pp_risk_date">Risk Only Date Type</a></li>
+      <li><a href="#pp_sort1">System Parameter Sort Order 1</a></li>
+      <li><a href="#pp_sort2">System Parameter Sort Order 2</a></li>
+      <li><a href="#pp_sort3">System Parameter Sort Order 3</a></li>
+      <li><a href="#pp_sort4">System Parameter Sort Order 4</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sysp_mmc">Monetary Movements Configuration</a>
+    <ul>
+      <li><a href="#ppm_type">Movement Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_tvin">Transfer In Details</a>
+    <ul>
+      <li><a href="#ptvi_sc_type">Transfer In Scheme Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_tvout">Transfer Out Details</a>
+    <ul>
+      <li><a href="#ptvo_icne_type">Transfer Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#py_sch">Payroll Scheme Details</a>
+    <ul>
+      <li><a href="#pys_sender">RTI Sender</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>Throughout Pension Master pairs of Codes are saved to database records to maximize disc space and access speed. The codes themselves can be somewhat cryptic so for users of Pension Master we show a wordy description of the code. In some cases it is necessary for the user to know which code has been assigned to the description. For example if you needed to access the Marital Status of a Member in Formula you would use #pm_marital_stat, that could then return ‘MA’ as a value. The value in this case has a description of ‘Married’.</p>
+
+<h2><a name="gn_diary"></a>Table - gn_diary / Diary Entry</h2>
+
+<h3><a name="gnd_source"></a>Field - gnd_source / Source of Diary Entry</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">MEM</td>
+          <td style="text-align: left">Member File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SCH</td>
+          <td style="text-align: left">Scheme File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">COM</td>
+          <td style="text-align: left">Company File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CAT</td>
+          <td style="text-align: left">Category File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GEN</td>
+          <td style="text-align: left">General</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">INT</td>
+          <td style="text-align: left">Internet</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="gnd_status"></a>Field - gnd_status / Diary Entry Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left">Completed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">New</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">W</td>
+          <td style="text-align: left">Work-In-Progress</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="gn_exchange"></a>Table - gn_exchange / Exchange Rates</h2>
+
+<h3><a name="gne_curr_from"></a>Field - gne_curr_from / Currency Code From</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">ATS</td>
+          <td style="text-align: left">Austrian Schilling</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BEF</td>
+          <td style="text-align: left">Belgian Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DKK</td>
+          <td style="text-align: left">Danish Krone</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DEM</td>
+          <td style="text-align: left">Deutsche Mark</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EUR</td>
+          <td style="text-align: left">Euro</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FIM</td>
+          <td style="text-align: left">Finish Markka</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FFR</td>
+          <td style="text-align: left">French Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GRD</td>
+          <td style="text-align: left">Greek Drachma</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">IEP</td>
+          <td style="text-align: left">Irish Punt</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ITL</td>
+          <td style="text-align: left">Italian Lira</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LUF</td>
+          <td style="text-align: left">Luxembourg Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NLG</td>
+          <td style="text-align: left">Netherlands Guilder</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PTE</td>
+          <td style="text-align: left">Portuguese Escudo</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GBP</td>
+          <td style="text-align: left">Pound Sterling</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ESP</td>
+          <td style="text-align: left">Spanish Peseta</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SEK</td>
+          <td style="text-align: left">Swedish Krona</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">USD</td>
+          <td style="text-align: left">US Dollars</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="gne_curr_to"></a>Field - gne_curr_to / Currency Code To</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">ATS</td>
+          <td style="text-align: left">Austrian Schilling</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BEF</td>
+          <td style="text-align: left">Belgian Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DKK</td>
+          <td style="text-align: left">Danish Krone</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DEM</td>
+          <td style="text-align: left">Deutsche Mark</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EUR</td>
+          <td style="text-align: left">Euro</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FIM</td>
+          <td style="text-align: left">Finish Markka</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FFR</td>
+          <td style="text-align: left">French Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GRD</td>
+          <td style="text-align: left">Greek Drachma</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">IEP</td>
+          <td style="text-align: left">Irish Punt</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ITL</td>
+          <td style="text-align: left">Italian Lira</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LUF</td>
+          <td style="text-align: left">Luxembourg Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NLG</td>
+          <td style="text-align: left">Netherlands Guilder</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PTE</td>
+          <td style="text-align: left">Portuguese Escudo</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GBP</td>
+          <td style="text-align: left">Pound Sterling</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ESP</td>
+          <td style="text-align: left">Spanish Peseta</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SEK</td>
+          <td style="text-align: left">Swedish Krona</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">USD</td>
+          <td style="text-align: left">US Dollars</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="gn_user"></a>Table - gn_user / User Details</h2>
+
+<h3><a name="user_superv"></a>Field - user_superv / User Supervisory Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left">Supervisor Full Access</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">V</td>
+          <td style="text-align: left">Supervisor View Only</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">No Supervisor Access</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_annuity"></a>Table - pe_annuity / Annuity</h2>
+
+<h3><a name="pa_pay_freq"></a>Field - pa_pay_freq / Pay Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annually</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_bat_head"></a>Table - pe_bat_head / Batch Data Input Details</h2>
+
+<h3><a name="ba_type"></a>Field - ba_type / Batch Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Salary Screen 1</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Salary Screen 2</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">Salary Screen 3</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Salary Screen 4</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">NI History</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Contribution History</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_bpens"></a>Table - pe_bpens / Basic Disability Benefit Details</h2>
+
+<h3><a name="pbps_pay_freq"></a>Field - pbps_pay_freq / Pay Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">4 Weekly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">26</td>
+          <td style="text-align: left">Fortnightly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">52</td>
+          <td style="text-align: left">Weekly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pbps_reason_cess"></a>Field - pbps_reason_cess / Cessation Details Reason</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Buy Out</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Death</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">End of Disability</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_broker"></a>Table - pe_broker / Broker Details</h2>
+
+<h3><a name="pbr_agent"></a>Field - pbr_agent / Agent or Introducer</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Agent</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Introducer</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pbr_status"></a>Field - pbr_status / Broker Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Active</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Pending</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Closed</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_bulkrebal_h"></a>Table - pe_bulkrebal_h / Bulk Rebalance Switch Header Details</h2>
+
+<h3><a name="pbrh_status"></a>Field - pbrh_status / Switch Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Not Yet Processed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Switch Declined - No Units/Negative Units</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Switch Declined - Current Distribution Matches Portfolio Split</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Switch Failed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Switch Pending</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Partially Finished</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Switch Finished</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_bulksw_h"></a>Table - pe_bulksw_h / Bulk Investment Switch Header Details</h2>
+
+<h3><a name="psbh_basis"></a>Field - psbh_basis / Switch Basis</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Monetary Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Percentage of Units</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Number of Units</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psbh_dt_type"></a>Field - psbh_dt_type / Bulk Switch Date Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Full Switch</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Switch Range</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psbh_expenses"></a>Field - psbh_expenses / Bulk Switch Expenses</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Calculated Expenses</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Free Switch</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psbh_sale_trans"></a>Field - psbh_sale_trans / Sale Transaction Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Normal</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Clawback</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Forfeiture</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Release</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NC</td>
+          <td style="text-align: left">Normal &amp; Clawback</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NF</td>
+          <td style="text-align: left">Normal &amp; Forfeiture</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NR</td>
+          <td style="text-align: left">Normal &amp; Release</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RC</td>
+          <td style="text-align: left">Release &amp; Clawback</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RF</td>
+          <td style="text-align: left">Release &amp; Forfeiture</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psbh_status"></a>Field - psbh_status / Switch Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Not Yet Processed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Switch Declined - No Units/Negative Units</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Switch Declined - Current Distribution Matches Portfolio Split</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Switch Failed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Switch Pending</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Partially Finished</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Switch Finished</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psbh_type"></a>Field - psbh_type / Switch Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Switch</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Sale</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_care_title"></a>Table - pe_care_title / CARE Title Details</h2>
+
+<h3><a name="pctt_date_type"></a>Field - pctt_date_type / Option 2 Effective Date Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Renewal Date</td>
+          <td style="text-align: left">Renewal Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Calendar Year</td>
+          <td style="text-align: left">Calendar Year</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pctt_freq"></a>Field - pctt_freq / Option 2 Revaluation Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Annual</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Biannual</td>
+          <td style="text-align: left">Biannual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Quarterly</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Monthly</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pctt_reval_day"></a>Field - pctt_reval_day / Option 2 Day of Revaluation</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Month Start</td>
+          <td style="text-align: left">Month Start</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Month End</td>
+          <td style="text-align: left">Month End</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Specific Day in Month</td>
+          <td style="text-align: left">Specific Day in Month</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_cashsetup"></a>Table - pe_cashsetup / Cash Investment Setup</h2>
+
+<h3><a name="pcs_active"></a>Field - pcs_active / Active/Inactive</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left">Active</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Inactive</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_cat"></a>Table - pe_cat / Category Details</h2>
+
+<h3><a name="pct_end_mth"></a>Field - pct_end_mth / Normal Pension Date Adjustment</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">End of Month</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">First Day of Following Month</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Fixed Day of Month</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Last Day of Previous Month</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">No Adjustment</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Start of Month</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">W</td>
+          <td style="text-align: left">Last Working Day of Month</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_catcont_h"></a>Table - pe_catcont_h / Category Contribution Details Header</h2>
+
+<h3><a name="pcch_frequency"></a>Field - pcch_frequency / Contribution Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">26</td>
+          <td style="text-align: left">Fortnightly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">28</td>
+          <td style="text-align: left">Bi-Fortnightly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">52</td>
+          <td style="text-align: left">Weekly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_cforfeit_h"></a>Table - pe_cforfeit_h / Category Forfeiture Matrix Header</h2>
+
+<h3><a name="pcfh_date"></a>Field - pcfh_date / Forfeiture Start Date</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">paw_date</td>
+          <td style="text-align: left">Award Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_dco</td>
+          <td style="text-align: left">Date Contracted Out</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_dec</td>
+          <td style="text-align: left">Date Joined Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_djp</td>
+          <td style="text-align: left">Date Joined Plan</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_codem"></a>Table - pe_codem / Codes Details</h2>
+
+<h3><a name="pcdm_type"></a>Field - pcdm_type / Code Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">G</td>
+          <td style="text-align: left">Accounting Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Additional Benefit Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">X</td>
+          <td style="text-align: left">Agent Network</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Asset Classes</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Award Description</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Award Type</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left">Broker Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">Career Average Revalued Earnings Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Contribution Transactions</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Deferred Pensioner Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Disability Benefit Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Investment Manager</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">H</td>
+          <td style="text-align: left">Location</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Pensioner Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Reason for Increase Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">K</td>
+          <td style="text-align: left">Risk Profile Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Special Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Transfer In Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Transfer Out Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">X</td>
+          <td style="text-align: left">Agent Network</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left">Broker Company</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_cover"></a>Table - pe_cover / Cover Details</h2>
+
+<h3><a name="pco_payment_type"></a>Field - pco_payment_type / Payment Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Lump Sum</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Regular</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_cvesting_h"></a>Table - pe_cvesting_h / Scheme Vesting Matrix Header</h2>
+
+<h3><a name="pcvh_date"></a>Field - pcvh_date / Vesting Start Date</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">paw_date</td>
+          <td style="text-align: left">Award Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_dco</td>
+          <td style="text-align: left">Date Contracted Out</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_dec</td>
+          <td style="text-align: left">Date Joined Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_djp</td>
+          <td style="text-align: left">Date Joined Plan</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_dec_str"></a>Table - pe_dec_str / History Details</h2>
+
+<h3><a name="pdec_newstat"></a>Field - pdec_newstat / History New Code</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">CP</td>
+          <td style="text-align: left">Civil Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CO</td>
+          <td style="text-align: left">Cohabitant</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DI</td>
+          <td style="text-align: left">Divorced</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MA</td>
+          <td style="text-align: left">Married</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PT</td>
+          <td style="text-align: left">Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SE</td>
+          <td style="text-align: left">Separated</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SI</td>
+          <td style="text-align: left">Single</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SD</td>
+          <td style="text-align: left">Single With Dependants</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">UN</td>
+          <td style="text-align: left">Unknown</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WI</td>
+          <td style="text-align: left">Widowed</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pdec_oldstat"></a>Field - pdec_oldstat / History Old Code</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">CP</td>
+          <td style="text-align: left">Civil Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CO</td>
+          <td style="text-align: left">Cohabitant</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DI</td>
+          <td style="text-align: left">Divorced</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MA</td>
+          <td style="text-align: left">Married</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NEW</td>
+          <td style="text-align: left">NEW</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PT</td>
+          <td style="text-align: left">Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SE</td>
+          <td style="text-align: left">Separated</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SI</td>
+          <td style="text-align: left">Single</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SD</td>
+          <td style="text-align: left">Single With Dependants</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">UN</td>
+          <td style="text-align: left">Unknown</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WI</td>
+          <td style="text-align: left">Widowed</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_dep"></a>Table - pe_dep / Dependants/Beneficiaries Details</h2>
+
+<h3><a name="pd_class"></a>Field - pd_class / Dependants Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">AU</td>
+          <td style="text-align: left">Aunt</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BR</td>
+          <td style="text-align: left">Brother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BL</td>
+          <td style="text-align: left">Brother In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CH</td>
+          <td style="text-align: left">Child</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CS</td>
+          <td style="text-align: left">Common Law Spouse</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CT</td>
+          <td style="text-align: left">Contingent Trustee</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CO</td>
+          <td style="text-align: left">Cousin</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CP</td>
+          <td style="text-align: left">Civil Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DA</td>
+          <td style="text-align: left">Daughter</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DL</td>
+          <td style="text-align: left">Daughter In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DC</td>
+          <td style="text-align: left">Descendent</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DP</td>
+          <td style="text-align: left">Dependant</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EH</td>
+          <td style="text-align: left">Estranged Husband</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ES</td>
+          <td style="text-align: left">Estranged Wife</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FM</td>
+          <td style="text-align: left">Family</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FA</td>
+          <td style="text-align: left">Father</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FL</td>
+          <td style="text-align: left">Father In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FI</td>
+          <td style="text-align: left">Fiance(e)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FR</td>
+          <td style="text-align: left">Friend</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GD</td>
+          <td style="text-align: left">God-Daughter</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GS</td>
+          <td style="text-align: left">God-Son</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RD</td>
+          <td style="text-align: left">Granddaughter</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GF</td>
+          <td style="text-align: left">Grandfather</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GM</td>
+          <td style="text-align: left">Grandmother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RS</td>
+          <td style="text-align: left">Grandson</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">HU</td>
+          <td style="text-align: left">Husband</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MO</td>
+          <td style="text-align: left">Mother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ML</td>
+          <td style="text-align: left">Mother In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NE</td>
+          <td style="text-align: left">Nephew</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NI</td>
+          <td style="text-align: left">Niece</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DE</td>
+          <td style="text-align: left">No Relation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">OT</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PA</td>
+          <td style="text-align: left">Parent</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PT</td>
+          <td style="text-align: left">Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RE</td>
+          <td style="text-align: left">Relative/Relation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SI</td>
+          <td style="text-align: left">Sister</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SL</td>
+          <td style="text-align: left">Sister In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SO</td>
+          <td style="text-align: left">Son</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">OL</td>
+          <td style="text-align: left">Son In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SP</td>
+          <td style="text-align: left">Spouse</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SB</td>
+          <td style="text-align: left">Step-Brother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SD</td>
+          <td style="text-align: left">Step-Daughter</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SF</td>
+          <td style="text-align: left">Step-Father</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SM</td>
+          <td style="text-align: left">Step-Mother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SR</td>
+          <td style="text-align: left">Step-Sister</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SN</td>
+          <td style="text-align: left">Step-Son</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">TR</td>
+          <td style="text-align: left">Trust</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">UN</td>
+          <td style="text-align: left">Uncle</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">UK</td>
+          <td style="text-align: left">Unknown</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WI</td>
+          <td style="text-align: left">Wife</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_dirdebsch"></a>Table - pe_dirdebsch / Direct Debit Schemes</h2>
+
+<h3><a name="pdds_return_code"></a>Field - pdds_return_code / Return Code</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">Refer to Payer</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Instruction Cancelled</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Payer Deceased</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">Account Transferred</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Advance Notice Disputed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">No/Valid Account</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">No Instruction</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">Amount Differs</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">Amount not yet due</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">Presentation Overdue</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Originator Differs</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Account Closed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Payment Refused</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pdds_transaction_code"></a>Field - pdds_transaction_code / Transaction Code</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">01</td>
+          <td style="text-align: left">First presentation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">17</td>
+          <td style="text-align: left">2nd and subsequent presentation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">Re-presentation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">19</td>
+          <td style="text-align: left">Final</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_dpens"></a>Table - pe_dpens / Basic Deferred Pensioner Details</h2>
+
+<h3><a name="pdps_pay_freq"></a>Field - pdps_pay_freq / Pay Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">4 Weekly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">26</td>
+          <td style="text-align: left">Fortnightly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">52</td>
+          <td style="text-align: left">Weekly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pdps_reason_cess"></a>Field - pdps_reason_cess / Cessation Details Reason</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Death</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Retire</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Transfer Out</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Trivial Commutation</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_fac_h"></a>Table - pe_fac_h / Factor Head Details</h2>
+
+<h3><a name="pfach_sex"></a>Field - pfach_sex / Factor Table Sex</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Male</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Female</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Unisex</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pfach_type"></a>Field - pfach_type / Type of Factor</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Actuarial</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">System</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Term Related</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_invfun"></a>Table - pe_invfun / Investment Fund Details</h2>
+
+<h3><a name="pif_buy_basis"></a>Field - pif_buy_basis / Unit Buy Basis</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Bid</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Mid</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Offer</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pif_sell_basis"></a>Field - pif_sell_basis / Unit Sell Basis</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Bid</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Mid</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Offer</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_lifeswit_h"></a>Table - pe_lifeswit_h / Lifestyle Switch Header Details</h2>
+
+<h3><a name="plsh_status"></a>Field - plsh_status / Lifestyle Switch Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Not Yet Processed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Switch Declined - No Units/Negative Units</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Switch Declined - Current Distribution Matches Portfolio Split</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Switch Failed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Switch Pending</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Partially Finished</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Switch Finished</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_maddr"></a>Table - pe_maddr / Member Address Details</h2>
+
+<h3><a name="pmad_system_id"></a>Field - pmad_system_id / Member’s Address Changed By</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">PM</td>
+          <td style="text-align: left">Pension Master</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PY</td>
+          <td style="text-align: left">Payroll Master</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WM</td>
+          <td style="text-align: left">Work Manager</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">API</td>
+          <td style="text-align: left">API</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ONLINE</td>
+          <td style="text-align: left">Online</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_mcover"></a>Table - pe_mcover / Member Cover Details</h2>
+
+<h3><a name="pmco_calc_type"></a>Field - pmco_calc_type / Calculation Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">FA</td>
+          <td style="text-align: left">Fixed Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PS</td>
+          <td style="text-align: left">Percentage of Salary</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MS</td>
+          <td style="text-align: left">Multiple of Salary</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_mem"></a>Table - pe_mem / Basic Member Details</h2>
+
+<h3><a name="pm_economic_status"></a>Field - pm_economic_status / Economic Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">10</td>
+          <td style="text-align: left">Self Employed - Agricultural</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">20</td>
+          <td style="text-align: left">Self Employed - Other</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">30</td>
+          <td style="text-align: left">Employed - Managers, Professional, Technical, Administrative</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">40</td>
+          <td style="text-align: left">Employed - Clerical and Secretarial</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">50</td>
+          <td style="text-align: left">Employed - Trades, Craft and Related</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">60</td>
+          <td style="text-align: left">Employed - Personal and Protective Service</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">70</td>
+          <td style="text-align: left">Employed - Sales</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">80</td>
+          <td style="text-align: left">Employed - Plant and Machine Operatives</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">90</td>
+          <td style="text-align: left">Employed - Other</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">99</td>
+          <td style="text-align: left">Not Economically Active/Unemployed</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pm_marital_stat"></a>Field - pm_marital_stat / Marital Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">CP</td>
+          <td style="text-align: left">Civil Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CO</td>
+          <td style="text-align: left">Cohabitant</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DI</td>
+          <td style="text-align: left">Divorced</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MA</td>
+          <td style="text-align: left">Married</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PT</td>
+          <td style="text-align: left">Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SE</td>
+          <td style="text-align: left">Separated</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SI</td>
+          <td style="text-align: left">Single</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SD</td>
+          <td style="text-align: left">Single With Dependants</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">UN</td>
+          <td style="text-align: left">Unknown</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WI</td>
+          <td style="text-align: left">Widowed</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pm_sex"></a>Field - pm_sex / Sex</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Male</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Female</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pm_title"></a>Field - pm_title / Title</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Miss</td>
+          <td style="text-align: left">Miss</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Mr</td>
+          <td style="text-align: left">Mr</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Mrs</td>
+          <td style="text-align: left">Mrs</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Ms</td>
+          <td style="text-align: left">Ms</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Dr</td>
+          <td style="text-align: left">Dr</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Br</td>
+          <td style="text-align: left">Br</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Sr</td>
+          <td style="text-align: left">Sr</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Lord</td>
+          <td style="text-align: left">Lord</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Lady</td>
+          <td style="text-align: left">Lady</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Sir</td>
+          <td style="text-align: left">Sir</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Dame</td>
+          <td style="text-align: left">Dame</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Prof</td>
+          <td style="text-align: left">Prof</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Rev</td>
+          <td style="text-align: left">Rev</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_pens"></a>Table - pe_pens / Basic Pensioner Details</h2>
+
+<h3><a name="pps_pay_freq"></a>Field - pps_pay_freq / Pay Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">4 Weekly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">26</td>
+          <td style="text-align: left">Fortnightly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">52</td>
+          <td style="text-align: left">Weekly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">98</td>
+          <td style="text-align: left">Irregular</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">99</td>
+          <td style="text-align: left">One-Off</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pps_reason_cess"></a>Field - pps_reason_cess / Cessation Details Reason</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Buy Out</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Death</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">End of Dependency</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Trivial Commutation</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_product"></a>Table - pe_product / Product Details</h2>
+
+<h3><a name="ppr_payment_type"></a>Field - ppr_payment_type / Payment Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Lump Sum</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Regular</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_rebalance_h"></a>Table - pe_rebalance_h / Rebalance Switch Header Details</h2>
+
+<h3><a name="prbh_expenses"></a>Field - prbh_expenses / Rebalance Switch Header Expenses</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Calculated Expenses</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Free Switch</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="prbh_status"></a>Field - prbh_status / Rebalance Switch Header Status Code</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Not Yet Processed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Switch Declined - No Units/Negative Units</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Switch Declined - Current Distribution Matches Portfolio Split</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Switch Failed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Switch Pending</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Partially Finished</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Switch Finished</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_renewal"></a>Table - pe_renewal / Renewal Details</h2>
+
+<h3><a name="prnl_full_part"></a>Field - prnl_full_part / Full / Partial Data</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Full Data</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Partial Data</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">No Data Received</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sasset_h"></a>Table - pe_sasset_h / Scheme Asset Header Details</h2>
+
+<h3><a name="psash_asset_type"></a>Field - psash_asset_type / Asset Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">BORROW</td>
+          <td style="text-align: left">Borrowing</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CASH</td>
+          <td style="text-align: left">Cash</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">INVPOL</td>
+          <td style="text-align: left">Investment Policy</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LIFEAS</td>
+          <td style="text-align: left">Life Assurance</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LOANBK</td>
+          <td style="text-align: left">Loanback</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MISC</td>
+          <td style="text-align: left">Miscellaneous</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PROP</td>
+          <td style="text-align: left">Property</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SHARES</td>
+          <td style="text-align: left">Shares</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">STOCK</td>
+          <td style="text-align: left">Stockbroking Account</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sch"></a>Table - pe_sch / Scheme File</h2>
+
+<h3><a name="psc_base"></a>Field - psc_base / Base Currency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">ATS</td>
+          <td style="text-align: left">Austrian Schilling</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BEF</td>
+          <td style="text-align: left">Belgian Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DKK</td>
+          <td style="text-align: left">Danish Krone</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DEM</td>
+          <td style="text-align: left">Deutsche Mark</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EUR</td>
+          <td style="text-align: left">Euro</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FIM</td>
+          <td style="text-align: left">Finish Markka</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FFR</td>
+          <td style="text-align: left">French Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GRD</td>
+          <td style="text-align: left">Greek Drachma</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">IEP</td>
+          <td style="text-align: left">Irish Punt</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ITL</td>
+          <td style="text-align: left">Italian Lira</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LUF</td>
+          <td style="text-align: left">Luxembourg Franc</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NLG</td>
+          <td style="text-align: left">Netherlands Guilder</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PTE</td>
+          <td style="text-align: left">Portuguese Escudo</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GBP</td>
+          <td style="text-align: left">Pound Sterling</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ESP</td>
+          <td style="text-align: left">Spanish Peseta</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SEK</td>
+          <td style="text-align: left">Swedish Krona</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">USD</td>
+          <td style="text-align: left">US Dollars</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_carried_int_plan_type"></a>Field - psc_carried_int_plan_type / Carried Interest Plan Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A1</td>
+          <td style="text-align: left">Arrangement 1</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A2</td>
+          <td style="text-align: left">Arrangement 2</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_emp_type"></a>Field - psc_emp_type / Employment Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">Employed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Self-Employed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Private</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_er_conts"></a>Field - psc_er_conts / ER Conts Option</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Sell</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">To Suspense</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_leaver"></a>Field - psc_leaver / Leaver Option</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Immediate</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Timed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Deferred</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Defer Timed</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_product_type"></a>Field - psc_product_type / Product Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">SSAS</td>
+          <td style="text-align: left">SSAS</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PRSA</td>
+          <td style="text-align: left">PRSA</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ARF</td>
+          <td style="text-align: left">ARF</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">AMRF</td>
+          <td style="text-align: left">AMRF</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BOB</td>
+          <td style="text-align: left">BOB</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PRP</td>
+          <td style="text-align: left">PRP</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EPP</td>
+          <td style="text-align: left">EPP</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">OTHER</td>
+          <td style="text-align: left">OTHER</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_region"></a>Field - psc_region / Scheme Region</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">UK</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Ireland</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Belgium</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Denmark</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">J</td>
+          <td style="text-align: left">Jamaica</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_sal_freq"></a>Field - psc_sal_freq / Salary Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Annually</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_status"></a>Field - psc_status / Status</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Active</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Z</td>
+          <td style="text-align: left">Frozen</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Frozen DB with Active DC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">In Wind Up</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Inactive</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Paid Up</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Test</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Transferred</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">W</td>
+          <td style="text-align: left">Wound Up</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Not Staged Yet</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Not Proceeding</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Not Decided</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Transferring Out</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psc_type"></a>Field - psc_type / Scheme Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">DB</td>
+          <td style="text-align: left">Defined Benefits</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DC</td>
+          <td style="text-align: left">Defined Contributions</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">HY</td>
+          <td style="text-align: left">Hybrid</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sch_mmc"></a>Table - pe_sch_mmc / Scheme Monetary Movements Configuration</h2>
+
+<h3><a name="psm_type"></a>Field - psm_type / Movement Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Death In Service</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Refund</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Retirement</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Transfer Out</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_schmat_h"></a>Table - pe_schmat_h / Scheme Contribution Matrix Header</h2>
+
+<h3><a name="psmh_cap_inc_rate"></a>Field - psmh_cap_inc_rate / Salary Cap Increase Rate</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Date Joined Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">None - Fixed Cap</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">CPI</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Salary Growth</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">CPI Capped at 3%</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">CPI Capped at 4%</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">CPI Capped at 5%</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psmh_eff_dt"></a>Field - psmh_eff_dt / Effective Date</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Immediate</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Renewal Date</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psmh_service_dt"></a>Field - psmh_service_dt / Service Date</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Date Joined Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Date Joined Scheme</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Q</td>
+          <td style="text-align: left">Qualifying Service Date</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psmh_type"></a>Field - psmh_type / Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Salary</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Age</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Service</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Combined</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_scont"></a>Table - pe_scont / Scheme Contribution Type Setup</h2>
+
+<h3><a name="psct_type"></a>Field - psct_type / Contribution Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">AVC</td>
+          <td style="text-align: left">AVC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EE</td>
+          <td style="text-align: left">EE</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ER</td>
+          <td style="text-align: left">ER</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">OTHER</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_scover"></a>Table - pe_scover / Scheme Cover Details</h2>
+
+<h3><a name="psco_calc_type"></a>Field - psco_calc_type / Calculation Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">FA</td>
+          <td style="text-align: left">Fixed Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PS</td>
+          <td style="text-align: left">Percentage of Salary</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MS</td>
+          <td style="text-align: left">Multiple of Salary</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sforfeit_h"></a>Table - pe_sforfeit_h / Scheme Forfeiture Matrix Header</h2>
+
+<h3><a name="psfh_date"></a>Field - psfh_date / Forfeiture Start Date</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">paw_date</td>
+          <td style="text-align: left">Award Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_dco</td>
+          <td style="text-align: left">Date Contracted Out</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_dec</td>
+          <td style="text-align: left">Date Joined Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_djp</td>
+          <td style="text-align: left">Date Joined Plan</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sfunds"></a>Table - pe_sfunds / Scheme Investment Fund Details</h2>
+
+<h3><a name="psf_rebate_freq"></a>Field - psf_rebate_freq / Rebate Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_slife_h"></a>Table - pe_slife_h / Scheme Lifestyle Matrix Header Details</h2>
+
+<h3><a name="pslh_freq"></a>Field - pslh_freq / Scheme Lifestyle Matrix Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pslh_type"></a>Field - pslh_type / Scheme Lifestyle Matrix Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Age Related</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Term Related</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sorpexpa"></a>Table - pe_sorpexpa / Fixed Cont. Expenses by Unit Dis. Active</h2>
+
+<h3><a name="psexpa_eff_dt_type"></a>Field - psexpa_eff_dt_type / Effective Date Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Renewal Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Calendar Year</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psexpa_freq"></a>Field - psexpa_freq / Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psexpa_fut_incr_basis"></a>Field - psexpa_fut_incr_basis / Future Increases Basis</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">None</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">CPI</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">Earnings</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sorpexpd"></a>Table - pe_sorpexpd / Fixed Cont. Exp. by Unit Dis. Deferred</h2>
+
+<h3><a name="psexpd_eff_dt_type"></a>Field - psexpd_eff_dt_type / Effective Date Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Renewal Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Calendar Year</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psexpd_freq"></a>Field - psexpd_freq / Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psexpd_fut_incr_basis"></a>Field - psexpd_fut_incr_basis / Future Increases Basis</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">None</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">CPI</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">Earnings</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sorpexpf"></a>Table - pe_sorpexpf / % of Fund Exp. by Unit Dis.</h2>
+
+<h3><a name="psexpf_eff_dt_type"></a>Field - psexpf_eff_dt_type / Effective Date Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Renewal Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Calendar Year</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psexpf_freq"></a>Field - psexpf_freq / Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_spouses"></a>Table - pe_spouses / Divorce and Spouses’ Details</h2>
+
+<h3><a name="pmsp_ctry_law"></a>Field - pmsp_ctry_law / Country of law</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">England</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Scotland</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">W</td>
+          <td style="text-align: left">Wales</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Ireland</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">O</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pmsp_title"></a>Field - pmsp_title / Spouse’s Title</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Miss</td>
+          <td style="text-align: left">Miss</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Mr</td>
+          <td style="text-align: left">Mr</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Mrs</td>
+          <td style="text-align: left">Mrs</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Ms</td>
+          <td style="text-align: left">Ms</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Dr</td>
+          <td style="text-align: left">Dr</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Br</td>
+          <td style="text-align: left">Br</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Sr</td>
+          <td style="text-align: left">Sr</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Lord</td>
+          <td style="text-align: left">Lord</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Lady</td>
+          <td style="text-align: left">Lady</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Sir</td>
+          <td style="text-align: left">Sir</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Dame</td>
+          <td style="text-align: left">Dame</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Prof</td>
+          <td style="text-align: left">Prof</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Rev</td>
+          <td style="text-align: left">Rev</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sregfee"></a>Table - pe_sregfee / Scheme Regular Contribution Fee Details</h2>
+
+<h3><a name="psre_calc_type"></a>Field - psre_calc_type / Calculation Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">FA</td>
+          <td style="text-align: left">Fixed Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PC</td>
+          <td style="text-align: left">Percentage of Contributions</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PA</td>
+          <td style="text-align: left">Percentage of AuM</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sta"></a>Table - pe_sta / Status Details</h2>
+
+<h3><a name="ps_type"></a>Field - ps_type / Status Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Active</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Death</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Deferred</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Leaver</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Pensioner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Pensioner - No Liability</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Risk Only</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">W</td>
+          <td style="text-align: left">Widower</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_stock"></a>Table - pe_stock / Plan Stock Account Details</h2>
+
+<h3><a name="pst_process"></a>Field - pst_process / Process Update</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Stock Purchase</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Leaver Sale</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">W</td>
+          <td style="text-align: left">Switch</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Sale</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Stock Purchase Undo</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Bonus Issue</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Reinvested Dividend</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">X</td>
+          <td style="text-align: left">Bonus Issue Undo</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Y</td>
+          <td style="text-align: left">Reinvested Dividend Undo</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_strus"></a>Table - pe_strus / Scheme Trustees</h2>
+
+<h3><a name="pstr_sole_corp"></a>Field - pstr_sole_corp / Sole/Co. Trustee</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Sole</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Corporate Trustee</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_svesting_h"></a>Table - pe_svesting_h / Scheme Vesting Matrix Header</h2>
+
+<h3><a name="psvh_date"></a>Field - psvh_date / Vesting Start Date</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">paw_date</td>
+          <td style="text-align: left">Award Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_dco</td>
+          <td style="text-align: left">Date Contracted Out</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_dec</td>
+          <td style="text-align: left">Date Joined Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_djp</td>
+          <td style="text-align: left">Date Joined Plan</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sw_win"></a>Table - pe_sw_win / Switch Window Settings</h2>
+
+<h3><a name="psw_frequency"></a>Field - psw_frequency / Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Annual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Half Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">13</td>
+          <td style="text-align: left">4 Weekly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">26</td>
+          <td style="text-align: left">Fortnightly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">52</td>
+          <td style="text-align: left">Weekly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="psw_length_type"></a>Field - psw_length_type / Length Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Days</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">W</td>
+          <td style="text-align: left">Weeks</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Months</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_switch_h"></a>Table - pe_switch_h / Switch Header Details</h2>
+
+<h3><a name="pswh_basis"></a>Field - pswh_basis / Switch Header Basis</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Monetary Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Percentage of Units</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Number of Units</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pswh_dt_type"></a>Field - pswh_dt_type / Switch Header Date Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Full Switch</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Switch Range</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_switch_h"></a>Table - pe_switch_h / Switch Header Details</h2>
+
+<h3><a name="pswh_expenses"></a>Field - pswh_expenses / Switch Header Expenses</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Calculated Expenses</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Free Switch</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pswh_sale_trans"></a>Field - pswh_sale_trans / Switch Header Sale Transaction Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Normal</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Clawback</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Forfeiture</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Release</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NC</td>
+          <td style="text-align: left">Normal &amp; Clawback</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NF</td>
+          <td style="text-align: left">Normal &amp; Forfeiture</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NR</td>
+          <td style="text-align: left">Normal &amp; Release</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RC</td>
+          <td style="text-align: left">Release &amp; Clawback</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RF</td>
+          <td style="text-align: left">Release &amp; Forfeiture</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pswh_status"></a>Field - pswh_status / Switch Header Status Code</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Not Yet Processed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">U</td>
+          <td style="text-align: left">Switch Declined - No Units/Negative Units</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Switch Declined - Current Distribution Matches Portfolio Split</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Switch Failed</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Switch Pending</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Partially Finished</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Switch Finished</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pswh_type"></a>Field - pswh_type / Switch Header Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Switch</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Sale</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sysp"></a>Table - pe_sysp / System Parameters Details</h2>
+
+<h3><a name="pp_age_calc"></a>Field - pp_age_calc / System Parameter Age Calculation</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">N</td>
+          <td style="text-align: left">Age Next Birthday</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Age Last Birthday</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pp_risk_date"></a>Field - pp_risk_date / Risk Only Date Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pm_dec</td>
+          <td style="text-align: left">Date Joined Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pm_djla</td>
+          <td style="text-align: left">Date Joined For Life Assurance</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pp_sort1"></a>Field - pp_sort1 / System Parameter Sort Order 1</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_category</td>
+          <td style="text-align: left">Category Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_company</td>
+          <td style="text-align: left">Company Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_dob</td>
+          <td style="text-align: left">Date of Birth</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_forename</td>
+          <td style="text-align: left">Forename</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_member</td>
+          <td style="text-align: left">Member Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_rsi_num</td>
+          <td style="text-align: left">NI/PPS Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_scheme</td>
+          <td style="text-align: left">Scheme Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_pay_num</td>
+          <td style="text-align: left">Staff Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_status</td>
+          <td style="text-align: left">Status Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_surname</td>
+          <td style="text-align: left">Surname</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_title</td>
+          <td style="text-align: left">Title</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pp_sort2"></a>Field - pp_sort2 / System Parameter Sort Order 2</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_category</td>
+          <td style="text-align: left">Category Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_company</td>
+          <td style="text-align: left">Company Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_dob</td>
+          <td style="text-align: left">Date of Birth</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_forename</td>
+          <td style="text-align: left">Forename</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_member</td>
+          <td style="text-align: left">Member Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_rsi_num</td>
+          <td style="text-align: left">NI/PPS Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_scheme</td>
+          <td style="text-align: left">Scheme Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_pay_num</td>
+          <td style="text-align: left">Staff Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_status</td>
+          <td style="text-align: left">Status Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_surname</td>
+          <td style="text-align: left">Surname</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_title</td>
+          <td style="text-align: left">Title</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pp_sort3"></a>Field - pp_sort3 / System Parameter Sort Order 3</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_category</td>
+          <td style="text-align: left">Category Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_company</td>
+          <td style="text-align: left">Company Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_dob</td>
+          <td style="text-align: left">Date of Birth</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_forename</td>
+          <td style="text-align: left">Forename</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_member</td>
+          <td style="text-align: left">Member Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_rsi_num</td>
+          <td style="text-align: left">NI/PPS Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_scheme</td>
+          <td style="text-align: left">Scheme Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_pay_num</td>
+          <td style="text-align: left">Staff Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_status</td>
+          <td style="text-align: left">Status Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_surname</td>
+          <td style="text-align: left">Surname</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_title</td>
+          <td style="text-align: left">Title</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pp_sort4"></a>Field - pp_sort4 / System Parameter Sort Order 4</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_category</td>
+          <td style="text-align: left">Category Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_company</td>
+          <td style="text-align: left">Company Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_dob</td>
+          <td style="text-align: left">Date of Birth</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_forename</td>
+          <td style="text-align: left">Forename</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_member</td>
+          <td style="text-align: left">Member Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_rsi_num</td>
+          <td style="text-align: left">NI/PPS Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_scheme</td>
+          <td style="text-align: left">Scheme Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_pay_num</td>
+          <td style="text-align: left">Staff Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_status</td>
+          <td style="text-align: left">Status Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_surname</td>
+          <td style="text-align: left">Surname</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem.pm_title</td>
+          <td style="text-align: left">Title</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sysp_mmc"></a>Table - pe_sysp_mmc / Monetary Movements Configuration</h2>
+
+<h3><a name="ppm_type"></a>Field - ppm_type / Movement Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Death In Service</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">R</td>
+          <td style="text-align: left">Refund</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Retirement</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">T</td>
+          <td style="text-align: left">Transfer Out</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_tvin"></a>Table - pe_tvin / Transfer In Details</h2>
+
+<h3><a name="ptvi_sc_type"></a>Field - ptvi_sc_type / Transfer In Scheme Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">AVC</td>
+          <td style="text-align: left">AVC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DB</td>
+          <td style="text-align: left">DB</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DC</td>
+          <td style="text-align: left">DC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FSAVC</td>
+          <td style="text-align: left">FSAVC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GPP</td>
+          <td style="text-align: left">GPP</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Hybrid</td>
+          <td style="text-align: left">Hybrid</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Other</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PAOS</td>
+          <td style="text-align: left">PAOS</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PRSA</td>
+          <td style="text-align: left">PRSA</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RAC</td>
+          <td style="text-align: left">RAC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SSAS</td>
+          <td style="text-align: left">SSAS</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_tvout"></a>Table - pe_tvout / Transfer Out Details</h2>
+
+<h3><a name="ptvo_icne_type"></a>Field - ptvo_icne_type / Transfer Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">AVC</td>
+          <td style="text-align: left">AVC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BOB</td>
+          <td style="text-align: left">BOB</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DB</td>
+          <td style="text-align: left">DB</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DC</td>
+          <td style="text-align: left">DC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FSAVC</td>
+          <td style="text-align: left">FSAVC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GPP</td>
+          <td style="text-align: left">GPP</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Hybrid</td>
+          <td style="text-align: left">Hybrid</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Other</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PAOS</td>
+          <td style="text-align: left">PAOS</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PRSA</td>
+          <td style="text-align: left">PRSA</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RAC</td>
+          <td style="text-align: left">RAC</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SSAS</td>
+          <td style="text-align: left">SSAS</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="py_sch"></a>Table - py_sch / Payroll Scheme Details</h2>
+
+<h3><a name="pys_sender"></a>Field - pys_sender / RTI Sender</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Individual</td>
+          <td style="text-align: left">Individual</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Company</td>
+          <td style="text-align: left">Company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Agent</td>
+          <td style="text-align: left">Agent</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Bureau</td>
+          <td style="text-align: left">Bureau</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Partnership</td>
+          <td style="text-align: left">Partnership</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Trust</td>
+          <td style="text-align: left">Trust</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Employer</td>
+          <td style="text-align: left">Employer</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Government</td>
+          <td style="text-align: left">Government</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Acting in Capacity</td>
+          <td style="text-align: left">Acting in Capacity</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Other</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+
+      <div id="footer">
+        <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
+        <p>Build Date 06/03/2018 09:15:39.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+  </body>
+</html>
