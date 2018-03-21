@@ -53,7 +53,7 @@ the member.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>cep 
+<pre><code>cep
 </code></pre>
 
 <p><strong>NOTES</strong></p>
@@ -77,7 +77,7 @@ This amounts to the employees share of the Contributions Equivalent Premium (CEP
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>cert_amt 
+<pre><code>cert_amt
 </code></pre>
 
 <p><strong>NOTES</strong></p>
@@ -102,7 +102,7 @@ benefits. This allows for UK legislation only at this time.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>defreval 
+<pre><code>defreval
 </code></pre>
 
 <p><strong>NOTES</strong></p>
@@ -133,7 +133,7 @@ for early leavers.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>ir_defer_revmax(pp,date1,date2) 
+<pre><code>ir_defer_revmax(pp,date1,date2)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -196,7 +196,7 @@ for early retirees.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>ir_early_revmax(pp,date1,date2) 
+<pre><code>ir_early_revmax(pp,date1,date2)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -262,7 +262,7 @@ for a normal retiree.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>ir_norm_revmax(pp,date) 
+<pre><code>ir_norm_revmax(pp,date)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -321,7 +321,7 @@ is used to calculate the members pension on leaving the scheme.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>pen_act(date) 
+<pre><code>pen_act(date)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -371,7 +371,7 @@ revalued to normal pension age.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>pen_act_proj(reval_rate,date) 
+<pre><code>pen_act_proj(reval_rate,date)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -426,7 +426,7 @@ pen_act_proj(@2,pm_dco)
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>pen_act_qservice 
+<pre><code>pen_act_qservice
 </code></pre>
 
 <p><strong>NOTES</strong></p>
@@ -458,16 +458,17 @@ the type and the effective date.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>stat(fld1,fld2,date) 
+<pre><code>stat(fld1,fld2,date)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
 
 <ul>
-  <li>fld1 - this is used to denote the statutory amount type and can take the values s, m, l, u or e as follows:
+  <li>fld1 - this is used to denote the statutory amount type and can take the following values:
     <ul>
       <li>s - Single Persons Basic State Pension</li>
       <li>m - Married Persons Basic State Pension</li>
+      <li>k - New UK State Pension</li>
       <li>w - Widows Basic State Pension</li>
       <li>q - Disabled Basic State Pension</li>
       <li>l - Lower Earnings Limit</li>
@@ -484,13 +485,17 @@ the type and the effective date.</p>
       <li>c - Change in TV Value</li>
       <li>r - Refund Tax Allowance</li>
       <li>d - DC Lifetime Allowance</li>
+      <li>g - MP Annual Allowance</li>
+      <li>x - Contribution Limits Age From</li>
+      <li>y - Contribution Limits Age To</li>
+      <li>z - Contribution Limits Maximum Rate %</li>
     </ul>
   </li>
   <li>fld2 - is the effective date selector and can take the values y or d as follows:
     <ul>
       <li>y - will select the amount on or after the Effective Date. This can be used with all of the statutory amount types described above.</li>
       <li>d - will select the amount on or after the BSP Effective Date. This can be only used
-with the ‘s’, ‘m’, ‘w’ or ‘q’ statutory amount types described above.</li>
+with the ‘s’, ‘m’, ‘k’, ‘w’ or ‘q’ statutory amount types described above.</li>
     </ul>
   </li>
   <li>date - is the effective date for selection.</li>
@@ -508,7 +513,7 @@ Parameters</a>, if the scheme base currency for the scheme that the member
 is in is different than the system default base currency, all values returned by stat()
 are automatically converted into the scheme base currency and a message written to
 the Quotation Warnings File informing you of the conversion.</li>
-  <li>As Tax Simplification values can be held at Member, Scheme and System levels, then during the calculation for these values in the ‘stat’ function (where fld1 = f, a, b, v, p, c, r or d) the Member level will be checked first for values. If any are found then they will be returned, otherwise the Scheme level is then checked. If any are found then they will be returned, otherwise the System level is checked and these are returned.</li>
+  <li>As Tax Simplification values can be held at Member, Scheme and System levels, then during the calculation for these values in the ‘stat’ function (where fld1 = f, a, b, v, p, c, r, d or g) the Member level will be checked first for values. If any are found then they will be returned, otherwise the Scheme level is then checked. If any are found then they will be returned, otherwise the System level is checked and these are returned.</li>
 </ol>
 
 <p><strong>EXAMPLES</strong></p>
@@ -528,7 +533,7 @@ either an Inland Revenue maximum pension or an Inland Revenue maximum lump sum.<
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>uk_revmax(pp) 
+<pre><code>uk_revmax(pp)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -571,13 +576,13 @@ to multiply the result of the call to uk_revmax by a suitable salary.</li>
 <pre><code>uk_revmax(NR)
 uk_revmax(IL)
 uk_revmax(EL)
-uk_revmax(DR) 
+uk_revmax(DR)
 </code></pre>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 06/03/2018 16:06:10.</p>
+        <p>Build Date 21/03/2018 15:02:40.</p>
       </div>
     </div>
 
