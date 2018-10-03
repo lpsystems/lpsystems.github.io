@@ -52,7 +52,7 @@
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>avg(field,n,fld1,fld2,date) 
+<pre><code>avg(field,n,fld1,fld2,date)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -107,9 +107,9 @@ reference to the result of another line of formula code within the current formu
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>avg(pma_col1SAL,3,e,1,pmqh_calcdate) 
-avg(ps1_sal3,3,e,1,@2) 
-avg(ps1_sal4,1,l,4,20090101) 
+<pre><code>avg(pma_col1SAL,3,e,1,pmqh_calcdate)
+avg(ps1_sal3,3,e,1,@2)
+avg(ps1_sal4,1,l,4,20090101)
 </code></pre>
 
 <h2><a name="02"></a>avgmax(field,n1,n2,fld1,fld2,date)</h2>
@@ -122,7 +122,7 @@ the last ten years.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>avgmax(field,n1,n2,fld1,fld2,date) 
+<pre><code>avgmax(field,n1,n2,fld1,fld2,date)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -156,7 +156,7 @@ two year averages of the first salary column to arrive at the result.</li>
       <li>‘l’ will commence the averaging period from the date entered in the formula but will ignore the latest entry.</li>
     </ul>
   </li>
-  <li>fld2 can take the values 1, 2, 3, 4, 5, 6, 7, 8 and 9.
+  <li>fld2 can take the values 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10.
     <ul>
       <li>1 - will average extracted amounts using the highest amount if there is more than one in the same calendar year.</li>
       <li>2 - will average extracted amounts using the first amount if there is more than one in the same calendar year.</li>
@@ -187,9 +187,9 @@ The averaging period will be from the Scheme Renewal Date prior to the date ente
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>avgmax(pma_col1SAL,10,3,e,1,@3) 
-avgmax(ps1_sal1,10,3,e,1,pm_dtlft) 
-avgmax(ps1_sal3,3,1,l,4,pmqh_calcdate) 
+<pre><code>avgmax(pma_col1SAL,10,3,e,1,@3)
+avgmax(ps1_sal1,10,3,e,1,pm_dtlft)
+avgmax(ps1_sal3,3,1,l,4,pmqh_calcdate)
 </code></pre>
 
 <h2><a name="03"></a>defsal(fld,date,flag)</h2>
@@ -200,7 +200,7 @@ avgmax(ps1_sal3,3,1,l,4,pmqh_calcdate)
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>defsal(fld,date,flag) 
+<pre><code>defsal(fld,date,flag)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -222,9 +222,9 @@ current formula e.g. @1.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>defsal(ps1_sal1,19951201,a) 
-defsal(ps3_sal2,pm_dtlft,a) 
-defsal(ps4_sal3,@1,e) 
+<pre><code>defsal(ps1_sal1,19951201,a)
+defsal(ps3_sal2,pm_dtlft,a)
+defsal(ps4_sal3,@1,e)
 </code></pre>
 
 <h2><a name="04"></a>invtot(cont_type,func_type,fund,type,flag,date1,date2)</h2>
@@ -236,7 +236,7 @@ for a particular source.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>invtot(cont_type,func_type,fund,type,flag,date1,date2) 
+<pre><code>invtot(cont_type,func_type,fund,type,flag,date1,date2)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -277,10 +277,10 @@ their contribution in more than one fund.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>invtot(ERORD,C,EQUITY,BUY,1,19950112,pm_npd) 
-invtot(EEORD,E,TOT,BUY,1,pm_dps,pm_dtlft) 
-invtot(EEAVC,U,MANAGED,TRANSFER,2,19950112,20031115) 
-invtot(EEAVC,U,MANAGED,ALL,1,19950112,20031115) 
+<pre><code>invtot(ERORD,C,EQUITY,BUY,1,19950112,pm_npd)
+invtot(EEORD,E,TOT,BUY,1,pm_dps,pm_dtlft)
+invtot(EEAVC,U,MANAGED,TRANSFER,2,19950112,20031115)
+invtot(EEAVC,U,MANAGED,ALL,1,19950112,20031115)
 </code></pre>
 
 <h2><a name="05"></a>nihist(yyyy)</h2>
@@ -291,7 +291,7 @@ invtot(EEAVC,U,MANAGED,ALL,1,19950112,20031115)
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>nihist(yyyy) 
+<pre><code>nihist(yyyy)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -311,8 +311,8 @@ which the 5 April in the 1995/96 tax year falls.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>nihist(1995) 
-nihist(1990) 
+<pre><code>nihist(1995)
+nihist(1990)
 </code></pre>
 
 <h2><a name="06"></a>pmin_inttot(cont_type,date1,date2)</h2>
@@ -324,7 +324,7 @@ for a contribution.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>pmin_inttot(cont_type,date1,date2) 
+<pre><code>pmin_inttot(cont_type,date1,date2)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -347,10 +347,10 @@ the current formula e.g. @1.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>pmin_inttot(ERORD,19950112,pm_npd) 
-pmin_inttot(EEORD,pm_dps,pm_dtlft) 
-pmin_inttot(EEAVC,19950112,20031115) 
-pmin_inttot(EEAVC,19950112,20031115) 
+<pre><code>pmin_inttot(ERORD,19950112,pm_npd)
+pmin_inttot(EEORD,pm_dps,pm_dtlft)
+pmin_inttot(EEAVC,19950112,20031115)
+pmin_inttot(EEAVC,19950112,20031115)
 </code></pre>
 
 <h2><a name="07"></a>unalloc</h2>
@@ -361,7 +361,7 @@ pmin_inttot(EEAVC,19950112,20031115)
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>unalloc 
+<pre><code>unalloc
 </code></pre>
 
 <p><strong>NOTES</strong></p>
@@ -374,7 +374,7 @@ Value Summary</a> screen in <a href="/pension/file_maintenance/pem_mem/">Members
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>unalloc 
+<pre><code>unalloc
 </code></pre>
 
 <h2><a name="08"></a>saltot(sal_scrn,col_num,date1,date2)</h2>
@@ -386,7 +386,7 @@ for a particular salary screen and salary column.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>saltot(sal_scrn,col_num,date1,date2) 
+<pre><code>saltot(sal_scrn,col_num,date1,date2)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -414,10 +414,10 @@ the current formula e.g. @1.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>saltot(1,2,19900112,pm_npd) 
-saltot(@1,4,pm_dps,pm_dtlft) 
-saltot(2,1,@2,20031115) 
-saltot(4,5,19950112,@3) 
+<pre><code>saltot(1,2,19900112,pm_npd)
+saltot(@1,4,pm_dps,pm_dtlft)
+saltot(2,1,@2,20031115)
+saltot(4,5,19950112,@3)
 </code></pre>
 
 <h2><a name="09"></a>tot_cont(cont_type,date1,date2)</h2>
@@ -428,7 +428,7 @@ saltot(4,5,19950112,@3)
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>tot_cont(cont_type,date1,date2) 
+<pre><code>tot_cont(cont_type,date1,date2)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -451,14 +451,14 @@ the current formula e.g. @1.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>tot_cont(ERORD,19950112,pm_npd) 
-tot_cont(EEORD,pm_dps,pm_dtlft) 
+<pre><code>tot_cont(ERORD,19950112,pm_npd)
+tot_cont(EEORD,pm_dps,pm_dtlft)
 </code></pre>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 23/08/2018 09:10:05.</p>
+        <p>Build Date 03/10/2018 16:00:26.</p>
       </div>
     </div>
 
