@@ -71,41 +71,43 @@ informing the user of this.</p>
   <div class="col-md-6">
 
     <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Column</th>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Conditions</th>
+        </tr>
+      </thead>
       <tbody>
         <tr>
-          <td><strong>Column</strong></td>
-          <td><strong>Field</strong></td>
-          <td><strong>Conditions</strong></td>
+          <td style="text-align: left">a.</td>
+          <td style="text-align: left">Unique Identifier</td>
+          <td style="text-align: left">This column must have a label to indicate the identifier type. The column label should be on row one. If the unique identifier is Member Number, the label has to be Member Number, if it is Staff Number, the label has to be Staff Number and if it is PPS Number, the label has to be PPS Number. The column label is not case sensitive.</td>
         </tr>
         <tr>
-          <td>a.</td>
-          <td>Unique Identifier</td>
-          <td>This column must have a label to indicate the identifier type. The column label should be on row one. If the unique identifier is Member Number, the label has to be Member Number, if it is Staff Number, the label has to be Staff Number and if it is PPS Number, the label has to be PPS Number. The column label is not case sensitive.</td>
+          <td style="text-align: left">b.</td>
+          <td style="text-align: left">Surname</td>
+          <td style="text-align: left">The surname and forename values in column b and column c are not mandatory. But the columns must exist.If there are values in the columns, they will be checked to ensure they match the unique identifier.</td>
         </tr>
         <tr>
-          <td>b.</td>
-          <td>Surname</td>
-          <td>The surname and forename values in column b and column c are not mandatory. But the columns must exist.If there are values in the columns, they will be checked to ensure they match the unique identifier.</td>
+          <td style="text-align: left">c.</td>
+          <td style="text-align: left">Forename</td>
+          <td style="text-align: left">Linked to column b above.</td>
         </tr>
         <tr>
-          <td>c.</td>
-          <td>Forename</td>
-          <td>Linked to column b above.</td>
+          <td style="text-align: left">d.</td>
+          <td style="text-align: left">Switch Date</td>
+          <td style="text-align: left">The switch date should not be earlier than the most recent rebalance switch for the member.</td>
         </tr>
         <tr>
-          <td>d.</td>
-          <td>Switch Date</td>
-          <td>The switch date should not be earlier than the most recent rebalance switch for the member.</td>
+          <td style="text-align: left">e.</td>
+          <td style="text-align: left">Expenses</td>
+          <td style="text-align: left">Values can only be Y or N.</td>
         </tr>
         <tr>
-          <td>e.</td>
-          <td>Expenses</td>
-          <td>Values can only be Y or N.</td>
-        </tr>
-        <tr>
-          <td>f.</td>
-          <td>Fund Codes</td>
-          <td>The fund code columns must have a label on row 1 to indicate the fund code. The fund code labels must represent the fund codes on pension master and must be attached to the scheme. The fund code labels must be in upper case to reflect the fund codes on pension master. Up to 50 funds are catered for and should reside from column f on. If there is a 51st fund or more, you will be warned that the data will be will be ignored.</td>
+          <td style="text-align: left">f.</td>
+          <td style="text-align: left">Fund Codes</td>
+          <td style="text-align: left">The fund code columns must have a label on row 1 to indicate the fund code. The fund code labels must represent the fund codes on pension master and must be attached to the scheme. The fund code labels must be in upper case to reflect the fund codes on pension master. Up to 50 funds are catered for and should reside from column f on. If there is a 51st fund or more, you will be warned that the data will be will be ignored.</td>
         </tr>
       </tbody>
     </table>
@@ -157,7 +159,7 @@ informing the user of this.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 04/10/2018 14:17:19.</p>
+        <p>Build Date 04/10/2018 14:23:04.</p>
       </div>
     </div>
 
