@@ -65,27 +65,68 @@ are valid, e.g. if a record is being added which holds a Scheme Code, then the S
 Code must be valid. If any problems are found, then an exceptions report will be generated
 informing the user of this.</p>
 
-<p>The columns should be in the following order</p>
+<p>The columns should be in the following order:</p>
 
-<p>Column	Field	Conditions
-a.	Unique Identifier	This column must have a label to indicate the identifier type. The column label should be on row one. If the unique identifier is Member Number, the label has to be Member Number, if it is Staff Number, the label has to be Staff Number and if it is PPS Number, the label has to be PPS Number. The column label is not case sensitive.
-b.	Surname		        The surname and forename values in column b and column c are not mandatory. But the columns must exist.If there are values in the columns, they will be checked to ensure they match the unique identifier. 
-c.	Forename		    Linked to column b above 
-d.	Switch Date		    The switch date should not be earlier than the most recent rebalance switch for the member
-e.	Expenses		    Values can only be Y or N
-f.	Fund Codes		    The fund code columns must have a label on row 1 to indicate the fund code. The fund code labels must represent the fund codes on pension master and must be attached to the scheme. The fund code labels must be in upper case to reflect the fund codes on pension master. Up to 50 funds are catered for and should reside from column f on. If there is a 51st fund or more, you will be warned that the data will be will be ignored</p>
+<div class="row">
+  <div class="col-md-6">
 
-<p>The file should only have the one header as detailed below. This header will facilitate the labelling of the columns as indicated in 2 above 
-The file should have no footers
-The file should not have any blank lines
-The file should not be any larger than 32,000 rows</p>
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td>Column</td>
+          <td>Field</td>
+          <td>Conditions</td>
+        </tr>
+        <tr>
+          <td>a.</td>
+          <td>Unique Identifier</td>
+          <td>This column must have a label to indicate the identifier type. The column label should be on row one. If the unique identifier is Member Number, the label has to be Member Number, if it is Staff Number, the label has to be Staff Number and if it is PPS Number, the label has to be PPS Number. The column label is not case sensitive.</td>
+        </tr>
+        <tr>
+          <td>b.</td>
+          <td>Surname</td>
+          <td>The surname and forename values in column b and column c are not mandatory. But the columns must exist.If there are values in the columns, they will be checked to ensure they match the unique identifier.</td>
+        </tr>
+        <tr>
+          <td>c.</td>
+          <td>Forename</td>
+          <td>Linked to column b above.</td>
+        </tr>
+        <tr>
+          <td>d.</td>
+          <td>Switch Date</td>
+          <td>The switch date should not be earlier than the most recent rebalance switch for the member.</td>
+        </tr>
+        <tr>
+          <td>e.</td>
+          <td>Expenses</td>
+          <td>Values can only be Y or N.</td>
+        </tr>
+        <tr>
+          <td>f.</td>
+          <td>Fund Codes</td>
+          <td>The fund code columns must have a label on row 1 to indicate the fund code. The fund code labels must represent the fund codes on pension master and must be attached to the scheme. The fund code labels must be in upper case to reflect the fund codes on pension master. Up to 50 funds are catered for and should reside from column f on. If there is a 51st fund or more, you will be warned that the data will be will be ignored.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<ul>
+  <li>The file should only have the one header as detailed below. This header will facilitate the labelling of the columns as indicated in 2 above.</li>
+  <li>The file should have no footers.</li>
+  <li>The file should not have any blank lines.</li>
+  <li>The file should not be any larger than 32,000 rows.</li>
+</ul>
 
 <p>If all the data lines held within the data file are correct, then the user can continue and load the data into the database. If not an exception report is created and the load it abandoned. Warnings will be issued in the following circumstances but the load will be allowed to proceed:</p>
 
-<p>a)	Member has  positive unposted transactions where units are null or zero
-b)	Member has a lifestyling investment setup post the switch date</p>
-
 <ul>
+  <li>Member has positive unposted transactions where units are null or zero.</li>
+  <li>
+    <p>Member has a lifestyling investment setup post the switch date.</p>
+  </li>
   <li>Load Data</li>
   <li>Exit</li>
 </ul>
@@ -116,7 +157,7 @@ b)	Member has a lifestyling investment setup post the switch date</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2018 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 03/10/2018 16:00:49.</p>
+        <p>Build Date 04/10/2018 14:04:39.</p>
       </div>
     </div>
 
