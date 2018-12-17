@@ -61,6 +61,7 @@ $('.sovereign').parent().hide();
 $('.source').parent().hide();
 $('.ucc').parent().hide();
 $('.vhi').parent().hide();
+$('.pensions_management').parent().hide();
 
 if (typeof query.client != 'undefined') {
   if (query.client == 'ascot_lloyd' || query.client == 'berkeley_burke' || query.client == 'corpad') {
@@ -125,5 +126,9 @@ if (typeof query.client != 'undefined') {
 
   if (query.client == 'vhi' || query.client == 'all') {
     $('.vhi').parent().show();
+  }
+
+  if (query.client == 'pensions_management' || query.client == 'all') {
+    $('.pensions_management').parent().show();
   }
 }
