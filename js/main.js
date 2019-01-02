@@ -67,13 +67,13 @@ function getCookie(cname) {
 var query = getQueryParams(document.location.search);
 var clientCookie = getCookie("client");
 
-if (query.client == '' || query.client == 'delete') {
-  document.cookie = "client=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-} else if ((query.client != '' && clientCookie == '') || (query.client != clientCookie)) {
-  setCookie("client", query.client, 365);
-} else if (typeof query.client == 'undefined' && clientCookie != '') {
-  query.client = clientCookie;
-};
+// if (query.client == 'delete') {
+//   document.cookie = "client=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+// } else if ((query.client != '' && clientCookie == '') || (query.client != clientCookie)) {
+//   setCookie("client", query.client, 365);
+// } else if (typeof query.client == 'undefined' && clientCookie != '') {
+//   query.client = clientCookie;
+// };
 
 $('.payroll').hide();
 
