@@ -6415,7 +6415,7 @@
           <td style="text-align: left">us_passwd</td>
           <td style="text-align: left">User Password ID</td>
           <td style="text-align: left">Char</td>
-          <td style="text-align: left">32</td>
+          <td style="text-align: left">64</td>
           <td style="text-align: left">5</td>
         </tr>
         <tr>
@@ -6532,7 +6532,7 @@
         </tr>
         <tr>
           <td style="text-align: left">gnu_user_group</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">User Group</td>
           <td style="text-align: left">Char</td>
           <td style="text-align: left">10</td>
           <td style="text-align: left">22</td>
@@ -17225,6 +17225,20 @@
           <td style="text-align: left">1</td>
           <td style="text-align: left">15</td>
         </tr>
+        <tr>
+          <td style="text-align: left">plsh_matrix_option</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">16</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">plsh_matrix</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">17</td>
+        </tr>
       </tbody>
     </table>
 
@@ -20294,7 +20308,7 @@
           <td style="text-align: left">pm_password</td>
           <td style="text-align: left">Encrypted Password</td>
           <td style="text-align: left">Char</td>
-          <td style="text-align: left">32</td>
+          <td style="text-align: left">64</td>
           <td style="text-align: left">82</td>
         </tr>
         <tr>
@@ -23666,7 +23680,7 @@
           <td style="text-align: left">pph_passwd</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">Char</td>
-          <td style="text-align: left">32</td>
+          <td style="text-align: left">64</td>
           <td style="text-align: left">4</td>
         </tr>
       </tbody>
@@ -30032,7 +30046,7 @@
           <td style="text-align: left">pslb_rate</td>
           <td style="text-align: left">Scheme Lifestyle Matrix Rate</td>
           <td style="text-align: left">Decimal</td>
-          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">(10,6)</td>
           <td style="text-align: left">5</td>
         </tr>
       </tbody>
@@ -32500,7 +32514,7 @@
         </tr>
         <tr>
           <td style="text-align: left">stf_taxcode_33</td>
-          <td style="text-align: left">Tax Code 33 Limit</td>
+          <td style="text-align: left">Tax Code 33 Limit &gt; 5 Years</td>
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">23</td>
@@ -32511,6 +32525,34 @@
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">24</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">stf_taxcode_33_within_5</td>
+          <td style="text-align: left">Tax Code 33 Limit Within 5 Years</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">25</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">stf_taxcode_11</td>
+          <td style="text-align: left">Tax Code 11 Limit</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">26</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">stf_taxcode_45</td>
+          <td style="text-align: left">Tax Code 45 Limit &gt; 5 Years</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">27</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">stf_taxcode_45_within_5</td>
+          <td style="text-align: left">Tax Code 45 Limit Within 5 Years</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">28</td>
         </tr>
       </tbody>
     </table>
@@ -34680,6 +34722,13 @@
           <td style="text-align: left">50</td>
           <td style="text-align: left">45</td>
         </tr>
+        <tr>
+          <td style="text-align: left">pp_password_encryption</td>
+          <td style="text-align: left">Password Encryption</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">46</td>
+        </tr>
       </tbody>
     </table>
 
@@ -36823,6 +36872,55 @@
           <td style="text-align: left">1</td>
           <td style="text-align: left">10</td>
         </tr>
+        <tr>
+          <td style="text-align: left">pbc_cvr</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">20</td>
+          <td style="text-align: left">11</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pbc_total_cont</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">12</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pbc_period_from</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">13</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pbc_period_to</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">14</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pbc_expected_avc</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">15</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pbc_expected_ee</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">16</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pbc_expected_er</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">17</td>
+        </tr>
       </tbody>
     </table>
 
@@ -36888,11 +36986,18 @@
           <td style="text-align: left">6</td>
         </tr>
         <tr>
-          <td style="text-align: left">pbcs_date</td>
+          <td style="text-align: left">pbcs_date_due</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">Date</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">7</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pbcs_date_recvd</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">8</td>
         </tr>
       </tbody>
     </table>
@@ -38692,7 +38797,7 @@
           <td style="text-align: left">pyp_hist_pswd</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">Char</td>
-          <td style="text-align: left">32</td>
+          <td style="text-align: left">64</td>
           <td style="text-align: left">1</td>
         </tr>
       </tbody>
@@ -40085,7 +40190,7 @@
 
       <div id="footer">
         <p>Copyright &copy; 1987-2019 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 10/01/2019 15:18:29.</p>
+        <p>Build Date 10/01/2019 15:31:17.</p>
       </div>
     </div>
 
