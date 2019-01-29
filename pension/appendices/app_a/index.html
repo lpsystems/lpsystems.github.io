@@ -623,7 +623,7 @@
         </tr>
         <tr>
           <td style="text-align: left"><a href="#pe_fsavc">pe_fsavc</a></td>
-          <td style="text-align: left"><a href="#pe_fsavc">FSAVC Details</a></td>
+          <td style="text-align: left"><a href="#pe_fsavc">AVC Details</a></td>
         </tr>
         <tr>
           <td style="text-align: left"><a href="#pe_gmp_div">pe_gmp_div</a></td>
@@ -15366,7 +15366,7 @@
   </div>
 </div>
 
-<h2><a name="pe_fsavc"></a>Table - pe_fsavc / FSAVC Details</h2>
+<h2><a name="pe_fsavc"></a>Table - pe_fsavc / AVC Details</h2>
 
 <div class="row">
   <div class="col-md-6">
@@ -15391,21 +15391,21 @@
         </tr>
         <tr>
           <td style="text-align: left">pfsavc_number</td>
-          <td style="text-align: left">FSAVC Number</td>
+          <td style="text-align: left">AVC Number</td>
           <td style="text-align: left">Smallint</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">2</td>
         </tr>
         <tr>
           <td style="text-align: left">pfsavc_provider</td>
-          <td style="text-align: left">FSAVC Providers Name</td>
+          <td style="text-align: left">AVC Providers Name</td>
           <td style="text-align: left">Char</td>
           <td style="text-align: left">32</td>
           <td style="text-align: left">3</td>
         </tr>
         <tr>
           <td style="text-align: left">pfsavc_polnumber</td>
-          <td style="text-align: left">FSAVC Policy Number</td>
+          <td style="text-align: left">AVC Policy Number</td>
           <td style="text-align: left">Char</td>
           <td style="text-align: left">32</td>
           <td style="text-align: left">4</td>
@@ -15468,24 +15468,45 @@
         </tr>
         <tr>
           <td style="text-align: left">pfsavc_started</td>
-          <td style="text-align: left">Date FSAVC was taken out</td>
+          <td style="text-align: left">Date AVC was taken out</td>
           <td style="text-align: left">Date</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">13</td>
         </tr>
         <tr>
           <td style="text-align: left">pfsavc_notified</td>
-          <td style="text-align: left">Date Notified of FSAVC</td>
+          <td style="text-align: left">Date Notified of AVC</td>
           <td style="text-align: left">Date</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">14</td>
         </tr>
         <tr>
           <td style="text-align: left">pfsavc_lead</td>
-          <td style="text-align: left">Is FSAVC the lead provider?</td>
+          <td style="text-align: left">Is AVC the lead provider?</td>
           <td style="text-align: left">Char</td>
           <td style="text-align: left">1</td>
           <td style="text-align: left">15</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pfsavc_type</td>
+          <td style="text-align: left">AVC Type</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">16</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pfsavc_fund_value</td>
+          <td style="text-align: left">Fund Value</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">17</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pfsavc_eff_date</td>
+          <td style="text-align: left">Fund Value Effective Date</td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">18</td>
         </tr>
       </tbody>
     </table>
@@ -29360,6 +29381,20 @@
           <td style="text-align: left">5</td>
           <td style="text-align: left">4</td>
         </tr>
+        <tr>
+          <td style="text-align: left">pse_member</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">5</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pse_random_code</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">20</td>
+          <td style="text-align: left">6</td>
+        </tr>
       </tbody>
     </table>
 
@@ -34728,6 +34763,13 @@
           <td style="text-align: left">Char</td>
           <td style="text-align: left">1</td>
           <td style="text-align: left">46</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pp_online_url</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">50</td>
+          <td style="text-align: left">47</td>
         </tr>
       </tbody>
     </table>
@@ -40190,7 +40232,7 @@
 
       <div id="footer">
         <p>Copyright &copy; 1987-2019 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 11/01/2019 09:28:01.</p>
+        <p>Build Date 29/01/2019 11:46:50.</p>
       </div>
     </div>
 
