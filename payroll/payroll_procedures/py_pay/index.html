@@ -512,11 +512,7 @@ then the user returns back to the payroll menu, with the payroll run committed s
 
 <p>You will run the payroll through the same ‘Payroll Run’ program. Once the payroll run has completed you will then use the two new menu options within the ‘Payroll Run’ program called ‘Submit’ and ‘Check’.</p>
 
-<p>Selecting the ‘Submit’ menu option will open up a new screen where you will enter the Scheme Code, Category Code (if applicable) and Sender. It is important that you enter the Scheme and Category exactly as you did for the payroll run itself. You will need the Accounts Office Reference number, Gateway ID and Password that has been provided by HMRC. On clicking ‘OK’ the program will generate an XML file which will then be sent to HMRC.</p>
-
-<p>After the XML file has been sent to HMRC you will receive a confirmation message. This only indicates that HMRC have received the submission and not that the data is valid and has been accepted.</p>
-
-<p>The Payroll Run doesn’t pick up members whose Date Finished Pension is before the Payroll Run Date, however, the Submit option in the Payroll Run does pick up extra members who have their Last Payment field ticked. When a leaver is picked up only the members figures to date will be sent along with the leaving date. Once the submission has been successful the Last Payment indicator will be unticked.</p>
+<p>Selecting the ‘Submit’ menu option will open up a new screen where you will enter the Scheme Code, Category Code (if applicable) and Run Date. It is important that you enter the Scheme, Category and Run Date exactly as you did for the payroll run itself. The Sender, Accounts Office Reference and Gateway ID will auto-populate from the information held in the RTI Details screen in Payroll Schemes for the scheme. You will need to enter the Password that has been provided by HMRC.</p>
 
 <p><strong>Final Submission For Year?</strong> - If this is the last payroll payment of the tax year then tick this check box.</p>
 
@@ -526,11 +522,39 @@ then the user returns back to the payroll menu, with the payroll run committed s
 
 <ul>
   <li>Run the last payroll as normal, submit and check it.</li>
-  <li>Fill in the Date Finished Pension and tick the Last Payment field.</li>
+  <li>Fill in the Date Finished Pension and tick the Last Payment field on every member of the scheme’s record.</li>
   <li>Go to the ‘Submit’ option in Payroll Run and fill in all the details making sure the ‘Transferring Scheme?’ field is ticked. Click ‘OK’ and then ‘Check’ the submission.</li>
 </ul>
 
 <p>N.B. It is important that the final FPS (Transferring Scheme submission) is submitted to HMRC before the new provider submits their first FPS.</p>
+
+<p><strong>Scheme Ceased?</strong> - This field should be selected when you (the client) are closing down a scheme. When this field is ticked, it automatically ticks the ‘Final Submission For Year?’ field as well. This is done to ensure all the relevant information is sent to HMRC telling them that this scheme has finished and no more payroll will be run on it.</p>
+
+<p>When you know you are closing a scheme down you must do the following:</p>
+
+<ul>
+  <li>Ensure all members of the payroll scheme have had their Date Finished Pension field filled in and Last Payment field ticked in the Pension screen in Payroll Members.</li>
+  <li>Ensure that the Date Scheme Ceased field is filled in in the Scheme Details screen in Payroll Schemes. The Date Scheme Ceased cannot be in the future and it must also be within the current tax year. If it’s not then you will be warned of this at the point of doing the submission.</li>
+</ul>
+
+<p><strong>Reason for Late Submission</strong> - This field should only be selected when you (the client) are submitting an FPS after the Run Rate. You will only be allowed access to this field if the Run Date is before today’s date.</p>
+
+<p>There are 2 options available in this field, and both options attach the LateReason element to each member of the submission in the FPS file. The 2 options are as follows:</p>
+
+<ul>
+  <li>Reasonable excuse - If you are submitting an FPS late to HMRC then you should use this option. This option should be selected with caution as HMRC might require you to provide evidence of what your ‘Reasonable excuse’ is at a later date.</li>
+  <li>Correction to earlier submission - This option should only be used when a mistake has been made in the final FPS of the year and the correction is being made on or before 19th April. HMRC advise that any mistakes made during a tax year should always be corrected in the following FPS of the same tax year. Due to this advice, you (the client) will be warned if this option is selected for a tax month that is before tax month 12.</li>
+</ul>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>The Payroll Run doesn’t pick up members whose Date Finished Pension is before the Payroll Run Date, however, the Submit option in the Payroll Run does pick up extra members who have their Last Payment field ticked. When a leaver is picked up only the members figures to date will be sent along with the leaving date. Once the submission has been successful the Last Payment indicator will be unticked.</p>
+
+</div>
+
+<p>On clicking ‘OK’ the program will generate an XML file which will then be sent to HMRC.</p>
+
+<p>After the XML file has been sent to HMRC you will receive a confirmation message. This only indicates that HMRC have received the submission and not that the data is valid and has been accepted.</p>
 
 <h2><a name="check"></a>Check</h2>
 
@@ -593,7 +617,7 @@ then the user returns back to the payroll menu, with the payroll run committed s
 
       <div id="footer">
         <p>Copyright &copy; 1987-2019 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 05/03/2019 11:28:53.</p>
+        <p>Build Date 21/03/2019 08:22:46.</p>
       </div>
     </div>
 
