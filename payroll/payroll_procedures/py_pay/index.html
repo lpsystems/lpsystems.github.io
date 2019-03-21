@@ -537,7 +537,7 @@ then the user returns back to the payroll menu, with the payroll run committed s
   <li>Ensure that the Date Scheme Ceased field is filled in in the Scheme Details screen in Payroll Schemes. The Date Scheme Ceased cannot be in the future and it must also be within the current tax year. If it’s not then you will be warned of this at the point of doing the submission.</li>
 </ul>
 
-<p><strong>Reason for Late Submission</strong> - This field should only be selected when you (the client) are submitting an FPS after the Run Rate. You will only be allowed access to this field if the Run Date is before today’s date.</p>
+<p><strong>Reason for Late Submission</strong> - This field should only be selected when you (the client) are submitting an FPS after the Run Date. You will only be allowed access to this field if the Run Date is before today’s date.</p>
 
 <p>There are 2 options available in this field, and both options attach the LateReason element to each member of the submission in the FPS file. The 2 options are as follows:</p>
 
@@ -564,7 +564,9 @@ then the user returns back to the payroll menu, with the payroll run committed s
   <p>Check Submission</p>
 </div>
 
-<p>To check the status of a recent submission select the ‘Check’ menu option and enter the Scheme Code and Category Code (if applicable). Again, the Scheme and Category codes must be entered exactly you did for the payroll run itself. This will ask HMRC the status of the previous submission. You will have to wait 10 seconds, a time limit imposed by HMRC, before checking your original submission.  The response will either be:</p>
+<p>To check the status of a recent submission select the ‘Check’ menu option and enter the Scheme Code, Category Code (if applicable) and Run Date. Again, the Scheme, Category and Run Date must be entered exactly as you did for the payroll run itself. If any of the checkboxes where ticked during the submission, then the same checkboxes must be checked during the ‘Check’. This is to ensure that on a submission successfully being submitted, the Check option un-ticks the Last Payment field for the correct members.</p>
+
+<p>The ‘Check’ will ask HMRC the status of the previous submission. You will have to wait 10 seconds, a time limit imposed by HMRC, before checking your original submission.  The response will either be:</p>
 
 <ul>
   <li>A list of errors in a Report Viewer window. Any errors will need to be rectified and the scheme data submitted and checked again.</li>
@@ -617,7 +619,7 @@ then the user returns back to the payroll menu, with the payroll run committed s
 
       <div id="footer">
         <p>Copyright &copy; 1987-2019 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 21/03/2019 08:22:46.</p>
+        <p>Build Date 21/03/2019 08:53:34.</p>
       </div>
     </div>
 
