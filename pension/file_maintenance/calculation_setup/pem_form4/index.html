@@ -2424,7 +2424,7 @@ return a value of 0.</li>
 
 <p>This extracts the value held in the Pension in Payment Multiplier field of the Scheme Tax Simplification record with the Effective Date of the date returned from line 1 in the formula.</p>
 
-<h2><a name="64"></a>#scheme_user_defined_field</h2>
+<h2><a name="64"></a>#scheme_user_defined_field(type)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
@@ -2432,7 +2432,7 @@ return a value of 0.</li>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>#scheme_user_defined_field
+<pre><code>#scheme_user_defined_field(type)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -2440,6 +2440,7 @@ return a value of 0.</li>
 <ul>
   <li>scheme_user_defined_field - is any valid field on the Scheme User Defined Details table. For
 a list of valid fields click <a href="/pension/appendices/app_a/#pe_suds">here</a></li>
+  <li>type - is the scheme user defined details type that you wish to retrieve.</li>
 </ul>
 
 <p><strong>NOTES</strong></p>
@@ -2447,6 +2448,7 @@ a list of valid fields click <a href="/pension/appendices/app_a/#pe_suds">here</
 <ol>
   <li>scheme_user_defined_field must be a valid field on the Scheme User Defined Details table (pe_suds).</li>
   <li>If the Scheme User Defined Field is not the value field or the field is blank, this function call will return a value of 0.</li>
+  <li>type must be in UPPERCASE and no longer than 10 characters in length.</li>
 </ol>
 
 <p><strong>EXAMPLE</strong></p>
@@ -3258,7 +3260,7 @@ return a value of 0.</li>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2019 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 18/06/2019 15:10:21.</p>
+        <p>Build Date 18/06/2019 15:32:51.</p>
       </div>
     </div>
 
