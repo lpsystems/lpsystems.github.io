@@ -906,6 +906,14 @@
           <td style="text-align: left"><a href="#pe_mvaluation">Member Valuations</a></td>
         </tr>
         <tr>
+          <td style="text-align: left"><a href="#pe_mwithdrawal">pe_mwithdrawal</a></td>
+          <td style="text-align: left"><a href="#pe_mwithdrawal">Member Withdrawals</a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#pe_mwithdrawal_pref">pe_mwithdrawal_pref</a></td>
+          <td style="text-align: left"><a href="#pe_mwithdrawal_pref">Member Withdrawal Order Preference Details</a></td>
+        </tr>
+        <tr>
           <td style="text-align: left"><a href="#pe_nibat">pe_nibat</a></td>
           <td style="text-align: left"><a href="#pe_nibat">NI History Batch Details</a></td>
         </tr>
@@ -1344,6 +1352,14 @@
         <tr>
           <td style="text-align: left"><a href="#pe_switch_s">pe_switch_s</a></td>
           <td style="text-align: left"><a href="#pe_switch_s">Switch Split Details</a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#pe_switch_w">pe_switch_w</a></td>
+          <td style="text-align: left"> </td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#pe_swithdrawal_pref">pe_swithdrawal_pref</a></td>
+          <td style="text-align: left"><a href="#pe_swithdrawal_pref">Scheme Withdrawal Order Preference Details</a></td>
         </tr>
         <tr>
           <td style="text-align: left"><a href="#pe_sysp">pe_sysp</a></td>
@@ -5208,7 +5224,7 @@
           <td style="text-align: left">prog_men_desc</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">Char</td>
-          <td style="text-align: left">30</td>
+          <td style="text-align: left">50</td>
           <td style="text-align: left">4</td>
         </tr>
         <tr>
@@ -6536,6 +6552,13 @@
           <td style="text-align: left">Char</td>
           <td style="text-align: left">10</td>
           <td style="text-align: left">22</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">gnu_secret_key</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">50</td>
+          <td style="text-align: left">23</td>
         </tr>
       </tbody>
     </table>
@@ -9677,6 +9700,13 @@
           <td style="text-align: left"> </td>
           <td style="text-align: left">10</td>
         </tr>
+        <tr>
+          <td style="text-align: left">pbrh_cont_option</td>
+          <td style="text-align: left">Contribution Option</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">11</td>
+        </tr>
       </tbody>
     </table>
 
@@ -10023,6 +10053,13 @@
           <td style="text-align: left"> </td>
           <td style="text-align: left">21</td>
         </tr>
+        <tr>
+          <td style="text-align: left">psbh_wd_order_pref</td>
+          <td style="text-align: left">Withdrawal Order Preference</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">22</td>
+        </tr>
       </tbody>
     </table>
 
@@ -10114,6 +10151,13 @@
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(22,4)</td>
           <td style="text-align: left">10</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psbm_wd_order</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">11</td>
         </tr>
       </tbody>
     </table>
@@ -20467,9 +20511,9 @@
         </tr>
         <tr>
           <td style="text-align: left">pm_nationality</td>
-          <td style="text-align: left">Nationality (internet)</td>
+          <td style="text-align: left">Nationality</td>
           <td style="text-align: left">Char</td>
-          <td style="text-align: left">30</td>
+          <td style="text-align: left">50</td>
           <td style="text-align: left">102</td>
         </tr>
         <tr>
@@ -23256,6 +23300,113 @@
   </div>
 </div>
 
+<h2><a name="pe_mwithdrawal"></a>Table - pe_mwithdrawal / Member Withdrawals</h2>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field Name</th>
+          <th style="text-align: left">Field Description</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Length</th>
+          <th style="text-align: left">Seq.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pmwd_member</td>
+          <td style="text-align: left">Member Number</td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">1</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pmwd_freq</td>
+          <td style="text-align: left">Frequency</td>
+          <td style="text-align: left">Smallint</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">2</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pmwd_amount</td>
+          <td style="text-align: left">Amount</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">3</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pmwd_name</td>
+          <td style="text-align: left">Name</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">100</td>
+          <td style="text-align: left">4</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pmwd_reason</td>
+          <td style="text-align: left">Reason</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">3000</td>
+          <td style="text-align: left">5</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_mwithdrawal_pref"></a>Table - pe_mwithdrawal_pref / Member Withdrawal Order Preference Details</h2>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field Name</th>
+          <th style="text-align: left">Field Description</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Length</th>
+          <th style="text-align: left">Seq.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pmwp_member</td>
+          <td style="text-align: left">Member Number</td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">1</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pmwp_date</td>
+          <td style="text-align: left">Effective Date</td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">2</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pmwp_cont</td>
+          <td style="text-align: left">Contribution Type</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">3</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pmwp_order</td>
+          <td style="text-align: left">Order Preference</td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">4</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
 <h2><a name="pe_nibat"></a>Table - pe_nibat / NI History Batch Details</h2>
 
 <div class="row">
@@ -24203,6 +24354,13 @@
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">46</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pps_dt_start_payroll</td>
+          <td style="text-align: left">Date Started Payroll</td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">47</td>
         </tr>
       </tbody>
     </table>
@@ -30232,6 +30390,20 @@
           <td style="text-align: left">1</td>
           <td style="text-align: left">18</td>
         </tr>
+        <tr>
+          <td style="text-align: left">pslh_fm_fee_dd</td>
+          <td style="text-align: left">Fund Manager Fee Start (dd)</td>
+          <td style="text-align: left">Smallint</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">19</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pslh_fm_fee_mm</td>
+          <td style="text-align: left">Fund Manager Fee Start (mm)</td>
+          <td style="text-align: left">Smallint</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">20</td>
+        </tr>
       </tbody>
     </table>
 
@@ -33428,6 +33600,20 @@
           <td style="text-align: left">20</td>
           <td style="text-align: left">61</td>
         </tr>
+        <tr>
+          <td style="text-align: left">psud_type</td>
+          <td style="text-align: left">Scheme User Defined Type</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">10</td>
+          <td style="text-align: left">62</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psud_desc</td>
+          <td style="text-align: left">Scheme User Defined Description</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">50</td>
+          <td style="text-align: left">63</td>
+        </tr>
       </tbody>
     </table>
 
@@ -34271,6 +34457,13 @@
           <td style="text-align: left"> </td>
           <td style="text-align: left">16</td>
         </tr>
+        <tr>
+          <td style="text-align: left">pswh_wd_order_pref</td>
+          <td style="text-align: left">Withdrawal Order Preference</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">17</td>
+        </tr>
       </tbody>
     </table>
 
@@ -34419,6 +34612,190 @@
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(22,4)</td>
           <td style="text-align: left">11</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_switch_w"></a>Table - pe_switch_w</h2>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field Name</th>
+          <th style="text-align: left">Field Description</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Length</th>
+          <th style="text-align: left">Seq.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">psww_member</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">1</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_id</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">2</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_fund</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">10</td>
+          <td style="text-align: left">3</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_cont</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">4</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_sale_date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">5</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_sale_value</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">6</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_sale_units</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(22,4)</td>
+          <td style="text-align: left">7</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_fee1</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">8</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_fee2</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">9</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_flat_fee</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">10</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_net_sale_value</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">11</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_remainder</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">12</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_uninv_div</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">13</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_member_fee</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(20,2)</td>
+          <td style="text-align: left">14</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_uncryst_units</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(22,4)</td>
+          <td style="text-align: left">15</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">psww_cryst_units</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(22,4)</td>
+          <td style="text-align: left">16</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_swithdrawal_pref"></a>Table - pe_swithdrawal_pref / Scheme Withdrawal Order Preference Details</h2>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field Name</th>
+          <th style="text-align: left">Field Description</th>
+          <th style="text-align: left">Type</th>
+          <th style="text-align: left">Length</th>
+          <th style="text-align: left">Seq.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pswp_scheme</td>
+          <td style="text-align: left">Scheme Code</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">1</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pswp_date</td>
+          <td style="text-align: left">Effective Date</td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">2</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pswp_cont</td>
+          <td style="text-align: left">Contribution Type</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">3</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pswp_order</td>
+          <td style="text-align: left">Order Preference</td>
+          <td style="text-align: left">Integer</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">4</td>
         </tr>
       </tbody>
     </table>
@@ -34768,7 +35145,7 @@
           <td style="text-align: left">pp_online_url</td>
           <td style="text-align: left">Online URL</td>
           <td style="text-align: left">Char</td>
-          <td style="text-align: left">50</td>
+          <td style="text-align: left">100</td>
           <td style="text-align: left">47</td>
         </tr>
       </tbody>
@@ -35357,7 +35734,7 @@
         </tr>
         <tr>
           <td style="text-align: left">ptvi_tfls_waived</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">Tax Free Lump Sum Waived</td>
           <td style="text-align: left">Char</td>
           <td style="text-align: left">1</td>
           <td style="text-align: left">71</td>
@@ -40239,7 +40616,7 @@
 
       <div id="footer">
         <p>Copyright &copy; 1987-2019 L&amp;P Systems Limited. All rights reserved.</p>
-        <p>Build Date 01/05/2019 11:07:51.</p>
+        <p>Build Date 18/06/2019 15:09:56.</p>
       </div>
     </div>
 
