@@ -92,9 +92,10 @@ $('.source').parent().hide();
 $('.ucc').parent().hide();
 $('.vhi').parent().hide();
 $('.pensions_management').parent().hide();
+$('.crown_agents_bank').parent().hide();
 
 if (typeof query.client != 'undefined') {
-  if (query.client == 'ascot_lloyd' || query.client == 'berkeley_burke' || query.client == 'corpad') {
+  if (query.client == 'ascot_lloyd' || query.client == 'berkeley_burke' || query.client == 'corpad' || query.client == 'crown_agents_bank') {
     $('.payroll').show();
   }
 
@@ -160,5 +161,9 @@ if (typeof query.client != 'undefined') {
 
   if (query.client == 'pensions_management' || query.client == 'all') {
     $('.pensions_management').parent().show();
+  }
+
+  if (query.client == 'crown_agents_bank' || query.client == 'all') {
+    $('.crown_agents_bank').parent().show();
   }
 }
