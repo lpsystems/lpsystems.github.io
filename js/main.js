@@ -36,14 +36,17 @@ function eraseCookie(name) {
 function checkCookie() {
   var query = getQueryParams(document.location.search);
   var clientCookie = readCookie("client");
+  var landpCookie = readCookie("landp");
   
   // alert(query.client);
   // alert(clientCookie);
+  // alert(query.landp);
+  // alert(landpCookie);
 
-  // If query.client is 'delete' and clientCookie is something...
-  if (query.client == 'delete' && clientCookie) {
+  // If query.client is 'default' and clientCookie is something...
+  if (query.client == 'default' && clientCookie) {
     eraseCookie("client");
-    // alert("eraseCookie");
+    // alert("eraseCookie client");
   };
   
   // If query.client is nothing and clientCookie is something...
@@ -52,17 +55,38 @@ function checkCookie() {
     // alert("query.client = clientCookie");
   };
   
-  // If query.client is something, clientCookie is nothing and query.client isn't 'delete'...
-  if (query.client && !clientCookie && query.client != 'delete') {
+  // If query.client is something, clientCookie is nothing and query.client isn't 'default'...
+  if (query.client && !clientCookie && query.client != 'default') {
     createCookie("client", query.client, 7);
-    // alert("createCookie");
+    // alert("createCookie client");
   };
   
-  // If query.client is something, clientCookie is something, they aren't the same and query.client isn't 'delete'...
-  if (query.client && clientCookie && query.client != clientCookie && query.client != 'delete') {
+  // If query.client is something, clientCookie is something, they aren't the same and query.client isn't 'default'...
+  if (query.client && clientCookie && query.client != clientCookie && query.client != 'default') {
     eraseCookie("client");
     createCookie("client", query.client, 7);
-    // alert("eraseCookie and createCookie");
+    // alert("eraseCookie client and createCookie client");
+  };
+
+  $('.clients').hide();
+
+  // If query.client is 'default' and landpCookie is something...
+  if (query.client == 'default' && landpCookie) {
+    eraseCookie("landp");
+    landpCookie = false;
+    // alert("eraseCookie landp");
+  };
+
+  // If query.landp is 'true' and landp is not set...
+  if (query.landp == 'true' && !landpCookie) {
+    createCookie("landp", "true", 7);
+    // alert("createCookie landp");
+  };
+
+  // If query.landp is 'true' and landpCookie is something...
+  if (query.landp == 'true' || landpCookie) {
+    $('.clients').show();
+    // alert("show clients");
   };
 
   $('.payroll').hide();
