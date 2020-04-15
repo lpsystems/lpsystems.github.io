@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20200309122155" type="text/javascript"></script>
+    <script src="/js/main.js?v=20200415151818" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -24500,7 +24500,7 @@
           <td style="text-align: left">pps_pay_num</td>
           <td style="text-align: left">Payroll Number</td>
           <td style="text-align: left">Char</td>
-          <td style="text-align: left">10</td>
+          <td style="text-align: left">12</td>
           <td style="text-align: left">14</td>
         </tr>
         <tr>
@@ -39271,21 +39271,21 @@
         </tr>
         <tr>
           <td style="text-align: left">pyhr_total_com</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">Total Commissions</td>
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">17</td>
         </tr>
         <tr>
           <td style="text-align: left">pyhr_total_ded</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">Total Deductions</td>
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">18</td>
         </tr>
         <tr>
           <td style="text-align: left">pyhr_total_add</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">Total Additions</td>
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">19</td>
@@ -39884,21 +39884,21 @@
         </tr>
         <tr>
           <td style="text-align: left">pyhhr_total_com</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">Total Commissions</td>
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">18</td>
         </tr>
         <tr>
           <td style="text-align: left">pyhhr_total_ded</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">Total Deductions</td>
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">19</td>
         </tr>
         <tr>
           <td style="text-align: left">pyhhr_total_add</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">Total Additions</td>
           <td style="text-align: left">Decimal</td>
           <td style="text-align: left">(10,2)</td>
           <td style="text-align: left">20</td>
@@ -40207,6 +40207,20 @@
           <td style="text-align: left">1</td>
           <td style="text-align: left">10</td>
         </tr>
+        <tr>
+          <td style="text-align: left">pym_arrears_from</td>
+          <td style="text-align: left">Pay Element Arrears From Date</td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">11</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pym_arrears_to</td>
+          <td style="text-align: left">Pay Element Arrears To Date</td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">12</td>
+        </tr>
       </tbody>
     </table>
 
@@ -40305,6 +40319,20 @@
           <td style="text-align: left">Char</td>
           <td style="text-align: left">1</td>
           <td style="text-align: left">11</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pymb_arrears_from</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">12</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pymb_arrears_to</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">13</td>
         </tr>
       </tbody>
     </table>
@@ -41280,7 +41308,7 @@
         </tr>
         <tr>
           <td style="text-align: left">pyr_date</td>
-          <td style="text-align: left">Rejected Date</td>
+          <td style="text-align: left">Date Processed</td>
           <td style="text-align: left">Date</td>
           <td style="text-align: left"> </td>
           <td style="text-align: left">6</td>
@@ -41294,10 +41322,59 @@
         </tr>
         <tr>
           <td style="text-align: left">pyr_reason</td>
-          <td style="text-align: left"> </td>
+          <td style="text-align: left">Reason For Rejection</td>
           <td style="text-align: left">Char</td>
           <td style="text-align: left">100</td>
           <td style="text-align: left">8</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyr_reject_date</td>
+          <td style="text-align: left">Date Rejected</td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">9</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyr_sch_com_amount</td>
+          <td style="text-align: left">Scheme Commission Amount Returned</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">10</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyr_ret_sch_com</td>
+          <td style="text-align: left">Scheme Commission Returned?</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">11</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyr_mem_com_amount</td>
+          <td style="text-align: left">Member Commission Amount Returned</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">12</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyr_ret_mem_com</td>
+          <td style="text-align: left">Member Commission Returned?</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">13</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyr_net_amount_diff</td>
+          <td style="text-align: left">Member’s Net Amount Difference</td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">14</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyr_deduct_net_amount</td>
+          <td style="text-align: left">Deduct Net Amount On Next Payroll?</td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">15</td>
         </tr>
       </tbody>
     </table>
@@ -41383,6 +41460,55 @@
           <td style="text-align: left">Char</td>
           <td style="text-align: left">100</td>
           <td style="text-align: left">9</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyrb_reject_date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Date</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">10</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyrb_sch_com_amount</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">11</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyrb_ret_sch_com</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">12</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyrb_mem_com_amount</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">13</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyrb_ret_mem_com</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">14</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyrb_net_amount_diff</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Decimal</td>
+          <td style="text-align: left">(10,2)</td>
+          <td style="text-align: left">15</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pyrb_deduct_net_amount</td>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">Char</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">16</td>
         </tr>
       </tbody>
     </table>
@@ -42665,7 +42791,7 @@
 
       <div id="footer">
         <p>Copyright &copy; 1987-2020 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 09/03/2020 12:21:55.</p>
+        <p>Build Date 15/04/2020 15:18:18.</p>
       </div>
     </div>
   </body>
