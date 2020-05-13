@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20200429154329" type="text/javascript"></script>
+    <script src="/js/main.js?v=20200513143346" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -102,6 +102,7 @@
   <li><a href="#pe_bat_head">Batch Data Input Details</a>
     <ul>
       <li><a href="#ba_type">Batch Type</a></li>
+      <li><a href="#ba_order">Batch Order</a></li>
     </ul>
   </li>
   <li><a href="#pe_bpens">Basic Disability Benefit Details</a>
@@ -153,9 +154,19 @@
       <li><a href="#pcch_frequency">Contribution Frequency</a></li>
     </ul>
   </li>
+  <li><a href="#pe_cfee_matrix">Company Fee Matrix Details</a>
+    <ul>
+      <li><a href="#pcfm_fee_tpe">Fee Type</a></li>
+    </ul>
+  </li>
   <li><a href="#pe_cforfeit_h">Category Forfeiture Matrix Header</a>
     <ul>
       <li><a href="#pcfh_date">Forfeiture Start Date</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_co">Company Details</a>
+    <ul>
+      <li><a href="#pc_stp_file_type">STP File Format</a></li>
     </ul>
   </li>
   <li><a href="#pe_codem">Codes Details</a>
@@ -166,6 +177,7 @@
   <li><a href="#pe_cover">Cover Details</a>
     <ul>
       <li><a href="#pco_payment_type">Payment Type</a></li>
+      <li><a href="#pco_type">Product Type</a></li>
     </ul>
   </li>
   <li><a href="#pe_cvesting_h">Scheme Vesting Matrix Header</a>
@@ -233,16 +245,28 @@
       <li><a href="#pm_nationality">Nationality</a></li>
     </ul>
   </li>
+  <li><a href="#pe_mwithdrawal">Member Withdrawals</a>
+    <ul>
+      <li><a href="#pmwd_freq">Frequency</a></li>
+    </ul>
+  </li>
   <li><a href="#pe_pens">Basic Pensioner Details</a>
     <ul>
       <li><a href="#pps_pay_freq">Pay Frequency</a></li>
       <li><a href="#pps_reason_cess">Cessation Details Reason</a></li>
       <li><a href="#pps_payslip">Print Payslip?</a></li>
+      <li><a href="#pps_int_acc_type_JM">International Account Type (Jamaica)</a></li>
+      <li><a href="#pps_int_acc_type_ZA">International Account Type (South Africa)</a></li>
+      <li><a href="#pps_int_acc_type_US">International Account Type (United States)</a></li>
+      <li><a href="#pps_account_type">Account Type</a></li>
+      <li><a href="#pps_payment_type">Payment Type</a></li>
+      <li><a href="#pps_method">Payment Method</a></li>
     </ul>
   </li>
   <li><a href="#pe_product">Product Details</a>
     <ul>
       <li><a href="#ppr_payment_type">Payment Type</a></li>
+      <li><a href="#ppr_type">Product Type</a></li>
     </ul>
   </li>
   <li><a href="#pe_rebalance_h">Rebalance Switch Header Details</a>
@@ -291,11 +315,17 @@
   <li><a href="#pe_scont">Scheme Contribution Type Setup</a>
     <ul>
       <li><a href="#psct_type">Contribution Type</a></li>
+      <li><a href="#psct_prod_cover_type">Product/Cover Type</a></li>
     </ul>
   </li>
   <li><a href="#pe_scover">Scheme Cover Details</a>
     <ul>
       <li><a href="#psco_calc_type">Calculation Type</a></li>
+    </ul>
+  </li>
+  <li><a href="#pe_sfee_matrix">Scheme Fee Matrix Details</a>
+    <ul>
+      <li><a href="#psfm_fee_tpe">Fee Type</a></li>
     </ul>
   </li>
   <li><a href="#pe_sforfeit_h">Scheme Forfeiture Matrix Header</a>
@@ -411,9 +441,18 @@
       <li><a href="#ptvo_icne_type">Transfer Type</a></li>
     </ul>
   </li>
+  <li><a href="#py_element">Pay Element Details</a>
+    <ul>
+      <li><a href="#pye_paid_by">Pay Element Commission Paid By</a></li>
+    </ul>
+  </li>
   <li><a href="#py_sch">Payroll Scheme Details</a>
     <ul>
       <li><a href="#pys_sender">RTI Sender</a></li>
+      <li><a href="#pys_payroll_date_opt">Payroll Run Date Option</a></li>
+      <li><a href="#pys_bony_company_id">BoNY Company ID</a></li>
+      <li><a href="#pys_exchange_rate_type">Exchange Rate Type</a></li>
+      <li><a href="#pys_type">Bank Type</a></li>
     </ul>
   </li>
 </ul>
@@ -778,6 +817,49 @@
         <tr>
           <td style="text-align: left">D</td>
           <td style="text-align: left">Contribution History</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="ba_order"></a>Field - ba_order / Batch Order</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Member Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">Surname, Forename</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Employer Reference Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">NI/PPS Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">E</td>
+          <td style="text-align: left">Date of Birth</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Do not re-order data</td>
         </tr>
       </tbody>
     </table>
@@ -1424,6 +1506,35 @@
   </div>
 </div>
 
+<h2><a name="pe_cfee_matrix"></a>Table - pe_cfee_matrix / Company Fee Matrix Details</h2>
+
+<h3><a name="pcfm_fee_type"></a>Field - pcfm_fee_type / Fee Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Flat Fee</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Percentage</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
 <h2><a name="pe_cforfeit_h"></a>Table - pe_cforfeit_h / Category Forfeiture Matrix Header</h2>
 
 <h3><a name="pcfh_date"></a>Field - pcfh_date / Forfeiture Start Date</h3>
@@ -1454,6 +1565,31 @@
         <tr>
           <td style="text-align: left">pm_djp</td>
           <td style="text-align: left">Date Joined Plan</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_co"></a>Table - pe_co / Company Details</h2>
+
+<h3><a name="pc_stp_file_type"></a>Field - pc_stp_file_type / Code TypeSTP File Format</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left"> </td>
+          <td style="text-align: left">No Data Found</td>
         </tr>
       </tbody>
     </table>
@@ -1568,6 +1704,53 @@
         <tr>
           <td style="text-align: left">R</td>
           <td style="text-align: left">Regular</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pco_type"></a>Field - pco_type / Product Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">CHRATE</td>
+          <td style="text-align: left">Children Rate</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CRITILL</td>
+          <td style="text-align: left">Critical Illness</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DEATHLS</td>
+          <td style="text-align: left">Death Lump Sum</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DIS</td>
+          <td style="text-align: left">Disability Long Term</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DISLS</td>
+          <td style="text-align: left">Disability Lump Sum</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">HEALTH</td>
+          <td style="text-align: left">Health Insurance</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WAPREM</td>
+          <td style="text-align: left">Waiver Premium</td>
         </tr>
       </tbody>
     </table>
@@ -3035,7 +3218,7 @@
           <td style="text-align: left">Guatemalan</td>
         </tr>
         <tr>
-          <td style="text-align: left">86</td>
+          <td style="text-align: left">Citizen of Guinea-Bissau</td>
           <td style="text-align: left">Citizen of Guinea-Bissau</td>
         </tr>
         <tr>
@@ -3600,6 +3783,51 @@
   </div>
 </div>
 
+<h2><a name="pe_mwithdrawal"></a>Table - pe_mwithdrawal / Member Withdrawals</h2>
+
+<h3><a name="pmwd_freq"></a>Field - pmwd_freq / Frequency</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Yearly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Quarterly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">Monthly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">26</td>
+          <td style="text-align: left">Bi-Weekly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">52</td>
+          <td style="text-align: left">Weekly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">365</td>
+          <td style="text-align: left">Daily</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
 <h2><a name="pe_pens"></a>Table - pe_pens / Basic Pensioner Details</h2>
 
 <h3><a name="pps_pay_freq"></a>Field - pps_pay_freq / Pay Frequency</h3>
@@ -3727,6 +3955,196 @@
   </div>
 </div>
 
+<h3><a name="pps_int_acc_type_JM"></a>Field - pps_int_acc_type_JM / International Account Type (Jamaica)</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Checking</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Savings</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Loan</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pps_int_acc_type_ZA"></a>Field - pps_int_acc_type_ZA / International Account Type (South Africa)</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Current Account</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Savings Account</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">Transmission Account</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Bonds</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pps_int_acc_type_US"></a>Field - pps_int_acc_type_US / International Account Type (United States)</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">0</td>
+          <td style="text-align: left">Checkings Account</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Savings Account</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pps_account_type"></a>Field - pps_account_type / Account Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">BANK</td>
+          <td style="text-align: left">UK Bank</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BSOC</td>
+          <td style="text-align: left">Building Society</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">INTE</td>
+          <td style="text-align: left">International Bank</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pps_payment_type"></a>Field - pps_payment_type / Payment Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">IACH</td>
+          <td style="text-align: left">International ACH</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">IACW</td>
+          <td style="text-align: left">International ACH / W</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WIRE</td>
+          <td style="text-align: left">Wire</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WIRW</td>
+          <td style="text-align: left">Wire / W</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pps_method"></a>Field - pps_method / Payment Method</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">B</td>
+          <td style="text-align: left">BACS</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">C</td>
+          <td style="text-align: left">Manual Cheque</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">D</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
 <h2><a name="pe_product"></a>Table - pe_product / Product Details</h2>
 
 <h3><a name="ppr_payment_type"></a>Field - ppr_payment_type / Payment Type</h3>
@@ -3749,6 +4167,41 @@
         <tr>
           <td style="text-align: left">R</td>
           <td style="text-align: left">Regular</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="ppr_type"></a>Field - ppr_type / Product Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">CAP</td>
+          <td style="text-align: left">Capital Pension</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LAN</td>
+          <td style="text-align: left">Life Annuity</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">OAP</td>
+          <td style="text-align: left">Old Age Pension</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">TAN</td>
+          <td style="text-align: left">Term Annuity</td>
         </tr>
       </tbody>
     </table>
@@ -4574,6 +5027,69 @@
   </div>
 </div>
 
+<h3><a name="psct_prod_cover_type"></a>Field - psct_prod_cover_type / Product/Cover Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">CAP</td>
+          <td style="text-align: left">Capital Pension</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CHRATE</td>
+          <td style="text-align: left">Children Rate</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CRITILL</td>
+          <td style="text-align: left">Critical Illness</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DEATHLS</td>
+          <td style="text-align: left">Death Lump Sum</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DIS</td>
+          <td style="text-align: left">Disability Long Term</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DISLS</td>
+          <td style="text-align: left">Disability Lump Sum</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">HEALTH</td>
+          <td style="text-align: left">Health Insurance</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LAN</td>
+          <td style="text-align: left">Life Annuity</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">OAP</td>
+          <td style="text-align: left">Old Age Pension</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">TAN</td>
+          <td style="text-align: left">Term Annuity</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WAPREM</td>
+          <td style="text-align: left">Waiver Premium</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
 <h2><a name="pe_scover"></a>Table - pe_scover / Scheme Cover Details</h2>
 
 <h3><a name="psco_calc_type"></a>Field - psco_calc_type / Calculation Type</h3>
@@ -4600,6 +5116,35 @@
         <tr>
           <td style="text-align: left">MS</td>
           <td style="text-align: left">Multiple of Salary</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pe_sfee_matrix"></a>Table - pe_sfee_matrix / Scheme Fee Matrix Details</h2>
+
+<h3><a name="psfm_fee_type"></a>Field - psfm_fee_type / Fee Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Flat Fee</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">P</td>
+          <td style="text-align: left">Percentage</td>
         </tr>
       </tbody>
     </table>
@@ -6160,6 +6705,35 @@
   </div>
 </div>
 
+<h2>&lt;a name=’py_element’&lt;/a&gt;Table - py_element / Pay Element Details</h2>
+
+<h3><a name="pye_paid_by"></a>Field - pye_paid_by / Pay Element Commission Paid By</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">M</td>
+          <td style="text-align: left">Member</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">S</td>
+          <td style="text-align: left">Scheme</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
 <h2><a name="py_sch"></a>Table - py_sch / Payroll Scheme Details</h2>
 
 <h3><a name="pys_sender"></a>Field - pys_sender / RTI Sender</h3>
@@ -6221,11 +6795,127 @@
   </div>
 </div>
 
+<h3><a name="pys_payroll_date_opt"></a>Field - pys_payroll_date_opt / Payroll Run Date Option</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">F</td>
+          <td style="text-align: left">Fixed Day of Month</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">L</td>
+          <td style="text-align: left">Last Working Day Prior To Fixed Day</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">W</td>
+          <td style="text-align: left">Last Working Day of Month</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pys_bony_company_id"></a>Field - pys_bony_company_id / BoNY Company ID</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">5260330022</td>
+          <td style="text-align: left">Standard Rate</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">5358130021</td>
+          <td style="text-align: left">Special Rate</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pys_exchange_rate_type"></a>Field - pys_exchange_rate_type / Exchange Rate Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">FIXED</td>
+          <td style="text-align: left">Fixed Rate</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EXCHANGE</td>
+          <td style="text-align: left">Exchange Rate</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h3><a name="pys_type"></a>Field - pys_type / Bank Type</h3>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">BANK</td>
+          <td style="text-align: left">UK Bank</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BSOC</td>
+          <td style="text-align: left">Building Society</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">INTE</td>
+          <td style="text-align: left">International Bank</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2020 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 29/04/2020 15:43:29.</p>
+        <p>Build Date 13/05/2020 14:33:46.</p>
       </div>
     </div>
   </body>
