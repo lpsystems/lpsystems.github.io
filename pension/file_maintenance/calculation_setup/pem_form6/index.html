@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20201019110651" type="text/javascript"></script>
+    <script src="/js/main.js?v=20201022143632" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -484,10 +484,51 @@ the current formula e.g. @1.</li>
 tot_cont(EEORD,pm_dps,pm_dtlft)
 </code></pre>
 
+<h2><a name="10"></a>caretot(care_code,care_col,date1,date2,care_table)&lt;/a&gt;</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the caretot function to calculate the total care amounts between two given dates
+for a particular care code and care column. This can be done for either the permanent or temporary care tables.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>caretot(care_code,care_col,fund,date1,date2,care_table)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>care_code - is the care type code</li>
+  <li>care_col - is the column number from the care screen</li>
+  <li>date1 - is the start date for the period required</li>
+  <li>date2 - is the end date for the period required</li>
+  <li>care_table - the options are P for Permanent and T for Temporary</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The care_code must be a valid code in the scheme.</li>
+  <li>The care column has to be a value from 1-6.</li>
+  <li>If date1 &gt; date2 the value the total will be calculated with a term of 0.</li>
+  <li>The two dates must be field references to date fields on the member file (pe_mem),
+constant dates entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or references to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>caretot(CALS,5,@6,@9,P) 
+caretot(CARE1,1,pm_dps,pm_dtlft,T)
+invtot(CARE1,2,19950112,20031115,P)
+</code></pre>
+
 
       <div id="footer">
         <p>Copyright &copy; 1987-2020 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 19/10/2020 11:06:51.</p>
+        <p>Build Date 22/10/2020 14:36:32.</p>
       </div>
     </div>
   </body>
