@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20210310182053" type="text/javascript"></script>
+    <script src="/js/main.js?v=20210310183839" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -127,6 +127,14 @@ criteria has been entered click ‘OK’ to proceed. The scheme code must be ent
 
 <p>Once the Employer PAYE Ref has been entered, click on ‘OK’ to proceed to the bottom part of the screen.</p>
 
+<p>If there are no members found for the selection criteria entered you will get the warning</p>
+
+<div class="well">
+
+  <p>There are no records that match the selection criteria.</p>
+
+</div>
+
 <p>For each of the members selected, a check will be made to ensure that the following information is held for them. If anything is missing then a Missing Data report will be produced. If the report is produced, then it is advised that any missing data is completed to ensure the P45 is created as complete as possible.</p>
 
 <ul>
@@ -163,52 +171,18 @@ criteria has been entered click ‘OK’ to proceed. The scheme code must be ent
 <p><a name="p_works_number"></a><strong>WORKS NUMBER</strong> - This is populated with the member’s Payroll Number from the Payroll Members - Personal Details screen/Members - Pensioner screen.</p>
 
 <div class="alert alert-danger" role="alert">
-  <p>Details in this screen can be deleted or overwritten, however, if fields are blank on the screen then they will be blank in the report. Any details changed in this screen will only be outputted to the P45 report and will not be written back to Pension Master.</p>
+  <p>Details in this screen can be deleted or overwritten. If fields are blank on the screen then they will be blank in the report. All values displayed in this screen will be printed out to the P45 report. No values will be written back to Pension Master.</p>
 </div>
-
-<p>When the details in this screen have been entered, click on ‘OK’ to proceed. You can click on ‘Cancel’ to return to the main menu and abort the investment reconciliation report. The report will now be created and reported out to Excel.</p>
-
-<p>During the creation of the report, unit prices for the investment fund are retrieved for the start and end dates to allow for fund values to be calculated. If they are not known then the unit price effective at the date will be used instead.</p>
-
-<p>The unit price for the end date will always be the unit price found on the system effective at the end date.</p>
 
 <p>Once the report has been produced, a message will appear to the screen stating that the report has completed successfully.</p>
 
-<p><a name="pm_scheme"></a><strong>SCHEME CODE</strong> - Enter the scheme code required. To
-get a list of valid scheme codes click on the lookup icon. When a valid scheme code has
-been entered the scheme description will be displayed.</p>
-
-<p><a name="last_date"></a><strong>LAST RUN DATE</strong> - When the scheme code has been entered,
-the last run date for that scheme is displayed in this field. You cannot enter into
-this field.</p>
-
-<p><a name="due_date"></a><strong>DUE DATE</strong> - Enter the date you wish to list member’s
-payroll due at, in the format dd/mm/yyyy or ddmmyyyy.</p>
-
-<p>Click ‘OK’ to proceed. You can click ‘Cancel’ to return to the proceed menu and
-abort report selection.</p>
-
-<p>When the selection is complete a message is displayed at the bottom of the screen:</p>
-
 <div class="well">
 
-  <p>Processing report … Please Wait</p>
-
-</div>
-
-<p>When the report has been processed and no records are found to match the selection
-criteria an error message is displayed:</p>
-
-<div class="well">
-
-  <p>There are no records to match the selection criteria</p>
+  <p>Report successfully completed.</p>
 
 </div>
 
 <p>Click ‘OK’ to return to the report menu.</p>
-
-<p>If records are found to match the selection criteria the report continues and is
-displayed to the screen.</p>
 
 <p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing From Payroll Master</a>.</p>
 
@@ -219,7 +193,7 @@ displayed to the screen.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2021 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 10/03/2021 18:20:53.</p>
+        <p>Build Date 10/03/2021 18:38:39.</p>
       </div>
     </div>
   </body>
