@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20210518140524" type="text/javascript"></script>
+    <script src="/js/main.js?v=20210518141130" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -77,7 +77,7 @@
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
-  <li><a href="#Update">Update</a></li>
+  <li><a href="#Run">Run</a></li>
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
@@ -88,9 +88,18 @@ on gross salary and a deductible supplied by the user. The following options and
 appear when this program is selected:</p>
 
 <ul>
-  <li>Update</li>
+  <li>Run</li>
   <li>Exit</li>
 </ul>
+
+<div class="alert alert-danger" role="alert">
+  <p>This program will overwrite whatever pensionable salary figures are in each of
+the selected members records for the given salary date with the new calculated value.</p>
+</div>
+
+<h2><a name="Run"></a>Run</h2>
+
+<p>Click ‘Run’.</p>
 
 <div class="screen">
   <p><img src="/pension/images/peu_pensal.jpg" alt="Update Pensionable Salaries Screen" /></p>
@@ -98,21 +107,12 @@ appear when this program is selected:</p>
   <p>Update Pensionable Salaries Screen</p>
 </div>
 
-<div class="alert alert-danger" role="alert">
-  <p>This program will overwrite whatever pensionable salary figures are in each of
-the selected members records for the given salary date with the new calculated value.</p>
-</div>
-
-<h2><a name="Update"></a>Update</h2>
-
-<p>Click ‘Update’.</p>
-
 <p><a name="pm_scheme"></a><a name="pm_company"></a><a name="pm_category"></a><a name="pm_status"></a><strong>SELECTION
 CRITERIA</strong> - Select the group of members you require to update pensionable salaries
 for using the Scheme, Company, Category and Status fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
 When the selection criteria have been entered click on ‘OK’ to proceed.</p>
 
-<p>You can click on ‘Cancel’ to return to the main menu and abort the quotation run.</p>
+<p>You can click on ‘Cancel’ to return to the main menu and abort the update.</p>
 
 <div class="screen">
   <p><img src="/pension/images/peu_pensal2.jpg" alt="Update Pensionable Salaries Screen" /></p>
@@ -161,7 +161,7 @@ updates.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2021 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 18/05/2021 14:05:24.</p>
+        <p>Build Date 18/05/2021 14:11:30.</p>
       </div>
     </div>
   </body>
