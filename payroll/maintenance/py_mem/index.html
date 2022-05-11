@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20220509090112" type="text/javascript"></script>
+    <script src="/js/main.js?v=20220511091141" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -352,8 +352,6 @@ the member is to use:</p>
   <li>One-Off</li>
 </ul>
 
-<p>Irregular and One-Off options are for Flexi-Access members only.</p>
-
 <p>This field must be entered. If it is not then it will default to Monthly.</p>
 
 <div class="alert alert-danger" role="alert">
@@ -365,7 +363,7 @@ net pay.</p>
 </div>
 
 <p><a name="pps_first_month"></a><strong>TAX MONTH OF 1ST PAYMENT</strong>
-- This field holds the tax month the first payment of the tax year the member is to be paid in. This field is referred to in the Payroll Run if the member being paid has a payment frequency of Annual, Half Yealy or Quarterly, AND has either had no payroll run for them before on Payroll Master before i.e. a new member, or it is the first payroll of the tax year for them. Once the first payroll of the tax year has been processed for the member, this field isn’t referred to again until the next new tax year. A tax month must be entered in this field.</p>
+- This field holds the tax month the first payment of the tax year the member is to be paid in. This field is referred to in the Payroll Run if the member being paid has a payment frequency of Annual, Half Yearly or Quarterly, AND has either had no payroll run for them before on Payroll Master i.e. a new member, or it is the first payroll of the tax year for them. Once the first payroll of the tax year has been processed for the member, this field isn’t referred to again until the next new tax year. A tax month must be entered in this field.</p>
 
 <p>The Tax Month of 1st Payment can take the following values:</p>
 
@@ -377,8 +375,8 @@ net pay.</p>
   <li>4 Weekly - 1</li>
   <li>Fortnightly - 1</li>
   <li>Weekly - 1</li>
-  <li>Irregular (Flexi-Access members only) - 1</li>
-  <li>One-Off (Flexi-Access members only) - 1</li>
+  <li>Irregular - 1</li>
+  <li>One-Off - 1</li>
 </ul>
 
 <p><a name="pps_payslip"></a><strong>PRINT PAYSLIP?</strong>
@@ -496,14 +494,17 @@ member of the scheme.</p>
 - Select the Account Type.</p>
 
 <p><a name="pps_bank_name"></a><strong>BANK NAME</strong>
-- Enter the name of the member’s Bank/Building Society.</p>
+- Enter the name of the member’s account.</p>
 
 <p><a name="pps_bank_add_1"></a>
 <a name="pps_bank_add_2"></a>
 <a name="pps_bank_add_3"></a>
 <a name="pps_bank_add_4"></a>
 <a name="pps_bank_postcode"></a><strong>BANK ADDRESS &amp; POSTCODE</strong>
-- Enter the address and postcode of the member’s Bank/Building Society.</p>
+- Enter the address and postcode of the member’s account.</p>
+
+<p><a name="pps_bank_country"></a><strong>COUNTRY</strong>
+- Select the country of the member’s account.</p>
 
 <p><a name="pps_account_name"></a><strong>ACCOUNT NAME</strong>
 - Enter the name of the account of the member.</p>
@@ -518,6 +519,12 @@ automatically added.</p>
 <p><a name="pps_bs_roll_no"></a><strong>ROLL NUMBER</strong>
 - Enter the Building Society Roll Number. This field will only be displayed
 if the Account Type is Building Society (BSOC).</p>
+
+<p><a name="pps_iban"></a><strong>IBAN</strong>
+- Enter the IBAN of the member’s account.</p>
+
+<p><a name="pps_bic"></a><strong>BIC</strong>
+- Enter the BIC of the member’s account.</p>
 
 <p>Click on ‘OK’ to save the Member’s Bank Details information, or click on ‘Cancel’
 to exit the screen without saving the details entered.</p>
@@ -773,7 +780,7 @@ window.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2022 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 09/05/2022 09:01:12.</p>
+        <p>Build Date 11/05/2022 09:11:41.</p>
       </div>
     </div>
   </body>
