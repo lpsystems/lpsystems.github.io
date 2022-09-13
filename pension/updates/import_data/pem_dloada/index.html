@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20220912142133" type="text/javascript"></script>
+    <script src="/js/main.js?v=20220913143351" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -132,23 +132,23 @@ Also, during the load some fields may not be included in the data file, or the d
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Contribution<br />Batch Number<br />Order Number</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#death">Death Details</a></td>
+          <td style="text-align: left"><a href="#death">Death Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Date of Death</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#defpen">Deferred Pension History</a></td>
+          <td style="text-align: left"><a href="#defpen">Deferred Pension History</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Pension Code<br /> Date to Commence</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#deathdep">Dependant Death Details</a></td>
+          <td style="text-align: left"><a href="#deathdep">Dependant Death Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Death Dependants Reference</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#deps">Dependants Details</a></td>
+          <td style="text-align: left"><a href="#deps">Dependants Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Dependant’s Number<br /> Dependants Name<br /> Dependants Type<br /> Dependants Proportion Of Benefit</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#diary">Diary Entry</a></td>
+          <td style="text-align: left"><a href="#diary">Diary Entry</a></td>
           <td style="text-align: left">Diary Date<br />Diary Reference<br /> Diary Entry Action<br /> Diary User</td>
         </tr>
         <tr>
@@ -156,19 +156,23 @@ Also, during the load some fields may not be included in the data file, or the d
           <td style="text-align: left">Factor Code/Type/Sex/Date/Index/Value</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#memaddr">Member Address Details</a></td>
+          <td style="text-align: left"><a href="#memaddr">Member Address Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Member Address Number</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#memcont">Member Contribution History</a></td>
-          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Date Due<br /> Contribution type<br /> Date Received<br /> Transaction Type</td>
+          <td style="text-align: left"><a href="#memcont">Member Contribution History</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Date Due<br />Contribution type<br /> Date Received<br /> Transaction Type</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#meminv">Member Investment History</a></td>
+          <td style="text-align: left"><a href="#memcove">Member Cover Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Effective Date<br />Cover Code<br />Calculation Type<br />Fixed Amount<br />Percentage %<br />Multiple<br />Salary<br />Factor Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#meminv">Member Investment History</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Investment Fund<br /> Date Due<br /> Date Received<br /> Date Invested<br /> Transaction Type<br /> Contribution Type<br /> Amount</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#meminvsetup">Member Investment Setup Details</a></td>
+          <td style="text-align: left"><a href="#meminvsetup">Member Investment Setup Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Effective Date<br /> Contribution Type<br /> Scheme/Member Flag</td>
         </tr>
         <tr>
@@ -180,7 +184,7 @@ Also, during the load some fields may not be included in the data file, or the d
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Contribution Type<br />Effective Date<br />Formula Code<br />Matrix Code<br />Percent/Annual Flatrate<br />Salary Type<br />Type</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#memnotes">Member Notes</a></td>
+          <td style="text-align: left"><a href="#memnotes">Member Notes</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Notes Number</td>
         </tr>
         <tr>
@@ -188,67 +192,67 @@ Also, during the load some fields may not be included in the data file, or the d
           <td style="text-align: left">Member Number/NI Number/Staff Number<br /> Contribution Type<br />Amount</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#nihist">NI History</a></td>
+          <td style="text-align: left"><a href="#nihist">NI History</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />NI History Year</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#nihistbatch">NI History Batch Details</a></td>
+          <td style="text-align: left"><a href="#nihistbatch">NI History Batch Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Batch Number<br /> N.I. Order</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#pthrs">Part Time Service</a></td>
+          <td style="text-align: left"><a href="#pthrs">Part Time Service</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Part Time From Date<br /> Part Time Hours<br /> Full Time Hours</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#pen">Pension History</a></td>
+          <td style="text-align: left"><a href="#pen">Pension History</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Pension Code<br /> Date to Commence</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#salbatch">Salary Batch Details</a></td>
+          <td style="text-align: left"><a href="#salbatch">Salary Batch Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Batch Number<br /> Salary Batch Order</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#salhist1">Salary History 1</a></td>
+          <td style="text-align: left"><a href="#salhist1">Salary History 1</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Date</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#salhist2">Salary History 2</a></td>
+          <td style="text-align: left"><a href="#salhist2">Salary History 2</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Date</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#salhist3">Salary History 3</a></td>
+          <td style="text-align: left"><a href="#salhist3">Salary History 3</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Date</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#salhist4">Salary History 4</a></td>
+          <td style="text-align: left"><a href="#salhist4">Salary History 4</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Date</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#speccode">Special Codes</a></td>
+          <td style="text-align: left"><a href="#speccode">Special Codes</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Code Group<br /> Special Code</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#tvin">Transfer In Details</a></td>
+          <td style="text-align: left"><a href="#tvin">Transfer In Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Transfer In Code<br /> Transfer In Date<br /> Transfer In Type</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#tvout">Transfer Out Details</a></td>
+          <td style="text-align: left"><a href="#tvout">Transfer Out Details</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Transfer Out Code<br /> Transfer Date Agreed<br /> Transfer Amount</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#prices">Unit Prices Details</a></td>
+          <td style="text-align: left"><a href="#prices">Unit Prices Details</a></td>
           <td style="text-align: left">Fund Code<br />Unit Price Date</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#udh">User Defined History</a></td>
+          <td style="text-align: left"><a href="#udh">User Defined History</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />User Defined History Type<br /> User Defined History Date</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#uds">User Defined Screens</a></td>
+          <td style="text-align: left"><a href="#uds">User Defined Screens</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />User Defined Screen Type</td>
         </tr>
         <tr>
-          <td style="text-align: left"><a href="/pension/updates/import_data/pem_dloada/#YTD">Year to Date</a></td>
+          <td style="text-align: left"><a href="#YTD">Year to Date</a></td>
           <td style="text-align: left">Member Number/NI Number/Staff Number<br />Gross Pay for Tax P45<br />Scheme Code<br /> Tax Paid P45</td>
         </tr>
       </tbody>
@@ -1197,6 +1201,20 @@ If a new index is being added and other indexes with the range weren’t include
 type, date due, member number, date received and transaction type, then an exception report will be created with the line number and the load will be abandoned.</p>
 </div>
 
+<h2><a name="memcove"></a>Member Cover Details - ‘New’ type load only - Template TEMPCOVE</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,effectivedate,covercode,calculationtype,fixedamount,percentage%,multiple,salary,factorcode</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same effective date and covercode then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
 <h2><a name="meminv"></a>Member Investment History - ‘New’ type load only - Template TEMPIHST</h2>
 
 <p>The data file format is:</p>
@@ -1671,7 +1689,7 @@ user defined screen type, then an exception report will be created with the line
 
       <div id="footer">
         <p>Copyright &copy; 1987-2022 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 12/09/2022 14:21:33.</p>
+        <p>Build Date 13/09/2022 14:33:51.</p>
       </div>
     </div>
   </body>
