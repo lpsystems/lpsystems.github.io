@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20231017150431" type="text/javascript"></script>
+    <script src="/js/main.js?v=20240415123634" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -94,7 +94,6 @@
   <li><a href="#chq">Creating a Cheque Report</a></li>
   <li><a href="#backup">Backup of Payroll Data</a></li>
   <li><a href="#submit">Submit</a></li>
-  <li><a href="#check">Check</a></li>
   <li><a href="#error">HMRC Error Messages</a></li>
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
@@ -132,7 +131,6 @@ details as soon as they receive them.</p>
 <ul>
   <li>Run</li>
   <li>Submit</li>
-  <li>Check</li>
   <li>Exit</li>
 </ul>
 
@@ -582,21 +580,10 @@ out will also be left to the user.</p>
 
 <p>After the XML file has been sent to HMRC you will receive a confirmation message. This only indicates that HMRC have received the submission and not that the data is valid and has been accepted.</p>
 
-<h2><a name="check"></a>Check</h2>
-
-<div class="screen">
-  <p><img src="/payroll/images/py_paychk.jpg" alt="Check Submission" /></p>
-
-  <p>Check Submission</p>
-</div>
-
-<p>To check the status of a recent submission select the ‘Check’ menu option and enter the Scheme Code, Category Code (if applicable) and Run Date. Again, the Scheme, Category and Run Date must be entered exactly as you did for the payroll run itself. If any of the checkboxes where ticked during the submission, then the same checkboxes must be checked during the ‘Check’. This is to ensure that on a submission successfully being submitted, the Check option un-ticks the Last Payment field for the correct members.</p>
-
-<p>The ‘Check’ will ask HMRC the status of the previous submission. You will have to wait 10 seconds, a time limit imposed by HMRC, before checking your original submission. The response will either be:</p>
+<p>The program then waits for 20 seconds, a time limit imposed by HMRC, before checking your submission. The response will either be:</p>
 
 <ul>
-  <li>A list of errors in a Report Viewer window. Any errors will need to be rectified and the scheme data submitted and checked again.</li>
-  <li>Confirmation that the data has been accepted.</li>
+  <li>A report will be produced if errors have been found. Any errors will need to be rectified and the scheme data submitted and checked again.</li>
   <li>A message saying ‘The submission has been acknowledged by the Government Gateway’ indicates that HMRC have received your ‘Check’ request and are currently processing the data submission. You will need to check later to ensure that you receive one of the two responses above.</li>
 </ul>
 
@@ -644,8 +631,8 @@ out will also be left to the user.</p>
 
 
       <div id="footer">
-        <p>Copyright &copy; 1987-2023 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 17/10/2023 15:04:31.</p>
+        <p>Copyright &copy; 1987-2024 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 15/04/2024 12:36:34.</p>
       </div>
     </div>
   </body>
